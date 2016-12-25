@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#card-striped.text-gray-dark(href="#card-striped") Striped
+
+block example_result
+  +card_striped()
+
+block example_code
+  include ../sources/card/striped.html

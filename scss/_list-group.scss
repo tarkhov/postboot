@@ -1,0 +1,30 @@
+// Sizes
+.list-group-xs {
+  @include list-group-size($list-group-item-padding-y-xs, $list-group-item-padding-x-xs, $font-size-xs);
+}
+.list-group-y-xs {
+  @include list-group-size-y($list-group-item-padding-y-xs);
+}
+.list-group-x-xs {
+  @include list-group-size-x($list-group-item-padding-x-xs);
+}
+
+.list-group-sm {
+  @include list-group-size($list-group-item-padding-y-sm, $list-group-item-padding-x-sm, $font-size-sm);
+}
+.list-group-y-sm {
+  @include list-group-size-y($list-group-item-padding-y-sm);
+}
+.list-group-x-sm {
+  @include list-group-size-x($list-group-item-padding-x-sm);
+}
+
+.list-group-lg {
+  @include list-group-size($list-group-item-padding-y-lg, $list-group-item-padding-x-lg, $font-size-lg);
+}
+.list-group-y-lg {
+  @include list-group-size-y($list-group-item-padding-y-lg);
+}
+.list-group-x-lg {
+  @include list-group-size-x($list-group-item-padding-x-lg);
+}

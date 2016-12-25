@@ -1,0 +1,75 @@
+mixin dropdown_list(classes)
+  ul(class=classes)
+    each i in [1, 2, 3]
+      li: a(href='#')= 'Menu item ' + i
+
+mixin dropdown(text, classes, attrs)
+  .btn-group(class=classes)
+    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown")&attributes(attrs)= text
+    .dropdown-menu
+      each i in [1, 2, 3]
+        = "\n\t"
+        a.dropdown-item(href='#')= 'Menu item ' + i
+
+mixin dropright()
+  +dropdown('Dropright', 'dropright', {})
+
+mixin dropleft()
+  +dropdown('Dropleft', 'dropleft', {})
+
+mixin dropdown_directions()
+  +dropright()
+  .float-right
+    +dropleft()
+
+mixin dropup_hover()
+  +dropdown('Dropup', ['dropup', 'dropdown-hover'], {'data-hover': 'dropdown'})
+
+mixin dropright_hover()
+  +dropdown('Dropright', ['dropright', 'dropdown-hover'], {'data-hover': 'dropdown'})
+
+mixin dropdown_hover()
+  +dropdown('Dropdown', ['dropdown', 'dropdown-hover'], {'data-hover': 'dropdown'})
+
+mixin dropleft_hover()
+  +dropdown('Dropleft', ['dropleft', 'dropdown-hover'], {'data-hover': 'dropdown'})
+
+mixin dropdown_hovers()
+  .row
+    .col-md-3
+      +dropright_hover()
+    .col-md-6.text-center
+      +dropdown_hover()
+      +dropup_hover()
+    .col-md-3
+      .float-right
+        +dropleft_hover()
+
+mixin dropdown_mega()
+  ul.nav.nav-inline.dropdown
+    li.nav-item.dropdown-static.dropdown-hover
+      a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Fluid
+      .dropdown-menu.dropdown-menu-fluid
+        .dropdown-menu-content
+          .row
+            .col-md-3
+              +dropdown_list('list-unstyled')
+            .col-md-3
+              +dropdown_list('list-unstyled')
+            .col-md-3
+              +dropdown_list('list-unstyled')
+            .col-md-3
+              +dropdown_list('list-unstyled')
+    li.nav-item.dropdown-static.dropdown-hover
+      a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Full
+      .dropdown-menu.dropdown-menu-full
+        .dropdown-menu-content
+          .row
+            .col-md-3
+              +dropdown_list('list-unstyled')
+            .col-md-3
+              +dropdown_list('list-unstyled')
+            .col-md-3
+              +dropdown_list('list-unstyled')
+            .col-md-3
+              +dropdown_list('list-unstyled')

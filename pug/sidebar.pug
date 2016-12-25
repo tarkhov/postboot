@@ -1,0 +1,12 @@
+ul.nav.nav-y-sm.nav-tree
+  li.nav-item: a.nav-link(href="#start") Start
+  each section, id in contents
+    li.nav-item
+      a.nav-link(href="#" + id)= section.title
+      ul.nav.nav-y-sm.pl-3
+        each item, itemId in section.items
+          li.nav-item
+            a.nav-link(href="#" + itemId)= item.title
+            ul.nav.nav-y-xs.font-size-sm.pl-3
+              each exampleName, exampleId in item.items
+                li.nav-item: a.nav-link(href="#" + itemId + "-" + exampleId)= exampleName

@@ -1,0 +1,33 @@
+// Fluid columns
+@mixin make-grid-fluid-columns($gutters: $grid-gutter-widths, $breakpoints: $grid-breakpoints) {
+  $breakpoint-counter: 0;
+  @each $breakpoint in map-keys($breakpoints) {
+    $breakpoint-counter: ($breakpoint-counter + 1);
+
+    @if $breakpoint-counter == 1 {
+      .col-fluid {
+        @include make-col-ready($gutters);
+      }
+    }
+
+    @if $breakpoint-counter != 1 {
+      .col-#{$breakpoint}-fluid {
+        @include make-col-ready($gutters);
+      }
+    }
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      @if $breakpoint-counter == 1 {
+        .col-fluid {
+          @include make-fluid-col();
+        }
+      }
+
+      @if $breakpoint-counter != 1 {
+        .col-#{$breakpoint}-fluid {
+          @include make-fluid-col();
+        }
+      }
+    }
+  }
+}

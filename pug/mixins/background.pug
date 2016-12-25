@@ -1,0 +1,19 @@
+mixin background(text, classes)
+  p(class=classes)= text
+
+mixin background_variant(text, variant)
+  +background(text, ['bg-' + variant, 'text-white', 'p-2'])
+
+mixin backgrounds()
+  each text, variant in {'premium': 'Premium', 'pretty': 'Pretty'}
+    +background_variant(text, variant)
+
+mixin glass_background(text, variant)
+  +background(text, ['bg-glass-' + variant, 'text-white', 'p-2'])
+
+mixin glass_backgrounds()
+  each text, variant in brands
+    +glass_background(text, variant)
+
+mixin background_striped()
+  +background('Striped', ['bg-primary', 'bg-striped', 'text-white', 'p-2'])

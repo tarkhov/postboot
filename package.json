@@ -1,0 +1,32 @@
+{
+  "name": "postboot",
+  "description": "New colors, extended grid, better components sizing and styling for Bootstrap framework.",
+  "version": "1.0.0",
+  "keywords": [
+    "bootstrap",
+    "css",
+    "js",
+    "scss"
+  ],
+  "homepage": "https://alextakrhov.github.io/postboot/",
+  "author": "Alex Tarkhov",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alextarkhov/postboot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alextarkhov/postboot/issues"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-compress": "^1.3.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-csscomb": "^3.1.1"
+  }
+}

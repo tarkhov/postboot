@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#progress-colors.text-gray-dark(href="#progress-colors") Colors
+
+block example_result
+  +progresses()
+
+block example_code
+  include ../sources/progress/colors.html

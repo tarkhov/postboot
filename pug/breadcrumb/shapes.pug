@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#breadcrumb-shapes.text-gray-dark(href="#breadcrumb-shapes") Shapes
+
+block example_result
+  +breadcrumb_shapes()
+
+block example_code
+  include ../sources/breadcrumb/shapes.html

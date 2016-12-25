@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#progress-sizes.text-gray-dark(href="#progress-sizes") Sizes
+
+block example_result
+  +progress_sizes()
+
+block example_code
+  include ../sources/progress/sizes.html

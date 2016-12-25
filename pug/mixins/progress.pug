@@ -1,0 +1,20 @@
+mixin progress(value, classes)
+  progress.progress(class=classes value=value max="100")
+
+mixin progress_variant(value, variant)
+  +progress(value, 'progress-' + variant)
+
+mixin progresses()
+  each variant in ['inverse', 'premium', 'pretty']
+    +progress_variant(100, variant)
+
+mixin progress_size(size)
+  +progress_variant(100, size)
+
+mixin progress_sizes()
+  each size in ['xs', 'sm', 'lg', 'xl']
+    +progress_size(size)
+
+mixin progress_shapes()
+  each shape in ['pill', 'tile']
+    +progress_variant(100, shape)

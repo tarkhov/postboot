@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#font-weights.text-gray-dark(href="#font-weights") Weights
+
+block example_result
+  +font_weights()
+
+block example_code
+  include ../sources/font/weights.html

@@ -1,0 +1,20 @@
+// Container widths
+@if $enable-grid-classes {
+  .container-sm {
+    @include make-container();
+    @include make-container-max-widths($container-sm-max-widths);
+  }
+  .container-md {
+    @include make-container();
+    @include make-container-max-widths($container-md-max-widths);
+  }
+  .container-lg {
+    @include make-container();
+    @include make-container-max-widths($container-lg-max-widths);
+  }
+}
+
+// Fluid columns
+@if $enable-grid-classes {
+  @include make-grid-fluid-columns();
+}

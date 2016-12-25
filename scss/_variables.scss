@@ -1,0 +1,115 @@
+// Variables
+
+// Table of Contents
+//
+// Colors
+// Grid containers
+// Components
+
+// Colors
+$gray-base:     #000 !default;
+
+$brand-premium: #791E94 !default; // http://www.lolcolors.com/palettes/popular#palette_55
+$brand-pretty:  #ed317f !default; // http://www.lolcolors.com/#palette_15
+
+// Fonts
+$font-size-xl: 1.5rem !default;
+
+// Grid containers
+$container-sm-max-widths: (
+  sm: map-get($container-max-widths, sm),
+  md: map-get($container-max-widths, sm),
+  lg: map-get($container-max-widths, sm),
+  xl: map-get($container-max-widths, sm)
+) !default;
+
+$container-md-max-widths: (
+  sm: map-get($container-max-widths, sm),
+  md: map-get($container-max-widths, md),
+  lg: map-get($container-max-widths, md),
+  xl: map-get($container-max-widths, md)
+) !default;
+
+$container-lg-max-widths: (
+  sm: map-get($container-max-widths, sm),
+  md: map-get($container-max-widths, md),
+  lg: map-get($container-max-widths, lg),
+  xl: map-get($container-max-widths, lg)
+) !default;
+
+//
+// Components
+//
+
+// Buttons
+$btn-inverse-color:    #fff !default;
+$btn-inverse-bg:       $brand-inverse !default;
+$btn-inverse-border:   $btn-inverse-bg !default;
+
+$btn-premium-color:    #fff !default;
+$btn-premium-bg:       $brand-premium !default;
+$btn-premium-border:   $btn-premium-bg !default;
+
+$btn-pretty-color:     #fff !default;
+$btn-pretty-bg:        $brand-pretty !default;
+$btn-pretty-border:    $btn-pretty-bg !default;
+
+$btn-pill-border-radius: 2rem !default;
+
+// Forms
+$input-pill-border-radius: 2rem !default;
+
+// Dropdowns
+$dropdown-menu-content-padding: 1.5rem !default;
+
+// Navbar
+$navbar-padding-y-sm:       ($spacer * .25) !default;
+$navbar-brand-padding-y-sm: .1rem;
+$navbar-nav-padding-y-sm:   .25rem;
+$navbar-text-padding-y-sm:  .25rem;
+
+$navbar-padding-y-lg:       ($spacer * .75) !default;
+$navbar-brand-padding-y-lg: .5rem;
+$navbar-nav-padding-y-lg:   .675rem;
+$navbar-text-padding-y-lg:  .675rem;
+
+// Navs
+$nav-link-padding-x-xs: .25em !default;
+$nav-link-padding-y-xs: .1em !default;
+
+$nav-link-padding-x-sm: .5em !default;
+$nav-link-padding-y-sm: .25em !default;
+
+$nav-link-padding-x-lg: 1.5em !default;
+$nav-link-padding-y-lg: .75em !default;
+
+// Badges
+$badge-inverse-bg: $brand-inverse !default;
+$badge-premium-bg: $brand-premium !default;
+$badge-pretty-bg:  $brand-pretty !default;
+
+// Progress
+$progress-bar-inverse-bg: $brand-inverse !default;
+$progress-bar-premium-bg: $brand-premium !default;
+$progress-bar-pretty-bg:  $brand-pretty !default;
+
+$progress-bar-height-xs: ($spacer-y * .5) !default;
+$progress-bar-height-sm: ($spacer-y * .75) !default;
+$progress-bar-height-lg: ($spacer-y * 1.25) !default;
+$progress-bar-height-xl: ($spacer-y * 1.5) !default;
+
+// List group
+$list-group-item-padding-x-xs: .75rem !default;
+$list-group-item-padding-y-xs: .25rem !default;
+
+$list-group-item-padding-x-sm: 1rem !default;
+$list-group-item-padding-y-sm: .5rem !default;
+
+$list-group-item-padding-x-lg: 1.5rem !default;
+$list-group-item-padding-y-lg: 1rem !default;
+
+// Breadcrumbs
+$breadcrumb-divider-rang:   "〉" !default;
+$breadcrumb-divider-raquo:  "»" !default;
+$breadcrumb-divider-rarr:   "→" !default;
+$breadcrumb-divider-rsaquo: "›" !default;

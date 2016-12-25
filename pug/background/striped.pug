@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#background-striped.text-gray-dark(href="#background-striped") Striped
+
+block example_result
+  +background_striped()
+
+block example_code
+  include ../sources/background/striped.html

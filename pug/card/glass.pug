@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#card-glass.text-gray-dark(href="#card-glass") Glass
+
+block example_result
+  +glass_cards()
+
+block example_code
+  include ../sources/card/glass.html

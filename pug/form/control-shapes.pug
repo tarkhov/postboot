@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#form-control-shapes.text-gray-dark(href="#form-control-shapes") Control shapes
+
+block example_result
+  +form_control_shapes()
+
+block example_code
+  include ../sources/form/control-shapes.html

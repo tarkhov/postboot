@@ -1,0 +1,91 @@
+// Colors
+.btn-inverse {
+  @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+}
+.btn-premium {
+  @include button-variant($btn-premium-color, $btn-premium-bg, $btn-premium-border);
+}
+.btn-pretty {
+  @include button-variant($btn-pretty-color, $btn-pretty-bg, $btn-pretty-border);
+}
+
+// Outline
+.btn-outline-inverse {
+  @include button-outline-variant($btn-inverse-bg);
+}
+.btn-outline-premium {
+  @include button-outline-variant($btn-premium-bg);
+}
+.btn-outline-pretty {
+  @include button-outline-variant($btn-pretty-bg);
+}
+
+// Glass
+.btn-glass-primary {
+  @include button-glass-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-glass-success {
+  @include button-glass-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-glass-info {
+  @include button-glass-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-glass-warning {
+  @include button-glass-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-glass-danger {
+  @include button-glass-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+.btn-glass-inverse {
+  @include button-glass-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+}
+.btn-glass-premium {
+  @include button-glass-variant($btn-premium-color, $btn-premium-bg, $btn-premium-border);
+}
+.btn-glass-pretty {
+  @include button-glass-variant($btn-pretty-color, $btn-pretty-bg, $btn-pretty-border);
+}
+
+// 3D
+.btn-3d-primary {
+  @include button-3d-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+.btn-3d-secondary {
+  border-bottom-width: 4px;
+  @include button-variant($btn-secondary-color, $btn-secondary-bg, $btn-secondary-border);
+}
+.btn-3d-success {
+  @include button-3d-variant($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+.btn-3d-info {
+  @include button-3d-variant($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+.btn-3d-warning {
+  @include button-3d-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+.btn-3d-danger {
+  @include button-3d-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+.btn-3d-inverse {
+  @include button-3d-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+}
+.btn-3d-premium {
+  @include button-3d-variant($btn-premium-color, $btn-premium-bg, $btn-premium-border);
+}
+.btn-3d-pretty {
+  @include button-3d-variant($btn-pretty-color, $btn-pretty-bg, $btn-pretty-border);
+}
+
+// Striped
+.btn-striped {
+  @include gradient-striped();
+  background-size: $spacer-y $spacer-y;
+}
+
+// Shapes
+.btn-pill {
+  @include border-radius($btn-pill-border-radius);
+}
+.btn-tile {
+  @include border-radius(0);
+}

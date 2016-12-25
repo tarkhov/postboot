@@ -1,0 +1,13 @@
+mixin font_size(text, classes)
+  p(class=classes)= text
+
+mixin font_sizes()
+  each text, size in {'xs': 'Extra small', 'sm': 'Small', 'lg': 'Large'}
+    +font_size(text, 'font-size-' + size)
+
+mixin font_weight(text, classes)
+  p(class=classes)= text
+
+mixin font_weights()
+  each text, weight in {'thin': 'Thin', 'extra-light': 'Extra light', 'light': 'Light', 'normal': 'Normal', 'medium': 'Medium', 'semi-bold': 'Semi bold', 'bold': 'Bold', 'extra-bold': 'Extra bold', 'black': 'Black'}
+    +font_weight(text, 'font-weight-' + weight)

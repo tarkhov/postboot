@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#navbar-sizes.text-gray-dark(href="#navbar-sizes") Sizes
+
+block example_result
+  +navbar_sizes()
+
+block example_code
+  include ../sources/navbar/sizes.html

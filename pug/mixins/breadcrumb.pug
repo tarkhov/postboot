@@ -1,0 +1,22 @@
+mixin breadcrumb(classes)
+  ol.breadcrumb(class=classes)
+    li.breadcrumb-item: a(href='#') Home
+    li.breadcrumb-item: a(href='#') Category
+    li.breadcrumb-item.active Article
+
+mixin breadcrumb_divider(divider)
+  +breadcrumb("breadcrumb-" + divider)
+
+mixin breadcrumb_dividers(divider)
+  each divider in ['rang', 'raquo', 'rarr', 'rsaquo']
+    +breadcrumb_divider(divider)
+
+mixin breadcrumb_shape(shape)
+  +breadcrumb("breadcrumb-" + shape)
+
+mixin breadcrumb_shapes()
+  each shape in ['pill', 'tile']
+    +breadcrumb_shape(shape)
+
+mixin breadcrumb_transparent()
+  +breadcrumb('breadcrumb-transparent')

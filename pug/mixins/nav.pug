@@ -1,0 +1,58 @@
+mixin nav(classes)
+  ul.nav(class=classes)
+    - for(var i = 1; i <= 3; i++)
+      li.nav-item
+        a.nav-link(href='#' class={active: i === 1})= 'Nav item ' + i
+
+mixin nav_tabs(direction)
+  ul.nav.nav-tabs(class=['nav-tabs-'+direction, 'mb-3'])
+    - for(var i = 1; i <= 3; i++)
+      li.nav-item
+        a.nav-link(href='#'+direction+'-tab-item-'+i class={active: i === 1} data-toggle="tab")= 'Nav item ' + i
+
+mixin tab_content(direction)
+  .tab-content
+    - for(var i = 1; i <= 3; i++)
+      .tab-pane(class={active: i === 1} id=direction+'-tab-item-'+i)
+        p= 'Tab item ' + i + '.'
+
+mixin tabs_right()
+  .row
+    .col-md-8.col-lg-9.text-right
+      +tab_content('right')
+    .col-md-4.col-lg-3
+      +nav_tabs('right')
+
+mixin tabs_bottom()
+  .mb-4
+    +tab_content('bottom')
+  +nav_tabs('bottom')
+
+mixin tabs_left()
+  .row
+    .col-md-4.col-lg-3
+      +nav_tabs('left')
+    .col-md-8.col-lg-9
+      +tab_content('left')
+
+mixin nav_tabs_bottom()
+  +nav(['nav-tabs', 'nav-tabs-bottom'])
+
+mixin tabs()
+  +tabs_left()
+  +tabs_right()
+  +tabs_bottom()
+
+mixin nav_size(size)
+  +nav(['nav-pills', 'nav-' + size, 'mb-3'])
+
+mixin nav_sizes()
+  each size in ['xs', 'sm', 'lg']
+    +nav_size(size)
+
+mixin nav_tree()
+  ul.nav.nav-y-sm.nav-tree
+    - for(var i = 1; i <= 3; i++)
+      li.nav-item(class={active: i === 1})
+        a.nav-link(href='#')= 'Nav item ' + i
+        +nav(['nav-y-xs', 'font-size-sm', 'pl-3'])

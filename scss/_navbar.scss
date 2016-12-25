@@ -1,0 +1,16 @@
+// Sizes
+.navbar-sm {
+  @include navbar-size($navbar-padding-y-sm, $font-size-sm, $font-size-base, $navbar-brand-padding-y-sm, $navbar-nav-padding-y-sm, $navbar-text-padding-y-sm);
+}
+.navbar-x-sm {
+}
+.navbar-y-sm {
+}
+
+.navbar-lg {
+  @include navbar-size($navbar-padding-y-lg, $font-size-lg, $font-size-xl, $navbar-brand-padding-y-lg, $navbar-nav-padding-y-lg, $navbar-text-padding-y-lg);
+}
+.navbar-x-lg {
+}
+.navbar-y-lg {
+}

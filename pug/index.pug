@@ -1,0 +1,61 @@
+include variables.pug
+include mixins.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="x-ua-compatible" content="ie=edge")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    title PostBoot
+    meta(name="description" content=pkg.description)
+    meta(name="keywords" content="")
+
+    meta(name="author" content=pkg.author)
+
+    link(rel="icon" href="/favicon.ico")
+    link(rel="apple-touch-icon" href="/apple-touch-icon.png")
+
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700")
+    link(rel="stylesheet" href="/css/app.min.css")
+  body(data-spy="scroll" data-target="#sidebar")
+    header#header(role="banner")
+      nav#navbar-top.navbar.navbar-light.navbar-fixed-top.bg-faded(role="navigation")
+        .container
+          a.navbar-brand(href="#start") PostBoot #[sup.text-success= pkg.version]
+          ul.nav.navbar-nav
+            li.nav-item: a.btn.btn-primary(href="https://github.com/postboot/" + pkg.name + "/archive/master.zip") Download
+            li.nav-item: a.nav-link(href="#start") Start
+            each section, id in contents
+              li.nav-item.dropdown.dropdown-hover
+                a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" data-hover="dropdown")= section.title
+                .dropdown-menu(class={'dropdown-menu-scroll': id == "components"})
+                  each item, itemId in section.items
+                    if !item.first
+                      .dropdown-divider
+                    h6.dropdown-header= item.title
+                    each exampleName, exampleId in item.items
+                      a.dropdown-item(href="#" + itemId + "-" + exampleId)= exampleName
+          ul.nav.navbar-nav.float-right
+            li.nav-item: a.nav-link(href="https://github.com/alextarkhov/" + pkg.name) GitHub
+            li.nav-item: a.nav-link(href="#") ProductHunt
+
+    .container
+      .row
+        .col-sm-2
+          aside#sidebar(role="complementary" style="position: fixed;")
+            include sidebar.pug
+        .col-sm-10
+          main#main(role="main")
+            include postboot.pug
+
+    footer#footer(role="contentinfo")
+      nav#navbar-bottom.navbar.navbar-dark.navbar-full.bg-inverse(role="navigation")
+        .container
+          ul.nav.navbar-nav
+            li.nav-item: a.nav-link(href="#") CC BY 4.0
+          ul.nav.navbar-nav.float-right
+            li.nav-item: a.nav-link(href="https://github.com/postboot/" + pkg.name) GitHub
+            li.nav-item: a.nav-link(href="#") ProductHunt
+
+    script(src="/js/app.min.js")

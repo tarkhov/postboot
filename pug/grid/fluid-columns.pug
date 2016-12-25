@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#grid-fluid-columns.text-gray-dark(href="#grid-fluid-columns") Fluid columns
+
+block example_result
+  +fluid_columns_example()
+
+block example_code
+  include ../sources/grid/fluid-columns.html

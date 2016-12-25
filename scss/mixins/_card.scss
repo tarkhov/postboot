@@ -1,0 +1,15 @@
+// Glass
+@mixin card-glass-variant($background, $border) {
+  @include card-variant(rgba($background, 0.7), rgba($border, 0.7));
+}
+
+// Shapes
+@mixin card-shape($border-radius) {
+  @include border-radius($border-radius);
+
+  .card-img,
+  .card-img-top,
+  .card-img-bottom {
+    @include border-radius($border-radius);
+  }
+}

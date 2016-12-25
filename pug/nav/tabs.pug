@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#nav-tabs.text-gray-dark(href="#nav-tabs") Tabs
+
+block example_result
+  +tabs()
+
+block example_code
+  include ../sources/nav/tabs.html

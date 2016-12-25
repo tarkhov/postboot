@@ -1,0 +1,25 @@
+// Contextual colors
+@include text-emphasis-variant('.text-premium', $brand-premium);
+@include text-emphasis-variant('.text-pretty', $brand-pretty);
+
+// Ribbon
+.text-ribbon-default {
+}
+.text-ribbon-primary {
+}
+.text-ribbon-secondary {
+}
+.text-ribbon-success {
+}
+.text-ribbon-info {
+}
+.text-ribbon-warning {
+}
+.text-ribbon-danger {
+}
+.text-ribbon-inverse {
+}
+.text-ribbon-premium {
+}
+.text-ribbon-pretty {
+}

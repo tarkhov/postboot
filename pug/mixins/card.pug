@@ -1,0 +1,44 @@
+mixin card(text, classes)
+  .card(class=classes)
+    .card-block
+      h4.card-title= text
+      p.card-text Example text.
+
+mixin card_variant(text, variant)
+  +card(text, 'card-' + variant)
+
+mixin inverse_card(text, variant)
+  +card(text, ['card-' + variant, 'card-inverse'])
+
+mixin outline_card(text, variant)
+  +card(text, 'card-outline-' + variant)
+
+mixin cards()
+  .row
+    each text, variant in {'premium': 'Premium', 'pretty': 'Pretty'}
+      .col-md-3
+        +inverse_card(text, variant)
+      .col-md-3
+        +outline_card(text, variant)
+    .col-md-3
+      +card_variant('Secondary', 'secondary')
+  
+mixin glass_card(text, variant)
+  +card(text, ['card-inverse', 'card-glass-' + variant])
+
+mixin glass_cards()
+  .row
+    each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'inverse': 'Inverse', 'premium': 'Premium', 'pretty': 'Pretty'}
+      .col-md-3
+        +glass_card(text, variant)
+
+mixin card_striped()
+  .row
+    .col-md-3
+      +card('Striped', ['card-primary', 'card-inverse', 'card-striped'])
+
+mixin card_shapes()
+  .row
+    each text, shape in {'pill': 'Pill', 'tile': 'Tile'}
+      .col-md-3
+        +card_variant(text, shape)

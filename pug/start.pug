@@ -1,0 +1,28 @@
+extends example.pug
+
+block example_title
+  h1.font-weight-normal
+    a#start.text-gray-dark(href="#start") PostBoot
+
+block example_description
+  p.lead.font-weight-normal= pkg.description
+  ul.list-inline.mb-4
+    li.list-inline-item: a.btn.btn-primary(href="#") Download
+    li.list-inline-item: a.btn.btn-secondary(href="#") GitHub
+
+block example_result
+  ul.list-unstyled.mb-0
+    li: a(href=dist)= pkg.name + "/"
+    ul
+      li: a(href=dist_css) css/
+      ul
+        li: a(href=dist_css + "/" + pkg.name + ".css")= pkg.name + ".css"
+        li: a(href=dist_css + "/" + pkg.name + ".css.map")= pkg.name + ".css.map"
+        li: a(href=dist_css + "/" + pkg.name + ".min.css")= pkg.name + ".min.css"
+      li: a(href=dist_js) js/
+      ul
+        li: a(href=dist_js + "/" + pkg.name + ".js")= pkg.name + ".js"
+        li: a(href=dist_js + "/" + pkg.name + ".min.js")= pkg.name + ".min.js"
+
+block example_code
+  include sources/start.html

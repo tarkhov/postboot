@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#dropdown-directions.text-gray-dark(href="#dropdown-directions") Directions
+
+block example_result
+  +dropdown_directions()
+
+block example_code
+  include ../sources/dropdown/directions.html

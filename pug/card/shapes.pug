@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#card-shapes.text-gray-dark(href="#card-shapes") Shapes
+
+block example_result
+  +card_shapes()
+
+block example_code
+  include ../sources/card/shapes.html

@@ -1,0 +1,7 @@
+// Shapes
+@mixin progress-shape($border-radius) {
+  &,
+  &[value] {
+    @include border-radius($border-radius);
+  }
+}

@@ -1,0 +1,6 @@
+mixin text(text, classes)
+  div(class=classes)= text
+
+mixin texts()
+  each text, variant in {'premium': 'Premium', 'pretty': 'Pretty'}
+    +text(text, 'text-' + variant)

@@ -1,0 +1,30 @@
+// Size
+@mixin navbar-size($padding-y, $font-size, $brand-font-size, $brand-padding-y, $nav-padding-y, $text-padding-y) {
+  padding-top: $padding-y;
+  padding-bottom: $padding-y;
+
+  .navbar-brand {
+    font-size: $brand-font-size;
+    padding-top: $brand-padding-y;
+    padding-bottom: $brand-padding-y;
+  }
+
+  .navbar-nav {
+    font-size: $font-size;
+
+    .nav-link {
+      padding-top: $nav-padding-y;
+      padding-bottom: $nav-padding-y;
+    }
+  }
+
+  .navbar-text {
+    font-size: $font-size;
+  }
+}
+
+@mixin navbar-nav-size-y($padding-y) {
+}
+
+@mixin navbar-nav-size-x($padding-x) {
+}

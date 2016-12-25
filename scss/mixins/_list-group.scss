@@ -1,0 +1,21 @@
+// Sizes
+@mixin list-group-size($padding-y, $padding-x, $font-size) {
+  .list-group-item {
+    font-size: $font-size;
+    padding: $padding-y $padding-x;
+  }
+}
+
+@mixin list-group-size-y($padding-y) {
+  .list-group-item {
+    padding-top: $padding-y;
+    padding-bottom: $padding-y;
+  }
+}
+
+@mixin list-group-size-x($padding-x) {
+  .list-group-item {
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+  }
+}

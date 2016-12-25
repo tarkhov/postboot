@@ -1,0 +1,5 @@
+// Fluid columns
+@mixin make-fluid-col() {
+  display: table-cell;
+  vertical-align: top;
+}

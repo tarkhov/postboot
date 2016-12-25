@@ -1,0 +1,18 @@
+mixin form_control(placeholder, classes)
+  input.form-control(type='text', placeholder=placeholder, class=classes)
+
+mixin form_controls(variants)
+  each placeholder, variant in brands
+    .form-group
+      +form_control(placeholder, 'form-control-' + variant)
+
+mixin form_control_shape(text, shape)
+  +form_control(shape, 'form-control-' + shape)
+
+mixin form_control_shapes()
+  each text, shape in {'pill': 'Pill', 'tile': 'Tile'}
+    .form-group
+      +form_control_shape(text, shape)
+
+mixin form_control_underlined()
+  +form_control('Underlined', 'form-control-underlined')

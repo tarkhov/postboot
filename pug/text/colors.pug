@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#text-colors.text-gray-dark(href="#text-colors") Colors
+
+block example_result
+  +texts()
+
+block example_code
+  include ../sources/text/colors.html

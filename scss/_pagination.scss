@@ -1,0 +1,19 @@
+// Unbordered
+.pagination-unbordered {
+  .page-link {
+    border-color: $pagination-bg;
+
+    @include hover-focus {
+      border-color: $pagination-hover-bg;
+    }
+  }
+
+  @include pagination-unbordered($border-radius);
+
+  &.pagination-sm {
+    @include pagination-unbordered($border-radius-sm);
+  }
+  &.pagination-lg {
+    @include pagination-unbordered($border-radius-lg);
+  }
+}

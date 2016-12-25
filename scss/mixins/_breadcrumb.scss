@@ -1,0 +1,8 @@
+// Divider
+@mixin breadcrumb-divider($divider) {
+  .breadcrumb-item {
+    + .breadcrumb-item::before {
+      content: "#{$divider}";
+    }
+  }
+}

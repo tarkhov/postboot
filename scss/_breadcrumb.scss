@@ -1,0 +1,27 @@
+// Dividers
+.breadcrumb-rang {
+  @include breadcrumb-divider($breadcrumb-divider-rang);
+}
+.breadcrumb-raquo {
+  @include breadcrumb-divider($breadcrumb-divider-raquo);
+}
+.breadcrumb-rarr {
+  @include breadcrumb-divider($breadcrumb-divider-rarr);
+}
+.breadcrumb-rsaquo {
+  @include breadcrumb-divider($breadcrumb-divider-rsaquo);
+}
+
+// Shapes
+.breadcrumb-pill {
+  @include border-radius(2rem);
+}
+.breadcrumb-tile {
+  @include border-radius(0);
+}
+
+// Transparent
+.breadcrumb-transparent {
+  background-color: transparent;
+  padding: 0;
+}
