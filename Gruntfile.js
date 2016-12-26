@@ -190,7 +190,6 @@ module.exports = function (grunt) {
 
   // Load tasks
   grunt.loadNpmTasks('grunt-banner');
-  grunt.loadNpmTasks('grunt-contrib-compress');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-pug');

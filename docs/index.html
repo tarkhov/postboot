@@ -15,61 +15,64 @@
   </head>
   <body data-spy="scroll" data-target="#sidebar">
     <header id="header" role="banner">
-      <nav class="navbar navbar-light navbar-fixed-top bg-faded" id="navbar-top" role="navigation">
-        <div class="container"><a class="navbar-brand" href="#start">PostBoot <sup class="text-success">1.0.0</sup></a>
-          <ul class="nav navbar-nav">
-            <li class="nav-item"><a class="btn btn-primary" href="https://github.com/postboot/postboot/archive/master.zip">Download</a></li>
-            <li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
-            <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Layout</a>
-              <div class="dropdown-menu">
-                <h6 class="dropdown-header">Grid</h6><a class="dropdown-item" href="#grid-containers">Containers</a><a class="dropdown-item" href="#grid-fluid-columns">Fluid columns</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Components</a>
-              <div class="dropdown-menu dropdown-menu-scroll">
-                <h6 class="dropdown-header">Badge</h6><a class="dropdown-item" href="#badge-colors">Colors</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Breadcrumb</h6><a class="dropdown-item" href="#breadcrumb-dividers">Dividers</a><a class="dropdown-item" href="#breadcrumb-shapes">Shapes</a><a class="dropdown-item" href="#breadcrumb-transparent">Transparent</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Button</h6><a class="dropdown-item" href="#button-colors">Colors</a><a class="dropdown-item" href="#button-3d">3D</a><a class="dropdown-item" href="#button-glass">Glass</a><a class="dropdown-item" href="#button-striped">Striped</a><a class="dropdown-item" href="#button-shapes">Shapes</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Card</h6><a class="dropdown-item" href="#card-colors">Colors</a><a class="dropdown-item" href="#card-glass">Glass</a><a class="dropdown-item" href="#card-striped">Striped</a><a class="dropdown-item" href="#card-shapes">Shapes</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Dropdown</h6><a class="dropdown-item" href="#dropdown-directions">Directions</a><a class="dropdown-item" href="#dropdown-hover">Hover</a><a class="dropdown-item" href="#dropdown-mega-menu">Mega menu</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Form</h6><a class="dropdown-item" href="#form-control-shapes">Shapes</a><a class="dropdown-item" href="#form-control-underlined">Underlined</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">List group</h6><a class="dropdown-item" href="#list-group-sizes">Sizes</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Nav</h6><a class="dropdown-item" href="#nav-sizes">Sizes</a><a class="dropdown-item" href="#nav-tabs">Tabs</a><a class="dropdown-item" href="#nav-tree">Tree</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Navbar</h6><a class="dropdown-item" href="#navbar-sizes">Sizes</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Pagination</h6><a class="dropdown-item" href="#pagination-unbordered">Unbordered</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Progress</h6><a class="dropdown-item" href="#progress-colors">Colors</a><a class="dropdown-item" href="#progress-sizes">Sizes</a><a class="dropdown-item" href="#progress-shapes">Shapes</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Utilities</a>
-              <div class="dropdown-menu">
-                <h6 class="dropdown-header">Background</h6><a class="dropdown-item" href="#background-colors">Colors</a><a class="dropdown-item" href="#background-glass">Glass</a><a class="dropdown-item" href="#background-striped">Striped</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Font</h6><a class="dropdown-item" href="#font-sizes">Sizes</a><a class="dropdown-item" href="#font-weights">Weights</a>
-                <div class="dropdown-divider"></div>
-                <h6 class="dropdown-header">Text</h6><a class="dropdown-item" href="#text-colors">Colors</a>
-              </div>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav float-right">
-            <li class="nav-item"><a class="nav-link" href="https://github.com/alextarkhov/postboot">GitHub</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">ProductHunt</a></li>
-          </ul>
+      <nav class="navbar navbar-light navbar-fixed-top bg-faded px-0" id="navbar-top" role="navigation">
+        <div class="container"><a class="navbar-brand" href="#start">PostBoot <sup class="text-success hidden-xs-down">1.0.0</sup></a><a class="btn btn-primary float-lg-left mr-lg-3" href="https://github.com/alextarkhov/postboot/archive/master.zip">Download</a>
+          <button class="navbar-toggler float-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar-top-collapse"></button>
+          <div class="collapse navbar-toggleable-md" id="navbar-top-collapse">
+            <ul class="nav navbar-nav">
+              <!--li.nav-item: a.btn.btn-primary(href=repo + "/archive/master.zip") Download-->
+              <li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
+              <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Layout</a>
+                <div class="dropdown-menu">
+                  <h6 class="dropdown-header">Grid</h6><a class="dropdown-item" href="#grid-containers">Containers</a><a class="dropdown-item" href="#grid-fluid-columns">Fluid columns</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Components</a>
+                <div class="dropdown-menu dropdown-menu-scroll">
+                  <h6 class="dropdown-header">Badge</h6><a class="dropdown-item" href="#badge-colors">Colors</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Breadcrumb</h6><a class="dropdown-item" href="#breadcrumb-dividers">Dividers</a><a class="dropdown-item" href="#breadcrumb-shapes">Shapes</a><a class="dropdown-item" href="#breadcrumb-transparent">Transparent</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Button</h6><a class="dropdown-item" href="#button-colors">Colors</a><a class="dropdown-item" href="#button-3d">3D</a><a class="dropdown-item" href="#button-glass">Glass</a><a class="dropdown-item" href="#button-striped">Striped</a><a class="dropdown-item" href="#button-shapes">Shapes</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Card</h6><a class="dropdown-item" href="#card-colors">Colors</a><a class="dropdown-item" href="#card-glass">Glass</a><a class="dropdown-item" href="#card-striped">Striped</a><a class="dropdown-item" href="#card-shapes">Shapes</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Dropdown</h6><a class="dropdown-item" href="#dropdown-directions">Directions</a><a class="dropdown-item" href="#dropdown-hover">Hover</a><a class="dropdown-item" href="#dropdown-mega-menu">Mega menu</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Form</h6><a class="dropdown-item" href="#form-control-shapes">Shapes</a><a class="dropdown-item" href="#form-control-underlined">Underlined</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">List group</h6><a class="dropdown-item" href="#list-group-sizes">Sizes</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Nav</h6><a class="dropdown-item" href="#nav-sizes">Sizes</a><a class="dropdown-item" href="#nav-tabs">Tabs</a><a class="dropdown-item" href="#nav-tree">Tree</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Navbar</h6><a class="dropdown-item" href="#navbar-sizes">Sizes</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Pagination</h6><a class="dropdown-item" href="#pagination-unbordered">Unbordered</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Progress</h6><a class="dropdown-item" href="#progress-colors">Colors</a><a class="dropdown-item" href="#progress-sizes">Sizes</a><a class="dropdown-item" href="#progress-shapes">Shapes</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Utilities</a>
+                <div class="dropdown-menu">
+                  <h6 class="dropdown-header">Background</h6><a class="dropdown-item" href="#background-colors">Colors</a><a class="dropdown-item" href="#background-glass">Glass</a><a class="dropdown-item" href="#background-striped">Striped</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Font</h6><a class="dropdown-item" href="#font-sizes">Sizes</a><a class="dropdown-item" href="#font-weights">Weights</a>
+                  <div class="dropdown-divider"></div>
+                  <h6 class="dropdown-header">Text</h6><a class="dropdown-item" href="#text-colors">Colors</a>
+                </div>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav float-lg-right">
+              <li class="nav-item"><a class="nav-link" href="https://github.com/alextarkhov/postboot">GitHub</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ProductHunt</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
     <div class="container">
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-lg-2 col-md-3 hidden-sm-down">
           <aside id="sidebar" role="complementary" style="position: fixed">
             <ul class="nav nav-y-sm nav-tree">
               <li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
@@ -183,7 +186,7 @@
             </ul>
           </aside>
         </div>
-        <div class="col-sm-10">
+        <div class="col-lg-10 col-md-9">
           <main id="main" role="main">
             <article class="mb-4" role="article">
               <header>
@@ -191,8 +194,8 @@
               </header>
               <p class="lead font-weight-normal">New colors, extended grid, better components sizing and styling for Bootstrap framework.</p>
               <ul class="list-inline mb-4">
-                <li class="list-inline-item"><a class="btn btn-primary" href="#">Download</a></li>
-                <li class="list-inline-item"><a class="btn btn-secondary" href="#">GitHub</a></li>
+                <li class="list-inline-item"><a class="btn btn-primary" href="https://github.com/alextarkhov/postboot/archive/master.zip">Download</a></li>
+                <li class="list-inline-item"><a class="btn btn-secondary" href="https://github.com/alextarkhov/postboot">GitHub</a></li>
               </ul>
               <div class="card">
                 <div class="card-block">
@@ -1878,13 +1881,13 @@
       </div>
     </div>
     <footer id="footer" role="contentinfo">
-      <nav class="navbar navbar-dark navbar-full bg-inverse" id="navbar-bottom" role="navigation">
+      <nav class="navbar navbar-dark navbar-full bg-inverse px-0" id="navbar-bottom" role="navigation">
         <div class="container">
           <ul class="nav navbar-nav">
             <li class="nav-item"><a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
           </ul>
           <ul class="nav navbar-nav float-right">
-            <li class="nav-item"><a class="nav-link" href="https://github.com/postboot/postboot">GitHub</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://github.com/alextarkhov/postboot">GitHub</a></li>
             <li class="nav-item"><a class="nav-link" href="#">ProductHunt</a></li>
           </ul>
         </div>

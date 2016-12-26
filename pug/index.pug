@@ -20,42 +20,45 @@ html(lang="en")
     link(rel="stylesheet" href="css/app.min.css")
   body(data-spy="scroll" data-target="#sidebar")
     header#header(role="banner")
-      nav#navbar-top.navbar.navbar-light.navbar-fixed-top.bg-faded(role="navigation")
+      nav#navbar-top.navbar.navbar-light.navbar-fixed-top.bg-faded.px-0(role="navigation")
         .container
-          a.navbar-brand(href="#start") PostBoot #[sup.text-success= pkg.version]
-          ul.nav.navbar-nav
-            li.nav-item: a.btn.btn-primary(href="https://github.com/postboot/" + pkg.name + "/archive/master.zip") Download
-            li.nav-item: a.nav-link(href="#start") Start
-            each section, id in contents
-              li.nav-item.dropdown.dropdown-hover
-                a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" data-hover="dropdown")= section.title
-                .dropdown-menu(class={'dropdown-menu-scroll': id == "components"})
-                  each item, itemId in section.items
-                    if !item.first
-                      .dropdown-divider
-                    h6.dropdown-header= item.title
-                    each exampleName, exampleId in item.items
-                      a.dropdown-item(href="#" + itemId + "-" + exampleId)= exampleName
-          ul.nav.navbar-nav.float-right
-            li.nav-item: a.nav-link(href="https://github.com/alextarkhov/" + pkg.name) GitHub
-            li.nav-item: a.nav-link(href="#") ProductHunt
+          a.navbar-brand(href="#start") PostBoot #[sup.text-success.hidden-xs-down= pkg.version]
+          a.btn.btn-primary.float-lg-left.mr-lg-3(href=repo + "/archive/master.zip") Download
+          button.navbar-toggler.float-right.hidden-lg-up(type="button" data-toggle="collapse" data-target="#navbar-top-collapse")
+          #navbar-top-collapse.collapse.navbar-toggleable-md
+            ul.nav.navbar-nav
+              //li.nav-item: a.btn.btn-primary(href=repo + "/archive/master.zip") Download
+              li.nav-item: a.nav-link(href="#start") Start
+              each section, id in contents
+                li.nav-item.dropdown.dropdown-hover
+                  a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" data-hover="dropdown")= section.title
+                  .dropdown-menu(class={'dropdown-menu-scroll': id == "components"})
+                    each item, itemId in section.items
+                      if !item.first
+                        .dropdown-divider
+                      h6.dropdown-header= item.title
+                      each exampleName, exampleId in item.items
+                        a.dropdown-item(href="#" + itemId + "-" + exampleId)= exampleName
+            ul.nav.navbar-nav.float-lg-right
+              li.nav-item: a.nav-link(href=repo) GitHub
+              li.nav-item: a.nav-link(href="#") ProductHunt
 
     .container
       .row
-        .col-sm-2
+        .col-lg-2.col-md-3.hidden-sm-down
           aside#sidebar(role="complementary" style="position: fixed;")
             include sidebar.pug
-        .col-sm-10
+        .col-lg-10.col-md-9
           main#main(role="main")
             include postboot.pug
 
     footer#footer(role="contentinfo")
-      nav#navbar-bottom.navbar.navbar-dark.navbar-full.bg-inverse(role="navigation")
+      nav#navbar-bottom.navbar.navbar-dark.navbar-full.bg-inverse.px-0(role="navigation")
         .container
           ul.nav.navbar-nav
             li.nav-item: a.nav-link(href="https://creativecommons.org/licenses/by/4.0/") CC BY 4.0
           ul.nav.navbar-nav.float-right
-            li.nav-item: a.nav-link(href="https://github.com/postboot/" + pkg.name) GitHub
+            li.nav-item: a.nav-link(href=repo) GitHub
             li.nav-item: a.nav-link(href="#") ProductHunt
 
     script(src="js/app.min.js")
