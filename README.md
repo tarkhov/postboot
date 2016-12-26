@@ -14,7 +14,7 @@ New colors, extended grid, better components sizing and styling for Bootstrap fr
 
 ### Archive
 
-* [Download](https://github.com/alextarkhov/postboot/archive/master.zip)
+[Download](https://github.com/alextarkhov/postboot/archive/master.zip)
 
 ```
 postboot/
@@ -29,7 +29,7 @@ postboot/
 
 ## Usage
 
-```markup
+```html
 <!-- CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="https://cdn.rawgit.com/alextarkhov/postboot/master/dist/css/postboot.min.css"/>
