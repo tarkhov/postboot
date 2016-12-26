@@ -23,11 +23,10 @@ html(lang="en")
       nav#navbar-top.navbar.navbar-light.navbar-fixed-top.bg-faded.px-0(role="navigation")
         .container
           a.navbar-brand(href="#start") PostBoot #[sup.text-success.hidden-xs-down= pkg.version]
-          a.btn.btn-primary.float-lg-left.mr-lg-3(href=repo + "/archive/master.zip") Download
+          a.btn.btn-primary.float-lg-left.mr-lg-3(href=download) Download
           button.navbar-toggler.float-right.hidden-lg-up(type="button" data-toggle="collapse" data-target="#navbar-top-collapse")
           #navbar-top-collapse.collapse.navbar-toggleable-md
             ul.nav.navbar-nav
-              //li.nav-item: a.btn.btn-primary(href=repo + "/archive/master.zip") Download
               li.nav-item: a.nav-link(href="#start") Start
               each section, id in contents
                 li.nav-item.dropdown.dropdown-hover
