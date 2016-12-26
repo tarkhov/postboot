@@ -11,20 +11,6 @@ code {
   padding: 0 !important;
 }
 
-/*pre .tag,
-code .tag {
-  display: inherit;
-  padding: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-  color: inherit;
-  text-align: inherit;
-  white-space: inherit;
-  vertical-align: inherit;
-  border-radius: inherit;
-}*/
-
 #sidebar .nav-item.active > .nav-link {
   color: #292b2c;
 }
