@@ -48,7 +48,8 @@ postboot/
 * [Facebook](https://www.facebook.com/alextarkhov)
 * [Twitter](https://twitter.com/alextarkhov)
 * [Medium](https://medium.com/@alextarkhov)
+* [Product Hunt](https://www.producthunt.com/@alextarkhov)
 
 ## License
 
-This project is licensed under the **MIT License** - see the [LICENSE](https://github.com/alextarkhov/postboot/blob/master/LICENSE) file for details.
+This project is licensed under the **MIT License** - see the `LICENSE` file for details.
