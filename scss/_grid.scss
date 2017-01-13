@@ -13,8 +13,3 @@
     @include make-container-max-widths($container-lg-max-widths);
   }
 }
-
-// Fluid columns
-@if $enable-grid-classes {
-  @include make-grid-fluid-columns();
-}

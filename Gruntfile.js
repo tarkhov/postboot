@@ -109,7 +109,6 @@ module.exports = function (grunt) {
         files: {
           'pug/sources/start.html': 'pug/sources/start.pug',
           'pug/sources/grid/containers.html': 'pug/sources/grid/containers.pug',
-          'pug/sources/grid/fluid-columns.html': 'pug/sources/grid/fluid-columns.pug',
           'pug/sources/badge/colors.html': 'pug/sources/badge/colors.pug',
           'pug/sources/breadcrumb/dividers.html': 'pug/sources/breadcrumb/dividers.pug',
           'pug/sources/breadcrumb/shapes.html': 'pug/sources/breadcrumb/shapes.pug',
@@ -157,7 +156,6 @@ module.exports = function (grunt) {
         src: [
           'pug/sources/start.html',
           'pug/sources/grid/containers.html',
-          'pug/sources/grid/fluid-columns.html',
           'pug/sources/badge/colors.html',
           'pug/sources/breadcrumb/dividers.html',
           'pug/sources/breadcrumb/shapes.html',

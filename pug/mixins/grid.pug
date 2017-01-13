@@ -21,18 +21,3 @@ mixin container_size(text, size)
 mixin container_sizes()
   each text, size in {'sm': 'Small', 'md': 'Medium', 'lg': 'Large'}
     +container_size(text, size)
-
-mixin fluid_column(text, breakpoint)
-  +column(text, 'col-' + breakpoint + '-fluid')
-
-mixin fluid_columns_example()
-  .row
-    .col-fluid
-      .bg-faded.p-5.text-center .col-fluid
-    .col-fluid
-      .bg-faded.p-5.text-center .col-fluid
-
-mixin fluid_columns()
-  +column(text, 'col-fluid')
-  each text, breakpoint in {'sm': 'Small', 'md': 'Medium', 'lg': 'Large', 'xl': 'Extra large'}
-    +fluid_column(text, breakpoint)
