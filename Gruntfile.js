@@ -55,6 +55,14 @@ module.exports = function (grunt) {
         files: {
           'dist/css/<%= pkg.name %>.css': 'scss/<%= pkg.name %>.scss'
         }
+      },
+      docs: {
+        options: {
+          sourcemap: 'none'
+        },
+        files: {
+          'assets/css/docs.css': 'assets/scss/docs.scss'
+        }
       }
     },
 
@@ -74,7 +82,7 @@ module.exports = function (grunt) {
             'assets/css/bootstrap.min.css',
             'dist/css/<%= pkg.name %>.min.css',
             'assets/css/prism.css',
-            'assets/css/main.css'
+            'assets/css/docs.css'
           ]
         }
       }
@@ -211,7 +219,7 @@ module.exports = function (grunt) {
   grunt.registerTask('docs-js', ['concat:docs', 'uglify:docs']);
 
   // Docs CSS task.
-  grunt.registerTask('docs-css', ['cssmin:docs']);
+  grunt.registerTask('docs-css', ['sass:docs', 'cssmin:docs']);
 
   // Docs HTML task.
   grunt.registerTask('docs-html', ['pug:code', 'htmlentities', 'pug:docs']);
