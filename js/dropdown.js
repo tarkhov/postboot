@@ -34,7 +34,7 @@
       var $parent       = getParent($this);
       var relatedTarget = { relatedTarget: this };
 
-      if (!$parent.hasClass('active') || $parent.has(toggle)) return;
+      if (!$parent.hasClass('show') || $parent.has(toggle)) return;
 
       if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return;
 
@@ -43,7 +43,7 @@
       if (e.isDefaultPrevented()) return;
 
       $this.attr('aria-expanded', 'false');
-      $parent.removeClass('active').trigger('hidden.bs.dropdown', relatedTarget);
+      $parent.removeClass('show').trigger('hidden.bs.dropdown', relatedTarget);
     });
   }
 
@@ -56,8 +56,8 @@
 
     clearMenus(e, $parent);
 
-    if (!$parent.hasClass('active')) {
-      $parent.addClass('active');
+    if (!$parent.hasClass('show')) {
+      $parent.addClass('show');
     }
   };
 
@@ -66,8 +66,8 @@
 
     clearMenus(e);
 
-    if ($this.hasClass('active')) {
-      $this.removeClass('active');
+    if ($this.hasClass('show')) {
+      $this.removeClass('show');
     }
   };
 
@@ -93,7 +93,7 @@
 
   $(document)
     .on('mouseenter.bs.dropdown-hover.data-api', '[data-hover="dropdown"]', DropdownHover.prototype.show)
-    .on('mouseleave.bs.dropdown-hover.data-api', '.dropdown-hover.active', DropdownHover.prototype.hide);
+    .on('mouseleave.bs.dropdown-hover.data-api', '.dropdown-hover.show', DropdownHover.prototype.hide);
 
   // Mega menu
   $(document).on('click', '.dropdown-static .dropdown-menu', function (e) {

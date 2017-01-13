@@ -1,7 +1,6 @@
-// Shapes
-@mixin progress-shape($border-radius) {
-  &,
-  &[value] {
-    @include border-radius($border-radius);
+// Sizes
+@mixin progress-size($height) {
+  .progress-bar {
+    height: $height;
   }
 }

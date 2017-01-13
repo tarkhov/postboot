@@ -14,11 +14,12 @@
   </head>
   <body data-spy="scroll" data-target="#sidebar">
     <header id="header" role="banner">
-      <nav class="navbar navbar-light navbar-fixed-top bg-faded px-0" id="navbar-top" role="navigation">
-        <div class="container"><a class="navbar-brand" href="#start">PostBoot <sup class="text-success hidden-xs-down">1.0.0</sup></a><a class="btn btn-primary float-lg-left mr-lg-3" href="https://github.com/alextarkhov/postboot/releases/download/v1.0.0-alpha1/postboot-1.0.0-alpha1-dist.zip">Download</a>
-          <button class="navbar-toggler float-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar-top-collapse"></button>
-          <div class="collapse navbar-toggleable-md" id="navbar-top-collapse">
-            <ul class="nav navbar-nav">
+      <nav class="navbar navbar-light navbar-toggleable-md fixed-top bg-faded" id="navbar-top" role="navigation">
+        <div class="container">
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar-top-collapse"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="#start">PostBoot <sup class="text-success hidden-xs-down">1.0.0</sup></a>
+          <!--a.btn.btn-primary.mr-lg-3(href=download) Download-->
+          <div class="collapse navbar-collapse" id="navbar-top-collapse">
+            <ul class="navbar-nav mr-auto">
               <li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
               <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Layout</a>
                 <div class="dropdown-menu">
@@ -60,7 +61,7 @@
                 </div>
               </li>
             </ul>
-            <ul class="nav navbar-nav float-lg-right">
+            <ul class="navbar-nav">
               <li class="nav-item"><a class="nav-link" href="https://github.com/alextarkhov/postboot">GitHub</a></li>
               <li class="nav-item"><a class="nav-link" href="#">ProductHunt</a></li>
             </ul>
@@ -72,12 +73,12 @@
       <div class="row">
         <div class="col-lg-2 col-md-3 hidden-sm-down">
           <aside id="sidebar" role="complementary" style="position: fixed">
-            <ul class="nav nav-y-sm nav-tree">
+            <ul class="nav nav-y-sm nav-tree flex-column">
               <li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
               <li class="nav-item"><a class="nav-link" href="#layout">Layout</a>
-                <ul class="nav nav-y-sm pl-3">
+                <ul class="nav nav-y-sm pl-3 flex-column">
                   <li class="nav-item"><a class="nav-link" href="#grid">Grid</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#grid-containers">Containers</a></li>
                       <li class="nav-item"><a class="nav-link" href="#grid-fluid-columns">Fluid columns</a></li>
                     </ul>
@@ -85,21 +86,21 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#components">Components</a>
-                <ul class="nav nav-y-sm pl-3">
+                <ul class="nav nav-y-sm pl-3 flex-column">
                   <li class="nav-item"><a class="nav-link" href="#badge">Badge</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#badge-colors">Colors</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#breadcrumb">Breadcrumb</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#breadcrumb-dividers">Dividers</a></li>
                       <li class="nav-item"><a class="nav-link" href="#breadcrumb-shapes">Shapes</a></li>
                       <li class="nav-item"><a class="nav-link" href="#breadcrumb-transparent">Transparent</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button">Button</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#button-colors">Colors</a></li>
                       <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a></li>
                       <li class="nav-item"><a class="nav-link" href="#button-glass">Glass</a></li>
@@ -108,7 +109,7 @@
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#card">Card</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#card-colors">Colors</a></li>
                       <li class="nav-item"><a class="nav-link" href="#card-glass">Glass</a></li>
                       <li class="nav-item"><a class="nav-link" href="#card-striped">Striped</a></li>
@@ -116,42 +117,42 @@
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown">Dropdown</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#dropdown-directions">Directions</a></li>
                       <li class="nav-item"><a class="nav-link" href="#dropdown-hover">Hover</a></li>
                       <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#form">Form</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#form-control-shapes">Shapes</a></li>
                       <li class="nav-item"><a class="nav-link" href="#form-control-underlined">Underlined</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#list-group">List group</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#list-group-sizes">Sizes</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav">Nav</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#nav-sizes">Sizes</a></li>
                       <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a></li>
                       <li class="nav-item"><a class="nav-link" href="#nav-tree">Tree</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#navbar-sizes">Sizes</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#pagination">Pagination</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#pagination-unbordered">Unbordered</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#progress">Progress</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#progress-colors">Colors</a></li>
                       <li class="nav-item"><a class="nav-link" href="#progress-sizes">Sizes</a></li>
                       <li class="nav-item"><a class="nav-link" href="#progress-shapes">Shapes</a></li>
@@ -160,22 +161,22 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#utilities">Utilities</a>
-                <ul class="nav nav-y-sm pl-3">
+                <ul class="nav nav-y-sm pl-3 flex-column">
                   <li class="nav-item"><a class="nav-link" href="#background">Background</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#background-colors">Colors</a></li>
                       <li class="nav-item"><a class="nav-link" href="#background-glass">Glass</a></li>
                       <li class="nav-item"><a class="nav-link" href="#background-striped">Striped</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#font">Font</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#font-sizes">Sizes</a></li>
                       <li class="nav-item"><a class="nav-link" href="#font-weights">Weights</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#text">Text</a>
-                    <ul class="nav nav-y-xs font-size-sm pl-3">
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
                       <li class="nav-item"><a class="nav-link" href="#text-colors">Colors</a></li>
                     </ul>
                   </li>
@@ -581,7 +582,7 @@
                   <div class="card-block">
                     <div class="row">
                       <div class="col-md-3">
-                        <div class="card card-premium card-inverse">
+                        <div class="card mb-3 card-premium card-inverse">
                           <div class="card-block">
                             <h4 class="card-title">Premium</h4>
                             <p class="card-text">Example text.</p>
@@ -589,7 +590,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-outline-premium">
+                        <div class="card mb-3 card-outline-premium">
                           <div class="card-block">
                             <h4 class="card-title">Premium</h4>
                             <p class="card-text">Example text.</p>
@@ -597,7 +598,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-pretty card-inverse">
+                        <div class="card mb-3 card-pretty card-inverse">
                           <div class="card-block">
                             <h4 class="card-title">Pretty</h4>
                             <p class="card-text">Example text.</p>
@@ -605,7 +606,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-outline-pretty">
+                        <div class="card mb-3 card-outline-pretty">
                           <div class="card-block">
                             <h4 class="card-title">Pretty</h4>
                             <p class="card-text">Example text.</p>
@@ -613,7 +614,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-secondary">
+                        <div class="card mb-3 card-secondary">
                           <div class="card-block">
                             <h4 class="card-title">Secondary</h4>
                             <p class="card-text">Example text.</p>
@@ -626,7 +627,7 @@
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-premium card-inverse&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-premium card-inverse&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Premium&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -634,7 +635,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-outline-premium&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-outline-premium&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Premium&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -642,7 +643,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-pretty card-inverse&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-pretty card-inverse&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Pretty&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -650,7 +651,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-outline-pretty&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-outline-pretty&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Pretty&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -658,7 +659,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-secondary&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-secondary&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Secondary&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -679,7 +680,7 @@
                   <div class="card-block">
                     <div class="row">
                       <div class="col-md-3">
-                        <div class="card card-inverse card-glass-primary">
+                        <div class="card mb-3 card-inverse card-glass-primary">
                           <div class="card-block">
                             <h4 class="card-title">Primary</h4>
                             <p class="card-text">Example text.</p>
@@ -687,7 +688,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-inverse card-glass-success">
+                        <div class="card mb-3 card-inverse card-glass-success">
                           <div class="card-block">
                             <h4 class="card-title">Success</h4>
                             <p class="card-text">Example text.</p>
@@ -695,7 +696,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-inverse card-glass-info">
+                        <div class="card mb-3 card-inverse card-glass-info">
                           <div class="card-block">
                             <h4 class="card-title">Info</h4>
                             <p class="card-text">Example text.</p>
@@ -703,7 +704,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-inverse card-glass-warning">
+                        <div class="card mb-3 card-inverse card-glass-warning">
                           <div class="card-block">
                             <h4 class="card-title">Warning</h4>
                             <p class="card-text">Example text.</p>
@@ -711,7 +712,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-inverse card-glass-danger">
+                        <div class="card mb-3 card-inverse card-glass-danger">
                           <div class="card-block">
                             <h4 class="card-title">Danger</h4>
                             <p class="card-text">Example text.</p>
@@ -719,7 +720,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-inverse card-glass-inverse">
+                        <div class="card mb-3 card-inverse card-glass-inverse">
                           <div class="card-block">
                             <h4 class="card-title">Inverse</h4>
                             <p class="card-text">Example text.</p>
@@ -727,7 +728,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-inverse card-glass-premium">
+                        <div class="card mb-3 card-inverse card-glass-premium">
                           <div class="card-block">
                             <h4 class="card-title">Premium</h4>
                             <p class="card-text">Example text.</p>
@@ -735,7 +736,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-inverse card-glass-pretty">
+                        <div class="card mb-3 card-inverse card-glass-pretty">
                           <div class="card-block">
                             <h4 class="card-title">Pretty</h4>
                             <p class="card-text">Example text.</p>
@@ -748,7 +749,7 @@
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-inverse card-glass-primary&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-inverse card-glass-primary&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Primary&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -756,7 +757,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-inverse card-glass-success&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-inverse card-glass-success&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Success&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -764,7 +765,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-inverse card-glass-info&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-inverse card-glass-info&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Info&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -772,7 +773,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-inverse card-glass-warning&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-inverse card-glass-warning&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Warning&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -780,7 +781,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-inverse card-glass-danger&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-inverse card-glass-danger&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Danger&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -788,7 +789,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-inverse card-glass-inverse&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-inverse card-glass-inverse&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Inverse&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -796,7 +797,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-inverse card-glass-premium&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-inverse card-glass-premium&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Premium&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -804,7 +805,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-inverse card-glass-pretty&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-inverse card-glass-pretty&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Pretty&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -825,7 +826,7 @@
                   <div class="card-block">
                     <div class="row">
                       <div class="col-md-3">
-                        <div class="card card-primary card-inverse card-striped">
+                        <div class="card mb-3 card-primary card-inverse card-striped">
                           <div class="card-block">
                             <h4 class="card-title">Striped</h4>
                             <p class="card-text">Example text.</p>
@@ -838,7 +839,7 @@
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-primary card-inverse card-striped&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-primary card-inverse card-striped&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Striped&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -859,7 +860,7 @@
                   <div class="card-block">
                     <div class="row">
                       <div class="col-md-3">
-                        <div class="card card-pill">
+                        <div class="card mb-3 card-pill">
                           <div class="card-block">
                             <h4 class="card-title">Pill</h4>
                             <p class="card-text">Example text.</p>
@@ -867,7 +868,7 @@
                         </div>
                       </div>
                       <div class="col-md-3">
-                        <div class="card card-tile">
+                        <div class="card mb-3 card-tile">
                           <div class="card-block">
                             <h4 class="card-title">Tile</h4>
                             <p class="card-text">Example text.</p>
@@ -880,7 +881,7 @@
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-pill&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-pill&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Pill&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -888,7 +889,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card card-tile&quot;&gt;
+    &lt;div class=&quot;card mb-3 card-tile&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Tile&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
@@ -1507,7 +1508,7 @@
                 </header>
                 <div class="card">
                   <div class="card-block">
-                    <ul class="nav nav-y-sm nav-tree">
+                    <ul class="nav nav-y-sm nav-tree flex-column">
                       <li class="nav-item active"><a class="nav-link" href="#">Nav item 1</a>
                         <ul class="nav nav-y-xs font-size-sm pl-3">
                           <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
@@ -1533,7 +1534,7 @@
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
-&lt;ul class=&quot;nav nav-y-sm nav-tree&quot;&gt;
+&lt;ul class=&quot;nav nav-y-sm nav-tree flex-column&quot;&gt;
   &lt;li class=&quot;nav-item active&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 1&lt;/a&gt;
     &lt;ul class=&quot;nav nav-y-xs font-size-sm pl-3&quot;&gt;
       &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; href=&quot;#&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
@@ -1573,36 +1574,48 @@
                 </header>
                 <div class="card">
                   <div class="card-block">
-                    <nav class="navbar navbar-light bg-faded navbar-sm mb-3"><a class="navbar-brand" href="#">Navbar</a>
-                      <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
-                      </ul>
+                    <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-sm mb-3">
+	<a class="navbar-brand" href="#">Navbar</a>
+                      <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                        </ul>
+                      </div>
                     </nav>
-                    <nav class="navbar navbar-light bg-faded navbar-lg mb-3"><a class="navbar-brand" href="#">Navbar</a>
-                      <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
-                      </ul>
+                    <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-lg mb-3">
+	<a class="navbar-brand" href="#">Navbar</a>
+                      <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                        </ul>
+                      </div>
                     </nav>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
-&lt;nav class=&quot;navbar navbar-light bg-faded navbar-sm mb-3&quot;&gt;&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;
-  &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+&lt;nav class=&quot;navbar navbar-toggleable-md navbar-light bg-faded navbar-sm mb-3&quot;&gt;
+&#x9;&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;
+  &lt;div class=&quot;collapse navbar-collapse&quot;&gt;
+    &lt;ul class=&quot;navbar-nav&quot;&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/nav&gt;
-&lt;nav class=&quot;navbar navbar-light bg-faded navbar-lg mb-3&quot;&gt;&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;
-  &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
-    &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
+&lt;nav class=&quot;navbar navbar-toggleable-md navbar-light bg-faded navbar-lg mb-3&quot;&gt;
+&#x9;&lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Navbar&lt;/a&gt;
+  &lt;div class=&quot;collapse navbar-collapse&quot;&gt;
+    &lt;ul class=&quot;navbar-nav&quot;&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/nav&gt;</code></pre>
                   </div>
                 </div>
@@ -1667,15 +1680,27 @@
                 </header>
                 <div class="card">
                   <div class="card-block">
-                    <progress class="progress progress-inverse" value="100" max="100"></progress>
-                    <progress class="progress progress-premium" value="100" max="100"></progress>
-                    <progress class="progress progress-pretty" value="100" max="100"></progress>
+                    <div class="progress mb-3">
+                      <div class="progress-bar w-100 bg-inverse"></div>
+                    </div>
+                    <div class="progress mb-3">
+                      <div class="progress-bar w-100 bg-premium"></div>
+                    </div>
+                    <div class="progress mb-3">
+                      <div class="progress-bar w-100 bg-pretty"></div>
+                    </div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
-&lt;progress class=&quot;progress progress-inverse&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
-&lt;progress class=&quot;progress progress-premium&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
-&lt;progress class=&quot;progress progress-pretty&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+&lt;div class=&quot;progress mb-3&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100 bg-inverse&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress mb-3&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100 bg-premium&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress mb-3&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100 bg-pretty&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                   </div>
                 </div>
               </article>
@@ -1687,17 +1712,33 @@
                 </header>
                 <div class="card">
                   <div class="card-block">
-                    <progress class="progress progress-xs" value="100" max="100"></progress>
-                    <progress class="progress progress-sm" value="100" max="100"></progress>
-                    <progress class="progress progress-lg" value="100" max="100"></progress>
-                    <progress class="progress progress-xl" value="100" max="100"></progress>
+                    <div class="progress mb-3 progress-xs">
+                      <div class="progress-bar w-100"></div>
+                    </div>
+                    <div class="progress mb-3 progress-sm">
+                      <div class="progress-bar w-100"></div>
+                    </div>
+                    <div class="progress mb-3 progress-lg">
+                      <div class="progress-bar w-100"></div>
+                    </div>
+                    <div class="progress mb-3 progress-xl">
+                      <div class="progress-bar w-100"></div>
+                    </div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
-&lt;progress class=&quot;progress progress-xs&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
-&lt;progress class=&quot;progress progress-sm&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
-&lt;progress class=&quot;progress progress-lg&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
-&lt;progress class=&quot;progress progress-xl&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+&lt;div class=&quot;progress mb-3 progress-xs&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress mb-3 progress-sm&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress mb-3 progress-lg&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress mb-3 progress-xl&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                   </div>
                 </div>
               </article>
@@ -1709,13 +1750,21 @@
                 </header>
                 <div class="card">
                   <div class="card-block">
-                    <progress class="progress progress-pill" value="100" max="100"></progress>
-                    <progress class="progress progress-tile" value="100" max="100"></progress>
+                    <div class="progress mb-3 progress-pill">
+                      <div class="progress-bar w-100"></div>
+                    </div>
+                    <div class="progress mb-3 progress-tile">
+                      <div class="progress-bar w-100"></div>
+                    </div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
-&lt;progress class=&quot;progress progress-pill&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;
-&lt;progress class=&quot;progress progress-tile&quot; value=&quot;100&quot; max=&quot;100&quot;&gt;&lt;/progress&gt;</code></pre>
+&lt;div class=&quot;progress mb-3 progress-pill&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;progress mb-3 progress-tile&quot;&gt;
+  &lt;div class=&quot;progress-bar w-100&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                   </div>
                 </div>
               </article>
@@ -1879,15 +1928,18 @@
       </div>
     </div>
     <footer id="footer" role="contentinfo">
-      <nav class="navbar navbar-dark navbar-full bg-inverse px-0" id="navbar-bottom" role="navigation">
+      <nav class="navbar navbar-inverse navbar-toggleable-md bg-inverse" id="navbar-bottom" role="navigation">
         <div class="container">
-          <ul class="nav navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
-          </ul>
-          <ul class="nav navbar-nav float-right">
-            <li class="nav-item"><a class="nav-link" href="https://github.com/alextarkhov/postboot">GitHub</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">ProductHunt</a></li>
-          </ul>
+          <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbar-bottom-collapse"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbar-bottom-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="https://github.com/alextarkhov/postboot">GitHub</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ProductHunt</a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </footer>

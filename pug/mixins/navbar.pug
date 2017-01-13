@@ -1,12 +1,14 @@
 mixin navbar(classes)
   nav.navbar(class=classes)
+    = "\n\t"
     a.navbar-brand(href="#") Navbar
-    ul.nav.navbar-nav
-      each i in [1,2,3]
-        li.nav-item: a.nav-link(href='#')= 'Nav item ' + i
+    .collapse.navbar-collapse
+      ul.navbar-nav
+        each i in [1,2,3]
+          li.nav-item: a.nav-link(href='#')= 'Nav item ' + i
 
 mixin navbar_size(size)
-  +navbar(['navbar-light', 'bg-faded', 'navbar-' + size, 'mb-3'])
+  +navbar(['navbar-toggleable-md', 'navbar-light', 'bg-faded', 'navbar-' + size, 'mb-3'])
 
 mixin navbar_sizes()
   each size in ['sm', 'lg']

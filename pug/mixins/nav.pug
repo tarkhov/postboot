@@ -51,7 +51,7 @@ mixin nav_sizes()
     +nav_size(size)
 
 mixin nav_tree()
-  ul.nav.nav-y-sm.nav-tree
+  ul.nav.nav-y-sm.nav-tree.flex-column
     - for(var i = 1; i <= 3; i++)
       li.nav-item(class={active: i === 1})
         a.nav-link(href='#')= 'Nav item ' + i

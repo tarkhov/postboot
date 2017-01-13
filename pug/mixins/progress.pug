@@ -1,20 +1,24 @@
-mixin progress(value, classes)
-  progress.progress(class=classes value=value max="100")
+mixin progress(classes, bar_classes)
+  .progress.mb-3(class=classes)
+    .progress-bar(class=bar_classes)
 
-mixin progress_variant(value, variant)
-  +progress(value, 'progress-' + variant)
+mixin progress_variant(variant)
+  +progress('progress-' + variant, 'w-100')
 
 mixin progresses()
-  each variant in ['inverse', 'premium', 'pretty']
-    +progress_variant(100, variant)
+  each color in ['inverse', 'premium', 'pretty']
+    +progress('', ['w-100', 'bg-' + color])
 
 mixin progress_size(size)
-  +progress_variant(100, size)
+  +progress_variant(size, 'w-100')
 
 mixin progress_sizes()
   each size in ['xs', 'sm', 'lg', 'xl']
     +progress_size(size)
 
+mixin progress_shape(shape)
+  +progress_variant(shape, 'w-100')
+
 mixin progress_shapes()
   each shape in ['pill', 'tile']
-    +progress_variant(100, shape)
+    +progress_shape(shape)

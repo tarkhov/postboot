@@ -1,32 +1,21 @@
-// Colors
-.progress-inverse {
-  @include progress-variant($progress-bar-inverse-bg);
-}
-.progress-premium {
-  @include progress-variant($progress-bar-premium-bg);
-}
-.progress-pretty {
-  @include progress-variant($progress-bar-pretty-bg);
-}
-
 // Sizes
 .progress-xs {
-  height: $progress-bar-height-xs;
+  @include progress-size($progress-bar-height-xs);
 }
 .progress-sm {
-  height: $progress-bar-height-sm;
+  @include progress-size($progress-bar-height-sm);
 }
 .progress-lg {
-  height: $progress-bar-height-lg;
+  @include progress-size($progress-bar-height-lg);
 }
 .progress-xl {
-  height: $progress-bar-height-xl;
+  @include progress-size($progress-bar-height-xl);
 }
 
 // Shapes
 .progress-pill {
-  @include progress-shape(1rem);
+  @include border-radius(1rem);
 }
 .progress-tile {
-  @include progress-shape(0);
+  @include border-radius(0);
 }
