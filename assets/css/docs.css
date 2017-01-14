@@ -9,5 +9,8 @@ code {
   margin: 0 !important;
   padding: 0 !important; }
 
-#sidebar .nav-item.active > .nav-link {
+#sidebar-nav .nav-link {
+  padding-left: 0;
+  padding-right: 0; }
+#sidebar-nav .nav-item.active > .nav-link {
   color: #292b2c; }

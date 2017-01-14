@@ -7,8 +7,6 @@
 // Components
 
 // Colors
-$gray-base:     #000 !default;
-
 $brand-premium: #791E94 !default; // http://www.lolcolors.com/palettes/popular#palette_55
 $brand-pretty:  #ed317f !default; // http://www.lolcolors.com/#palette_15
 
@@ -42,10 +40,6 @@ $container-lg-max-widths: (
 //
 
 // Buttons
-$btn-inverse-color:    #fff !default;
-$btn-inverse-bg:       $brand-inverse !default;
-$btn-inverse-border:   $btn-inverse-bg !default;
-
 $btn-premium-color:    #fff !default;
 $btn-premium-bg:       $brand-premium !default;
 $btn-premium-border:   $btn-premium-bg !default;
@@ -84,7 +78,6 @@ $nav-link-padding-x-lg: 1.5em !default;
 $nav-link-padding-y-lg: .75em !default;
 
 // Badges
-$badge-inverse-bg: $brand-inverse !default;
 $badge-premium-bg: $brand-premium !default;
 $badge-pretty-bg:  $brand-pretty !default;
 

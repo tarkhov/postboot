@@ -4,9 +4,6 @@
 }
 
 // Background variations
-.card-secondary {
-  @include card-variant($gray-lightest, $gray-lightest);
-}
 .card-premium {
   @include card-variant($brand-premium, $brand-premium);
 }
@@ -37,9 +34,6 @@
 }
 .card-glass-danger {
   @include card-glass-variant($brand-danger, $brand-danger);
-}
-.card-glass-inverse {
-  @include card-glass-variant($brand-inverse, $brand-inverse);
 }
 .card-glass-premium {
   @include card-glass-variant($brand-premium, $brand-premium);

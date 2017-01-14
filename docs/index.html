@@ -73,7 +73,7 @@
       <div class="row">
         <div class="col-lg-2 col-md-3 hidden-sm-down">
           <aside id="sidebar" role="complementary" style="position: fixed">
-            <ul class="nav nav-y-sm nav-tree flex-column">
+            <ul class="nav nav-y-sm nav-tree flex-column" id="sidebar-nav">
               <li class="nav-item"><a class="nav-link" href="#start">Start</a></li>
               <li class="nav-item"><a class="nav-link" href="#layout">Layout</a>
                 <ul class="nav nav-y-sm pl-3 flex-column">
@@ -280,13 +280,11 @@
                 </header>
                 <div class="card">
                   <div class="card-block">
-                    <div class="badge badge-inverse">Inverse</div>
                     <div class="badge badge-premium">Premium</div>
                     <div class="badge badge-pretty">Pretty</div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
-&lt;div class=&quot;badge badge-inverse&quot;&gt;Inverse&lt;/div&gt;
 &lt;div class=&quot;badge badge-premium&quot;&gt;Premium&lt;/div&gt;
 &lt;div class=&quot;badge badge-pretty&quot;&gt;Pretty&lt;/div&gt;</code></pre>
                   </div>
@@ -424,8 +422,6 @@
                 </header>
                 <div class="card">
                   <div class="card-block">
-                    <button class="btn btn-inverse" type="button">Inverse</button>
-                    <button class="btn btn-outline-inverse" type="button">Inverse</button>
                     <button class="btn btn-premium" type="button">Premium</button>
                     <button class="btn btn-outline-premium" type="button">Premium</button>
                     <button class="btn btn-pretty" type="button">Pretty</button>
@@ -433,8 +429,6 @@
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
-&lt;button class=&quot;btn btn-inverse&quot; type=&quot;button&quot;&gt;Inverse&lt;/button&gt;
-&lt;button class=&quot;btn btn-outline-inverse&quot; type=&quot;button&quot;&gt;Inverse&lt;/button&gt;
 &lt;button class=&quot;btn btn-premium&quot; type=&quot;button&quot;&gt;Premium&lt;/button&gt;
 &lt;button class=&quot;btn btn-outline-premium&quot; type=&quot;button&quot;&gt;Premium&lt;/button&gt;
 &lt;button class=&quot;btn btn-pretty&quot; type=&quot;button&quot;&gt;Pretty&lt;/button&gt;
@@ -456,7 +450,6 @@
                     <button class="btn btn-3d-info" type="button">Info</button>
                     <button class="btn btn-3d-warning" type="button">Warning</button>
                     <button class="btn btn-3d-danger" type="button">Danger</button>
-                    <button class="btn btn-3d-inverse" type="button">Inverse</button>
                     <button class="btn btn-3d-premium" type="button">Premium</button>
                     <button class="btn btn-3d-pretty" type="button">Pretty</button>
                   </div>
@@ -468,7 +461,6 @@
 &lt;button class=&quot;btn btn-3d-info&quot; type=&quot;button&quot;&gt;Info&lt;/button&gt;
 &lt;button class=&quot;btn btn-3d-warning&quot; type=&quot;button&quot;&gt;Warning&lt;/button&gt;
 &lt;button class=&quot;btn btn-3d-danger&quot; type=&quot;button&quot;&gt;Danger&lt;/button&gt;
-&lt;button class=&quot;btn btn-3d-inverse&quot; type=&quot;button&quot;&gt;Inverse&lt;/button&gt;
 &lt;button class=&quot;btn btn-3d-premium&quot; type=&quot;button&quot;&gt;Premium&lt;/button&gt;
 &lt;button class=&quot;btn btn-3d-pretty&quot; type=&quot;button&quot;&gt;Pretty&lt;/button&gt;</code></pre>
                   </div>
@@ -487,7 +479,6 @@
                     <button class="btn btn-glass-info" type="button">Info</button>
                     <button class="btn btn-glass-warning" type="button">Warning</button>
                     <button class="btn btn-glass-danger" type="button">Danger</button>
-                    <button class="btn btn-glass-inverse" type="button">Inverse</button>
                     <button class="btn btn-glass-premium" type="button">Premium</button>
                     <button class="btn btn-glass-pretty" type="button">Pretty</button>
                   </div>
@@ -498,7 +489,6 @@
 &lt;button class=&quot;btn btn-glass-info&quot; type=&quot;button&quot;&gt;Info&lt;/button&gt;
 &lt;button class=&quot;btn btn-glass-warning&quot; type=&quot;button&quot;&gt;Warning&lt;/button&gt;
 &lt;button class=&quot;btn btn-glass-danger&quot; type=&quot;button&quot;&gt;Danger&lt;/button&gt;
-&lt;button class=&quot;btn btn-glass-inverse&quot; type=&quot;button&quot;&gt;Inverse&lt;/button&gt;
 &lt;button class=&quot;btn btn-glass-premium&quot; type=&quot;button&quot;&gt;Premium&lt;/button&gt;
 &lt;button class=&quot;btn btn-glass-pretty&quot; type=&quot;button&quot;&gt;Pretty&lt;/button&gt;</code></pre>
                   </div>
@@ -585,14 +575,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-3">
-                        <div class="card mb-3 card-secondary">
-                          <div class="card-block">
-                            <h4 class="card-title">Secondary</h4>
-                            <p class="card-text">Example text.</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                   <div class="card-footer">
@@ -626,14 +608,6 @@
     &lt;div class=&quot;card mb-3 card-outline-pretty&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Pretty&lt;/h4&gt;
-        &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card mb-3 card-secondary&quot;&gt;
-      &lt;div class=&quot;card-block&quot;&gt;
-        &lt;h4 class=&quot;card-title&quot;&gt;Secondary&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -687,14 +661,6 @@
                         <div class="card mb-3 card-inverse card-glass-danger">
                           <div class="card-block">
                             <h4 class="card-title">Danger</h4>
-                            <p class="card-text">Example text.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="card mb-3 card-inverse card-glass-inverse">
-                          <div class="card-block">
-                            <h4 class="card-title">Inverse</h4>
                             <p class="card-text">Example text.</p>
                           </div>
                         </div>
@@ -756,14 +722,6 @@
     &lt;div class=&quot;card mb-3 card-inverse card-glass-danger&quot;&gt;
       &lt;div class=&quot;card-block&quot;&gt;
         &lt;h4 class=&quot;card-title&quot;&gt;Danger&lt;/h4&gt;
-        &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col-md-3&quot;&gt;
-    &lt;div class=&quot;card mb-3 card-inverse card-glass-inverse&quot;&gt;
-      &lt;div class=&quot;card-block&quot;&gt;
-        &lt;h4 class=&quot;card-title&quot;&gt;Inverse&lt;/h4&gt;
         &lt;p class=&quot;card-text&quot;&gt;Example text.&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -1344,10 +1302,10 @@
                   <div class="card-block">
                     <div class="row">
                       <div class="col-md-4 col-lg-3">
-                        <ul class="nav nav-tabs nav-tabs-left mb-3">
-                          <li class="nav-item"><a class="nav-link active" href="#left-tab-item-1" data-toggle="tab">Nav item 1</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#left-tab-item-2" data-toggle="tab">Nav item 2</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#left-tab-item-3" data-toggle="tab">Nav item 3</a></li>
+                        <ul class="nav nav-tabs nav-tabs-left flex-column mb-3">
+                          <li class="nav-item"><a class="nav-link active" href="#undefined-tab-item-1" data-toggle="tab">Nav item 1</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#undefined-tab-item-2" data-toggle="tab">Nav item 2</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#undefined-tab-item-3" data-toggle="tab">Nav item 3</a></li>
                         </ul>
                       </div>
                       <div class="col-md-8 col-lg-9">
@@ -1379,10 +1337,10 @@
                         </div>
                       </div>
                       <div class="col-md-4 col-lg-3">
-                        <ul class="nav nav-tabs nav-tabs-right mb-3">
-                          <li class="nav-item"><a class="nav-link active" href="#right-tab-item-1" data-toggle="tab">Nav item 1</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#right-tab-item-2" data-toggle="tab">Nav item 2</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#right-tab-item-3" data-toggle="tab">Nav item 3</a></li>
+                        <ul class="nav nav-tabs nav-tabs-right flex-column mb-3">
+                          <li class="nav-item"><a class="nav-link active" href="#undefined-tab-item-1" data-toggle="tab">Nav item 1</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#undefined-tab-item-2" data-toggle="tab">Nav item 2</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#undefined-tab-item-3" data-toggle="tab">Nav item 3</a></li>
                         </ul>
                       </div>
                     </div>
@@ -1400,19 +1358,19 @@
                       </div>
                     </div>
                     <ul class="nav nav-tabs nav-tabs-bottom mb-3">
-                      <li class="nav-item"><a class="nav-link active" href="#bottom-tab-item-1" data-toggle="tab">Nav item 1</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#bottom-tab-item-2" data-toggle="tab">Nav item 2</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#bottom-tab-item-3" data-toggle="tab">Nav item 3</a></li>
+                      <li class="nav-item"><a class="nav-link active" href="#undefined-tab-item-1" data-toggle="tab">Nav item 1</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#undefined-tab-item-2" data-toggle="tab">Nav item 2</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#undefined-tab-item-3" data-toggle="tab">Nav item 3</a></li>
                     </ul>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
 &lt;div class=&quot;row&quot;&gt;
   &lt;div class=&quot;col-md-4 col-lg-3&quot;&gt;
-    &lt;ul class=&quot;nav nav-tabs nav-tabs-left mb-3&quot;&gt;
-      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; href=&quot;#left-tab-item-1&quot; data-toggle=&quot;tab&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#left-tab-item-2&quot; data-toggle=&quot;tab&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#left-tab-item-3&quot; data-toggle=&quot;tab&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;ul class=&quot;nav nav-tabs nav-tabs-left flex-column mb-3&quot;&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; href=&quot;#undefined-tab-item-1&quot; data-toggle=&quot;tab&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#undefined-tab-item-2&quot; data-toggle=&quot;tab&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#undefined-tab-item-3&quot; data-toggle=&quot;tab&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-8 col-lg-9&quot;&gt;
@@ -1444,10 +1402,10 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;col-md-4 col-lg-3&quot;&gt;
-    &lt;ul class=&quot;nav nav-tabs nav-tabs-right mb-3&quot;&gt;
-      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; href=&quot;#right-tab-item-1&quot; data-toggle=&quot;tab&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#right-tab-item-2&quot; data-toggle=&quot;tab&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
-      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#right-tab-item-3&quot; data-toggle=&quot;tab&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
+    &lt;ul class=&quot;nav nav-tabs nav-tabs-right flex-column mb-3&quot;&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; href=&quot;#undefined-tab-item-1&quot; data-toggle=&quot;tab&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#undefined-tab-item-2&quot; data-toggle=&quot;tab&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#undefined-tab-item-3&quot; data-toggle=&quot;tab&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/div&gt;
 &lt;/div&gt;
@@ -1465,9 +1423,9 @@
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;ul class=&quot;nav nav-tabs nav-tabs-bottom mb-3&quot;&gt;
-  &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; href=&quot;#bottom-tab-item-1&quot; data-toggle=&quot;tab&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#bottom-tab-item-2&quot; data-toggle=&quot;tab&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
-  &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#bottom-tab-item-3&quot; data-toggle=&quot;tab&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link active&quot; href=&quot;#undefined-tab-item-1&quot; data-toggle=&quot;tab&quot;&gt;Nav item 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#undefined-tab-item-2&quot; data-toggle=&quot;tab&quot;&gt;Nav item 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li class=&quot;nav-item&quot;&gt;&lt;a class=&quot;nav-link&quot; href=&quot;#undefined-tab-item-3&quot; data-toggle=&quot;tab&quot;&gt;Nav item 3&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
                   </div>
                 </div>
@@ -1653,9 +1611,6 @@
                 <div class="card">
                   <div class="card-block">
                     <div class="progress mb-3">
-                      <div class="progress-bar w-100 bg-inverse"></div>
-                    </div>
-                    <div class="progress mb-3">
                       <div class="progress-bar w-100 bg-premium"></div>
                     </div>
                     <div class="progress mb-3">
@@ -1664,9 +1619,6 @@
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&lt;!-- Source --&gt;
-&lt;div class=&quot;progress mb-3&quot;&gt;
-  &lt;div class=&quot;progress-bar w-100 bg-inverse&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
 &lt;div class=&quot;progress mb-3&quot;&gt;
   &lt;div class=&quot;progress-bar w-100 bg-premium&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;

@@ -1,7 +1,4 @@
 // Colors
-.badge-inverse {
-  @include badge-variant($badge-inverse-bg);
-}
 .badge-premium {
   @include badge-variant($badge-premium-bg);
 }

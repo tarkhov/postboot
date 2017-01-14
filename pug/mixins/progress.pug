@@ -6,7 +6,7 @@ mixin progress_variant(variant)
   +progress('progress-' + variant, 'w-100')
 
 mixin progresses()
-  each color in ['inverse', 'premium', 'pretty']
+  each color in ['premium', 'pretty']
     +progress('', ['w-100', 'bg-' + color])
 
 mixin progress_size(size)

@@ -8,7 +8,7 @@ mixin outline_button(text, variant)
   +button(text, 'btn-outline-' + variant)
 
 mixin buttons()
-  each text, variant in {'inverse': 'Inverse', 'premium': 'Premium', 'pretty': 'Pretty'}
+  each text, variant in {'premium': 'Premium', 'pretty': 'Pretty'}
     +button_variant(text, variant)
     +outline_button(text, variant)
 
@@ -16,14 +16,14 @@ mixin glass_button(text, variant)
   +button(text, 'btn-glass-' + variant)
 
 mixin glass_buttons()
-  each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'inverse': 'Inverse', 'premium': 'Premium', 'pretty': 'Pretty'}
+  each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'premium': 'Premium', 'pretty': 'Pretty'}
     +glass_button(text, variant)
 
 mixin 3d_button(text, variant)
   +button(text, 'btn-3d-' + variant)
 
 mixin 3d_buttons()
-  each text, variant in {'primary': 'Primary', 'secondary': 'Secondary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'inverse': 'Inverse', 'premium': 'Premium', 'pretty': 'Pretty'}
+  each text, variant in {'primary': 'Primary', 'secondary': 'Secondary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'premium': 'Premium', 'pretty': 'Pretty'}
     +3d_button(text, variant)
 
 mixin button_striped()

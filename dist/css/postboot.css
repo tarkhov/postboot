@@ -137,25 +137,6 @@
 .form-control-tile {
   border-radius: 0; }
 
-.btn-inverse {
-  color: #fff;
-  background-color: #292b2c;
-  border-color: #292b2c; }
-  .btn-inverse:hover {
-    color: #fff;
-    background-color: #101112;
-    border-color: #0b0c0c; }
-  .btn-inverse:focus, .btn-inverse.focus {
-    box-shadow: 0 0 0 2px rgba(41, 43, 44, 0.5); }
-  .btn-inverse.disabled, .btn-inverse:disabled {
-    background-color: #292b2c;
-    border-color: #292b2c; }
-  .btn-inverse:active, .btn-inverse.active, .show > .btn-inverse.dropdown-toggle {
-    color: #fff;
-    background-color: #101112;
-    background-image: none;
-    border-color: #0b0c0c; }
-
 .btn-premium {
   color: #fff;
   background-color: #791E94;
@@ -193,25 +174,6 @@
     background-color: #d81365;
     background-image: none;
     border-color: #cf1260; }
-
-.btn-outline-inverse {
-  color: #292b2c;
-  background-image: none;
-  background-color: transparent;
-  border-color: #292b2c; }
-  .btn-outline-inverse:hover {
-    color: #fff;
-    background-color: #292b2c;
-    border-color: #292b2c; }
-  .btn-outline-inverse:focus, .btn-outline-inverse.focus {
-    box-shadow: 0 0 0 2px rgba(41, 43, 44, 0.5); }
-  .btn-outline-inverse.disabled, .btn-outline-inverse:disabled {
-    color: #292b2c;
-    background-color: transparent; }
-  .btn-outline-inverse:active, .btn-outline-inverse.active, .show > .btn-outline-inverse.dropdown-toggle {
-    color: #fff;
-    background-color: #292b2c;
-    border-color: #292b2c; }
 
 .btn-outline-premium {
   color: #791E94;
@@ -345,25 +307,6 @@
     background-color: rgba(201, 48, 44, 0.7);
     background-image: none;
     border-color: rgba(193, 46, 42, 0.7); }
-
-.btn-glass-inverse {
-  color: #fff;
-  background-color: rgba(41, 43, 44, 0.7);
-  border-color: rgba(41, 43, 44, 0.7); }
-  .btn-glass-inverse:hover {
-    color: #fff;
-    background-color: rgba(16, 17, 18, 0.7);
-    border-color: rgba(11, 12, 12, 0.7); }
-  .btn-glass-inverse:focus, .btn-glass-inverse.focus {
-    box-shadow: 0 0 0 2px rgba(41, 43, 44, 0.5); }
-  .btn-glass-inverse.disabled, .btn-glass-inverse:disabled {
-    background-color: rgba(41, 43, 44, 0.7);
-    border-color: rgba(41, 43, 44, 0.7); }
-  .btn-glass-inverse:active, .btn-glass-inverse.active, .show > .btn-glass-inverse.dropdown-toggle {
-    color: #fff;
-    background-color: rgba(16, 17, 18, 0.7);
-    background-image: none;
-    border-color: rgba(11, 12, 12, 0.7); }
 
 .btn-glass-premium {
   color: #fff;
@@ -522,26 +465,6 @@
     background-color: #c9302c;
     background-image: none;
     border-color: #972421; }
-
-.btn-3d-inverse {
-  border-bottom-width: 4px;
-  color: #fff;
-  background-color: #292b2c;
-  border-color: #101112; }
-  .btn-3d-inverse:hover {
-    color: #fff;
-    background-color: #101112;
-    border-color: black; }
-  .btn-3d-inverse:focus, .btn-3d-inverse.focus {
-    box-shadow: 0 0 0 2px rgba(16, 17, 18, 0.5); }
-  .btn-3d-inverse.disabled, .btn-3d-inverse:disabled {
-    background-color: #292b2c;
-    border-color: #101112; }
-  .btn-3d-inverse:active, .btn-3d-inverse.active, .show > .btn-3d-inverse.dropdown-toggle {
-    color: #fff;
-    background-color: #101112;
-    background-image: none;
-    border-color: black; }
 
 .btn-3d-premium {
   border-bottom-width: 4px;
@@ -795,13 +718,6 @@
 .card-img-overlay-bottom {
   top: auto; }
 
-.card-secondary {
-  background-color: #f7f7f9;
-  border-color: #f7f7f9; }
-  .card-secondary .card-header,
-  .card-secondary .card-footer {
-    background-color: transparent; }
-
 .card-premium {
   background-color: #791E94;
   border-color: #791E94; }
@@ -857,13 +773,6 @@
   border-color: rgba(217, 83, 79, 0.7); }
   .card-glass-danger .card-header,
   .card-glass-danger .card-footer {
-    background-color: transparent; }
-
-.card-glass-inverse {
-  background-color: rgba(41, 43, 44, 0.7);
-  border-color: rgba(41, 43, 44, 0.7); }
-  .card-glass-inverse .card-header,
-  .card-glass-inverse .card-footer {
     background-color: transparent; }
 
 .card-glass-premium {
@@ -930,11 +839,6 @@
   border-radius: 0.2rem; }
 .pagination-unbordered.pagination-lg .page-item .page-link {
   border-radius: 0.3rem; }
-
-.badge-inverse {
-  background-color: #292b2c; }
-  .badge-inverse[href]:focus, .badge-inverse[href]:hover {
-    background-color: #101112; }
 
 .badge-premium {
   background-color: #791E94; }
