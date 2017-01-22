@@ -1,4 +1,6 @@
 module.exports = function (grunt) {
+  require('load-grunt-tasks')(grunt);
+
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -8,6 +10,17 @@ module.exports = function (grunt) {
             ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
 
+    babel: {
+      options: {
+        presets: ['es2015']
+      },
+      core: {
+        files: {
+          'dist/js/<%= pkg.name %>-dropdown.js': 'js/dropdown.js'
+        }
+      }
+    },
+
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -15,7 +28,7 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
-          'js/dropdown.js'
+          'dist/js/<%= pkg.name %>-dropdown.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
@@ -41,8 +54,10 @@ module.exports = function (grunt) {
         preserveComments: 'some'
       },
       core: {
-        src: '<%= concat.core.dest %>',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+        files: {
+          'dist/js/<%= pkg.name %>.min.js': '<%= concat.core.dest %>',
+          'dist/js/<%= pkg.name %>-dropdown.min.js': 'dist/js/<%= pkg.name %>-dropdown.js'
+        }
       },
       docs: {
         src: '<%= concat.docs.dest %>',
@@ -51,15 +66,15 @@ module.exports = function (grunt) {
     },
 
     sass: {
+      options: {
+        sourcemap: 'none'
+      },
       core: {
         files: {
           'dist/css/<%= pkg.name %>.css': 'scss/<%= pkg.name %>.scss'
         }
       },
       docs: {
-        options: {
-          sourcemap: 'none'
-        },
         files: {
           'assets/css/docs.css': 'assets/scss/docs.scss'
         }
@@ -68,7 +83,6 @@ module.exports = function (grunt) {
 
     cssmin: {
       options: {
-        compatibility: 'ie9',
         keepSpecialComments: '*',
         advanced: false
       },
@@ -195,17 +209,11 @@ module.exports = function (grunt) {
   });
 
   // Load tasks
-  grunt.loadNpmTasks('grunt-banner');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-pug');
-  grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadTasks('tasks');
 
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat:core', 'uglify:core']);
+  grunt.registerTask('dist-js', ['babel:core', 'concat:core', 'uglify:core']);
 
   // CSS distribution task.
   grunt.registerTask('dist-css', ['sass:core', 'usebanner', 'cssmin:core']);

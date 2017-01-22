@@ -1,102 +1,118 @@
-!function ($) {
-  var toggle = '[data-hover="dropdown"], [data-toggle="dropdown"]';
+const DROPDOWN_DATA_KEY   = 'bs.dropdown';
+const DROPDOWN_SHOW       = 'show';
+const DROPDOWN_DISABLED   = 'disabled';
+const DROPDOWN_HOVER      = '.dropdown-hover';
+const DROPDOWN_DATA_HOVER = '[data-hover="dropdown"]';
 
-  var DropdownHover = function (element) {
-    var $element = $(element);
-    var $parent = getParent(element);
+class DropdownHover {
+  constructor(element) {
+    // https://tutor.mantrajs.com/say-hello-to-ES2015/stop-self-this
+    let parent = DropdownHover.getParent(element);
 
-    $element.on('mouseenter.bs.dropdown-hover', this.show);
-    $parent.on('mouseleave.bs.dropdown-hover', this.hide);
+    element.addEventListener('mouseenter', this.show);
+    parent.addEventListener('mouseleave', this.hide);
   }
 
-  DropdownHover.VERSION = '1.0.0';
-
-  function getParent($this) {
-    var selector = $this.attr('data-target');
-
-    if (!selector) {
-      selector = $this.attr('href');
-      selector = selector && /#[A-Za-z]/.test(selector) && selector.replace(/.*(?=#[^\s]*$)/, ''); // strip for ie7
+  show(e) {
+    if (this.disabled || this.classList.contains(DROPDOWN_DISABLED)) {
+      return;
     }
 
-    var $parent = selector && $(selector);
+    let parent = DropdownHover.getParent(this);
 
-    return $parent && $parent.length ? $parent : $this.parent();
-  }
+    DropdownHover.clearMenus(e);
 
-  function clearMenus(e, $current) {
-    if (e && e.which === 3) return;
-
-    $('.dropdown-backdrop').remove();
-
-    $(toggle).each(function () {
-      var $this         = $(this);
-      var $parent       = getParent($this);
-      var relatedTarget = { relatedTarget: this };
-
-      if (!$parent.hasClass('show') || $parent.has(toggle)) return;
-
-      if (e && e.type == 'click' && /input|textarea/i.test(e.target.tagName) && $.contains($parent[0], e.target)) return;
-
-      $parent.trigger(e = $.Event('hide.bs.dropdown', relatedTarget));
-
-      if (e.isDefaultPrevented()) return;
-
-      $this.attr('aria-expanded', 'false');
-      $parent.removeClass('show').trigger('hidden.bs.dropdown', relatedTarget);
-    });
-  }
-
-  DropdownHover.prototype.show = function (e) {
-    var $this = $(this);
-
-    if ($this.is('.disabled, :disabled')) return;
-
-    var $parent = getParent($this);
-
-    clearMenus(e, $parent);
-
-    if (!$parent.hasClass('show')) {
-      $parent.addClass('show');
+    if (!parent.classList.contains(DROPDOWN_SHOW)) {
+      parent.classList.add(DROPDOWN_SHOW);
     }
-  };
+  }
 
-  DropdownHover.prototype.hide = function (e) {
-    var $this = $(this);
-
-    clearMenus(e);
-
-    if ($this.hasClass('show')) {
-      $this.removeClass('show');
+  hide(e) {
+    if (this.classList.contains(DROPDOWN_SHOW)) {
+      this.classList.remove(DROPDOWN_SHOW);
     }
-  };
-
-  function Plugin(option) {
-    return this.each(function () {
-      var $this = $(this);
-      var data  = $this.data('bs.dropdown-hover');
-
-      if (!data) $this.data('bs.dropdown-hover', (data = new DropdownHover(this)));
-      if (typeof option == 'string') data[option].call($this);
-    });
   }
 
-  var old = $.fn.dropdownHover;
+  static clearMenus(event) {
+    let toggles = document.querySelectorAll(DROPDOWN_DATA_HOVER);
+    if (toggles.length) {
+      toggles.forEach(function (toggle, i) {
+        let parent = DropdownHover.getParent(toggle);
+        if (!parent.classList.contains(DROPDOWN_SHOW)) {
+          return true;
+        }
 
-  $.fn.dropdownHover             = Plugin;
-  $.fn.dropdownHover.Constructor = DropdownHover;
+        toggle.setAttribute('aria-expanded', 'false');
 
-  $.fn.dropdownHover.noConflict = function () {
-    $.fn.dropdownHover = old;
-    return this;
+        parent.classList.remove(DROPDOWN_SHOW);
+      });
+    }
   }
 
-  $(document)
-    .on('mouseenter.bs.dropdown-hover.data-api', '[data-hover="dropdown"]', DropdownHover.prototype.show)
-    .on('mouseleave.bs.dropdown-hover.data-api', '.dropdown-hover.show', DropdownHover.prototype.hide);
+  static getParent(element) {
+    let selector;
+    if (element.hasAttribute('data-target')) {
+      selector = element.getAttribute('data-target');
+    }
 
-  // Mega menu
-  $(document).on('click', '.dropdown-static .dropdown-menu', function (e) {
-    e.stopPropagation();
+    if (!selector && element.hasAttribute('href')) {
+      selector = element.getAttribute('href');
+    }
+
+    let parent;
+    if (selector && /#[A-Za-z]/.test(selector)) {
+      parent = document.querySelector(selector);
+    } else {
+      parent = element.parentNode;
+    }
+
+    return parent;
+  }
+}
+
+function dropdownHover(elements, option) {
+  elements.forEach(function (element) {
+    let data;
+    if (element.hasAttribute(DROPDOWN_DATA_KEY)) {
+      data = element.getAttribute(DROPDOWN_DATA_KEY);
+    }
+
+    if (!data) {
+      data = new DropdownHover(element);
+      element.setAttribute(DROPDOWN_DATA_KEY, data);
+    }
+
+    if (typeof option === 'string') {
+        if (data[option] === undefined) {
+          throw new Error(`No method named "${option}"`);
+        }
+
+        data[option].call(element);
+    }
   });
-}(jQuery);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  let dataHovers = document.querySelectorAll(DROPDOWN_DATA_HOVER);
+  if (dataHovers.length) {
+    dataHovers.forEach(function (element) {
+      element.addEventListener('mouseenter', DropdownHover.prototype.show);
+    });
+  }
+
+  let hovers = document.querySelectorAll(DROPDOWN_HOVER);
+  if (hovers.length) {
+    hovers.forEach(function (element) {
+      element.addEventListener('mouseleave', DropdownHover.prototype.hide);
+    });
+  }
+
+  let menus = document.querySelectorAll('.dropdown-static .dropdown-menu');
+  if (menus.length) {
+    menus.forEach(function (element) {
+      element.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+    });
+  }
+});

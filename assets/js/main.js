@@ -9,3 +9,7 @@ jQuery(document).ready(function ($) {
       .addClass('active');
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  dropdownHover(document.querySelectorAll(DROPDOWN_DATA_HOVER));
+});

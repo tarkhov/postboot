@@ -19,13 +19,16 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
     "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
     "grunt-banner": "^0.6.0",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^1.0.2",
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^2.0.0",
-    "grunt-csscomb": "^3.1.1"
+    "grunt-csscomb": "^3.1.1",
+    "load-grunt-tasks": "^3.5.2"
   }
 }
