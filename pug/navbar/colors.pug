@@ -1,0 +1,10 @@
+extends ../example.pug
+
+block example_link
+  a#navbar-colors.text-gray-dark(href="#navbar-colors") Colors
+
+block example_result
+  +navbars()
+
+block example_code
+  include ../sources/navbar/colors.html

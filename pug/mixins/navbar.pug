@@ -7,6 +7,15 @@ mixin navbar(classes)
         each i in [1,2,3]
           li.nav-item: a.nav-link(href='#')= 'Nav item ' + i
 
+mixin navbar_variant(variant)
+  +navbar(['navbar-toggleable-md', 'navbar-inverse', 'bg-' + variant, 'mb-3'])
+
+mixin navbars()
+  each text, variant in {'premium': 'Premium', 'pretty': 'Pretty'}
+    +navbar_variant(variant)
+  .bg-inverse.p-3
+    +navbar(['navbar-toggleable-md', 'navbar-light', 'bg-default'])
+
 mixin navbar_size(size)
   +navbar(['navbar-toggleable-md', 'navbar-light', 'bg-faded', 'navbar-' + size, 'mb-3'])
 
