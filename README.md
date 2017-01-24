@@ -14,7 +14,7 @@ New colors, extended grid, better components sizing and styling for Bootstrap fr
 
 ### Archive
 
-[Download](https://github.com/alextarkhov/postboot/releases/download/v1.0.0-alpha1/postboot-1.0.0-alpha1-dist.zip)
+[Download](https://github.com/alextarkhov/postboot/releases/download/v1.0.0-alpha3/postboot-1.0.0-alpha3-dist.zip)
 
 ```
 postboot/
@@ -31,14 +31,11 @@ postboot/
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://cdn.rawgit.com/alextarkhov/postboot/v1.0.0-alpha1/dist/css/postboot.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/alextarkhov/postboot/v1.0.0-alpha3/dist/css/postboot.min.css"/>
 
 <!-- JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
-<script src="https://cdn.rawgit.com/alextarkhov/postboot/v1.0.0-alpha1/dist/js/postboot.min.js"></script>
+<script src="https://cdn.rawgit.com/alextarkhov/postboot/v1.0.0-alpha3/dist/js/postboot.min.js"></script>
 ```
 
 ## Author
