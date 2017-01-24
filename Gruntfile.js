@@ -16,7 +16,7 @@ module.exports = function (grunt) {
       },
       core: {
         files: {
-          'dist/js/<%= pkg.name %>-dropdown.js': 'js/dropdown.js'
+          'js/dist/dropdown.js': 'js/dropdown.js'
         }
       }
     },
@@ -28,7 +28,7 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
-          'dist/js/<%= pkg.name %>-dropdown.js'
+          'js/dist/dropdown.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
@@ -55,8 +55,7 @@ module.exports = function (grunt) {
       },
       core: {
         files: {
-          'dist/js/<%= pkg.name %>.min.js': '<%= concat.core.dest %>',
-          'dist/js/<%= pkg.name %>-dropdown.min.js': 'dist/js/<%= pkg.name %>-dropdown.js'
+          'dist/js/<%= pkg.name %>.min.js': '<%= concat.core.dest %>'
         }
       },
       docs: {

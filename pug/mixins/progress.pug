@@ -1,6 +1,6 @@
 mixin progress(classes, bar_classes)
   .progress.mb-3(class=classes)
-    .progress-bar(class=bar_classes)
+    .progress-bar(class=bar_classes) 100%
 
 mixin progress_variant(variant)
   +progress('progress-' + variant, 'w-100')
@@ -13,7 +13,7 @@ mixin progress_size(size)
   +progress_variant(size, 'w-100')
 
 mixin progress_sizes()
-  each size in ['xs', 'sm', 'lg', 'xl']
+  each size in ['sm', 'md', 'lg', 'xl']
     +progress_size(size)
 
 mixin progress_shape(shape)

@@ -15,20 +15,31 @@ mixin outline_card(text, variant)
 
 mixin cards()
   .row
+    .col-md-3
+      .bg-inverse.bg-striped.p-2
+        +card_variant('Default', 'default')
+    .col-md-3
+      .bg-inverse.bg-striped.p-2
+        +card('Default', ['card-outline-default', 'card-inverse'])
     each text, variant in {'premium': 'Premium', 'pretty': 'Pretty'}
       .col-md-3
-        +inverse_card(text, variant)
+        .py-2
+          +inverse_card(text, variant)
       .col-md-3
-        +outline_card(text, variant)
+        .py-2
+          +outline_card(text, variant)
   
 mixin glass_card(text, variant)
   +card(text, ['card-inverse', 'card-glass-' + variant])
 
 mixin glass_cards()
-  .row
-    each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'premium': 'Premium', 'pretty': 'Pretty'}
+  .bg-inverse.bg-striped.p-2
+    .row
       .col-md-3
-        +glass_card(text, variant)
+        +card('Default', 'card-glass-default')
+      each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'premium': 'Premium', 'pretty': 'Pretty'}
+        .col-md-3
+          +glass_card(text, variant)
 
 mixin card_striped()
   .row

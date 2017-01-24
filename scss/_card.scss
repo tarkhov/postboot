@@ -4,6 +4,9 @@
 }
 
 // Background variations
+.card-default {
+  @include card-variant($brand-default, $brand-default);
+}
 .card-premium {
   @include card-variant($brand-premium, $brand-premium);
 }
@@ -12,6 +15,9 @@
 }
 
 // Outline
+.card-outline-default {
+  @include card-outline-variant($btn-default-bg);
+}
 .card-outline-premium {
   @include card-outline-variant($btn-premium-bg);
 }
@@ -20,6 +26,9 @@
 }
 
 // Glass
+.card-glass-default {
+  @include card-glass-variant($brand-default, $brand-default);
+}
 .card-glass-primary {
   @include card-glass-variant($brand-primary, $brand-primary);
 }

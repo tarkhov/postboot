@@ -24,14 +24,14 @@ html(lang="en")
           button.navbar-toggler.navbar-toggler-right(type="button" data-toggle="collapse" data-target="#navbar-top-collapse")
             span.navbar-toggler-icon
           a.navbar-brand(href="#start") PostBoot #[sup.text-success.hidden-xs-down= pkg.version]
-          //a.btn.btn-primary.mr-lg-3(href=download) Download
+          a.btn.btn-primary.mr-lg-2(href=download) Download
           #navbar-top-collapse.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
               li.nav-item: a.nav-link(href="#start") Start
               each section, id in contents
                 li.nav-item.dropdown.dropdown-hover
                   a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" data-hover="dropdown")= section.title
-                  .dropdown-menu(class={'dropdown-menu-scroll': id == "components"})
+                  .dropdown-menu(class={'dropdown-menu-scrolled': id == "components"})
                     each item, itemId in section.items
                       if !item.first
                         .dropdown-divider
@@ -40,7 +40,7 @@ html(lang="en")
                         a.dropdown-item(href="#" + itemId + "-" + exampleId)= exampleName
             ul.navbar-nav
               li.nav-item: a.nav-link(href=repo) GitHub
-              li.nav-item: a.nav-link(href="#") ProductHunt
+              li.nav-item: a.nav-link.pr-0(href="https://www.producthunt.com/posts/postboot") ProductHunt
 
     .container
       .row
@@ -58,9 +58,9 @@ html(lang="en")
             span.navbar-toggler-icon
           #navbar-bottom-collapse.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
-              li.nav-item: a.nav-link(href="https://creativecommons.org/licenses/by/4.0/") CC BY 4.0
+              li.nav-item: a.nav-link.pl-0(href="https://creativecommons.org/licenses/by/4.0/") CC BY 4.0
             ul.navbar-nav
               li.nav-item: a.nav-link(href=repo) GitHub
-              li.nav-item: a.nav-link(href="#") ProductHunt
+              li.nav-item: a.nav-link.pr-0(href="https://www.producthunt.com/posts/postboot") ProductHunt
 
     script(src="js/app.min.js")

@@ -1,8 +1,14 @@
 // Contextual colors
+.text-default {
+  color: $gray-dark !important;
+}
+@include text-emphasis-variant('.text-inverse', $white);
 @include text-emphasis-variant('.text-premium', $brand-premium);
 @include text-emphasis-variant('.text-pretty', $brand-pretty);
 
 // Ribbon
+.text-ribbon-default {
+}
 .text-ribbon-primary {
 }
 .text-ribbon-secondary {
@@ -14,6 +20,8 @@
 .text-ribbon-warning {
 }
 .text-ribbon-danger {
+}
+.text-ribbon-inverse {
 }
 .text-ribbon-premium {
 }

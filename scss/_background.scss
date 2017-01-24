@@ -1,8 +1,10 @@
 // Colors
+@include bg-variant('.bg-default', $brand-default);
 @include bg-variant('.bg-premium', $brand-premium);
 @include bg-variant('.bg-pretty', $brand-pretty);
 
 // Glasses
+@include bg-glass-variant('.bg-glass-default', $brand-default);
 @include bg-glass-variant('.bg-glass-primary', $brand-primary);
 @include bg-glass-variant('.bg-glass-success', $brand-success);
 @include bg-glass-variant('.bg-glass-info', $brand-info);

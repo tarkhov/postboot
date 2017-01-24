@@ -1,6 +1,12 @@
 mixin text(text, classes)
   div(class=classes)= text
 
+mixin text_variant(text, variant)
+  +text(text, 'text-' + variant)
+
 mixin texts()
-  each text, variant in {'premium': 'Premium', 'pretty': 'Pretty'}
-    +text(text, 'text-' + variant)
+  each text, variant in {'default': 'Default', 'premium': 'Premium', 'pretty': 'Pretty'}
+    +text_variant(text, variant)
+  .bg-inverse.p-2
+    +text_variant('Inverse', 'inverse')
+

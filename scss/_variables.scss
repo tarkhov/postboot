@@ -7,6 +7,7 @@
 // Components
 
 // Colors
+$brand-default: $white !default;
 $brand-premium: #791E94 !default; // http://www.lolcolors.com/palettes/popular#palette_55
 $brand-pretty:  #ed317f !default; // http://www.lolcolors.com/#palette_15
 
@@ -40,11 +41,19 @@ $container-lg-max-widths: (
 //
 
 // Buttons
-$btn-premium-color:    #fff !default;
+$btn-default-color:    $gray-dark !default;
+$btn-default-bg:       $brand-default !default;
+$btn-default-border:   $btn-default-bg !default;
+
+$btn-inverse-color:    $white !default;
+$btn-inverse-bg:       $brand-inverse !default;
+$btn-inverse-border:   $btn-inverse-bg !default;
+
+$btn-premium-color:    $white !default;
 $btn-premium-bg:       $brand-premium !default;
 $btn-premium-border:   $btn-premium-bg !default;
 
-$btn-pretty-color:     #fff !default;
+$btn-pretty-color:     $white !default;
 $btn-pretty-bg:        $brand-pretty !default;
 $btn-pretty-border:    $btn-pretty-bg !default;
 
@@ -78,14 +87,15 @@ $nav-link-padding-x-lg: 1.5em !default;
 $nav-link-padding-y-lg: .75em !default;
 
 // Badges
+$badge-inverse-bg: $brand-inverse !default;
 $badge-premium-bg: $brand-premium !default;
 $badge-pretty-bg:  $brand-pretty !default;
 
 // Progress
-$progress-bar-height-xs: ($spacer-y * .5) !default;
-$progress-bar-height-sm: ($spacer-y * .75) !default;
-$progress-bar-height-lg: ($spacer-y * 1.25) !default;
-$progress-bar-height-xl: ($spacer-y * 1.5) !default;
+$progress-bar-height-sm: ($spacer-y * 1.25) !default;
+$progress-bar-height-md: ($spacer-y * 1.5) !default;
+$progress-bar-height-lg: ($spacer-y * 1.75) !default;
+$progress-bar-height-xl: ($spacer-y * 2) !default;
 
 // List group
 $list-group-item-padding-x-xs: .75rem !default;

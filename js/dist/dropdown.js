@@ -109,6 +109,20 @@ function dropdownHover(elements, option) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  var dataHovers = document.querySelectorAll(DROPDOWN_DATA_HOVER);
+  if (dataHovers.length) {
+    dataHovers.forEach(function (element) {
+      element.addEventListener('mouseenter', DropdownHover.prototype.show);
+    });
+  }
+
+  var hovers = document.querySelectorAll(DROPDOWN_HOVER);
+  if (hovers.length) {
+    hovers.forEach(function (element) {
+      element.addEventListener('mouseleave', DropdownHover.prototype.hide);
+    });
+  }
+
   var menus = document.querySelectorAll('.dropdown-static .dropdown-menu');
   if (menus.length) {
     menus.forEach(function (element) {
