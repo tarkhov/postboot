@@ -20,7 +20,6 @@ New colors, extended grid, better components sizing and styling for Bootstrap fr
 postboot/
 ├── css/
 │   ├── postboot.css
-│   ├── postboot.css.map
 │   ├── postboot.min.css
 └── js/
     ├── postboot.js
