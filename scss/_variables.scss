@@ -40,6 +40,8 @@ $container-lg-max-widths: (
 // Components
 //
 
+$border-radius-xs: .1rem !default;
+
 // Buttons
 $btn-default-color:    $gray-dark !default;
 $btn-default-bg:       $brand-default !default;
@@ -58,6 +60,11 @@ $btn-pretty-bg:        $brand-pretty !default;
 $btn-pretty-border:    $btn-pretty-bg !default;
 
 $btn-pill-border-radius: 2rem !default;
+
+$btn-padding-x-xs: .25rem !default;
+$btn-padding-y-xs: .15rem !default;
+
+$btn-border-radius-xs: $border-radius-xs !default;
 
 // Forms
 $input-pill-border-radius: 2rem !default;

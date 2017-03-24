@@ -1,3 +1,8 @@
+// Sizes
+.btn-xs {
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-border-radius-xs);
+}
+
 // Colors
 .btn-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);

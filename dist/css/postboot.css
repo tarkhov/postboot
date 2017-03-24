@@ -137,6 +137,11 @@
 .form-control-tile {
   border-radius: 0; }
 
+.btn-xs {
+  padding: 0.15rem 0.25rem;
+  font-size: 0.75rem;
+  border-radius: 0.1rem; }
+
 .btn-default {
   color: #292b2c;
   background-color: #fff;
