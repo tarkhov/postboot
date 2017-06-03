@@ -5,6 +5,7 @@
 @include text-emphasis-variant('.text-inverse', $white);
 @include text-emphasis-variant('.text-premium', $brand-premium);
 @include text-emphasis-variant('.text-pretty', $brand-pretty);
+@include text-emphasis-variant('.text-star', $brand-star);
 
 // Ribbon
 .text-ribbon-default {
@@ -26,4 +27,6 @@
 .text-ribbon-premium {
 }
 .text-ribbon-pretty {
+}
+.text-ribbon-star {
 }

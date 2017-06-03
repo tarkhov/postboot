@@ -1,16 +1,34 @@
+.navbar-nav-left .nav-item:first-child .nav-link {
+  padding-left: 0 !important;
+}
+.navbar-nav-right .nav-item:last-child .nav-link {
+  padding-right: 0 !important;
+}
+
 // Sizes
 .navbar-sm {
   @include navbar-size($navbar-padding-y-sm, $font-size-sm, $font-size-base, $navbar-brand-padding-y-sm, $navbar-nav-padding-y-sm, $navbar-text-padding-y-sm);
 }
-.navbar-x-sm {
-}
-.navbar-y-sm {
-}
-
 .navbar-lg {
   @include navbar-size($navbar-padding-y-lg, $font-size-lg, $font-size-xl, $navbar-brand-padding-y-lg, $navbar-nav-padding-y-lg, $navbar-text-padding-y-lg);
 }
-.navbar-x-lg {
+
+// Padding
+.pt-navbar {
+  padding-top: $navbar-height;
 }
-.navbar-y-lg {
+.pb-navbar {
+  padding-bottom: $navbar-height;
+}
+.pt-navbar-sm {
+  padding-top: $navbar-height-sm;
+}
+.pb-navbar-sm {
+  padding-bottom: $navbar-height-sm;
+}
+.pt-navbar-lg {
+  padding-top: $navbar-height-lg;
+}
+.pb-navbar-lg {
+  padding-bottom: $navbar-height-lg;
 }

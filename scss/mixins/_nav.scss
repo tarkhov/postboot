@@ -20,19 +20,3 @@
     padding-right: $padding-x;
   }
 }
-
-// Outlines side
-@mixin nav-outlines-side($border-width) {
-  .nav-link {
-    @include plain-hover-focus {
-      border-width: $border-width;
-    }
-  }
-
-  .nav-link.active,
-  .nav-item.open .nav-link {
-    @include plain-hover-focus {
-      border-width: $border-width;
-    }
-  }
-}

@@ -8,3 +8,6 @@
 .badge-pretty {
   @include badge-variant($badge-pretty-bg);
 }
+.badge-star {
+  @include badge-variant($badge-star-bg);
+}

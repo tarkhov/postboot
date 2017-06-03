@@ -1,18 +1,13 @@
-// Variables
-
-// Table of Contents
-//
 // Colors
-// Grid containers
-// Components
-
-// Colors
-$brand-default: $white !default;
-$brand-premium: #791E94 !default; // http://www.lolcolors.com/palettes/popular#palette_55
-$brand-pretty:  #ed317f !default; // http://www.lolcolors.com/#palette_15
+$brand-premium: $purple !default;
+$brand-pretty:  $pink !default;
+$brand-star:    $yellow !default;
 
 // Fonts
-$font-size-xl: 1.5rem !default;
+$font-size-xl:  1.5rem !default;
+$font-size-xxl: 1.75rem !default;
+$font-size-3xl: 2rem !default;
+$font-size-4xl: 2.5rem !default;
 
 // Grid containers
 $container-sm-max-widths: (
@@ -36,40 +31,40 @@ $container-lg-max-widths: (
   xl: map-get($container-max-widths, lg)
 ) !default;
 
-//
 // Components
-//
-
 $border-radius-xs: .1rem !default;
+$line-height-xs: 1.5 !default;
+$opacity-glass: .5 !default;
 
 // Buttons
-$btn-default-color:    $gray-dark !default;
-$btn-default-bg:       $brand-default !default;
-$btn-default-border:   $btn-default-bg !default;
-
-$btn-inverse-color:    $white !default;
-$btn-inverse-bg:       $brand-inverse !default;
-$btn-inverse-border:   $btn-inverse-bg !default;
-
-$btn-premium-color:    $white !default;
-$btn-premium-bg:       $brand-premium !default;
-$btn-premium-border:   $btn-premium-bg !default;
-
-$btn-pretty-color:     $white !default;
-$btn-pretty-bg:        $brand-pretty !default;
-$btn-pretty-border:    $btn-pretty-bg !default;
-
-$btn-pill-border-radius: 2rem !default;
-
-$btn-padding-x-xs: .25rem !default;
-$btn-padding-y-xs: .15rem !default;
+$input-btn-padding-y-xs: .1rem !default;
+$input-btn-padding-x-xs: .25rem !default;
 
 $btn-border-radius-xs: $border-radius-xs !default;
 
-// Forms
-$input-pill-border-radius: 2rem !default;
+$btn-glass-opacity: $opacity-glass !default;
 
-// Dropdowns
+$btn-default-color:  $gray-dark !default;
+$btn-default-bg:     $white !default;
+$btn-default-border: $btn-default-bg !default;
+
+$btn-inverse-color:  $white !default;
+$btn-inverse-bg:     $brand-inverse !default;
+$btn-inverse-border: $btn-inverse-bg !default;
+
+$btn-premium-color:  $white !default;
+$btn-premium-bg:     $brand-premium !default;
+$btn-premium-border: $btn-premium-bg !default;
+
+$btn-pretty-color:   $white !default;
+$btn-pretty-bg:      $brand-pretty !default;
+$btn-pretty-border:  $btn-pretty-bg !default;
+
+$btn-star-color:     $white !default;
+$btn-star-bg:        $brand-star !default;
+$btn-star-border:    $btn-star-bg !default;
+
+// Dropdown
 $dropdown-menu-content-padding: 1.5rem !default;
 
 // Navbar
@@ -82,6 +77,10 @@ $navbar-padding-y-lg:       ($spacer * .75) !default;
 $navbar-brand-padding-y-lg: .5rem;
 $navbar-nav-padding-y-lg:   .675rem;
 $navbar-text-padding-y-lg:  .675rem;
+
+$navbar-height:    3.5rem !default;
+$navbar-height-sm: 2.2rem !default;
+$navbar-height-lg: 4.75rem !default;
 
 // Navs
 $nav-link-padding-x-xs: .25em !default;
@@ -97,12 +96,20 @@ $nav-link-padding-y-lg: .75em !default;
 $badge-inverse-bg: $brand-inverse !default;
 $badge-premium-bg: $brand-premium !default;
 $badge-pretty-bg:  $brand-pretty !default;
+$badge-star-bg:    $brand-star !default;
 
 // Progress
-$progress-bar-height-sm: ($spacer-y * 1.25) !default;
-$progress-bar-height-md: ($spacer-y * 1.5) !default;
-$progress-bar-height-lg: ($spacer-y * 1.75) !default;
-$progress-bar-height-xl: ($spacer-y * 2) !default;
+$progress-height-xs:    .75rem !default;
+$progress-font-size-xs: .65rem !default;
+
+$progress-height-sm:    .875rem !default;
+$progress-font-size-sm: .75rem !default;
+
+$progress-height-lg:    1.25rem !default;
+$progress-font-size-lg: 1rem !default;
+
+$progress-height-xl:    1.5rem !default;
+$progress-font-size-xl: 1.25rem !default;
 
 // List group
 $list-group-item-padding-x-xs: .75rem !default;
@@ -114,8 +121,13 @@ $list-group-item-padding-y-sm: .5rem !default;
 $list-group-item-padding-x-lg: 1.5rem !default;
 $list-group-item-padding-y-lg: 1rem !default;
 
-// Breadcrumbs
+// Breadcrumb
 $breadcrumb-divider-rang:   "〉" !default;
 $breadcrumb-divider-raquo:  "»" !default;
 $breadcrumb-divider-rarr:   "→" !default;
 $breadcrumb-divider-rsaquo: "›" !default;
+
+$breadcrumb-inverse-color:         rgba($white,1) !default;
+$breadcrumb-inverse-hover-color:   rgba($white,.75) !default;
+$breadcrumb-inverse-active-color:  rgba($white,.5) !default;
+$breadcrumb-inverse-divider-color: rgba($white,.5) !default;

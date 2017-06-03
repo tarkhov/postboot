@@ -5,75 +5,141 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var DROPDOWN_DATA_KEY = 'bs.dropdown';
-var DROPDOWN_SHOW = 'show';
-var DROPDOWN_DISABLED = 'disabled';
-var DROPDOWN_HOVER = '.dropdown-hover';
-var DROPDOWN_DATA_HOVER = '[data-hover="dropdown"]';
+var DROPDOWN_EVENT_KEY = '.' + DROPDOWN_DATA_KEY;
 
-var DropdownHover = function () {
-  function DropdownHover(element) {
-    _classCallCheck(this, DropdownHover);
+var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
+var TAB_KEYCODE = 9; // KeyboardEvent.which value for tab key
+var ARROW_UP_KEYCODE = 38; // KeyboardEvent.which value for up arrow key
+var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
+var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
+var DROPDOWN_REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + '|' + ARROW_DOWN_KEYCODE + '|' + ESCAPE_KEYCODE);
 
-    // https://tutor.mantrajs.com/say-hello-to-ES2015/stop-self-this
-    var parent = DropdownHover.getParent(element);
+var DropdownClassName = {
+  DISABLED: 'disabled',
+  SHOW: 'show'
+};
 
-    element.addEventListener('mouseenter', this.show);
-    parent.addEventListener('mouseleave', this.hide);
+var DropdownSelector = {
+  DATA_TOGGLE: '[data-toggle="dropdown"]',
+  FORM_CHILD: '.dropdown form',
+  MENU: '.dropdown-menu',
+  NAVBAR_NAV: '.navbar-nav',
+  VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled)'
+};
+
+var DropdownEvent = {
+  HIDE: 'hide' + DROPDOWN_EVENT_KEY,
+  HIDDEN: 'hidden' + DROPDOWN_EVENT_KEY,
+  SHOW: 'show' + DROPDOWN_EVENT_KEY,
+  SHOWN: 'shown' + DROPDOWN_EVENT_KEY
+};
+
+var Dropdown = function () {
+  function Dropdown(element) {
+    _classCallCheck(this, Dropdown);
+
+    element.addEventListener('click', this.toggle);
   }
 
-  _createClass(DropdownHover, [{
-    key: 'show',
-    value: function show(e) {
-      if (this.disabled || this.classList.contains(DROPDOWN_DISABLED)) {
+  _createClass(Dropdown, [{
+    key: 'toggle',
+    value: function toggle(event) {
+      event.preventDefault();
+
+      if (this.disabled || this.classList.contains(DropdownClassName.DISABLED)) {
+        return false;
+      }
+
+      var parent = Dropdown.getParent(this);
+      var isActive = parent.classList.contains(DropdownClassName.SHOW);
+
+      Dropdown.clearMenus(event);
+
+      if (isActive) {
+        return false;
+      }
+
+      var relatedTarget = {
+        relatedTarget: this
+      };
+      var showEvent = Util.createEvent(DropdownEvent.SHOW, relatedTarget);
+
+      parent.dispatchEvent(showEvent);
+
+      if (showEvent.defaultPrevented) {
+        return false;
+      }
+
+      if ('ontouchstart' in document.documentElement && !parent.closest(DropdownSelector.NAVBAR_NAV)) {
+        document.body.children.addEventListener('mouseover', function () {});
+      }
+
+      this.focus();
+      this.setAttribute('aria-expanded', true);
+
+      parent.classList.toggle(DropdownClassName.SHOW);
+
+      var shownEvent = Util.createEvent(DropdownEvent.SHOWN, relatedTarget);
+      parent.dispatchEvent(shownEvent);
+    }
+  }], [{
+    key: 'hideMenus',
+    value: function hideMenus(event, selector) {
+      if (event && (event.which === RIGHT_MOUSE_BUTTON_WHICH || event.type === 'keyup' && event.which !== TAB_KEYCODE)) {
         return;
       }
 
-      var parent = DropdownHover.getParent(this);
-
-      DropdownHover.clearMenus(e);
-
-      if (!parent.classList.contains(DROPDOWN_SHOW)) {
-        parent.classList.add(DROPDOWN_SHOW);
-      }
-    }
-  }, {
-    key: 'hide',
-    value: function hide(e) {
-      if (this.classList.contains(DROPDOWN_SHOW)) {
-        this.classList.remove(DROPDOWN_SHOW);
-      }
-    }
-  }], [{
-    key: 'clearMenus',
-    value: function clearMenus(event) {
-      var toggles = document.querySelectorAll(DROPDOWN_DATA_HOVER);
+      var toggles = document.querySelectorAll(selector);
       if (toggles.length) {
-        toggles.forEach(function (toggle, i) {
-          var parent = DropdownHover.getParent(toggle);
-          if (!parent.classList.contains(DROPDOWN_SHOW)) {
+        toggles.forEach(function (toggle) {
+          var parent = Dropdown.getParent(toggle);
+          var relatedTarget = {
+            relatedTarget: toggle
+          };
+
+          if (!parent.classList.contains(DropdownClassName.SHOW)) {
             return true;
+          }
+
+          if (event.target !== toggle && parent.contains(event.target)) {
+            return true;
+          }
+
+          if (event && (event.type === 'click' && /input|textarea/i.test(event.target.tagName) || event.type === 'keyup' && event.which === TAB_KEYCODE) && parent.contains(event.target)) {
+            return true;
+          }
+
+          var hideEvent = Util.createEvent(DropdownEvent.HIDE, relatedTarget);
+          parent.dispatchEvent(hideEvent);
+          if (hideEvent.defaultPrevented) {
+            return true;
+          }
+
+          if ('ontouchstart' in document.documentElement) {
+            document.body.children.removeEventListener('mouseover', function () {});
           }
 
           toggle.setAttribute('aria-expanded', 'false');
 
-          parent.classList.remove(DROPDOWN_SHOW);
+          parent.classList.remove(DropdownClassName.SHOW);
+
+          var hiddenEvent = Util.createEvent(DropdownEvent.HIDDEN, relatedTarget);
+          parent.dispatchEvent(hiddenEvent);
         });
       }
     }
   }, {
+    key: 'clearMenus',
+    value: function clearMenus(event) {
+      Dropdown.hideMenus(event, DropdownSelector.DATA_TOGGLE);
+    }
+  }, {
     key: 'getParent',
     value: function getParent(element) {
-      var selector = void 0;
-      if (element.hasAttribute('data-target')) {
-        selector = element.getAttribute('data-target');
-      }
-
-      if (!selector && element.hasAttribute('href')) {
-        selector = element.getAttribute('href');
-      }
-
       var parent = void 0;
-      if (selector && /#[A-Za-z]/.test(selector)) {
+      var selector = Util.getSelector(element);
+
+      if (selector) {
         parent = document.querySelector(selector);
       } else {
         parent = element.parentNode;
@@ -81,12 +147,69 @@ var DropdownHover = function () {
 
       return parent;
     }
+  }, {
+    key: 'keydown',
+    value: function keydown(event) {
+      if (!DROPDOWN_REGEXP_KEYDOWN.test(event.which) || /button/i.test(event.target.tagName) && event.which === SPACE_KEYCODE || /input|textarea/i.test(event.target.tagName)) {
+        return;
+      }
+
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (this.disabled || this.classList.contains(DropdownClassName.DISABLED)) {
+        return;
+      }
+
+      var parent = Dropdown.getParent(this);
+      var isActive = parent.classList.contains(DropdownClassName.SHOW);
+
+      if (!isActive && (event.which !== ESCAPE_KEYCODE || event.which !== SPACE_KEYCODE) || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
+
+        if (event.which === ESCAPE_KEYCODE) {
+          var toggle = parent.querySelector(DropdownSelector.DATA_TOGGLE);
+          toggle.dispatchEvent(new FocusEvent('focus'));
+        }
+
+        this.dispatchEvent(new MouseEvent('click'));
+
+        return;
+      }
+
+      var items = Array.prototype.slice.call(parent.querySelectorAll(DropdownSelector.VISIBLE_ITEMS));
+
+      if (!items.length) {
+        return;
+      }
+
+      var index = items.indexOf(event.target);
+
+      if (event.which === ARROW_UP_KEYCODE && index > 0) {
+        // up
+        index--;
+      }
+
+      if (event.which === ARROW_DOWN_KEYCODE && index < items.length - 1) {
+        // down
+        index++;
+      }
+
+      if (index < 0) {
+        index = 0;
+      }
+
+      items[index].focus();
+    }
   }]);
 
-  return DropdownHover;
+  return Dropdown;
 }();
 
-function dropdownHover(elements, option) {
+function dropdown(elements, option) {
+  if (typeof elements === 'string') {
+    elements = document.querySelectorAll(elements);
+  }
+
   elements.forEach(function (element) {
     var data = void 0;
     if (element.hasAttribute(DROPDOWN_DATA_KEY)) {
@@ -94,7 +217,7 @@ function dropdownHover(elements, option) {
     }
 
     if (!data) {
-      data = new DropdownHover(element);
+      data = new Dropdown(element);
       element.setAttribute(DROPDOWN_DATA_KEY, data);
     }
 
@@ -109,26 +232,30 @@ function dropdownHover(elements, option) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var dataHovers = document.querySelectorAll(DROPDOWN_DATA_HOVER);
-  if (dataHovers.length) {
-    dataHovers.forEach(function (element) {
-      element.addEventListener('mouseenter', DropdownHover.prototype.show);
+  var dataToggles = document.querySelectorAll(DropdownSelector.DATA_TOGGLE);
+  if (dataToggles.length) {
+    dataToggles.forEach(function (element) {
+      element.addEventListener('keydown', Dropdown.keydown);
+      element.addEventListener('click', Dropdown.prototype.toggle);
     });
   }
 
-  var hovers = document.querySelectorAll(DROPDOWN_HOVER);
-  if (hovers.length) {
-    hovers.forEach(function (element) {
-      element.addEventListener('mouseleave', DropdownHover.prototype.hide);
-    });
-  }
-
-  var menus = document.querySelectorAll('.dropdown-static .dropdown-menu');
+  var menus = document.querySelectorAll(DropdownSelector.MENU);
   if (menus.length) {
     menus.forEach(function (element) {
+      element.addEventListener('keydown', Dropdown.keydown);
+    });
+  }
+
+  var forms = document.querySelectorAll(DropdownSelector.FORM_CHILD);
+  if (forms.length) {
+    forms.forEach(function (element) {
       element.addEventListener('click', function (e) {
         e.stopPropagation();
       });
     });
   }
+
+  /*document.addEventListener('click', Dropdown.clearMenus)
+  document.addEventListener('keyup', Dropdown.clearMenus)*/
 });

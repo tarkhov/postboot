@@ -1,21 +1,13 @@
 // Sizes
-.progress-sm {
-  @include progress-size($progress-bar-height-sm, $font-size-sm);
+.progress-xs {
+  @include progress-size($progress-height-xs, $progress-font-size-xs);
 }
-.progress-md {
-  @include progress-size($progress-bar-height-md, $font-size-base);
+.progress-sm {
+  @include progress-size($progress-height-sm, $progress-font-size-sm);
 }
 .progress-lg {
-  @include progress-size($progress-bar-height-lg, $font-size-lg);
+  @include progress-size($progress-height-lg, $progress-font-size-lg);
 }
 .progress-xl {
-  @include progress-size($progress-bar-height-xl, $font-size-xl);
-}
-
-// Shapes
-.progress-pill {
-  @include border-radius(1rem);
-}
-.progress-tile {
-  @include border-radius(0);
+  @include progress-size($progress-height-xl, $progress-font-size-xl);
 }

@@ -1,11 +1,19 @@
-// Overlay
+// Image overlay
 .card-img-overlay-bottom {
   top: auto;
 }
 
+// Image directions
+.card-img-left {
+  @include border-left-radius($card-border-radius-inner);
+}
+.card-img-right {
+  @include border-right-radius($card-border-radius-inner);
+}
+
 // Background variations
 .card-default {
-  @include card-variant($brand-default, $brand-default);
+  @include card-variant($white, $white);
 }
 .card-premium {
   @include card-variant($brand-premium, $brand-premium);
@@ -13,10 +21,16 @@
 .card-pretty {
   @include card-variant($brand-pretty, $brand-pretty);
 }
+.card-star {
+  @include card-variant($brand-star, $brand-star);
+}
 
 // Outline
 .card-outline-default {
   @include card-outline-variant($btn-default-bg);
+}
+.card-outline-inverse {
+  @include card-outline-variant($btn-inverse-bg);
 }
 .card-outline-premium {
   @include card-outline-variant($btn-premium-bg);
@@ -24,43 +38,72 @@
 .card-outline-pretty {
   @include card-outline-variant($btn-pretty-bg);
 }
+.card-outline-star {
+  @include card-outline-variant($btn-star-bg);
+}
+
+// Hover
+.card-hover-default {
+  @include hover-focus {
+    @include card-variant($white, $white);
+  }
+}
+.card-hover-primary {
+  @include card-hover-variant($brand-primary, $brand-primary);
+}
+.card-hover-success {
+  @include card-hover-variant($brand-success, $brand-success);
+}
+.card-hover-info {
+  @include card-hover-variant($brand-info, $brand-info);
+}
+.card-hover-warning {
+  @include card-hover-variant($brand-warning, $brand-warning);
+}
+.card-hover-danger {
+  @include card-hover-variant($brand-danger, $brand-danger);
+}
+.card-hover-inverse {
+  @include card-hover-variant($brand-inverse, $brand-inverse);
+}
+.card-hover-premium {
+  @include card-hover-variant($brand-premium, $brand-premium);
+}
+.card-hover-pretty {
+  @include card-hover-variant($brand-pretty, $brand-pretty);
+}
+.card-hover-star {
+  @include card-hover-variant($brand-star, $brand-star);
+}
 
 // Glass
 .card-glass-default {
-  @include card-glass-variant($brand-default, $brand-default);
+  @include card-glass-variant($white, $white, $opacity-glass);
 }
 .card-glass-primary {
-  @include card-glass-variant($brand-primary, $brand-primary);
+  @include card-glass-variant($brand-primary, $brand-primary, $opacity-glass);
 }
 .card-glass-success {
-  @include card-glass-variant($brand-success, $brand-success);
+  @include card-glass-variant($brand-success, $brand-success, $opacity-glass);
 }
 .card-glass-info {
-  @include card-glass-variant($brand-info, $brand-info);
+  @include card-glass-variant($brand-info, $brand-info, $opacity-glass);
 }
 .card-glass-warning {
-  @include card-glass-variant($brand-warning, $brand-warning);
+  @include card-glass-variant($brand-warning, $brand-warning, $opacity-glass);
 }
 .card-glass-danger {
-  @include card-glass-variant($brand-danger, $brand-danger);
+  @include card-glass-variant($brand-danger, $brand-danger, $opacity-glass);
+}
+.card-glass-inverse {
+  @include card-glass-variant($black, $black, $opacity-glass);
 }
 .card-glass-premium {
-  @include card-glass-variant($brand-premium, $brand-premium);
+  @include card-glass-variant($brand-premium, $brand-premium, $opacity-glass);
 }
 .card-glass-pretty {
-  @include card-glass-variant($brand-pretty, $brand-pretty);
+  @include card-glass-variant($brand-pretty, $brand-pretty, $opacity-glass);
 }
-
-// Striped
-.card-striped {
-  @include gradient-striped();
-  background-size: $spacer-y $spacer-y;
-}
-
-// Shapes
-.card-pill {
-  @include card-shape(1rem);
-}
-.card-tile {
-  @include card-shape(0);
+.card-glass-star {
+  @include card-glass-variant($brand-star, $brand-star, $opacity-glass);
 }

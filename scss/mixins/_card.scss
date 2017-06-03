@@ -1,15 +1,25 @@
 // Glass
-@mixin card-glass-variant($background, $border) {
-  @include card-variant(rgba($background, 0.7), rgba($border, 0.7));
+@mixin card-glass-variant($background, $border, $opacity) {
+  @include card-variant(rgba($background, $opacity), rgba($border, $opacity));
+}
+
+// Hover 
+@mixin card-hover-variant($background, $border) {
+  @include hover-focus {
+    @include card-variant($background, $border);
+    @include card-inverse;
+  }
 }
 
 // Shapes
-@mixin card-shape($border-radius) {
+@mixin card-border-radius($border-radius) {
   @include border-radius($border-radius);
 
   .card-img,
   .card-img-top,
-  .card-img-bottom {
+  .card-img-right,
+  .card-img-bottom,
+  .card-img-left {
     @include border-radius($border-radius);
   }
 }

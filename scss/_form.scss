@@ -1,32 +1,14 @@
-// Inline
-.form-sm-inline {
-}
-.form-md-inline {
-}
-.form-lg-inline {
-}
+// Form control directions
+.form-control-bottom {
+  @include border-radius(0);
 
-// Form controls
-
-// Underlined
-.form-control-underlined {
   &,
   &:focus {
     border-top-color: $input-bg;
-    border-left-color: $input-bg;
     border-right-color: $input-bg;
+    border-left-color: $input-bg;
   }
 
-  padding-left: 0;
   padding-right: 0;
-
-  @include border-radius(0);
-}
-
-// Shapes
-.form-control-pill {
-  @include border-radius($input-pill-border-radius);
-}
-.form-control-tile {
-  @include border-radius(0);
+  padding-left: 0;
 }

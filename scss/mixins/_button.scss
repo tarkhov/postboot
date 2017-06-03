@@ -5,6 +5,6 @@
 }
 
 // Glass
-@mixin button-glass-variant($color, $background, $border) {
-  @include button-variant($color, rgba($background, 0.7), rgba($border, 0.7));
+@mixin button-glass-variant($color, $background, $border, $opacity) {
+  @include button-variant($color, rgba($background, $opacity), rgba($border, $opacity));
 }
