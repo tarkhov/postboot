@@ -1,6 +1,6 @@
 // Border width
-.border-2        { border: 2px !important; }
-.border-top-2    { border-top: 2px !important; }
-.border-right-2  { border-right: 2px !important; }
-.border-bottom-2 { border-bottom: 2px !important; }
-.border-left-2   { border-left: 2px !important; }
+.border-2        { border-width: 2px !important; }
+.border-top-2    { border-top-width: 2px !important; }
+.border-right-2  { border-right-width: 2px !important; }
+.border-bottom-2 { border-bottom-width: 2px !important; }
+.border-left-2   { border-left-width: 2px !important; }

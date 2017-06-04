@@ -1,0 +1,19 @@
+extends ../example.pug
+
+block example_link
+  a.text-default(href="#card-colors") Colors
+
+block example_result
+  .row
+    each text, variant in {'default': 'Default', 'premium': 'Premium', 'pretty': 'Pretty', 'star': 'Star'}
+      .col-md-3
+        +card_inverse(text, variant)
+      .col-md-3
+        +card_outline(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each variant in ['default', 'premium', 'pretty', 'star']
+      .card.card-inverse(class='card-' + variant)
+      .card(class='card-outline-' + variant)

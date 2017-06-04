@@ -38,6 +38,13 @@ module.exports = function (grunt) {
           'js/dist/dropdown-fluid.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
+      },
+      docs: {
+        src: [
+          'dist/js/postboot.min.js',
+          'docs/js/prism.js'
+        ],
+        dest: 'docs/js/app.js'
       }
     },
 
@@ -52,6 +59,11 @@ module.exports = function (grunt) {
       core: {
         files: {
           'dist/js/<%= pkg.name %>.min.js': '<%= concat.core.dest %>'
+        }
+      },
+      docs: {
+        files: {
+          '<%= concat.docs.dest %>': '<%= concat.docs.dest %>'
         }
       }
     },
@@ -75,6 +87,17 @@ module.exports = function (grunt) {
       core: {
         src: 'dist/css/<%= pkg.name %>.css',
         dest: 'dist/css/<%= pkg.name %>.min.css'
+      },
+      docs: {
+        files: {
+          'docs/css/app.css': [
+            'docs/css/bootstrap.min.css',
+            '<%= cssmin.core.dest %>',
+            'docs/css/prism.css',
+            'docs/css/font-awesome.min.css',
+            'docs/css/main.css'
+          ]
+        }
       }
     },
 
@@ -86,10 +109,31 @@ module.exports = function (grunt) {
       files: {
         src: 'dist/css/*.css'
       }
+    },
+
+    pug: {
+      options: {
+        pretty: true,
+        data: {
+          pkg: '<%= pkg %>'
+        },
+        filters: {
+          'encode-pug': function (block) {
+            var he = require('he');
+            var options = this.data;
+            options['pretty'] = true;
+
+            return he.encode(this.pug.render(block, options));
+          }
+        }
+      },
+      docs: {
+        files: {
+          'docs/index.html': 'docs/pug/index.pug'
+        }
+      }
     }
   });
-
-  // Load tasks
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['babel:core', 'concat:core', 'uglify:core']);
@@ -100,6 +144,18 @@ module.exports = function (grunt) {
   // Full distribution task.
   grunt.registerTask('dist', ['dist-css', 'dist-js']);
 
+  // JS docs task.
+  grunt.registerTask('docs-js', ['concat:docs', 'uglify:docs']);
+
+  // CSS docs task.
+  grunt.registerTask('docs-css', 'cssmin:docs');
+
+  // HTML docs task.
+  grunt.registerTask('docs-html', 'pug:docs');
+
+  // Docs task.
+  grunt.registerTask('docs', ['docs-css', 'docs-js', 'docs-html']);
+
   // Default task(s).
-  grunt.registerTask('default', 'dist');
+  grunt.registerTask('default', ['dist', 'docs']);
 };

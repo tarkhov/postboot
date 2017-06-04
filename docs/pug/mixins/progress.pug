@@ -1,0 +1,6 @@
+mixin progress(classes)
+  .progress.mb-3(class=classes)
+    .progress-bar.w-100 100%
+
+mixin progress_variant(variant)
+  +progress('progress-' + variant)

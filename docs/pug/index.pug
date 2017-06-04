@@ -1,0 +1,58 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    title PostBoot
+    meta(name="description" content=pkg.description)
+    meta(name="keywords" content="")
+
+    link(rel="apple-touch-icon" href="apple-touch-icon.png")
+    link(rel="icon" href="favicon.ico")
+    link(rel="manifest" href="manifest.json")
+
+    link(rel="stylesheet" href="css/app.css")
+  body.pt-navbar
+    header.pb-gutter(role="banner")
+      nav#navbar-top.navbar.navbar-light.navbar-expand-sm.bg-faded.fixed-top(role="navigation")
+        .container
+          button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar-collapse-top") aria-controls="navbar-collapse-top" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+          a.navbar-brand(href="/") PostBoot #[sup.text-success= pkg.version]
+          a.btn.btn-secondary.btn-sm(href="#") Download
+
+          #navbar-collapse-top.collapse.navbar-collapse
+            ul.navbar-nav.navbar-nav-right.ml-auto
+              li.nav-item
+                a.nav-link(href="https://github.com/alextarkhov/postboot") #[span.fa.fa-github-alt]&nbsp;&nbsp;GitHub
+              li.nav-item
+                a.nav-link(href="https://www.producthunt.com/posts/postboot") #[span.fa.fa-product-hunt]&nbsp;&nbsp;ProductHunt
+
+    .container
+      .row
+        .col-sm-2
+          aside#sidebar-left(role="complementary")
+            include sidebar-left.pug
+        .col-sm-10
+          main(role="main")
+            include postboot.pug
+
+    footer(role="contentinfo")
+      nav#navbar-bottom.navbar.navbar-inverse.navbar-expand-sm.bg-inverse(role="navigation")
+        .container
+          button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar-collapse-bottom") aria-controls="navbar-collapse-bottom" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+
+          #navbar-collapse-bottom.collapse.navbar-collapse
+            ul.navbar-nav.navbar-nav-left.mr-auto
+              li.nav-item
+                a.nav-link(href="https://creativecommons.org/licenses/by/4.0/") CC BY 4.0
+
+            ul.navbar-nav.navbar-nav-right
+              li.nav-item
+                a.nav-link(href="https://github.com/alextarkhov/postboot") GitHub
+              li.nav-item
+                a.nav-link(href="https://www.producthunt.com/posts/postboot") ProductHunt
+
+    script(src="js/app.js")

@@ -1,0 +1,11 @@
+mixin navbar(classes)
+  nav.navbar.navbar-expand-sm(class=classes)
+    = "\n\t"
+    a.navbar-brand(href="#") Navbar
+    .collapse.navbar-collapse
+      ul.navbar-nav
+        - for(var i = 1; i <= 3; i++)
+          li.nav-item: a.nav-link(href='#')= 'Nav item ' + i
+
+mixin navbar_size(size)
+  +navbar(['navbar-light', 'bg-faded', 'navbar-' + size, 'mb-3'])

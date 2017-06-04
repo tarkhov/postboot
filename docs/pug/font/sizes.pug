@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_link
+  a.text-default(href="#font-sizes") Sizes
+
+block example_result
+  each text, size in {'xs': 'Extra small', 'sm': 'Small', 'lg': 'Large', 'xl': 'Extra large', 'xxl': '2 Extra large', '3xl': '3 Extra large', '4xl': '4 Extra large'}
+    +font_size(text, size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, size in {'xs': 'Extra small', 'sm': 'Small', 'lg': 'Large', 'xl': 'Extra large', 'xxl': '2 Extra large', '3xl': '3 Extra large', '4xl': '4 Extra large'}
+      p(class='font-size-' + size)= text

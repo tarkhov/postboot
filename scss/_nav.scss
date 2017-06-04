@@ -1,3 +1,11 @@
+// Active link
+.nav-link {
+  &.active,
+  .show & {
+    color: $nav-active-link-color;
+  }
+}
+
 // Tabs
 .nav-tabs-right,
 .nav-tabs-bottom,

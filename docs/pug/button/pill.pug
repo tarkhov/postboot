@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_link
+  a.text-default(href="#button-pill") Pill
+
+block example_result
+  +button('Pill', ['btn-primary', 'btn-pill'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    button.btn.btn-primary.btn-pill(type='button') Pill

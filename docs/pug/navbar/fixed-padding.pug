@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_link
+  a.text-default(href="#navbar-fixed-padding") Fixed padding
+
+block example_result
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .py-navbar
+    .pt-navbar
+    .pb-navbar
+    each size in ['sm', 'lg']
+      div(class='py-navbar-' + size)
+      div(class='pt-navbar-' + size)
+      div(class='pb-navbar-' + size)

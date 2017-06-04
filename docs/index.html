@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PostBoot</title>
+    <meta name="description" content="Library that extends the Bootstrap framework.">
+    <meta name="keywords" content="">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body class="pt-navbar">
+    <header class="pb-gutter" role="banner">
+      <nav class="navbar navbar-light navbar-expand-sm bg-faded fixed-top" id="navbar-top" role="navigation">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-top">aria-controls="navbar-collapse-top" aria-expanded="false" aria-label="Toggle navigation")<span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="/">PostBoot <sup class="text-success">1.0.0-alpha4</sup></a><a class="btn btn-secondary btn-sm" href="#">Download</a>
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="navbar-nav navbar-nav-right ml-auto">
+              <li class="nav-item"><a class="nav-link" href="https://github.com/alextarkhov/postboot"><span class="fa fa-github-alt"></span>&nbsp;&nbsp;GitHub</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.producthunt.com/posts/postboot"><span class="fa fa-product-hunt"></span>&nbsp;&nbsp;ProductHunt</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <aside id="sidebar-left" role="complementary">
+            <ul class="nav nav-y-sm nav-x-0 flex-column">
+              <li class="nav-item"><a class="nav-link active" href="#intro">Intro</a></li>
+              <li class="nav-item"><a class="nav-link" href="#layout">Layout</a>
+                <ul class="nav nav-y-sm pl-3 flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#grid">Grid</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#grid-container-sizes">Container sizes</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#components">Components</a>
+                <ul class="nav nav-y-sm pl-3 flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#badge">Badge</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#badge-colors">Colors</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#breadcrumb">Breadcrumb</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#breadcrumb-arrows">Arrows</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#breadcrumb-inverse">Inverse</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#breadcrumb-transparent">Transparent</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button">Button</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#button-colors">Colors</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#button-sizes">Sizes</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#button-pill">Pill</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#button-glass">Glass</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#card">Card</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#card-colors">Colors</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#card-image-directions">Image directions</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#card-hover">Hover</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#card-glass">Glass</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown">Dropdown</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-native">Native</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-directions">Directions</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-hover">Hover</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-menu-scroll">Menu scroll</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-submenu">Submenu</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#form">Form</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#control-bottom">Control bottom</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#list-group">List group</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#list-group-sizes">Sizes</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#nav">Nav</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#nav-active">Active</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#nav-sizes">Sizes</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#nav-tab-directions">Tab directions</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#navbar-nav-directions">Nav directions</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#navbar-sizes">Sizes</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#navbar-fixed-padding">Fixed padding</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#pagination">Pagination</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#pagination-unbordered">Unbordered</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#progress">Progress</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#progress-sizes">Sizes</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#utilities">Utilities</a>
+                <ul class="nav nav-y-sm pl-3 flex-column">
+                  <li class="nav-item"><a class="nav-link" href="#background">Background</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#background-colors">Colors</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#background-glass">Glass</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#background-striped">Striped</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border">Border</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#border-widths">Widths</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#font">Font</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#font-sizes">Sizes</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#font-weights">Weights</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#position">Position</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#position-methods">Methods</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#text">Text</a>
+                    <ul class="nav nav-y-xs font-size-sm pl-3 flex-column">
+                      <li class="nav-item"><a class="nav-link" href="#text-colors">Colors</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#text-ribbon">Ribbon</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <div class="col-sm-10">
+          <main role="main">
+            <article class="mb-4" role="article">
+              <header>
+                <h1 class="font-weight-light"><a class="text-default" href="#intro">Introduction</a></h1>
+              </header>
+              <p class="lead text-muted">Library that extends the Bootstrap framework.</p>
+              <div class="alert alert-info"><strong>Bootstrap</strong> version compatibility 4.0.0-alpha.6.</div>
+              <div class="card">
+                <div class="card-block">
+                  <ul class="list-unstyled mb-0">
+                    <li>postboot/</li>
+                    <ul>
+                      <li>css/</li>
+                      <ul>
+                        <li>postboot.css</li>
+                        <li>postboot.min.css</li>
+                      </ul>
+                      <li>js/</li>
+                      <ul>
+                        <li>postboot.js</li>
+                        <li>postboot.min.js</li>
+                      </ul>
+                    </ul>
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!DOCTYPE html&#x3E;
+&#x3C;html lang=&#x22;en&#x22;&#x3E;
+  &#x3C;head&#x3E;
+    &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;
+    &#x3C;meta name=&#x22;viewport&#x22; content=&#x22;width=device-width, initial-scale=1, shrink-to-fit=no&#x22;&#x3E;
+
+&#x9;&#x3C;!-- CSS --&#x3E;
+    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css&#x22;&#x3E;
+    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.rawgit.com/alextarkhov/postboot/v1.0.0-alpha4/dist/css/postboot.min.css&#x22;&#x3E;
+  &#x3C;/head&#x3E;
+  &#x3C;body&#x3E;
+    &#x3C;h1&#x3E;PostBoot&#x3C;/h1&#x3E;
+
+&#x9;&#x3C;!-- JS --&#x3E;
+    &#x3C;script src=&#x22;https://cdn.rawgit.com/alextarkhov/postboot/v1.0.0-alpha4/dist/js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+  &#x3C;/body&#x3E;
+&#x3C;/html&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#grid-container-sizes">Container sizes</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-sm-4 offset-sm-4">
+                      <div class="bg-faded p-2 mb-3 text-center">540px</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-6 offset-sm-3">
+                      <div class="bg-faded p-2 mb-3 text-center">720px</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-8 offset-sm-2">
+                      <div class="bg-faded p-2 text-center">960px</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;container container-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container container-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container container-lg&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#grid-gutter-spacing">Gutter spacing</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="row mb-gutter">
+                    <div class="col-sm-4 offset-sm-4">
+                      <div class="bg-inverse pt-gutter">
+                        <div class="bg-faded p-2 text-center">30px &uarr;</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-gutter">
+                    <div class="col-sm-4 offset-sm-4">
+                      <div class="bg-inverse py-gutter">
+                        <div class="bg-faded p-2 text-center">&darr; 30px &uarr;</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-gutter">
+                    <div class="col-sm-4">
+                      <div class="bg-inverse pr-gutter">
+                        <div class="bg-faded p-2">30px &rarr;</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="bg-inverse px-gutter">
+                        <div class="bg-faded p-2 text-center">&larr; 30px &rarr;</div>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="bg-inverse pl-gutter">
+                        <div class="bg-faded p-2 text-right">&larr; 30px</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mb-gutter">
+                    <div class="col-sm-4 offset-sm-4">
+                      <div class="bg-inverse p-gutter">
+                        <div class="bg-faded p-2 text-center">30px</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-4 offset-sm-4">
+                      <div class="bg-inverse pb-gutter">
+                        <div class="bg-faded p-2 text-center">30px &darr;</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;m-gutter p-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter px-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter py-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter pt-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter pr-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter pb-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter pl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#badge-colors">Colors</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <div class="badge badge-inverse">Inverse</div>
+                                          <div class="badge badge-premium">Premium</div>
+                                          <div class="badge badge-pretty">Pretty</div>
+                                          <div class="badge badge-star">Star</div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;badge badge-inverse&#x22;&#x3E;Inverse&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-premium&#x22;&#x3E;Premium&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-pretty&#x22;&#x3E;Pretty&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-star&#x22;&#x3E;Star&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#breadcrumb-arrows">Arrows</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <ol class="breadcrumb breadcrumb-rang">
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                            <li class="breadcrumb-item active">Article</li>
+                                          </ol>
+                                          <ol class="breadcrumb breadcrumb-raquo">
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                            <li class="breadcrumb-item active">Article</li>
+                                          </ol>
+                                          <ol class="breadcrumb breadcrumb-rarr">
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                            <li class="breadcrumb-item active">Article</li>
+                                          </ol>
+                                          <ol class="breadcrumb breadcrumb-rsaquo">
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                            <li class="breadcrumb-item active">Article</li>
+                                          </ol>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-rang&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-raquo&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-rarr&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-rsaquo&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#breadcrumb-inverse">Inverse</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                              <ol class="breadcrumb breadcrumb-inverse bg-primary">
+                                <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                <li class="breadcrumb-item active">Article</li>
+                              </ol>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-inverse bg-primary&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#breadcrumb-transparent">Transparent</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <ol class="breadcrumb breadcrumb-transparent">
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                            <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                            <li class="breadcrumb-item active">Article</li>
+                                          </ol>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-transparent&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#button-colors">Colors</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <button class="btn btn-default" type="button">Default</button>
+                                          <button class="btn btn-outline-default" type="button">Default</button>
+                                          <button class="btn btn-inverse" type="button">Inverse</button>
+                                          <button class="btn btn-outline-inverse" type="button">Inverse</button>
+                                          <button class="btn btn-premium" type="button">Premium</button>
+                                          <button class="btn btn-outline-premium" type="button">Premium</button>
+                                          <button class="btn btn-pretty" type="button">Pretty</button>
+                                          <button class="btn btn-outline-pretty" type="button">Pretty</button>
+                                          <button class="btn btn-star" type="button">Star</button>
+                                          <button class="btn btn-outline-star" type="button">Star</button>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-default&#x22; type=&#x22;button&#x22;&#x3E;Default&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-default&#x22; type=&#x22;button&#x22;&#x3E;Default&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-inverse&#x22; type=&#x22;button&#x22;&#x3E;Inverse&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-inverse&#x22; type=&#x22;button&#x22;&#x3E;Inverse&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-premium&#x22; type=&#x22;button&#x22;&#x3E;Premium&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-premium&#x22; type=&#x22;button&#x22;&#x3E;Premium&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-pretty&#x22; type=&#x22;button&#x22;&#x3E;Pretty&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-pretty&#x22; type=&#x22;button&#x22;&#x3E;Pretty&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-star&#x22; type=&#x22;button&#x22;&#x3E;Star&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-star&#x22; type=&#x22;button&#x22;&#x3E;Star&#x3C;/button&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#button-sizes">Sizes</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <button class="btn btn-secondary btn-xs" type="button">Extra small</button>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-xs&#x22; type=&#x22;button&#x22;&#x3E;Extra small&#x3C;/button&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#button-pill">Pill</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                              <button class="btn btn-primary btn-pill" type="button">Pill</button>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-primary btn-pill&#x22; type=&#x22;button&#x22;&#x3E;Pill&#x3C;/button&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#button-3d">3D</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <button class="btn btn-3d-primary" type="button">Primary</button>
+                                          <button class="btn btn-3d-secondary" type="button">Secondary</button>
+                                          <button class="btn btn-3d-success" type="button">Success</button>
+                                          <button class="btn btn-3d-info" type="button">Info</button>
+                                          <button class="btn btn-3d-warning" type="button">Warning</button>
+                                          <button class="btn btn-3d-danger" type="button">Danger</button>
+                                          <button class="btn btn-3d-inverse" type="button">Inverse</button>
+                                          <button class="btn btn-3d-premium" type="button">Premium</button>
+                                          <button class="btn btn-3d-pretty" type="button">Pretty</button>
+                                          <button class="btn btn-3d-star" type="button">Star</button>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-inverse&#x22; type=&#x22;button&#x22;&#x3E;Inverse&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-premium&#x22; type=&#x22;button&#x22;&#x3E;Premium&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-pretty&#x22; type=&#x22;button&#x22;&#x3E;Pretty&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-star&#x22; type=&#x22;button&#x22;&#x3E;Star&#x3C;/button&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#button-glass">Glass</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block bg-inverse bg-striped">
+                                          <button class="btn btn-glass-default" type="button">Default</button>
+                                          <button class="btn btn-glass-primary" type="button">Primary</button>
+                                          <button class="btn btn-glass-success" type="button">Success</button>
+                                          <button class="btn btn-glass-info" type="button">Info</button>
+                                          <button class="btn btn-glass-warning" type="button">Warning</button>
+                                          <button class="btn btn-glass-danger" type="button">Danger</button>
+                                          <button class="btn btn-glass-inverse" type="button">Inverse</button>
+                                          <button class="btn btn-glass-premium" type="button">Premium</button>
+                                          <button class="btn btn-glass-pretty" type="button">Pretty</button>
+                                          <button class="btn btn-glass-star" type="button">Star</button>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-default&#x22; type=&#x22;button&#x22;&#x3E;Default&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-inverse&#x22; type=&#x22;button&#x22;&#x3E;Inverse&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-premium&#x22; type=&#x22;button&#x22;&#x3E;Premium&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-pretty&#x22; type=&#x22;button&#x22;&#x3E;Pretty&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-glass-star&#x22; type=&#x22;button&#x22;&#x3E;Star&#x3C;/button&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#card-colors">Colors</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-default card-inverse">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Default</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-default">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Default</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-premium card-inverse">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Premium</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-premium">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Premium</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-pretty card-inverse">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Pretty</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-pretty">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Pretty</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-star card-inverse">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Star</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-star">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Star</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-default&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-outline-default&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-premium&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-outline-premium&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-pretty&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-outline-pretty&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-star&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-outline-star&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#card-image-directions">Image directions</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="card">
+                    <div class="row">
+                      <div class="col-sm col-sm-auto"><img class="card-img-left" src="" width="100px" height="100%"></div>
+                      <div class="col-sm">
+                        <div class="card-block">
+                          <h4 class="card-title">Directions</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-sm col-sm-auto"><img class="card-img-right" src="" width="100px" height="100%"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;card&#x22;&#x3E;
+  &#x3C;div class=&#x22;row&#x22;&#x3E;
+    &#x3C;div class=&#x22;col-sm col-sm-auto&#x22;&#x3E;&#x3C;img class=&#x22;card-img-left&#x22; src=&#x22;&#x22; width=&#x22;100px&#x22; height=&#x22;100%&#x22;/&#x3E;&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;col-sm&#x22;&#x3E;
+      &#x3C;div class=&#x22;card-block&#x22;&#x3E;
+        &#x3C;h4 class=&#x22;card-title&#x22;&#x3E;Directions&#x3C;/h4&#x3E;
+        &#x3C;p class=&#x22;card-text&#x22;&#x3E;Example text&#x3C;/p&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;col-sm col-sm-auto&#x22;&#x3E;&#x3C;img class=&#x22;card-img-right&#x22; src=&#x22;&#x22; width=&#x22;100px&#x22; height=&#x22;100%&#x22;/&#x3E;&#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#card-hover">Hover</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-default card-hover-default">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Default</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-primary card-hover-primary">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Primary</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-success card-hover-success">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Success</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-info card-hover-info">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Info</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-warning card-hover-warning">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Warning</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-danger card-hover-danger">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Danger</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-inverse card-hover-inverse">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Inverse</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-premium card-hover-premium">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Premium</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-pretty card-hover-pretty">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Pretty</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-outline-star card-hover-star">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Star</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;card card-hover-default card-outline-default&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-primary card-outline-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-success card-outline-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-info card-outline-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-warning card-outline-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-danger card-outline-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-inverse card-outline-inverse&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-premium card-outline-premium&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-pretty card-outline-pretty&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-hover-star card-outline-star&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#card-glass">Glass</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block bg-inverse bg-striped">
+                  <div class="row">
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-default">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Default</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-primary">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Primary</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-success">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Success</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-info">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Info</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-warning">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Warning</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-danger">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Danger</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-inverse">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Inverse</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-premium">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Premium</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-pretty">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Pretty</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                    <div class="col-md-3">
+                                              <div class="card mb-3 card-inverse card-glass-star">
+                                                <div class="card-block">
+                                                  <h4 class="card-title">Star</h4>
+                                                  <p class="card-text">Example text.</p>
+                                                </div>
+                                              </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-default&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-inverse&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-premium&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-pretty&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-inverse card-glass-star&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#dropdown-native">Native</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
+                                            <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                            </div>
+                              </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#dropdown-directions">Directions</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                              <div class="btn-group dropright">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropright</button>
+                                            <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                            </div>
+                              </div>
+                  <div class="float-right">
+                                <div class="btn-group dropleft">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropleft</button>
+                                              <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                              </div>
+                                </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group dropright&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropright&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;btn-group dropleft&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropleft&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#dropdown-hover">Hover</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-md-3">
+                                  <div class="btn-group dropdown-hover dropright">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-hover="dropdown">Dropright</button>
+                                                <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                                </div>
+                                  </div>
+                    </div>
+                    <div class="col-md-6 text-center">
+                                  <div class="btn-group dropdown-hover dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-hover="dropdown">Dropdown</button>
+                                                <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                                </div>
+                                  </div>
+                                  <div class="btn-group dropdown-hover dropup">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-hover="dropdown">Dropup</button>
+                                                <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                                </div>
+                                  </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="float-right">
+                                    <div class="btn-group dropdown-hover dropleft">
+                                      <button class="btn btn-secondary dropdown-toggle" type="button" data-hover="dropdown">Dropleft</button>
+                                                  <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                                  </div>
+                                    </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group dropdown dropdown-hover&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-hover=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#dropdown-menu-scroll">Menu scroll</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="btn-group dropdown show">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
+                    <div class="dropdown-menu dropdown-menu-scrolled">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+	<a class="dropdown-item" href="#">Menu item 4</a>
+	<a class="dropdown-item" href="#">Menu item 5</a>
+	<a class="dropdown-item" href="#">Menu item 6</a>
+	<a class="dropdown-item" href="#">Menu item 7</a>
+	<a class="dropdown-item" href="#">Menu item 8</a>
+	<a class="dropdown-item" href="#">Menu item 9</a>
+	<a class="dropdown-item" href="#">Menu item 10</a>
+	<a class="dropdown-item" href="#">Menu item 11</a>
+	<a class="dropdown-item" href="#">Menu item 12</a>
+	<a class="dropdown-item" href="#">Menu item 13</a>
+	<a class="dropdown-item" href="#">Menu item 14</a>
+	<a class="dropdown-item" href="#">Menu item 15</a>
+	<a class="dropdown-item" href="#">Menu item 16</a>
+	<a class="dropdown-item" href="#">Menu item 17</a>
+	<a class="dropdown-item" href="#">Menu item 18</a>
+	<a class="dropdown-item" href="#">Menu item 19</a>
+	<a class="dropdown-item" href="#">Menu item 20</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu dropdown-menu-scrolled&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#dropdown-submenu">Submenu</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="btn-group dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
+                    <div class="dropdown-menu">
+                      <div class="dropright">
+	<a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Dropright</a>
+                        <div class="dropdown-menu">
+                          <div class="dropright">
+	<a class="dropdown-item dropdown-toggle" href="#" data-toggle="dropdown">Dropright</a>
+                            <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;
+    &#x3C;div class=&#x22;dropright&#x22;&#x3E;
+&#x9;&#x3C;a class=&#x22;dropdown-item dropdown-toggle&#x22; href=&#x22;#&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropright&#x3C;/a&#x3E;
+      &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;
+        &#x3C;div class=&#x22;dropright&#x22;&#x3E;
+&#x9;&#x3C;a class=&#x22;dropdown-item dropdown-toggle&#x22; href=&#x22;#&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropright&#x3C;/a&#x3E;
+          &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+      &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#dropdown-mega-menu">Mega menu</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <ul class="nav dropdown">
+                    <li class="nav-item dropdown-fluid dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Fluid</a>
+                      <div class="dropdown-menu dropdown-menu-fluid">
+                        <div class="dropdown-menu-content">
+                          <ul class="list-unstyled">
+                            <li><a href="#">List item 1</a></li>
+                            <li><a href="#">List item 2</a></li>
+                            <li><a href="#">List item 3</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown-fluid dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Auto</a>
+                      <div class="dropdown-menu dropdown-menu-auto">
+                        <div class="dropdown-menu-content">
+                          <ul class="list-unstyled">
+                            <li><a href="#">List item 1</a></li>
+                            <li><a href="#">List item 2</a></li>
+                            <li><a href="#">List item 3</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;nav dropdown&#x22;&#x3E;
+  &#x3C;li class=&#x22;nav-item dropdown-fluid dropdown-hover&#x22;&#x3E;&#x3C;a class=&#x22;nav-link dropdown-toggle&#x22; href=&#x22;#&#x22; data-toggle=&#x22;dropdown&#x22; data-hover=&#x22;dropdown&#x22;&#x3E;Fluid&#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;dropdown-menu dropdown-menu-fluid&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-menu-content&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;li class=&#x22;nav-item dropdown-fluid dropdown-hover&#x22;&#x3E;&#x3C;a class=&#x22;nav-link dropdown-toggle&#x22; href=&#x22;#&#x22; data-toggle=&#x22;dropdown&#x22; data-hover=&#x22;dropdown&#x22;&#x3E;Auto&#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;dropdown-menu dropdown-menu-auto&#x22;&#x3E;
+      &#x3C;div class=&#x22;dropdown-menu-content&#x22;&#x3E;&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#form-control-bottom">Control bottom</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <input class="form-control form-control-bottom" type="text" placeholder="Bottom">
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;input class=&#x22;form-control form-control-bottom&#x22; type=&#x22;text&#x22; placeholder=&#x22;Bottom&#x22;/&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#list-group-sizes">Sizes</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-md-4">
+                                              <div class="list-group list-group-xs"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action" href="#">List item 3</a>
+                                              </div>
+                    </div>
+                    <div class="col-md-4">
+                                              <div class="list-group list-group-sm"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action" href="#">List item 3</a>
+                                              </div>
+                    </div>
+                    <div class="col-md-4">
+                                              <div class="list-group list-group-lg"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action" href="#">List item 3</a>
+                                              </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;list-group list-group-xs&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-lg&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#nav-active">Active</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                              <ul class="nav justify-content-center">
+                                <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                              </ul>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;nav&#x22;&#x3E;
+  &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link active&#x22; href=&#x22;#&#x22;&#x3E;Active&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x3C;/ul&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#nav-sizes">Sizes</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <ul class="nav nav-pills nav-xs mb-3">
+                                            <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                          </ul>
+                                          <ul class="nav nav-pills nav-sm mb-3">
+                                            <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                          </ul>
+                                          <ul class="nav nav-pills nav-lg mb-3">
+                                            <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                          </ul>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;nav nav-xs&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-sm&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-lg&#x22;&#x3E;&#x3C;/ul&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#nav-tab-directions">Tab directions</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <div class="row">
+                    <div class="col-md-4">
+                                  <ul class="nav nav-tabs nav-tabs-left flex-column mb-5">
+                                    <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                  </ul>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="tab-content text-center">
+                        <p>Tab content</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                                  <ul class="nav nav-tabs nav-tabs-right flex-column justify-content-end mb-5">
+                                    <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                  </ul>
+                    </div>
+                  </div>
+                              <ul class="nav nav-tabs nav-tabs-bottom">
+                                <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                              </ul>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;nav nav-tabs nav-tabs-left flex-column&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-tabs nav-tabs-right flex-column&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-tabs nav-tabs-bottom&#x22;&#x3E;&#x3C;/ul&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#navbar-nav-directions">Nav directions</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                  <nav class="navbar navbar-expand-sm navbar-light bg-faded mb-3">
+                    <div class="collapse navbar-collapse">
+                      <ul class="navbar-nav navbar-nav-left mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                      </ul>
+                      <ul class="navbar-nav navbar-nav-right">
+                        <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                      </ul>
+                    </div>
+                  </nav>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-expand-sm navbar-light bg-faded&#x22;&#x3E;
+  &#x3C;div class=&#x22;collapse navbar-collapse&#x22;&#x3E;
+    &#x3C;ul class=&#x22;navbar-nav navbar-nav-left mr-auto&#x22;&#x3E;&#x3C;/ul&#x3E;
+    &#x3C;ul class=&#x22;navbar-nav navbar-nav-right&#x22;&#x3E;&#x3C;/ul&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#navbar-sizes">Sizes</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <nav class="navbar navbar-expand-sm navbar-light bg-faded navbar-sm mb-3">
+	<a class="navbar-brand" href="#">Navbar</a>
+                                            <div class="collapse navbar-collapse">
+                                              <ul class="navbar-nav">
+                                                <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                              </ul>
+                                            </div>
+                                          </nav>
+                                          <nav class="navbar navbar-expand-sm navbar-light bg-faded navbar-lg mb-3">
+	<a class="navbar-brand" href="#">Navbar</a>
+                                            <div class="collapse navbar-collapse">
+                                              <ul class="navbar-nav">
+                                                <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                              </ul>
+                                            </div>
+                                          </nav>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-expand-sm navbar-light bg-faded navbar-sm&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-expand-sm navbar-light bg-faded navbar-lg&#x22;&#x3E;&#x3C;/nav&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#navbar-fixed-padding">Fixed padding</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;py-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#pagination-unbordered">Unbordered</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <nav>
+                                            <ul class="pagination pagination-unbordered">
+                                              <li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>
+                                              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                              <li class="page-item"><a class="page-link" href="#"><span aria-hidden="true">&raquo;</span></a></li>
+                                            </ul>
+                                          </nav>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;pagination pagination-unbordered&#x22;&#x3E;&#x3C;/ul&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#progress-sizes">Sizes</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <div class="progress mb-3 progress-xs">
+                                            <div class="progress-bar w-100">100%</div>
+                                          </div>
+                                          <div class="progress mb-3 progress-sm">
+                                            <div class="progress-bar w-100">100%</div>
+                                          </div>
+                                          <div class="progress mb-3 progress-lg">
+                                            <div class="progress-bar w-100">100%</div>
+                                          </div>
+                                          <div class="progress mb-3 progress-xl">
+                                            <div class="progress-bar w-100">100%</div>
+                                          </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;progress progress-xs&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-xl&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#background-colors">Colors</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <p class="p-2 bg-default text-inverse">Default</p>
+                                          <p class="p-2 bg-premium text-inverse">Premium</p>
+                                          <p class="p-2 bg-pretty text-inverse">Pretty</p>
+                                          <p class="p-2 bg-star text-inverse">Star</p>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;p class=&#x22;bg-default&#x22;&#x3E;Default&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;bg-premium&#x22;&#x3E;Premium&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;bg-pretty&#x22;&#x3E;Pretty&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;bg-star&#x22;&#x3E;Star&#x3C;/p&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#background-glass">Glass</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block bg-inverse bg-striped">
+                                          <p class="p-2 bg-glass-default text-inverse">Default</p>
+                                          <p class="p-2 bg-glass-primary text-inverse">Primary</p>
+                                          <p class="p-2 bg-glass-success text-inverse">Success</p>
+                                          <p class="p-2 bg-glass-info text-inverse">Info</p>
+                                          <p class="p-2 bg-glass-warning text-inverse">Warning</p>
+                                          <p class="p-2 bg-glass-danger text-inverse">Danger</p>
+                                          <p class="p-2 bg-glass-inverse text-inverse">Inverse</p>
+                                          <p class="p-2 bg-glass-premium text-inverse">Premium</p>
+                                          <p class="p-2 bg-glass-pretty text-inverse">Pretty</p>
+                                          <p class="p-2 bg-glass-star text-inverse">Star</p>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-default&#x22;&#x3E;Default&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-primary&#x22;&#x3E;Primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-success&#x22;&#x3E;Success&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-info&#x22;&#x3E;Info&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-warning&#x22;&#x3E;Warning&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-danger&#x22;&#x3E;Danger&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-inverse&#x22;&#x3E;Inverse&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-premium&#x22;&#x3E;Premium&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-pretty&#x22;&#x3E;Pretty&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-inverse bg-glass-star&#x22;&#x3E;Star&#x3C;/p&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#background-striped">Striped</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                              <p class="p-2 bg-primary bg-striped text-inverse">Striped</p>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;p class=&#x22;bg-primary bg-striped text-inverse&#x22;&#x3E;Striped&#x3C;/p&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#border-widths">Widths</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                              <button class="btn btn-outline-primary border-2" type="button">Primary</button>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-top-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-right-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-left-2&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#font-sizes">Sizes</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <p class="font-size-xs">Extra small</p>
+                                          <p class="font-size-sm">Small</p>
+                                          <p class="font-size-lg">Large</p>
+                                          <p class="font-size-xl">Extra large</p>
+                                          <p class="font-size-xxl">2 Extra large</p>
+                                          <p class="font-size-3xl">3 Extra large</p>
+                                          <p class="font-size-4xl">4 Extra large</p>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;p class=&#x22;font-size-xs&#x22;&#x3E;Extra small&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-size-sm&#x22;&#x3E;Small&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-size-lg&#x22;&#x3E;Large&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-size-xl&#x22;&#x3E;Extra large&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-size-xxl&#x22;&#x3E;2 Extra large&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-size-3xl&#x22;&#x3E;3 Extra large&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-size-4xl&#x22;&#x3E;4 Extra large&#x3C;/p&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#font-weights">Weights</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <p class="font-weight-thin">Thin</p>
+                                          <p class="font-weight-extra-light">Extra light</p>
+                                          <p class="font-weight-light">Light</p>
+                                          <p class="font-weight-medium">Medium</p>
+                                          <p class="font-weight-semi-bold">Semi bold</p>
+                                          <p class="font-weight-extra-bold">Extra bold</p>
+                                          <p class="font-weight-black">Black</p>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;p class=&#x22;font-weight-thin&#x22;&#x3E;Thin&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-weight-extra-light&#x22;&#x3E;Extra light&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-weight-light&#x22;&#x3E;Light&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-weight-medium&#x22;&#x3E;Medium&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-weight-semi-bold&#x22;&#x3E;Semi bold&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-weight-extra-bold&#x22;&#x3E;Extra bold&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;font-weight-black&#x22;&#x3E;Black&#x3C;/p&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#position-methods">Methods</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;fixed&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#text-colors">Colors</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <div class="text-default">Default</div>
+                                          <div class="text-inverse">Inverse</div>
+                                          <div class="text-premium">Premium</div>
+                                          <div class="text-pretty">Pretty</div>
+                                          <div class="text-star">Star</div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-default&#x22;&#x3E;Default&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-inverse&#x22;&#x3E;Inverse&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-premium&#x22;&#x3E;Premium&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pretty&#x22;&#x3E;Pretty&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-star&#x22;&#x3E;Star&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+            <article class="mb-4" role="article">
+              <header>
+                <h2 class="font-weight-light"><a class="text-default" href="#text-ribbon">Ribbon</a>
+                </h2>
+              </header>
+              <div class="card">
+                <div class="card-block">
+                                          <div class="text-ribbon-default">Default</div>
+                                          <div class="text-ribbon-primary">Primary</div>
+                                          <div class="text-ribbon-success">Success</div>
+                                          <div class="text-ribbon-info">Info</div>
+                                          <div class="text-ribbon-warning">Warning</div>
+                                          <div class="text-ribbon-danger">Danger</div>
+                                          <div class="text-ribbon-inverse">Inverse</div>
+                                          <div class="text-ribbon-premium">Premium</div>
+                                          <div class="text-ribbon-pretty">Pretty</div>
+                                          <div class="text-ribbon-star">Star</div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-ribbon-default&#x22;&#x3E;Default&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-success&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-info&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-inverse&#x22;&#x3E;Inverse&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-premium&#x22;&#x3E;Premium&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-pretty&#x22;&#x3E;Pretty&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-ribbon-star&#x22;&#x3E;Star&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+            </article>
+            <div class="clearfix"></div>
+          </main>
+        </div>
+      </div>
+    </div>
+    <footer role="contentinfo">
+      <nav class="navbar navbar-inverse navbar-expand-sm bg-inverse" id="navbar-bottom" role="navigation">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-bottom">aria-controls="navbar-collapse-bottom" aria-expanded="false" aria-label="Toggle navigation")<span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbar-collapse-bottom">
+            <ul class="navbar-nav navbar-nav-left mr-auto">
+              <li class="nav-item"><a class="nav-link" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-right">
+              <li class="nav-item"><a class="nav-link" href="https://github.com/alextarkhov/postboot">GitHub</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.producthunt.com/posts/postboot">ProductHunt</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

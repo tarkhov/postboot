@@ -1,0 +1,20 @@
+mixin card(text, classes)
+  .card.mb-3(class=classes)
+    .card-block
+      h4.card-title= text
+      p.card-text Example text.
+
+mixin card_variant(text, variant)
+  +card(text, 'card-' + variant)
+
+mixin card_inverse(text, variant)
+  +card(text, ['card-' + variant, 'card-inverse'])
+
+mixin card_outline(text, variant)
+  +card(text, 'card-outline-' + variant)
+
+mixin card_hover(text, variant)
+  +card(text, ['card-outline-' + variant, 'card-hover-' + variant])
+  
+mixin card_glass(text, variant)
+  +card(text, ['card-inverse', 'card-glass-' + variant])

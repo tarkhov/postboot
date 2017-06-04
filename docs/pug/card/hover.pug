@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_link
+  a.text-default(href="#card-hover") Hover
+
+block example_result
+  .row
+    each text, variant in {'default': 'Default', 'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'inverse': 'Inverse', 'premium': 'Premium', 'pretty': 'Pretty', 'star': 'Star'}
+      .col-md-3
+        +card_hover(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each variant in ['default', 'primary', 'success', 'info', 'warning', 'danger', 'inverse', 'premium', 'pretty', 'star']
+      .card(class=['card-hover-' + variant, 'card-outline-' + variant])

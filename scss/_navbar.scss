@@ -14,17 +14,31 @@
 }
 
 // Padding
+.py-navbar {
+  padding-top: $navbar-height;
+  padding-bottom: $navbar-height;
+}
 .pt-navbar {
   padding-top: $navbar-height;
 }
 .pb-navbar {
   padding-bottom: $navbar-height;
 }
+
+.py-navbar-sm {
+  padding-top: $navbar-height-sm;
+  padding-bottom: $navbar-height-sm;
+}
 .pt-navbar-sm {
   padding-top: $navbar-height-sm;
 }
 .pb-navbar-sm {
   padding-bottom: $navbar-height-sm;
+}
+
+.py-navbar-lg {
+  padding-top: $navbar-height-lg;
+  padding-bottom: $navbar-height-lg;
 }
 .pt-navbar-lg {
   padding-top: $navbar-height-lg;

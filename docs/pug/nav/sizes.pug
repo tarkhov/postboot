@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_link
+  a.text-default(href="#nav-sizes") Sizes
+
+block example_result
+  each size in ['xs', 'sm', 'lg']
+    +nav_size(size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each size in ['xs', 'sm', 'lg']
+      ul.nav(class='nav-' + size)

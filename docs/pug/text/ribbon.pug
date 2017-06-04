@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_link
+  a.text-default(href="#text-ribbon") Ribbon
+
+block example_result
+  each text, variant in {'default': 'Default', 'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'inverse': 'Inverse', 'premium': 'Premium', 'pretty': 'Pretty', 'star': 'Star'}
+    +text_ribbon(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in {'default': 'Default', 'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'inverse': 'Inverse', 'premium': 'Premium', 'pretty': 'Pretty', 'star': 'Star'}
+      div(class='text-ribbon-' + variant)= text

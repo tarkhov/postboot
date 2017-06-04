@@ -1,0 +1,8 @@
+mixin breadcrumb(classes)
+  ol.breadcrumb(class=classes)
+    li.breadcrumb-item: a.breadcrumb-link(href='#') Home
+    li.breadcrumb-item: a.breadcrumb-link(href='#') Category
+    li.breadcrumb-item.active Article
+
+mixin breadcrumb_variant(variant)
+  +breadcrumb("breadcrumb-" + variant)

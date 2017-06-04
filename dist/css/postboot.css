@@ -1,6 +1,6 @@
 /*!
- * PostBoot v1.0.0-alpha4 (https://alextakrhov.github.io/postboot/)
- * Copyright 2017 Alex Tarkhov
+ * PostBoot v1.0.0-alpha4 (https://github.com/tarhovalex/postboot)
+ * Copyright 2017 Alex Tarhov
  * Licensed under  ()
  */
 
@@ -1004,6 +1004,9 @@
 .dropdown-menu-content {
   padding: 1.5rem; }
 
+.nav-link.active, .show .nav-link {
+  color: #464a4c; }
+
 .nav-tabs-right,
 .nav-tabs-bottom,
 .nav-tabs-left {
@@ -1108,6 +1111,14 @@
   padding-left: 1.5em;
   padding-right: 1.5em; }
 
+.nav-y-0 .nav-link {
+  padding-top: 0;
+  padding-bottom: 0; }
+
+.nav-x-0 .nav-link {
+  padding-left: 0;
+  padding-right: 0; }
+
 .navbar-nav-left .nav-item:first-child .nav-link {
   padding-left: 0 !important; }
 
@@ -1144,17 +1155,29 @@
   .navbar-lg .navbar-text {
     font-size: 1.25rem; }
 
+.py-navbar {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem; }
+
 .pt-navbar {
   padding-top: 3.5rem; }
 
 .pb-navbar {
   padding-bottom: 3.5rem; }
 
+.py-navbar-sm {
+  padding-top: 2.2rem;
+  padding-bottom: 2.2rem; }
+
 .pt-navbar-sm {
   padding-top: 2.2rem; }
 
 .pb-navbar-sm {
   padding-bottom: 2.2rem; }
+
+.py-navbar-lg {
+  padding-top: 4.75rem;
+  padding-bottom: 4.75rem; }
 
 .pt-navbar-lg {
   padding-top: 4.75rem; }
@@ -1822,19 +1845,19 @@ a.bg-glass-star:focus, a.bg-glass-star:hover {
   background-size: 1rem 1rem; }
 
 .border-2 {
-  border: 2px !important; }
+  border-width: 2px !important; }
 
 .border-top-2 {
-  border-top: 2px !important; }
+  border-top-width: 2px !important; }
 
 .border-right-2 {
-  border-right: 2px !important; }
+  border-right-width: 2px !important; }
 
 .border-bottom-2 {
-  border-bottom: 2px !important; }
+  border-bottom-width: 2px !important; }
 
 .border-left-2 {
-  border-left: 2px !important; }
+  border-left-width: 2px !important; }
 
 .font-size-xs {
   font-size: 0.75rem; }
@@ -1877,6 +1900,10 @@ a.bg-glass-star:focus, a.bg-glass-star:hover {
 
 .font-weight-black {
   font-weight: 900; }
+
+.fixed {
+  position: fixed;
+  z-index: 1030; }
 
 .text-default {
   color: #292b2c !important; }

@@ -1,0 +1,13 @@
+mixin pagination(classes)
+  nav
+    ul.pagination(class=classes)
+      li.page-item
+        a.page-link(href='#') #[span(aria-hidden="true") &laquo;]
+      each i in [1, 2, 3, 4, 5, 6, 7]
+        li.page-item(class={active: i === 1})
+          a.page-link(href='#')= i
+      li.page-item
+        a.page-link(href='#') #[span(aria-hidden="true") &raquo;]
+
+mixin pagination_variant(variant)
+  +pagination('pagination-' + variant)

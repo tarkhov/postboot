@@ -1,0 +1,22 @@
+extends ../example.pug
+
+block example_link
+  a.text-default(href="#grid-container-sizes") Container sizes
+
+block example_result
+  .row
+    .col-sm-4.offset-sm-4
+      .bg-faded.p-2.mb-3.text-center 540px
+  .row
+    .col-sm-6.offset-sm-3
+      .bg-faded.p-2.mb-3.text-center 720px
+  .row
+    .col-sm-8.offset-sm-2
+      .bg-faded.p-2.text-center 960px
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .container.container-sm
+    .container.container-md
+    .container.container-lg
