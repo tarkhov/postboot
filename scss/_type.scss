@@ -1,0 +1,34 @@
+// Responsive headings
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    @if $breakpoint != xs {
+      .h1-#{$breakpoint} { font-size: $h1-font-size; }
+      .h2-#{$breakpoint} { font-size: $h2-font-size; }
+      .h3-#{$breakpoint} { font-size: $h3-font-size; }
+      .h4-#{$breakpoint} { font-size: $h4-font-size; }
+      .h5-#{$breakpoint} { font-size: $h5-font-size; }
+      .h6-#{$breakpoint} { font-size: $h6-font-size; }
+
+      .display-#{$breakpoint}-1 {
+        font-size: $display1-size;
+        font-weight: $display1-weight;
+        line-height: $display-line-height;
+      }
+      .display-#{$breakpoint}-2 {
+        font-size: $display2-size;
+        font-weight: $display2-weight;
+        line-height: $display-line-height;
+      }
+      .display-#{$breakpoint}-3 {
+        font-size: $display3-size;
+        font-weight: $display3-weight;
+        line-height: $display-line-height;
+      }
+      .display-#{$breakpoint}-4 {
+        font-size: $display4-size;
+        font-weight: $display4-weight;
+        line-height: $display-line-height;
+      }
+    }
+  }
+}

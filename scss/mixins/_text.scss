@@ -1,0 +1,6 @@
+// Text
+@mixin text-ribbon-variant($color, $background) {
+  padding: 10px;
+  background-color: $background;
+  color: $color;
+}

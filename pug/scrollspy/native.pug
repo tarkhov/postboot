@@ -1,0 +1,13 @@
+extends ../example.pug
+
+block example_link
+  a#scrollspy-native.text-gray-dark(href="#scrollspy-native") Native
+
+block example_result
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .btn-group.dropdown
+      button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Dropdown
+      .dropdown-menu

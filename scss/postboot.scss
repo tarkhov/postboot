@@ -1,10 +1,12 @@
 // Core variables and mixins
+@import "bootstrap/functions";
 @import "bootstrap/variables";
 @import "bootstrap/mixins";
 @import "variables";
 @import "mixins";
 
 // Core CSS
+@import "type";
 @import "grid";
 @import "form";
 @import "button";
@@ -19,10 +21,12 @@
 @import "badge";
 @import "progress";
 @import "list-group";
+@import "sidebar";
 
 // Utility classes
 @import "background";
 @import "border";
 @import "font";
 @import "position";
+@import "spacing";
 @import "text";

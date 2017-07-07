@@ -1,0 +1,13 @@
+extends ../example.pug
+
+block example_link
+  a#nav-active.text-gray-dark(href="#nav-active") Active
+
+block example_result
+  +nav('justify-content-center')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ul.nav
+      li.nav-item: a.nav-link.active(href='#') Active

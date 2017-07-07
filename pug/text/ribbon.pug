@@ -1,0 +1,20 @@
+extends ../example.pug
+
+block example_link
+  a#text-ribbon.text-gray-dark(href="#text-ribbon") Ribbon
+
+block example_result
+  each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+    +text_ribbon(text, variant)
+
+block example_inverse
+  .card-block.bg-inverse.bg-striped
+    +text_ribbon('White', 'white')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'white': 'White', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+      = "\n"
+      span(class='text-ribbon-' + variant)= text
+

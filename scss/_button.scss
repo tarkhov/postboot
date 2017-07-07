@@ -4,37 +4,37 @@
 }
 
 // Colors
-.btn-default {
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+.btn-white {
+  @include button-variant($btn-white-color, $btn-white-bg, $btn-white-border);
 }
-.btn-inverse {
-  @include button-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+.btn-black {
+  @include button-variant($btn-black-color, $btn-black-bg, $btn-black-border);
 }
-.btn-premium {
-  @include button-variant($btn-premium-color, $btn-premium-bg, $btn-premium-border);
+.btn-purple {
+  @include button-variant($btn-purple-color, $btn-purple-bg, $btn-purple-border);
 }
-.btn-pretty {
-  @include button-variant($btn-pretty-color, $btn-pretty-bg, $btn-pretty-border);
+.btn-pink {
+  @include button-variant($btn-pink-color, $btn-pink-bg, $btn-pink-border);
 }
-.btn-star {
-  @include button-variant($btn-star-color, $btn-star-bg, $btn-star-border);
+.btn-yellow {
+  @include button-variant($btn-yellow-color, $btn-yellow-bg, $btn-yellow-border);
 }
 
 // Outline
-.btn-outline-default {
-  @include button-outline-variant($btn-default-bg, $btn-default-color);
+.btn-outline-white {
+  @include button-outline-variant($btn-white-bg, $btn-white-color);
 }
-.btn-outline-inverse {
-  @include button-outline-variant($btn-inverse-bg, $btn-inverse-color);
+.btn-outline-black {
+  @include button-outline-variant($btn-black-bg, $btn-black-color);
 }
-.btn-outline-premium {
-  @include button-outline-variant($btn-premium-bg, $btn-premium-color);
+.btn-outline-purple {
+  @include button-outline-variant($btn-purple-bg, $btn-purple-color);
 }
-.btn-outline-pretty {
-  @include button-outline-variant($btn-pretty-bg, $btn-pretty-color);
+.btn-outline-pink {
+  @include button-outline-variant($btn-pink-bg, $btn-pink-color);
 }
-.btn-outline-star {
-  @include button-outline-variant($btn-star-bg, $btn-star-color);
+.btn-outline-yellow {
+  @include button-outline-variant($btn-yellow-bg, $btn-yellow-color);
 }
 
 // 3D
@@ -57,23 +57,20 @@
 .btn-3d-danger {
   @include button-3d-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border-color);
 }
-.btn-3d-inverse {
-  @include button-3d-variant($btn-inverse-color, $btn-inverse-bg, $btn-inverse-border);
+.btn-3d-black {
+  @include button-3d-variant($white, $gray-dark, $gray-dark);
 }
-.btn-3d-premium {
-  @include button-3d-variant($btn-premium-color, $btn-premium-bg, $btn-premium-border);
+.btn-3d-purple {
+  @include button-3d-variant($btn-purple-color, $btn-purple-bg, $btn-purple-border);
 }
-.btn-3d-pretty {
-  @include button-3d-variant($btn-pretty-color, $btn-pretty-bg, $btn-pretty-border);
+.btn-3d-pink {
+  @include button-3d-variant($btn-pink-color, $btn-pink-bg, $btn-pink-border);
 }
-.btn-3d-star {
-  @include button-3d-variant($btn-star-color, $btn-star-bg, $btn-star-border);
+.btn-3d-yellow {
+  @include button-3d-variant($btn-yellow-color, $btn-yellow-bg, $btn-yellow-border);
 }
 
 // Glass
-.btn-glass-default {
-  @include button-glass-variant($white, $btn-default-bg, $btn-default-border, $btn-glass-opacity);
-}
 .btn-glass-primary {
   @include button-glass-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border-color, $btn-glass-opacity);
 }
@@ -89,17 +86,20 @@
 .btn-glass-danger {
   @include button-glass-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border-color, $btn-glass-opacity);
 }
-.btn-glass-inverse {
-  @include button-glass-variant($white, $black, $black, $btn-glass-opacity);
+.btn-glass-white {
+  @include button-glass-variant($white, $btn-white-bg, $btn-white-border, $btn-glass-opacity);
 }
-.btn-glass-premium {
-  @include button-glass-variant($btn-premium-color, $btn-premium-bg, $btn-premium-border, $btn-glass-opacity);
+.btn-glass-black {
+  @include button-glass-variant($btn-black-color, $btn-black-bg, $btn-black-border, $btn-glass-opacity);
 }
-.btn-glass-pretty {
-  @include button-glass-variant($btn-pretty-color, $btn-pretty-bg, $btn-pretty-border, $btn-glass-opacity);
+.btn-glass-purple {
+  @include button-glass-variant($btn-purple-color, $btn-purple-bg, $btn-purple-border, $btn-glass-opacity);
 }
-.btn-glass-star {
-  @include button-glass-variant($btn-star-color, $btn-star-bg, $btn-star-border, $btn-glass-opacity);
+.btn-glass-pink {
+  @include button-glass-variant($btn-pink-color, $btn-pink-bg, $btn-pink-border, $btn-glass-opacity);
+}
+.btn-glass-yellow {
+  @include button-glass-variant($btn-yellow-color, $btn-yellow-bg, $btn-yellow-border, $btn-glass-opacity);
 }
 
 // Pill

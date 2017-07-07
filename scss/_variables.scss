@@ -1,7 +1,13 @@
-// Colors
-$brand-premium: $purple !default;
-$brand-pretty:  $pink !default;
-$brand-star:    $yellow !default;
+// Large spcing
+$large-spacers: (
+  6:  ($spacer * 6),
+  7:  ($spacer * 7),
+  8:  ($spacer * 8),
+  9:  ($spacer * 9),
+  10: ($spacer * 10),
+  11: ($spacer * 11),
+  12: ($spacer * 12)
+) !default;
 
 // Fonts
 $font-size-xl:  1.5rem !default;
@@ -44,25 +50,25 @@ $btn-border-radius-xs: $border-radius-xs !default;
 
 $btn-glass-opacity: $opacity-glass !default;
 
-$btn-default-color:  $gray-dark !default;
-$btn-default-bg:     $white !default;
-$btn-default-border: $btn-default-bg !default;
+$btn-white-color:  $gray-dark !default;
+$btn-white-bg:     $white !default;
+$btn-white-border: $btn-white-bg !default;
 
-$btn-inverse-color:  $white !default;
-$btn-inverse-bg:     $brand-inverse !default;
-$btn-inverse-border: $btn-inverse-bg !default;
+$btn-black-color:  $white !default;
+$btn-black-bg:     $black !default;
+$btn-black-border: $btn-black-bg !default;
 
-$btn-premium-color:  $white !default;
-$btn-premium-bg:     $brand-premium !default;
-$btn-premium-border: $btn-premium-bg !default;
+$btn-purple-color:  $white !default;
+$btn-purple-bg:     $purple !default;
+$btn-purple-border: $btn-purple-bg !default;
 
-$btn-pretty-color:   $white !default;
-$btn-pretty-bg:      $brand-pretty !default;
-$btn-pretty-border:  $btn-pretty-bg !default;
+$btn-pink-color:   $white !default;
+$btn-pink-bg:      $pink !default;
+$btn-pink-border:  $btn-pink-bg !default;
 
-$btn-star-color:     $white !default;
-$btn-star-bg:        $brand-star !default;
-$btn-star-border:    $btn-star-bg !default;
+$btn-yellow-color:     $white !default;
+$btn-yellow-bg:        $yellow !default;
+$btn-yellow-border:    $btn-yellow-bg !default;
 
 // Dropdown
 $dropdown-menu-content-padding: 1.5rem !default;
@@ -83,7 +89,7 @@ $navbar-height-sm: 2.2rem !default;
 $navbar-height-lg: 4.75rem !default;
 
 // Navs
-$nav-active-link-color: $gray !default;
+$nav-link-active-color: $gray !default;
 
 $nav-link-padding-x-xs: .25em !default;
 $nav-link-padding-y-xs: .1em !default;
@@ -95,10 +101,10 @@ $nav-link-padding-x-lg: 1.5em !default;
 $nav-link-padding-y-lg: .75em !default;
 
 // Badges
-$badge-inverse-bg: $brand-inverse !default;
-$badge-premium-bg: $brand-premium !default;
-$badge-pretty-bg:  $brand-pretty !default;
-$badge-star-bg:    $brand-star !default;
+$badge-black-bg:  $black !default;
+$badge-purple-bg: $purple !default;
+$badge-pink-bg:   $pink !default;
+$badge-yellow-bg: $yellow !default;
 
 // Progress
 $progress-height-xs:    .75rem !default;

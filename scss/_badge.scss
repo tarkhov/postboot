@@ -1,13 +1,13 @@
 // Colors
-.badge-inverse {
-  @include badge-variant($badge-inverse-bg);
+.badge-black {
+  @include badge-variant($badge-black-bg);
 }
-.badge-premium {
-  @include badge-variant($badge-premium-bg);
+.badge-purple {
+  @include badge-variant($badge-purple-bg);
 }
-.badge-pretty {
-  @include badge-variant($badge-pretty-bg);
+.badge-pink {
+  @include badge-variant($badge-pink-bg);
 }
-.badge-star {
-  @include badge-variant($badge-star-bg);
+.badge-yellow {
+  @include badge-variant($badge-yellow-bg);
 }

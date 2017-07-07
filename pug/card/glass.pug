@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_link
+  a#card-glass.text-gray-dark(href="#card-glass") Glass
+
+block example_block
+  .card-block.bg-inverse.bg-striped
+    .row
+      each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'white': 'White', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+        .col-md-3
+          +card_glass(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each variant in ['primary', 'success', 'info', 'warning', 'danger', 'white', 'black', 'purple', 'pink', 'yellow']
+      .card.card-inverse(class='card-glass-' + variant)

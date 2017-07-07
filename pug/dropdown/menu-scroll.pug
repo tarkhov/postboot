@@ -1,0 +1,19 @@
+extends ../example.pug
+
+block example_link
+  a#dropdown-menu-scroll.text-gray-dark(href="#dropdown-menu-scroll") Menu scroll
+
+block example_result
+  .btn-group.dropdown
+    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Dropdown
+    .dropdown-menu.dropdown-menu-scrolled
+      - for(var i = 1; i <= 20; i++)
+        = "\n\t"
+        a.dropdown-item(href='#')= 'Menu item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .btn-group.dropdown
+      button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Dropdown
+      .dropdown-menu.dropdown-menu-scrolled

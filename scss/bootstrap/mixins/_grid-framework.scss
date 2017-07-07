@@ -37,6 +37,7 @@
       .col#{$infix}-auto {
         flex: 0 0 auto;
         width: auto;
+        max-width: none; // Reset earlier grid tiers
       }
 
       @for $i from 1 through $columns {
@@ -55,7 +56,7 @@
 
       // `$columns - 1` because offsetting by the width of an entire row isn't possible
       @for $i from 0 through ($columns - 1) {
-        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-xs-0
+        @if not ($infix == "" and $i == 0) { // Avoid emitting useless .offset-0
           .offset#{$infix}-#{$i} {
             @include make-col-modifier(offset, $i, $columns)
           }

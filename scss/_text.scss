@@ -1,32 +1,37 @@
 // Contextual colors
-.text-default {
-  color: $gray-dark !important;
-}
-@include text-emphasis-variant('.text-inverse', $white);
-@include text-emphasis-variant('.text-premium', $brand-premium);
-@include text-emphasis-variant('.text-pretty', $brand-pretty);
-@include text-emphasis-variant('.text-star', $brand-star);
+@include text-emphasis-variant('.text-black', $black);
+@include text-emphasis-variant('.text-purple', $purple);
+@include text-emphasis-variant('.text-pink', $pink);
+@include text-emphasis-variant('.text-yellow', $yellow);
 
 // Ribbon
-.text-ribbon-default {
-}
 .text-ribbon-primary {
-}
-.text-ribbon-secondary {
+  @include text-ribbon-variant($white, $brand-primary);
 }
 .text-ribbon-success {
+  @include text-ribbon-variant($white, $brand-success);
 }
 .text-ribbon-info {
+  @include text-ribbon-variant($white, $brand-info);
 }
 .text-ribbon-warning {
+  @include text-ribbon-variant($white, $brand-warning);
 }
 .text-ribbon-danger {
+  @include text-ribbon-variant($white, $brand-danger);
 }
-.text-ribbon-inverse {
+.text-ribbon-white {
+  @include text-ribbon-variant($gray-dark, $white);
 }
-.text-ribbon-premium {
+.text-ribbon-black {
+  @include text-ribbon-variant($white, $black);
 }
-.text-ribbon-pretty {
+.text-ribbon-purple {
+  @include text-ribbon-variant($white, $purple);
 }
-.text-ribbon-star {
+.text-ribbon-pink {
+  @include text-ribbon-variant($white, $pink);
+}
+.text-ribbon-yellow {
+  @include text-ribbon-variant($white, $yellow);
 }

@@ -20,7 +20,7 @@ module.exports = function (grunt) {
           'js/dist/util.js': 'js/util.js',
           'js/dist/dropdown.js': 'js/dropdown.js',
           'js/dist/dropdown-hover.js': 'js/dropdown-hover.js',
-          'js/dist/dropdown-fluid.js': 'js/dropdown-fluid.js'
+          'js/dist/scrollspy.js': 'js/scrollspy.js'
         }
       }
     },
@@ -35,13 +35,13 @@ module.exports = function (grunt) {
           'js/dist/util.js',
           'js/dist/dropdown.js',
           'js/dist/dropdown-hover.js',
-          'js/dist/dropdown-fluid.js'
+          'js/dist/scrollspy.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       docs: {
         src: [
-          'dist/js/postboot.min.js',
+          'dist/js/<%= pkg.name %>.min.js',
           'docs/js/prism.js'
         ],
         dest: 'docs/js/app.js'
@@ -79,6 +79,27 @@ module.exports = function (grunt) {
       }
     },
 
+    autoprefixer: {
+      options: {
+        browsers: [
+          'Chrome >= 35',
+          'Firefox >= 38',
+          'Edge >= 12',
+          'Explorer >= 10',
+          'iOS >= 8',
+          'Safari >= 8',
+          'Android 2.3',
+          'Android >= 4',
+          'Opera >= 12'
+        ]
+      },
+      core: {
+        files: {
+          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css'
+        }
+      },
+    },
+
     cssmin: {
       options: {
         keepSpecialComments: '*',
@@ -114,6 +135,14 @@ module.exports = function (grunt) {
     pug: {
       options: {
         pretty: true,
+        /*data: function (dest, src) {
+          var url = dest.replace('docs', '').replace('index.html','');
+
+          return {
+            url: url,
+            pkg: pkg
+          };
+        },*/
         data: {
           pkg: '<%= pkg %>'
         },
@@ -129,7 +158,7 @@ module.exports = function (grunt) {
       },
       docs: {
         files: {
-          'docs/index.html': 'docs/pug/index.pug'
+          'docs/index.html': 'pug/index.pug'
         }
       }
     }
@@ -139,7 +168,7 @@ module.exports = function (grunt) {
   grunt.registerTask('dist-js', ['babel:core', 'concat:core', 'uglify:core']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['sass:core', 'usebanner', 'cssmin:core']);
+  grunt.registerTask('dist-css', ['sass:core', 'autoprefixer:core', 'usebanner', 'cssmin:core']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['dist-css', 'dist-js']);

@@ -1,20 +1,22 @@
 // Colors
-@include bg-variant('.bg-default', $white);
-@include bg-variant('.bg-premium', $brand-premium);
-@include bg-variant('.bg-pretty', $brand-pretty);
-@include bg-variant('.bg-star', $brand-star);
+@include bg-variant('.bg-white', $white);
+@include bg-variant('.bg-black', $black);
+@include bg-variant('.bg-purple', $purple);
+@include bg-variant('.bg-pink', $pink);
+@include bg-variant('.bg-yellow', $yellow);
 
 // Glasses
-@include bg-glass-variant('.bg-glass-default', $white, $opacity-glass);
 @include bg-glass-variant('.bg-glass-primary', $brand-primary, $opacity-glass);
 @include bg-glass-variant('.bg-glass-success', $brand-success, $opacity-glass);
 @include bg-glass-variant('.bg-glass-info', $brand-info, $opacity-glass);
 @include bg-glass-variant('.bg-glass-warning', $brand-warning, $opacity-glass);
 @include bg-glass-variant('.bg-glass-danger', $brand-danger, $opacity-glass);
-@include bg-glass-variant('.bg-glass-inverse', $black, $opacity-glass);
-@include bg-glass-variant('.bg-glass-premium', $brand-premium, $opacity-glass);
-@include bg-glass-variant('.bg-glass-pretty', $brand-pretty, $opacity-glass);
-@include bg-glass-variant('.bg-glass-star', $brand-star, $opacity-glass);
+@include bg-glass-variant('.bg-glass-inverse', $brand-inverse, $opacity-glass);
+@include bg-glass-variant('.bg-glass-white', $white, $opacity-glass);
+@include bg-glass-variant('.bg-glass-black', $black, $opacity-glass);
+@include bg-glass-variant('.bg-glass-purple', $purple, $opacity-glass);
+@include bg-glass-variant('.bg-glass-pink', $pink, $opacity-glass);
+@include bg-glass-variant('.bg-glass-yellow', $yellow, $opacity-glass);
 
 // Striped
 .bg-striped {

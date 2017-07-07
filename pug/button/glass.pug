@@ -1,0 +1,15 @@
+extends ../example.pug
+
+block example_link
+  a#button-glass.text-gray-dark(href="#button-glass") Glass
+
+block example_block
+  .card-block.bg-inverse.bg-striped
+    each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'white': 'White', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+      +button_glass(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in {'primary': 'Primary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'white': 'White', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+      button.btn(type='button' class='btn-glass-' + variant)= text

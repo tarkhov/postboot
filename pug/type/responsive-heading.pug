@@ -1,0 +1,18 @@
+extends ../example.pug
+
+block example_link
+  a#text-colors.text-gray-dark(href="#text-colors") Colors
+
+block example_result
+  each text, variant in {'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+    +text_variant(text, variant)
+
+block example_inverse
+  .card-block.bg-inverse.bg-striped
+    +text_variant('White', 'white')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in {'white': 'White', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+      div(class='text-' + variant)= text

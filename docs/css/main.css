@@ -10,6 +10,12 @@ code {
   padding: 0 !important;
 }
 
-.show > .dropdown-menu {
-  display: block;
+#sidebar-left {
+  height: 500px;
+  overflow-y: scroll;
+  padding-right: 30px;
 }
+
+/*#sidebar-left .show > .collapse {
+  display: block;
+}*/

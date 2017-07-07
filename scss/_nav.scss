@@ -1,8 +1,8 @@
 // Active link
 .nav-link {
   &.active,
-  .show & {
-    color: $nav-active-link-color;
+  .nav-item.show & {
+    color: $nav-link-active-color;
   }
 }
 
@@ -17,42 +17,75 @@
   }
 }
 
-.nav-tabs-right,
-.nav-tabs-left {
-  .nav-item {
-    display: block;
-    float: none;
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    + .nav-item {
-      margin-top: $nav-item-margin;
-      margin-left: 0;
+    .nav-tabs#{$infix}-right,
+    .nav-tabs#{$infix}-left {
+      flex-direction: column;
+
+      .nav-item {
+        display: block;
+        float: none;
+
+        + .nav-item {
+          margin-left: 0;
+        }
+      }
     }
-  }
-}
 
-.nav-tabs-right {
-  border-left: $nav-tabs-border-width solid $nav-tabs-border-color;
+    .nav-tabs#{$infix}-right {
+      border-left: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-  .nav-item {
-    margin-left: -$nav-tabs-border-width !important;
-  }
+      .nav-item {
+        margin-left: -$nav-tabs-border-width !important;
+      }
 
-  .nav-link {
-    @include border-radius(0 $border-radius $border-radius 0);
+      .nav-link {
+        @include border-radius(0 $border-radius $border-radius 0);
 
-    @include hover-focus {
-      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+        @include hover-focus {
+          border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+        }
+      }
+
+      .nav-link.active,
+      .nav-item.show .nav-link {
+        border-color: $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color transparent;
+      }
+
+      .dropdown-menu {
+        margin-top: 0;
+        margin-left: -$nav-tabs-border-width;
+      }
     }
-  }
 
-  .nav-link.active,
-  .nav-item.show .nav-link {
-    border-color: $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color transparent;
-  }
+    .nav-tabs#{$infix}-left {
+      border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-  .dropdown-menu {
-    margin-top: 0;
-    margin-left: -$nav-tabs-border-width;
+      .nav-item {
+        margin-right: -$nav-tabs-border-width;
+      }
+
+      .nav-link {
+        @include border-radius($border-radius 0 0 $border-radius);
+
+        @include hover-focus {
+          border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+        }
+      }
+
+      .nav-link.active,
+      .nav-item.show .nav-link {
+        border-color: $nav-tabs-link-active-border-color transparent $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color;
+      }
+
+      .dropdown-menu {
+        margin-top: 0;
+        margin-right: -$nav-tabs-border-width;
+      }
+    }
   }
 }
 
@@ -73,39 +106,13 @@
 
   .nav-link.active,
   .nav-item.show .nav-link {
-    border-color: transparent $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color;
+    border-color: transparent $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color;
   }
 
   .dropdown-menu {
     margin-top: 0;
     margin-bottom: -$nav-tabs-border-width;
     @include border-bottom-radius(0);
-  }
-}
-
-.nav-tabs-left {
-  border-right: $nav-tabs-border-width solid $nav-tabs-border-color;
-
-  .nav-item {
-    margin-right: -$nav-tabs-border-width;
-  }
-
-  .nav-link {
-    @include border-radius($border-radius 0 0 $border-radius);
-
-    @include hover-focus {
-      border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
-    }
-  }
-
-  .nav-link.active,
-  .nav-item.show .nav-link {
-    border-color: $nav-tabs-active-link-border-color transparent $nav-tabs-active-link-border-color $nav-tabs-active-link-border-color;
-  }
-
-  .dropdown-menu {
-    margin-top: 0;
-    margin-right: -$nav-tabs-border-width;
   }
 }
 

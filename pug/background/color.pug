@@ -1,0 +1,18 @@
+extends ../example.pug
+
+block example_link
+  a#background-colors.text-gray-dark(href="#background-colors") Colors
+
+block example_result
+  each text, variant in {'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+    +background_inverse(text, variant)
+
+block example_inverse
+  .card-block.bg-inverse.bg-striped
+    +background_variant('White', 'white')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in {'white': 'White', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+      p(class='bg-' + variant)= text

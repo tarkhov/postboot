@@ -6,11 +6,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 // https://developer.mozilla.org/ru/docs/Web/API/Element/closest#Specification
 (function (e) {
-  e.closest = e.closest || function (css) {
+  e.closest = e.closest || function (selector) {
     var node = this;
 
     while (node) {
-      if (node.matches(css)) {
+      if (node.matches(selector)) {
         return node;
       } else {
         node = node.parentElement;
@@ -18,6 +18,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
 
     return null;
+  };
+
+  e.offset = function () {
+    var box = this.getBoundingClientRect();
+
+    return {
+      top: box.top + window.pageYOffset - document.documentElement.clientTop,
+      left: box.left + window.pageXOffset - document.documentElement.clientLeft
+    };
+  };
+
+  e.position = function () {
+    return {
+      left: this.offsetLeft,
+      top: this.offsetTop
+    };
   };
 })(Element.prototype);
 
@@ -55,6 +71,40 @@ var Util = function () {
       }
 
       return selector && selector !== '#' ? selector : null;
+    }
+  }, {
+    key: 'toType',
+    value: function toType(obj) {
+      return {}.toString.call(obj).match(/\s([a-zA-Z]+)/)[1].toLowerCase();
+    }
+  }, {
+    key: 'isElement',
+    value: function isElement(obj) {
+      return (obj[0] || obj).nodeType;
+    }
+  }, {
+    key: 'getUID',
+    value: function getUID(prefix) {
+      do {
+        // eslint-disable-next-line no-bitwise
+        prefix += ~~(Math.random() * MAX_UID); // "~~" acts like a faster Math.floor() here
+      } while (document.getElementById(prefix));
+      return prefix;
+    }
+  }, {
+    key: 'typeCheckConfig',
+    value: function typeCheckConfig(componentName, config, configTypes) {
+      for (var property in configTypes) {
+        if (configTypes.hasOwnProperty(property)) {
+          var expectedTypes = configTypes[property];
+          var value = config[property];
+          var valueType = value && Util.isElement(value) ? 'element' : Util.toType(value);
+
+          if (!new RegExp(expectedTypes).test(valueType)) {
+            throw new Error(componentName.toUpperCase() + ': ' + ('Option "' + property + '" provided type "' + valueType + '" ') + ('but expected type "' + expectedTypes + '".'));
+          }
+        }
+      }
     }
   }]);
 

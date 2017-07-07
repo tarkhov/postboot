@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_link
+  a#button-3d.text-gray-dark(href="#button-3d") 3D
+
+block example_result
+  each text, variant in {'primary': 'Primary', 'secondary': 'Secondary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+    +button_3d(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in {'primary': 'Primary', 'secondary': 'Secondary', 'success': 'Success', 'info': 'Info', 'warning': 'Warning', 'danger': 'Danger', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
+      button.btn(type='button' class='btn-3d-' + variant)= text

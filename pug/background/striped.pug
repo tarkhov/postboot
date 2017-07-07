@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_link
+  a#background-striped.text-gray-dark(href="#background-striped") Striped
+
+block example_result
+  +background('Striped', ['bg-primary', 'bg-striped', 'text-white'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    p.bg-primary.bg-striped.text-white Striped

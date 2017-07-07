@@ -1,0 +1,25 @@
+// Large spacing
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    @each $prop, $abbrev in (margin: m, padding: p) {
+      @each $size, $length in $large-spacers {
+
+        .#{$abbrev}#{$infix}-#{$size}  { #{$prop}:        $length !important; }
+        .#{$abbrev}t#{$infix}-#{$size} { #{$prop}-top:    $length !important; }
+        .#{$abbrev}r#{$infix}-#{$size} { #{$prop}-right:  $length !important; }
+        .#{$abbrev}b#{$infix}-#{$size} { #{$prop}-bottom: $length !important; }
+        .#{$abbrev}l#{$infix}-#{$size} { #{$prop}-left:   $length !important; }
+        .#{$abbrev}x#{$infix}-#{$size} {
+          #{$prop}-right: $length !important;
+          #{$prop}-left:  $length !important;
+        }
+        .#{$abbrev}y#{$infix}-#{$size} {
+          #{$prop}-top:    $length !important;
+          #{$prop}-bottom: $length !important;
+        }
+      }
+    }
+  }
+}

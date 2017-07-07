@@ -1,3 +1,49 @@
+// Expand
+.navbar-expand-xs {
+  @include media-breakpoint-down(xs) {
+    > .container,
+    > .container-fluid {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+
+  .navbar-nav {
+    flex-direction: row;
+
+    .dropdown-menu {
+      position: absolute !important;
+      top: 100% !important;
+    }
+
+    .nav-link {
+      padding-right: .5rem;
+      padding-left: .5rem;
+    }
+  }
+
+  // For nesting containers, have to redeclare for alignment purposes
+  > .container,
+  > .container-fluid {
+    flex-wrap: nowrap;
+  }
+
+  // scss-lint:disable ImportantRule
+  .navbar-collapse {
+    display: flex !important;
+  }
+  // scss-lint:enable ImportantRule
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+// Nav
 .navbar-nav-left .nav-item:first-child .nav-link {
   padding-left: 0 !important;
 }

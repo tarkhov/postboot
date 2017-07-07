@@ -1,11 +1,27 @@
-// Drop to left and right
+// Dropdown directions
+.dropup,
+.dropright,
+.dropdown,
+.dropleft {
+  .dropdown-menu {
+    margin: 0;
+  }
+}
+
+.dropup {
+  // Different positioning for bottom up menu
+  .dropdown-menu {
+    top: auto;
+    bottom: 100%;
+  }
+}
+
 .dropright,
 .dropleft {
   position: relative;
 
   .dropdown-menu {
     top: 0;
-    margin: 0;
   }
 
   .dropdown-menu & .dropdown-menu {
@@ -20,6 +36,7 @@
 
   .dropdown-toggle {
     &::after {
+      vertical-align: middle;
       border-top: $caret-width solid transparent;
       border-right: 0;
       border-bottom: $caret-width solid transparent;
@@ -44,8 +61,7 @@
       display: inline-block;
       width: 0;
       height: 0;
-      margin-right: .25rem;
-      margin-left: .25rem;
+      margin-right: $caret-width * .85;
       vertical-align: middle;
       content: "";
       border-top: $caret-width solid transparent;
@@ -55,17 +71,29 @@
   }
 }
 
+// Active
+.show {
+  // Show the menu
+  > .dropdown-menu {
+    display: block;
+  }
+}
+
+// Menu position
+.dropdown-menu-right {
+  right: 0;
+  left: auto; // Reset the default from `.dropdown-menu`
+}
+
+.dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+
 // Scrolled
 .dropdown-menu-scrolled {
   max-height: 300px;
   overflow-y: scroll;
-}
-
-// Hover menu
-.dropdown-hover {
-  .dropdown-menu {
-    margin: 0;
-  }
 }
 
 // Mega menu

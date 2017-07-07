@@ -8,10 +8,16 @@
 .font-size-4xl { font-size: $font-size-4xl; }
 
 // Font weights - https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#Common_weight_name_mapping
-.font-weight-thin        { font-weight: 100; }
-.font-weight-extra-light { font-weight: 200; }
-.font-weight-light       { font-weight: 300; }
-.font-weight-medium      { font-weight: 500; }
-.font-weight-semi-bold   { font-weight: 600; }
-.font-weight-extra-bold  { font-weight: 800; }
-.font-weight-black       { font-weight: 900; }
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .font-weight#{$infix}-thin        { font-weight: 100; }
+    .font-weight#{$infix}-extra-light { font-weight: 200; }
+    .font-weight#{$infix}-light       { font-weight: 300; }
+    .font-weight#{$infix}-medium      { font-weight: 500; }
+    .font-weight#{$infix}-semi-bold   { font-weight: 600; }
+    .font-weight#{$infix}-extra-bold  { font-weight: 800; }
+    .font-weight#{$infix}-black       { font-weight: 900; }
+  }
+}
