@@ -8,14 +8,14 @@
     "js",
     "sass"
   ],
-  "homepage": "https://postboot.github.io",
+  "homepage": "https://github.com/tarkhov/postboot",
   "author": "Alex Tarkhov",
   "repository": {
     "type": "git",
-    "url": "https://github.com/postboot/postboot.git"
+    "url": "https://github.com/tarkhov/postboot.git"
   },
   "bugs": {
-    "url": "https://github.com/postboot/postboot/issues"
+    "url": "https://github.com/tarkhov/postboot/issues"
   },
   "license": "MIT",
   "devDependencies": {
