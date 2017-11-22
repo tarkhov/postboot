@@ -1,22 +1,21 @@
 {
   "name": "postboot",
-  "description": "Library that extends the Bootstrap framework.",
-  "version": "1.0.0-alpha4",
+  "description": "HTML5 library that extends the Bootstrap framework.",
+  "version": "1.0.0-beta",
   "keywords": [
     "bootstrap",
     "css",
     "js",
-    "sass",
-    "scss"
+    "sass"
   ],
-  "homepage": "https://github.com/alextarhov/postboot",
-  "author": "Alex Tarhov",
+  "homepage": "https://postboot.github.io",
+  "author": "Alex Tarkhov",
   "repository": {
     "type": "git",
-    "url": "https://github.com/alextarhov/postboot.git"
+    "url": "https://github.com/postboot/postboot.git"
   },
   "bugs": {
-    "url": "https://github.com/alextarhov/postboot/issues"
+    "url": "https://github.com/postboot/postboot/issues"
   },
   "license": "MIT",
   "devDependencies": {

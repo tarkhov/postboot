@@ -1,9 +1,11 @@
 module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
+  var pkg = grunt.file.readJSON('package.json');
+
   // Project configuration.
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: pkg,
     banner: '/*!\n' +
             ' * PostBoot v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
@@ -17,10 +19,10 @@ module.exports = function (grunt) {
       },
       core: {
         files: {
-          'js/dist/util.js': 'js/util.js',
-          'js/dist/dropdown.js': 'js/dropdown.js',
-          'js/dist/dropdown-hover.js': 'js/dropdown-hover.js',
-          'js/dist/scrollspy.js': 'js/scrollspy.js'
+          'src/js/dist/util.js': 'src/js/util.js',
+          'src/js/dist/dropdown.js': 'src/js/dropdown.js',
+          'src/js/dist/dropdown-hover.js': 'src/js/dropdown-hover.js',
+          'src/js/dist/scrollspy.js': 'src/js/scrollspy.js'
         }
       }
     },
@@ -32,19 +34,19 @@ module.exports = function (grunt) {
       },
       core: {
         src: [
-          'js/dist/util.js',
-          'js/dist/dropdown.js',
-          'js/dist/dropdown-hover.js',
-          'js/dist/scrollspy.js'
+          'src/js/dist/util.js',
+          'src/js/dist/dropdown.js',
+          'src/js/dist/dropdown-hover.js',
+          'src/js/dist/scrollspy.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       docs: {
         src: [
           'dist/js/<%= pkg.name %>.min.js',
-          'docs/js/prism.js'
+          'docs/assets/js/prism.js'
         ],
-        dest: 'docs/js/app.js'
+        dest: 'docs/assets/js/app.js'
       }
     },
 
@@ -74,7 +76,12 @@ module.exports = function (grunt) {
       },
       core: {
         files: {
-          'dist/css/<%= pkg.name %>.css': 'scss/<%= pkg.name %>.scss'
+          'dist/css/<%= pkg.name %>.css': 'src/scss/<%= pkg.name %>.scss'
+        }
+      },
+      docs: {
+        files: {
+          'docs/assets/css/main.css': 'docs/assets/scss/main.scss'
         }
       }
     },
@@ -98,6 +105,11 @@ module.exports = function (grunt) {
           'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css'
         }
       },
+      docs: {
+        files: {
+          'docs/assets/css/app.css': 'docs/assets/css/app.css'
+        }
+      }
     },
 
     cssmin: {
@@ -111,12 +123,12 @@ module.exports = function (grunt) {
       },
       docs: {
         files: {
-          'docs/css/app.css': [
-            'docs/css/bootstrap.min.css',
+          'docs/assets/css/app.css': [
+            'docs/assets/css/bootstrap.min.css',
             '<%= cssmin.core.dest %>',
-            'docs/css/prism.css',
-            'docs/css/font-awesome.min.css',
-            'docs/css/main.css'
+            'docs/assets/css/prism.css',
+            'docs/assets/css/font-awesome.min.css',
+            'docs/assets/css/main.css'
           ]
         }
       }
@@ -135,16 +147,48 @@ module.exports = function (grunt) {
     pug: {
       options: {
         pretty: true,
-        /*data: function (dest, src) {
+        data: function (dest, src) {
           var url = dest.replace('docs', '').replace('index.html','');
+          var themeColorNames = [
+            "primary",
+            "secondary",
+            "success",
+            "info",
+            "warning",
+            "danger",
+            "light",
+            "dark"
+          ];
+          var extraColorNames = [
+            "black",
+            "indigo",
+            "orange",
+            "pink",
+            "purple",
+            "teal",
+            "white"
+          ];
+          var colorNames = themeColorNames.concat(extraColorNames);
+          var extraColors = {};
+          var colors = {};
+
+          colorNames.forEach(function (color) {
+            colors[color] = color.charAt(0).toUpperCase() + color.substr(1);
+          });
+
+          extraColorNames.forEach(function (color) {
+            extraColors[color] = color.charAt(0).toUpperCase() + color.substr(1);
+          });
+
+          var downloadUrl = "https://github.com/tarkhov/" + pkg.name + "/releases/download/v" + pkg.version + "/" + pkg.name + "-" + pkg.version + ".zip";
 
           return {
+            colors: colors,
+            extraColors: extraColors,
+            downloadUrl: downloadUrl,
             url: url,
             pkg: pkg
           };
-        },*/
-        data: {
-          pkg: '<%= pkg %>'
         },
         filters: {
           'encode-pug': function (block) {
@@ -158,7 +202,8 @@ module.exports = function (grunt) {
       },
       docs: {
         files: {
-          'docs/index.html': 'pug/index.pug'
+          'docs/index.html': 'docs/assets/pug/index.pug',
+          'docs/1.0/index.html': 'docs/assets/pug/index.pug'
         }
       }
     }
@@ -177,7 +222,7 @@ module.exports = function (grunt) {
   grunt.registerTask('docs-js', ['concat:docs', 'uglify:docs']);
 
   // CSS docs task.
-  grunt.registerTask('docs-css', 'cssmin:docs');
+  grunt.registerTask('docs-css', ['sass:docs', 'autoprefixer:docs', 'cssmin:docs']);
 
   // HTML docs task.
   grunt.registerTask('docs-html', 'pug:docs');

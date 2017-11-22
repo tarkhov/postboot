@@ -1,0 +1,31 @@
+// Color
+@each $color, $value in $theme-colors-excluded {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+}
+
+// Glass
+@each $color, $value in $theme-colors {
+  .border-glass-#{$color} {
+    border-color: rgba($value, $opacity-glass) !important;
+  }
+}
+
+// Style
+@each $style , $value in $border-styles {
+  .border-#{$style}        { border-style: $value !important; }
+  .border-top-#{$style}    { border-top-style: $value !important; }
+  .border-right-#{$style}  { border-right-style: $value !important; }
+  .border-bottom-#{$style} { border-bottom-style: $value !important; }
+  .border-left-#{$style}   { border-left-style: $value !important; }
+}
+
+// Width
+@each $width, $value in $border-widths {
+  .border-#{$width}        { border-width: $value !important; }
+  .border-top-#{$width}    { border-top-width: $value !important; }
+  .border-right-#{$width}  { border-right-width: $value !important; }
+  .border-bottom-#{$width} { border-bottom-width: $value !important; }
+  .border-left-#{$width}   { border-left-width: $value !important; }
+}

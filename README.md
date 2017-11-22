@@ -1,6 +1,6 @@
 # PostBoot
 
-New colors, extended grid, better components sizing and styling for Bootstrap framework.
+HTML5 library that extends the Bootstrap framework.
 
 ### Contents
 
@@ -14,7 +14,7 @@ New colors, extended grid, better components sizing and styling for Bootstrap fr
 
 ### Archive
 
-[Download](https://github.com/alextarkhov/postboot/releases/download/v1.0.0-alpha3/postboot-1.0.0-alpha3-dist.zip)
+[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta/postboot-1.0.0-beta.zip)
 
 ```
 postboot/
@@ -30,11 +30,11 @@ postboot/
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://cdn.rawgit.com/alextarkhov/postboot/v1.0.0-alpha3/dist/css/postboot.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta/dist/css/postboot.min.css"/>
 
 <!-- JS -->
-<script src="https://cdn.rawgit.com/alextarkhov/postboot/v1.0.0-alpha3/dist/js/postboot.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta/dist/js/postboot.min.js"></script>
 ```
 
 ## Author
@@ -43,8 +43,8 @@ postboot/
 
 * [Facebook](https://www.facebook.com/alextarkhov)
 * [Twitter](https://twitter.com/alextarkhov)
-* [Medium](https://medium.com/@alextarkhov)
-* [Product Hunt](https://www.producthunt.com/@alextarkhov)
+* [Medium](https://medium.com/@tarkhov)
+* [Product Hunt](https://www.producthunt.com/@tarkhov)
 
 ## License
 

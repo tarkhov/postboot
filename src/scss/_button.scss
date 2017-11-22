@@ -1,0 +1,34 @@
+// Sizes
+.btn-xs {
+  @include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, $font-size-xs, $line-height-xs, $btn-border-radius-xs);
+}
+
+// Colors
+@each $color, $value in $theme-colors-excluded {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value, #fff);
+  }
+}
+
+// 3D
+@each $color, $value in map-remove($theme-colors, "black", "white") {
+  .btn-3d-#{$color} {
+    @include button-3d-variant($value, $value);
+  }
+}
+
+// Glass
+@each $color, $value in $theme-colors {
+  .btn-glass-#{$color} {
+    @include button-glass-variant($value, $value, $btn-glass-opacity);
+  }
+}
+
+// Pill
+.btn-pill {
+  border-radius: 30px;
+}

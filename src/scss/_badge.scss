@@ -1,0 +1,13 @@
+// Colors
+@each $color, $value in $theme-colors-excluded {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+// Glass
+@each $color, $value in $theme-colors {
+  .badge-glass-#{$color} {
+    @include badge-variant(rgba($value, $opacity-glass));
+  }
+}

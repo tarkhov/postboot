@@ -1,5 +1,5 @@
 /*!
- * PostBoot v1.0.0-alpha4 (https://github.com/alextarkhov/postboot)
+ * PostBoot v1.0.0-beta (http://tarhovalex.github.io/postboot)
  * Copyright 2017 Alex Tarhov
  * Licensed under  ()
  */
@@ -542,9 +542,9 @@ var ScrollSpySelector = {
   DROPDOWN: '.dropdown',
   DROPDOWN_ITEMS: '.dropdown-item',
   DROPDOWN_TOGGLE: '.dropdown-toggle',
-  LIST_ITEMS: '.list-group-item',
+  LIST_ITEM: '.list-group-item',
   NAV_ITEM: '.nav-item',
-  NAV_LINKS: '.nav-link',
+  NAV_LINK: '.nav-link',
   NAV_LIST_GROUP: '.nav, .list-group',
   SHOW: '.show'
 };
@@ -563,7 +563,7 @@ var ScrollSpy = function () {
     this.element = element;
     this.scrollElement = element.tagName === 'BODY' ? window : element;
     this.config = this.getConfig(config);
-    this.selector = this.config.target + ' ' + ScrollSpySelector.NAV_LINKS + ',' + (this.config.target + ' ' + ScrollSpySelector.LIST_ITEMS + ',') + (this.config.target + ' ' + ScrollSpySelector.DROPDOWN_ITEMS);
+    this.selector = this.config.target + ' ' + ScrollSpySelector.NAV_LINK + ',' + (this.config.target + ' ' + ScrollSpySelector.LIST_ITEM + ',') + (this.config.target + ' ' + ScrollSpySelector.DROPDOWN_ITEMS);
     this.offsets = [];
     this.targets = [];
     this.activeTarget = null;
@@ -704,7 +704,7 @@ var ScrollSpy = function () {
       if (link.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
         link.closest(ScrollSpySelector.DROPDOWN).querySelector(ScrollSpySelector.DROPDOWN_TOGGLE).classList.add(ScrollSpyClassName.ACTIVE);
       } else {
-        //$link.parents(ScrollSpySelector.NAV_LIST_GROUP).prev(`${ScrollSpySelector.NAV_LINKS}, ${ScrollSpySelector.LIST_ITEMS}`).addClass(ScrollSpyClassName.ACTIVE)
+        //$link.parents(ScrollSpySelector.NAV_LIST_GROUP).prev(`${ScrollSpySelector.NAV_LINK}, ${ScrollSpySelector.LIST_ITEM}`).addClass(ScrollSpyClassName.ACTIVE)
       }
       link.classList.add(ScrollSpyClassName.ACTIVE);
 

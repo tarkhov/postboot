@@ -1,0 +1,29 @@
+// Shapes
+@mixin card-border-radius($border-radius) {
+  @include border-radius($border-radius);
+
+  .card-img {
+    @include border-radius($border-radius);
+  }
+  .card-img-top {
+    @include border-top-radius($border-radius);
+  }
+  .card-img-right {
+    @include border-right-radius($border-radius);
+  }
+  .card-img-bottom {
+    @include border-bottom-radius($border-radius);
+  }
+  .card-img-left {
+    @include border-left-radius($border-radius);
+  }
+}
+
+// Hover
+@mixin card-hover-variant($color) {
+  @include hover-focus {
+    color: color-yiq($color);
+    background-color: $color;
+    border-color: $color;
+  }
+}

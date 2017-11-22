@@ -1,0 +1,32 @@
+// Image overlay
+.card-img-overlay-bottom {
+  top: auto;
+}
+
+// Image directions
+.card-img-left {
+  @include border-left-radius($card-inner-border-radius);
+}
+.card-img-right {
+  @include border-right-radius($card-inner-border-radius);
+}
+
+// Footer navs
+.card-footer-tabs {
+  margin-right: -($card-spacer-x / 2);
+  margin-top: -$card-spacer-y;
+  margin-left: -($card-spacer-x / 2);
+  border-top: 0;
+}
+
+.card-footer-pills {
+  margin-right: -($card-spacer-x / 2);
+  margin-left: -($card-spacer-x / 2);
+}
+
+// Hover
+@each $color, $value in $theme-colors {
+  .card-hover-#{$color} {
+    @include card-hover-variant($value);
+  }
+}

@@ -1,8 +1,0 @@
-mixin text(text, classes)
-  div(class=classes)= text
-
-mixin text_variant(text, variant)
-  +text(text, 'text-' + variant)
-
-mixin text_ribbon(text, variant)
-  p: span.d-inline-block(class='text-ribbon-' + variant)= text
