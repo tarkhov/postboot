@@ -1,8 +1,6 @@
 // Colors
-@each $color, $value in $theme-colors-excluded {
-  .badge-#{$color} {
-    @include badge-variant($value);
-  }
+.badge-white {
+  @include badge-variant($white);
 }
 
 // Glass
@@ -10,4 +8,10 @@
   .badge-glass-#{$color} {
     @include badge-variant(rgba($value, $opacity-glass));
   }
+}
+.badge-glass-white {
+  @include badge-variant(rgba($white, $opacity-glass));
+}
+.badge-glass-black {
+  @include badge-variant(rgba($black, $opacity-glass));
 }

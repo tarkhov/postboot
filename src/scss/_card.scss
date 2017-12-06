@@ -30,3 +30,6 @@
     @include card-hover-variant($value);
   }
 }
+.card-hover-white {
+  @include card-hover-variant($white);
+}

@@ -1,12 +1,9 @@
-// Colors
-@each $color, $value in $theme-colors-excluded {
-  @include bg-variant('.bg-#{$color}', $value);
-}
-
 // Glasses
 @each $color, $value in $theme-colors {
   @include bg-glass-variant('.bg-glass-#{$color}', $value, $opacity-glass);
 }
+@include bg-glass-variant('.bg-glass-white', $white, $opacity-glass);
+@include bg-glass-variant('.bg-glass-black', $black, $opacity-glass);
 
 // Striped
 .bg-striped {

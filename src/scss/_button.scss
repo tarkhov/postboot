@@ -4,18 +4,16 @@
 }
 
 // Colors
-@each $color, $value in $theme-colors-excluded {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
-  }
-
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value, #fff);
-  }
+.btn-white {
+  @include button-variant($white, $white);
+}
+.btn-outline-white {
+  @include button-outline-variant($white, $white);
 }
 
 // 3D
-@each $color, $value in map-remove($theme-colors, "black", "white") {
+/*@each $color, $value in map-remove($theme-colors, "black", "white") {*/
+@each $color, $value in $theme-colors {
   .btn-3d-#{$color} {
     @include button-3d-variant($value, $value);
   }
@@ -26,6 +24,12 @@
   .btn-glass-#{$color} {
     @include button-glass-variant($value, $value, $btn-glass-opacity);
   }
+}
+.btn-glass-white {
+  @include button-glass-variant($white, $white, $btn-glass-opacity);
+}
+.btn-glass-black {
+  @include button-glass-variant($black, $black, $btn-glass-opacity);
 }
 
 // Pill

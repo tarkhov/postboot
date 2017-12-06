@@ -1,19 +1,18 @@
-// Color
-@each $color, $value in $theme-colors-excluded {
-  .border-#{$color} {
-    border-color: $value !important;
-  }
-}
-
 // Glass
 @each $color, $value in $theme-colors {
   .border-glass-#{$color} {
     border-color: rgba($value, $opacity-glass) !important;
   }
 }
+.border-glass-white {
+  border-color: rgba($white, $opacity-glass) !important;
+}
+.border-glass-black {
+  border-color: rgba($white, $opacity-glass) !important;
+}
 
 // Style
-@each $style , $value in $border-styles {
+@each $style, $value in $border-styles {
   .border-#{$style}        { border-style: $value !important; }
   .border-top-#{$style}    { border-top-style: $value !important; }
   .border-right-#{$style}  { border-right-style: $value !important; }

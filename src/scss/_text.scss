@@ -1,12 +1,9 @@
-// Contextual colors
-@each $color, $value in map-remove($theme-colors-excluded, "white") {
-  @include text-emphasis-variant('.text-#{$color}', $value);
-}
-
 // Glass
 @each $color, $value in $theme-colors {
   @include text-emphasis-variant('.text-glass-#{$color}', rgba($value, $opacity-glass));
 }
+@include text-emphasis-variant('.text-glass-white', rgba($white, $opacity-glass));
+@include text-emphasis-variant('.text-glass-black', rgba($black, $opacity-glass));
 
 // Ribbon
 @each $color, $value in map-remove($theme-colors, "white") {

@@ -1,16 +1,3 @@
-// Colors
-$theme-colors-excluded: (
-  "black": $black,
-  "indigo": $indigo,
-  "orange": $orange,
-  "pink": $pink,
-  "purple": $purple,
-  "teal": $teal,
-  "white": $white
-) !default;
-
-$theme-colors: map-merge($theme-colors, $theme-colors-excluded);
-
 // Fonts
 $font-size-xs:  .75rem !default;
 $font-size-xl:  1.5rem !default;
