@@ -74,9 +74,6 @@ $btn-border-radius-xs: $border-radius-xs !default;
 
 $btn-glass-opacity: $opacity-glass !default;
 
-// Dropdown
-$dropdown-menu-content-padding: 1.5rem !default;
-
 // Navbar
 $navbar-padding-y-sm:       ($spacer * .25) !default;
 $navbar-brand-padding-y-sm: .1rem;
@@ -137,29 +134,3 @@ $breadcrumb-dark-color:         rgba($white,1) !default;
 $breadcrumb-dark-hover-color:   rgba($white,.75) !default;
 $breadcrumb-dark-active-color:  rgba($white,.5) !default;
 $breadcrumb-dark-divider-color: rgba($white,.5) !default;
-
-// Sidebar
-$sidebar-padding-y:                  ($spacer / 2) !default;
-
-$sidebar-brand-font-size:            $font-size-lg !default;
-$sidebar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
-$sidebar-brand-padding-y:            ($sidebar-brand-height - $nav-link-height) / 2 !default;
-
-$sidebar-toggler-padding-y:           .25rem !default;
-$sidebar-toggler-padding-x:           .75rem !default;
-$sidebar-toggler-font-size:           $font-size-lg !default;
-$sidebar-toggler-border-radius:       $btn-border-radius !default;
-
-$sidebar-dark-color:                 rgba($white,.5) !default;
-$sidebar-dark-hover-color:           rgba($white,.75) !default;
-$sidebar-dark-active-color:          rgba($white,1) !default;
-$sidebar-dark-disabled-color:        rgba($white,.25) !default;
-$sidebar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$sidebar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-$sidebar-dark-toggler-border-color:  rgba($white,.1) !default;
-
-$sidebar-light-color:                rgba($black,.5) !default;
-$sidebar-light-hover-color:          rgba($black,.7) !default;
-$sidebar-light-active-color:         rgba($black,.9) !default;
-$sidebar-light-disabled-color:       rgba($black,.3) !default;
-$sidebar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$sidebar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-$sidebar-light-toggler-border-color: rgba($black,.1) !default;
