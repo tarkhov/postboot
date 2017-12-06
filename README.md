@@ -1,6 +1,6 @@
-# PostBoot
+# Bootstrap features
 
-HTML5 library that extends the Bootstrap framework.
+Bootstrap features.
 
 ### Contents
 
@@ -14,27 +14,24 @@ HTML5 library that extends the Bootstrap framework.
 
 ### Archive
 
-[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta/postboot-1.0.0-beta.zip)
+[Download](https://github.com/tarkhov/bootstrap-features/releases/download/v1.0.0-beta/bootstrap-features-1.0.0-beta.zip)
 
 ```
-postboot/
-├── css/
-│   ├── postboot.css
-│   ├── postboot.min.css
-└── js/
-    ├── postboot.js
-    └── postboot.min.js
+bootstrap-features/
+└── css/
+    ├── bootstrap-features.css
+    ├── bootstrap-features.min.css
 ```
 
 ## Usage
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta/dist/css/postboot.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/bootstrap-features/v1.0.0-beta/dist/css/bootstrap-features.min.css">
 
 <!-- JS -->
-<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta/dist/js/postboot.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/bootstrap-features/v1.0.0-beta/dist/js/bootstrap-features.min.js"></script>
 ```
 
 ## Author
