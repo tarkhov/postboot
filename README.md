@@ -5,7 +5,7 @@ Bootstrap features.
 ### Contents
 
 1. [Installation](#installation)
-  1. [Archive](#archive)
+   1. [Archive](#archive)
 2. [Usage](#usage)
 3. [Author](#author)
 4. [License](#license)
