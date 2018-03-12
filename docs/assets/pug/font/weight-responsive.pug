@@ -1,0 +1,9 @@
+h3.font-weight-normal Responsive font weights
+
+.card.card-body.bg-light.mb-3
+  pre
+    code.language-markup
+      :encode-pug
+        | <!-- Source -->
+        each text, weight in {'thin': 'Thin', 'extra-light': 'Extra light', 'light': 'Light', 'normal': 'Normal', 'medium': 'Medium', 'semi-bold': 'Semi bold', 'bold': 'Bold', 'extra-bold': 'Extra bold', 'black': 'Black'}
+          p(class='font-weight-*-' + weight)= text

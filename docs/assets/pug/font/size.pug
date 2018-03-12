@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Font sizes
+
+block example_result
+  - for(var size = 1; size <= 8; size++)
+    +font_size('Font size ' + size, size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 8; size++)
+      p(class='font-size-' + size)= 'Font size ' + size

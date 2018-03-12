@@ -23,13 +23,3 @@
   margin-right: -($card-spacer-x / 2);
   margin-left: -($card-spacer-x / 2);
 }
-
-// Hover
-@each $color, $value in $theme-colors {
-  .card-hover-#{$color} {
-    @include card-hover-variant($value);
-  }
-}
-.card-hover-white {
-  @include card-hover-variant($white);
-}

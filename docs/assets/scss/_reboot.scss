@@ -1,0 +1,16 @@
+body {
+  /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;*/
+}
+
+pre,
+code {
+  font-size: 100%;
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#sidebar-left {
+  max-height: calc(100vh - (#{$navbar-height} + (#{$grid-gutter-width} * 2)));
+  overflow-y: scroll;
+}

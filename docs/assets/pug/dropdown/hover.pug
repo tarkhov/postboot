@@ -1,0 +1,22 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Hover
+
+block example_result
+  .row
+    .col-md-3
+      +dropdown_hover('Dropright', 'dropright')
+    .col-md-6.text-center
+      +dropdown_hover('Dropdown', 'dropdown')
+      +dropdown_hover('Dropup', 'dropup')
+    .col-md-3
+      .float-right
+        +dropdown_hover('Dropleft', 'dropleft')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .btn-group.dropdown.dropdown-hover
+      button.btn.btn-secondary.dropdown-toggle(type="button" data-hover="dropdown") Dropdown
+      .dropdown-menu

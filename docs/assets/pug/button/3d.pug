@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal 3D
+
+block example_result
+  each text, variant in colors
+    if variant != "black" && variant != "white"
+      +button_3d(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      if variant != "black" && variant != "white"
+        button.btn(type='button' class='btn-3d-' + variant)= text

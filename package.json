@@ -1,28 +1,36 @@
 {
-  "name": "bootstrap-features",
-  "description": "Bootstrap features.",
+  "name": "postboot",
+  "description": "HTML5 library that extends the Bootstrap framework.",
   "version": "1.0.0-beta",
   "keywords": [
     "bootstrap",
     "css",
     "sass"
   ],
-  "homepage": "https://github.com/tarkhov/bootstrap-features",
+  "homepage": "https://github.com/tarkhov/postboot",
   "author": "Alexander Tarkhov",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tarkhov/bootstrap-features.git"
+    "url": "https://github.com/tarkhov/postboot.git"
   },
   "bugs": {
-    "url": "https://github.com/tarkhov/bootstrap-features/issues"
+    "url": "https://github.com/tarkhov/postboot/issues"
   },
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-strip": "^0.1.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
     "grunt": "^1.0.1",
     "grunt-autoprefixer": "^3.0.4",
+    "grunt-babel": "^7.0.0",
     "grunt-banner": "^0.6.0",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^1.0.2",
+    "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
     "load-grunt-tasks": "^3.5.2"
   }
 }

@@ -46,13 +46,13 @@
         @include border-radius(0 $border-radius $border-radius 0);
 
         @include hover-focus {
-          border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+          border-color: $gray-200 $gray-200 $gray-200 $nav-tabs-border-color;
         }
       }
 
       .nav-link.active,
       .nav-item.show .nav-link {
-        border-color: $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color transparent;
+        border-color: $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-border-color $nav-tabs-link-active-bg;
       }
 
       .dropdown-menu {
@@ -72,13 +72,13 @@
         @include border-radius($border-radius 0 0 $border-radius);
 
         @include hover-focus {
-          border-color: $nav-tabs-link-hover-border-color $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+          border-color: $gray-200 $nav-tabs-border-color $gray-200 $gray-200;
         }
       }
 
       .nav-link.active,
       .nav-item.show .nav-link {
-        border-color: $nav-tabs-link-active-border-color transparent $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color;
+        border-color: $nav-tabs-border-color $nav-tabs-link-active-bg $nav-tabs-border-color $nav-tabs-border-color;
       }
 
       .dropdown-menu {
@@ -100,13 +100,13 @@
     @include border-radius(0 0 $border-radius $border-radius);
 
     @include hover-focus {
-      border-color: $nav-tabs-border-color $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color;
+      border-color: $nav-tabs-border-color $gray-200 $gray-200;
     }
   }
 
   .nav-link.active,
   .nav-item.show .nav-link {
-    border-color: transparent $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color;
+    border-color: $nav-tabs-link-active-bg $nav-tabs-border-color $nav-tabs-border-color;
   }
 
   .dropdown-menu {

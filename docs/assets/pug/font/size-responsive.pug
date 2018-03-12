@@ -1,0 +1,9 @@
+h3.font-weight-normal Responsive font sizes
+
+.card.card-body.bg-light.mb-3
+  pre
+    code.language-markup
+      :encode-pug
+        | <!-- Source -->
+        - for(var size = 1; size <= 8; size++)
+          p(class='font-size-*-' + size)= 'Font size ' + size

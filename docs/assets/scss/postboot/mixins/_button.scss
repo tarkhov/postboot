@@ -1,0 +1,10 @@
+// 3D
+@mixin button-3d-variant($background, $border) {
+  border-bottom-width: 4px;
+  @include button-variant($background, darken($border, 10%));
+}
+
+// Glass
+@mixin button-glass-variant($background, $border, $opacity) {
+  @include button-variant(rgba($background, $opacity), rgba($border, $opacity));
+}

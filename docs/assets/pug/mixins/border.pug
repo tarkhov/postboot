@@ -1,0 +1,14 @@
+mixin border(text, classes)
+  p.p-2(class=classes)= text
+
+mixin border_variant(text, variant)
+  +border(text, ['border-solid', 'border-1', 'border-' + variant, 'text-' + variant])
+
+mixin border_glass(text, variant)
+  +border(text, ['border-solid', 'border-3', 'border-glass-' + variant, 'text-white'])
+
+mixin border_style(text, style)
+  +border(text, ['border-3', 'border-' + style, 'border-primary', 'text-primary'])
+
+mixin border_width(width)
+  +border(width + 'px', ['border-solid', 'border-' + width, 'border-primary', 'text-primary'])

@@ -1,0 +1,25 @@
+#install
+  h3.font-weight-normal.mb-3 Installation
+  #install-manually
+    h4.font-weight-normal Manually
+    p #[a(href=downloadUrl) Download] package and unpack it or use following commands:
+    .card.bg-light.mb-3
+      .card-body
+        pre.command-line
+          code.language-bash
+            ="wget -O " + downloadUrl + "\n"
+            ="unzip " + pkg.name + "-" + pkg.version + ".zip"
+  #install-nodejs
+    h4.font-weight-normal NodeJS
+    .card.bg-light.mb-3
+      .card-body
+        pre.command-line
+          code.language-bash
+            ="npm install " + pkg.name + "@" + pkg.version
+  #install-bower
+    h4.font-weight-normal Bower
+    .card.bg-light.mb-3
+      .card-body
+        pre.command-line
+          code.language-bash
+            ="bower install " + pkg.name + "#v" + pkg.version

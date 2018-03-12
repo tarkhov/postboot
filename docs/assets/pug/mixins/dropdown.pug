@@ -1,0 +1,24 @@
+mixin dropdown_menu()
+  .dropdown-menu
+    - for(var i = 1; i <= 3; i++)
+      = "\n\t"
+      a.dropdown-item(href='#')= 'Menu item ' + i
+
+mixin dropdown(text, classes)
+  .btn-group(class=classes)
+    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown")= text
+    +dropdown_menu()
+
+mixin dropdown_arrow()
+  .btn-group.dropdown
+    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Arrow
+    .dropdown-menu
+      .dropdown-arrow
+      - for(var i = 1; i <= 3; i++)
+        = "\n\t"
+        a.dropdown-item(href='#')= 'Menu item ' + i
+
+mixin dropdown_hover(text, classes)
+  .btn-group.dropdown-hover(class=classes)
+    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown" data-hover="dropdown")= text
+    +dropdown_menu()

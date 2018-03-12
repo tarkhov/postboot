@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Font weights
+
+block example_result
+  each text, weight in {'thin': 'Thin', 'extra-light': 'Extra light', 'medium': 'Medium', 'semi-bold': 'Semi bold', 'extra-bold': 'Extra bold', 'black': 'Black'}
+    +font_weight(text, weight)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, weight in {'thin': 'Thin', 'extra-light': 'Extra light', 'medium': 'Medium', 'semi-bold': 'Semi bold', 'extra-bold': 'Extra bold', 'black': 'Black'}
+      p(class='font-weight-' + weight)= text

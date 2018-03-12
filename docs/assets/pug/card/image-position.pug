@@ -1,0 +1,30 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Image position
+
+block example_result
+  .card
+    .row
+      .col-sm.col-sm-auto
+        img.card-img-left(src="" width="100px" height="100%")
+      .col-sm
+        .card-body
+          h4.card-title Directions
+          p.card-text Example text
+      .col-sm.col-sm-auto
+        img.card-img-right(src="" width="100px" height="100%")
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .card
+      .row
+        .col-sm.col-sm-auto
+          img.card-img-left(src="" width="100px" height="100%")
+        .col-sm
+          .card-body
+            h4.card-title Directions
+            p.card-text Example text
+        .col-sm.col-sm-auto
+          img.card-img-right(src="" width="100px" height="100%")

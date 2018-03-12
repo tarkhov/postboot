@@ -1,0 +1,148 @@
+// Custom colors
+$custom-colors: () !default;
+$custom-colors: map-merge((
+  "black":  $black,
+  "indigo": $indigo,
+  "orange": $orange,
+  "pink":   $pink,
+  "purple": $purple,
+  "teal":   $teal,
+  "white":  $white
+), $custom-colors);
+
+// Fonts
+$font-size-xs:  .75rem !default;
+$font-size-xl:  1.5rem !default;
+$font-size-xxl: 1.75rem !default;
+$font-size-3xl: 2rem !default;
+$font-size-4xl: 2.5rem !default;
+
+$font-sizes: (
+  1: $font-size-xs,
+  2: $font-size-sm,
+  3: $font-size-base,
+  4: $font-size-lg,
+  5: $font-size-xl,
+  6: $font-size-xxl,
+  7: $font-size-3xl,
+  8: $font-size-4xl
+) !default;
+
+$font-weights: (
+  "thin": 100,
+  "extra-light": 200,
+  "medium": 500,
+  "semi-bold": 600,
+  "extra-bold": 800,
+  "black": 900
+) !default;
+
+// Border
+$border-styles: (
+  dashed: dashed,
+  dotted: dotted,
+  double: double,
+  solid: solid
+) !default;
+
+$border-widths: (
+  1: 1px,
+  2: 2px,
+  3: 3px
+) !default;
+
+// Grid containers
+$container-sm-max-widths: (
+  sm: map-get($container-max-widths, sm),
+  md: map-get($container-max-widths, sm),
+  lg: map-get($container-max-widths, sm),
+  xl: map-get($container-max-widths, sm)
+) !default;
+
+$container-md-max-widths: (
+  sm: map-get($container-max-widths, sm),
+  md: map-get($container-max-widths, md),
+  lg: map-get($container-max-widths, md),
+  xl: map-get($container-max-widths, md)
+) !default;
+
+$container-lg-max-widths: (
+  sm: map-get($container-max-widths, sm),
+  md: map-get($container-max-widths, md),
+  lg: map-get($container-max-widths, lg),
+  xl: map-get($container-max-widths, lg)
+) !default;
+
+// Components
+$border-radius-xs: .1rem !default;
+$line-height-xs: 1.5 !default;
+$opacity-glass: .5 !default;
+
+// Buttons
+$input-btn-padding-y-xs: .1rem !default;
+$input-btn-padding-x-xs: .25rem !default;
+
+$btn-border-radius-xs: $border-radius-xs !default;
+
+$btn-glass-opacity: $opacity-glass !default;
+
+// Navbar
+$navbar-padding-y-sm:       ($spacer * .25) !default;
+$navbar-brand-padding-y-sm: .1rem;
+$navbar-nav-padding-y-sm:   .25rem;
+$navbar-text-padding-y-sm:  .25rem;
+
+$navbar-padding-y-lg:       ($spacer * .75) !default;
+$navbar-brand-padding-y-lg: .5rem;
+$navbar-nav-padding-y-lg:   .675rem;
+$navbar-text-padding-y-lg:  .675rem;
+
+$navbar-height:    3.5rem !default;
+$navbar-height-sm: 2.2rem !default;
+$navbar-height-lg: 4.75rem !default;
+
+// Navs
+$nav-link-active-color: $gray-700 !default;
+
+$nav-link-padding-x-xs: .25em !default;
+$nav-link-padding-y-xs: .1em !default;
+
+$nav-link-padding-x-sm: .5em !default;
+$nav-link-padding-y-sm: .25em !default;
+
+$nav-link-padding-x-lg: 1.5em !default;
+$nav-link-padding-y-lg: .75em !default;
+
+// Progress
+$progress-height-xs:    .75rem !default;
+$progress-font-size-xs: .65rem !default;
+
+$progress-height-sm:    .875rem !default;
+$progress-font-size-sm: .75rem !default;
+
+$progress-height-lg:    1.25rem !default;
+$progress-font-size-lg: 1rem !default;
+
+$progress-height-xl:    1.5rem !default;
+$progress-font-size-xl: 1.25rem !default;
+
+// List group
+$list-group-item-padding-x-xs: .75rem !default;
+$list-group-item-padding-y-xs: .25rem !default;
+
+$list-group-item-padding-x-sm: 1rem !default;
+$list-group-item-padding-y-sm: .5rem !default;
+
+$list-group-item-padding-x-lg: 1.5rem !default;
+$list-group-item-padding-y-lg: 1rem !default;
+
+// Breadcrumb
+$breadcrumb-divider-rang:   "〉" !default;
+$breadcrumb-divider-raquo:  "»" !default;
+$breadcrumb-divider-rarr:   "→" !default;
+$breadcrumb-divider-rsaquo: "›" !default;
+
+$breadcrumb-dark-color:         rgba($white,1) !default;
+$breadcrumb-dark-hover-color:   rgba($white,.75) !default;
+$breadcrumb-dark-active-color:  rgba($white,.5) !default;
+$breadcrumb-dark-divider-color: rgba($white,.5) !default;

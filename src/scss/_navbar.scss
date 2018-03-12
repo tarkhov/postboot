@@ -1,3 +1,27 @@
+// Toggler icon
+.navbar-toggler-icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+}
+
+.navbar-toggler-icon-bar + .navbar-toggler-icon-bar {
+  margin-top: 4px;
+}
+
+.navbar-light {
+  .navbar-toggler-icon-bar {
+    background-color: $navbar-light-color;
+  }
+}
+
+.navbar-dark {
+  .navbar-toggler-icon-bar {
+    background-color: $navbar-dark-color;
+  }
+}
+
 // Expand
 .navbar-expand-xs {
   @include media-breakpoint-down(xs) {

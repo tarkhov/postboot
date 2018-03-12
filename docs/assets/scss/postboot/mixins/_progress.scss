@@ -1,0 +1,10 @@
+// Sizes
+@mixin progress-size($height, $font-size) {
+  font-size: $font-size;
+  line-height: $height;
+
+  .progress-bar {
+    height: $height;
+    line-height: $height;
+  }
+}

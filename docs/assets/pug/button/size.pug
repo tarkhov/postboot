@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Sizes
+
+block example_result
+  +button_size('Extra small', 'xs')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    button.btn.btn-secondary.btn-xs(type='button') Extra small

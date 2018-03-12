@@ -1,0 +1,35 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Mega menu
+
+block example_result
+  ul.nav.dropdown
+    li.nav-item.dropdown-hover.position-static
+      a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Fluid
+      .dropdown-menu.dropdown-menu-fluid
+        .dropdown-arrow
+        .dropdown-menu-body
+          ul.list-unstyled
+            - for(var i = 1; i <= 3; i++)
+              li: a(href='#')= 'List item ' + i
+    li.nav-item.dropdown-hover.position-static
+      a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Auto
+      .dropdown-menu.dropdown-menu-auto
+        .dropdown-menu-body
+          ul.list-unstyled
+            - for(var i = 1; i <= 3; i++)
+              li: a(href='#')= 'List item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ul.nav.dropdown
+      li.nav-item.dropdown-hover.position-static
+        a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Fluid
+        .dropdown-menu.dropdown-menu-fluid
+          .dropdown-menu-body
+      li.nav-item.dropdown-hover.position-static
+        a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Auto
+        .dropdown-menu.dropdown-menu-auto
+          .dropdown-menu-body

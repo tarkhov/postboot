@@ -1,0 +1,8 @@
+mixin nav(classes)
+  ul.nav(class=classes)
+    - for(var i = 1; i <= 3; i++)
+      li.nav-item
+        a.nav-link(href='#' class={active: i === 1})= 'Nav item ' + i
+
+mixin nav_size(size)
+  +nav(['nav-pills', 'nav-' + size, 'mb-3'])

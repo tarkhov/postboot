@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Transparent
+
+block example_result
+  +breadcrumb_variant('transparent')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ol.breadcrumb.breadcrumb-transparent

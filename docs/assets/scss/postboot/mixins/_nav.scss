@@ -1,0 +1,22 @@
+// Sizes
+@mixin nav-size($padding-y, $padding-x, $font-size) {
+  font-size: $font-size;
+
+  .nav-link {
+    padding: $padding-y $padding-x;
+  }
+}
+
+@mixin nav-size-y($padding-y) {
+  .nav-link {
+    padding-top: $padding-y;
+    padding-bottom: $padding-y;
+  }
+}
+
+@mixin nav-size-x($padding-x) {
+  .nav-link {
+    padding-left: $padding-x;
+    padding-right: $padding-x;
+  }
+}

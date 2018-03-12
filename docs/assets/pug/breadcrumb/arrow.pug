@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Arrows
+
+block example_result
+  each arrow in ['rang', 'raquo', 'rarr', 'rsaquo']
+    +breadcrumb_variant(arrow)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each arrow in ['rang', 'raquo', 'rarr', 'rsaquo']
+      ol.breadcrumb(class='breadcrumb-' + arrow)

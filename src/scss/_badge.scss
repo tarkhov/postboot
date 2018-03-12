@@ -1,6 +1,8 @@
-// Colors
-.badge-white {
-  @include badge-variant($white);
+// Custom
+@each $color, $value in map-remove($custom-colors, "black") {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
 }
 
 // Glass
@@ -9,9 +11,8 @@
     @include badge-variant(rgba($value, $opacity-glass));
   }
 }
-.badge-glass-white {
-  @include badge-variant(rgba($white, $opacity-glass));
-}
-.badge-glass-black {
-  @include badge-variant(rgba($black, $opacity-glass));
+@each $color, $value in $custom-colors {
+  .badge-glass-#{$color} {
+    @include badge-variant(rgba($value, $opacity-glass));
+  }
 }

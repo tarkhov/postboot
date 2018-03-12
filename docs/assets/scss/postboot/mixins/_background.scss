@@ -1,0 +1,4 @@
+// Glass
+@mixin bg-glass-variant($parent, $color, $opacity) {
+  @include bg-variant($parent, rgba($color, $opacity));
+}
