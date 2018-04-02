@@ -8,11 +8,11 @@
 // Glass
 @each $color, $value in $theme-colors {
   .badge-glass-#{$color} {
-    @include badge-variant(rgba($value, $opacity-glass));
+    @include badge-glass-variant($value, $opacity-glass);
   }
 }
 @each $color, $value in $custom-colors {
   .badge-glass-#{$color} {
-    @include badge-variant(rgba($value, $opacity-glass));
+    @include badge-glass-variant($value, $opacity-glass);
   }
 }

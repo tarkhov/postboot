@@ -24,7 +24,10 @@ const ScrollSpySelector = {
   DATA_SPY        : '[data-spy="scroll"]',
   DROPDOWN        : '.dropdown',
   DROPDOWN_ITEM   : '.dropdown-item',
+  DROPDOWN_MENU   : '.dropdown-menu',
   DROPDOWN_TOGGLE : '.dropdown-toggle',
+  DROPDOWNS       : '.dropup, .dropright, .dropdown, .dropleft',
+  HIDE            : '.hide',
   LIST_ITEM       : '.list-group-item',
   NAV_ITEM        : '.nav-item',
   NAV_LINK        : '.nav-link',
@@ -179,7 +182,19 @@ class ScrollSpy {
     let link = this.target.querySelector(queries.join(','))
 
     if (link.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
-      link.closest(ScrollSpySelector.DROPDOWN).querySelector(ScrollSpySelector.DROPDOWN_TOGGLE).classList.add(ScrollSpyClassName.ACTIVE)
+      let dropdowns = link.parentAll(`${ScrollSpySelector.DROPDOWNS}, ${ScrollSpySelector.DROPDOWN_MENU}`, this.config.target)
+      if (dropdowns.length) {
+        dropdowns.forEach((dropdown) => {
+          dropdown.classList.add(ScrollSpyClassName.SHOW)
+        })
+      }
+    } else if (link.classList.contains(ScrollSpyClassName.NAV_LINK)) {
+      let items = link.parentAll(ScrollSpySelector.NAV_ITEM, this.config.target)
+      if (items.length) {
+        items.forEach((item) => {
+          item.classList.add(ScrollSpyClassName.SHOW)
+        })
+      }
     } else {
       //$link.parents(ScrollSpySelector.NAV_LIST_GROUP).prev(`${ScrollSpySelector.NAV_LINK}, ${ScrollSpySelector.LIST_ITEM}`).addClass(ScrollSpyClassName.ACTIVE)
     }
@@ -193,6 +208,14 @@ class ScrollSpy {
     let active = this.target.querySelector(ScrollSpySelector.ACTIVE)
     if (active) {
       active.classList.remove(ScrollSpyClassName.ACTIVE)
+      if (active.classList.contains(ScrollSpyClassName.NAV_LINK) || active.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
+        let items = active.parentAll(ScrollSpySelector.SHOW, this.config.target)
+        if (items.length) {
+          items.forEach((item) => {
+            item.classList.remove(ScrollSpyClassName.SHOW)
+          })
+        }
+      }
     }
   }
 

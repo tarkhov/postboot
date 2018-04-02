@@ -15,3 +15,13 @@ mixin button_3d(text, variant)
 
 mixin button_size(text, size)
   +button(text, ['btn-secondary', 'btn-' + size])
+
+mixin button_toggle(type, text)
+  .btn-group.btn-group-toggle
+    label.btn.btn-secondary.active(data-toggle=type + "-button")
+      input(type=type name=type checked)
+      span Active
+    - for(var i = 1; i <= 2; i++)
+      label.btn.btn-secondary(data-toggle=type + "-button")
+        input(type=type name=type)
+        span= text

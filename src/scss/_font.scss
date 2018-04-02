@@ -19,7 +19,6 @@
     }
   }
 }
-
 @each $breakpoint in map-keys(map-remove($grid-breakpoints, "xs")) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, map-remove($grid-breakpoints, "xs"));

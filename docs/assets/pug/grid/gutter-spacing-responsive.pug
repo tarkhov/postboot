@@ -1,0 +1,24 @@
+h3.font-weight-normal Gutter spacing responsive
+
+.card.card-body.bg-light.mb-3
+  pre.pre-sm
+    code.language-markup
+      :encode-pug
+        | <!-- Source -->
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          div(class='m-' + breakpoint + '-gutter')
+          div(class='mx-' + breakpoint + '-gutter')
+          div(class='my-' + breakpoint + '-gutter')
+          div(class='mt-' + breakpoint + '-gutter')
+          div(class='mr-' + breakpoint + '-gutter')
+          div(class='mb-' + breakpoint + '-gutter')
+          div(class='ml-' + breakpoint + '-gutter')
+          ="\n"
+          div(class='p-' + breakpoint + '-gutter')
+          div(class='px-' + breakpoint + '-gutter')
+          div(class='py-' + breakpoint + '-gutter')
+          div(class='pt-' + breakpoint + '-gutter')
+          div(class='pr-' + breakpoint + '-gutter')
+          div(class='pb-' + breakpoint + '-gutter')
+          div(class='pl-' + breakpoint + '-gutter')
+          ="\n"

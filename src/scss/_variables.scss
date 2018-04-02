@@ -74,6 +74,7 @@ $container-lg-max-widths: (
 ) !default;
 
 // Components
+$border-radius-pill: 1.875rem !default;
 $border-radius-xs: .1rem !default;
 $line-height-xs: 1.5 !default;
 $opacity-glass: .5 !default;
@@ -147,6 +148,8 @@ $breadcrumb-dark-hover-color:   rgba($white,.75) !default;
 $breadcrumb-dark-active-color:  rgba($white,.5) !default;
 $breadcrumb-dark-divider-color: rgba($white,.5) !default;
 
+$breadcrumb-pill-padding-x: 1.5rem !default;
+
 // Dropdown
 $dropdown-arrow-position:    5px !default;
 $dropdown-arrow-width:       1rem !default;
@@ -155,6 +158,11 @@ $dropdown-arrow-color:       $dropdown-bg !default;
 $dropdown-arrow-outer-color: fade-in($dropdown-border-color, .05) !default;
 
 $dropdown-menu-body-padding: 1rem 1.5rem !default;
+
+// Pre
+$pre-lg: 800px !default;
+$pre-md: 500px !default;
+$pre-sm: 300px !default;
 
 // Sidebar
 $sidebar-padding-y:                  ($spacer / 2) !default;

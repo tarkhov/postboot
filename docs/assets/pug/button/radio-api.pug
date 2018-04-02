@@ -1,0 +1,21 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Radio
+
+block example_result
+  +button_toggle('radio', 'Radio')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .btn-group.btn-group-toggle
+      label.btn.btn-secondary.active(data-toggle="radio-button")
+        input(type="radio" name="radio" checked)
+        span Active
+      label.btn.btn-secondary(data-toggle="radio-button")
+        input(type="radio" name="radio")
+        span Radio
+      label.btn.btn-secondary(data-toggle="radio-button")
+        input(type="radio" name="radio")
+        span Radio

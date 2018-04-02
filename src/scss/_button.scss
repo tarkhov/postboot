@@ -16,9 +16,6 @@
     @include button-outline-variant($value);
   }
 }
-/*.btn-outline-white {
-  @include button-outline-variant($white, $white);
-}*/
 
 // 3D
 @each $color, $value in $theme-colors {
@@ -46,5 +43,5 @@
 
 // Pill
 .btn-pill {
-  border-radius: 30px;
+  border-radius: $border-radius-pill;
 }

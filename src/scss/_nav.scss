@@ -153,3 +153,16 @@
 .nav-x-0 {
   @include nav-size-x(0);
 }
+
+// Tree
+.nav-tree {
+  > .nav-item {
+    > .nav-tree {
+      display: none;
+    }
+
+    &.show > .nav-tree {
+      display: flex;
+    }
+  }
+}

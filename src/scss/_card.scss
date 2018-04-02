@@ -1,9 +1,4 @@
-// Image overlay
-.card-img-overlay-bottom {
-  top: auto;
-}
-
-// Image directions
+// Image position
 .card-img-left {
   @include border-left-radius($card-inner-border-radius);
 }

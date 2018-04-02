@@ -1,7 +1,10 @@
-// Form control directions
-.form-control-bottom {
+// Form control position
+.form-control-bottom,
+.form-control-left {
   @include border-radius(0);
+}
 
+.form-control-bottom {
   &,
   &:focus {
     border-top-color: $input-bg;
@@ -12,4 +15,17 @@
 
   padding-right: 0;
   padding-left: 0;
+}
+
+.form-control-left {
+  &,
+  &:focus {
+    border-top-color: $input-bg;
+    border-right-color: $input-bg;
+    border-bottom-color: $input-bg;
+    box-shadow: none;
+  }
+
+  padding-top: 0;
+  padding-bottom: 0;
 }

@@ -1,9 +1,11 @@
 h3.font-weight-normal Responsive font sizes
 
 .card.card-body.bg-light.mb-3
-  pre
+  pre.pre-sm
     code.language-markup
       :encode-pug
         | <!-- Source -->
-        - for(var size = 1; size <= 8; size++)
-          p(class='font-size-*-' + size)= 'Font size ' + size
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          - for(var size = 1; size <= 8; size++)
+            p(class='font-size-' + breakpoint + '-' + size)
+          ="\n"

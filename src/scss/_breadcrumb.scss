@@ -45,8 +45,9 @@
   @include breadcrumb-divider($breadcrumb-divider-rsaquo);
 }
 
-// Transparent
-.breadcrumb-transparent {
-  background-color: transparent;
-  padding: 0;
+// Pill
+.breadcrumb-pill {
+  border-radius: $border-radius-pill;
+  padding-left: $breadcrumb-pill-padding-x;
+  padding-right: $breadcrumb-pill-padding-x;
 }

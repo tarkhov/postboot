@@ -1,0 +1,14 @@
+h3.font-weight-normal Spacing responsive
+
+.card.card-body.bg-light.mb-3
+  pre.pre-sm
+    code.language-markup
+      :encode-pug
+        | <!-- Source -->
+        each size in ['0', 'auto']
+          each breakpoint in ['sm', 'md', 'lg', 'xl']
+            div(class='top-' + breakpoint + '-' + size)
+            div(class='right-' + breakpoint + '-' + size)
+            div(class='bottom-' + breakpoint + '-' + size)
+            div(class='left-' + breakpoint + '-' + size)
+            ="\n"

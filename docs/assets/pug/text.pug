@@ -1,8 +1,8 @@
-extends component.pug
-
-block component_link
-  a#text.text-gray-dark(href="#text") Text
-
-block component_examples
-  include text/color.pug
-  include text/ribbon.pug
+#text
+  include text/intro.pug
+  #text-custom
+    include text/custom.pug
+  #text-hover
+    include text/hover.pug
+  #text-ribbon
+    include text/ribbon.pug

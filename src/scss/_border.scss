@@ -34,3 +34,6 @@
   .border-bottom-#{$width} { border-bottom-width: $value !important; }
   .border-left-#{$width}   { border-left-width: $value !important; }
 }
+
+// Pill
+.rounded-pill { border-radius: $border-radius-pill !important; }

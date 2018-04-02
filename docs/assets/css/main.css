@@ -11,3 +11,11 @@ code {
 #sidebar-left {
   max-height: calc(100vh - (3.5rem + (30px * 2)));
   overflow-y: scroll; }
+
+/*.sidebar-nav .sidebar-nav {
+  display: none;
+}
+
+#sidebar-left .nav-item.show .sidebar-nav {
+  display: flex;
+}*/

@@ -1,6 +1,6 @@
 /*!
  * PostBoot v1.0.0-beta (https://github.com/tarkhov/postboot)
- * Copyright 2018 Alexander Tarkhov
+ * Copyright 2016-2018 Alexander Tarkhov
  * Licensed under  ()
  */
 'use strict';
@@ -20,6 +20,39 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       } else {
         node = node.parentElement;
       }
+    }
+
+    return null;
+  };
+
+  e.parent = function (selector) {
+    var node = this.parentElement;
+
+    while (node) {
+      if (node.matches(selector)) {
+        return node;
+      } else {
+        node = node.parentElement;
+      }
+    }
+
+    return null;
+  };
+
+  e.parentAll = function (selector, until) {
+    var node = this.parentElement;
+    var nodes = [];
+
+    while (node) {
+      if (until && node.matches(until)) {
+        return nodes;
+      }
+
+      if (node.matches(selector)) {
+        nodes.push(node);
+      }
+
+      node = node.parentElement;
     }
 
     return null;
@@ -96,6 +129,186 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+var CHECKBOX_AREA_KEY = 'checkboxArea';
+var CHECKBOX_AREA_EVENT_KEY = CHECKBOX_AREA_KEY;
+
+var CheckboxAreaClassName = {
+  ACTIVE: 'active',
+  DISABLED: 'disabled'
+};
+
+var CheckboxAreaSelector = {
+  DATA_TOGGLE: '[data-toggle="checkbox-area"]'
+};
+
+var CheckboxArea = function () {
+  function CheckboxArea(element) {
+    _classCallCheck(this, CheckboxArea);
+
+    this.element = element;
+  }
+
+  _createClass(CheckboxArea, [{
+    key: 'addEventListeners',
+    value: function addEventListeners() {
+      var _this = this;
+
+      this.element.addEventListener('click', function (event) {
+        event.preventDefault();
+        _this.toggle();
+      });
+    }
+  }, {
+    key: 'toggle',
+    value: function toggle() {
+      if (this.element.classList.contains(CheckboxAreaClassName.DISABLED)) {
+        return;
+      }
+
+      this.element.classList.toggle(CheckboxAreaClassName.ACTIVE);
+    }
+  }], [{
+    key: 'init',
+    value: function init(element) {
+      var area = null;
+
+      if (element.hasOwnProperty(CHECKBOX_AREA_KEY)) {
+        area = element[CHECKBOX_AREA_KEY];
+      }
+
+      if (!area) {
+        area = new CheckboxArea(element);
+        element[CHECKBOX_AREA_KEY] = area;
+      }
+
+      return area;
+    }
+  }]);
+
+  return CheckboxArea;
+}();
+
+function checkboxArea(element) {
+  return CheckboxArea.init(element);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var areas = document.querySelectorAll(CheckboxAreaSelector.DATA_TOGGLE);
+  if (areas.length) {
+    areas.forEach(function (element) {
+      checkboxArea(element).addEventListeners();
+    });
+  }
+});
+
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var RADIO_AREA_KEY = 'radioArea';
+var RADIO_AREA_EVENT_KEY = RADIO_AREA_KEY;
+
+var RadioAreaClassName = {
+  ACTIVE: 'active',
+  DISABLED: 'disabled'
+};
+
+var RadioAreaSelector = {
+  DATA_TOGGLE: '[data-toggle="radio-area"]',
+  INPUT: 'input',
+  ACTIVE: '.active'
+};
+
+var RadioArea = function () {
+  function RadioArea(element) {
+    _classCallCheck(this, RadioArea);
+
+    this.element = element;
+    this.parent = RadioArea.getParent(element);
+    this.input = this.element.querySelector(RadioAreaSelector.INPUT);
+  }
+
+  _createClass(RadioArea, [{
+    key: 'addEventListeners',
+    value: function addEventListeners() {
+      var _this = this;
+
+      this.element.addEventListener('click', function (event) {
+        event.preventDefault();
+        _this.toggle();
+      });
+    }
+  }, {
+    key: 'toggle',
+    value: function toggle() {
+      if (this.element.classList.contains(RadioAreaClassName.DISABLED) || this.element.classList.contains(RadioAreaClassName.ACTIVE)) {
+        return;
+      }
+
+      var active = this.parent.querySelector(RadioAreaSelector.ACTIVE);
+      if (active) {
+        active.classList.remove(RadioAreaClassName.ACTIVE);
+      }
+
+      this.element.setAttribute('aria-pressed', true);
+      this.element.classList.add(RadioAreaClassName.ACTIVE);
+    }
+  }], [{
+    key: 'getParent',
+    value: function getParent(element) {
+      var parent = void 0;
+      var selector = Util.getParentSelector(element);
+
+      if (selector) {
+        parent = document.querySelector(selector);
+      } else {
+        parent = element.parentNode;
+      }
+
+      return parent;
+    }
+  }, {
+    key: 'init',
+    value: function init(element) {
+      var area = null;
+
+      if (element.hasOwnProperty(RADIO_AREA_KEY)) {
+        area = element[RADIO_AREA_KEY];
+      }
+
+      if (!area) {
+        area = new RadioArea(element);
+        element[RADIO_AREA_KEY] = area;
+      }
+
+      return area;
+    }
+  }]);
+
+  return RadioArea;
+}();
+
+function radioArea(element) {
+  return RadioArea.init(element);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  var areas = document.querySelectorAll(RadioAreaSelector.DATA_TOGGLE);
+  if (areas.length) {
+    areas.forEach(function (element) {
+      radioArea(element).addEventListeners();
+    });
+  }
+});
+
+'use strict';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 var CHECKBOX_BUTTON_KEY = 'checkboxButton';
 var CHECKBOX_BUTTON_EVENT_KEY = CHECKBOX_BUTTON_KEY;
 
@@ -105,7 +318,7 @@ var CheckboxButtonClassName = {
 };
 
 var CheckboxButtonSelector = {
-  DATA_TOGGLE: '[data-toggle="chekbox-button"]',
+  DATA_TOGGLE: '[data-toggle="checkbox-button"]',
   INPUT: 'input'
 };
 
@@ -134,10 +347,10 @@ var CheckboxButton = function () {
         return;
       }
 
-      var isActive = this.element.classList.contains(ButtonClassName.ACTIVE);
+      var isActive = this.element.classList.contains(CheckboxButtonClassName.ACTIVE);
 
       if (this.input) {
-        if (this.input.disabled || this.input.classList.contains(RadioButtonClassName.DISABLED)) {
+        if (this.input.disabled || this.input.classList.contains(CheckboxButtonClassName.DISABLED)) {
           return;
         }
 
@@ -816,7 +1029,10 @@ var ScrollSpySelector = {
   DATA_SPY: '[data-spy="scroll"]',
   DROPDOWN: '.dropdown',
   DROPDOWN_ITEM: '.dropdown-item',
+  DROPDOWN_MENU: '.dropdown-menu',
   DROPDOWN_TOGGLE: '.dropdown-toggle',
+  DROPDOWNS: '.dropup, .dropright, .dropdown, .dropleft',
+  HIDE: '.hide',
   LIST_ITEM: '.list-group-item',
   NAV_ITEM: '.nav-item',
   NAV_LINK: '.nav-link',
@@ -966,7 +1182,19 @@ var ScrollSpy = function () {
       var link = this.target.querySelector(queries.join(','));
 
       if (link.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
-        link.closest(ScrollSpySelector.DROPDOWN).querySelector(ScrollSpySelector.DROPDOWN_TOGGLE).classList.add(ScrollSpyClassName.ACTIVE);
+        var dropdowns = link.parentAll(ScrollSpySelector.DROPDOWNS + ', ' + ScrollSpySelector.DROPDOWN_MENU, this.config.target);
+        if (dropdowns.length) {
+          dropdowns.forEach(function (dropdown) {
+            dropdown.classList.add(ScrollSpyClassName.SHOW);
+          });
+        }
+      } else if (link.classList.contains(ScrollSpyClassName.NAV_LINK)) {
+        var items = link.parentAll(ScrollSpySelector.NAV_ITEM, this.config.target);
+        if (items.length) {
+          items.forEach(function (item) {
+            item.classList.add(ScrollSpyClassName.SHOW);
+          });
+        }
       } else {
         //$link.parents(ScrollSpySelector.NAV_LIST_GROUP).prev(`${ScrollSpySelector.NAV_LINK}, ${ScrollSpySelector.LIST_ITEM}`).addClass(ScrollSpyClassName.ACTIVE)
       }
@@ -981,6 +1209,14 @@ var ScrollSpy = function () {
       var active = this.target.querySelector(ScrollSpySelector.ACTIVE);
       if (active) {
         active.classList.remove(ScrollSpyClassName.ACTIVE);
+        if (active.classList.contains(ScrollSpyClassName.NAV_LINK) || active.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
+          var items = active.parentAll(ScrollSpySelector.SHOW, this.config.target);
+          if (items.length) {
+            items.forEach(function (item) {
+              item.classList.remove(ScrollSpyClassName.SHOW);
+            });
+          }
+        }
       }
     }
   }], [{

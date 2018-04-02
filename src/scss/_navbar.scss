@@ -1,23 +1,23 @@
 // Toggler icon
-.navbar-toggler-icon-bar {
+.navbar-icon {
   display: block;
   width: 22px;
   height: 2px;
   border-radius: 1px;
 }
 
-.navbar-toggler-icon-bar + .navbar-toggler-icon-bar {
+.navbar-icon + .navbar-icon {
   margin-top: 4px;
 }
 
 .navbar-light {
-  .navbar-toggler-icon-bar {
+  .navbar-icon {
     background-color: $navbar-light-color;
   }
 }
 
 .navbar-dark {
-  .navbar-toggler-icon-bar {
+  .navbar-icon {
     background-color: $navbar-dark-color;
   }
 }
@@ -115,4 +115,8 @@
 }
 .pb-navbar-lg {
   padding-bottom: $navbar-height-lg;
+}
+
+// Breadcrumb
+.navbar-breadcrumb {
 }

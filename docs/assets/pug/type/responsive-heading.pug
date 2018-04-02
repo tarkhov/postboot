@@ -1,18 +1,14 @@
-extends ../example.pug
+h3.font-weight-normal Responsize heading
 
-block example_title
-  h1.font-weight-normal Colors
-
-block example_result
-  each text, variant in {'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
-    +text_variant(text, variant)
-
-block example_inverse
-  .card-block.bg-inverse.bg-striped
-    +text_variant('White', 'white')
-
-block example_code
-  :encode-pug
-    | <!-- Source -->
-    each text, variant in {'white': 'White', 'black': 'Black', 'purple': 'Purple', 'pink': 'Pink', 'yellow': 'Yellow'}
-      div(class='text-' + variant)= text
+.card.card-body.bg-light.mb-3
+  pre.pre-sm
+    code.language-markup
+      :encode-pug
+        | <!-- Source -->
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          - for(var size = 1; size <= 6; size++)
+            div(class='h' + size + '-' + breakpoint)
+          ="\n"
+          - for(var size = 1; size <= 4; size++)
+            div(class='display-' + breakpoint + '-' + size)
+          ="\n"

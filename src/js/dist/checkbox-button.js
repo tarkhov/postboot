@@ -13,7 +13,7 @@ var CheckboxButtonClassName = {
 };
 
 var CheckboxButtonSelector = {
-  DATA_TOGGLE: '[data-toggle="chekbox-button"]',
+  DATA_TOGGLE: '[data-toggle="checkbox-button"]',
   INPUT: 'input'
 };
 
@@ -42,10 +42,10 @@ var CheckboxButton = function () {
         return;
       }
 
-      var isActive = this.element.classList.contains(ButtonClassName.ACTIVE);
+      var isActive = this.element.classList.contains(CheckboxButtonClassName.ACTIVE);
 
       if (this.input) {
-        if (this.input.disabled || this.input.classList.contains(RadioButtonClassName.DISABLED)) {
+        if (this.input.disabled || this.input.classList.contains(CheckboxButtonClassName.DISABLED)) {
           return;
         }
 

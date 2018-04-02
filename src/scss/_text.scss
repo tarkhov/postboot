@@ -3,7 +3,15 @@
   @include text-emphasis-variant(".text-#{$color}", $value);
 }
 
-// Hover 
+// Glass
+@each $color, $value in $theme-colors {
+  @include text-emphasis-variant('.text-glass-#{$color}', rgba($value, $opacity-glass));
+}
+@each $color, $value in $custom-colors {
+  @include text-emphasis-variant('.text-glass-#{$color}', rgba($value, $opacity-glass));
+}
+
+// Hover
 @each $color, $value in $theme-colors {
   .text-hover-#{$color} {
     @include hover-focus {
@@ -19,16 +27,8 @@
   }
 }
 
-// Glass
-@each $color, $value in $theme-colors {
-  @include text-emphasis-variant('.text-glass-#{$color}', rgba($value, $opacity-glass));
-}
-@each $color, $value in $custom-colors {
-  @include text-emphasis-variant('.text-glass-#{$color}', rgba($value, $opacity-glass));
-}
-
 // Ribbon
-@each $color, $value in map-remove($theme-colors, "white") {
+@each $color, $value in $theme-colors {
   .text-ribbon-#{$color} {
     @include text-ribbon-variant($white, $value);
   }
@@ -38,7 +38,6 @@
     @include text-ribbon-variant($white, $value);
   }
 }
-
 .text-ribbon-white {
   @include text-ribbon-variant($gray-900, $white);
 }

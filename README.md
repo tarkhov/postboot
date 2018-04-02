@@ -1,6 +1,6 @@
-# Bootstrap features
+# PostBoot
 
-Bootstrap features.
+HTML5 library that extends the Bootstrap framework.
 
 ### Contents
 
@@ -14,13 +14,13 @@ Bootstrap features.
 
 ### Archive
 
-[Download](https://github.com/tarkhov/bootstrap-features/releases/download/v1.0.0-beta/bootstrap-features-1.0.0-beta.zip)
+[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta/postboot-1.0.0-beta.zip)
 
 ```
-bootstrap-features/
+postboot/
 └── css/
-    ├── bootstrap-features.css
-    ├── bootstrap-features.min.css
+    ├── postboot.css
+    ├── postboot.min.css
 ```
 
 ## Usage
@@ -28,17 +28,17 @@ bootstrap-features/
 ```html
 <!-- CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/bootstrap-features/v1.0.0-beta/dist/css/bootstrap-features.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta/dist/css/postboot.min.css">
 
 <!-- JS -->
-<script src="https://cdn.rawgit.com/tarkhov/bootstrap-features/v1.0.0-beta/dist/js/bootstrap-features.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta/dist/js/postboot.min.js"></script>
 ```
 
 ## Author
 
-**Alex Tarkhov**
+**Alexander Tarkhov**
 
-* [Facebook](https://www.facebook.com/alextarkhov)
+* [Facebook](https://www.facebook.com/alex.tarkhov)
 * [Twitter](https://twitter.com/alextarkhov)
 * [Medium](https://medium.com/@tarkhov)
 * [Product Hunt](https://www.producthunt.com/@tarkhov)

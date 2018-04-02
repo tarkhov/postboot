@@ -1,0 +1,13 @@
+// Spacing
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    $positions: top, right, bottom, left;
+
+    @each $position in $positions {
+      .#{$position}#{$infix}-auto { #{$position}: auto; }
+      .#{$position}#{$infix}-0 { #{$position}: 0; }
+    }
+  }
+}

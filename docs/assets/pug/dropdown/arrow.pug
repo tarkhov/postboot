@@ -4,7 +4,15 @@ block example_title
   h3.font-weight-normal Arrow
 
 block example_result
-  +dropdown_arrow()
+  .row
+    .col-md-3
+      +dropdown_arrow('Right', 'dropright')
+    .col-md-6.text-center
+      +dropdown_arrow('Down', 'dropdown')
+      +dropdown_arrow('Up', 'dropup')
+    .col-md-3
+      .float-right
+        +dropdown_arrow('Left', 'dropleft')
 
 block example_code
   :encode-pug

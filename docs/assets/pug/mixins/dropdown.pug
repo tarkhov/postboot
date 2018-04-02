@@ -9,9 +9,9 @@ mixin dropdown(text, classes)
     button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown")= text
     +dropdown_menu()
 
-mixin dropdown_arrow()
-  .btn-group.dropdown
-    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Arrow
+mixin dropdown_arrow(text, classes)
+  .btn-group(class=classes)
+    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown")= text
     .dropdown-menu
       .dropdown-arrow
       - for(var i = 1; i <= 3; i++)

@@ -14,3 +14,11 @@ code {
   max-height: calc(100vh - (#{$navbar-height} + (#{$grid-gutter-width} * 2)));
   overflow-y: scroll;
 }
+
+/*.sidebar-nav .sidebar-nav {
+  display: none;
+}
+
+#sidebar-left .nav-item.show .sidebar-nav {
+  display: flex;
+}*/

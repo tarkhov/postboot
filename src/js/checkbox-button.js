@@ -7,7 +7,7 @@ const CheckboxButtonClassName = {
 }
 
 const CheckboxButtonSelector = {
-  DATA_TOGGLE : '[data-toggle="chekbox-button"]',
+  DATA_TOGGLE : '[data-toggle="checkbox-button"]',
   INPUT       : 'input'
 }
 
@@ -30,10 +30,10 @@ class CheckboxButton {
       return
     }
 
-    let isActive = this.element.classList.contains(ButtonClassName.ACTIVE)
+    let isActive = this.element.classList.contains(CheckboxButtonClassName.ACTIVE)
 
     if (this.input) {
-      if (this.input.disabled || this.input.classList.contains(RadioButtonClassName.DISABLED)) {
+      if (this.input.disabled || this.input.classList.contains(CheckboxButtonClassName.DISABLED)) {
         return
       }
 

@@ -14,6 +14,39 @@
     return null
   }
 
+  e.parent = function (selector) {
+    let node = this.parentElement
+
+    while (node) {
+      if (node.matches(selector)) {
+        return node
+      } else {
+        node = node.parentElement
+      }
+    }
+
+    return null
+  }
+
+  e.parentAll = function (selector, until) {
+    let node = this.parentElement
+    let nodes = []
+
+    while (node) {
+      if (until && node.matches(until)) {
+        return nodes
+      }
+
+      if (node.matches(selector)) {
+        nodes.push(node)
+      }
+
+      node = node.parentElement
+    }
+
+    return null
+  }
+
   e.offset = function () {
     let box = this.getBoundingClientRect();
 

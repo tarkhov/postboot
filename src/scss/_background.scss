@@ -1,14 +1,24 @@
 // Custom
 @each $color, $value in map-remove($custom-colors, "black", "white") {
-  @include bg-variant(".bg-#{$color}", $value);
+  @include bg-variant('.bg-#{$color}', $value);
 }
 
+// Gradient
 @if $enable-gradients {
   @each $color, $value in map-remove($custom-colors, "black", "white") {
     @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
   }
 }
-// Hover 
+
+// Glass
+@each $color, $value in $theme-colors {
+  @include bg-glass-variant('.bg-glass-#{$color}', $value, $opacity-glass);
+}
+@each $color, $value in $custom-colors {
+  @include bg-glass-variant('.bg-glass-#{$color}', $value, $opacity-glass);
+}
+
+// Hover
 @each $color, $value in $theme-colors {
   .bg-hover-#{$color} {
     @include hover-focus {
@@ -22,14 +32,6 @@
       background-color: $value !important;
     }
   }
-}
-
-// Glass
-@each $color, $value in $theme-colors {
-  @include bg-glass-variant('.bg-glass-#{$color}', $value, $opacity-glass);
-}
-@each $color, $value in $custom-colors {
-  @include bg-glass-variant('.bg-glass-#{$color}', $value, $opacity-glass);
 }
 
 // Striped

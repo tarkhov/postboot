@@ -1,4 +1,4 @@
-const CHECKBOX_AREA_KEY       = 'checkboxButton'
+const CHECKBOX_AREA_KEY       = 'checkboxArea'
 const CHECKBOX_AREA_EVENT_KEY = CHECKBOX_AREA_KEY
 
 const CheckboxAreaClassName = {
@@ -7,7 +7,7 @@ const CheckboxAreaClassName = {
 }
 
 const CheckboxAreaSelector = {
-  DATA_TOGGLE : '[data-toggle="chekbox-area"]'
+  DATA_TOGGLE : '[data-toggle="checkbox-area"]'
 }
 
 

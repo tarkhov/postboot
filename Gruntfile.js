@@ -39,7 +39,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     banner: '/*!\n' +
             ' * ' + title + ' v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
-            ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
+            ' * Copyright 2016-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
             ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
 
@@ -51,6 +51,8 @@ module.exports = function (grunt) {
       dist: {
         files: {
           'src/js/dist/util.js': 'src/js/util.js',
+          'src/js/dist/checkbox-area.js': 'src/js/checkbox-area.js',
+          'src/js/dist/radio-area.js': 'src/js/radio-area.js',
           'src/js/dist/checkbox-button.js': 'src/js/checkbox-button.js',
           'src/js/dist/radio-button.js': 'src/js/radio-button.js',
           'src/js/dist/dropdown.js': 'src/js/dropdown.js',
@@ -67,6 +69,8 @@ module.exports = function (grunt) {
       dist: {
         src: [
           'src/js/dist/util.js',
+          'src/js/dist/checkbox-area.js',
+          'src/js/dist/radio-area.js',
           'src/js/dist/checkbox-button.js',
           'src/js/dist/radio-button.js',
           'src/js/dist/dropdown.js',
