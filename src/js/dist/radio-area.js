@@ -4,27 +4,56 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var RADIO_AREA_KEY = 'radioArea';
-var RADIO_AREA_EVENT_KEY = RADIO_AREA_KEY;
-
-var RadioAreaClassName = {
-  ACTIVE: 'active',
-  DISABLED: 'disabled'
-};
-
-var RadioAreaSelector = {
-  DATA_TOGGLE: '[data-toggle="radio-area"]',
-  INPUT: 'input',
-  ACTIVE: '.active'
-};
-
 var RadioArea = function () {
-  function RadioArea(element) {
+  _createClass(RadioArea, null, [{
+    key: 'KEY',
+    get: function get() {
+      return 'radioArea';
+    }
+  }, {
+    key: 'EVENT_KEY',
+    get: function get() {
+      return 'RadioArea';
+    }
+  }, {
+    key: 'ClassName',
+    get: function get() {
+      return Object.freeze({
+        ACTIVE: 'active',
+        DISABLED: 'disabled'
+      });
+    }
+  }, {
+    key: 'Default',
+    get: function get() {
+      return Object.freeze({
+        parent: null
+      });
+    }
+  }, {
+    key: 'Event',
+    get: function get() {
+      return Object.freeze({
+        ACTIVATE: RadioArea.EVENT_KEY + 'Activate',
+        DEACTIVATE: RadioArea.EVENT_KEY + 'Deactivate'
+      });
+    }
+  }, {
+    key: 'Selector',
+    get: function get() {
+      return Object.freeze({
+        DATA_TOGGLE: '[data-toggle="radio-area"]',
+        ACTIVE: '.active'
+      });
+    }
+  }]);
+
+  function RadioArea(element, config) {
     _classCallCheck(this, RadioArea);
 
     this.element = element;
-    this.parent = RadioArea.getParent(element);
-    this.input = this.element.querySelector(RadioAreaSelector.INPUT);
+    this.config = this.getConfig(config);
+    this.parent = this.config.parent || RadioArea.getParent(element);
   }
 
   _createClass(RadioArea, [{
@@ -40,17 +69,32 @@ var RadioArea = function () {
   }, {
     key: 'toggle',
     value: function toggle() {
-      if (this.element.classList.contains(RadioAreaClassName.DISABLED) || this.element.classList.contains(RadioAreaClassName.ACTIVE)) {
+      if (this.element.classList.contains(RadioArea.ClassName.DISABLED) || this.element.classList.contains(RadioArea.ClassName.ACTIVE)) {
         return;
       }
 
-      var active = this.parent.querySelector(RadioAreaSelector.ACTIVE);
+      var parent = this.parent || document;
+
+      var active = parent.querySelector(RadioArea.Selector.ACTIVE);
       if (active) {
-        active.classList.remove(RadioAreaClassName.ACTIVE);
+        active.classList.remove(RadioArea.ClassName.ACTIVE);
+        active.setAttribute('aria-checked', 'false');
+
+        var deactivateEvent = Util.createEvent(RadioArea.Event.DEACTIVATE);
+        active.dispatchEvent(deactivateEvent);
       }
 
-      this.element.setAttribute('aria-pressed', true);
-      this.element.classList.add(RadioAreaClassName.ACTIVE);
+      this.element.classList.add(RadioArea.ClassName.ACTIVE);
+      this.element.setAttribute('aria-checked', true);
+
+      var activateEvent = Util.createEvent(RadioArea.Event.ACTIVATE);
+      this.element.dispatchEvent(activateEvent);
+    }
+  }, {
+    key: 'getConfig',
+    value: function getConfig(config) {
+      config = Object.assign({}, RadioArea.Default, config);
+      return config;
     }
   }], [{
     key: 'getParent',
@@ -68,16 +112,16 @@ var RadioArea = function () {
     }
   }, {
     key: 'init',
-    value: function init(element) {
+    value: function init(element, config) {
       var area = null;
 
-      if (element.hasOwnProperty(RADIO_AREA_KEY)) {
-        area = element[RADIO_AREA_KEY];
+      if (element.hasOwnProperty(RadioArea.KEY)) {
+        area = element[RadioArea.KEY];
       }
 
       if (!area) {
-        area = new RadioArea(element);
-        element[RADIO_AREA_KEY] = area;
+        area = new RadioArea(element, config);
+        element[RadioArea.KEY] = area;
       }
 
       return area;
@@ -87,15 +131,17 @@ var RadioArea = function () {
   return RadioArea;
 }();
 
-function radioArea(element) {
-  return RadioArea.init(element);
+function radioArea(element, config) {
+  return RadioArea.init(element, config);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var areas = document.querySelectorAll(RadioAreaSelector.DATA_TOGGLE);
-  if (areas.length) {
-    areas.forEach(function (element) {
-      radioArea(element).addEventListeners();
-    });
-  }
-});
+if (typeof RADIO_AREA_EVENT_OFF === 'undefined' || RADIO_AREA_EVENT_OFF === true) {
+  document.addEventListener('DOMContentLoaded', function () {
+    var areas = document.querySelectorAll(RadioArea.Selector.DATA_TOGGLE);
+    if (areas.length) {
+      areas.forEach(function (element) {
+        radioArea(element).addEventListeners();
+      });
+    }
+  });
+}

@@ -15,9 +15,9 @@
   </head>
   <body class="pt-navbar" data-spy="scroll" data-target="#sidebar-left">
     <header class="pb-gutter" role="banner">
-      <nav class="navbar navbar-expand-xs navbar-light bg-light px-0 fixed-top" id="navbar-top" role="navigation">
+      <nav class="navbar navbar-expand-xs navbar-light bg-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
         <div class="container">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-top"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span>&nbsp;&nbsp;<span>PostBoot</span>&nbsp;&nbsp;<sup class="text-success">1.0.0-beta</sup></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-top"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand" href="/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-beta</sup></a>
           <div class="collapse navbar-collapse" id="navbar-collapse-top">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
@@ -25,8 +25,8 @@
               </li>
             </ul>
             <ul class="navbar-nav">
-              <li class="nav-item"><a class="nav-link" href="https://github.com/tarkhov/postboot"><i class="fab fa-github-alt"></i>&nbsp;&nbsp;GitHub</a></li>
-              <li class="nav-item"><a class="nav-link" href="https://www.producthunt.com/posts/postboot"><i class="fab fa-product-hunt"></i>&nbsp;&nbsp;ProductHunt</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://github.com/tarkhov/postboot"><i class="fab fa-github-alt"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;GitHub</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://www.producthunt.com/posts/postboot"><i class="fab fa-product-hunt"></i><span class="d-none d-sm-inline">&nbsp;&nbsp;ProductHunt</span></a></li>
             </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta/postboot-1.0.0-beta.zip">Download</a>
           </div>
         </div>
@@ -35,7 +35,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-2">
-          <aside class="sidebar sidebar-light sidebar-expand-xs py-0 position-fixed" id="sidebar-left" role="complementary">
+          <aside class="sidebar sidebar-light sidebar-expand-sm py-0 position-fixed" id="sidebar-left" role="complementary">
             <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm pr-gutter">
               <li class="nav-item show"><a class="nav-link active" href="#get-started">Get started</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-2 pl-3">
@@ -56,16 +56,8 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="#area">Area</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#area-checkbox">Checkbox</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#area-checkbox-api">API</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#area-radio">Radio</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#area-radio-api">API</a></li>
-                    </ul>
-                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#area-checkbox">Checkbox</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#area-radio">Radio</a></li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#background">Background</a>
@@ -101,24 +93,13 @@
               <li class="nav-item"><a class="nav-link" href="#button">Button</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#button-custom">Custom</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a></li>
-                    </ul>
-                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-checkbox">Checkbox</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#button-custom">Custom</a></li>
                   <li class="nav-item"><a class="nav-link" href="#button-glass">Glass</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a></li>
                   <li class="nav-item"><a class="nav-link" href="#button-pill">Pill</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#button-radio">Radio</a></li>
                   <li class="nav-item"><a class="nav-link" href="#button-size">Size</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#button-checkbox">Checkbox</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#button-checkbox-api">API</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#button-radio">Radio</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#button-radio-api">API</a></li>
-                    </ul>
-                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#card">Card</a>
@@ -133,16 +114,12 @@
                   <li class="nav-item"><a class="nav-link" href="#code-size">Size</a></li>
                 </ul>
               </li>
+              <li class="nav-item"><a class="nav-link" href="#collapse">Collapse</a></li>
               <li class="nav-item"><a class="nav-link" href="#dropdown">Dropdown</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#dropdown-arrow">Arrow</a></li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-hover">Hover</a></li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#dropdown-native">Native</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#dropdown-api">API</a></li>
-                    </ul>
-                  </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-scrolled-menu">Scrolled menu</a></li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-submenu">Submenu</a></li>
                 </ul>
@@ -199,6 +176,7 @@
               <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#navbar-breadcrumb">Breadcrumb</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-dropdown-menu">Dropdown menu</a></li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-expand-size">Expand size</a></li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-icon">Icon</a></li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-nav-align">Nav align</a></li>
@@ -225,26 +203,8 @@
                   <li class="nav-item"><a class="nav-link" href="#progress-size">Size</a></li>
                 </ul>
               </li>
-              <li class="nav-item"><a class="nav-link" href="#scrollspy">Scrollspy</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#scrollspy-native">Native</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#scrollspy-api">API</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#sidebar-brand">Brand</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#sidebar-color">Color</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#sidebar-header">Header</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#sidebar-expand">Expand</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#sidebar-icon">Icon</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#sidebar-nav">Nav</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#sidebar-text">Text</a></li>
-                </ul>
-              </li>
+              <li class="nav-item"><a class="nav-link" href="#scrollspy">ScrollSpy</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a></li>
               <li class="nav-item"><a class="nav-link" href="#text">Text</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-xs font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#text-custom">Custom</a></li>
@@ -266,7 +226,7 @@
             <div id="get-started">
               <h1 class="font-weight-normal">PostBoot</h1>
               <p class="lead font-weight-normal">HTML5 library that extends the Bootstrap framework.</p>
-              <div class="alert alert-primary" role="alert">Compatibility with Bootstrap version <b>4+</b>.</div>
+              <div class="alert alert-primary" role="alert">Compatibility with Bootstrap <b>v4.0.0</b>.</div>
               <div id="install">
                 <div id="install">
                   <h3 class="font-weight-normal mb-3">Installation</h3>
@@ -352,26 +312,21 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                <div id="area-checkbox-api">
-                  <h3 class="font-weight-normal">Checkbox API</h3>
-                  <div class="card mb-3">
-                    <div class="card-body">
-                      <div class="list-group"><a class="list-group-item list-group-item-action active" href="#" data-toggle="checkbox-area">Active</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 1</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 2</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 3</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 4</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 5</a>
-                      </div>
-                    </div>
-                    <div class="card-footer">
-                      <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;list-group&#x22;&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action active&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Active&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 1&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 2&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 3&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 4&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 5&#x3C;/a&#x3E;
-&#x3C;/div&#x3E;</code></pre>
-                    </div>
+                <div id="area-checkbox-javascript">
+                  <h4 class="font-weight-normal">Javascript</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-sm"><code class="language-javascript">/* Source */
+&#x3C;script&#x3E;
+  document.addEventListener(&#x27;DOMContentLoaded&#x27;, function () {
+    var areas = document.querySelectorAll(CheckboxArea.Selector.DATA_TOGGLE);
+    if (areas.length) {
+      areas.forEach(function (element) {
+        checkboxArea(element).addEventListeners();
+      });
+    }
+  });
+&#x3C;/script&#x3E;</code></pre>
                   </div>
-                  <div class="clearfix"></div>
                 </div>
               </div>
               <div id="area-radio">
@@ -394,26 +349,21 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                <div id="area-radio-api">
-                  <h3 class="font-weight-normal">Radio API</h3>
-                  <div class="card mb-3">
-                    <div class="card-body">
-                      <div class="list-group"><a class="list-group-item list-group-item-action active" href="#" data-toggle="radio-area">Active</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 1</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 2</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 3</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 4</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 5</a>
-                      </div>
-                    </div>
-                    <div class="card-footer">
-                      <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;list-group&#x22;&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action active&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Active&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 1&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 2&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 3&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 4&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 5&#x3C;/a&#x3E;
-&#x3C;/div&#x3E;</code></pre>
-                    </div>
+                <div id="area-radio-javascript">
+                  <h4 class="font-weight-normal">Javascript</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-sm"><code class="language-javascript">/* Source */
+&#x3C;script&#x3E;
+  document.addEventListener(&#x27;DOMContentLoaded&#x27;, function () {
+    var areas = document.querySelectorAll(RadioArea.Selector.DATA_TOGGLE);
+    if (areas.length) {
+      areas.forEach(function (element) {
+        radioArea(element).addEventListeners();
+      });
+    }
+  });
+&#x3C;/script&#x3E;</code></pre>
                   </div>
-                  <div class="clearfix"></div>
                 </div>
               </div>
             </div>
@@ -634,7 +584,7 @@ unzip postboot-1.0.0-beta.zip</code></pre>
               </div>
             </div>
             <div id="border">
-              <h2 class="font-weight-normal">Border <a href="#border">#</a></h2>
+              <h2 class="font-weight-normal">Border</h2>
               <div id="border-custom">
                 <h3 class="font-weight-normal">Custom</h3>
                 <div class="card mb-3">
@@ -701,19 +651,11 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                 <h3 class="font-weight-normal">Pill</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                            <p class="p-2 border-solid border-1 border-indigo text-indigo">Indigo</p>
-                                            <p class="p-2 border-solid border-1 border-orange text-orange">Orange</p>
-                                            <p class="p-2 border-solid border-1 border-pink text-pink">Pink</p>
-                                            <p class="p-2 border-solid border-1 border-purple text-purple">Purple</p>
-                                            <p class="p-2 border-solid border-1 border-teal text-teal">Teal</p>
+                                <p class="p-2 rounded-pill border border-primary text-primary">Pill</p>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;p class=&#x22;border-indigo&#x22;&#x3E;Indigo&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-orange&#x22;&#x3E;Orange&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-pink&#x22;&#x3E;Pink&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-purple&#x22;&#x3E;Purple&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-teal&#x22;&#x3E;Teal&#x3C;/p&#x3E;</code></pre>
+&#x3C;div class=&#x22;rounded-pill&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -886,6 +828,55 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <div id="button-checkbox">
+                <h3 class="font-weight-normal">Checkbox</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                <div class="btn-group btn-group-toggle">
+                                  <label class="btn btn-secondary active" data-toggle="checkbox-button">
+                                    <input type="checkbox" name="checkbox" checked><span>Active</span>
+                                  </label>
+                                  <label class="btn btn-secondary" data-toggle="checkbox-button">
+                                    <input type="checkbox" name="checkbox"><span>Checkbox</span>
+                                  </label>
+                                  <label class="btn btn-secondary" data-toggle="checkbox-button">
+                                    <input type="checkbox" name="checkbox"><span>Checkbox</span>
+                                  </label>
+                                </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group btn-group-toggle&#x22;&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary active&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22; checked=&#x22;checked&#x22;/&#x3E;&#x3C;span&#x3E;Active&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;/&#x3E;&#x3C;span&#x3E;Checkbox&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;/&#x3E;&#x3C;span&#x3E;Checkbox&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="button-checkbox-javascript">
+                  <h4 class="font-weight-normal">Javascript</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-sm"><code class="language-javascript">/* Source */
+&#x3C;script&#x3E;
+  document.addEventListener(&#x27;DOMContentLoaded&#x27;, function () {
+    var buttons = document.querySelectorAll(CheckboxButton.Selector.DATA_TOGGLE);
+    if (buttons.length) {
+      buttons.forEach(function (element) {
+        checkboxButton(element).addEventListeners();
+      });
+    }
+  });
+&#x3C;/script&#x3E;</code></pre>
+                  </div>
+                </div>
+              </div>
               <div id="button-custom">
                 <h3 class="font-weight-normal">Custom</h3>
                 <div class="card mb-3">
@@ -910,31 +901,6 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                <div id="button-outline">
-                  <h3 class="font-weight-normal">Outline</h3>
-                  <div class="card mb-3">
-                    <div class="card-body">
-                                              <button class="btn mr-1 mb-2 btn-outline-indigo" type="button">Indigo</button>
-                                              <button class="btn mr-1 mb-2 btn-outline-orange" type="button">Orange</button>
-                                              <button class="btn mr-1 mb-2 btn-outline-pink" type="button">Pink</button>
-                                              <button class="btn mr-1 mb-2 btn-outline-purple" type="button">Purple</button>
-                                              <button class="btn mr-1 mb-2 btn-outline-teal" type="button">Teal</button>
-                    </div>
-                    <div class="card-body bg-dark bg-striped">
-                                              <button class="btn mr-1 mb-2 btn-outline-white" type="button">White</button>
-                    </div>
-                    <div class="card-footer">
-                      <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
               </div>
               <div id="button-glass">
                 <h3 class="font-weight-normal">Glass</h3>
@@ -977,6 +943,31 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <div id="button-outline">
+                <h3 class="font-weight-normal">Outline</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <button class="btn mr-1 mb-2 btn-outline-indigo" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-orange" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-pink" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-purple" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-teal" type="button">Teal</button>
+                  </div>
+                  <div class="card-body bg-dark bg-striped">
+                                            <button class="btn mr-1 mb-2 btn-outline-white" type="button">White</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
               <div id="button-pill">
                 <h3 class="font-weight-normal">Pill</h3>
                 <div class="card mb-3">
@@ -989,85 +980,6 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-              </div>
-              <div id="button-size">
-                <h3 class="font-weight-normal">Sizes</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <button class="btn mr-1 mb-2 btn-secondary btn-xs" type="button">Extra small</button>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-secondary btn-xs&#x22; type=&#x22;button&#x22;&#x3E;Extra small&#x3C;/button&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="button-checkbox">
-                <h3 class="font-weight-normal">Checkbox</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                <div class="btn-group btn-group-toggle">
-                                  <label class="btn btn-secondary active" data-toggle="checkbox-button">
-                                    <input type="checkbox" name="checkbox" checked><span>Active</span>
-                                  </label>
-                                  <label class="btn btn-secondary" data-toggle="checkbox-button">
-                                    <input type="checkbox" name="checkbox"><span>Checkbox</span>
-                                  </label>
-                                  <label class="btn btn-secondary" data-toggle="checkbox-button">
-                                    <input type="checkbox" name="checkbox"><span>Checkbox</span>
-                                  </label>
-                                </div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;btn-group btn-group-toggle&#x22;&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary active&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22; checked=&#x22;checked&#x22;/&#x3E;&#x3C;span&#x3E;Active&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;/&#x3E;&#x3C;span&#x3E;Checkbox&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;/&#x3E;&#x3C;span&#x3E;Checkbox&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div id="button-checkbox-api">
-                  <h3 class="font-weight-normal">Checkbox</h3>
-                  <div class="card mb-3">
-                    <div class="card-body">
-                                  <div class="btn-group btn-group-toggle">
-                                    <label class="btn btn-secondary active" data-toggle="checkbox-button">
-                                      <input type="checkbox" name="checkbox" checked><span>Active</span>
-                                    </label>
-                                    <label class="btn btn-secondary" data-toggle="checkbox-button">
-                                      <input type="checkbox" name="checkbox"><span>Checkbox</span>
-                                    </label>
-                                    <label class="btn btn-secondary" data-toggle="checkbox-button">
-                                      <input type="checkbox" name="checkbox"><span>Checkbox</span>
-                                    </label>
-                                  </div>
-                    </div>
-                    <div class="card-footer">
-                      <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;btn-group btn-group-toggle&#x22;&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary active&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22; checked=&#x22;checked&#x22;/&#x3E;&#x3C;span&#x3E;Active&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;/&#x3E;&#x3C;span&#x3E;Checkbox&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;/&#x3E;&#x3C;span&#x3E;Checkbox&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;</code></pre>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
               </div>
               <div id="button-radio">
                 <h3 class="font-weight-normal">Radio</h3>
@@ -1101,39 +1013,35 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                <div id="button-radio-api">
-                  <h3 class="font-weight-normal">Radio</h3>
-                  <div class="card mb-3">
-                    <div class="card-body">
-                                  <div class="btn-group btn-group-toggle">
-                                    <label class="btn btn-secondary active" data-toggle="radio-button">
-                                      <input type="radio" name="radio" checked><span>Active</span>
-                                    </label>
-                                    <label class="btn btn-secondary" data-toggle="radio-button">
-                                      <input type="radio" name="radio"><span>Radio</span>
-                                    </label>
-                                    <label class="btn btn-secondary" data-toggle="radio-button">
-                                      <input type="radio" name="radio"><span>Radio</span>
-                                    </label>
-                                  </div>
-                    </div>
-                    <div class="card-footer">
-                      <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;btn-group btn-group-toggle&#x22;&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary active&#x22; data-toggle=&#x22;radio-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22; checked=&#x22;checked&#x22;/&#x3E;&#x3C;span&#x3E;Active&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;radio-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22;/&#x3E;&#x3C;span&#x3E;Radio&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;radio-button&#x22;&#x3E;
-    &#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22;/&#x3E;&#x3C;span&#x3E;Radio&#x3C;/span&#x3E;
-  &#x3C;/label&#x3E;
-&#x3C;/div&#x3E;</code></pre>
-                    </div>
+                <div id="button-radio-javascript">
+                  <h4 class="font-weight-normal">Javascript</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-sm"><code class="language-javascript">/* Source */
+&#x3C;script&#x3E;
+  document.addEventListener(&#x27;DOMContentLoaded&#x27;, function () {
+    var buttons = document.querySelectorAll(RadioButton.Selector.DATA_TOGGLE);
+    if (buttons.length) {
+      buttons.forEach(function (element) {
+        radioButton(element).addEventListeners();
+      });
+    }
+  });
+&#x3C;/script&#x3E;</code></pre>
                   </div>
-                  <div class="clearfix"></div>
                 </div>
+              </div>
+              <div id="button-size">
+                <h3 class="font-weight-normal">Sizes</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-xs" type="button">Extra small</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-xs&#x22; type=&#x22;button&#x22;&#x3E;Extra small&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
             </div>
             <div id="card">
@@ -1260,8 +1168,43 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                 </div>
               </div>
             </div>
+            <div id="collapse">
+              <h2 class="font-weight-normal">Collapse</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <p><a class="btn btn-primary" href="#collapse-1" data-toggle="collapse">Collapse</a></p>
+                  <div class="collapse" id="collapse-1">
+                    <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
             <div id="dropdown">
               <h2 class="font-weight-normal">Dropdown</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                              <div class="btn-group dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
+                                            <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                            </div>
+                              </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
               <div id="dropdown-arrow">
                 <h3 class="font-weight-normal">Arrow</h3>
                 <div class="card mb-3">
@@ -1329,58 +1272,50 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                 <h3 class="font-weight-normal">Hover</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                    <div class="row">
-                      <div class="col-md-3">
-                                    <div class="btn-group dropdown-hover dropright">
-                                      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">Right</button>
-                                                  <div class="dropdown-menu">
+                                <div class="btn-group dropdown dropdown-hover">
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">Hover</button>
+                                              <div class="dropdown-menu">
 	<a class="dropdown-item" href="#">Menu item 1</a>
 	<a class="dropdown-item" href="#">Menu item 2</a>
 	<a class="dropdown-item" href="#">Menu item 3</a>
-                                                  </div>
-                                    </div>
-                      </div>
-                      <div class="col-md-6 text-center">
-                                    <div class="btn-group dropdown-hover dropdown">
-                                      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">Down</button>
-                                                  <div class="dropdown-menu">
-	<a class="dropdown-item" href="#">Menu item 1</a>
-	<a class="dropdown-item" href="#">Menu item 2</a>
-	<a class="dropdown-item" href="#">Menu item 3</a>
-                                                  </div>
-                                    </div>
-                                    <div class="btn-group dropdown-hover dropup">
-                                      <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">Up</button>
-                                                  <div class="dropdown-menu">
-	<a class="dropdown-item" href="#">Menu item 1</a>
-	<a class="dropdown-item" href="#">Menu item 2</a>
-	<a class="dropdown-item" href="#">Menu item 3</a>
-                                                  </div>
-                                    </div>
-                      </div>
-                      <div class="col-md-3">
-                        <div class="float-right">
-                                      <div class="btn-group dropdown-hover dropleft">
-                                        <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">Left</button>
-                                                    <div class="dropdown-menu">
-	<a class="dropdown-item" href="#">Menu item 1</a>
-	<a class="dropdown-item" href="#">Menu item 2</a>
-	<a class="dropdown-item" href="#">Menu item 3</a>
-                                                    </div>
-                                      </div>
-                        </div>
-                      </div>
-                    </div>
+                                              </div>
+                                </div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;btn-group dropdown dropdown-hover&#x22;&#x3E;
-  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-hover=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-hover=&#x22;dropdown&#x22;&#x3E;Hover&#x3C;/button&#x3E;
   &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+              </div>
+              <div id="dropdown-javascript">
+                <h3 class="font-weight-normal">Javascript</h3>
+                <div class="card card-body bg-light mb-3">
+                  <pre class="pre-sm"><code class="language-javascript">/* Source */
+&#x3C;script&#x3E;
+  document.addEventListener(&#x27;DOMContentLoaded&#x27;, function () {
+    var dataToggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE);
+    if (dataToggles.length) {
+      dataToggles.forEach(function (element) {
+        dropdown(element).addEventListeners();
+      });
+    }
+  
+    var dataHovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER);
+    if (dataHovers.length) {
+      dataHovers.forEach(function (element) {
+        dropdown(element).addHoverListeners();
+      });
+    }
+  
+    document.addEventListener(&#x27;click&#x27;, Dropdown.hideMenus);
+    document.addEventListener(&#x27;keyup&#x27;, Dropdown.hideMenus);
+  });
+&#x3C;/script&#x3E;</code></pre>
+                </div>
               </div>
               <div id="dropdown-mega-menu">
                 <h3 class="font-weight-normal">Mega menu</h3>
@@ -1428,52 +1363,6 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-              </div>
-              <div id="dropdown-native">
-                <h3 class="font-weight-normal">Native</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                <div class="btn-group dropdown">
-                                  <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
-                                              <div class="dropdown-menu">
-	<a class="dropdown-item" href="#">Menu item 1</a>
-	<a class="dropdown-item" href="#">Menu item 2</a>
-	<a class="dropdown-item" href="#">Menu item 3</a>
-                                              </div>
-                                </div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
-  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
-  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-                <div id="dropdown-api">
-                  <h3 class="font-weight-normal">API</h3>
-                  <div class="card mb-3">
-                    <div class="card-body">
-                                  <div class="btn-group dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
-                                                <div class="dropdown-menu">
-	<a class="dropdown-item" href="#">Menu item 1</a>
-	<a class="dropdown-item" href="#">Menu item 2</a>
-	<a class="dropdown-item" href="#">Menu item 3</a>
-                                                </div>
-                                  </div>
-                    </div>
-                    <div class="card-footer">
-                      <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
-  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
-  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
               </div>
               <div id="dropdown-scrolled-menu">
                 <h3 class="font-weight-normal">Menu scroll</h3>
@@ -2029,37 +1918,6 @@ unzip postboot-1.0.0-beta.zip</code></pre>
             </div>
             <div id="navbar">
               <h2 class="font-weight-normal">Navbar</h2>
-              <div id="navbar-nav-align">
-                <h1 class="font-weight-normal">Nav directions</h1>
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 px-0">
-                      <div class="collapse navbar-collapse">
-                        <ul class="navbar-nav navbar-nav-left mr-auto">
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
-                        </ul>
-                        <ul class="navbar-nav navbar-nav-right">
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
-                        </ul>
-                      </div>
-                    </nav>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;nav class=&#x22;navbar navbar-expand-sm navbar-dark bg-dark px-0&#x22;&#x3E;
-  &#x3C;div class=&#x22;collapse navbar-collapse&#x22;&#x3E;
-    &#x3C;ul class=&#x22;navbar-nav navbar-nav-left mr-auto&#x22;&#x3E;&#x3C;/ul&#x3E;
-    &#x3C;ul class=&#x22;navbar-nav navbar-nav-right&#x22;&#x3E;&#x3C;/ul&#x3E;
-  &#x3C;/div&#x3E;
-&#x3C;/nav&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
               <div id="navbar-breadcrumb">
                 <h1 class="font-weight-normal">Sizes</h1>
                 <div class="card mb-3">
@@ -2131,6 +1989,37 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-expand-sm navbar-dark bg-dark navbar-sm&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-expand-sm navbar-dark bg-dark navbar-lg&#x22;&#x3E;&#x3C;/nav&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="navbar-nav-align">
+                <h1 class="font-weight-normal">Nav directions</h1>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 px-0">
+                      <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav navbar-nav-left mr-auto">
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                        </ul>
+                        <ul class="navbar-nav navbar-nav-right">
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                          <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                        </ul>
+                      </div>
+                    </nav>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-expand-sm navbar-dark bg-dark px-0&#x22;&#x3E;
+  &#x3C;div class=&#x22;collapse navbar-collapse&#x22;&#x3E;
+    &#x3C;ul class=&#x22;navbar-nav navbar-nav-left mr-auto&#x22;&#x3E;&#x3C;/ul&#x3E;
+    &#x3C;ul class=&#x22;navbar-nav navbar-nav-right&#x22;&#x3E;&#x3C;/ul&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/nav&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -2305,9 +2194,98 @@ unzip postboot-1.0.0-beta.zip</code></pre>
               </div>
             </div>
             <div id="scrollspy">
-              <h2 class="font-weight-normal">Scrollspy</h2>
-              <div id="scrollspy-native">
-                <h3 class="font-weight-normal">Native</h3>
+              <h2 class="font-weight-normal">Native</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="sidebar sidebar-light bg-light sidebar-expand-xs" id="sidebar-scrollspy">
+                        <ul class="sidebar-nav nav-tree nav-y-sm">
+                          <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-item">Nav item</a>
+                            <ul class="sidebar-nav nav-tree nav-y-xs font-size-2 pl-3">
+                              <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem">Sub item</a>
+                                <ul class="sidebar-nav nav-tree nav-y-xs font-size-1 pl-3">
+                                  <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem1">Sub item 1</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem2">Sub item 2</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem3">Sub item 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropright dropdown-hover"><a class="nav-link dropdown-toggle" href="#scrollspy-dropdown" data-hover="dropdown">Dropdown</a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#scrollspy-dropdown-item1">Menu item 1</a><a class="dropdown-item" href="#scrollspy-dropdown-item2">Menu item 2</a>
+                              <div class="dropright dropdown-hover"><a class="dropdown-item dropdown-toggle" href="#scrollspy-dropdown-item3" data-hover="dropdown">Menu item 3</a>
+                                <div class="dropdown-menu"><a class="dropdown-item" href="#scrollspy-dropdown-subitem1">Menu subitem 1</a><a class="dropdown-item" href="#scrollspy-dropdown-subitem2">Menu subitem 2</a><a class="dropdown-item" href="#scrollspy-dropdown-subitem3">Menu subitem 3</a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-9" style="overflow-y: scroll; max-height: 300px;" data-spy="scroll" data-target="#sidebar-scrollspy">
+                      <div id="scrollspy-nav-item">
+                        <h2>Nav item</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-nav-subitem">
+                        <h2>Sub item</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-nav-subitem1">
+                        <h2>Sub item 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-nav-subitem2">
+                        <h2>Sub item 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-nav-subitem3">
+                        <h2>Sub item 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown">
+                        <h2>Dropdown</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-item1">
+                        <h2>Menu item 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-item2">
+                        <h2>Menu item 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-item3">
+                        <h2>Menu item 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-subitem1">
+                        <h2>Menu subitem 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-subitem2">
+                        <h2>Menu subitem 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-subitem3">
+                        <h2>Menu subitem 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div id="scrollspy-javascript">
+                <h3 class="font-weight-normal">Javascript</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                 <div class="btn-group dropdown">
@@ -2328,29 +2306,6 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
-                <div id="scrollspy-api">
-                  <h3 class="font-weight-normal">Native</h3>
-                  <div class="card mb-3">
-                    <div class="card-body">
-                                  <div class="btn-group dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
-                                                <div class="dropdown-menu">
-	<a class="dropdown-item" href="#">Menu item 1</a>
-	<a class="dropdown-item" href="#">Menu item 2</a>
-	<a class="dropdown-item" href="#">Menu item 3</a>
-                                                </div>
-                                  </div>
-                    </div>
-                    <div class="card-footer">
-                      <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
-  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
-  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;/div&#x3E;</code></pre>
-                    </div>
-                  </div>
-                  <div class="clearfix"></div>
-                </div>
               </div>
             </div>
             <div id="sidebar">
@@ -2531,6 +2486,32 @@ unzip postboot-1.0.0-beta.zip</code></pre>
 &#x3C;div class=&#x22;text-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;text-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;text-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="text-glass">
+                <h2 class="font-weight-normal">Glass</h2>
+                <div class="card mb-3">
+                  <div class="card-body bg-dark bg-striped"><span class="mr-2 mb-2 text-glass-primary">Primary</span><span class="mr-2 mb-2 text-glass-secondary">Secondary</span><span class="mr-2 mb-2 text-glass-success">Success</span><span class="mr-2 mb-2 text-glass-info">Info</span><span class="mr-2 mb-2 text-glass-warning">Warning</span><span class="mr-2 mb-2 text-glass-danger">Danger</span><span class="mr-2 mb-2 text-glass-light">Light</span><span class="mr-2 mb-2 text-glass-dark">Dark</span><span class="mr-2 mb-2 text-glass-black">Black</span><span class="mr-2 mb-2 text-glass-indigo">Indigo</span><span class="mr-2 mb-2 text-glass-orange">Orange</span><span class="mr-2 mb-2 text-glass-pink">Pink</span><span class="mr-2 mb-2 text-glass-purple">Purple</span><span class="mr-2 mb-2 text-glass-teal">Teal</span><span class="mr-2 mb-2 text-glass-white">White</span>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-glass-primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-secondary&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-success&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-info&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-light&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-dark&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-black&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-glass-white&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>

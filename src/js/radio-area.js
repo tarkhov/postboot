@@ -1,23 +1,43 @@
-const RADIO_AREA_KEY       = 'radioArea'
-const RADIO_AREA_EVENT_KEY = RADIO_AREA_KEY
-
-const RadioAreaClassName = {
-  ACTIVE   : 'active',
-  DISABLED : 'disabled'
-}
-
-const RadioAreaSelector = {
-  DATA_TOGGLE : '[data-toggle="radio-area"]',
-  INPUT       : 'input',
-  ACTIVE      : '.active'
-}
-
-
 class RadioArea {
-  constructor(element) {
+  static get KEY() {
+    return 'radioArea'
+  }
+
+  static get EVENT_KEY() {
+    return 'RadioArea'
+  }
+
+  static get ClassName() {
+    return Object.freeze({
+      ACTIVE   : 'active',
+      DISABLED : 'disabled'
+    })
+  }
+
+  static get Default() {
+    return Object.freeze({
+      parent : null
+    })
+  }
+
+  static get Event() {
+    return Object.freeze({
+      ACTIVATE   : `${RadioArea.EVENT_KEY}Activate`,
+      DEACTIVATE : `${RadioArea.EVENT_KEY}Deactivate`
+    })
+  }
+
+  static get Selector() {
+    return Object.freeze({
+      DATA_TOGGLE : '[data-toggle="radio-area"]',
+      ACTIVE      : '.active'
+    })
+  }
+
+  constructor(element, config) {
     this.element = element
-    this.parent  = RadioArea.getParent(element)
-    this.input   = this.element.querySelector(RadioAreaSelector.INPUT)
+    this.config  = this.getConfig(config)
+    this.parent  = this.config.parent || RadioArea.getParent(element)
   }
 
   addEventListeners() {
@@ -28,17 +48,31 @@ class RadioArea {
   }
 
   toggle() {
-    if (this.element.classList.contains(RadioAreaClassName.DISABLED) || this.element.classList.contains(RadioAreaClassName.ACTIVE)) {
+    if (this.element.classList.contains(RadioArea.ClassName.DISABLED) || this.element.classList.contains(RadioArea.ClassName.ACTIVE)) {
       return
     }
 
-    let active = this.parent.querySelector(RadioAreaSelector.ACTIVE)
+    let parent = this.parent || document
+
+    let active = parent.querySelector(RadioArea.Selector.ACTIVE)
     if (active) {
-      active.classList.remove(RadioAreaClassName.ACTIVE)
+      active.classList.remove(RadioArea.ClassName.ACTIVE)
+      active.setAttribute('aria-checked', 'false')
+
+      let deactivateEvent = Util.createEvent(RadioArea.Event.DEACTIVATE)
+      active.dispatchEvent(deactivateEvent)
     }
 
-    this.element.setAttribute('aria-pressed', true)
-    this.element.classList.add(RadioAreaClassName.ACTIVE)
+    this.element.classList.add(RadioArea.ClassName.ACTIVE)
+    this.element.setAttribute('aria-checked', true)
+
+    let activateEvent = Util.createEvent(RadioArea.Event.ACTIVATE)
+    this.element.dispatchEvent(activateEvent)
+  }
+
+  getConfig(config) {
+    config = Object.assign({}, RadioArea.Default, config)
+    return config
   }
 
   static getParent(element) {
@@ -54,31 +88,33 @@ class RadioArea {
     return parent
   }
 
-  static init(element) {
+  static init(element, config) {
     let area = null
 
-    if (element.hasOwnProperty(RADIO_AREA_KEY)) {
-      area = element[RADIO_AREA_KEY]
+    if (element.hasOwnProperty(RadioArea.KEY)) {
+      area = element[RadioArea.KEY]
     }
 
     if (!area) {
-      area = new RadioArea(element)
-      element[RADIO_AREA_KEY] = area
+      area = new RadioArea(element, config)
+      element[RadioArea.KEY] = area
     }
 
     return area
   }
 }
 
-function radioArea(element) {
-  return RadioArea.init(element)
+function radioArea(element, config) {
+  return RadioArea.init(element, config)
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  let areas = document.querySelectorAll(RadioAreaSelector.DATA_TOGGLE)
-  if (areas.length) {
-    areas.forEach((element) => {
-      radioArea(element).addEventListeners()
-    })
-  }
-})
+if (typeof RADIO_AREA_EVENT_OFF === 'undefined' || RADIO_AREA_EVENT_OFF === true) {
+  document.addEventListener('DOMContentLoaded', function () {
+    let areas = document.querySelectorAll(RadioArea.Selector.DATA_TOGGLE)
+    if (areas.length) {
+      areas.forEach((element) => {
+        radioArea(element).addEventListeners()
+      })
+    }
+  })
+}

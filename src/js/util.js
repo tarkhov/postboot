@@ -1,5 +1,5 @@
-// https://developer.mozilla.org/ru/docs/Web/API/Element/closest#Specification
 (function (e) {
+  // https://developer.mozilla.org/ru/docs/Web/API/Element/closest#Specification
   e.closest = e.closest || function (selector) {
     let node = this
 

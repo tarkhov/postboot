@@ -18,7 +18,7 @@ mixin dropdown_arrow(text, classes)
         = "\n\t"
         a.dropdown-item(href='#')= 'Menu item ' + i
 
-mixin dropdown_hover(text, classes)
-  .btn-group.dropdown-hover(class=classes)
-    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown" data-hover="dropdown")= text
+mixin dropdown_hover()
+  .btn-group.dropdown.dropdown-hover
+    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown" data-hover="dropdown") Hover
     +dropdown_menu()

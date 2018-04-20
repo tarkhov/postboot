@@ -4,27 +4,59 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var RADIO_BUTTON_KEY = 'radioButton';
-var RADIO_BUTTON_EVENT_KEY = RADIO_BUTTON_KEY;
-
-var RadioButtonClassName = {
-  ACTIVE: 'active',
-  DISABLED: 'disabled'
-};
-
-var RadioButtonSelector = {
-  DATA_TOGGLE: '[data-toggle="radio-button"]',
-  INPUT: 'input',
-  ACTIVE: '.active'
-};
-
 var RadioButton = function () {
-  function RadioButton(element) {
+  _createClass(RadioButton, null, [{
+    key: 'KEY',
+    get: function get() {
+      return 'radioButton';
+    }
+  }, {
+    key: 'EVENT_KEY',
+    get: function get() {
+      return 'RadioButton';
+    }
+  }, {
+    key: 'ClassName',
+    get: function get() {
+      return Object.freeze({
+        ACTIVE: 'active',
+        DISABLED: 'disabled'
+      });
+    }
+  }, {
+    key: 'Default',
+    get: function get() {
+      return Object.freeze({
+        input: null,
+        parent: null
+      });
+    }
+  }, {
+    key: 'Event',
+    get: function get() {
+      return Object.freeze({
+        ACTIVATE: RadioButton.EVENT_KEY + 'Activate',
+        DEACTIVATE: RadioButton.EVENT_KEY + 'Deactivate'
+      });
+    }
+  }, {
+    key: 'Selector',
+    get: function get() {
+      return Object.freeze({
+        DATA_TOGGLE: '[data-toggle="radio-button"]',
+        INPUT: 'input',
+        ACTIVE: '.active'
+      });
+    }
+  }]);
+
+  function RadioButton(element, config) {
     _classCallCheck(this, RadioButton);
 
     this.element = element;
-    this.parent = RadioButton.getParent(element);
-    this.input = this.element.querySelector(RadioButtonSelector.INPUT);
+    this.config = this.getConfig(config);
+    this.parent = this.config.parent || RadioButton.getParent(element);
+    this.input = this.config.input || this.element.querySelector(RadioButton.Selector.INPUT);
   }
 
   _createClass(RadioButton, [{
@@ -40,12 +72,12 @@ var RadioButton = function () {
   }, {
     key: 'toggle',
     value: function toggle() {
-      if (this.element.disabled || this.element.classList.contains(RadioButtonClassName.DISABLED) || this.element.classList.contains(RadioButtonClassName.ACTIVE)) {
+      if (this.element.disabled || this.element.classList.contains(RadioButton.ClassName.DISABLED) || this.element.classList.contains(RadioButton.ClassName.ACTIVE)) {
         return;
       }
 
       if (this.input) {
-        if (this.input.disabled || this.input.classList.contains(RadioButtonClassName.DISABLED) || this.input.checked) {
+        if (this.input.disabled || this.input.classList.contains(RadioButton.ClassName.DISABLED) || this.input.checked) {
           return;
         }
 
@@ -54,13 +86,26 @@ var RadioButton = function () {
         this.input.focus();
       }
 
-      var active = this.parent.querySelector(RadioButtonSelector.ACTIVE);
+      var active = this.parent.querySelector(RadioButton.Selector.ACTIVE);
       if (active) {
-        active.classList.remove(RadioButtonClassName.ACTIVE);
+        active.classList.remove(RadioButton.ClassName.ACTIVE);
+        active.setAttribute('aria-pressed', 'false');
+
+        var deactivateEvent = Util.createEvent(RadioButton.Event.DEACTIVATE);
+        active.dispatchEvent(deactivateEvent);
       }
 
+      this.element.classList.add(RadioButton.ClassName.ACTIVE);
       this.element.setAttribute('aria-pressed', true);
-      this.element.classList.add(RadioButtonClassName.ACTIVE);
+
+      var activateEvent = Util.createEvent(RadioButton.Event.ACTIVATE);
+      this.element.dispatchEvent(activateEvent);
+    }
+  }, {
+    key: 'getConfig',
+    value: function getConfig(config) {
+      config = Object.assign({}, RadioButton.Default, config);
+      return config;
     }
   }], [{
     key: 'getParent',
@@ -78,16 +123,16 @@ var RadioButton = function () {
     }
   }, {
     key: 'init',
-    value: function init(element) {
+    value: function init(element, config) {
       var button = null;
 
-      if (element.hasOwnProperty(RADIO_BUTTON_KEY)) {
-        button = element[RADIO_BUTTON_KEY];
+      if (element.hasOwnProperty(RadioButton.KEY)) {
+        button = element[RadioButton.KEY];
       }
 
       if (!button) {
-        button = new RadioButton(element);
-        element[RADIO_BUTTON_KEY] = button;
+        button = new RadioButton(element, config);
+        element[RadioButton.KEY] = button;
       }
 
       return button;
@@ -97,15 +142,17 @@ var RadioButton = function () {
   return RadioButton;
 }();
 
-function radioButton(element) {
-  return RadioButton.init(element);
+function radioButton(element, config) {
+  return RadioButton.init(element, config);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var buttons = document.querySelectorAll(RadioButtonSelector.DATA_TOGGLE);
-  if (buttons.length) {
-    buttons.forEach(function (element) {
-      radioButton(element).addEventListeners();
-    });
-  }
-});
+if (typeof RADIO_BUTTON_EVENT_OFF === 'undefined' || RADIO_BUTTON_EVENT_OFF === true) {
+  document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll(RadioButton.Selector.DATA_TOGGLE);
+    if (buttons.length) {
+      buttons.forEach(function (element) {
+        radioButton(element).addEventListeners();
+      });
+    }
+  });
+}

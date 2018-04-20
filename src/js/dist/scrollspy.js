@@ -6,49 +6,73 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var SCROLLSPY_KEY = 'scrollspy';
-var SCROLLSPY_EVENT_KEY = SCROLLSPY_KEY;
-
-var ScrollSpyDefault = {
-  offset: 10,
-  method: 'auto',
-  target: ''
-};
-
-var ScrollSpyEvent = {
-  ACTIVATE: SCROLLSPY_EVENT_KEY + 'activate'
-};
-
-var ScrollSpyClassName = {
-  ACTIVE: 'active',
-  DROPDOWN_ITEM: 'dropdown-item',
-  DROPDOWN_MENU: 'dropdown-menu',
-  NAV_LINK: 'nav-link',
-  SHOW: 'show'
-};
-
-var ScrollSpySelector = {
-  ACTIVE: '.active',
-  DATA_SPY: '[data-spy="scroll"]',
-  DROPDOWN: '.dropdown',
-  DROPDOWN_ITEM: '.dropdown-item',
-  DROPDOWN_MENU: '.dropdown-menu',
-  DROPDOWN_TOGGLE: '.dropdown-toggle',
-  DROPDOWNS: '.dropup, .dropright, .dropdown, .dropleft',
-  HIDE: '.hide',
-  LIST_ITEM: '.list-group-item',
-  NAV_ITEM: '.nav-item',
-  NAV_LINK: '.nav-link',
-  NAV_LIST_GROUP: '.nav, .list-group',
-  SHOW: '.show'
-};
-
-var ScrollSpyOffsetMethod = {
-  OFFSET: 'offset',
-  POSITION: 'position'
-};
-
 var ScrollSpy = function () {
+  _createClass(ScrollSpy, null, [{
+    key: 'KEY',
+    get: function get() {
+      return 'scrollSpy';
+    }
+  }, {
+    key: 'EVENT_KEY',
+    get: function get() {
+      return 'ScrollSpy';
+    }
+  }, {
+    key: 'ClassName',
+    get: function get() {
+      return Object.freeze({
+        ACTIVE: 'active',
+        DROPDOWN_ITEM: 'dropdown-item',
+        DROPDOWN_MENU: 'dropdown-menu',
+        NAV_LINK: 'nav-link',
+        SHOW: 'show'
+      });
+    }
+  }, {
+    key: 'Default',
+    get: function get() {
+      return Object.freeze({
+        offset: 10,
+        method: 'auto',
+        target: ''
+      });
+    }
+  }, {
+    key: 'Event',
+    get: function get() {
+      return Object.freeze({
+        ACTIVATE: ScrollSpy.EVENT_KEY + 'Activate'
+      });
+    }
+  }, {
+    key: 'OffsetMethod',
+    get: function get() {
+      return Object.freeze({
+        OFFSET: 'offset',
+        POSITION: 'position'
+      });
+    }
+  }, {
+    key: 'Selector',
+    get: function get() {
+      return Object.freeze({
+        ACTIVE: '.active',
+        DATA_SPY: '[data-spy="scroll"]',
+        DROPDOWN: '.dropdown',
+        DROPDOWN_ITEM: '.dropdown-item',
+        DROPDOWN_MENU: '.dropdown-menu',
+        DROPDOWN_TOGGLE: '.dropdown-toggle',
+        DROPDOWNS: '.dropup, .dropright, .dropdown, .dropleft',
+        HIDE: '.hide',
+        LIST_ITEM: '.list-group-item',
+        NAV_ITEM: '.nav-item',
+        NAV_LINK: '.nav-link',
+        NAV_LIST_GROUP: '.nav, .list-group',
+        SHOW: '.show'
+      });
+    }
+  }]);
+
   function ScrollSpy(element, config) {
     var _this = this;
 
@@ -58,7 +82,7 @@ var ScrollSpy = function () {
     this.scrollElement = element.tagName === 'BODY' ? window : element;
     this.config = this.getConfig(config);
     this.target = document.querySelector(this.config.target);
-    this.selector = this.config.target + ' ' + ScrollSpySelector.NAV_LINK + ',' + (this.config.target + ' ' + ScrollSpySelector.LIST_ITEM + ',') + (this.config.target + ' ' + ScrollSpySelector.DROPDOWN_ITEM);
+    this.selector = this.config.target + ' ' + ScrollSpy.Selector.NAV_LINK + ',' + (this.config.target + ' ' + ScrollSpy.Selector.LIST_ITEM + ',') + (this.config.target + ' ' + ScrollSpy.Selector.DROPDOWN_ITEM);
     this.offsets = [];
     this.targets = [];
     this.activeTarget = null;
@@ -77,11 +101,11 @@ var ScrollSpy = function () {
     value: function refresh() {
       var _this2 = this;
 
-      var autoMethod = this.scrollElement !== this.scrollElement.window ? ScrollSpyOffsetMethod.POSITION : ScrollSpyOffsetMethod.OFFSET;
+      var autoMethod = this.scrollElement !== this.scrollElement.window ? ScrollSpy.OffsetMethod.POSITION : ScrollSpy.OffsetMethod.OFFSET;
 
       var offsetMethod = this.config.method === 'auto' ? autoMethod : this.config.method;
 
-      var offsetBase = offsetMethod === ScrollSpyOffsetMethod.POSITION ? this.getScrollTop() : 0;
+      var offsetBase = offsetMethod === ScrollSpy.OffsetMethod.POSITION ? this.getScrollTop() : 0;
 
       this.offsets = [];
       this.targets = [];
@@ -118,7 +142,7 @@ var ScrollSpy = function () {
   }, {
     key: 'getConfig',
     value: function getConfig(config) {
-      config = Object.assign({}, ScrollSpyDefault, config);
+      config = Object.assign({}, ScrollSpy.Default, config);
       return config;
     }
   }, {
@@ -184,39 +208,39 @@ var ScrollSpy = function () {
 
       var link = this.target.querySelector(queries.join(','));
 
-      if (link.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
-        var dropdowns = link.parentAll(ScrollSpySelector.DROPDOWNS + ', ' + ScrollSpySelector.DROPDOWN_MENU, this.config.target);
+      if (link.classList.contains(ScrollSpy.ClassName.DROPDOWN_ITEM)) {
+        var dropdowns = link.parentAll(ScrollSpy.Selector.DROPDOWNS + ', ' + ScrollSpy.Selector.DROPDOWN_MENU, this.config.target);
         if (dropdowns.length) {
           dropdowns.forEach(function (dropdown) {
-            dropdown.classList.add(ScrollSpyClassName.SHOW);
+            dropdown.classList.add(ScrollSpy.ClassName.SHOW);
           });
         }
-      } else if (link.classList.contains(ScrollSpyClassName.NAV_LINK)) {
-        var items = link.parentAll(ScrollSpySelector.NAV_ITEM, this.config.target);
+      } else if (link.classList.contains(ScrollSpy.ClassName.NAV_LINK)) {
+        var items = link.parentAll(ScrollSpy.Selector.NAV_ITEM, this.config.target);
         if (items.length) {
           items.forEach(function (item) {
-            item.classList.add(ScrollSpyClassName.SHOW);
+            item.classList.add(ScrollSpy.ClassName.SHOW);
           });
         }
       } else {
-        //$link.parents(ScrollSpySelector.NAV_LIST_GROUP).prev(`${ScrollSpySelector.NAV_LINK}, ${ScrollSpySelector.LIST_ITEM}`).addClass(ScrollSpyClassName.ACTIVE)
+        //$link.parents(ScrollSpy.Selector.NAV_LIST_GROUP).prev(`${ScrollSpy.Selector.NAV_LINK}, ${ScrollSpy.Selector.LIST_ITEM}`).addClass(ScrollSpy.ClassName.ACTIVE)
       }
-      link.classList.add(ScrollSpyClassName.ACTIVE);
+      link.classList.add(ScrollSpy.ClassName.ACTIVE);
 
-      var activateEvent = Util.createEvent(ScrollSpyEvent.ACTIVATE, { relatedTarget: target });
+      var activateEvent = Util.createEvent(ScrollSpy.Event.ACTIVATE, { relatedTarget: target });
       this.scrollElement.dispatchEvent(activateEvent);
     }
   }, {
     key: 'clear',
     value: function clear() {
-      var active = this.target.querySelector(ScrollSpySelector.ACTIVE);
+      var active = this.target.querySelector(ScrollSpy.Selector.ACTIVE);
       if (active) {
-        active.classList.remove(ScrollSpyClassName.ACTIVE);
-        if (active.classList.contains(ScrollSpyClassName.NAV_LINK) || active.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
-          var items = active.parentAll(ScrollSpySelector.SHOW, this.config.target);
+        active.classList.remove(ScrollSpy.ClassName.ACTIVE);
+        if (active.classList.contains(ScrollSpy.ClassName.NAV_LINK) || active.classList.contains(ScrollSpy.ClassName.DROPDOWN_ITEM)) {
+          var items = active.parentAll(ScrollSpy.Selector.SHOW, this.config.target);
           if (items.length) {
             items.forEach(function (item) {
-              item.classList.remove(ScrollSpyClassName.SHOW);
+              item.classList.remove(ScrollSpy.ClassName.SHOW);
             });
           }
         }
@@ -227,14 +251,14 @@ var ScrollSpy = function () {
     value: function init(element, options) {
       var scrollspy = null;
 
-      if (element.hasOwnProperty(SCROLLSPY_KEY)) {
-        scrollspy = element[SCROLLSPY_KEY];
+      if (element.hasOwnProperty(ScrollSpy.KEY)) {
+        scrollspy = element[ScrollSpy.KEY];
       }
 
       if (!scrollspy) {
         var config = (typeof options === 'undefined' ? 'undefined' : _typeof(options)) === 'object' && options;
         scrollspy = new ScrollSpy(element, config);
-        element[SCROLLSPY_KEY] = scrollspy;
+        element[ScrollSpy.KEY] = scrollspy;
       }
 
       return scrollspy;
@@ -248,13 +272,15 @@ function scrollSpy(element, config) {
   return ScrollSpy.init(element, config);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  window.addEventListener('load', function () {
-    var scrollSpys = document.querySelectorAll(ScrollSpySelector.DATA_SPY);
-    if (scrollSpys.length) {
-      scrollSpys.forEach(function (element) {
-        scrollSpy(element, element.dataset);
-      });
-    }
+if (typeof SCROLLSPY_EVENT_OFF === 'undefined' || SCROLLSPY_EVENT_OFF === true) {
+  document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('load', function () {
+      var scrollSpys = document.querySelectorAll(ScrollSpy.Selector.DATA_SPY);
+      if (scrollSpys.length) {
+        scrollSpys.forEach(function (element) {
+          scrollSpy(element, element.dataset);
+        });
+      }
+    });
   });
-});
+}

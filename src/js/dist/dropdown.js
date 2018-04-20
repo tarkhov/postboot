@@ -4,10 +4,6 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var DROPDOWN_KEY = 'dropdown';
-var DROPDOWN_EVENT_KEY = DROPDOWN_KEY;
-var DROPDOWN_DROPPED_KEY = 'dropped';
-
 var ESCAPE_KEYCODE = 27; // KeyboardEvent.which value for Escape (Esc) key
 var SPACE_KEYCODE = 32; // KeyboardEvent.which value for space key
 var TAB_KEYCODE = 9; // KeyboardEvent.which value for tab key
@@ -16,36 +12,72 @@ var ARROW_DOWN_KEYCODE = 40; // KeyboardEvent.which value for down arrow key
 var RIGHT_MOUSE_BUTTON_WHICH = 3; // MouseEvent.which value for the right button (assuming a right-handed mouse)
 var DROPDOWN_REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + '|' + ARROW_DOWN_KEYCODE + '|' + ESCAPE_KEYCODE);
 
-var DropdownClassName = {
-  DISABLED: 'disabled',
-  SHOW: 'show'
-};
-
-var DropdownSelector = {
-  DROPPED: '[' + DROPDOWN_DROPPED_KEY + ']',
-  DATA_HOVER: '[data-hover="dropdown"]',
-  DATA_TOGGLE: '[data-toggle="dropdown"]',
-  MEGA_MENU: '.dropdown-mega .dropdown-menu',
-  FORM: 'form',
-  MENU: '.dropdown-menu',
-  NAVBAR_NAV: '.navbar-nav',
-  VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled)'
-};
-
-var DropdownEvent = {
-  HIDE: DROPDOWN_EVENT_KEY + 'hide',
-  HIDDEN: DROPDOWN_EVENT_KEY + 'hidden',
-  SHOW: DROPDOWN_EVENT_KEY + 'show',
-  SHOWN: DROPDOWN_EVENT_KEY + 'shown'
-};
-
 var Dropdown = function () {
-  function Dropdown(element) {
+  _createClass(Dropdown, null, [{
+    key: 'KEY',
+    get: function get() {
+      return 'dropdown';
+    }
+  }, {
+    key: 'DROPPED_KEY',
+    get: function get() {
+      return 'dropped';
+    }
+  }, {
+    key: 'EVENT_KEY',
+    get: function get() {
+      return 'Dropdown';
+    }
+  }, {
+    key: 'ClassName',
+    get: function get() {
+      return Object.freeze({
+        ANIMATING: 'animating',
+        DISABLED: 'disabled',
+        SHOW: 'show'
+      });
+    }
+  }, {
+    key: 'Default',
+    get: function get() {
+      return Object.freeze({
+        menu: null,
+        parent: null
+      });
+    }
+  }, {
+    key: 'Event',
+    get: function get() {
+      return Object.freeze({
+        HIDE: Dropdown.EVENT_KEY + 'Hide',
+        HIDDEN: Dropdown.EVENT_KEY + 'Hidden',
+        SHOW: Dropdown.EVENT_KEY + 'Show',
+        SHOWN: Dropdown.EVENT_KEY + 'Shown'
+      });
+    }
+  }, {
+    key: 'Selector',
+    get: function get() {
+      return Object.freeze({
+        DATA_HOVER: '[data-hover="dropdown"]',
+        DATA_TOGGLE: '[data-toggle="dropdown"]',
+        DROPPED: '[' + Dropdown.DROPPED_KEY + ']',
+        MEGA_MENU: '.dropdown-mega .dropdown-menu',
+        FORM: 'form',
+        MENU: '.dropdown-menu',
+        NAVBAR_NAV: '.navbar-nav',
+        VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled)'
+      });
+    }
+  }]);
+
+  function Dropdown(element, config) {
     _classCallCheck(this, Dropdown);
 
     this.element = element;
-    this.parent = Dropdown.getParent(this.element);
-    this.menu = Dropdown.getMenu(this.element, this.parent);
+    this.config = this.getConfig(config);
+    this.parent = this.config.parent || Dropdown.getParent(this.element);
+    this.menu = this.config.menu || Dropdown.getMenu(this.element, this.parent);
   }
 
   _createClass(Dropdown, [{
@@ -61,13 +93,13 @@ var Dropdown = function () {
       this.element.addEventListener('keydown', Dropdown.keydown);
       this.menu.addEventListener('keydown', Dropdown.keydown);
 
-      if (this.menu.classList.contains(DropdownSelector.MEGA_MENU)) {
+      if (this.menu.classList.contains(Dropdown.Selector.MEGA_MENU)) {
         this.menu.addEventListener('click', function (event) {
           event.stopPropagation();
         });
       }
 
-      var form = this.parent.querySelector(DropdownSelector.FORM);
+      var form = this.parent.querySelector(Dropdown.Selector.FORM);
       if (form) {
         form.addEventListener('click', function (event) {
           event.stopPropagation();
@@ -80,7 +112,7 @@ var Dropdown = function () {
       var _this2 = this;
 
       this.element.addEventListener('mouseenter', function (event) {
-        return _this2.show(event);
+        return _this2.toggle(event);
       });
       this.parent.addEventListener('mouseleave', function () {
         return _this2.hide();
@@ -89,11 +121,11 @@ var Dropdown = function () {
   }, {
     key: 'toggle',
     value: function toggle(event) {
-      if (this.element.disabled || this.element.classList.contains(DropdownClassName.DISABLED)) {
+      if (this.element.disabled || this.element.classList.contains(Dropdown.ClassName.DISABLED)) {
         return;
       }
 
-      var isActive = this.menu.classList.contains(DropdownClassName.SHOW);
+      var isActive = this.menu.classList.contains(Dropdown.ClassName.SHOW);
 
       Dropdown.hideMenus(event);
 
@@ -104,88 +136,56 @@ var Dropdown = function () {
       var relatedTarget = {
         relatedTarget: this.element
       };
-      var showEvent = Util.createEvent(DropdownEvent.SHOW, relatedTarget);
-
+      var showEvent = Util.createEvent(Dropdown.Event.SHOW, relatedTarget);
       this.parent.dispatchEvent(showEvent);
-
       if (showEvent.defaultPrevented) {
         return;
       }
 
-      if ('ontouchstart' in document.documentElement && !this.parent.closest(DropdownSelector.NAVBAR_NAV)) {
+      if ('ontouchstart' in document.documentElement && !this.parent.closest(Dropdown.Selector.NAVBAR_NAV)) {
         document.body.children.addEventListener('mouseover', function () {});
       }
 
-      this.element.focus();
+      //this.element.focus()
       this.element.setAttribute('aria-expanded', true);
-      this.element.setAttribute(DROPDOWN_DROPPED_KEY, '');
+      this.element.setAttribute(Dropdown.DROPPED_KEY, '');
 
-      this.menu.classList.toggle(DropdownClassName.SHOW);
-      this.parent.classList.toggle(DropdownClassName.SHOW);
+      this.menu.classList.toggle(Dropdown.ClassName.SHOW);
+      this.parent.classList.toggle(Dropdown.ClassName.SHOW);
 
-      var shownEvent = Util.createEvent(DropdownEvent.SHOWN, relatedTarget);
-      this.parent.dispatchEvent(shownEvent);
-    }
-  }, {
-    key: 'show',
-    value: function show(event) {
-      if (this.element.disabled || this.element.classList.contains(DropdownClassName.DISABLED)) {
-        return;
-      }
-
-      var isActive = this.menu.classList.contains(DropdownClassName.SHOW);
-
-      Dropdown.hideMenus(event);
-
-      if (isActive) {
-        return;
-      }
-
-      var relatedTarget = {
-        relatedTarget: this.element
-      };
-      var showEvent = Util.createEvent(DropdownEvent.SHOW, relatedTarget);
-
-      this.parent.dispatchEvent(showEvent);
-
-      if (showEvent.defaultPrevented) {
-        return;
-      }
-
-      this.element.setAttribute('aria-expanded', true);
-      this.element.setAttribute(DROPDOWN_DROPPED_KEY, '');
-
-      this.menu.classList.add(DropdownClassName.SHOW);
-      this.parent.classList.add(DropdownClassName.SHOW);
-
-      var shownEvent = Util.createEvent(DropdownEvent.SHOWN, relatedTarget);
+      var shownEvent = Util.createEvent(Dropdown.Event.SHOWN, relatedTarget);
       this.parent.dispatchEvent(shownEvent);
     }
   }, {
     key: 'hide',
     value: function hide() {
-      if (!this.menu.classList.contains(DropdownClassName.SHOW)) {
+      if (!this.menu.classList.contains(Dropdown.ClassName.SHOW)) {
         return;
       }
 
       var relatedTarget = {
         relatedTarget: this.element
       };
-
-      var hideEvent = Util.createEvent(DropdownEvent.HIDE, relatedTarget);
+      var hideEvent = Util.createEvent(Dropdown.Event.HIDE, relatedTarget);
       this.parent.dispatchEvent(hideEvent);
       if (hideEvent.defaultPrevented) {
         return;
       }
 
       this.element.setAttribute('aria-expanded', 'false');
-      this.element.removeAttribute(DROPDOWN_DROPPED_KEY);
+      this.element.removeAttribute(Dropdown.DROPPED_KEY);
 
-      this.menu.classList.remove(DropdownClassName.SHOW);
-      this.parent.classList.remove(DropdownClassName.SHOW);
+      this.menu.classList.remove(Dropdown.ClassName.SHOW);
+      this.parent.classList.remove(Dropdown.ClassName.SHOW);
 
-      var hiddenEvent = Util.createEvent(DropdownEvent.HIDDEN, relatedTarget);
+      var hiddenEvent = Util.createEvent(Dropdown.Event.HIDDEN, relatedTarget);
       this.parent.dispatchEvent(hiddenEvent);
+    }
+  }, {
+    key: 'getConfig',
+    value: function getConfig(config) {
+      config = Object.assign({}, Dropdown.Default, config);
+      return config;
     }
   }], [{
     key: 'hideMenus',
@@ -194,17 +194,17 @@ var Dropdown = function () {
         return;
       }
 
-      var elements = document.querySelectorAll(DropdownSelector.DROPPED);
+      var elements = document.querySelectorAll(Dropdown.Selector.DROPPED);
       if (elements.length) {
         elements.forEach(function (element) {
-          if (!element.hasOwnProperty(DROPDOWN_KEY)) {
+          if (!element.hasOwnProperty(Dropdown.KEY)) {
             return true;
           }
 
-          var menu = element[DROPDOWN_KEY].menu;
-          var parent = element[DROPDOWN_KEY].parent;
+          var menu = element[Dropdown.KEY].menu;
+          var parent = element[Dropdown.KEY].parent;
 
-          if (!parent.classList.contains(DropdownClassName.SHOW)) {
+          if (!parent.classList.contains(Dropdown.ClassName.SHOW)) {
             return true;
           }
 
@@ -219,7 +219,7 @@ var Dropdown = function () {
           var relatedTarget = {
             relatedTarget: element
           };
-          var hideEvent = Util.createEvent(DropdownEvent.HIDE, relatedTarget);
+          var hideEvent = Util.createEvent(Dropdown.Event.HIDE, relatedTarget);
           parent.dispatchEvent(hideEvent);
           if (hideEvent.defaultPrevented) {
             return true;
@@ -230,12 +230,12 @@ var Dropdown = function () {
           }
 
           element.setAttribute('aria-expanded', 'false');
-          element.removeAttribute(DROPDOWN_DROPPED_KEY);
+          element.removeAttribute(Dropdown.DROPPED_KEY);
 
-          menu.classList.remove(DropdownClassName.SHOW);
-          parent.classList.remove(DropdownClassName.SHOW);
+          menu.classList.remove(Dropdown.ClassName.SHOW);
+          parent.classList.remove(Dropdown.ClassName.SHOW);
 
-          var hiddenEvent = Util.createEvent(DropdownEvent.HIDDEN, relatedTarget);
+          var hiddenEvent = Util.createEvent(Dropdown.Event.HIDDEN, relatedTarget);
           parent.dispatchEvent(hiddenEvent);
         });
       }
@@ -263,7 +263,7 @@ var Dropdown = function () {
       if (selector) {
         menu = document.querySelector(selector);
       } else {
-        menu = parent.querySelector(DropdownSelector.MENU);
+        menu = parent.querySelector(Dropdown.Selector.MENU);
       }
 
       return menu;
@@ -278,17 +278,17 @@ var Dropdown = function () {
       event.preventDefault();
       event.stopPropagation();
 
-      if (this.disabled || this.classList.contains(DropdownClassName.DISABLED)) {
+      if (this.disabled || this.classList.contains(Dropdown.ClassName.DISABLED)) {
         return;
       }
 
       var parent = Dropdown.getParent(this);
-      var isActive = parent.classList.contains(DropdownClassName.SHOW);
+      var isActive = parent.classList.contains(Dropdown.ClassName.SHOW);
 
       if (!isActive && (event.which !== ESCAPE_KEYCODE || event.which !== SPACE_KEYCODE) || isActive && (event.which === ESCAPE_KEYCODE || event.which === SPACE_KEYCODE)) {
 
         if (event.which === ESCAPE_KEYCODE) {
-          var toggle = parent.querySelector(DropdownSelector.DATA_TOGGLE);
+          var toggle = parent.querySelector(Dropdown.Selector.DATA_TOGGLE);
           toggle.dispatchEvent(new FocusEvent('focus'));
         }
 
@@ -297,7 +297,7 @@ var Dropdown = function () {
         return;
       }
 
-      var items = Array.prototype.slice.call(parent.querySelectorAll(DropdownSelector.VISIBLE_ITEMS));
+      var items = Array.prototype.slice.call(parent.querySelectorAll(Dropdown.Selector.VISIBLE_ITEMS));
 
       if (!items.length) {
         return;
@@ -323,16 +323,16 @@ var Dropdown = function () {
     }
   }, {
     key: 'init',
-    value: function init(element) {
+    value: function init(element, config) {
       var dropdown = null;
 
-      if (element.hasOwnProperty(DROPDOWN_KEY)) {
-        dropdown = element[DROPDOWN_KEY];
+      if (element.hasOwnProperty(Dropdown.KEY)) {
+        dropdown = element[Dropdown.KEY];
       }
 
       if (!dropdown) {
-        dropdown = new Dropdown(element);
-        element[DROPDOWN_KEY] = dropdown;
+        dropdown = new Dropdown(element, config);
+        element[Dropdown.KEY] = dropdown;
       }
 
       return dropdown;
@@ -342,25 +342,27 @@ var Dropdown = function () {
   return Dropdown;
 }();
 
-function dropdown(element) {
-  return Dropdown.init(element);
+function dropdown(element, config) {
+  return Dropdown.init(element, config);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var dataToggles = document.querySelectorAll(DropdownSelector.DATA_TOGGLE);
-  if (dataToggles.length) {
-    dataToggles.forEach(function (element) {
-      dropdown(element).addEventListeners();
-    });
-  }
+if (typeof DROPDOWN_EVENT_OFF === 'undefined' || DROPDOWN_EVENT_OFF === true) {
+  document.addEventListener('DOMContentLoaded', function () {
+    var dataToggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE);
+    if (dataToggles.length) {
+      dataToggles.forEach(function (element) {
+        dropdown(element).addEventListeners();
+      });
+    }
 
-  var dataHovers = document.querySelectorAll(DropdownSelector.DATA_HOVER);
-  if (dataHovers.length) {
-    dataHovers.forEach(function (element) {
-      dropdown(element).addHoverListeners();
-    });
-  }
+    var dataHovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER);
+    if (dataHovers.length) {
+      dataHovers.forEach(function (element) {
+        dropdown(element).addHoverListeners();
+      });
+    }
 
-  document.addEventListener('click', Dropdown.hideMenus);
-  document.addEventListener('keyup', Dropdown.hideMenus);
-});
+    document.addEventListener('click', Dropdown.hideMenus);
+    document.addEventListener('keyup', Dropdown.hideMenus);
+  });
+}

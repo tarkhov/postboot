@@ -14,10 +14,10 @@ var NoticeSelector = {
 };
 
 var NoticeEvent = {
-  HIDE: NOTICE_EVENT_KEY + 'hide',
-  HIDDEN: NOTICE_EVENT_KEY + 'hidden',
-  SHOW: NOTICE_EVENT_KEY + 'show',
-  SHOWN: NOTICE_EVENT_KEY + 'shown'
+  HIDE: NOTICE_EVENT_KEY + 'Hide',
+  HIDDEN: NOTICE_EVENT_KEY + 'Hidden',
+  SHOW: NOTICE_EVENT_KEY + 'Show',
+  SHOWN: NOTICE_EVENT_KEY + 'Shown'
 };
 
 var NoticeClassName = {

@@ -45,11 +45,7 @@ $border-styles: (
   solid: solid
 ) !default;
 
-$border-widths: (
-  1: 1px,
-  2: 2px,
-  3: 3px
-) !default;
+$border-widths: 12 !default;
 
 // Grid containers
 $container-sm-max-widths: (
@@ -158,6 +154,9 @@ $dropdown-arrow-color:       $dropdown-bg !default;
 $dropdown-arrow-outer-color: fade-in($dropdown-border-color, .05) !default;
 
 $dropdown-menu-body-padding: 1rem 1.5rem !default;
+
+// Position
+$positions: top, right, bottom, left;
 
 // Pre
 $pre-lg: 800px !default;

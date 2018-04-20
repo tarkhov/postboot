@@ -4,8 +4,8 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-// https://developer.mozilla.org/ru/docs/Web/API/Element/closest#Specification
 (function (e) {
+  // https://developer.mozilla.org/ru/docs/Web/API/Element/closest#Specification
   e.closest = e.closest || function (selector) {
     var node = this;
 

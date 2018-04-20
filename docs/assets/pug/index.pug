@@ -18,11 +18,11 @@ html(lang="en")
     link(rel="stylesheet" href="/assets/css/app.min.css")
   body.pt-navbar(data-spy="scroll" data-target="#sidebar-left")
     header.pb-gutter(role="banner")
-      nav#navbar-top.navbar.navbar-expand-xs.navbar-light.bg-light.px-0.fixed-top(role="navigation")
+      nav#navbar-top.navbar.navbar-expand-xs.navbar-light.bg-light.px-sm-0.fixed-top(role="navigation")
         .container
           button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar-collapse-top")
             span.navbar-toggler-icon
-          a.navbar-brand(href="/" rel="home") #[span.rounded.py-1.text-white.font-weight-medium.bg-purple(style="padding-left: .6rem;padding-right: .6rem;") P]&nbsp;&nbsp;#[span= title]&nbsp;&nbsp;#[sup.text-success= pkg.version]
+          a.navbar-brand(href="/" rel="home") #[span.rounded.py-1.text-white.font-weight-medium.bg-purple(style="padding-left: .6rem;padding-right: .6rem;") P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
 
           #navbar-collapse-top.collapse.navbar-collapse
             ul.navbar-nav.mr-auto
@@ -32,15 +32,15 @@ html(lang="en")
                   a.dropdown-item(href='/v1/') v1
             ul.navbar-nav
               li.nav-item
-                a.nav-link(href=githubUrl + '/' + username + '/' + pkg.name) #[i.fab.fa-github-alt]&nbsp;&nbsp;GitHub
+                a.nav-link(href=githubUrl + '/' + username + '/' + pkg.name) #[i.fab.fa-github-alt]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;GitHub"]
               li.nav-item
-                a.nav-link(href="https://www.producthunt.com/posts/" + pkg.name) #[i.fab.fa-product-hunt]&nbsp;&nbsp;ProductHunt
+                a.nav-link(href="https://www.producthunt.com/posts/" + pkg.name) #[i.fab.fa-product-hunt]#[span.d-none.d-sm-inline!="&nbsp;&nbsp;ProductHunt"]
             a.btn.btn-primary.btn-sm.ml-2(href=downloadUrl) Download
 
     .container
       .row
         .col-lg-2
-          aside#sidebar-left.sidebar.sidebar-light.sidebar-expand-xs.py-0.position-fixed(role="complementary")
+          aside#sidebar-left.sidebar.sidebar-light.sidebar-expand-sm.py-0.position-fixed(role="complementary")
             include sidebar-left.pug
         main.col-lg-10(role="main")
           article(role="article")

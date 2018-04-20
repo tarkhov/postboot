@@ -4,25 +4,56 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var CHECKBOX_BUTTON_KEY = 'checkboxButton';
-var CHECKBOX_BUTTON_EVENT_KEY = CHECKBOX_BUTTON_KEY;
-
-var CheckboxButtonClassName = {
-  ACTIVE: 'active',
-  DISABLED: 'disabled'
-};
-
-var CheckboxButtonSelector = {
-  DATA_TOGGLE: '[data-toggle="checkbox-button"]',
-  INPUT: 'input'
-};
-
 var CheckboxButton = function () {
-  function CheckboxButton(element) {
+  _createClass(CheckboxButton, null, [{
+    key: 'KEY',
+    get: function get() {
+      return 'checkboxButton';
+    }
+  }, {
+    key: 'EVENT_KEY',
+    get: function get() {
+      return 'CheckboxButton';
+    }
+  }, {
+    key: 'ClassName',
+    get: function get() {
+      return Object.freeze({
+        ACTIVE: 'active',
+        DISABLED: 'disabled'
+      });
+    }
+  }, {
+    key: 'Default',
+    get: function get() {
+      return Object.freeze({
+        input: null
+      });
+    }
+  }, {
+    key: 'Event',
+    get: function get() {
+      return Object.freeze({
+        ACTIVATE: CheckboxButton.EVENT_KEY + 'Activate',
+        DEACTIVATE: CheckboxButton.EVENT_KEY + 'Deactivate'
+      });
+    }
+  }, {
+    key: 'Selector',
+    get: function get() {
+      return Object.freeze({
+        DATA_TOGGLE: '[data-toggle="checkbox-button"]',
+        INPUT: 'input'
+      });
+    }
+  }]);
+
+  function CheckboxButton(element, config) {
     _classCallCheck(this, CheckboxButton);
 
     this.element = element;
-    this.input = this.element.querySelector(CheckboxButtonSelector.INPUT);
+    this.config = this.getConfig(config);
+    this.input = this.config.input || this.element.querySelector(CheckboxButton.Selector.INPUT);
   }
 
   _createClass(CheckboxButton, [{
@@ -38,14 +69,14 @@ var CheckboxButton = function () {
   }, {
     key: 'toggle',
     value: function toggle() {
-      if (this.element.disabled || this.element.classList.contains(CheckboxButtonClassName.DISABLED)) {
+      if (this.element.disabled || this.element.classList.contains(CheckboxButton.ClassName.DISABLED)) {
         return;
       }
 
-      var isActive = this.element.classList.contains(CheckboxButtonClassName.ACTIVE);
+      var isActive = this.element.classList.contains(CheckboxButton.ClassName.ACTIVE);
 
       if (this.input) {
-        if (this.input.disabled || this.input.classList.contains(CheckboxButtonClassName.DISABLED)) {
+        if (this.input.disabled || this.input.classList.contains(CheckboxButton.ClassName.DISABLED)) {
           return;
         }
 
@@ -54,21 +85,38 @@ var CheckboxButton = function () {
         this.input.focus();
       }
 
-      this.element.setAttribute('aria-pressed', !isActive);
-      this.element.classList.toggle(CheckboxButtonClassName.ACTIVE);
+      this.element.classList.toggle(CheckboxButton.ClassName.ACTIVE);
+
+      if (!isActive) {
+        this.element.setAttribute('aria-pressed', true);
+
+        var activateEvent = Util.createEvent(CheckboxButton.Event.ACTIVATE);
+        this.element.dispatchEvent(activateEvent);
+      } else {
+        this.element.setAttribute('aria-pressed', 'false');
+
+        var deactivateEvent = Util.createEvent(CheckboxButton.Event.DEACTIVATE);
+        this.element.dispatchEvent(deactivateEvent);
+      }
+    }
+  }, {
+    key: 'getConfig',
+    value: function getConfig(config) {
+      config = Object.assign({}, CheckboxButton.Default, config);
+      return config;
     }
   }], [{
     key: 'init',
-    value: function init(element) {
+    value: function init(element, config) {
       var button = null;
 
-      if (element.hasOwnProperty(CHECKBOX_BUTTON_KEY)) {
-        button = element[CHECKBOX_BUTTON_KEY];
+      if (element.hasOwnProperty(CheckboxButton.KEY)) {
+        button = element[CheckboxButton.KEY];
       }
 
       if (!button) {
-        button = new CheckboxButton(element);
-        element[CHECKBOX_BUTTON_KEY] = button;
+        button = new CheckboxButton(element, config);
+        element[CheckboxButton.KEY] = button;
       }
 
       return button;
@@ -78,15 +126,17 @@ var CheckboxButton = function () {
   return CheckboxButton;
 }();
 
-function checkboxButton(element) {
-  return CheckboxButton.init(element);
+function checkboxButton(element, config) {
+  return CheckboxButton.init(element, config);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  var buttons = document.querySelectorAll(CheckboxButtonSelector.DATA_TOGGLE);
-  if (buttons.length) {
-    buttons.forEach(function (element) {
-      checkboxButton(element).addEventListeners();
-    });
-  }
-});
+if (typeof CHECKBOX_BUTTON_EVENT_OFF === 'undefined' || CHECKBOX_BUTTON_EVENT_OFF === true) {
+  document.addEventListener('DOMContentLoaded', function () {
+    var buttons = document.querySelectorAll(CheckboxButton.Selector.DATA_TOGGLE);
+    if (buttons.length) {
+      buttons.forEach(function (element) {
+        checkboxButton(element).addEventListeners();
+      });
+    }
+  });
+}

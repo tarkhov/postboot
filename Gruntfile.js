@@ -55,8 +55,8 @@ module.exports = function (grunt) {
           'src/js/dist/radio-area.js': 'src/js/radio-area.js',
           'src/js/dist/checkbox-button.js': 'src/js/checkbox-button.js',
           'src/js/dist/radio-button.js': 'src/js/radio-button.js',
+          'src/js/dist/collapse.js': 'src/js/collapse.js',
           'src/js/dist/dropdown.js': 'src/js/dropdown.js',
-          'src/js/dist/notice.js': 'src/js/notice.js',
           'src/js/dist/scrollspy.js': 'src/js/scrollspy.js'
         }
       }
@@ -73,6 +73,7 @@ module.exports = function (grunt) {
           'src/js/dist/radio-area.js',
           'src/js/dist/checkbox-button.js',
           'src/js/dist/radio-button.js',
+          'src/js/dist/collapse.js',
           'src/js/dist/dropdown.js',
           'src/js/dist/notice.js',
           'src/js/dist/scrollspy.js'

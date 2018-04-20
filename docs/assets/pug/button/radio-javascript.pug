@@ -1,0 +1,17 @@
+extends ../example-js.pug
+
+block example_title
+  h4.font-weight-normal Javascript
+
+block example_code
+  :encode-pug
+    | /* Source */
+    script.
+      document.addEventListener('DOMContentLoaded', function () {
+        var buttons = document.querySelectorAll(RadioButton.Selector.DATA_TOGGLE);
+        if (buttons.length) {
+          buttons.forEach(function (element) {
+            radioButton(element).addEventListeners();
+          });
+        }
+      });

@@ -1,55 +1,69 @@
-const SCROLLSPY_KEY       = 'scrollspy'
-const SCROLLSPY_EVENT_KEY = SCROLLSPY_KEY
-
-const ScrollSpyDefault = {
-  offset : 10,
-  method : 'auto',
-  target : ''
-}
-
-const ScrollSpyEvent = {
-  ACTIVATE : `${SCROLLSPY_EVENT_KEY}activate`
-}
-
-const ScrollSpyClassName = {
-  ACTIVE        : 'active',
-  DROPDOWN_ITEM : 'dropdown-item',
-  DROPDOWN_MENU : 'dropdown-menu',
-  NAV_LINK      : 'nav-link',
-  SHOW          : 'show'
-}
-
-const ScrollSpySelector = {
-  ACTIVE          : '.active',
-  DATA_SPY        : '[data-spy="scroll"]',
-  DROPDOWN        : '.dropdown',
-  DROPDOWN_ITEM   : '.dropdown-item',
-  DROPDOWN_MENU   : '.dropdown-menu',
-  DROPDOWN_TOGGLE : '.dropdown-toggle',
-  DROPDOWNS       : '.dropup, .dropright, .dropdown, .dropleft',
-  HIDE            : '.hide',
-  LIST_ITEM       : '.list-group-item',
-  NAV_ITEM        : '.nav-item',
-  NAV_LINK        : '.nav-link',
-  NAV_LIST_GROUP  : '.nav, .list-group',
-  SHOW            : '.show'
-}
-
-const ScrollSpyOffsetMethod = {
-  OFFSET   : 'offset',
-  POSITION : 'position'
-}
-
-
 class ScrollSpy {
+  static get KEY() {
+    return 'scrollSpy'
+  }
+
+  static get EVENT_KEY() {
+    return 'ScrollSpy'
+  }
+
+  static get ClassName() {
+    return Object.freeze({
+      ACTIVE        : 'active',
+      DROPDOWN_ITEM : 'dropdown-item',
+      DROPDOWN_MENU : 'dropdown-menu',
+      NAV_LINK      : 'nav-link',
+      SHOW          : 'show'
+    })
+  }
+
+  static get Default() {
+    return Object.freeze({
+      offset : 10,
+      method : 'auto',
+      target : ''
+    })
+  }
+
+  static get Event() {
+    return Object.freeze({
+      ACTIVATE : `${ScrollSpy.EVENT_KEY}Activate`
+    })
+  }
+
+  static get OffsetMethod() {
+    return Object.freeze({
+      OFFSET   : 'offset',
+      POSITION : 'position'
+    })
+  }
+
+  static get Selector() {
+    return Object.freeze({
+      ACTIVE          : '.active',
+      DATA_SPY        : '[data-spy="scroll"]',
+      DROPDOWN        : '.dropdown',
+      DROPDOWN_ITEM   : '.dropdown-item',
+      DROPDOWN_MENU   : '.dropdown-menu',
+      DROPDOWN_TOGGLE : '.dropdown-toggle',
+      DROPDOWNS       : '.dropup, .dropright, .dropdown, .dropleft',
+      HIDE            : '.hide',
+      LIST_ITEM       : '.list-group-item',
+      NAV_ITEM        : '.nav-item',
+      NAV_LINK        : '.nav-link',
+      NAV_LIST_GROUP  : '.nav, .list-group',
+      SHOW            : '.show'
+    })
+  }
+
   constructor(element, config) {
     this.element       = element
     this.scrollElement = element.tagName === 'BODY' ? window : element
     this.config        = this.getConfig(config)
     this.target        = document.querySelector(this.config.target)
-    this.selector      = `${this.config.target} ${ScrollSpySelector.NAV_LINK},`
-                        + `${this.config.target} ${ScrollSpySelector.LIST_ITEM},`
-                        + `${this.config.target} ${ScrollSpySelector.DROPDOWN_ITEM}`
+    this.selector      = `${this.config.target} ${ScrollSpy.Selector.NAV_LINK},`
+                        + `${this.config.target} ${ScrollSpy.Selector.LIST_ITEM},`
+                        + `${this.config.target} ${ScrollSpy.Selector.DROPDOWN_ITEM}`
     this.offsets       = []
     this.targets       = []
     this.activeTarget  = null
@@ -63,12 +77,12 @@ class ScrollSpy {
 
   refresh() {
     let autoMethod = this.scrollElement !== this.scrollElement.window ?
-      ScrollSpyOffsetMethod.POSITION : ScrollSpyOffsetMethod.OFFSET
+      ScrollSpy.OffsetMethod.POSITION : ScrollSpy.OffsetMethod.OFFSET
 
     let offsetMethod = this.config.method === 'auto' ?
       autoMethod : this.config.method
 
-    let offsetBase = offsetMethod === ScrollSpyOffsetMethod.POSITION ?
+    let offsetBase = offsetMethod === ScrollSpy.OffsetMethod.POSITION ?
       this.getScrollTop() : 0
 
     this.offsets = []
@@ -109,7 +123,7 @@ class ScrollSpy {
 
 
   getConfig(config) {
-    config = Object.assign({}, ScrollSpyDefault, config)
+    config = Object.assign({}, ScrollSpy.Default, config)
     return config
   }
 
@@ -181,38 +195,38 @@ class ScrollSpy {
 
     let link = this.target.querySelector(queries.join(','))
 
-    if (link.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
-      let dropdowns = link.parentAll(`${ScrollSpySelector.DROPDOWNS}, ${ScrollSpySelector.DROPDOWN_MENU}`, this.config.target)
+    if (link.classList.contains(ScrollSpy.ClassName.DROPDOWN_ITEM)) {
+      let dropdowns = link.parentAll(`${ScrollSpy.Selector.DROPDOWNS}, ${ScrollSpy.Selector.DROPDOWN_MENU}`, this.config.target)
       if (dropdowns.length) {
         dropdowns.forEach((dropdown) => {
-          dropdown.classList.add(ScrollSpyClassName.SHOW)
+          dropdown.classList.add(ScrollSpy.ClassName.SHOW)
         })
       }
-    } else if (link.classList.contains(ScrollSpyClassName.NAV_LINK)) {
-      let items = link.parentAll(ScrollSpySelector.NAV_ITEM, this.config.target)
+    } else if (link.classList.contains(ScrollSpy.ClassName.NAV_LINK)) {
+      let items = link.parentAll(ScrollSpy.Selector.NAV_ITEM, this.config.target)
       if (items.length) {
         items.forEach((item) => {
-          item.classList.add(ScrollSpyClassName.SHOW)
+          item.classList.add(ScrollSpy.ClassName.SHOW)
         })
       }
     } else {
-      //$link.parents(ScrollSpySelector.NAV_LIST_GROUP).prev(`${ScrollSpySelector.NAV_LINK}, ${ScrollSpySelector.LIST_ITEM}`).addClass(ScrollSpyClassName.ACTIVE)
+      //$link.parents(ScrollSpy.Selector.NAV_LIST_GROUP).prev(`${ScrollSpy.Selector.NAV_LINK}, ${ScrollSpy.Selector.LIST_ITEM}`).addClass(ScrollSpy.ClassName.ACTIVE)
     }
-    link.classList.add(ScrollSpyClassName.ACTIVE)
+    link.classList.add(ScrollSpy.ClassName.ACTIVE)
 
-    let activateEvent = Util.createEvent(ScrollSpyEvent.ACTIVATE, {relatedTarget: target})
+    let activateEvent = Util.createEvent(ScrollSpy.Event.ACTIVATE, {relatedTarget: target})
     this.scrollElement.dispatchEvent(activateEvent)
   }
 
   clear() {
-    let active = this.target.querySelector(ScrollSpySelector.ACTIVE)
+    let active = this.target.querySelector(ScrollSpy.Selector.ACTIVE)
     if (active) {
-      active.classList.remove(ScrollSpyClassName.ACTIVE)
-      if (active.classList.contains(ScrollSpyClassName.NAV_LINK) || active.classList.contains(ScrollSpyClassName.DROPDOWN_ITEM)) {
-        let items = active.parentAll(ScrollSpySelector.SHOW, this.config.target)
+      active.classList.remove(ScrollSpy.ClassName.ACTIVE)
+      if (active.classList.contains(ScrollSpy.ClassName.NAV_LINK) || active.classList.contains(ScrollSpy.ClassName.DROPDOWN_ITEM)) {
+        let items = active.parentAll(ScrollSpy.Selector.SHOW, this.config.target)
         if (items.length) {
           items.forEach((item) => {
-            item.classList.remove(ScrollSpyClassName.SHOW)
+            item.classList.remove(ScrollSpy.ClassName.SHOW)
           })
         }
       }
@@ -222,14 +236,14 @@ class ScrollSpy {
   static init(element, options) {
     let scrollspy = null
 
-    if (element.hasOwnProperty(SCROLLSPY_KEY)) {
-      scrollspy = element[SCROLLSPY_KEY]
+    if (element.hasOwnProperty(ScrollSpy.KEY)) {
+      scrollspy = element[ScrollSpy.KEY]
     }
 
     if (!scrollspy) {
       let config = typeof options === 'object' && options
       scrollspy = new ScrollSpy(element, config)
-      element[SCROLLSPY_KEY] = scrollspy
+      element[ScrollSpy.KEY] = scrollspy
     }
 
     return scrollspy
@@ -240,13 +254,15 @@ function scrollSpy(element, config) {
   return ScrollSpy.init(element, config)
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-  window.addEventListener('load', () => {
-    let scrollSpys = document.querySelectorAll(ScrollSpySelector.DATA_SPY)
-    if (scrollSpys.length) {
-      scrollSpys.forEach((element) => {
-        scrollSpy(element, element.dataset)
-      })
-    }
+if (typeof SCROLLSPY_EVENT_OFF === 'undefined' || SCROLLSPY_EVENT_OFF === true) {
+  document.addEventListener('DOMContentLoaded', function () {
+    window.addEventListener('load', () => {
+      let scrollSpys = document.querySelectorAll(ScrollSpy.Selector.DATA_SPY)
+      if (scrollSpys.length) {
+        scrollSpys.forEach((element) => {
+          scrollSpy(element, element.dataset)
+        })
+      }
+    })
   })
-})
+}
