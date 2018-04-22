@@ -1,24 +1,17 @@
-// Toggler icon
-.navbar-icon {
-  display: block;
-  width: 22px;
-  height: 2px;
-  border-radius: 1px;
-}
-
-.navbar-icon + .navbar-icon {
-  margin-top: 4px;
+// Triple bar
+.navbar-toggler-tribar {
+  margin: .45rem 0;
 }
 
 .navbar-light {
-  .navbar-icon {
-    background-color: $navbar-light-color;
+  .navbar-toggler-tribar {
+    @include tribar-variant($navbar-light-color);
   }
 }
 
 .navbar-dark {
-  .navbar-icon {
-    background-color: $navbar-dark-color;
+  .navbar-toggler-tribar {
+    @include tribar-variant($navbar-dark-color);
   }
 }
 
@@ -50,20 +43,13 @@
     }
   }
 
-  // For nesting containers, have to redeclare for alignment purposes
   > .container,
   > .container-fluid {
     flex-wrap: nowrap;
   }
 
-  // scss-lint:disable ImportantRule
   .navbar-collapse {
     display: flex !important;
-  }
-  // scss-lint:enable ImportantRule
-
-  .navbar-toggler {
-    display: none;
   }
 }
 
@@ -73,6 +59,18 @@
 }
 .navbar-nav-right .nav-item:last-child .nav-link {
   padding-right: 0 !important;
+}
+
+// Breadcrumb
+.navbar-breadcrumb {
+  margin-bottom: 0;
+  padding-top: $nav-link-padding-y;
+  padding-bottom: $nav-link-padding-y;
+}
+
+// Dropdown
+.navbar-dropdown-menu {
+  margin-top: $navbar-padding-y;
 }
 
 // Sizes
@@ -115,12 +113,4 @@
 }
 .pb-navbar-lg {
   padding-bottom: $navbar-height-lg;
-}
-
-// Breadcrumb
-.navbar-breadcrumb {
-}
-
-// Dropdown
-.navbar-dropdown {
 }

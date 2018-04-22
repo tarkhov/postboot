@@ -18,7 +18,7 @@ mixin button_size(text, size)
 
 mixin button_toggle(type, text)
   .btn-group.btn-group-toggle
-    label.btn.btn-secondary.active(data-toggle=type + "-button")
+    label.btn.btn-secondary.active(data-toggle=type + "-button" checked-button)
       input(type=type name=type checked)
       span Active
     - for(var i = 1; i <= 2; i++)

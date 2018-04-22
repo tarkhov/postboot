@@ -1,7 +1,8 @@
 .sidebar {
-  position: relative;
+  display: none;
   padding-top: $sidebar-padding-y;
   padding-bottom: $sidebar-padding-y;
+  position: relative;
 
   .nav-text {
     display: none;

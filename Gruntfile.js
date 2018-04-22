@@ -75,7 +75,6 @@ module.exports = function (grunt) {
           'src/js/dist/radio-button.js',
           'src/js/dist/collapse.js',
           'src/js/dist/dropdown.js',
-          'src/js/dist/notice.js',
           'src/js/dist/scrollspy.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'

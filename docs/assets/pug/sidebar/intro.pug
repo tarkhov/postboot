@@ -1,1 +1,25 @@
-h2.font-weight-normal Sidebar
+extends ../example.pug
+
+block example_title
+  h2.font-weight-normal Sidebar
+
+block example_result
+  .row
+    .col-lg-4
+      .sidebar.sidebar-dark.bg-dark.sidebar-expand-xs
+        a.sidebar-brand(href="#") Brand
+        ul.sidebar-nav
+          - for(var i = 1; i <= 5; i++)
+            li.nav-item
+              a.nav-link(href="#")= 'Nav item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .sidebar.sidebar-dark.bg-dark.sidebar-expand-xs
+      ="\n  "
+      a.sidebar-brand(href="#") Brand
+      ul.sidebar-nav
+        - for(var i = 1; i <= 5; i++)
+          li.nav-item
+            a.nav-link(href="#")= 'Nav item ' + i

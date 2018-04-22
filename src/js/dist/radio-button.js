@@ -11,6 +11,11 @@ var RadioButton = function () {
       return 'radioButton';
     }
   }, {
+    key: 'CHECKED_KEY',
+    get: function get() {
+      return 'checked-button';
+    }
+  }, {
     key: 'EVENT_KEY',
     get: function get() {
       return 'RadioButton';
@@ -43,9 +48,10 @@ var RadioButton = function () {
     key: 'Selector',
     get: function get() {
       return Object.freeze({
+        ACTIVE: '.active',
+        CHECKED: '[' + RadioButton.CHECKED_KEY + ']',
         DATA_TOGGLE: '[data-toggle="radio-button"]',
-        INPUT: 'input',
-        ACTIVE: '.active'
+        INPUT: 'input'
       });
     }
   }]);
@@ -86,17 +92,19 @@ var RadioButton = function () {
         this.input.focus();
       }
 
-      var active = this.parent.querySelector(RadioButton.Selector.ACTIVE);
+      var active = this.parent.querySelector(RadioButton.Selector.CHECKED);
       if (active) {
         active.classList.remove(RadioButton.ClassName.ACTIVE);
         active.setAttribute('aria-pressed', 'false');
+        active.removeAttribute(RadioButton.CHECKED_KEY);
 
         var deactivateEvent = Util.createEvent(RadioButton.Event.DEACTIVATE);
         active.dispatchEvent(deactivateEvent);
       }
 
       this.element.classList.add(RadioButton.ClassName.ACTIVE);
-      this.element.setAttribute('aria-pressed', true);
+      this.element.setAttribute('aria-pressed', 'true');
+      this.element.setAttribute(RadioButton.CHECKED_KEY, '');
 
       var activateEvent = Util.createEvent(RadioButton.Event.ACTIVATE);
       this.element.dispatchEvent(activateEvent);
@@ -146,7 +154,7 @@ function radioButton(element, config) {
   return RadioButton.init(element, config);
 }
 
-if (typeof RADIO_BUTTON_EVENT_OFF === 'undefined' || RADIO_BUTTON_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.RadioButton !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var buttons = document.querySelectorAll(RadioButton.Selector.DATA_TOGGLE);
     if (buttons.length) {

@@ -3,6 +3,10 @@ class RadioButton {
     return 'radioButton'
   }
 
+  static get CHECKED_KEY() {
+    return 'checked-button'
+  }
+
   static get EVENT_KEY() {
     return 'RadioButton'
   }
@@ -30,9 +34,10 @@ class RadioButton {
 
   static get Selector() {
     return Object.freeze({
+      ACTIVE      : '.active',
+      CHECKED     : `[${RadioButton.CHECKED_KEY}]`,
       DATA_TOGGLE : '[data-toggle="radio-button"]',
-      INPUT       : 'input',
-      ACTIVE      : '.active'
+      INPUT       : 'input'
     })
   }
 
@@ -65,17 +70,19 @@ class RadioButton {
       this.input.focus()
     }
 
-    let active = this.parent.querySelector(RadioButton.Selector.ACTIVE)
+    let active = this.parent.querySelector(RadioButton.Selector.CHECKED)
     if (active) {
       active.classList.remove(RadioButton.ClassName.ACTIVE)
       active.setAttribute('aria-pressed', 'false')
+      active.removeAttribute(RadioButton.CHECKED_KEY)
 
       let deactivateEvent = Util.createEvent(RadioButton.Event.DEACTIVATE)
       active.dispatchEvent(deactivateEvent)
     }
 
     this.element.classList.add(RadioButton.ClassName.ACTIVE)
-    this.element.setAttribute('aria-pressed', true)
+    this.element.setAttribute('aria-pressed', 'true')
+    this.element.setAttribute(RadioButton.CHECKED_KEY, '')
 
     let activateEvent = Util.createEvent(RadioButton.Event.ACTIVATE)
     this.element.dispatchEvent(activateEvent)
@@ -119,7 +126,7 @@ function radioButton(element, config) {
   return RadioButton.init(element, config)
 }
 
-if (typeof RADIO_BUTTON_EVENT_OFF === 'undefined' || RADIO_BUTTON_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.RadioButton !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     let buttons = document.querySelectorAll(RadioButton.Selector.DATA_TOGGLE)
     if (buttons.length) {

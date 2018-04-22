@@ -1,14 +1,25 @@
 extends ../example.pug
 
 block example_title
-  h1.font-weight-normal Sizes
+  h3.font-weight-normal Breadcrumb
 
 block example_result
-  each size in ['sm', 'lg']
-    +navbar_size(size)
+  nav.navbar.navbar-expand-xs.navbar-dark.bg-dark
+    = "\n  "
+    a.navbar-brand(href="#") Navbar
+    ol.breadcrumb.navbar-breadcrumb
+      li.breadcrumb-item: a.breadcrumb-link(href='#') Home
+      li.breadcrumb-item: a.breadcrumb-link(href='#') Category
+      li.breadcrumb-item.active Article
+
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each size in ['sm', 'lg']
-      nav.navbar.navbar-expand-sm.navbar-dark.bg-dark(class='navbar-' + size)
+    nav.navbar.navbar-expand-xs.navbar-dark.bg-dark
+      = "\n  "
+      a.navbar-brand(href="#") Navbar
+      ol.breadcrumb.navbar-breadcrumb
+        li.breadcrumb-item: a.breadcrumb-link(href='#') Home
+        li.breadcrumb-item: a.breadcrumb-link(href='#') Category
+        li.breadcrumb-item.active Article

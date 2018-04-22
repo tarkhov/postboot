@@ -65,18 +65,10 @@ class CheckboxButton {
     }
 
     this.element.classList.toggle(CheckboxButton.ClassName.ACTIVE)
+    this.element.setAttribute('aria-pressed', !isActive)
 
-    if (!isActive) {
-      this.element.setAttribute('aria-pressed', true)
-
-      let activateEvent = Util.createEvent(CheckboxButton.Event.ACTIVATE)
-      this.element.dispatchEvent(activateEvent)
-    } else {
-      this.element.setAttribute('aria-pressed', 'false')
-
-      let deactivateEvent = Util.createEvent(CheckboxButton.Event.DEACTIVATE)
-      this.element.dispatchEvent(deactivateEvent)
-    }
+    let stateEvent = Util.createEvent((isActive) ? CheckboxButton.Event.DEACTIVATE : CheckboxButton.Event.ACTIVATE)
+    this.element.dispatchEvent(stateEvent)
   }
 
   getConfig(config) {
@@ -104,7 +96,7 @@ function checkboxButton(element, config) {
   return CheckboxButton.init(element, config)
 }
 
-if (typeof CHECKBOX_BUTTON_EVENT_OFF === 'undefined' || CHECKBOX_BUTTON_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.CheckboxButton !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     let buttons = document.querySelectorAll(CheckboxButton.Selector.DATA_TOGGLE)
     if (buttons.length) {

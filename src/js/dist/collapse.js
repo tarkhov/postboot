@@ -129,7 +129,7 @@ var Collapse = function () {
         }
       }
 
-      this.element.setAttribute('aria-expanded', true);
+      this.element.setAttribute('aria-expanded', 'true');
       this.element.setAttribute(Collapse.COLLAPSED_KEY, '');
 
       window.requestAnimationFrame(function () {
@@ -229,7 +229,7 @@ function collapse(element, config) {
   return Collapse.init(element, config);
 }
 
-if (typeof COLLAPSE_EVENT_OFF === 'undefined' || COLLAPSE_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.Collapse !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var toggles = document.querySelectorAll(Collapse.Selector.DATA_TOGGLE);
     if (toggles.length) {

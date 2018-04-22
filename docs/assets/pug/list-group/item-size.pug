@@ -1,16 +1,22 @@
 extends ../example.pug
 
 block example_title
-  h1.font-weight-normal Sizes
+  h1.font-weight-normal Item sizes
 
 block example_result
   .row
-    each size in ['xs', 'sm', 'lg']
-      .col-md-4
-        +list_group_variant(size)
+    .col-md-4
+      .list-group
+        +list_group_item_variant('Large', 'lg')
+        +list_group_item_variant('Base', 'x-lg')
+        +list_group_item('Small' , ['list-group-item-sm', 'list-group-item-x-lg'])
+        +list_group_item('Extra small', ['list-group-item-xs', 'list-group-item-x-lg'])
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each size in ['xs', 'sm', 'lg']
-      .list-group(class='list-group-' + size)
+      div(class='list-group-item-' + size)
+      each coordinate in ['x', 'y']
+        div(class='list-group-item-' + coordinate + '-' + size)
+      ="\n"

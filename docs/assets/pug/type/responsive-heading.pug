@@ -1,14 +1,15 @@
-h3.font-weight-normal Responsize heading
+extends ../example-html.pug
 
-.card.card-body.bg-light.mb-3
-  pre.pre-sm
-    code.language-markup
-      :encode-pug
-        | <!-- Source -->
-        each breakpoint in ['sm', 'md', 'lg', 'xl']
-          - for(var size = 1; size <= 6; size++)
-            div(class='h' + size + '-' + breakpoint)
-          ="\n"
-          - for(var size = 1; size <= 4; size++)
-            div(class='display-' + breakpoint + '-' + size)
-          ="\n"
+block example_title
+  h3.font-weight-normal Responsize heading
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 6; size++)
+        div(class='h' + size + '-' + breakpoint)
+      ="\n"
+      - for(var size = 1; size <= 4; size++)
+        div(class='display-' + breakpoint + '-' + size)
+      ="\n"

@@ -1,13 +1,10 @@
 // Sizes
-.progress-xs {
-  @include progress-size($progress-height-xs, $progress-font-size-xs);
-}
 .progress-sm {
   @include progress-size($progress-height-sm, $progress-font-size-sm);
 }
+.progress-md {
+  @include progress-size($progress-height-md, $progress-font-size-md);
+}
 .progress-lg {
   @include progress-size($progress-height-lg, $progress-font-size-lg);
-}
-.progress-xl {
-  @include progress-size($progress-height-xl, $progress-font-size-xl);
 }

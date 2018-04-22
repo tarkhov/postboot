@@ -254,7 +254,7 @@ function scrollSpy(element, config) {
   return ScrollSpy.init(element, config)
 }
 
-if (typeof SCROLLSPY_EVENT_OFF === 'undefined' || SCROLLSPY_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.ScrollSpy !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('load', () => {
       let scrollSpys = document.querySelectorAll(ScrollSpy.Selector.DATA_SPY)

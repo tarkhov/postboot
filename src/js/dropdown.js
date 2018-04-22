@@ -64,32 +64,39 @@ class Dropdown {
     this.menu    = this.config.menu || Dropdown.getMenu(this.element, this.parent)
   }
 
-  addEventListeners() {
-    this.element.addEventListener('click', (event) => {
-      event.preventDefault()
-      event.stopPropagation()
-      this.toggle(event)
-    })
-    this.element.addEventListener('keydown', Dropdown.keydown)
-    this.menu.addEventListener('keydown', Dropdown.keydown)
+  addEventListeners(options) {
+    let events = options || ['click', 'keyboard'];
 
-    if (this.menu.classList.contains(Dropdown.Selector.MEGA_MENU)) {
-      this.menu.addEventListener('click', (event) => {
+    if (events.indexOf('click') >= 0) {
+      this.element.addEventListener('click', (event) => {
+        event.preventDefault()
         event.stopPropagation()
+        this.toggle(event)
       })
+
+      if (this.menu.classList.contains(Dropdown.Selector.MEGA_MENU)) {
+        this.menu.addEventListener('click', (event) => {
+          event.stopPropagation()
+        })
+      }
+
+      let form = this.parent.querySelector(Dropdown.Selector.FORM)
+      if (form) {
+        form.addEventListener('click', (event) => {
+          event.stopPropagation()
+        })
+      }
     }
 
-    let form = this.parent.querySelector(Dropdown.Selector.FORM)
-    if (form) {
-      form.addEventListener('click', (event) => {
-        event.stopPropagation()
-      })
+    if (events.indexOf('keyboard') >= 0) {
+      this.element.addEventListener('keydown', Dropdown.keydown)
+      this.menu.addEventListener('keydown', Dropdown.keydown)
     }
-  }
 
-  addHoverListeners() {
-    this.element.addEventListener('mouseenter', (event) => this.toggle(event))
-    this.parent.addEventListener('mouseleave',  () => this.hide())
+    if (events.indexOf('hover') >= 0 && !('ontouchstart' in document.documentElement)) {
+      this.element.addEventListener('mouseenter', (event) => this.toggle(event))
+      this.parent.addEventListener('mouseleave',  () => this.hide())
+    }
   }
 
   toggle(event) {
@@ -114,12 +121,7 @@ class Dropdown {
       return
     }
 
-    if ('ontouchstart' in document.documentElement && !this.parent.closest(Dropdown.Selector.NAVBAR_NAV)) {
-      document.body.children.addEventListener('mouseover', () => {})
-    }
-
-    //this.element.focus()
-    this.element.setAttribute('aria-expanded', true)
+    this.element.setAttribute('aria-expanded', 'true')
     this.element.setAttribute(Dropdown.DROPPED_KEY, '')
 
     this.menu.classList.toggle(Dropdown.ClassName.SHOW)
@@ -190,10 +192,6 @@ class Dropdown {
         parent.dispatchEvent(hideEvent)
         if (hideEvent.defaultPrevented) {
           return true
-        }
-
-        if ('ontouchstart' in document.documentElement) {
-          document.body.children.removeEventListener('mouseover', () => {})
         }
 
         element.setAttribute('aria-expanded', 'false')
@@ -311,19 +309,19 @@ function dropdown(element, config) {
   return Dropdown.init(element, config)
 }
 
-if (typeof DROPDOWN_EVENT_OFF === 'undefined' || DROPDOWN_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.Dropdown !== false) {
   document.addEventListener('DOMContentLoaded', function () {
-    let dataToggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE)
-    if (dataToggles.length) {
-      dataToggles.forEach((element) => {
+    let toggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE)
+    if (toggles.length) {
+      toggles.forEach((element) => {
         dropdown(element).addEventListeners()
       })
     }
 
-    let dataHovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER)
-    if (dataHovers.length) {
-      dataHovers.forEach((element) => {
-        dropdown(element).addHoverListeners()
+    let hovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER)
+    if (hovers.length) {
+      hovers.forEach((element) => {
+        dropdown(element).addEventListeners(['hover'])
       })
     }
 

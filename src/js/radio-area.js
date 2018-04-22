@@ -3,6 +3,10 @@ class RadioArea {
     return 'radioArea'
   }
 
+  static get CHECKED_KEY() {
+    return 'checked-area'
+  }
+
   static get EVENT_KEY() {
     return 'RadioArea'
   }
@@ -29,8 +33,9 @@ class RadioArea {
 
   static get Selector() {
     return Object.freeze({
-      DATA_TOGGLE : '[data-toggle="radio-area"]',
-      ACTIVE      : '.active'
+      ACTIVE      : '.active',
+      CHECKED     : `[${RadioArea.CHECKED_KEY}]`,
+      DATA_TOGGLE : '[data-toggle="radio-area"]'
     })
   }
 
@@ -54,17 +59,19 @@ class RadioArea {
 
     let parent = this.parent || document
 
-    let active = parent.querySelector(RadioArea.Selector.ACTIVE)
+    let active = parent.querySelector(RadioArea.Selector.CHECKED)
     if (active) {
       active.classList.remove(RadioArea.ClassName.ACTIVE)
       active.setAttribute('aria-checked', 'false')
+      active.removeAttribute(RadioArea.CHECKED_KEY)
 
       let deactivateEvent = Util.createEvent(RadioArea.Event.DEACTIVATE)
       active.dispatchEvent(deactivateEvent)
     }
 
     this.element.classList.add(RadioArea.ClassName.ACTIVE)
-    this.element.setAttribute('aria-checked', true)
+    this.element.setAttribute('aria-checked', 'true')
+    this.element.setAttribute(RadioArea.CHECKED_KEY, '')
 
     let activateEvent = Util.createEvent(RadioArea.Event.ACTIVATE)
     this.element.dispatchEvent(activateEvent)
@@ -108,7 +115,7 @@ function radioArea(element, config) {
   return RadioArea.init(element, config)
 }
 
-if (typeof RADIO_AREA_EVENT_OFF === 'undefined' || RADIO_AREA_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.RadioArea !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     let areas = document.querySelectorAll(RadioArea.Selector.DATA_TOGGLE)
     if (areas.length) {

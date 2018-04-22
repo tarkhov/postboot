@@ -1,9 +1,0 @@
-h3.font-weight-normal Wide column
-
-.card.card-body.bg-light.mb-3
-  pre
-    code.language-markup
-      :encode-pug
-        | <!-- Source -->
-        each size, breakpoint in wideBreakpoints
-          div(class="col-" + breakpoint + "-*")

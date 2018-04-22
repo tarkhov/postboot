@@ -45,18 +45,10 @@ class CheckboxArea {
 
     let isActive = this.element.classList.contains(CheckboxArea.ClassName.ACTIVE)
     this.element.classList.toggle(CheckboxArea.ClassName.ACTIVE)
+    this.element.setAttribute('aria-checked', !isActive)
 
-    if (!isActive) {
-      this.element.setAttribute('aria-checked', true)
-
-      let activateEvent = Util.createEvent(CheckboxArea.Event.ACTIVATE)
-      this.element.dispatchEvent(activateEvent)
-    } else {
-      this.element.setAttribute('aria-checked', 'false')
-
-      let deactivateEvent = Util.createEvent(CheckboxArea.Event.DEACTIVATE)
-      this.element.dispatchEvent(deactivateEvent)
-    }
+    let stateEvent = Util.createEvent((isActive) ? CheckboxArea.Event.DEACTIVATE : CheckboxArea.Event.ACTIVATE)
+    this.element.dispatchEvent(stateEvent)
   }
 
   static init(element) {
@@ -79,7 +71,7 @@ function checkboxArea(element) {
   return CheckboxArea.init(element)
 }
 
-if (typeof CHECKBOX_AREA_EVENT_OFF === 'undefined' || CHECKBOX_AREA_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.CheckboxArea !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     let areas = document.querySelectorAll(CheckboxArea.Selector.DATA_TOGGLE)
     if (areas.length) {

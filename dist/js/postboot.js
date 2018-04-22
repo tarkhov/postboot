@@ -190,18 +190,10 @@ var CheckboxArea = function () {
 
       var isActive = this.element.classList.contains(CheckboxArea.ClassName.ACTIVE);
       this.element.classList.toggle(CheckboxArea.ClassName.ACTIVE);
+      this.element.setAttribute('aria-checked', !isActive);
 
-      if (!isActive) {
-        this.element.setAttribute('aria-checked', true);
-
-        var activateEvent = Util.createEvent(CheckboxArea.Event.ACTIVATE);
-        this.element.dispatchEvent(activateEvent);
-      } else {
-        this.element.setAttribute('aria-checked', 'false');
-
-        var deactivateEvent = Util.createEvent(CheckboxArea.Event.DEACTIVATE);
-        this.element.dispatchEvent(deactivateEvent);
-      }
+      var stateEvent = Util.createEvent(isActive ? CheckboxArea.Event.DEACTIVATE : CheckboxArea.Event.ACTIVATE);
+      this.element.dispatchEvent(stateEvent);
     }
   }], [{
     key: 'init',
@@ -228,7 +220,7 @@ function checkboxArea(element) {
   return CheckboxArea.init(element);
 }
 
-if (typeof CHECKBOX_AREA_EVENT_OFF === 'undefined' || CHECKBOX_AREA_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.CheckboxArea !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var areas = document.querySelectorAll(CheckboxArea.Selector.DATA_TOGGLE);
     if (areas.length) {
@@ -250,6 +242,11 @@ var RadioArea = function () {
     key: 'KEY',
     get: function get() {
       return 'radioArea';
+    }
+  }, {
+    key: 'CHECKED_KEY',
+    get: function get() {
+      return 'checked-area';
     }
   }, {
     key: 'EVENT_KEY',
@@ -283,8 +280,9 @@ var RadioArea = function () {
     key: 'Selector',
     get: function get() {
       return Object.freeze({
-        DATA_TOGGLE: '[data-toggle="radio-area"]',
-        ACTIVE: '.active'
+        ACTIVE: '.active',
+        CHECKED: '[' + RadioArea.CHECKED_KEY + ']',
+        DATA_TOGGLE: '[data-toggle="radio-area"]'
       });
     }
   }]);
@@ -316,17 +314,19 @@ var RadioArea = function () {
 
       var parent = this.parent || document;
 
-      var active = parent.querySelector(RadioArea.Selector.ACTIVE);
+      var active = parent.querySelector(RadioArea.Selector.CHECKED);
       if (active) {
         active.classList.remove(RadioArea.ClassName.ACTIVE);
         active.setAttribute('aria-checked', 'false');
+        active.removeAttribute(RadioArea.CHECKED_KEY);
 
         var deactivateEvent = Util.createEvent(RadioArea.Event.DEACTIVATE);
         active.dispatchEvent(deactivateEvent);
       }
 
       this.element.classList.add(RadioArea.ClassName.ACTIVE);
-      this.element.setAttribute('aria-checked', true);
+      this.element.setAttribute('aria-checked', 'true');
+      this.element.setAttribute(RadioArea.CHECKED_KEY, '');
 
       var activateEvent = Util.createEvent(RadioArea.Event.ACTIVATE);
       this.element.dispatchEvent(activateEvent);
@@ -376,7 +376,7 @@ function radioArea(element, config) {
   return RadioArea.init(element, config);
 }
 
-if (typeof RADIO_AREA_EVENT_OFF === 'undefined' || RADIO_AREA_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.RadioArea !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var areas = document.querySelectorAll(RadioArea.Selector.DATA_TOGGLE);
     if (areas.length) {
@@ -475,18 +475,10 @@ var CheckboxButton = function () {
       }
 
       this.element.classList.toggle(CheckboxButton.ClassName.ACTIVE);
+      this.element.setAttribute('aria-pressed', !isActive);
 
-      if (!isActive) {
-        this.element.setAttribute('aria-pressed', true);
-
-        var activateEvent = Util.createEvent(CheckboxButton.Event.ACTIVATE);
-        this.element.dispatchEvent(activateEvent);
-      } else {
-        this.element.setAttribute('aria-pressed', 'false');
-
-        var deactivateEvent = Util.createEvent(CheckboxButton.Event.DEACTIVATE);
-        this.element.dispatchEvent(deactivateEvent);
-      }
+      var stateEvent = Util.createEvent(isActive ? CheckboxButton.Event.DEACTIVATE : CheckboxButton.Event.ACTIVATE);
+      this.element.dispatchEvent(stateEvent);
     }
   }, {
     key: 'getConfig',
@@ -519,7 +511,7 @@ function checkboxButton(element, config) {
   return CheckboxButton.init(element, config);
 }
 
-if (typeof CHECKBOX_BUTTON_EVENT_OFF === 'undefined' || CHECKBOX_BUTTON_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.CheckboxButton !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var buttons = document.querySelectorAll(CheckboxButton.Selector.DATA_TOGGLE);
     if (buttons.length) {
@@ -541,6 +533,11 @@ var RadioButton = function () {
     key: 'KEY',
     get: function get() {
       return 'radioButton';
+    }
+  }, {
+    key: 'CHECKED_KEY',
+    get: function get() {
+      return 'checked-button';
     }
   }, {
     key: 'EVENT_KEY',
@@ -575,9 +572,10 @@ var RadioButton = function () {
     key: 'Selector',
     get: function get() {
       return Object.freeze({
+        ACTIVE: '.active',
+        CHECKED: '[' + RadioButton.CHECKED_KEY + ']',
         DATA_TOGGLE: '[data-toggle="radio-button"]',
-        INPUT: 'input',
-        ACTIVE: '.active'
+        INPUT: 'input'
       });
     }
   }]);
@@ -618,17 +616,19 @@ var RadioButton = function () {
         this.input.focus();
       }
 
-      var active = this.parent.querySelector(RadioButton.Selector.ACTIVE);
+      var active = this.parent.querySelector(RadioButton.Selector.CHECKED);
       if (active) {
         active.classList.remove(RadioButton.ClassName.ACTIVE);
         active.setAttribute('aria-pressed', 'false');
+        active.removeAttribute(RadioButton.CHECKED_KEY);
 
         var deactivateEvent = Util.createEvent(RadioButton.Event.DEACTIVATE);
         active.dispatchEvent(deactivateEvent);
       }
 
       this.element.classList.add(RadioButton.ClassName.ACTIVE);
-      this.element.setAttribute('aria-pressed', true);
+      this.element.setAttribute('aria-pressed', 'true');
+      this.element.setAttribute(RadioButton.CHECKED_KEY, '');
 
       var activateEvent = Util.createEvent(RadioButton.Event.ACTIVATE);
       this.element.dispatchEvent(activateEvent);
@@ -678,7 +678,7 @@ function radioButton(element, config) {
   return RadioButton.init(element, config);
 }
 
-if (typeof RADIO_BUTTON_EVENT_OFF === 'undefined' || RADIO_BUTTON_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.RadioButton !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var buttons = document.querySelectorAll(RadioButton.Selector.DATA_TOGGLE);
     if (buttons.length) {
@@ -820,7 +820,7 @@ var Collapse = function () {
         }
       }
 
-      this.element.setAttribute('aria-expanded', true);
+      this.element.setAttribute('aria-expanded', 'true');
       this.element.setAttribute(Collapse.COLLAPSED_KEY, '');
 
       window.requestAnimationFrame(function () {
@@ -920,7 +920,7 @@ function collapse(element, config) {
   return Collapse.init(element, config);
 }
 
-if (typeof COLLAPSE_EVENT_OFF === 'undefined' || COLLAPSE_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.Collapse !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var toggles = document.querySelectorAll(Collapse.Selector.DATA_TOGGLE);
     if (toggles.length) {
@@ -1022,41 +1022,45 @@ var Dropdown = function () {
 
   _createClass(Dropdown, [{
     key: 'addEventListeners',
-    value: function addEventListeners() {
+    value: function addEventListeners(options) {
       var _this = this;
 
-      this.element.addEventListener('click', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        _this.toggle(event);
-      });
-      this.element.addEventListener('keydown', Dropdown.keydown);
-      this.menu.addEventListener('keydown', Dropdown.keydown);
+      var events = options || ['click', 'keyboard'];
 
-      if (this.menu.classList.contains(Dropdown.Selector.MEGA_MENU)) {
-        this.menu.addEventListener('click', function (event) {
+      if (events.indexOf('click') >= 0) {
+        this.element.addEventListener('click', function (event) {
+          event.preventDefault();
           event.stopPropagation();
+          _this.toggle(event);
         });
+
+        if (this.menu.classList.contains(Dropdown.Selector.MEGA_MENU)) {
+          this.menu.addEventListener('click', function (event) {
+            event.stopPropagation();
+          });
+        }
+
+        var form = this.parent.querySelector(Dropdown.Selector.FORM);
+        if (form) {
+          form.addEventListener('click', function (event) {
+            event.stopPropagation();
+          });
+        }
       }
 
-      var form = this.parent.querySelector(Dropdown.Selector.FORM);
-      if (form) {
-        form.addEventListener('click', function (event) {
-          event.stopPropagation();
+      if (events.indexOf('keyboard') >= 0) {
+        this.element.addEventListener('keydown', Dropdown.keydown);
+        this.menu.addEventListener('keydown', Dropdown.keydown);
+      }
+
+      if (events.indexOf('hover') >= 0 && !('ontouchstart' in document.documentElement)) {
+        this.element.addEventListener('mouseenter', function (event) {
+          return _this.toggle(event);
+        });
+        this.parent.addEventListener('mouseleave', function () {
+          return _this.hide();
         });
       }
-    }
-  }, {
-    key: 'addHoverListeners',
-    value: function addHoverListeners() {
-      var _this2 = this;
-
-      this.element.addEventListener('mouseenter', function (event) {
-        return _this2.toggle(event);
-      });
-      this.parent.addEventListener('mouseleave', function () {
-        return _this2.hide();
-      });
     }
   }, {
     key: 'toggle',
@@ -1082,12 +1086,7 @@ var Dropdown = function () {
         return;
       }
 
-      if ('ontouchstart' in document.documentElement && !this.parent.closest(Dropdown.Selector.NAVBAR_NAV)) {
-        document.body.children.addEventListener('mouseover', function () {});
-      }
-
-      //this.element.focus()
-      this.element.setAttribute('aria-expanded', true);
+      this.element.setAttribute('aria-expanded', 'true');
       this.element.setAttribute(Dropdown.DROPPED_KEY, '');
 
       this.menu.classList.toggle(Dropdown.ClassName.SHOW);
@@ -1163,10 +1162,6 @@ var Dropdown = function () {
           parent.dispatchEvent(hideEvent);
           if (hideEvent.defaultPrevented) {
             return true;
-          }
-
-          if ('ontouchstart' in document.documentElement) {
-            document.body.children.removeEventListener('mouseover', function () {});
           }
 
           element.setAttribute('aria-expanded', 'false');
@@ -1286,19 +1281,19 @@ function dropdown(element, config) {
   return Dropdown.init(element, config);
 }
 
-if (typeof DROPDOWN_EVENT_OFF === 'undefined' || DROPDOWN_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.Dropdown !== false) {
   document.addEventListener('DOMContentLoaded', function () {
-    var dataToggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE);
-    if (dataToggles.length) {
-      dataToggles.forEach(function (element) {
+    var toggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE);
+    if (toggles.length) {
+      toggles.forEach(function (element) {
         dropdown(element).addEventListeners();
       });
     }
 
-    var dataHovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER);
-    if (dataHovers.length) {
-      dataHovers.forEach(function (element) {
-        dropdown(element).addHoverListeners();
+    var hovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER);
+    if (hovers.length) {
+      hovers.forEach(function (element) {
+        dropdown(element).addEventListeners(['hover']);
       });
     }
 
@@ -1306,126 +1301,6 @@ if (typeof DROPDOWN_EVENT_OFF === 'undefined' || DROPDOWN_EVENT_OFF === true) {
     document.addEventListener('keyup', Dropdown.hideMenus);
   });
 }
-
-'use strict';
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var NOTICE_KEY = 'notice';
-var NOTICE_EVENT_KEY = NOTICE_KEY;
-var NOTICE_TRANSITION_DURATION = 150;
-
-var NoticeSelector = {
-  DATA_TOGGLE: '[data-toggle="alert"]',
-  DATA_DISMISS: '[data-dismiss="alert"]'
-};
-
-var NoticeEvent = {
-  HIDE: NOTICE_EVENT_KEY + 'Hide',
-  HIDDEN: NOTICE_EVENT_KEY + 'Hidden',
-  SHOW: NOTICE_EVENT_KEY + 'Show',
-  SHOWN: NOTICE_EVENT_KEY + 'Shown'
-};
-
-var NoticeClassName = {
-  ALERT: 'alert',
-  FADE: 'fade',
-  HIDE: 'hide',
-  SHOW: 'show'
-};
-
-var Notice = function () {
-  function Notice(element) {
-    _classCallCheck(this, Notice);
-
-    this.element = element;
-  }
-
-  _createClass(Notice, [{
-    key: 'show',
-    value: function show() {
-      if (this.element.classList.contains(NoticeClassName.SHOW)) {
-        return;
-      }
-
-      var showEvent = Util.createEvent(NoticeEvent.SHOW);
-      this.element.dispatchEvent(showEvent);
-      if (showEvent.defaultPrevented) {
-        return;
-      }
-
-      this.element.setAttribute(NOTICE_KEY, '');
-
-      if (this.element.classList.contains(NoticeClassName.HIDE)) {
-        this.element.classList.remove(NoticeClassName.HIDE);
-      }
-      this.element.classList.add(NoticeClassName.SHOW);
-
-      var shownEvent = Util.createEvent(NoticeEvent.SHOWN);
-      this.element.dispatchEvent(shownEvent);
-    }
-  }, {
-    key: 'hide',
-    value: function hide() {
-      if (this.element.classList.contains(NoticeClassName.HIDE)) {
-        return;
-      }
-
-      var hideEvent = Util.createEvent(NoticeEvent.HIDE);
-      this.element.dispatchEvent(hideEvent);
-      if (hideEvent.defaultPrevented) {
-        return;
-      }
-
-      this.element.removeAttribute(NOTICE_KEY);
-
-      if (this.element.classList.contains(NoticeClassName.SHOW)) {
-        this.element.classList.remove(NoticeClassName.SHOW);
-      }
-      this.element.classList.add(NoticeClassName.HIDE);
-
-      var hiddenEvent = Util.createEvent(NoticeEvent.HIDDEN);
-      this.element.dispatchEvent(hiddenEvent);
-    }
-  }], [{
-    key: 'init',
-    value: function init(element) {
-      var notice = null;
-
-      if (element.hasOwnProperty(NOTICE_KEY)) {
-        notice = element[NOTICE_KEY];
-      }
-
-      if (!notice) {
-        notice = new Notice(element);
-        element[NOTICE_KEY] = notice;
-      }
-
-      return notice;
-    }
-  }]);
-
-  return Notice;
-}();
-
-function notice(element) {
-  return Notice.init(element);
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-  var dataToggles = document.querySelectorAll(NoticeSelector.DATA_TOGGLE);
-  if (dataToggles.length) {
-    dataToggles.forEach(function (target) {
-      var selector = Util.getSelector(target);
-      if (selector) {
-        var element = document.querySelector(selector);
-        notice(element);
-      }
-    });
-  }
-});
 
 'use strict';
 
@@ -1701,7 +1576,7 @@ function scrollSpy(element, config) {
   return ScrollSpy.init(element, config);
 }
 
-if (typeof SCROLLSPY_EVENT_OFF === 'undefined' || SCROLLSPY_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.ScrollSpy !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('load', function () {
       var scrollSpys = document.querySelectorAll(ScrollSpy.Selector.DATA_SPY);

@@ -1,5 +1,7 @@
 mixin navbar(classes)
-  nav.navbar.navbar-expand-sm(class=classes)
+  nav.navbar(class=classes)
+    button.navbar-toggler.mr-3(type="button")
+      span.tribar.navbar-toggler-tribar
     = "\n\t"
     a.navbar-brand(href="#") Navbar
     .collapse.navbar-collapse
@@ -8,4 +10,4 @@ mixin navbar(classes)
           li.nav-item: a.nav-link(href='#')= 'Nav item ' + i
 
 mixin navbar_size(size)
-  +navbar(['navbar-dark', 'bg-dark', 'navbar-' + size, 'mb-3'])
+  +navbar(['navbar-expand-sm', 'navbar-dark', 'bg-dark', 'navbar-' + size, 'mb-3'])

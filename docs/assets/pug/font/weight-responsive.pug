@@ -1,11 +1,12 @@
-h3.font-weight-normal Responsive font weights
+extends ../example-html.pug
 
-.card.card-body.bg-light.mb-3
-  pre.pre-sm
-    code.language-markup
-      :encode-pug
-        | <!-- Source -->
-        each breakpoint in ['sm', 'md', 'lg', 'xl']
-          each text, weight in {'thin': 'Thin', 'extra-light': 'Extra light', 'light': 'Light', 'normal': 'Normal', 'medium': 'Medium', 'semi-bold': 'Semi bold', 'bold': 'Bold', 'extra-bold': 'Extra bold', 'black': 'Black'}
-            p(class='font-weight-' + breakpoint + '-' + weight)
-          ="\n"
+block example_title
+  h4.font-weight-normal Responsive font weights
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      each text, weight in {'thin': 'Thin', 'extra-light': 'Extra light', 'light': 'Light', 'normal': 'Normal', 'medium': 'Medium', 'semi-bold': 'Semi bold', 'bold': 'Bold', 'extra-bold': 'Extra bold', 'black': 'Black'}
+        p(class='font-weight-' + breakpoint + '-' + weight)
+      ="\n"

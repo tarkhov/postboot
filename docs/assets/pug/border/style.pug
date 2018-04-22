@@ -12,8 +12,3 @@ block example_code
     | <!-- Source -->
     each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
       p(class='border-' + style)= text
-      p(class='border-top-' + style)= text
-      p(class='border-right-' + style)= text
-      p(class='border-bottom-' + style)= text
-      p(class='border-left-' + style)= text
-      = "\n"

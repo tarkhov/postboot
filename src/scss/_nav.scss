@@ -156,13 +156,9 @@
 
 // Tree
 .nav-tree {
-  > .nav-item {
+  > .nav-item:not(.show) {
     > .nav-tree {
       display: none;
-    }
-
-    &.show > .nav-tree {
-      display: flex;
     }
   }
 }

@@ -11,4 +11,4 @@ mixin border_style(text, style)
   +border(text, ['border-3', 'border-' + style, 'border-primary', 'text-primary'])
 
 mixin border_width(width)
-  +border(width + 'px', ['border-solid', 'border-' + width, 'border-primary', 'text-primary'])
+  .mb-3.border-top-solid.border-primary(class="border-top-" + width)

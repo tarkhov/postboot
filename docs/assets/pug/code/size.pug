@@ -1,9 +1,10 @@
-h3.font-weight-normal Size
+extends ../example-html.pug
 
-.card.card-body.bg-light.mb-3
-  pre
-    code.language-markup
-      :encode-pug
-        | <!-- Source -->
-        each size in ['sm', 'md', 'lg']
-          pre(class="pre-" + size)
+block example_title
+  h3.font-weight-normal Size
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each size in ['sm', 'md', 'lg']
+      pre(class="pre-" + size)

@@ -1,0 +1,9 @@
+// Color
+@mixin tribar-variant($color) {
+  border-color: $color;
+
+  &::before,
+  &::after {
+    background-color: $color;
+  }
+}

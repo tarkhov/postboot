@@ -21,6 +21,16 @@
   .navbar-text {
     font-size: $font-size;
   }
+
+  .navbar-breadcrumb {
+    font-size: $font-size;
+    padding-top: $nav-padding-y;
+    padding-bottom: $nav-padding-y;
+  }
+
+  .navbar-dropdown-menu {
+    margin-top: $padding-y;
+  }
 }
 
 @mixin navbar-nav-size-y($padding-y) {

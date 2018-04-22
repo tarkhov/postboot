@@ -82,41 +82,45 @@ var Dropdown = function () {
 
   _createClass(Dropdown, [{
     key: 'addEventListeners',
-    value: function addEventListeners() {
+    value: function addEventListeners(options) {
       var _this = this;
 
-      this.element.addEventListener('click', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        _this.toggle(event);
-      });
-      this.element.addEventListener('keydown', Dropdown.keydown);
-      this.menu.addEventListener('keydown', Dropdown.keydown);
+      var events = options || ['click', 'keyboard'];
 
-      if (this.menu.classList.contains(Dropdown.Selector.MEGA_MENU)) {
-        this.menu.addEventListener('click', function (event) {
+      if (events.indexOf('click') >= 0) {
+        this.element.addEventListener('click', function (event) {
+          event.preventDefault();
           event.stopPropagation();
+          _this.toggle(event);
         });
+
+        if (this.menu.classList.contains(Dropdown.Selector.MEGA_MENU)) {
+          this.menu.addEventListener('click', function (event) {
+            event.stopPropagation();
+          });
+        }
+
+        var form = this.parent.querySelector(Dropdown.Selector.FORM);
+        if (form) {
+          form.addEventListener('click', function (event) {
+            event.stopPropagation();
+          });
+        }
       }
 
-      var form = this.parent.querySelector(Dropdown.Selector.FORM);
-      if (form) {
-        form.addEventListener('click', function (event) {
-          event.stopPropagation();
+      if (events.indexOf('keyboard') >= 0) {
+        this.element.addEventListener('keydown', Dropdown.keydown);
+        this.menu.addEventListener('keydown', Dropdown.keydown);
+      }
+
+      if (events.indexOf('hover') >= 0 && !('ontouchstart' in document.documentElement)) {
+        this.element.addEventListener('mouseenter', function (event) {
+          return _this.toggle(event);
+        });
+        this.parent.addEventListener('mouseleave', function () {
+          return _this.hide();
         });
       }
-    }
-  }, {
-    key: 'addHoverListeners',
-    value: function addHoverListeners() {
-      var _this2 = this;
-
-      this.element.addEventListener('mouseenter', function (event) {
-        return _this2.toggle(event);
-      });
-      this.parent.addEventListener('mouseleave', function () {
-        return _this2.hide();
-      });
     }
   }, {
     key: 'toggle',
@@ -142,12 +146,7 @@ var Dropdown = function () {
         return;
       }
 
-      if ('ontouchstart' in document.documentElement && !this.parent.closest(Dropdown.Selector.NAVBAR_NAV)) {
-        document.body.children.addEventListener('mouseover', function () {});
-      }
-
-      //this.element.focus()
-      this.element.setAttribute('aria-expanded', true);
+      this.element.setAttribute('aria-expanded', 'true');
       this.element.setAttribute(Dropdown.DROPPED_KEY, '');
 
       this.menu.classList.toggle(Dropdown.ClassName.SHOW);
@@ -223,10 +222,6 @@ var Dropdown = function () {
           parent.dispatchEvent(hideEvent);
           if (hideEvent.defaultPrevented) {
             return true;
-          }
-
-          if ('ontouchstart' in document.documentElement) {
-            document.body.children.removeEventListener('mouseover', function () {});
           }
 
           element.setAttribute('aria-expanded', 'false');
@@ -346,19 +341,19 @@ function dropdown(element, config) {
   return Dropdown.init(element, config);
 }
 
-if (typeof DROPDOWN_EVENT_OFF === 'undefined' || DROPDOWN_EVENT_OFF === true) {
+if (typeof PostBoot === 'undefined' || PostBoot.Event.Dropdown !== false) {
   document.addEventListener('DOMContentLoaded', function () {
-    var dataToggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE);
-    if (dataToggles.length) {
-      dataToggles.forEach(function (element) {
+    var toggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE);
+    if (toggles.length) {
+      toggles.forEach(function (element) {
         dropdown(element).addEventListeners();
       });
     }
 
-    var dataHovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER);
-    if (dataHovers.length) {
-      dataHovers.forEach(function (element) {
-        dropdown(element).addHoverListeners();
+    var hovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER);
+    if (hovers.length) {
+      hovers.forEach(function (element) {
+        dropdown(element).addEventListeners(['hover']);
       });
     }
 

@@ -101,27 +101,24 @@ $navbar-height-lg: 4.75rem !default;
 // Navs
 $nav-link-active-color: $gray-700 !default;
 
-$nav-link-padding-x-xs: .25em !default;
-$nav-link-padding-y-xs: .1em !default;
+$nav-link-padding-x-xs: .25rem !default;
+$nav-link-padding-y-xs: .1rem !default;
 
-$nav-link-padding-x-sm: .5em !default;
-$nav-link-padding-y-sm: .25em !default;
+$nav-link-padding-x-sm: .5rem !default;
+$nav-link-padding-y-sm: .25rem !default;
 
-$nav-link-padding-x-lg: 1.5em !default;
-$nav-link-padding-y-lg: .75em !default;
+$nav-link-padding-x-lg: 1.5rem !default;
+$nav-link-padding-y-lg: .75rem !default;
 
 // Progress
-$progress-height-xs:    .75rem !default;
-$progress-font-size-xs: .65rem !default;
+$progress-height-sm:    1.25rem !default;
+$progress-font-size-sm: 1rem !default;
 
-$progress-height-sm:    .875rem !default;
-$progress-font-size-sm: .75rem !default;
+$progress-height-md:    1.5rem !default;
+$progress-font-size-md: 1.25rem !default;
 
-$progress-height-lg:    1.25rem !default;
-$progress-font-size-lg: 1rem !default;
-
-$progress-height-xl:    1.5rem !default;
-$progress-font-size-xl: 1.25rem !default;
+$progress-height-lg:    1.75rem !default;
+$progress-font-size-lg: 1.5rem !default;
 
 // List group
 $list-group-item-padding-x-xs: .75rem !default;
@@ -168,7 +165,7 @@ $sidebar-padding-y:                  ($spacer / 2) !default;
 
 $sidebar-brand-font-size:            $font-size-lg !default;
 $sidebar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
-$sidebar-brand-padding-y:            ($sidebar-brand-height - $nav-link-height) / 2 !default;
+$sidebar-brand-padding-y:            $nav-link-padding-y !default;
 
 $sidebar-toggler-padding-y:           .25rem !default;
 $sidebar-toggler-padding-x:           .75rem !default;

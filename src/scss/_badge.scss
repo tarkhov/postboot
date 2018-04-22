@@ -2,6 +2,9 @@
 @each $color, $value in map-remove($custom-colors, "black") {
   .badge-#{$color} {
     @include badge-variant($value);
+    @if $color == 'orange' {
+      color: $white;
+    }
   }
 }
 
@@ -14,5 +17,8 @@
 @each $color, $value in $custom-colors {
   .badge-glass-#{$color} {
     @include badge-glass-variant($value, $opacity-glass);
+    @if $color == 'orange' {
+      color: $white;
+    }
   }
 }
