@@ -6,16 +6,16 @@ html(lang="en")
     meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
 
     title= title
-    meta(name="description" content="")
-    meta(name="keywords" content="")
+    meta(name="description" content=pkg.description)
+    meta(name="keywords" content="bootstrap, html, css, js, javascript, library")
     meta(name="author" content=pkg.author)
 
-    link(rel="apple-touch-icon" href="/apple-touch-icon.png")
-    link(rel="icon" href="/favicon.ico")
-    link(rel="manifest" href="/manifest.json")
+    link(rel="apple-touch-icon" href="assets/img/apple-touch-icon.png")
+    link(rel="icon" href="assets/img/favicon.ico")
+    //-link(rel="manifest" href="manifest.json")
 
     link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet")
-    link(rel="stylesheet" href="/assets/css/app.min.css")
+    link(rel="stylesheet" href="assets/css/app.min.css")
   body.pt-navbar(data-spy="scroll" data-target="#sidebar-left")
     header.pb-gutter(role="banner")
       nav#navbar-top.navbar.navbar-expand-xs.navbar-light.bg-light.px-sm-0.fixed-top(role="navigation")
@@ -44,4 +44,4 @@ html(lang="en")
           article(role="article")
             include main.pug
 
-    script(src="/assets/js/app.min.js")
+    script(src="assets/js/app.min.js")
