@@ -5,7 +5,7 @@
     p #[a(href=downloadUrl) Download] package and unpack it or use following commands:
     .card.bg-light.mb-3
       .card-body
-        pre.command-line
+        pre
           code.language-bash
             ="wget -O " + downloadUrl + "\n"
             ="unzip " + pkg.name + "-" + pkg.version + ".zip"
@@ -13,13 +13,13 @@
     h4.font-weight-normal NodeJS
     .card.bg-light.mb-3
       .card-body
-        pre.command-line
+        pre
           code.language-bash
             ="npm install " + pkg.name + "@" + pkg.version
   #install-bower
     h4.font-weight-normal Bower
     .card.bg-light.mb-3
       .card-body
-        pre.command-line
+        pre
           code.language-bash
             ="bower install " + pkg.name + "#v" + pkg.version
