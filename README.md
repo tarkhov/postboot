@@ -18,23 +18,23 @@ HTML5 library that extends the Bootstrap framework.
 
 ### Manually
 
-[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta/postboot-1.0.0-beta.zip) package and unpack it or use following commands:
+[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta1/postboot-1.0.0-beta1.zip) package and unpack it or use following commands:
 
 ```bash
-wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta/postboot-1.0.0-beta.zip
-unzip postboot-1.0.0-beta.zip
+wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta1/postboot-1.0.0-beta1.zip
+unzip postboot-1.0.0-beta1.zip
 ```
 
 ### NodeJS
 
 ```bash
-npm install postboot@1.0.0-beta
+npm install postboot@1.0.0-beta1
 ```
 
 ### Bower
 
 ```bash
-bower install postboot#v1.0.0-beta
+bower install postboot#v1.0.0-beta1
 ```
 
 ## Usage
@@ -54,11 +54,11 @@ bower install postboot#v1.0.0-beta
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"/>
-<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta/dist/css/postboot.min.css"/>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta1/dist/css/postboot.min.css">
 
 <!-- JS -->
-<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta/dist/js/postboot.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta1/dist/js/postboot.min.js"></script>
 ```
 
 ## Author
