@@ -1,5 +1,6 @@
-// Components
+@import "mixins/background";
 @import "mixins/badge";
+@import "mixins/border-radius";
 @import "mixins/breadcrumb";
 @import "mixins/button";
 @import "mixins/list-group";
@@ -7,8 +8,5 @@
 @import "mixins/navbar";
 @import "mixins/pagination";
 @import "mixins/progress";
-@import "mixins/tribar";
-
-// Utility classes
-@import "mixins/background";
 @import "mixins/text";
+@import "mixins/tribar";

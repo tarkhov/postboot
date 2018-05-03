@@ -1,34 +1,8 @@
-// Dropdown directions
-.dropup {
-  .dropdown-menu {
-    top: auto;
-    bottom: 100%;
-  }
-}
-
+// Position
 .dropright,
 .dropleft {
-  position: relative;
-
-  .dropdown-menu {
-    top: 0;
-  }
-
   .dropdown-menu & .dropdown-menu {
     top: calc(-#{$dropdown-padding-y} - #{$dropdown-border-width});
-  }
-}
-
-.dropright {
-  .dropdown-menu {
-    left: 100%;
-  }
-}
-
-.dropleft {
-  .dropdown-menu {
-    left: auto;
-    right: 100%;
   }
 }
 
@@ -152,17 +126,6 @@
     right: $dropdown-border-width;
     border-left-color: $dropdown-arrow-color;
   }
-}
-
-// Menu position
-.dropdown-menu-right {
-  right: 0;
-  left: auto; // Reset the default from `.dropdown-menu`
-}
-
-.dropdown-menu-left {
-  right: auto;
-  left: 0;
 }
 
 // Scrolled

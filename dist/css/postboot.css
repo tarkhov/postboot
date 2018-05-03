@@ -1,5 +1,5 @@
 /*!
- * PostBoot v1.0.0-beta (https://github.com/tarkhov/postboot)
+ * PostBoot v1.0.0-beta (https://tarkhov.github.io/postboot/)
  * Copyright 2016-2018 Alexander Tarkhov
  * Licensed under  ()
  */
@@ -1448,26 +1448,9 @@
 .btn-pill {
   border-radius: 1.875rem; }
 
-.dropup .dropdown-menu {
-  top: auto;
-  bottom: 100%; }
-
-.dropright,
-.dropleft {
-  position: relative; }
-  .dropright .dropdown-menu,
-  .dropleft .dropdown-menu {
-    top: 0; }
-  .dropdown-menu .dropright .dropdown-menu, .dropdown-menu
-  .dropleft .dropdown-menu {
-    top: calc(-0.5rem - 1px); }
-
-.dropright .dropdown-menu {
-  left: 100%; }
-
+.dropdown-menu .dropright .dropdown-menu, .dropdown-menu
 .dropleft .dropdown-menu {
-  left: auto;
-  right: 100%; }
+  top: calc(-0.5rem - 1px); }
 
 .dropdown-arrow {
   position: absolute;
@@ -1543,14 +1526,6 @@
 .dropleft .dropdown-arrow::after {
   right: 1px;
   border-left-color: #fff; }
-
-.dropdown-menu-right {
-  right: 0;
-  left: auto; }
-
-.dropdown-menu-left {
-  right: auto;
-  left: 0; }
 
 .dropdown-menu-scrolled {
   max-height: 300px;
@@ -2039,10 +2014,102 @@
   border-top-left-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px); }
 
+.card-img-top-left {
+  border-top-left-radius: calc(0.25rem - 1px); }
+
+.card-img-bottom-left {
+  border-bottom-left-radius: calc(0.25rem - 1px); }
+
 .card-img-right {
   border-top-right-radius: calc(0.25rem - 1px);
   border-bottom-right-radius: calc(0.25rem - 1px); }
 
+.card-img-top-right {
+  border-top-right-radius: calc(0.25rem - 1px); }
+
+.card-img-bottom-right {
+  border-bottom-right-radius: calc(0.25rem - 1px); }
+
+@media (min-width: 576px) {
+  .card-img-sm-left {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-sm-top-left {
+    border-top-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-sm-bottom-left {
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-sm-right {
+    border-top-right-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px); }
+
+  .card-img-sm-top-right {
+    border-top-right-radius: calc(0.25rem - 1px); }
+
+  .card-img-sm-bottom-right {
+    border-bottom-right-radius: calc(0.25rem - 1px); } }
+@media (min-width: 768px) {
+  .card-img-md-left {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-md-top-left {
+    border-top-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-md-bottom-left {
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-md-right {
+    border-top-right-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px); }
+
+  .card-img-md-top-right {
+    border-top-right-radius: calc(0.25rem - 1px); }
+
+  .card-img-md-bottom-right {
+    border-bottom-right-radius: calc(0.25rem - 1px); } }
+@media (min-width: 992px) {
+  .card-img-lg-left {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-lg-top-left {
+    border-top-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-lg-bottom-left {
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-lg-right {
+    border-top-right-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px); }
+
+  .card-img-lg-top-right {
+    border-top-right-radius: calc(0.25rem - 1px); }
+
+  .card-img-lg-bottom-right {
+    border-bottom-right-radius: calc(0.25rem - 1px); } }
+@media (min-width: 1200px) {
+  .card-img-xl-left {
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-xl-top-left {
+    border-top-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-xl-bottom-left {
+    border-bottom-left-radius: calc(0.25rem - 1px); }
+
+  .card-img-xl-right {
+    border-top-right-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px); }
+
+  .card-img-xl-top-right {
+    border-top-right-radius: calc(0.25rem - 1px); }
+
+  .card-img-xl-bottom-right {
+    border-bottom-right-radius: calc(0.25rem - 1px); } }
 .card-footer-tabs {
   margin-right: -0.625rem;
   margin-top: -0.75rem;

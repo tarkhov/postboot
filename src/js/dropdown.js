@@ -229,7 +229,11 @@ class Dropdown {
     let selector = Util.getSelector(element)
 
     if (selector) {
-      menu = document.querySelector(selector)
+      try {
+        menu = document.querySelector(selector)
+      } catch (err) {
+        menu = parent.querySelector(Dropdown.Selector.MENU)
+      }
     } else {
       menu = parent.querySelector(Dropdown.Selector.MENU)
     }

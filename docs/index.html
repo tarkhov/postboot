@@ -104,7 +104,11 @@
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#card-footer-pills">Footer pills</a></li>
                   <li class="nav-item"><a class="nav-link" href="#card-footer-tabs">Footer tabs</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#card-image-position">Image position</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#card-image-position">Image position</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#card-image-position-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#code">Code</a>
@@ -1089,6 +1093,40 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+              </div>
+              <div id="card-image-position-responsive">
+                <h4 class="font-weight-normal">Responsive image position</h4>
+                <div class="card card-body bg-light mb-3">
+                  <pre class="pre-sm"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;img class=&#x22;card-img-sm-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-sm-top-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-sm-bottom-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-sm-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-sm-top-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-sm-bottom-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+
+&#x3C;img class=&#x22;card-img-md-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-md-top-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-md-bottom-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-md-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-md-top-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-md-bottom-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+
+&#x3C;img class=&#x22;card-img-lg-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-lg-top-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-lg-bottom-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-lg-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-lg-top-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-lg-bottom-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+
+&#x3C;img class=&#x22;card-img-xl-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-xl-top-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-xl-bottom-right&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-xl-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-xl-top-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+&#x3C;img class=&#x22;card-img-xl-bottom-left&#x22; src=&#x22;assets/img/example.jpg&#x22;/&#x3E;
+</code></pre>
+                </div>
               </div>
             </div>
             <div id="code">
@@ -2140,7 +2178,7 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                 <div class="card-body">
                   <div class="row">
                     <div class="col-lg-3">
-                      <div class="sidebar sidebar-light bg-light sidebar-expand-xs" id="sidebar-scrollspy">
+                      <div class="sidebar sidebar-light bg-light sidebar-expand" id="sidebar-scrollspy">
                         <ul class="sidebar-nav nav-tree nav-y-sm">
                           <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-item">Nav item</a>
                             <ul class="sidebar-nav nav-tree nav-y-sm font-size-2 pl-3">
@@ -2228,7 +2266,7 @@ unzip postboot-1.0.0-beta.zip</code></pre>
                 <div class="card-body">
                   <div class="row">
                     <div class="col-lg-4">
-                      <div class="sidebar sidebar-dark bg-dark sidebar-expand-xs"><a class="sidebar-brand" href="#">Brand</a>
+                      <div class="sidebar sidebar-dark bg-dark sidebar-expand"><a class="sidebar-brand" href="#">Brand</a>
                         <ul class="sidebar-nav">
                           <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
                           <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>

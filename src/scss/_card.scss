@@ -1,9 +1,27 @@
 // Image position
-.card-img-left {
-  @include border-left-radius($card-inner-border-radius);
-}
-.card-img-right {
-  @include border-right-radius($card-inner-border-radius);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .card-img#{$infix}-left {
+      @include border-left-radius($card-inner-border-radius);
+    }
+    .card-img#{$infix}-top-left {
+      @include border-top-left-radius($card-inner-border-radius);
+    }
+    .card-img#{$infix}-bottom-left {
+      @include border-bottom-left-radius($card-inner-border-radius);
+    }
+    .card-img#{$infix}-right {
+      @include border-right-radius($card-inner-border-radius);
+    }
+    .card-img#{$infix}-top-right {
+      @include border-top-right-radius($card-inner-border-radius);
+    }
+    .card-img#{$infix}-bottom-right {
+      @include border-bottom-right-radius($card-inner-border-radius);
+    }
+  }
 }
 
 // Footer navs

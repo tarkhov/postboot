@@ -1,5 +1,5 @@
 /*!
- * PostBoot v1.0.0-beta (https://github.com/tarkhov/postboot)
+ * PostBoot v1.0.0-beta (https://tarkhov.github.io/postboot/)
  * Copyright 2016-2018 Alexander Tarkhov
  * Licensed under  ()
  */
@@ -1196,7 +1196,11 @@ var Dropdown = function () {
       var selector = Util.getSelector(element);
 
       if (selector) {
-        menu = document.querySelector(selector);
+        try {
+          menu = document.querySelector(selector);
+        } catch (err) {
+          menu = parent.querySelector(Dropdown.Selector.MENU);
+        }
       } else {
         menu = parent.querySelector(Dropdown.Selector.MENU);
       }
