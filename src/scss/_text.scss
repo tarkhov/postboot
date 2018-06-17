@@ -3,12 +3,12 @@
   @include text-emphasis-variant(".text-#{$color}", $value);
 }
 
-// Glass
+// Alpha
 @each $color, $value in $theme-colors {
-  @include text-emphasis-variant('.text-glass-#{$color}', rgba($value, $opacity-glass));
+  @include text-alpha-variant('.text-#{$color}-50', $value, .5);
 }
-@each $color, $value in $custom-colors {
-  @include text-emphasis-variant('.text-glass-#{$color}', rgba($value, $opacity-glass));
+@each $color, $value in map-remove($custom-colors, "black", "white") {
+  @include text-alpha-variant('.text-#{$color}-50', $value, .5);
 }
 
 // Hover

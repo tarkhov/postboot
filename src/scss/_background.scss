@@ -10,12 +10,12 @@
   }
 }
 
-// Glass
+// Alpha
 @each $color, $value in $theme-colors {
-  @include bg-glass-variant('.bg-glass-#{$color}', $value, $opacity-glass);
+  @include bg-alpha-variant('.bg-#{$color}-50', $value, .5);
 }
 @each $color, $value in $custom-colors {
-  @include bg-glass-variant('.bg-glass-#{$color}', $value, $opacity-glass);
+  @include bg-alpha-variant('.bg-#{$color}-50', $value, .5);
 }
 
 // Hover

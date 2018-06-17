@@ -1,0 +1,18 @@
+extends ../example.pug
+
+block example_title
+  h2.font-weight-normal Caret
+
+block example_result
+  .caret.caret-up
+  .caret.caret-right
+  .caret.caret-down
+  .caret.caret-left
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .caret.caret-up
+    .caret.caret-right
+    .caret.caret-down
+    .caret.caret-left

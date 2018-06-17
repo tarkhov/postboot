@@ -4,8 +4,8 @@ mixin text(text, classes)
 mixin text_variant(text, variant)
   +text(text, 'text-' + variant)
 
-mixin text_glass(text, variant)
-  +text_variant(text, 'glass-' + variant)
+mixin text_alpha(text, variant)
+  +text_variant(text, variant + '-50')
 
 mixin text_hover(text, variant)
   +text_variant(text, 'hover-' + variant)

@@ -8,23 +8,10 @@ const DROPDOWN_REGEXP_KEYDOWN  = new RegExp(`${ARROW_UP_KEYCODE}|${ARROW_DOWN_KE
 
 
 class Dropdown {
-  static get KEY() {
-    return 'dropdown'
-  }
-
-  static get DROPPED_KEY() {
-    return 'dropped'
-  }
-
-  static get EVENT_KEY() {
-    return 'Dropdown'
-  }
-
   static get ClassName() {
     return Object.freeze({
-      ANIMATING : 'animating',
-      DISABLED  : 'disabled',
-      SHOW      : 'show'
+      DISABLED : 'disabled',
+      SHOW     : 'show'
     })
   }
 
@@ -37,20 +24,20 @@ class Dropdown {
 
   static get Event() {
     return Object.freeze({
-      HIDE   : `${Dropdown.EVENT_KEY}Hide`,
-      HIDDEN : `${Dropdown.EVENT_KEY}Hidden`,
-      SHOW   : `${Dropdown.EVENT_KEY}Show`,
-      SHOWN  : `${Dropdown.EVENT_KEY}Shown`
+      HIDE   : 'DropdownHide',
+      HIDDEN : 'DropdownHidden',
+      SHOW   : 'DropdownShow',
+      SHOWN  : 'DropdownShown'
     })
   }
 
   static get Selector() {
     return Object.freeze({
+      ACTIVE_TOGGLE : '.show > .dropdown-toggle',
       DATA_HOVER    : '[data-hover="dropdown"]',
       DATA_TOGGLE   : '[data-toggle="dropdown"]',
-      DROPPED       : `[${Dropdown.DROPPED_KEY}]`,
-      MEGA_MENU     : '.dropdown-mega .dropdown-menu',
       FORM          : 'form',
+      MEGA_MENU     : '.dropdown-menu-auto, .dropdown-menu-fluid',
       MENU          : '.dropdown-menu',
       NAVBAR_NAV    : '.navbar-nav',
       VISIBLE_ITEMS : '.dropdown-menu .dropdown-item:not(.disabled)'
@@ -64,25 +51,25 @@ class Dropdown {
     this.menu    = this.config.menu || Dropdown.getMenu(this.element, this.parent)
   }
 
-  addEventListeners(options) {
-    let events = options || ['click', 'keyboard'];
+  addEventListeners(names) {
+    let events = names || ['click', 'keyboard'];
 
     if (events.indexOf('click') >= 0) {
-      this.element.addEventListener('click', (event) => {
+      this.element.addEventListener('click', event => {
         event.preventDefault()
         event.stopPropagation()
         this.toggle(event)
       })
 
       if (this.menu.classList.contains(Dropdown.Selector.MEGA_MENU)) {
-        this.menu.addEventListener('click', (event) => {
+        this.menu.addEventListener('click', function (event) {
           event.stopPropagation()
         })
       }
 
       let form = this.parent.querySelector(Dropdown.Selector.FORM)
       if (form) {
-        form.addEventListener('click', (event) => {
+        form.addEventListener('click', function (event) {
           event.stopPropagation()
         })
       }
@@ -94,8 +81,8 @@ class Dropdown {
     }
 
     if (events.indexOf('hover') >= 0 && !('ontouchstart' in document.documentElement)) {
-      this.element.addEventListener('mouseenter', (event) => this.toggle(event))
-      this.parent.addEventListener('mouseleave',  () => this.hide())
+      this.element.addEventListener('mouseenter', event => this.show(event))
+      this.parent.addEventListener('mouseleave', () => this.hide())
     }
   }
 
@@ -122,10 +109,40 @@ class Dropdown {
     }
 
     this.element.setAttribute('aria-expanded', 'true')
-    this.element.setAttribute(Dropdown.DROPPED_KEY, '')
 
     this.menu.classList.toggle(Dropdown.ClassName.SHOW)
     this.parent.classList.toggle(Dropdown.ClassName.SHOW)
+
+    let shownEvent = Util.createEvent(Dropdown.Event.SHOWN, relatedTarget)
+    this.parent.dispatchEvent(shownEvent)
+  }
+
+  show(event) {
+    if (this.element.disabled || this.element.classList.contains(Dropdown.ClassName.DISABLED) || this.menu.classList.contains(Dropdown.ClassName.SHOW)) {
+      return
+    }
+
+    let isActive = this.menu.classList.contains(Dropdown.ClassName.SHOW)
+
+    Dropdown.hideMenus(event)
+
+    if (isActive) {
+      return
+    }
+
+    let relatedTarget = {
+      relatedTarget: this.element
+    }
+    let showEvent = Util.createEvent(Dropdown.Event.SHOW, relatedTarget)
+    this.parent.dispatchEvent(showEvent)
+    if (showEvent.defaultPrevented) {
+      return
+    }
+
+    this.element.setAttribute('aria-expanded', 'true')
+
+    this.menu.classList.add(Dropdown.ClassName.SHOW)
+    this.parent.classList.add(Dropdown.ClassName.SHOW)
 
     let shownEvent = Util.createEvent(Dropdown.Event.SHOWN, relatedTarget)
     this.parent.dispatchEvent(shownEvent)
@@ -146,7 +163,6 @@ class Dropdown {
     }
 
     this.element.setAttribute('aria-expanded', 'false')
-    this.element.removeAttribute(Dropdown.DROPPED_KEY)
 
     this.menu.classList.remove(Dropdown.ClassName.SHOW)
     this.parent.classList.remove(Dropdown.ClassName.SHOW)
@@ -161,15 +177,11 @@ class Dropdown {
       return
     }
 
-    let elements = document.querySelectorAll(Dropdown.Selector.DROPPED)
+    let elements = document.querySelectorAll(Dropdown.Selector.ACTIVE_TOGGLE)
     if (elements.length) {
-      elements.forEach((element) => {
-        if (!element.hasOwnProperty(Dropdown.KEY)) {
-          return true
-        }
-
-        let menu = element[Dropdown.KEY].menu
-        let parent = element[Dropdown.KEY].parent
+      elements.forEach(function (element) {
+        let parent = Dropdown.getParent(element)
+        let menu = Dropdown.getMenu(element, parent)
 
         if (!parent.classList.contains(Dropdown.ClassName.SHOW)) {
           return true
@@ -195,7 +207,6 @@ class Dropdown {
         }
 
         element.setAttribute('aria-expanded', 'false')
-        element.removeAttribute(Dropdown.DROPPED_KEY)
 
         menu.classList.remove(Dropdown.ClassName.SHOW)
         parent.classList.remove(Dropdown.ClassName.SHOW)
@@ -292,40 +303,23 @@ class Dropdown {
 
     items[index].focus()
   }
-
-  static init(element, config) {
-    let dropdown = null
-
-    if (element.hasOwnProperty(Dropdown.KEY)) {
-      dropdown = element[Dropdown.KEY]
-    }
-
-    if (!dropdown) {
-      dropdown = new Dropdown(element, config)
-      element[Dropdown.KEY] = dropdown
-    }
-
-    return dropdown
-  }
-}
-
-function dropdown(element, config) {
-  return Dropdown.init(element, config)
 }
 
 if (typeof PostBoot === 'undefined' || PostBoot.Event.Dropdown !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     let toggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE)
     if (toggles.length) {
-      toggles.forEach((element) => {
-        dropdown(element).addEventListeners()
+      toggles.forEach(function (element) {
+        let dropdown = new Dropdown(element)
+        dropdown.addEventListeners()
       })
     }
 
     let hovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER)
     if (hovers.length) {
-      hovers.forEach((element) => {
-        dropdown(element).addEventListeners(['hover'])
+      hovers.forEach(function (element) {
+        let dropdown = new Dropdown(element)
+        dropdown.addEventListeners(['hover'])
       })
     }
 

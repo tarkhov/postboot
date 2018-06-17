@@ -1,15 +1,16 @@
 extends ../example.pug
 
 block example_title
-  h2.font-weight-normal Glass
+  h3.font-weight-normal Hover
 
-block example_body
-  .card-body.bg-dark.bg-striped
+block example_result
+  .row
     each text, variant in colors
-      +text_glass(text, variant)
+      .col-md-3
+        +border_hover(text, variant)
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      div(class='text-glass-' + variant)= text
+      p(class='border-hover-' + variant)= text

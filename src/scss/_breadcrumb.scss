@@ -20,7 +20,7 @@
     color: $breadcrumb-dark-color;
 
     @include hover-focus {
-      color: -hover-color;
+      color: $breadcrumb-dark-hover-color;
     }
 
     .active > &,
@@ -32,17 +32,10 @@
 }
 
 // Arrows
-.breadcrumb-rang {
-  @include breadcrumb-divider($breadcrumb-divider-rang);
-}
-.breadcrumb-raquo {
-  @include breadcrumb-divider($breadcrumb-divider-raquo);
-}
-.breadcrumb-rarr {
-  @include breadcrumb-divider($breadcrumb-divider-rarr);
-}
-.breadcrumb-rsaquo {
-  @include breadcrumb-divider($breadcrumb-divider-rsaquo);
+@each $divider, $value in $breadcrumb-dividers {
+  .breadcrumb-#{$divider} {
+    @include breadcrumb-divider($value);
+  }
 }
 
 // Pill

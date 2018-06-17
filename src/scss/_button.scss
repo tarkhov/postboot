@@ -44,22 +44,27 @@
   }
 }
 
-// Glass
+// Alpha
 @each $color, $value in $theme-colors {
-  .btn-glass-#{$color} {
-    @include button-glass-variant($value, $value, $btn-glass-opacity);
+  .btn-#{$color}-50 {
+    @include button-alpha-variant($value, $value, .5);
     @if $color == 'warning' {
       color: $white;
     }
   }
 }
 @each $color, $value in $custom-colors {
-  .btn-glass-#{$color} {
-    @include button-glass-variant($value, $value, $btn-glass-opacity);
+  .btn-#{$color}-50 {
+    @include button-alpha-variant($value, $value, .5);
     @if $color == 'orange' {
       color: $white;
     }
   }
+}
+
+// Circle
+.btn-circle {
+  border-radius: 50%;
 }
 
 // Pill

@@ -4,21 +4,27 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .card-img#{$infix}-left {
+      height: 100%;
       @include border-left-radius($card-inner-border-radius);
     }
     .card-img#{$infix}-top-left {
+      height: 100%;
       @include border-top-left-radius($card-inner-border-radius);
     }
     .card-img#{$infix}-bottom-left {
+      height: 100%;
       @include border-bottom-left-radius($card-inner-border-radius);
     }
     .card-img#{$infix}-right {
+      height: 100%;
       @include border-right-radius($card-inner-border-radius);
     }
     .card-img#{$infix}-top-right {
+      height: 100%;
       @include border-top-right-radius($card-inner-border-radius);
     }
     .card-img#{$infix}-bottom-right {
+      height: 100%;
       @include border-bottom-right-radius($card-inner-border-radius);
     }
   }

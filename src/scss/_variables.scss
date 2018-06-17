@@ -73,15 +73,12 @@ $container-lg-max-widths: (
 $border-radius-pill: 1.875rem !default;
 $border-radius-xs: .1rem !default;
 $line-height-xs: 1.5 !default;
-$opacity-glass: .5 !default;
 
 // Buttons
 $input-btn-padding-y-xs: .1rem !default;
 $input-btn-padding-x-xs: .25rem !default;
 
 $btn-border-radius-xs: $border-radius-xs !default;
-
-$btn-glass-opacity: $opacity-glass !default;
 
 // Navbar
 $navbar-padding-y-sm:       ($spacer * .25) !default;
@@ -111,14 +108,17 @@ $nav-link-padding-x-lg: 1.5rem !default;
 $nav-link-padding-y-lg: .75rem !default;
 
 // Progress
-$progress-height-sm:    1.25rem !default;
-$progress-font-size-sm: 1rem !default;
+$progress-height-xs:    .75rem !default;
+$progress-font-size-xs: .6rem !default;
 
-$progress-height-md:    1.5rem !default;
-$progress-font-size-md: 1.25rem !default;
+$progress-height-md:    1.25rem !default;
+$progress-font-size-md: 1rem !default;
 
-$progress-height-lg:    1.75rem !default;
-$progress-font-size-lg: 1.5rem !default;
+$progress-height-lg:    1.5rem !default;
+$progress-font-size-lg: 1.25rem !default;
+
+$progress-height-xl:    1.75rem !default;
+$progress-font-size-xl: 1.5rem !default;
 
 // List group
 $list-group-item-padding-x-xs: .75rem !default;
@@ -131,10 +131,12 @@ $list-group-item-padding-x-lg: 1.5rem !default;
 $list-group-item-padding-y-lg: 1rem !default;
 
 // Breadcrumb
-$breadcrumb-divider-rang:   "〉" !default;
-$breadcrumb-divider-raquo:  "»" !default;
-$breadcrumb-divider-rarr:   "→" !default;
-$breadcrumb-divider-rsaquo: "›" !default;
+$breadcrumb-dividers: (
+  rang:   "27E9",
+  raquo:  "00BB",
+  rarr:   "2192",
+  rsaquo: "203A"
+) !default;
 
 $breadcrumb-dark-color:         rgba($white,1) !default;
 $breadcrumb-dark-hover-color:   rgba($white,.75) !default;
@@ -176,12 +178,16 @@ $sidebar-dark-color:                 rgba($white,.5) !default;
 $sidebar-dark-hover-color:           rgba($white,.75) !default;
 $sidebar-dark-active-color:          rgba($white,1) !default;
 $sidebar-dark-disabled-color:        rgba($white,.25) !default;
-$sidebar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$sidebar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $sidebar-dark-toggler-border-color:  rgba($white,.1) !default;
 
 $sidebar-light-color:                rgba($black,.5) !default;
 $sidebar-light-hover-color:          rgba($black,.7) !default;
 $sidebar-light-active-color:         rgba($black,.9) !default;
 $sidebar-light-disabled-color:       rgba($black,.3) !default;
-$sidebar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$sidebar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
 $sidebar-light-toggler-border-color: rgba($black,.1) !default;
+
+// Triple bar
+$tribar-color:      $primary;
+$tribar-height:     2px;
+$tribar-margin-top: 5px;
+$tribar-width:      24px;

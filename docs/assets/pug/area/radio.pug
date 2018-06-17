@@ -5,16 +5,16 @@ block example_title
 
 block example_result
   .list-group
-    a.list-group-item.list-group-item-action.active(href="#" data-toggle="radio-area" checked-area) Active
+    a.area.list-group-item.list-group-item-action.active(href="#" data-toggle="radio-area" checked-area) Active
     - for(var i = 1; i <= 5; i++)
-      a.list-group-item.list-group-item-action(href="#" data-toggle="radio-area")= "Radio area " + i
+      a.area.list-group-item.list-group-item-action(href="#" data-toggle="radio-area")= "Radio area " + i
 
 block example_code
   :encode-pug
     | <!-- Source -->
     .list-group
       = "\n\t"
-      a.list-group-item.list-group-item-action.active(href="#" data-toggle="radio-area") Active
+      a.area.list-group-item.list-group-item-action.active(href="#" data-toggle="radio-area") Active
       - for(var i = 1; i <= 5; i++)
         = "\n\t"
-        a.list-group-item.list-group-item-action(href="#" data-toggle="radio-area")= "Radio area " + i
+        a.area.list-group-item.list-group-item-action(href="#" data-toggle="radio-area")= "Radio area " + i

@@ -1,3 +1,8 @@
+// Alpha
+@mixin text-alpha-variant($variant, $color, $alpha) {
+  @include text-emphasis-variant($variant, rgba($color, $alpha));
+}
+
 // Text
 @mixin text-ribbon-variant($color, $background) {
   padding: 10px;

@@ -13,5 +13,5 @@ mixin background_hover(text, variant)
 mixin background_gradient(text, variant)
   +background(text, ['bg-gradient-' + variant, 'text-white'])
 
-mixin background_glass(text, variant)
-  +background(text, ['bg-glass-' + variant, 'text-white'])
+mixin background_alpha(text, variant)
+  +background(text, ['bg-' + variant + '-50', 'text-white'])

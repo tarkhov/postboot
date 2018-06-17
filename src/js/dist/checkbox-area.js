@@ -6,16 +6,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var CheckboxArea = function () {
   _createClass(CheckboxArea, null, [{
-    key: 'KEY',
-    get: function get() {
-      return 'checkboxArea';
-    }
-  }, {
-    key: 'EVENT_KEY',
-    get: function get() {
-      return 'CheckboxArea';
-    }
-  }, {
     key: 'ClassName',
     get: function get() {
       return Object.freeze({
@@ -27,8 +17,10 @@ var CheckboxArea = function () {
     key: 'Event',
     get: function get() {
       return Object.freeze({
-        ACTIVATE: CheckboxArea.EVENT_KEY + 'Activate',
-        DEACTIVATE: CheckboxArea.EVENT_KEY + 'Deactivate'
+        ACTIVATE: 'CheckboxAreaActivate',
+        ACTIVATED: 'CheckboxAreaActivated',
+        DEACTIVATE: 'CheckboxAreaDeactivate',
+        DEACTIVATED: 'CheckboxAreaDeactivated'
       });
     }
   }, {
@@ -64,43 +56,28 @@ var CheckboxArea = function () {
       }
 
       var isActive = this.element.classList.contains(CheckboxArea.ClassName.ACTIVE);
+
+      var activateEvent = Util.createEvent(isActive ? CheckboxArea.Event.DEACTIVATE : CheckboxArea.Event.ACTIVATE);
+      this.element.dispatchEvent(activateEvent);
+
       this.element.classList.toggle(CheckboxArea.ClassName.ACTIVE);
       this.element.setAttribute('aria-checked', !isActive);
 
-      var stateEvent = Util.createEvent(isActive ? CheckboxArea.Event.DEACTIVATE : CheckboxArea.Event.ACTIVATE);
-      this.element.dispatchEvent(stateEvent);
-    }
-  }], [{
-    key: 'init',
-    value: function init(element) {
-      var area = null;
-
-      if (element.hasOwnProperty(CheckboxArea.KEY)) {
-        area = element[CheckboxArea.KEY];
-      }
-
-      if (!area) {
-        area = new CheckboxArea(element);
-        element[CheckboxArea.KEY] = area;
-      }
-
-      return area;
+      var activatedEvent = Util.createEvent(isActive ? CheckboxArea.Event.DEACTIVATED : CheckboxArea.Event.ACTIVATED);
+      this.element.dispatchEvent(activatedEvent);
     }
   }]);
 
   return CheckboxArea;
 }();
 
-function checkboxArea(element) {
-  return CheckboxArea.init(element);
-}
-
 if (typeof PostBoot === 'undefined' || PostBoot.Event.CheckboxArea !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var areas = document.querySelectorAll(CheckboxArea.Selector.DATA_TOGGLE);
     if (areas.length) {
       areas.forEach(function (element) {
-        checkboxArea(element).addEventListeners();
+        var checkboxArea = new CheckboxArea(element);
+        checkboxArea.addEventListeners();
       });
     }
   });

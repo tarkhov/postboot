@@ -61,7 +61,7 @@
               <li class="nav-item"><a class="nav-link" href="#background">Background</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#background-custom">Custom</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#background-glass">Glass</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#background-alpha">Alpha</a></li>
                   <li class="nav-item"><a class="nav-link" href="#background-hover">Hover</a></li>
                   <li class="nav-item"><a class="nav-link" href="#background-striped">Striped</a></li>
                 </ul>
@@ -69,13 +69,14 @@
               <li class="nav-item"><a class="nav-link" href="#badge">Badge</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#badge-custom">Custom</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#badge-glass">Glass</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#badge-alpha">Alpha</a></li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#border">Border</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#border-custom">Custom</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#border-glass">Glass</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#border-alpha">Alpha</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#border-hover">Hover</a></li>
                   <li class="nav-item"><a class="nav-link" href="#border-pill">Pill</a></li>
                   <li class="nav-item"><a class="nav-link" href="#border-style">Style</a></li>
                   <li class="nav-item"><a class="nav-link" href="#border-width">Width</a></li>
@@ -92,10 +93,11 @@
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#button-custom">Custom</a></li>
                   <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#button-size">Size</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#button-pill">Pill</a></li>
                   <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#button-glass">Glass</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#button-alpha">Alpha</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#button-size">Size</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#button-circle">Circle</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#button-pill">Pill</a></li>
                   <li class="nav-item"><a class="nav-link" href="#button-checkbox">Checkbox</a></li>
                   <li class="nav-item"><a class="nav-link" href="#button-radio">Radio</a></li>
                 </ul>
@@ -111,6 +113,7 @@
                   </li>
                 </ul>
               </li>
+              <li class="nav-item"><a class="nav-link" href="#caret">Caret</a></li>
               <li class="nav-item"><a class="nav-link" href="#code">Code</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#code-size">Size</a></li>
@@ -120,6 +123,7 @@
               <li class="nav-item"><a class="nav-link" href="#dropdown">Dropdown</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#dropdown-arrow">Arrow</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-caret-disabled">Caret disabled</a></li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-hover">Hover</a></li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a></li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-scrolled-menu">Scrolled menu</a></li>
@@ -207,10 +211,11 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="#scrollspy">ScrollSpy</a></li>
               <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a></li>
+              <li class="nav-item"><a class="nav-link" href="#tab">Tab</a></li>
               <li class="nav-item"><a class="nav-link" href="#text">Text</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#text-custom">Custom</a></li>
-                  <li class="nav-item"><a class="nav-link" href="#text-glass">Glass</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#text-alpha">Alpha</a></li>
                   <li class="nav-item"><a class="nav-link" href="#text-hover">Hover</a></li>
                   <li class="nav-item"><a class="nav-link" href="#text-ribbon">Ribbon</a></li>
                 </ul>
@@ -320,18 +325,18 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 <h3 class="font-weight-normal">Radio</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                    <div class="list-group"><a class="list-group-item list-group-item-action active" href="#" data-toggle="radio-area" checked-area>Active</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 1</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 2</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 3</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 4</a><a class="list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 5</a>
+                    <div class="list-group"><a class="area list-group-item list-group-item-action active" href="#" data-toggle="radio-area" checked-area>Active</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 1</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 2</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 3</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 4</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 5</a>
                     </div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;list-group&#x22;&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action active&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Active&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 1&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 2&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 3&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 4&#x3C;/a&#x3E;
-&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 5&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action active&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Active&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 1&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 2&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 3&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 4&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 5&#x3C;/a&#x3E;
 &#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
@@ -361,43 +366,43 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="background-glass">
-                <h3 class="font-weight-normal">Glass</h3>
+              <div id="background-alpha">
+                <h3 class="font-weight-normal">Alpha</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
-                                            <p class="p-2 bg-glass-primary text-white">Primary</p>
-                                            <p class="p-2 bg-glass-secondary text-white">Secondary</p>
-                                            <p class="p-2 bg-glass-success text-white">Success</p>
-                                            <p class="p-2 bg-glass-info text-white">Info</p>
-                                            <p class="p-2 bg-glass-warning text-white">Warning</p>
-                                            <p class="p-2 bg-glass-danger text-white">Danger</p>
-                                            <p class="p-2 bg-glass-light text-white">Light</p>
-                                            <p class="p-2 bg-glass-dark text-white">Dark</p>
-                                            <p class="p-2 bg-glass-black text-white">Black</p>
-                                            <p class="p-2 bg-glass-indigo text-white">Indigo</p>
-                                            <p class="p-2 bg-glass-orange text-white">Orange</p>
-                                            <p class="p-2 bg-glass-pink text-white">Pink</p>
-                                            <p class="p-2 bg-glass-purple text-white">Purple</p>
-                                            <p class="p-2 bg-glass-teal text-white">Teal</p>
-                                            <p class="p-2 bg-glass-white text-white">White</p>
+                                            <p class="p-2 bg-primary-50 text-white">Primary</p>
+                                            <p class="p-2 bg-secondary-50 text-white">Secondary</p>
+                                            <p class="p-2 bg-success-50 text-white">Success</p>
+                                            <p class="p-2 bg-info-50 text-white">Info</p>
+                                            <p class="p-2 bg-warning-50 text-white">Warning</p>
+                                            <p class="p-2 bg-danger-50 text-white">Danger</p>
+                                            <p class="p-2 bg-light-50 text-white">Light</p>
+                                            <p class="p-2 bg-dark-50 text-white">Dark</p>
+                                            <p class="p-2 bg-black-50 text-white">Black</p>
+                                            <p class="p-2 bg-indigo-50 text-white">Indigo</p>
+                                            <p class="p-2 bg-orange-50 text-white">Orange</p>
+                                            <p class="p-2 bg-pink-50 text-white">Pink</p>
+                                            <p class="p-2 bg-purple-50 text-white">Purple</p>
+                                            <p class="p-2 bg-teal-50 text-white">Teal</p>
+                                            <p class="p-2 bg-white-50 text-white">White</p>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-primary&#x22;&#x3E;Primary&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-secondary&#x22;&#x3E;Secondary&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-success&#x22;&#x3E;Success&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-info&#x22;&#x3E;Info&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-warning&#x22;&#x3E;Warning&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-danger&#x22;&#x3E;Danger&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-light&#x22;&#x3E;Light&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-dark&#x22;&#x3E;Dark&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-black&#x22;&#x3E;Black&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-indigo&#x22;&#x3E;Indigo&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-orange&#x22;&#x3E;Orange&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-pink&#x22;&#x3E;Pink&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-purple&#x22;&#x3E;Purple&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-teal&#x22;&#x3E;Teal&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;text-white bg-glass-white&#x22;&#x3E;White&#x3C;/p&#x3E;</code></pre>
+&#x3C;p class=&#x22;text-white bg-primary-50&#x22;&#x3E;Primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-secondary-50&#x22;&#x3E;Secondary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-success-50&#x22;&#x3E;Success&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-info-50&#x22;&#x3E;Info&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-warning-50&#x22;&#x3E;Warning&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-danger-50&#x22;&#x3E;Danger&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-light-50&#x22;&#x3E;Light&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-dark-50&#x22;&#x3E;Dark&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-black-50&#x22;&#x3E;Black&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-indigo-50&#x22;&#x3E;Indigo&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-orange-50&#x22;&#x3E;Orange&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-pink-50&#x22;&#x3E;Pink&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-purple-50&#x22;&#x3E;Purple&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-teal-50&#x22;&#x3E;Teal&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-white-50&#x22;&#x3E;White&#x3C;/p&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -512,43 +517,43 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="badge-glass">
-                <h3 class="font-weight-normal">Glass</h3>
+              <div id="badge-alpha">
+                <h3 class="font-weight-normal">Alpha</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
-                                            <div class="badge badge-glass-primary">Primary</div>
-                                            <div class="badge badge-glass-secondary">Secondary</div>
-                                            <div class="badge badge-glass-success">Success</div>
-                                            <div class="badge badge-glass-info">Info</div>
-                                            <div class="badge badge-glass-warning">Warning</div>
-                                            <div class="badge badge-glass-danger">Danger</div>
-                                            <div class="badge badge-glass-light">Light</div>
-                                            <div class="badge badge-glass-dark">Dark</div>
-                                            <div class="badge badge-glass-black">Black</div>
-                                            <div class="badge badge-glass-indigo">Indigo</div>
-                                            <div class="badge badge-glass-orange">Orange</div>
-                                            <div class="badge badge-glass-pink">Pink</div>
-                                            <div class="badge badge-glass-purple">Purple</div>
-                                            <div class="badge badge-glass-teal">Teal</div>
-                                            <div class="badge badge-glass-white">White</div>
+                                            <div class="badge badge-primary-50">Primary</div>
+                                            <div class="badge badge-secondary-50">Secondary</div>
+                                            <div class="badge badge-success-50">Success</div>
+                                            <div class="badge badge-info-50">Info</div>
+                                            <div class="badge badge-warning-50">Warning</div>
+                                            <div class="badge badge-danger-50">Danger</div>
+                                            <div class="badge badge-light-50">Light</div>
+                                            <div class="badge badge-dark-50">Dark</div>
+                                            <div class="badge badge-black-50">Black</div>
+                                            <div class="badge badge-indigo-50">Indigo</div>
+                                            <div class="badge badge-orange-50">Orange</div>
+                                            <div class="badge badge-pink-50">Pink</div>
+                                            <div class="badge badge-purple-50">Purple</div>
+                                            <div class="badge badge-teal-50">Teal</div>
+                                            <div class="badge badge-white-50">White</div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-secondary&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-success&#x22;&#x3E;Success&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-info&#x22;&#x3E;Info&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-light&#x22;&#x3E;Light&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-dark&#x22;&#x3E;Dark&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-black&#x22;&#x3E;Black&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-glass-white&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;badge badge-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -577,43 +582,116 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="border-glass">
-                <h3 class="font-weight-normal">Glass</h3>
+              <div id="border-alpha">
+                <h3 class="font-weight-normal">Alpha</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
-                                            <p class="p-2 border-solid border-3 border-glass-primary text-white">Primary</p>
-                                            <p class="p-2 border-solid border-3 border-glass-secondary text-white">Secondary</p>
-                                            <p class="p-2 border-solid border-3 border-glass-success text-white">Success</p>
-                                            <p class="p-2 border-solid border-3 border-glass-info text-white">Info</p>
-                                            <p class="p-2 border-solid border-3 border-glass-warning text-white">Warning</p>
-                                            <p class="p-2 border-solid border-3 border-glass-danger text-white">Danger</p>
-                                            <p class="p-2 border-solid border-3 border-glass-light text-white">Light</p>
-                                            <p class="p-2 border-solid border-3 border-glass-dark text-white">Dark</p>
-                                            <p class="p-2 border-solid border-3 border-glass-black text-white">Black</p>
-                                            <p class="p-2 border-solid border-3 border-glass-indigo text-white">Indigo</p>
-                                            <p class="p-2 border-solid border-3 border-glass-orange text-white">Orange</p>
-                                            <p class="p-2 border-solid border-3 border-glass-pink text-white">Pink</p>
-                                            <p class="p-2 border-solid border-3 border-glass-purple text-white">Purple</p>
-                                            <p class="p-2 border-solid border-3 border-glass-teal text-white">Teal</p>
-                                            <p class="p-2 border-solid border-3 border-glass-white text-white">White</p>
+                                            <p class="p-2 border-solid border-3 border-primary-50 text-white">Primary</p>
+                                            <p class="p-2 border-solid border-3 border-secondary-50 text-white">Secondary</p>
+                                            <p class="p-2 border-solid border-3 border-success-50 text-white">Success</p>
+                                            <p class="p-2 border-solid border-3 border-info-50 text-white">Info</p>
+                                            <p class="p-2 border-solid border-3 border-warning-50 text-white">Warning</p>
+                                            <p class="p-2 border-solid border-3 border-danger-50 text-white">Danger</p>
+                                            <p class="p-2 border-solid border-3 border-light-50 text-white">Light</p>
+                                            <p class="p-2 border-solid border-3 border-dark-50 text-white">Dark</p>
+                                            <p class="p-2 border-solid border-3 border-black-50 text-white">Black</p>
+                                            <p class="p-2 border-solid border-3 border-indigo-50 text-white">Indigo</p>
+                                            <p class="p-2 border-solid border-3 border-orange-50 text-white">Orange</p>
+                                            <p class="p-2 border-solid border-3 border-pink-50 text-white">Pink</p>
+                                            <p class="p-2 border-solid border-3 border-purple-50 text-white">Purple</p>
+                                            <p class="p-2 border-solid border-3 border-teal-50 text-white">Teal</p>
+                                            <p class="p-2 border-solid border-3 border-white-50 text-white">White</p>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;p class=&#x22;border-glass-primary&#x22;&#x3E;Primary&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-secondary&#x22;&#x3E;Secondary&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-success&#x22;&#x3E;Success&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-info&#x22;&#x3E;Info&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-warning&#x22;&#x3E;Warning&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-danger&#x22;&#x3E;Danger&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-light&#x22;&#x3E;Light&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-dark&#x22;&#x3E;Dark&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-black&#x22;&#x3E;Black&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-indigo&#x22;&#x3E;Indigo&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-orange&#x22;&#x3E;Orange&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-pink&#x22;&#x3E;Pink&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-purple&#x22;&#x3E;Purple&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-teal&#x22;&#x3E;Teal&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-glass-white&#x22;&#x3E;White&#x3C;/p&#x3E;</code></pre>
+&#x3C;p class=&#x22;border-primary-50&#x22;&#x3E;Primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-secondary-50&#x22;&#x3E;Secondary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-success-50&#x22;&#x3E;Success&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-info-50&#x22;&#x3E;Info&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-warning-50&#x22;&#x3E;Warning&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-danger-50&#x22;&#x3E;Danger&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-light-50&#x22;&#x3E;Light&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-dark-50&#x22;&#x3E;Dark&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-black-50&#x22;&#x3E;Black&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-indigo-50&#x22;&#x3E;Indigo&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-orange-50&#x22;&#x3E;Orange&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-pink-50&#x22;&#x3E;Pink&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-purple-50&#x22;&#x3E;Purple&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-teal-50&#x22;&#x3E;Teal&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-white-50&#x22;&#x3E;White&#x3C;/p&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="border-hover">
+                <h3 class="font-weight-normal">Hover</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-primary text-primary">Primary</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-secondary text-secondary">Secondary</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-success text-success">Success</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-info text-info">Info</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-warning text-warning">Warning</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-danger text-danger">Danger</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-light text-light">Light</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-dark text-dark">Dark</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-black text-black">Black</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-indigo text-indigo">Indigo</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-orange text-orange">Orange</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-pink text-pink">Pink</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-purple text-purple">Purple</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-teal text-teal">Teal</div>
+                      </div>
+                      <div class="col-md-3">
+                                    <div class="card card-body mb-3 border-hover-white text-white">White</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;p class=&#x22;border-hover-primary&#x22;&#x3E;Primary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-secondary&#x22;&#x3E;Secondary&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-success&#x22;&#x3E;Success&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-info&#x22;&#x3E;Info&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-warning&#x22;&#x3E;Warning&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-danger&#x22;&#x3E;Danger&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-light&#x22;&#x3E;Light&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-dark&#x22;&#x3E;Dark&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-black&#x22;&#x3E;Black&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-indigo&#x22;&#x3E;Indigo&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-orange&#x22;&#x3E;Orange&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-pink&#x22;&#x3E;Pink&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-purple&#x22;&#x3E;Purple&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-teal&#x22;&#x3E;Teal&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-hover-white&#x22;&#x3E;White&#x3C;/p&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -812,32 +890,6 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="button-size">
-                <h3 class="font-weight-normal">Sizes</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <button class="btn mr-1 mb-2 btn-secondary btn-xs" type="button">Extra small</button>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-secondary btn-xs&#x22; type=&#x22;button&#x22;&#x3E;Extra small&#x3C;/button&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="button-pill">
-                <h3 class="font-weight-normal">Pill</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                <button class="btn mr-1 mb-2 btn-primary btn-pill" type="button">Pill</button>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-primary btn-pill&#x22; type=&#x22;button&#x22;&#x3E;Pill&#x3C;/button&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
               <div id="button-3d">
                 <h3 class="font-weight-normal">3D</h3>
                 <div class="card mb-3">
@@ -875,43 +927,82 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="button-glass">
-                <h3 class="font-weight-normal">Glass</h3>
+              <div id="button-alpha">
+                <h3 class="font-weight-normal">Alpha</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
-                                            <button class="btn mr-1 mb-2 btn-glass-primary" type="button">Primary</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-secondary" type="button">Secondary</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-success" type="button">Success</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-info" type="button">Info</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-warning" type="button">Warning</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-danger" type="button">Danger</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-light" type="button">Light</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-dark" type="button">Dark</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-black" type="button">Black</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-indigo" type="button">Indigo</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-orange" type="button">Orange</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-pink" type="button">Pink</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-purple" type="button">Purple</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-teal" type="button">Teal</button>
-                                            <button class="btn mr-1 mb-2 btn-glass-white" type="button">White</button>
+                                            <button class="btn mr-1 mb-2 btn-primary-50" type="button">Primary</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary-50" type="button">Secondary</button>
+                                            <button class="btn mr-1 mb-2 btn-success-50" type="button">Success</button>
+                                            <button class="btn mr-1 mb-2 btn-info-50" type="button">Info</button>
+                                            <button class="btn mr-1 mb-2 btn-warning-50" type="button">Warning</button>
+                                            <button class="btn mr-1 mb-2 btn-danger-50" type="button">Danger</button>
+                                            <button class="btn mr-1 mb-2 btn-light-50" type="button">Light</button>
+                                            <button class="btn mr-1 mb-2 btn-dark-50" type="button">Dark</button>
+                                            <button class="btn mr-1 mb-2 btn-black-50" type="button">Black</button>
+                                            <button class="btn mr-1 mb-2 btn-indigo-50" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 btn-orange-50" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 btn-pink-50" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 btn-purple-50" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 btn-teal-50" type="button">Teal</button>
+                                            <button class="btn mr-1 mb-2 btn-white-50" type="button">White</button>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-black&#x22; type=&#x22;button&#x22;&#x3E;Black&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-glass-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
+&#x3C;button class=&#x22;btn btn-primary-50&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary-50&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-success-50&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-info-50&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-warning-50&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-danger-50&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-light-50&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-dark-50&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-50&#x22; type=&#x22;button&#x22;&#x3E;Black&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-indigo-50&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-orange-50&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-pink-50&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-purple-50&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-teal-50&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-white-50&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="button-size">
+                <h3 class="font-weight-normal">Sizes</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-xs" type="button">Extra small</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-xs&#x22; type=&#x22;button&#x22;&#x3E;Extra small&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="button-circle">
+                <h3 class="font-weight-normal">Circle</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                <button class="btn mr-1 mb-2 btn-primary btn-circle" type="button">C</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-primary btn-circle&#x22; type=&#x22;button&#x22;&#x3E;C&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="button-pill">
+                <h3 class="font-weight-normal">Pill</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                <button class="btn mr-1 mb-2 btn-primary btn-pill" type="button">Pill</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-primary btn-pill&#x22; type=&#x22;button&#x22;&#x3E;Pill&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -1129,6 +1220,25 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 </div>
               </div>
             </div>
+            <div id="caret">
+              <h2 class="font-weight-normal">Caret</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="caret caret-up"></div>
+                  <div class="caret caret-right"></div>
+                  <div class="caret caret-down"></div>
+                  <div class="caret caret-left"></div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;caret caret-up&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;caret caret-right&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;caret caret-down&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;caret caret-left&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
             <div id="code">
               <h2 class="font-weight-normal">Code</h2>
               <div id="code-size">
@@ -1244,6 +1354,29 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
   &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;
     &#x3C;div class=&#x22;dropdown-arrow&#x22;&#x3E;&#x3C;/div&#x3E;
   &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="dropdown-caret-disabled">
+                <h3 class="font-weight-normal">Caret disabled</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="btn-group dropdown">
+                      <button class="btn btn-secondary dropdown-toggle caret-none" type="button" data-toggle="dropdown">Dropdown</button>
+                                  <div class="dropdown-menu">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                  </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
+  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle caret-none&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
@@ -2152,7 +2285,7 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 <h1 class="font-weight-normal">Sizes</h1>
                 <div class="card mb-3">
                   <div class="card-body">
-                                            <div class="progress mb-3 progress-sm">
+                                            <div class="progress mb-3 progress-xs">
                                               <div class="progress-bar w-100">100%</div>
                                             </div>
                                             <div class="progress mb-3 progress-md">
@@ -2161,12 +2294,16 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                                             <div class="progress mb-3 progress-lg">
                                               <div class="progress-bar w-100">100%</div>
                                             </div>
+                                            <div class="progress mb-3 progress-xl">
+                                              <div class="progress-bar w-100">100%</div>
+                                            </div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;progress progress-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-xs&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;progress progress-md&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;progress progress-lg&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;progress progress-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-xl&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -2294,6 +2431,29 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
               </div>
               <div class="clearfix"></div>
             </div>
+            <div id="tab">
+              <h2 class="font-weight-normal">Tab</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="my-tab">
+                    <li class="nav-item"><a class="nav-link active" href="#tab-1" data-toggle="tab" data-parent="#my-tab">Tab 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tab-2" data-toggle="tab" data-parent="#my-tab">Tab 2</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab-1">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="tab-pane fade" id="tab-2">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
             <div id="text">
               <h2 class="font-weight-normal">Text</h2>
               <div id="text-custom">
@@ -2312,28 +2472,28 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="text-glass">
-                <h2 class="font-weight-normal">Glass</h2>
+              <div id="text-alpha">
+                <h2 class="font-weight-normal">Alpha</h2>
                 <div class="card mb-3">
-                  <div class="card-body bg-dark bg-striped"><span class="mr-2 mb-2 text-glass-primary">Primary</span><span class="mr-2 mb-2 text-glass-secondary">Secondary</span><span class="mr-2 mb-2 text-glass-success">Success</span><span class="mr-2 mb-2 text-glass-info">Info</span><span class="mr-2 mb-2 text-glass-warning">Warning</span><span class="mr-2 mb-2 text-glass-danger">Danger</span><span class="mr-2 mb-2 text-glass-light">Light</span><span class="mr-2 mb-2 text-glass-dark">Dark</span><span class="mr-2 mb-2 text-glass-black">Black</span><span class="mr-2 mb-2 text-glass-indigo">Indigo</span><span class="mr-2 mb-2 text-glass-orange">Orange</span><span class="mr-2 mb-2 text-glass-pink">Pink</span><span class="mr-2 mb-2 text-glass-purple">Purple</span><span class="mr-2 mb-2 text-glass-teal">Teal</span><span class="mr-2 mb-2 text-glass-white">White</span>
+                  <div class="card-body bg-dark bg-striped"><span class="mr-2 mb-2 text-primary-50">Primary</span><span class="mr-2 mb-2 text-secondary-50">Secondary</span><span class="mr-2 mb-2 text-success-50">Success</span><span class="mr-2 mb-2 text-info-50">Info</span><span class="mr-2 mb-2 text-warning-50">Warning</span><span class="mr-2 mb-2 text-danger-50">Danger</span><span class="mr-2 mb-2 text-light-50">Light</span><span class="mr-2 mb-2 text-dark-50">Dark</span><span class="mr-2 mb-2 text-black-50">Black</span><span class="mr-2 mb-2 text-indigo-50">Indigo</span><span class="mr-2 mb-2 text-orange-50">Orange</span><span class="mr-2 mb-2 text-pink-50">Pink</span><span class="mr-2 mb-2 text-purple-50">Purple</span><span class="mr-2 mb-2 text-teal-50">Teal</span><span class="mr-2 mb-2 text-white-50">White</span>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;text-glass-primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-secondary&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-success&#x22;&#x3E;Success&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-info&#x22;&#x3E;Info&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-light&#x22;&#x3E;Light&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-dark&#x22;&#x3E;Dark&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-black&#x22;&#x3E;Black&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-glass-white&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;text-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>

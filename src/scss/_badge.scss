@@ -10,13 +10,13 @@
 
 // Glass
 @each $color, $value in $theme-colors {
-  .badge-glass-#{$color} {
-    @include badge-glass-variant($value, $opacity-glass);
+  .badge-#{$color}-50 {
+    @include badge-alpha-variant($value, .5);
   }
 }
 @each $color, $value in $custom-colors {
-  .badge-glass-#{$color} {
-    @include badge-glass-variant($value, $opacity-glass);
+  .badge-#{$color}-50 {
+    @include badge-alpha-variant($value, .5);
     @if $color == 'orange' {
       color: $white;
     }

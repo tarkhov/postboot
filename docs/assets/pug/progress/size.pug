@@ -4,11 +4,11 @@ block example_title
   h1.font-weight-normal Sizes
 
 block example_result
-  each size in ['sm', 'md', 'lg']
+  each size in ['xs', 'md', 'lg', 'xl']
     +progress_variant(size)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each size in ['sm', 'md', 'lg']
+    each size in ['xs', 'md', 'lg', 'xl']
       .progress(class='progress-' + size)

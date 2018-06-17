@@ -7,3 +7,20 @@
     background-color: $color;
   }
 }
+
+// Size
+@mixin tribar-size($width, $height, $margin-top) {
+  border-top-width: $height;
+
+  &,
+  &::before,
+  &::after {
+    width: $width;
+  }
+
+  &::before,
+  &::after {
+    height: $height;
+    margin-top: $margin-top;
+  }
+}

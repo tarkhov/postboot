@@ -19,10 +19,7 @@
   "bugs": {
     "url": "https://github.com/tarkhov/postboot/issues"
   },
-  "license": {
-    "type" : "MIT",
-    "url" : "https://github.com/tarkhov/postboot/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-transform-es2015-modules-strip": "^0.1.1",

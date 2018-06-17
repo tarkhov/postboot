@@ -1,12 +1,4 @@
 class CheckboxButton {
-  static get KEY() {
-    return 'checkboxButton'
-  }
-
-  static get EVENT_KEY() {
-    return 'CheckboxButton'
-  }
-
   static get ClassName() {
     return Object.freeze({
       ACTIVE   : 'active',
@@ -22,8 +14,10 @@ class CheckboxButton {
 
   static get Event() {
     return Object.freeze({
-      ACTIVATE   : `${CheckboxButton.EVENT_KEY}Activate`,
-      DEACTIVATE : `${CheckboxButton.EVENT_KEY}Deactivate`
+      ACTIVATE    : 'CheckboxButtonActivate',
+      ACTIVATED   : 'CheckboxButtonActivated',
+      DEACTIVATE  : 'CheckboxButtonDeactivate',
+      DEACTIVATED : 'CheckboxButtonDeactivated'
     })
   }
 
@@ -41,7 +35,7 @@ class CheckboxButton {
   }
 
   addEventListeners() {
-    this.element.addEventListener('click', (event) => {
+    this.element.addEventListener('click', event => {
       event.preventDefault()
       this.toggle()
     })
@@ -53,6 +47,9 @@ class CheckboxButton {
     }
 
     let isActive = this.element.classList.contains(CheckboxButton.ClassName.ACTIVE)
+
+    let activateEvent = Util.createEvent((isActive) ? CheckboxButton.Event.DEACTIVATE : CheckboxButton.Event.ACTIVATE)
+    this.element.dispatchEvent(activateEvent)
 
     if (this.input) {
       if (this.input.disabled || this.input.classList.contains(CheckboxButton.ClassName.DISABLED)) {
@@ -67,41 +64,23 @@ class CheckboxButton {
     this.element.classList.toggle(CheckboxButton.ClassName.ACTIVE)
     this.element.setAttribute('aria-pressed', !isActive)
 
-    let stateEvent = Util.createEvent((isActive) ? CheckboxButton.Event.DEACTIVATE : CheckboxButton.Event.ACTIVATE)
-    this.element.dispatchEvent(stateEvent)
+    let activatedEvent = Util.createEvent((isActive) ? CheckboxButton.Event.DEACTIVATED : CheckboxButton.Event.ACTIVATED)
+    this.element.dispatchEvent(activatedEvent)
   }
 
   getConfig(config) {
     config = Object.assign({}, CheckboxButton.Default, config)
     return config
   }
-
-  static init(element, config) {
-    let button = null
-
-    if (element.hasOwnProperty(CheckboxButton.KEY)) {
-      button = element[CheckboxButton.KEY]
-    }
-
-    if (!button) {
-      button = new CheckboxButton(element, config)
-      element[CheckboxButton.KEY] = button
-    }
-
-    return button
-  }
-}
-
-function checkboxButton(element, config) {
-  return CheckboxButton.init(element, config)
 }
 
 if (typeof PostBoot === 'undefined' || PostBoot.Event.CheckboxButton !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     let buttons = document.querySelectorAll(CheckboxButton.Selector.DATA_TOGGLE)
     if (buttons.length) {
-      buttons.forEach((element) => {
-        checkboxButton(element).addEventListeners()
+      buttons.forEach(function (element) {
+        let checkboxButton = new CheckboxButton(element)
+        checkboxButton.addEventListeners()
       })
     }
   })

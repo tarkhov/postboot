@@ -2,7 +2,7 @@
 .dropright,
 .dropleft {
   .dropdown-menu & .dropdown-menu {
-    top: calc(-#{$dropdown-padding-y} - #{$dropdown-border-width});
+    top: calc(-#{$dropdown-padding-y} - #{$dropdown-border-width}) !important;
   }
 }
 
@@ -125,6 +125,14 @@
   .dropdown-arrow::after {
     right: $dropdown-border-width;
     border-left-color: $dropdown-arrow-color;
+  }
+}
+
+// Caret
+.caret-none {
+  &::before,
+  &::after {
+    display: none !important;
   }
 }
 

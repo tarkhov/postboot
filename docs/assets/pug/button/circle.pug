@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Circle
+
+block example_result
+  +button('C', ['btn-primary', 'btn-circle'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    button.btn.btn-primary.btn-circle(type='button') C

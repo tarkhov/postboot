@@ -6,16 +6,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var CheckboxButton = function () {
   _createClass(CheckboxButton, null, [{
-    key: 'KEY',
-    get: function get() {
-      return 'checkboxButton';
-    }
-  }, {
-    key: 'EVENT_KEY',
-    get: function get() {
-      return 'CheckboxButton';
-    }
-  }, {
     key: 'ClassName',
     get: function get() {
       return Object.freeze({
@@ -34,8 +24,10 @@ var CheckboxButton = function () {
     key: 'Event',
     get: function get() {
       return Object.freeze({
-        ACTIVATE: CheckboxButton.EVENT_KEY + 'Activate',
-        DEACTIVATE: CheckboxButton.EVENT_KEY + 'Deactivate'
+        ACTIVATE: 'CheckboxButtonActivate',
+        ACTIVATED: 'CheckboxButtonActivated',
+        DEACTIVATE: 'CheckboxButtonDeactivate',
+        DEACTIVATED: 'CheckboxButtonDeactivated'
       });
     }
   }, {
@@ -75,6 +67,9 @@ var CheckboxButton = function () {
 
       var isActive = this.element.classList.contains(CheckboxButton.ClassName.ACTIVE);
 
+      var activateEvent = Util.createEvent(isActive ? CheckboxButton.Event.DEACTIVATE : CheckboxButton.Event.ACTIVATE);
+      this.element.dispatchEvent(activateEvent);
+
       if (this.input) {
         if (this.input.disabled || this.input.classList.contains(CheckboxButton.ClassName.DISABLED)) {
           return;
@@ -88,8 +83,8 @@ var CheckboxButton = function () {
       this.element.classList.toggle(CheckboxButton.ClassName.ACTIVE);
       this.element.setAttribute('aria-pressed', !isActive);
 
-      var stateEvent = Util.createEvent(isActive ? CheckboxButton.Event.DEACTIVATE : CheckboxButton.Event.ACTIVATE);
-      this.element.dispatchEvent(stateEvent);
+      var activatedEvent = Util.createEvent(isActive ? CheckboxButton.Event.DEACTIVATED : CheckboxButton.Event.ACTIVATED);
+      this.element.dispatchEvent(activatedEvent);
     }
   }, {
     key: 'getConfig',
@@ -97,37 +92,18 @@ var CheckboxButton = function () {
       config = Object.assign({}, CheckboxButton.Default, config);
       return config;
     }
-  }], [{
-    key: 'init',
-    value: function init(element, config) {
-      var button = null;
-
-      if (element.hasOwnProperty(CheckboxButton.KEY)) {
-        button = element[CheckboxButton.KEY];
-      }
-
-      if (!button) {
-        button = new CheckboxButton(element, config);
-        element[CheckboxButton.KEY] = button;
-      }
-
-      return button;
-    }
   }]);
 
   return CheckboxButton;
 }();
-
-function checkboxButton(element, config) {
-  return CheckboxButton.init(element, config);
-}
 
 if (typeof PostBoot === 'undefined' || PostBoot.Event.CheckboxButton !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var buttons = document.querySelectorAll(CheckboxButton.Selector.DATA_TOGGLE);
     if (buttons.length) {
       buttons.forEach(function (element) {
-        checkboxButton(element).addEventListeners();
+        var checkboxButton = new CheckboxButton(element);
+        checkboxButton.addEventListeners();
       });
     }
   });

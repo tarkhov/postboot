@@ -1,23 +1,11 @@
 'use strict';
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var ScrollSpy = function () {
   _createClass(ScrollSpy, null, [{
-    key: 'KEY',
-    get: function get() {
-      return 'scrollSpy';
-    }
-  }, {
-    key: 'EVENT_KEY',
-    get: function get() {
-      return 'ScrollSpy';
-    }
-  }, {
     key: 'ClassName',
     get: function get() {
       return Object.freeze({
@@ -41,7 +29,7 @@ var ScrollSpy = function () {
     key: 'Event',
     get: function get() {
       return Object.freeze({
-        ACTIVATE: ScrollSpy.EVENT_KEY + 'Activate'
+        ACTIVATE: 'ScrollSpyActivate'
       });
     }
   }, {
@@ -246,31 +234,10 @@ var ScrollSpy = function () {
         }
       }
     }
-  }], [{
-    key: 'init',
-    value: function init(element, options) {
-      var scrollspy = null;
-
-      if (element.hasOwnProperty(ScrollSpy.KEY)) {
-        scrollspy = element[ScrollSpy.KEY];
-      }
-
-      if (!scrollspy) {
-        var config = (typeof options === 'undefined' ? 'undefined' : _typeof(options)) === 'object' && options;
-        scrollspy = new ScrollSpy(element, config);
-        element[ScrollSpy.KEY] = scrollspy;
-      }
-
-      return scrollspy;
-    }
   }]);
 
   return ScrollSpy;
 }();
-
-function scrollSpy(element, config) {
-  return ScrollSpy.init(element, config);
-}
 
 if (typeof PostBoot === 'undefined' || PostBoot.Event.ScrollSpy !== false) {
   document.addEventListener('DOMContentLoaded', function () {
@@ -278,7 +245,7 @@ if (typeof PostBoot === 'undefined' || PostBoot.Event.ScrollSpy !== false) {
       var scrollSpys = document.querySelectorAll(ScrollSpy.Selector.DATA_SPY);
       if (scrollSpys.length) {
         scrollSpys.forEach(function (element) {
-          scrollSpy(element, element.dataset);
+          var scrollSpy = new ScrollSpy(element, element.dataset);
         });
       }
     });

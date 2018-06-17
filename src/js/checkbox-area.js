@@ -1,12 +1,4 @@
 class CheckboxArea {
-  static get KEY() {
-    return 'checkboxArea'
-  }
-
-  static get EVENT_KEY() {
-    return 'CheckboxArea'
-  }
-
   static get ClassName() {
     return Object.freeze({
       ACTIVE   : 'active',
@@ -16,8 +8,10 @@ class CheckboxArea {
 
   static get Event() {
     return Object.freeze({
-      ACTIVATE   : `${CheckboxArea.EVENT_KEY}Activate`,
-      DEACTIVATE : `${CheckboxArea.EVENT_KEY}Deactivate`
+      ACTIVATE    : 'CheckboxAreaActivate',
+      ACTIVATED   : 'CheckboxAreaActivated',
+      DEACTIVATE  : 'CheckboxAreaDeactivate',
+      DEACTIVATED : 'CheckboxAreaDeactivated'
     })
   }
 
@@ -32,7 +26,7 @@ class CheckboxArea {
   }
 
   addEventListeners() {
-    this.element.addEventListener('click', (event) => {
+    this.element.addEventListener('click', event => {
       event.preventDefault()
       this.toggle()
     })
@@ -44,39 +38,25 @@ class CheckboxArea {
     }
 
     let isActive = this.element.classList.contains(CheckboxArea.ClassName.ACTIVE)
+
+    let activateEvent = Util.createEvent((isActive) ? CheckboxArea.Event.DEACTIVATE : CheckboxArea.Event.ACTIVATE)
+    this.element.dispatchEvent(activateEvent)
+
     this.element.classList.toggle(CheckboxArea.ClassName.ACTIVE)
     this.element.setAttribute('aria-checked', !isActive)
 
-    let stateEvent = Util.createEvent((isActive) ? CheckboxArea.Event.DEACTIVATE : CheckboxArea.Event.ACTIVATE)
-    this.element.dispatchEvent(stateEvent)
+    let activatedEvent = Util.createEvent((isActive) ? CheckboxArea.Event.DEACTIVATED : CheckboxArea.Event.ACTIVATED)
+    this.element.dispatchEvent(activatedEvent)
   }
-
-  static init(element) {
-    let area = null
-
-    if (element.hasOwnProperty(CheckboxArea.KEY)) {
-      area = element[CheckboxArea.KEY]
-    }
-
-    if (!area) {
-      area = new CheckboxArea(element)
-      element[CheckboxArea.KEY] = area
-    }
-
-    return area
-  }
-}
-
-function checkboxArea(element) {
-  return CheckboxArea.init(element)
 }
 
 if (typeof PostBoot === 'undefined' || PostBoot.Event.CheckboxArea !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     let areas = document.querySelectorAll(CheckboxArea.Selector.DATA_TOGGLE)
     if (areas.length) {
-      areas.forEach((element) => {
-        checkboxArea(element).addEventListeners()
+      areas.forEach(function (element) {
+        let checkboxArea = new CheckboxArea(element)
+        checkboxArea.addEventListeners()
       })
     }
   })

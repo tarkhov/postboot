@@ -52,16 +52,6 @@
   }
 }
 
-.sidebar-toggler-icon {
-  display: inline-block;
-  width: 1.5em;
-  height: 1.5em;
-  vertical-align: middle;
-  content: "";
-  background: no-repeat center center;
-  background-size: 100% 100%;
-}
-
 .sidebar-expand {
   @each $breakpoint in map-keys($grid-breakpoints) {
     $next: breakpoint-next($breakpoint, $grid-breakpoints);
@@ -115,10 +105,6 @@
     border-color: $sidebar-light-toggler-border-color;
   }
 
-  .sidebar-toggler-icon {
-    background-image: $sidebar-light-toggler-icon-bg;
-  }
-
   .sidebar-text {
     color: $sidebar-light-color;
   }
@@ -159,10 +145,6 @@
   .sidebar-toggler {
     color: $sidebar-dark-color;
     border-color: $sidebar-dark-toggler-border-color;
-  }
-
-  .sidebar-toggler-icon {
-    background-image: $sidebar-dark-toggler-icon-bg;
   }
 
   .sidebar-text {

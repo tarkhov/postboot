@@ -4,8 +4,11 @@ mixin border(text, classes)
 mixin border_variant(text, variant)
   +border(text, ['border-solid', 'border-1', 'border-' + variant, 'text-' + variant])
 
-mixin border_glass(text, variant)
-  +border(text, ['border-solid', 'border-3', 'border-glass-' + variant, 'text-white'])
+mixin border_alpha(text, variant)
+  +border(text, ['border-solid', 'border-3', 'border-' + variant + '-50', 'text-white'])
+
+mixin border_hover(text, variant)
+  .card.card-body.mb-3(class=['border-hover-' + variant, 'text-' + variant])= text
 
 mixin border_style(text, style)
   +border(text, ['border-3', 'border-' + style, 'border-primary', 'text-primary'])

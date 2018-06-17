@@ -1,12 +1,4 @@
 class ScrollSpy {
-  static get KEY() {
-    return 'scrollSpy'
-  }
-
-  static get EVENT_KEY() {
-    return 'ScrollSpy'
-  }
-
   static get ClassName() {
     return Object.freeze({
       ACTIVE        : 'active',
@@ -27,7 +19,7 @@ class ScrollSpy {
 
   static get Event() {
     return Object.freeze({
-      ACTIVATE : `${ScrollSpy.EVENT_KEY}Activate`
+      ACTIVATE : 'ScrollSpyActivate'
     })
   }
 
@@ -69,7 +61,7 @@ class ScrollSpy {
     this.activeTarget  = null
     this.scrollHeight  = 0
 
-    this.scrollElement.addEventListener('scroll', (event) => this.process(event))
+    this.scrollElement.addEventListener('scroll', event => this.process(event))
 
     this.refresh()
     this.process()
@@ -93,7 +85,7 @@ class ScrollSpy {
     let targets = Array.prototype.slice.call(document.querySelectorAll(this.selector))
 
     targets
-      .map((element) => {
+      .map(function (element) {
         let target
         let targetSelector = Util.getSelector(element)
 
@@ -113,9 +105,9 @@ class ScrollSpy {
         }
         return null
       })
-      .filter((item)  => item)
-      .sort((a, b)    => a[0] - b[0])
-      .forEach((item) => {
+      .filter(item  => item)
+      .sort((a, b)  => a[0] - b[0])
+      .forEach(item => {
         this.offsets.push(item[0])
         this.targets.push(item[1])
       })
@@ -188,7 +180,7 @@ class ScrollSpy {
     this.clear()
 
     let queries = this.selector.split(',')
-    queries = queries.map((selector) => {
+    queries = queries.map(function (selector) {
       return `${selector}[data-target="${target}"],` +
              `${selector}[href="${target}"]`
     })
@@ -198,14 +190,14 @@ class ScrollSpy {
     if (link.classList.contains(ScrollSpy.ClassName.DROPDOWN_ITEM)) {
       let dropdowns = link.parentAll(`${ScrollSpy.Selector.DROPDOWNS}, ${ScrollSpy.Selector.DROPDOWN_MENU}`, this.config.target)
       if (dropdowns.length) {
-        dropdowns.forEach((dropdown) => {
+        dropdowns.forEach(function (dropdown) {
           dropdown.classList.add(ScrollSpy.ClassName.SHOW)
         })
       }
     } else if (link.classList.contains(ScrollSpy.ClassName.NAV_LINK)) {
       let items = link.parentAll(ScrollSpy.Selector.NAV_ITEM, this.config.target)
       if (items.length) {
-        items.forEach((item) => {
+        items.forEach(function (item) {
           item.classList.add(ScrollSpy.ClassName.SHOW)
         })
       }
@@ -225,42 +217,22 @@ class ScrollSpy {
       if (active.classList.contains(ScrollSpy.ClassName.NAV_LINK) || active.classList.contains(ScrollSpy.ClassName.DROPDOWN_ITEM)) {
         let items = active.parentAll(ScrollSpy.Selector.SHOW, this.config.target)
         if (items.length) {
-          items.forEach((item) => {
+          items.forEach(function (item) {
             item.classList.remove(ScrollSpy.ClassName.SHOW)
           })
         }
       }
     }
   }
-
-  static init(element, options) {
-    let scrollspy = null
-
-    if (element.hasOwnProperty(ScrollSpy.KEY)) {
-      scrollspy = element[ScrollSpy.KEY]
-    }
-
-    if (!scrollspy) {
-      let config = typeof options === 'object' && options
-      scrollspy = new ScrollSpy(element, config)
-      element[ScrollSpy.KEY] = scrollspy
-    }
-
-    return scrollspy
-  }
-}
-
-function scrollSpy(element, config) {
-  return ScrollSpy.init(element, config)
 }
 
 if (typeof PostBoot === 'undefined' || PostBoot.Event.ScrollSpy !== false) {
   document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('load', () => {
+    window.addEventListener('load', function () {
       let scrollSpys = document.querySelectorAll(ScrollSpy.Selector.DATA_SPY)
       if (scrollSpys.length) {
-        scrollSpys.forEach((element) => {
-          scrollSpy(element, element.dataset)
+        scrollSpys.forEach(function (element) {
+          let scrollSpy = new ScrollSpy(element, element.dataset)
         })
       }
     })

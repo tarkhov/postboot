@@ -14,25 +14,9 @@ var DROPDOWN_REGEXP_KEYDOWN = new RegExp(ARROW_UP_KEYCODE + '|' + ARROW_DOWN_KEY
 
 var Dropdown = function () {
   _createClass(Dropdown, null, [{
-    key: 'KEY',
-    get: function get() {
-      return 'dropdown';
-    }
-  }, {
-    key: 'DROPPED_KEY',
-    get: function get() {
-      return 'dropped';
-    }
-  }, {
-    key: 'EVENT_KEY',
-    get: function get() {
-      return 'Dropdown';
-    }
-  }, {
     key: 'ClassName',
     get: function get() {
       return Object.freeze({
-        ANIMATING: 'animating',
         DISABLED: 'disabled',
         SHOW: 'show'
       });
@@ -49,21 +33,21 @@ var Dropdown = function () {
     key: 'Event',
     get: function get() {
       return Object.freeze({
-        HIDE: Dropdown.EVENT_KEY + 'Hide',
-        HIDDEN: Dropdown.EVENT_KEY + 'Hidden',
-        SHOW: Dropdown.EVENT_KEY + 'Show',
-        SHOWN: Dropdown.EVENT_KEY + 'Shown'
+        HIDE: 'DropdownHide',
+        HIDDEN: 'DropdownHidden',
+        SHOW: 'DropdownShow',
+        SHOWN: 'DropdownShown'
       });
     }
   }, {
     key: 'Selector',
     get: function get() {
       return Object.freeze({
+        ACTIVE_TOGGLE: '.show > .dropdown-toggle',
         DATA_HOVER: '[data-hover="dropdown"]',
         DATA_TOGGLE: '[data-toggle="dropdown"]',
-        DROPPED: '[' + Dropdown.DROPPED_KEY + ']',
-        MEGA_MENU: '.dropdown-mega .dropdown-menu',
         FORM: 'form',
+        MEGA_MENU: '.dropdown-menu-auto, .dropdown-menu-fluid',
         MENU: '.dropdown-menu',
         NAVBAR_NAV: '.navbar-nav',
         VISIBLE_ITEMS: '.dropdown-menu .dropdown-item:not(.disabled)'
@@ -82,10 +66,10 @@ var Dropdown = function () {
 
   _createClass(Dropdown, [{
     key: 'addEventListeners',
-    value: function addEventListeners(options) {
+    value: function addEventListeners(names) {
       var _this = this;
 
-      var events = options || ['click', 'keyboard'];
+      var events = names || ['click', 'keyboard'];
 
       if (events.indexOf('click') >= 0) {
         this.element.addEventListener('click', function (event) {
@@ -115,7 +99,7 @@ var Dropdown = function () {
 
       if (events.indexOf('hover') >= 0 && !('ontouchstart' in document.documentElement)) {
         this.element.addEventListener('mouseenter', function (event) {
-          return _this.toggle(event);
+          return _this.show(event);
         });
         this.parent.addEventListener('mouseleave', function () {
           return _this.hide();
@@ -147,10 +131,41 @@ var Dropdown = function () {
       }
 
       this.element.setAttribute('aria-expanded', 'true');
-      this.element.setAttribute(Dropdown.DROPPED_KEY, '');
 
       this.menu.classList.toggle(Dropdown.ClassName.SHOW);
       this.parent.classList.toggle(Dropdown.ClassName.SHOW);
+
+      var shownEvent = Util.createEvent(Dropdown.Event.SHOWN, relatedTarget);
+      this.parent.dispatchEvent(shownEvent);
+    }
+  }, {
+    key: 'show',
+    value: function show(event) {
+      if (this.element.disabled || this.element.classList.contains(Dropdown.ClassName.DISABLED) || this.menu.classList.contains(Dropdown.ClassName.SHOW)) {
+        return;
+      }
+
+      var isActive = this.menu.classList.contains(Dropdown.ClassName.SHOW);
+
+      Dropdown.hideMenus(event);
+
+      if (isActive) {
+        return;
+      }
+
+      var relatedTarget = {
+        relatedTarget: this.element
+      };
+      var showEvent = Util.createEvent(Dropdown.Event.SHOW, relatedTarget);
+      this.parent.dispatchEvent(showEvent);
+      if (showEvent.defaultPrevented) {
+        return;
+      }
+
+      this.element.setAttribute('aria-expanded', 'true');
+
+      this.menu.classList.add(Dropdown.ClassName.SHOW);
+      this.parent.classList.add(Dropdown.ClassName.SHOW);
 
       var shownEvent = Util.createEvent(Dropdown.Event.SHOWN, relatedTarget);
       this.parent.dispatchEvent(shownEvent);
@@ -172,7 +187,6 @@ var Dropdown = function () {
       }
 
       this.element.setAttribute('aria-expanded', 'false');
-      this.element.removeAttribute(Dropdown.DROPPED_KEY);
 
       this.menu.classList.remove(Dropdown.ClassName.SHOW);
       this.parent.classList.remove(Dropdown.ClassName.SHOW);
@@ -193,15 +207,11 @@ var Dropdown = function () {
         return;
       }
 
-      var elements = document.querySelectorAll(Dropdown.Selector.DROPPED);
+      var elements = document.querySelectorAll(Dropdown.Selector.ACTIVE_TOGGLE);
       if (elements.length) {
         elements.forEach(function (element) {
-          if (!element.hasOwnProperty(Dropdown.KEY)) {
-            return true;
-          }
-
-          var menu = element[Dropdown.KEY].menu;
-          var parent = element[Dropdown.KEY].parent;
+          var parent = Dropdown.getParent(element);
+          var menu = Dropdown.getMenu(element, parent);
 
           if (!parent.classList.contains(Dropdown.ClassName.SHOW)) {
             return true;
@@ -225,7 +235,6 @@ var Dropdown = function () {
           }
 
           element.setAttribute('aria-expanded', 'false');
-          element.removeAttribute(Dropdown.DROPPED_KEY);
 
           menu.classList.remove(Dropdown.ClassName.SHOW);
           parent.classList.remove(Dropdown.ClassName.SHOW);
@@ -320,44 +329,26 @@ var Dropdown = function () {
 
       items[index].focus();
     }
-  }, {
-    key: 'init',
-    value: function init(element, config) {
-      var dropdown = null;
-
-      if (element.hasOwnProperty(Dropdown.KEY)) {
-        dropdown = element[Dropdown.KEY];
-      }
-
-      if (!dropdown) {
-        dropdown = new Dropdown(element, config);
-        element[Dropdown.KEY] = dropdown;
-      }
-
-      return dropdown;
-    }
   }]);
 
   return Dropdown;
 }();
-
-function dropdown(element, config) {
-  return Dropdown.init(element, config);
-}
 
 if (typeof PostBoot === 'undefined' || PostBoot.Event.Dropdown !== false) {
   document.addEventListener('DOMContentLoaded', function () {
     var toggles = document.querySelectorAll(Dropdown.Selector.DATA_TOGGLE);
     if (toggles.length) {
       toggles.forEach(function (element) {
-        dropdown(element).addEventListeners();
+        var dropdown = new Dropdown(element);
+        dropdown.addEventListeners();
       });
     }
 
     var hovers = document.querySelectorAll(Dropdown.Selector.DATA_HOVER);
     if (hovers.length) {
       hovers.forEach(function (element) {
-        dropdown(element).addEventListeners(['hover']);
+        var dropdown = new Dropdown(element);
+        dropdown.addEventListeners(['hover']);
       });
     }
 

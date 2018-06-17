@@ -6,21 +6,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 var RadioButton = function () {
   _createClass(RadioButton, null, [{
-    key: 'KEY',
-    get: function get() {
-      return 'radioButton';
-    }
-  }, {
-    key: 'CHECKED_KEY',
-    get: function get() {
-      return 'checked-button';
-    }
-  }, {
-    key: 'EVENT_KEY',
-    get: function get() {
-      return 'RadioButton';
-    }
-  }, {
     key: 'ClassName',
     get: function get() {
       return Object.freeze({
@@ -40,16 +25,17 @@ var RadioButton = function () {
     key: 'Event',
     get: function get() {
       return Object.freeze({
-        ACTIVATE: RadioButton.EVENT_KEY + 'Activate',
-        DEACTIVATE: RadioButton.EVENT_KEY + 'Deactivate'
+        ACTIVATE: 'RadioButtonActivate',
+        ACTIVATED: 'RadioButtonActivated',
+        DEACTIVATE: 'RadioButtonDeactivate',
+        DEACTIVATED: 'RadioButtonDeactivated'
       });
     }
   }, {
     key: 'Selector',
     get: function get() {
       return Object.freeze({
-        ACTIVE: '.active',
-        CHECKED: '[' + RadioButton.CHECKED_KEY + ']',
+        ACTIVE: '.btn.active',
         DATA_TOGGLE: '[data-toggle="radio-button"]',
         INPUT: 'input'
       });
@@ -82,6 +68,9 @@ var RadioButton = function () {
         return;
       }
 
+      var activateEvent = Util.createEvent(RadioButton.Event.ACTIVATE);
+      this.element.dispatchEvent(activateEvent);
+
       if (this.input) {
         if (this.input.disabled || this.input.classList.contains(RadioButton.ClassName.DISABLED) || this.input.checked) {
           return;
@@ -92,22 +81,23 @@ var RadioButton = function () {
         this.input.focus();
       }
 
-      var active = this.parent.querySelector(RadioButton.Selector.CHECKED);
+      var active = this.parent.querySelector(RadioButton.Selector.ACTIVE);
       if (active) {
-        active.classList.remove(RadioButton.ClassName.ACTIVE);
-        active.setAttribute('aria-pressed', 'false');
-        active.removeAttribute(RadioButton.CHECKED_KEY);
-
         var deactivateEvent = Util.createEvent(RadioButton.Event.DEACTIVATE);
         active.dispatchEvent(deactivateEvent);
+
+        active.classList.remove(RadioButton.ClassName.ACTIVE);
+        active.setAttribute('aria-pressed', 'false');
+
+        var deactivatedEvent = Util.createEvent(RadioButton.Event.DEACTIVATED);
+        active.dispatchEvent(deactivatedEvent);
       }
 
       this.element.classList.add(RadioButton.ClassName.ACTIVE);
       this.element.setAttribute('aria-pressed', 'true');
-      this.element.setAttribute(RadioButton.CHECKED_KEY, '');
 
-      var activateEvent = Util.createEvent(RadioButton.Event.ACTIVATE);
-      this.element.dispatchEvent(activateEvent);
+      var activatedEvent = Util.createEvent(RadioButton.Event.ACTIVATED);
+      this.element.dispatchEvent(activatedEvent);
     }
   }, {
     key: 'getConfig',
@@ -129,38 +119,17 @@ var RadioButton = function () {
 
       return parent;
     }
-  }, {
-    key: 'init',
-    value: function init(element, config) {
-      var button = null;
-
-      if (element.hasOwnProperty(RadioButton.KEY)) {
-        button = element[RadioButton.KEY];
-      }
-
-      if (!button) {
-        button = new RadioButton(element, config);
-        element[RadioButton.KEY] = button;
-      }
-
-      return button;
-    }
   }]);
 
   return RadioButton;
 }();
 
-function radioButton(element, config) {
-  return RadioButton.init(element, config);
-}
-
-if (typeof PostBoot === 'undefined' || PostBoot.Event.RadioButton !== false) {
-  document.addEventListener('DOMContentLoaded', function () {
-    var buttons = document.querySelectorAll(RadioButton.Selector.DATA_TOGGLE);
-    if (buttons.length) {
-      buttons.forEach(function (element) {
-        radioButton(element).addEventListeners();
-      });
-    }
-  });
-}
+document.addEventListener('DOMContentLoaded', function () {
+  var buttons = document.querySelectorAll(RadioButton.Selector.DATA_TOGGLE);
+  if (buttons.length) {
+    buttons.forEach(function (element) {
+      var radioButton = new RadioButton(element);
+      radioButton.addEventListeners();
+    });
+  }
+});

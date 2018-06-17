@@ -7,13 +7,29 @@
 
 // Glass
 @each $color, $value in $theme-colors {
-  .border-glass-#{$color} {
-    border-color: rgba($value, $opacity-glass) !important;
+  .border-#{$color}-50 {
+    border-color: rgba($value, .5) !important;
   }
 }
 @each $color, $value in $custom-colors {
-  .border-glass-#{$color} {
-    border-color: rgba($value, $opacity-glass) !important;
+  .border-#{$color}-50 {
+    border-color: rgba($value, .5) !important;
+  }
+}
+
+// Hover
+@each $color, $value in $theme-colors {
+  .border-hover-#{$color} {
+    @include hover-focus {
+      border-color: $value !important;
+    }
+  }
+}
+@each $color, $value in $custom-colors {
+  .border-hover-#{$color} {
+    @include hover-focus {
+      border-color: $value !important;
+    }
   }
 }
 
@@ -22,7 +38,7 @@
 
 // Style
 @each $style, $value in $border-styles {
-  .border-#{$style}        { border-style: $value !important; }
+  .border-#{$style} { border-style: $value !important; }
 
   @each $position in $positions {
     .border-#{$position}-#{$style} { border-top-style: $value !important; }
