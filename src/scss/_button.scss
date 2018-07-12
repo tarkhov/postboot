@@ -45,19 +45,21 @@
 }
 
 // Alpha
-@each $color, $value in $theme-colors {
-  .btn-#{$color}-50 {
-    @include button-alpha-variant($value, $value, .5);
-    @if $color == 'warning' {
-      color: $white;
+@for $alpha from 1 through 9 {
+  @each $color, $value in $theme-colors {
+    .btn-#{$color}-#{($alpha * 10)} {
+      @include button-alpha-variant($value, $value, ($alpha * .1));
+      @if $color == 'warning' {
+        color: $white;
+      }
     }
   }
-}
-@each $color, $value in $custom-colors {
-  .btn-#{$color}-50 {
-    @include button-alpha-variant($value, $value, .5);
-    @if $color == 'orange' {
-      color: $white;
+  @each $color, $value in $custom-colors {
+    .btn-#{$color}-#{($alpha * 10)} {
+      @include button-alpha-variant($value, $value, ($alpha * .1));
+      @if $color == 'orange' {
+        color: $white;
+      }
     }
   }
 }

@@ -42,3 +42,40 @@
   margin-right: -($card-spacer-x / 2);
   margin-left: -($card-spacer-x / 2);
 }
+
+// Pill
+.card-pill {
+  @include border-radius($border-radius-pill);
+
+  .card-header {
+    &:first-child {
+      @include border-radius($border-radius-pill $border-radius-pill 0 0);
+    }
+  }
+
+  .card-footer {
+    &:last-child {
+      @include border-radius(0 0 $border-radius-pill $border-radius-pill);
+    }
+  }
+
+  .card-img {
+    @include border-radius($border-radius-pill);
+  }
+
+  .card-img-top {
+    @include border-top-radius($border-radius-pill);
+  }
+
+  .card-img-right {
+    @include border-right-radius($border-radius-pill);
+  }
+
+  .card-img-bottom {
+    @include border-bottom-radius($border-radius-pill);
+  }
+
+  .card-img-left {
+    @include border-left-radius($border-radius-pill);
+  }
+}

@@ -5,15 +5,17 @@
   }
 }
 
-// Glass
-@each $color, $value in $theme-colors {
-  .border-#{$color}-50 {
-    border-color: rgba($value, .5) !important;
+// Alpha
+@for $alpha from 1 through 9 {
+  @each $color, $value in $theme-colors {
+    .border-#{$color}-#{($alpha * 10)} {
+      border-color: rgba($value, ($alpha * .1)) !important;
+    }
   }
-}
-@each $color, $value in $custom-colors {
-  .border-#{$color}-50 {
-    border-color: rgba($value, .5) !important;
+  @each $color, $value in $custom-colors {
+    .border-#{$color}-#{($alpha * 10)} {
+      border-color: rgba($value, ($alpha * .1)) !important;
+    }
   }
 }
 
