@@ -1,8 +1,3 @@
-/*!
- * PostBoot v1.0.0-beta1 (https://tarkhov.github.io/postboot/)
- * Copyright 2016-2018 Alexander Tarkhov
- * Licensed under  ()
- */
 if (!('ontouchstart' in document.documentElement)) {
   (function ($) {
     var DATA_KEY     = 'bs.dropdown';
@@ -36,22 +31,3 @@ if (!('ontouchstart' in document.documentElement)) {
       });
   })(jQuery);
 }
-
-(function ($) {
-  var DATA_KEY     = 'bs.dropdown';
-  var EVENT_KEY    = '.' + DATA_KEY;
-  var DATA_API_KEY = '.data-api';
-
-  var Event = {
-    CLICK_DATA_API : 'click' + EVENT_KEY + DATA_API_KEY
-  };
-
-  var Selector = {
-    MEGA_MENU : '.dropdown-menu-auto, .dropdown-menu-fluid'
-  };
-
-  $(document)
-    .on(Event.CLICK_DATA_API, Selector.MEGA_MENU, function (event) {
-      event.stopPropagation();
-    });
-})(jQuery);

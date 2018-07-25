@@ -2,11 +2,9 @@
 $custom-colors: () !default;
 $custom-colors: map-merge((
   "black":  $black,
-  "indigo": $indigo,
   "orange": $orange,
   "pink":   $pink,
   "purple": $purple,
-  "teal":   $teal,
   "white":  $white
 ), $custom-colors);
 
@@ -72,13 +70,20 @@ $container-lg-max-widths: (
 // Components
 $border-radius-pill: 1.875rem !default;
 $border-radius-xs: .1rem !default;
+$border-radius-xl: .35rem !default;
+
 $line-height-xs: 1.5 !default;
+$line-height-xl: 1.5 !default;
 
 // Buttons
 $input-btn-padding-y-xs: .1rem !default;
 $input-btn-padding-x-xs: .25rem !default;
 
+$input-btn-padding-y-xl: .625rem !default;
+$input-btn-padding-x-xl: 1.25rem !default;
+
 $btn-border-radius-xs: $border-radius-xs !default;
+$btn-border-radius-xl: $border-radius-xl !default;
 
 // Navbar
 $navbar-padding-y-sm:       ($spacer * .25) !default;

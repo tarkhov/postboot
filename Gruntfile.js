@@ -11,11 +11,9 @@ module.exports = function (grunt) {
   ];	
   var customColorNames = [	
     "black",	
-    "indigo",	
     "orange",	
     "pink",	
     "purple",	
-    "teal",
     "white"	
   ];	
   var colorNames = themeColorNames.concat(customColorNames);	
@@ -43,47 +41,24 @@ module.exports = function (grunt) {
             ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
             ' */\n',
 
-    babel: {
-      options: {
-        presets: ['es2015'],
-        plugins: ['transform-es2015-modules-strip']
-      },
-      dist: {
-        files: {
-          'src/js/dist/util.js': 'src/js/util.js',
-          'src/js/dist/checkbox-area.js': 'src/js/checkbox-area.js',
-          'src/js/dist/radio-area.js': 'src/js/radio-area.js',
-          'src/js/dist/checkbox-button.js': 'src/js/checkbox-button.js',
-          'src/js/dist/radio-button.js': 'src/js/radio-button.js',
-          'src/js/dist/collapse.js': 'src/js/collapse.js',
-          'src/js/dist/dropdown.js': 'src/js/dropdown.js',
-          'src/js/dist/scrollspy.js': 'src/js/scrollspy.js'
-        }
-      }
-    },
-
     concat: {
       options: {
         banner: '<%= banner %>'
       },
       dist: {
         src: [
-          'src/js/dist/util.js',
-          'src/js/dist/checkbox-area.js',
-          'src/js/dist/radio-area.js',
-          'src/js/dist/checkbox-button.js',
-          'src/js/dist/radio-button.js',
-          'src/js/dist/collapse.js',
-          'src/js/dist/dropdown.js',
-          'src/js/dist/scrollspy.js'
+          'src/js/dropdown-hover.js',
+          'src/js/dropdown-mega.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
       docs: {
         src: [
-          'dist/js/<%= pkg.name %>.min.js',
-          'docs/assets/js/prism.js',
-          'docs/assets/js/fontawesome-all.min.js'
+          'docs/assets/js/vendor/jquery.min.js',
+          'docs/assets/js/vendor/bootstrap.bundle.min.js',
+          'docs/assets/js/vendor/prism.js',
+          'docs/assets/js/vendor/fontawesome-all.min.js',
+          'dist/js/<%= pkg.name %>.min.js'
         ],
         dest: 'docs/assets/js/app.js'
       }
@@ -151,14 +126,14 @@ module.exports = function (grunt) {
       },
       docs: {	
         files: {	
-          'docs/assets/css/app.min.css': [	
-            'docs/assets/css/bootstrap.min.css',	
-            '<%= cssmin.dist.dest %>',	
-            'docs/assets/css/prism.css',	
-            'docs/assets/css/fa-svg-with-js.css',	
-            'docs/assets/css/main.css'	
-          ]	
-        }	
+          'docs/assets/css/app.min.css': [
+            'docs/assets/css/bootstrap.min.css',
+            '<%= cssmin.dist.dest %>',
+            'docs/assets/css/prism.css',
+            'docs/assets/css/fa-svg-with-js.css',
+            'docs/assets/css/main.css'
+          ]
+        }
       }
     },
 
@@ -201,7 +176,7 @@ module.exports = function (grunt) {
   });
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['babel:dist', 'concat:dist', 'uglify:dist']);
+  grunt.registerTask('dist-js', ['concat:dist', 'uglify:dist']);
 
   // CSS distribution task.
   grunt.registerTask('dist-css', ['sass:dist', 'autoprefixer:dist', 'usebanner', 'cssmin:dist']);

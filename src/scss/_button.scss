@@ -2,6 +2,9 @@
 .btn-xs {
   @include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, $font-size-xs, $line-height-xs, $btn-border-radius-xs);
 }
+.btn-xl {
+  @include button-size($input-btn-padding-y-xl, $input-btn-padding-x-xl, $font-size-xl, $line-height-xl, $btn-border-radius-xl);
+}
 
 // Link
 .btn-outline-link {

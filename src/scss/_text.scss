@@ -1,5 +1,5 @@
 // Custom
-@each $color, $value in map-remove($custom-colors, "black", "white") {
+@each $color, $value in map-remove($custom-colors, "white") {
   @include text-emphasis-variant(".text-#{$color}", $value);
 }
 
@@ -9,7 +9,9 @@
     @include text-alpha-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
   }
   @each $color, $value in $custom-colors {
-    @include text-alpha-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+    @if $color not in 'white', 'black' and $alpha != 5 {
+      @include text-alpha-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+    }
   }
 }
 
@@ -32,14 +34,17 @@
 // Ribbon
 @each $color, $value in $theme-colors {
   .text-ribbon-#{$color} {
-    @include text-ribbon-variant($white, $value);
+    @include text-ribbon-variant($value);
+    @if $color == 'warning' {
+      color: $white;
+    }
   }
 }
-@each $color, $value in map-remove($custom-colors, "black", "white") {
+@each $color, $value in $custom-colors {
   .text-ribbon-#{$color} {
-    @include text-ribbon-variant($white, $value);
+    @include text-ribbon-variant($value);
+    @if $color == 'orange' {
+      color: $white;
+    }
   }
-}
-.text-ribbon-white {
-  @include text-ribbon-variant($gray-900, $white);
 }

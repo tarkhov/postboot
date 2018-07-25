@@ -3,10 +3,9 @@
   @include text-emphasis-variant($variant, rgba($color, $alpha));
 }
 
-// Text
-@mixin text-ribbon-variant($color, $background) {
-  padding: 10px;
+// Ribbon
+@mixin text-ribbon-variant($background) {
+  padding: .75rem;
   background-color: $background;
   color: color-yiq($background);
-  /*color: $color;*/
 }
