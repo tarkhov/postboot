@@ -1,5 +1,5 @@
 // Custom
-@each $color, $value in map-remove($custom-colors, "black", "white") {
+@each $color, $value in map-remove($custom-colors, "white") {
   @include bg-variant('.bg-#{$color}', $value);
 }
 
@@ -28,12 +28,22 @@
     }
   }
 }
-@each $color, $value in map-remove($custom-colors, "black") {
+@each $color, $value in $custom-colors {
   .bg-hover-#{$color} {
     @include hover-focus {
       background-color: $value !important;
     }
   }
+}
+
+// Contain
+.bg-contain {
+  background-size: contain;
+}
+
+// Cover
+.bg-cover {
+  background-size: cover;
 }
 
 // Striped

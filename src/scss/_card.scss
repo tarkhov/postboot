@@ -63,3 +63,15 @@
     @include border-left-radius($border-radius-pill);
   }
 }
+
+// Variants
+@each $color, $value in $theme-colors {
+  .card-#{$color} {
+    @include card-variant($value);
+  }
+}
+@each $color, $value in map-remove($custom-colors, "black", "white") {
+  .card-#{$color} {
+    @include card-variant($value);
+  }
+}

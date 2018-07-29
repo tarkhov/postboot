@@ -13,7 +13,7 @@
 }
 
 // Custom
-@each $color, $value in map-remove($custom-colors, "black") {
+@each $color, $value in $custom-colors {
   .btn-#{$color} {
     @include button-variant($value, $value);
     @if $color == 'orange' {

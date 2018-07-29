@@ -1,5 +1,5 @@
 // Custom
-@each $color, $value in map-remove($custom-colors, "black") {
+@each $color, $value in $custom-colors {
   .badge-#{$color} {
     @include badge-variant($value);
     @if $color == 'orange' {

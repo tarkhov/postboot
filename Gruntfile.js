@@ -11,9 +11,11 @@ module.exports = function (grunt) {
   ];	
   var customColorNames = [	
     "black",	
+    "indigo",	
     "orange",	
     "pink",	
     "purple",	
+    "teal",	
     "white"	
   ];	
   var colorNames = themeColorNames.concat(customColorNames);	

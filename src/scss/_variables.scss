@@ -2,9 +2,11 @@
 $custom-colors: () !default;
 $custom-colors: map-merge((
   "black":  $black,
+  "indigo": $indigo,
   "orange": $orange,
   "pink":   $pink,
   "purple": $purple,
+  "teal":   $teal,
   "white":  $white
 ), $custom-colors);
 

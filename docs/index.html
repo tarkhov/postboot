@@ -52,6 +52,12 @@
                   </li>
                 </ul>
               </li>
+              <li class="nav-item"><a class="nav-link" href="#area">Area</a>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#area-checkbox">Checkbox</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#area-radio">Radio</a></li>
+                </ul>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#background">Background</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#background-custom">Custom</a></li>
@@ -113,6 +119,7 @@
                   <li class="nav-item"><a class="nav-link" href="#code-size">Size</a></li>
                 </ul>
               </li>
+              <li class="nav-item"><a class="nav-link" href="#collapse">Collapse</a></li>
               <li class="nav-item"><a class="nav-link" href="#dropdown">Dropdown</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#dropdown-arrow">Arrow</a></li>
@@ -202,7 +209,9 @@
                   <li class="nav-item"><a class="nav-link" href="#progress-size">Size</a></li>
                 </ul>
               </li>
+              <li class="nav-item"><a class="nav-link" href="#scrollspy">ScrollSpy</a></li>
               <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a></li>
+              <li class="nav-item"><a class="nav-link" href="#tab">Tab</a></li>
               <li class="nav-item"><a class="nav-link" href="#text">Text</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#text-custom">Custom</a></li>
@@ -287,6 +296,51 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div id="area">
+              <h2 class="font-weight-normal">Area</h2>
+              <div id="area-checkbox">
+                <h3 class="font-weight-normal">Checkbox</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="list-group"><a class="list-group-item list-group-item-action active" href="#" data-toggle="checkbox-area">Active</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 1</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 2</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 3</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 4</a><a class="list-group-item list-group-item-action" href="#" data-toggle="checkbox-area">Checkbox area 5</a>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;list-group&#x22;&#x3E;
+&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action active&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Active&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 1&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 2&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 3&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 4&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;checkbox-area&#x22;&#x3E;Checkbox area 5&#x3C;/a&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="area-radio">
+                <h3 class="font-weight-normal">Radio</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="list-group"><a class="area list-group-item list-group-item-action active" href="#" data-toggle="radio-area" checked-area>Active</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 1</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 2</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 3</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 4</a><a class="area list-group-item list-group-item-action" href="#" data-toggle="radio-area">Radio area 5</a>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;list-group&#x22;&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action active&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Active&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 1&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 2&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 3&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 4&#x3C;/a&#x3E;
+&#x9;&#x3C;a class=&#x22;area list-group-item list-group-item-action&#x22; href=&#x22;#&#x22; data-toggle=&#x22;radio-area&#x22;&#x3E;Radio area 5&#x3C;/a&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
               </div>
             </div>
             <div id="background">
@@ -953,6 +1007,72 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <div id="button-checkbox">
+                <h3 class="font-weight-normal">Checkbox</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                <div class="btn-group btn-group-toggle">
+                                  <label class="btn btn-secondary active" data-toggle="checkbox-button" checked-button>
+                                    <input type="checkbox" name="checkbox" checked><span>Active</span>
+                                  </label>
+                                  <label class="btn btn-secondary" data-toggle="checkbox-button">
+                                    <input type="checkbox" name="checkbox"><span>Checkbox</span>
+                                  </label>
+                                  <label class="btn btn-secondary" data-toggle="checkbox-button">
+                                    <input type="checkbox" name="checkbox"><span>Checkbox</span>
+                                  </label>
+                                </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group btn-group-toggle&#x22;&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary active&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22; checked=&#x22;checked&#x22;/&#x3E;&#x3C;span&#x3E;Active&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;/&#x3E;&#x3C;span&#x3E;Checkbox&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;checkbox-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;checkbox&#x22; name=&#x22;checkbox&#x22;/&#x3E;&#x3C;span&#x3E;Checkbox&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="button-radio">
+                <h3 class="font-weight-normal">Radio</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                <div class="btn-group btn-group-toggle">
+                                  <label class="btn btn-secondary active" data-toggle="radio-button" checked-button>
+                                    <input type="radio" name="radio" checked><span>Active</span>
+                                  </label>
+                                  <label class="btn btn-secondary" data-toggle="radio-button">
+                                    <input type="radio" name="radio"><span>Radio</span>
+                                  </label>
+                                  <label class="btn btn-secondary" data-toggle="radio-button">
+                                    <input type="radio" name="radio"><span>Radio</span>
+                                  </label>
+                                </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;btn-group btn-group-toggle&#x22;&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary active&#x22; data-toggle=&#x22;radio-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22; checked=&#x22;checked&#x22;/&#x3E;&#x3C;span&#x3E;Active&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;radio-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22;/&#x3E;&#x3C;span&#x3E;Radio&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+  &#x3C;label class=&#x22;btn btn-secondary&#x22; data-toggle=&#x22;radio-button&#x22;&#x3E;
+    &#x3C;input type=&#x22;radio&#x22; name=&#x22;radio&#x22;/&#x3E;&#x3C;span&#x3E;Radio&#x3C;/span&#x3E;
+  &#x3C;/label&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
             </div>
             <div id="card">
               <h2 class="font-weight-normal">Card</h2>
@@ -1130,6 +1250,29 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
 &#x3C;pre class=&#x22;pre-lg&#x22;&#x3E;&#x3C;/pre&#x3E;</code></pre>
                 </div>
               </div>
+            </div>
+            <div id="collapse">
+              <h2 class="font-weight-normal">Collapse</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <button class="btn btn-primary mb-3" type="button" data-toggle="collapse" data-target="#collapse-example">Collapse</button>
+                  <div class="collapse" id="collapse-example">
+                    <div class="card card-body">
+                      <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-primary mb-3&#x22; type=&#x22;button&#x22; data-toggle=&#x22;collapse&#x22; data-target=&#x22;#collapse-example&#x22;&#x3E;Collapse&#x3C;/button&#x3E;
+&#x3C;div class=&#x22;collapse&#x22; id=&#x22;collapse-example&#x22;&#x3E;
+  &#x3C;div class=&#x22;card card-body&#x22;&#x3E;
+    &#x3C;div&#x3E;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
             </div>
             <div id="dropdown">
               <h2 class="font-weight-normal">Dropdown</h2>
@@ -2166,6 +2309,94 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
             </div>
+            <div id="scrollspy">
+              <h2 class="font-weight-normal">ScrollSpy</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-lg-3">
+                      <div class="sidebar sidebar-light bg-light sidebar-expand" id="sidebar-scrollspy">
+                        <ul class="sidebar-nav nav-tree nav-y-sm">
+                          <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-item">Nav item</a>
+                            <ul class="sidebar-nav nav-tree nav-y-sm font-size-2 pl-3">
+                              <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem">Sub item</a>
+                                <ul class="sidebar-nav nav-tree nav-y-sm font-size-1 pl-3">
+                                  <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem1">Sub item 1</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem2">Sub item 2</a></li>
+                                  <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem3">Sub item 3</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropright dropdown-hover"><a class="nav-link dropdown-toggle" href="#scrollspy-dropdown" data-hover="dropdown">Dropdown</a>
+                            <div class="dropdown-menu"><a class="dropdown-item" href="#scrollspy-dropdown-item1">Menu item 1</a><a class="dropdown-item" href="#scrollspy-dropdown-item2">Menu item 2</a>
+                              <div class="dropright dropdown-hover"><a class="dropdown-item dropdown-toggle" href="#scrollspy-dropdown-item3" data-hover="dropdown">Menu item 3</a>
+                                <div class="dropdown-menu"><a class="dropdown-item" href="#scrollspy-dropdown-subitem1">Sub item 1</a><a class="dropdown-item" href="#scrollspy-dropdown-subitem2">Sub item 2</a><a class="dropdown-item" href="#scrollspy-dropdown-subitem3">Sub item 3</a>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="col-lg-9" data-spy="scroll" data-target="#sidebar-scrollspy" style="overflow-y: scroll; max-height: 300px;">
+                      <div id="scrollspy-nav-item">
+                        <h2>Nav item</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-nav-subitem">
+                        <h2>Sub item</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-nav-subitem1">
+                        <h2>Sub item 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-nav-subitem2">
+                        <h2>Sub item 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-nav-subitem3">
+                        <h2>Sub item 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown">
+                        <h2>Dropdown</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-item1">
+                        <h2>Dropdown item 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-item2">
+                        <h2>Dropdown item 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-item3">
+                        <h2>Dropdown item 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-subitem1">
+                        <h2>Sub item 1</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-subitem2">
+                        <h2>Sub item 2</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                      <div id="scrollspy-dropdown-subitem3">
+                        <h2>Sub item 3</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
             <div id="sidebar">
               <h2 class="font-weight-normal">Sidebar</h2>
               <div class="card mb-3">
@@ -2196,6 +2427,29 @@ unzip postboot-1.0.0-beta1.zip</code></pre>
     &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 5&#x3C;/a&#x3E;&#x3C;/li&#x3E;
   &#x3C;/ul&#x3E;
 &#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            <div id="tab">
+              <h2 class="font-weight-normal">Tab</h2>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <ul class="nav nav-tabs" id="my-tab">
+                    <li class="nav-item"><a class="nav-link active" href="#tab-1" data-toggle="tab" data-parent="#my-tab">Tab 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tab-2" data-toggle="tab" data-parent="#my-tab">Tab 2</a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div class="tab-pane fade show active" id="tab-1">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div class="tab-pane fade" id="tab-2">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;</code></pre>
                 </div>
               </div>
               <div class="clearfix"></div>

@@ -23,7 +23,7 @@
     }
   }
 }
-@each $color, $value in map-remove($custom-colors, "black") {
+@each $color, $value in $custom-colors {
   .text-hover-#{$color} {
     @include hover-focus {
       color: $value !important;
