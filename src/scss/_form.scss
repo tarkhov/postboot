@@ -1,3 +1,41 @@
+// Form control variants
+@each $color, $value in $theme-colors {
+  .form-control-#{$color} {
+    @include form-control-variant($value);
+    @if $color == 'warning' {
+      color: $white;
+    }
+  }
+}
+@each $color, $value in map-remove($custom-colors, "white") {
+  .form-control-#{$color} {
+    @include form-control-variant($value);
+    @if $color == 'orange' {
+      color: $white;
+    }
+  }
+}
+
+// Form control alpha
+@for $alpha from 1 through 9 {
+  @each $color, $value in $theme-colors {
+    .form-control-#{$color}-#{($alpha * 10)} {
+      @include form-control-alpha-variant($value, ($alpha * .1));
+      @if $color == 'warning' {
+        color: $white;
+      }
+    }
+  }
+  @each $color, $value in $custom-colors {
+    .form-control-#{$color}-#{($alpha * 10)} {
+      @include form-control-alpha-variant($value, ($alpha * .1));
+      @if $color == 'orange' {
+        color: $white;
+      }
+    }
+  }
+}
+
 // Form control position
 .form-control-bottom,
 .form-control-left {

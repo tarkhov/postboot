@@ -1,5 +1,5 @@
 // Custom
-@each $color, $value in map-remove($custom-colors, "black", "white") {
+@each $color, $value in map-remove($custom-colors, "white") {
   .border-#{$color} {
     border-color: $value !important;
   }
@@ -43,7 +43,7 @@
   .border-#{$style} { border-style: $value !important; }
 
   @each $position in $positions {
-    .border-#{$position}-#{$style} { border-top-style: $value !important; }
+    .border-#{$position}-#{$style} { border-#{$position}-style: $value !important; }
   }
 }
 

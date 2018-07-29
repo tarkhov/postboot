@@ -1,0 +1,11 @@
+// Variant
+@mixin card-variant($color) {
+  $color-level: color-level($color, 6);
+
+  color: $color-level;
+  background-color: color-level($color, -9);
+
+  .card-link {
+    color: darken($color-level, 10%);
+  }
+}
