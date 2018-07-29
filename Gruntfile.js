@@ -30,11 +30,13 @@ module.exports = function (grunt) {
 
   var title = 'PostBoot';
 
+  var pkg = grunt.file.readJSON('package.json');
+
   require('load-grunt-tasks')(grunt);
 
   // Project configuration.
   grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: pkg,
     banner: '/*!\n' +
             ' * ' + title + ' v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2016-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
@@ -150,12 +152,18 @@ module.exports = function (grunt) {
     pug: {
       options: {
         pretty: true,
-        data: {
-          colors: colors,
-          extraColors: customColors,
-          pkg: '<%= pkg %>',
-          title: title,
-          username: 'tarkhov'
+        data: function (dest, src) {
+          var url = dest.replace('docs', '').replace('index.html', '');
+          //return require('./locals.json');
+
+          return {
+            colors: colors,
+            extraColors: customColors,
+            pkg: pkg,
+            title: title,
+            url: url,
+            username: 'tarkhov'
+          };
         },
         filters: {
           'encode-pug': function (block) {

@@ -1,47 +1,11 @@
-include variables.pug
-doctype html
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+extends layout.pug
 
-    title= title
-    meta(name="description" content=pkg.description)
-    meta(name="keywords" content="bootstrap, html, css, js, javascript, library")
-    meta(name="author" content=pkg.author)
+block head_title
+  title= title
+block meta_description
+  meta(name="description" content=pkg.description)
+block meta_keywords
+  meta(name="keywords" content="bootstrap, html, css, js, javascript, library")
 
-    link(rel="apple-touch-icon" href="assets/img/apple-touch-icon.png")
-    link(rel="icon" href="assets/img/favicon.ico")
-    //-link(rel="manifest" href="manifest.json")
-
-    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet")
-    link(rel="stylesheet" href="assets/css/app.min.css")
-  body.pt-navbar(data-spy="scroll" data-target="#sidebar-left")
-    header.pb-gutter(role="banner")
-      nav#navbar-top.navbar.navbar-expand-xs.navbar-light.bg-light.px-sm-0.fixed-top(role="navigation")
-        .container
-          a.navbar-brand(href="/" rel="home") #[span.rounded.py-1.text-white.font-weight-medium.bg-purple(style="padding-left: .6rem;padding-right: .6rem;") P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
-
-          .collapse.navbar-collapse
-            ul.navbar-nav.mr-auto
-              li.nav-item.dropdown.dropdown-hover
-                a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" data-hover="dropdown") Version
-                .dropdown-menu
-                  a.dropdown-item(href='v1/') v1
-            ul.navbar-nav
-              li.nav-item
-                a.nav-link(href=githubUrl + '/' + username + '/' + pkg.name) #[i.fab.fa-github-alt]#[span.d-none.d-md-inline!= "&nbsp;&nbsp;GitHub"]
-              li.nav-item
-                a.nav-link(href="https://www.producthunt.com/posts/" + pkg.name) #[i.fab.fa-product-hunt]#[span.d-none.d-md-inline!="&nbsp;&nbsp;ProductHunt"]
-            a.btn.btn-primary.btn-sm.ml-2(href=downloadUrl) Download
-
-    .container
-      .row
-        .col-md-2
-          aside#sidebar-left.sidebar.sidebar-light.sidebar-expand-md.py-0.position-fixed(role="complementary")
-            include sidebar-left.pug
-        main.col-md-10(role="main")
-          article(role="article")
-            include main.pug
-
-    script(src="assets/js/app.min.js")
+block main
+  include main.pug
