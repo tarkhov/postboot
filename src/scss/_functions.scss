@@ -2,7 +2,7 @@
   @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")
 }
 
-// Request a custom color level
+// Request a color level
 @function color-level($color, $level: 0) {
   $color-base: if($level > 0, $black, $white);
   $level: abs($level);
