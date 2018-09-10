@@ -1,6 +1,6 @@
 if (!('ontouchstart' in document.documentElement)) {
   (function ($) {
-    var DATA_KEY     = 'bs.dropdown';
+    var DATA_KEY     = 'bs.dropdown-hover';
     var EVENT_KEY    = '.' + DATA_KEY;
     var DATA_API_KEY = '.data-api';
 
