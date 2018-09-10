@@ -22,11 +22,27 @@
       color: $value !important;
     }
   }
+
+  @for $alpha from 1 through 9 {
+    .text-hover-#{$color}-#{($alpha * 10)} {
+      @include hover-focus {
+        color: rgba($value, ($alpha * .1)) !important;
+      }
+    }
+  }
 }
 @each $color, $value in $custom-colors {
   .text-hover-#{$color} {
     @include hover-focus {
       color: $value !important;
+    }
+  }
+
+  @for $alpha from 1 through 9 {
+    .text-hover-#{$color}-#{($alpha * 10)} {
+      @include hover-focus {
+        color: rgba($value, ($alpha * .1)) !important;
+      }
     }
   }
 }

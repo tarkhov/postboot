@@ -26,11 +26,27 @@
       border-color: $value !important;
     }
   }
+
+  @for $alpha from 1 through 9 {
+    .border-hover-#{$color}-#{($alpha * 10)} {
+      @include hover-focus {
+        border-color: rgba($value, ($alpha * .1)) !important;
+      }
+    }
+  }
 }
 @each $color, $value in $custom-colors {
   .border-hover-#{$color} {
     @include hover-focus {
       border-color: $value !important;
+    }
+  }
+
+  @for $alpha from 1 through 9 {
+    .border-hover-#{$color}-#{($alpha * 10)} {
+      @include hover-focus {
+        border-color: rgba($value, ($alpha * .1)) !important;
+      }
     }
   }
 }
