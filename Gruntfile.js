@@ -52,7 +52,8 @@ module.exports = function (grunt) {
       dist: {
         src: [
           'src/js/dropdown-hover.js',
-          'src/js/dropdown-mega.js'
+          'src/js/dropdown-mega.js',
+          'src/js/scrollspy-tree.js'
         ],
         dest: 'dist/js/<%= pkg.name %>.js'
       },
