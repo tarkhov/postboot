@@ -13,6 +13,9 @@
   @each $color, $value in $theme-colors {
     .badge-#{$color}-#{($alpha * 10)} {
       @include badge-alpha-variant($value, ($alpha * .1));
+      @if $color == 'warning' {
+        color: $white;
+      }
     }
   }
   @each $color, $value in $custom-colors {

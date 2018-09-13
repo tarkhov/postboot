@@ -5,8 +5,10 @@ block example_title
 
 block example_body
   .card-body.bg-dark.bg-striped
-    each text, variant in colors
-      +background_alpha(text, variant)
+    .row
+      each text, variant in colors
+        .col
+          +background_alpha(text, variant)
 
 block example_code
   :encode-pug

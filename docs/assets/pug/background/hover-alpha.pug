@@ -4,14 +4,15 @@ block example_title
   h3.font-weight-normal Alpha
 
 block example_body
-  .card-body.bg-dark.bg-striped
+  .card-body.bg-dark.bg-striped.text-white
     .row
       each text, variant in colors
         .col
-          +border_alpha(text, variant)
+          +background_hover(text, variant + '-50')
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      p(class='border-' + variant + '-50')= text
+      if variant != 'black'
+        p(class='bg-hover-' + variant + '-50')= text

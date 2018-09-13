@@ -5930,7 +5930,8 @@
 
 .badge-warning-10 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.1); }
+  background-color: rgba(255, 193, 7, 0.1);
+  color: #fff; }
   .badge-warning-10[href]:hover, .badge-warning-10[href]:focus {
     color: #212529;
     text-decoration: none;
@@ -6051,7 +6052,8 @@
 
 .badge-warning-20 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.2); }
+  background-color: rgba(255, 193, 7, 0.2);
+  color: #fff; }
   .badge-warning-20[href]:hover, .badge-warning-20[href]:focus {
     color: #212529;
     text-decoration: none;
@@ -6172,7 +6174,8 @@
 
 .badge-warning-30 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.3); }
+  background-color: rgba(255, 193, 7, 0.3);
+  color: #fff; }
   .badge-warning-30[href]:hover, .badge-warning-30[href]:focus {
     color: #212529;
     text-decoration: none;
@@ -6293,7 +6296,8 @@
 
 .badge-warning-40 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.4); }
+  background-color: rgba(255, 193, 7, 0.4);
+  color: #fff; }
   .badge-warning-40[href]:hover, .badge-warning-40[href]:focus {
     color: #212529;
     text-decoration: none;
@@ -6414,7 +6418,8 @@
 
 .badge-warning-50 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.5); }
+  background-color: rgba(255, 193, 7, 0.5);
+  color: #fff; }
   .badge-warning-50[href]:hover, .badge-warning-50[href]:focus {
     color: #212529;
     text-decoration: none;
@@ -6535,7 +6540,8 @@
 
 .badge-warning-60 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.6); }
+  background-color: rgba(255, 193, 7, 0.6);
+  color: #fff; }
   .badge-warning-60[href]:hover, .badge-warning-60[href]:focus {
     color: #212529;
     text-decoration: none;
@@ -6656,7 +6662,8 @@
 
 .badge-warning-70 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.7); }
+  background-color: rgba(255, 193, 7, 0.7);
+  color: #fff; }
   .badge-warning-70[href]:hover, .badge-warning-70[href]:focus {
     color: #212529;
     text-decoration: none;
@@ -6777,7 +6784,8 @@
 
 .badge-warning-80 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.8); }
+  background-color: rgba(255, 193, 7, 0.8);
+  color: #fff; }
   .badge-warning-80[href]:hover, .badge-warning-80[href]:focus {
     color: #212529;
     text-decoration: none;
@@ -6898,7 +6906,8 @@
 
 .badge-warning-90 {
   color: #212529;
-  background-color: rgba(255, 193, 7, 0.9); }
+  background-color: rgba(255, 193, 7, 0.9);
+  color: #fff; }
   .badge-warning-90[href]:hover, .badge-warning-90[href]:focus {
     color: #212529;
     text-decoration: none;

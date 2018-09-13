@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Hover
+
+block example_result
+  .row
+    each text, variant in colors
+      .col-md-3
+        +border_hover(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      p(class='border-hover-' + variant)= text
