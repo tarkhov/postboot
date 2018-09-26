@@ -4,14 +4,12 @@ block example_title
   h3.font-weight-normal Alpha
 
 block example_body
-  .card-body.bg-dark.bg-striped
-    .row
-      each text, variant in colors
-        .col
-          +background_alpha(text, variant)
+  .card-body.bg-dark.bg-striped.text-white
+    each text, variant in colors
+      +background_variant(text, variant + '-50')
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      p.text-white(class='bg-' + variant + '-50')= text
+      div(class='bg-' + variant + '-50')

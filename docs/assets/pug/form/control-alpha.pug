@@ -1,12 +1,15 @@
 extends ../example.pug
 
 block example_title
-  h3.font-weight-normal Control position
+  h3.font-weight-normal Control color alpha
 
-block example_result
-  .form-group
-    +form_control_variant('Bottom', 'bottom')
-  +form_control_variant('Left', 'left')
+block example_body
+  .card-body.bg-dark.bg-striped
+    .row
+      each text, variant in colors
+        .col-3
+          .form-group
+            +form_control_variant(text, variant + '-50')
 
 block example_code
   :encode-pug

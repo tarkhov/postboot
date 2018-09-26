@@ -1,7 +1,7 @@
 // Active link
 .nav-link {
   &.active,
-  .nav-item.show & {
+  .nav-item.show > & {
     color: $nav-link-active-color;
   }
 }

@@ -1,11 +1,22 @@
 // Variant
-@mixin form-control-variant($color) {
-  background-color: $color;
-  border-color: $color;
-  color: color-yiq($color);
+@mixin form-control-variant($background, $color: $white) {
+  &,
+  &:focus {
+    background-color: $background;
+    border-color: $background;
+    color: $color;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $color;
+  }
 }
 
 // Alpha
-@mixin form-control-alpha-variant($color, $alpha) {
-  @include form-control-variant(rgba($color, $alpha));
+@mixin form-control-alpha-variant($background, $alpha, $color: $white) {
+  @include form-control-variant(rgba($background, $alpha), $color);
 }

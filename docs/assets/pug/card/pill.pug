@@ -1,28 +1,18 @@
 extends ../example.pug
 
 block example_title
-  h3.font-weight-normal Footer pills
+  h3.font-weight-normal Pill
 
 block example_result
-  .card
-    .card-body
-      h4.card-title Directions
-      p.card-text Example text
-    .card-footer
-      ul.nav.nav-pills.card-footer-pills
-        li.nav-item: a.nav-link.active(href="#") Active
-        li.nav-item: a.nav-link(href="#") Link
-        li.nav-item: a.nav-link.disabled(href="#") Disabled
+  .row
+    .col-6
+      .card.card-body.card-pill
+        h4.card-title Pill
+        p.card-text Example text
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    .card
-      .card-body
-        h4.card-title Directions
-        p.card-text Example text
-      .card-footer
-        ul.nav.nav-pills.card-footer-pills
-          li.nav-item: a.nav-link.active(href="#") Active
-          li.nav-item: a.nav-link(href="#") Link
-          li.nav-item: a.nav-link.disabled(href="#") Disabled
+    .card.card-body.card-pill
+      h4.card-title Pill
+      p.card-text Example text

@@ -1,5 +1,14 @@
-// Unbordered
-@mixin pagination-unbordered($border-radius) {
+// Pills
+@mixin pagination-circles($border-radius) {
+  .page-item {
+    .page-link {
+      @include border-radius($border-radius);
+    }
+  }
+}
+
+// Pills
+@mixin pagination-pills($border-radius) {
   .page-item {
     .page-link {
       @include border-radius($border-radius);

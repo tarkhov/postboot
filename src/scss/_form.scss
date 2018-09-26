@@ -1,5 +1,5 @@
 // Form control variants
-@each $color, $value in $theme-colors {
+@each $color, $value in map-remove($theme-colors, "light") {
   .form-control-#{$color} {
     @include form-control-variant($value);
     @if $color == 'warning' {

@@ -1,5 +1,5 @@
 mixin border(text, classes)
-  p.p-2(class=classes)= text
+  .d-inline-block.mr-1.mb-2.p-2(class=classes)= text
 
 mixin border_variant(text, variant)
   +border(text, ['border-solid', 'border-1', 'border-' + variant, 'text-' + variant])
@@ -8,7 +8,13 @@ mixin border_alpha(text, variant)
   +border(text, ['border-solid', 'border-3', 'border-' + variant + '-50', 'text-white'])
 
 mixin border_hover(text, variant)
-  .card.card-body.mb-3(class=['border-hover-' + variant, 'text-' + variant])= text
+  +border(text, ['border-hover-' + variant, 'text-' + variant, 'card'])
+
+mixin border_hover_inverse(text, variant)
+  +border(text, ['border-hover-' + variant, 'text-' + variant, 'card', 'bg-transparent', 'border-black'])
+
+mixin border_hover_alpha(text, variant, alpha)
+  +border(text, ['border-hover-' + variant + '-' + alpha, 'border-' + variant, 'card', 'bg-transparent', 'border-3'])
 
 mixin border_style(text, style)
   +border(text, ['border-3', 'border-' + style, 'border-primary', 'text-primary'])

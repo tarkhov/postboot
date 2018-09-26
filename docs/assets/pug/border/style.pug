@@ -4,13 +4,11 @@ block example_title
   h3.font-weight-normal Style
 
 block example_result
-  .row
-    each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
-      .col
-        +border_style(text, style)
+  each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
+    +border_style(text, style)
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
-      p(class='border-' + style)= text
+      div(class='border-' + style)

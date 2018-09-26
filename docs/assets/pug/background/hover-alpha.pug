@@ -5,14 +5,11 @@ block example_title
 
 block example_body
   .card-body.bg-dark.bg-striped.text-white
-    .row
-      each text, variant in colors
-        .col
-          +background_hover(text, variant + '-50')
+    each text, variant in colors
+      +background_hover(text, variant + '-50', 'white')
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      if variant != 'black'
-        p(class='bg-hover-' + variant + '-50')= text
+      div(class='bg-hover-' + variant + '-50')

@@ -5,13 +5,11 @@ block example_title
 
 block example_body
   .card-body.bg-dark.bg-striped
-    .row
-      each text, variant in colors
-        .col
-          +border_alpha(text, variant)
+    each text, variant in colors
+      +border_alpha(text, variant)
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      p(class='border-' + variant + '-50')= text
+      div(class='border-' + variant + '-50')

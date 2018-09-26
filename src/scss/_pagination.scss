@@ -6,18 +6,40 @@
     @include hover-focus {
       border-color: $pagination-hover-bg;
     }
+
   }
 
-  @include pagination-unbordered($border-radius);
+  .page-item.active .page-link {
+    margin: 0 .25rem;
+  }
+
+  @include pagination-pills($border-radius);
 
   &.pagination-sm {
-    @include pagination-unbordered($border-radius-sm);
+    @include pagination-pills($border-radius-sm);
   }
   &.pagination-lg {
-    @include pagination-unbordered($border-radius-lg);
+    @include pagination-pills($border-radius-lg);
   }
 }
 
 // Circle
 .pagination-circles {
+  .page-link {
+    border-color: $pagination-bg;
+
+    @include hover-focus {
+      border-color: $pagination-hover-bg;
+    }
+  }
+
+  .page-item.active .page-link {
+    margin: 0 .25rem;
+  }
+
+  &,
+  &.pagination-sm,
+  &.pagination-lg {
+    @include pagination-circles($border-radius-circle);
+  }
 }

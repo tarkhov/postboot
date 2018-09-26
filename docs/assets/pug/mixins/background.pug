@@ -1,5 +1,5 @@
 mixin background(text, classes)
-  p.p-2(class=classes)= text
+  p.p-2.mr-1.mb-2.d-inline-block(class=classes)= text
 
 mixin background_variant(text, variant)
   +background(text, 'bg-' + variant)
@@ -7,11 +7,5 @@ mixin background_variant(text, variant)
 mixin background_inverse(text, variant)
   +background(text, ['bg-' + variant, 'text-white'])
 
-mixin background_hover(text, variant)
-  p.border-solid.border-1.p-2(class=['border-' + variant, 'bg-hover-' + variant])= text
-
-mixin background_gradient(text, variant)
-  +background(text, ['bg-gradient-' + variant, 'text-white'])
-
-mixin background_alpha(text, variant)
-  +background(text, ['bg-' + variant + '-50', 'text-white'])
+mixin background_hover(text, variant, color)
+  +background(text, ['border', 'border-' + variant, 'bg-hover-' + variant, 'text-hover-' + color])

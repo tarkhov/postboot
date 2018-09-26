@@ -5,12 +5,10 @@ block example_title
 
 block example_result
   each text, variant in colors
-    if variant != 'black'
-      +text_hover(text, variant)
+    +text_hover(text, variant)
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      if variant != 'black'
-        div(class='text-hover-' + variant)= text
+      div(class='text-hover-' + variant)= text

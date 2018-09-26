@@ -4,15 +4,13 @@ block example_title
   h3.font-weight-normal Custom
 
 block example_result
-  .row
-    each text, variant in extraColors
-      if variant != 'black' && variant != 'white'
-        .col
-          +background_inverse(text, variant)
+  each text, variant in extraColors
+    if variant != 'black' && variant != 'white'
+      +background_inverse(text, variant)
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in extraColors
       if variant != 'black' && variant != 'white'
-        p(class='bg-' + variant)= text
+        div(class='bg-' + variant)

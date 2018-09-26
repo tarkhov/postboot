@@ -5,21 +5,17 @@ block example_title
 
 block example_body
   .card-body
-    .row
-      each text, variant in colors
-        if variant != 'light' && variant != 'black' && variant != 'white'
-          .col.text-hover-white
-            +background_hover(text, variant)
-  .card-body.bg-dark.bg-striped
-    .row
-      .col.text-white.text-hover-dark
-        +background_hover('Light', 'light')
-      .col.text-white.text-hover-dark
-        +background_hover('White', 'white')
+    each text, variant in colors
+      if variant != 'light' && variant != 'white'
+        +background_hover(text, variant, 'white')
+  .card-body.bg-dark.bg-striped.text-white
+    .d-inline-block
+      +background_hover('Light', 'light', 'dark')
+    .d-inline-block
+      +background_hover('White', 'white', 'dark')
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      if variant != 'black'
-        p(class='bg-hover-' + variant)= text
+      div(class='bg-hover-' + variant)

@@ -1,12 +1,12 @@
 extends ../example.pug
 
 block example_title
-  h1.font-weight-normal Unbordered
+  h1.font-weight-normal Circles
 
 block example_result
-  +pagination_variant('unbordered')
+  +pagination_variant('circles')
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    ul.pagination.pagination-unbordered
+    ul.pagination.pagination-circles
