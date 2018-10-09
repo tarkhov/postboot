@@ -38,7 +38,7 @@ if (!('ontouchstart' in document.documentElement)) {
 }
 
 (function ($) {
-  var DATA_KEY     = 'bs.dropdown';
+  var DATA_KEY     = 'bs.dropdown-mega';
   var EVENT_KEY    = '.' + DATA_KEY;
   var DATA_API_KEY = '.data-api';
 
