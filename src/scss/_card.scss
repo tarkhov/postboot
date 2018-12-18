@@ -5,11 +5,11 @@
 
     .card-img#{$infix}-left {
       height: 100%;
-      @include border-left-radius($card-inner-border-radius);
+      @include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
     }
     .card-img#{$infix}-right {
       height: 100%;
-      @include border-right-radius($card-inner-border-radius);
+      @include border-radius(0 $card-inner-border-radius $card-inner-border-radius 0);
     }
   }
 }
@@ -65,13 +65,15 @@
 }
 
 // Variants
+
+// States
 @each $color, $value in $theme-colors {
-  .card-#{$color} {
-    @include card-variant($value);
+  .card-state-#{$color} {
+    @include card-state-variant($value);
   }
 }
 @each $color, $value in map-remove($custom-colors, "black", "white") {
-  .card-#{$color} {
-    @include card-variant($value);
+  .card-state-#{$color} {
+    @include card-state-variant($value);
   }
 }

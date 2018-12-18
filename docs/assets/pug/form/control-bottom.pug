@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Control bottom
+
+block example_result
+  +form_control_variant('Bottom', 'bottom')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    input.form-control.form-control-bottom(type='text', placeholder='Bottom')

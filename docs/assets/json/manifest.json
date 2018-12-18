@@ -1,0 +1,21 @@
+{
+  "short_name": "PostBoot",
+  "name": "PostBoot",
+  "icons": [
+    {
+      "src": "/assets/images/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/images/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/postboot/",
+  "background_color": "#3367D6",
+  "display": "standalone",
+  "scope": "/postboot/",
+  "theme_color": "#3367D6"
+}

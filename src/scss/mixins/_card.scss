@@ -1,5 +1,5 @@
-// Variant
-@mixin card-variant($color) {
+// State variant
+@mixin card-state-variant($color) {
   $color-level: color-level($color, 6);
 
   color: $color-level;

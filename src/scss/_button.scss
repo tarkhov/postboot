@@ -29,6 +29,18 @@
   }
 }
 
+// State
+@each $color, $value in $theme-colors {
+  .btn-state-#{$color} {
+    @include button-state-variant($value);
+  }
+}
+@each $color, $value in map-remove($custom-colors, "black", "white") {
+  .btn-state-#{$color} {
+    @include button-state-variant($value);
+  }
+}
+
 // 3D
 @each $color, $value in $theme-colors {
   .btn-3d-#{$color} {

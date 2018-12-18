@@ -27,12 +27,15 @@ if (!('ontouchstart' in document.documentElement)) {
       .on(Event.MOUSEENTER_DATA_API, Selector.DATA_HOVER, function () {
         var $this = $(this);
         var $parent = $this.closest(Selector.HOVER);
-        if (!$parent.hasClass(ClassName.SHOW)) {
+        if ($parent && !$parent.hasClass(ClassName.SHOW)) {
           $this.dropdown('toggle');
         }
       })
       .on(Event.MOUSELEAVE_DATA_API, Selector.HOVER, function () {
-        $(this).children(Selector.DATA_HOVER).dropdown('toggle');
+        var $hover = $(this).children(Selector.DATA_HOVER);
+        if ($hover.length) {
+          $hover.dropdown('toggle');
+        }
       });
   })(jQuery);
 }
@@ -47,7 +50,7 @@ if (!('ontouchstart' in document.documentElement)) {
   };
 
   var Selector = {
-    MEGA_MENU : '.dropdown-menu-auto, .dropdown-menu-fluid'
+    MEGA_MENU : '.dropdown-menu-fluid'
   };
 
   $(document)

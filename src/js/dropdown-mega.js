@@ -8,7 +8,7 @@
   };
 
   var Selector = {
-    MEGA_MENU : '.dropdown-menu-auto, .dropdown-menu-fluid'
+    MEGA_MENU : '.dropdown-menu-fluid'
   };
 
   $(document)

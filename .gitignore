@@ -60,3 +60,5 @@ node_modules
 # https://github.com/github/gitignore/blob/master/Sass.gitignore
 .sass-cache/
 *.css.map
+*.sass.map
+*.scss.map

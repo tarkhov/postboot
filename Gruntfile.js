@@ -157,7 +157,6 @@ module.exports = function (grunt) {
         pretty: true,
         data: function (dest, src) {
           var url = dest.replace('docs', '').replace('index.html', '');
-          //return require('./locals.json');
 
           return {
             colors: colors,
@@ -180,7 +179,8 @@ module.exports = function (grunt) {
       },
       docs: {
         files: {
-          'docs/index.html': 'docs/assets/pug/index.pug'
+          'docs/index.html': 'docs/assets/pug/index.pug',
+          'docs/v1/index.html': 'docs/assets/pug/index.pug'
         }
       }
     }

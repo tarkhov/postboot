@@ -8,7 +8,7 @@ block example_result
     each text, variant in colors
       if variant != 'black' && variant != 'white'
         .col-3
-          .card.card-body.mb-3(class='card-' + variant)
+          .card.card-body.mb-3(class='card-state-' + variant)
             h4.card-title= text
             p.card-text Example text
 

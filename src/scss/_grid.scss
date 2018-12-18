@@ -1,16 +1,20 @@
-// Container widths
+// Container sizes
 @if $enable-grid-classes {
-  .container-sm {
-    @include make-container();
-    @include make-container-max-widths($container-sm-max-widths);
+  @each $size, $max-widths in $container-sizes {
+    .container-#{$size} {
+      @include make-container();
+      @include make-container-max-widths($max-widths);
+    }
   }
-  .container-md {
-    @include make-container();
-    @include make-container-max-widths($container-md-max-widths);
-  }
-  .container-lg {
-    @include make-container();
-    @include make-container-max-widths($container-lg-max-widths);
+}
+
+// Container breakpoints
+@if $enable-grid-classes {
+  @each $breakpoint, $max-widths in $container-breakpoints {
+    .container-#{$breakpoint} {
+      @include make-container();
+      @include make-container-max-widths($max-widths);
+    }
   }
 }
 

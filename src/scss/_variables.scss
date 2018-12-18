@@ -48,25 +48,33 @@ $border-styles: (
 $border-widths: 12 !default;
 
 // Grid containers
-$container-sm-max-widths: (
-  sm: map-get($container-max-widths, sm),
-  md: map-get($container-max-widths, sm),
-  lg: map-get($container-max-widths, sm),
-  xl: map-get($container-max-widths, sm)
+$container-sizes: (
+  1: (
+    sm: map-get($container-max-widths, sm),
+    md: map-get($container-max-widths, sm),
+    lg: map-get($container-max-widths, sm),
+    xl: map-get($container-max-widths, sm)
+  ),
+  2: (
+    sm: map-get($container-max-widths, sm),
+    md: map-get($container-max-widths, md),
+    lg: map-get($container-max-widths, md),
+    xl: map-get($container-max-widths, md)
+  ),
+  3: (
+    sm: map-get($container-max-widths, sm),
+    md: map-get($container-max-widths, md),
+    lg: map-get($container-max-widths, lg),
+    xl: map-get($container-max-widths, lg)
+  )
 ) !default;
 
-$container-md-max-widths: (
-  sm: map-get($container-max-widths, sm),
-  md: map-get($container-max-widths, md),
-  lg: map-get($container-max-widths, md),
-  xl: map-get($container-max-widths, md)
-) !default;
-
-$container-lg-max-widths: (
-  sm: map-get($container-max-widths, sm),
-  md: map-get($container-max-widths, md),
-  lg: map-get($container-max-widths, lg),
-  xl: map-get($container-max-widths, lg)
+$container-breakpoints: (
+  md: map-remove($container-max-widths, sm),
+  lg: map-remove($container-max-widths, sm, md),
+  xl: (
+    xl: map-get($container-max-widths, xl)
+  )
 ) !default;
 
 // Components

@@ -1,7 +1,7 @@
 {
   "name": "postboot",
   "description": "HTML5 library that extends the Bootstrap framework.",
-  "version": "1.0.0-beta1",
+  "version": "1.0.0",
   "keywords": [
     "bootstrap",
     "css",
