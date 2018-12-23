@@ -1,7 +1,7 @@
 extends ../example.pug
 
 block example_title
-  h3.font-weight-normal Color
+  h3.font-weight-normal State
 
 block example_result
   .row
@@ -15,7 +15,6 @@ block example_result
 block example_code
   :encode-pug
     | <!-- Source -->
-    .card
-      .card-body
-        h4.card-title Directions
-        p.card-text Example text
+    each text, variant in colors
+      if variant != 'black' && variant != 'white'
+        .card(class='card-state-' + variant)

@@ -128,8 +128,8 @@
   }
 }
 
-// Caret
-.caret-none {
+// Disable caret
+.disable-caret {
   &::before,
   &::after {
     display: none !important;

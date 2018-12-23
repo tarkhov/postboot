@@ -1,0 +1,30 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Image position
+
+block example_result
+  .card.flex-sm-row.mb-gutter
+    img.card-img-top.card-img-sm-left(src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+    .card-body
+      h4.card-title Left image
+      p.card-text Example text
+  .card.flex-sm-row
+    .card-body
+      h4.card-title Right image
+      p.card-text Example text
+    img.card-img-bottom.card-img-sm-right(src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .card.flex-sm-row.mb-gutter
+      img.card-img-top.card-img-sm-left(src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+      .card-body
+        h4.card-title Left image
+        p.card-text Example text
+    .card.flex-sm-row
+      .card-body
+        h4.card-title Right image
+        p.card-text Example text
+      img.card-img-bottom.card-img-sm-right(src="/" + pkg.name + "/assets/img/thumbnail.jpg")

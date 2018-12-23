@@ -5,7 +5,7 @@
   }
 }
 
-// Alpha
+// Opacity
 @for $alpha from 1 through 9 {
   @each $color, $value in $theme-colors {
     .border-#{$color}-#{($alpha * 10)} {
@@ -50,9 +50,6 @@
     }
   }
 }
-
-// Pill
-.rounded-pill { border-radius: $border-radius-pill !important; }
 
 // Style
 @each $style, $value in $border-styles {

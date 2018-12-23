@@ -1,4 +1,4 @@
 // Alpha
-@mixin bg-alpha-variant($variant, $color, $alpha) {
+@mixin bg-opacity-variant($variant, $color, $alpha) {
   @include bg-variant($variant, rgba($color, $alpha));
 }

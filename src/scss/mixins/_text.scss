@@ -1,11 +1,4 @@
-// Alpha
-@mixin text-alpha-variant($variant, $color, $alpha) {
+// Opacity
+@mixin text-opacity-variant($variant, $color, $alpha) {
   @include text-emphasis-variant($variant, rgba($color, $alpha));
-}
-
-// Ribbon
-@mixin text-ribbon-variant($background) {
-  padding: .75rem;
-  background-color: $background;
-  color: color-yiq($background);
 }

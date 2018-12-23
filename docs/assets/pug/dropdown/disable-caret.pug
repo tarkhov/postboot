@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Disable caret 
+
+block example_result
+  .btn-group.dropdown
+    button.btn.btn-secondary.dropdown-toggle.disable-caret(type="button" data-toggle="dropdown") Dropdown
+    +dropdown_menu()
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .btn-group.dropdown
+      button.btn.btn-secondary.dropdown-toggle.disable-caret(type="button" data-toggle="dropdown") Dropdown
+      .dropdown-menu

@@ -10,13 +10,13 @@
   }
 }
 
-// Alpha
+// Opacity
 @for $alpha from 1 through 9 {
   @each $color, $value in $theme-colors {
-    @include bg-alpha-variant('.bg-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+    @include bg-opacity-variant('.bg-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
   }
   @each $color, $value in $custom-colors {
-    @include bg-alpha-variant('.bg-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+    @include bg-opacity-variant('.bg-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
   }
 }
 

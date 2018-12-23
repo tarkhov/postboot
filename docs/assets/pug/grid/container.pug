@@ -1,0 +1,10 @@
+extends ../example-html.pug
+
+block example_title
+  h3.font-weight-normal Container
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['md', 'lg', 'xl']
+      div(class='container-' + breakpoint)

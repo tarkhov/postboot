@@ -4,11 +4,11 @@ block example_title
   h3.font-weight-normal Widths
 
 block example_result
-  - for(var width = 1; width <= 12; width++)
+  - for(var width = 1; width <= 5; width++)
     +border_width(width)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    - for(var width = 1; width <= 12; width++)
+    - for(var width = 1; width <= 5; width++)
       p(class='border-' + width)= width + 'px'

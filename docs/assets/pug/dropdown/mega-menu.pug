@@ -12,13 +12,6 @@ block example_result
           ul.list-unstyled
             - for(var i = 1; i <= 3; i++)
               li: a(href='#')= 'List item ' + i
-    li.nav-item.dropdown-hover.position-static
-      a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Auto
-      .dropdown-menu.dropdown-menu-auto
-        .dropdown-menu-body
-          ul.list-unstyled
-            - for(var i = 1; i <= 3; i++)
-              li: a(href='#')= 'List item ' + i
 
 block example_code
   :encode-pug
@@ -27,8 +20,4 @@ block example_code
       li.nav-item.dropdown-hover.position-static
         a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Fluid
         .dropdown-menu.dropdown-menu-fluid
-          .dropdown-menu-body
-      li.nav-item.dropdown-hover.position-static
-        a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Auto
-        .dropdown-menu.dropdown-menu-auto
           .dropdown-menu-body

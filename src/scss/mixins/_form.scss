@@ -16,7 +16,7 @@
   }
 }
 
-// Alpha
-@mixin form-control-alpha-variant($background, $alpha, $color: $white) {
+// Opacity
+@mixin form-control-opacity-variant($background, $alpha, $color: $white) {
   @include form-control-variant(rgba($background, $alpha), $color);
 }

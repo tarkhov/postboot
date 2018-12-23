@@ -1,0 +1,16 @@
+extends ../example-html.pug
+
+block example_title
+  h4.font-weight-normal Responsive image
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      each horizontal in ['right', 'left']
+        ="\n"
+        img(class="card-img-" + breakpoint + "-" + horizontal src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+        each vertical in ['top', 'bottom']
+          ="\n"
+          img(class="card-img-" + breakpoint + "-" + vertical + "-" + horizontal src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+      ="\n"

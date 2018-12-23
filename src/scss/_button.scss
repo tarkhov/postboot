@@ -59,11 +59,11 @@
   }
 }
 
-// Alpha
+// Opacity
 @for $alpha from 1 through 9 {
   @each $color, $value in $theme-colors {
     .btn-#{$color}-#{($alpha * 10)} {
-      @include button-alpha-variant($value, $value, ($alpha * .1));
+      @include button-opacity-variant($value, $value, ($alpha * .1));
       @if $color == 'warning' {
         color: $white;
       }
@@ -71,7 +71,7 @@
   }
   @each $color, $value in $custom-colors {
     .btn-#{$color}-#{($alpha * 10)} {
-      @include button-alpha-variant($value, $value, ($alpha * .1));
+      @include button-opacity-variant($value, $value, ($alpha * .1));
       @if $color == 'orange' {
         color: $white;
       }
@@ -81,7 +81,25 @@
 
 // Circle
 .btn-circle {
-  border-radius: 50%;
+  border-radius: $border-radius-circle;
+  padding: 0;
+  line-height: normal;
+  overflow: hidden;
+
+  @include button-circle-size($font-size-base);
+
+  &.btn-xs {
+    @include button-circle-size($font-size-xs);
+  }
+  &.btn-sm {
+    @include button-circle-size($font-size-sm);
+  }
+  &.btn-lg {
+    @include button-circle-size($font-size-lg);
+  }
+  &.btn-xl {
+    @include button-circle-size($font-size-xl);
+  }
 }
 
 // Pill

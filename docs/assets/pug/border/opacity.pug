@@ -1,15 +1,15 @@
 extends ../example.pug
 
 block example_title
-  h3.font-weight-normal Alpha
+  h3.font-weight-normal Opacity
 
 block example_body
   .card-body.bg-dark.bg-striped
     each text, variant in colors
-      +button_alpha(text, variant)
+      +border_alpha(text, variant)
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      button.btn(type='button' class='btn-' + variant + '-50')= text
+      div(class='border-' + variant + '-50')

@@ -14,4 +14,4 @@ block example_code
     | <!-- Source -->
     each text, variant in colors
       if variant != 'black' && variant != 'white'
-        button.btn(type='button' class='btn-state' + variant)= text
+        button.btn(type='button' class='btn-state-' + variant)= text

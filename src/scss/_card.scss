@@ -4,10 +4,12 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     .card-img#{$infix}-left {
+      width: auto;
       height: 100%;
       @include border-radius($card-inner-border-radius 0 0 $card-inner-border-radius);
     }
     .card-img#{$infix}-right {
+      width: auto;
       height: 100%;
       @include border-radius(0 $card-inner-border-radius $card-inner-border-radius 0);
     }
@@ -63,8 +65,6 @@
     @include border-left-radius($border-radius-pill);
   }
 }
-
-// Variants
 
 // States
 @each $color, $value in $theme-colors {

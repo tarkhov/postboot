@@ -3,14 +3,14 @@
   @include text-emphasis-variant(".text-#{$color}", $value);
 }
 
-// Alpha
+// Opacity
 @for $alpha from 1 through 9 {
   @each $color, $value in $theme-colors {
-    @include text-alpha-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+    @include text-opacity-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
   }
   @each $color, $value in $custom-colors {
     @if $color not in 'white', 'black' and $alpha != 5 {
-      @include text-alpha-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+      @include text-opacity-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
     }
   }
 }
@@ -43,24 +43,6 @@
       @include hover-focus {
         color: rgba($value, ($alpha * .1)) !important;
       }
-    }
-  }
-}
-
-// Ribbon
-@each $color, $value in $theme-colors {
-  .text-ribbon-#{$color} {
-    @include text-ribbon-variant($value);
-    @if $color == 'warning' {
-      color: $white;
-    }
-  }
-}
-@each $color, $value in $custom-colors {
-  .text-ribbon-#{$color} {
-    @include text-ribbon-variant($value);
-    @if $color == 'orange' {
-      color: $white;
     }
   }
 }

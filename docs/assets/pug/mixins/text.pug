@@ -12,6 +12,3 @@ mixin text_hover(text, variant)
 
 mixin text_hover_alpha(text, variant, alpha)
   +text(text, ['text-' + variant, 'text-hover-' + variant + '-' + alpha])
-
-mixin text_ribbon(text, variant)
-  span.d-inline-block.mr-2.mb-2(class='text-ribbon-' + variant)= text

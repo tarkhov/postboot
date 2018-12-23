@@ -1,6 +1,6 @@
-// Form control variants
+// Input variants
 @each $color, $value in map-remove($theme-colors, "light") {
-  .form-control-#{$color} {
+  .input-#{$color} {
     @include form-control-variant($value);
     @if $color == 'warning' {
       color: $white;
@@ -8,7 +8,7 @@
   }
 }
 @each $color, $value in map-remove($custom-colors, "white") {
-  .form-control-#{$color} {
+  .input-#{$color} {
     @include form-control-variant($value);
     @if $color == 'orange' {
       color: $white;
@@ -16,19 +16,19 @@
   }
 }
 
-// Form control alpha
+// Input opacity
 @for $alpha from 1 through 9 {
   @each $color, $value in $theme-colors {
-    .form-control-#{$color}-#{($alpha * 10)} {
-      @include form-control-alpha-variant($value, ($alpha * .1));
+    .input-#{$color}-#{($alpha * 10)} {
+      @include form-control-opacity-variant($value, ($alpha * .1));
       @if $color == 'warning' {
         color: $white;
       }
     }
   }
   @each $color, $value in $custom-colors {
-    .form-control-#{$color}-#{($alpha * 10)} {
-      @include form-control-alpha-variant($value, ($alpha * .1));
+    .input-#{$color}-#{($alpha * 10)} {
+      @include form-control-opacity-variant($value, ($alpha * .1));
       @if $color == 'orange' {
         color: $white;
       }
@@ -36,13 +36,8 @@
   }
 }
 
-// Form control
-.form-control-bottom,
-.form-control-left {
-  @include border-radius(0);
-}
-
-.form-control-bottom {
+// Input material
+.input-material {
   &,
   &:focus {
     border-top-color: $input-bg;
@@ -51,19 +46,7 @@
     box-shadow: none;
   }
 
+  @include border-radius(0);
   padding-right: 0;
   padding-left: 0;
-}
-
-.form-control-left {
-  &,
-  &:focus {
-    border-top-color: $input-bg;
-    border-right-color: $input-bg;
-    border-bottom-color: $input-bg;
-    box-shadow: none;
-  }
-
-  padding-top: 0;
-  padding-bottom: 0;
 }

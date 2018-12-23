@@ -1,13 +1,3 @@
-// Container sizes
-@if $enable-grid-classes {
-  @each $size, $max-widths in $container-sizes {
-    .container-#{$size} {
-      @include make-container();
-      @include make-container-max-widths($max-widths);
-    }
-  }
-}
-
 // Container breakpoints
 @if $enable-grid-classes {
   @each $breakpoint, $max-widths in $container-breakpoints {

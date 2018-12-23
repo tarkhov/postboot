@@ -4,13 +4,19 @@
   @include button-variant($background, darken($border, 10%));
 }
 
-// Alpha
-@mixin button-alpha-variant($background, $border, $alpha) {
+// Circle size
+@mixin button-circle-size($font-size) {
+  width: ($font-size * 2.5);
+  height: ($font-size * 2.5);
+}
+
+// Opacity
+@mixin button-opacity-variant($background, $border, $alpha) {
   @include button-variant(rgba($background, $alpha), rgba($border, $alpha));
 }
 
 // State
-@mixin button-state-variant($background) {
-  @include button-variant(color-level($background, -9), $card-border-color);
-  color: color-level($background, 6);
+@mixin button-state-variant($background, $border: $btn-state-border-color) {
+  @include button-variant(color-level($background, $btn-state-bg-level), $border);
+  color: color-level($background, $btn-state-color-level);
 }

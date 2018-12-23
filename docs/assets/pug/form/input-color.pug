@@ -14,5 +14,6 @@ block example_result
 block example_code
   :encode-pug
     | <!-- Source -->
-    input.form-control.form-control-bottom(type='text', placeholder='Bottom')
-    input.form-control.form-control-left(type='text', placeholder='Left')
+    each text, variant in colors
+      if variant != 'light' && variant != 'white'
+        input.form-control(type='text', placeholder=text class="input-" + variant)

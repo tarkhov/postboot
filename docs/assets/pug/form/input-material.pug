@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_title
+  h3.font-weight-normal Input material
+
+block example_result
+  +form_control_variant('Material', 'material')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    input.form-control.input-material(type='text', placeholder='Material')
