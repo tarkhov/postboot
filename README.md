@@ -1,6 +1,6 @@
 # PostBoot
 
-HTML5 library that extends the Bootstrap framework.
+Fast web app prototyping library with Bootstrap framework.
 
 ### Contents
 
@@ -17,17 +17,17 @@ HTML5 library that extends the Bootstrap framework.
 
 ### Manually
 
-[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0/postboot-1.0.0.zip) package and unpack it or use following commands:
+[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta2/postboot-1.0.0-beta2.zip) package and unpack it or use following commands:
 
 ```bash
-wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0/postboot-1.0.0.zip
-unzip postboot-1.0.0.zip
+wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta2/postboot-1.0.0-beta2.zip
+unzip postboot-1.0.0-beta2.zip
 ```
 
 ### NodeJS
 
 ```bash
-npm install postboot@1.0.0
+npm install postboot@1.0.0-beta2
 ```
 
 ## Usage
@@ -48,10 +48,10 @@ npm install postboot@1.0.0
 ```html
 <!-- CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0/dist/css/postboot.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta2/dist/css/postboot.min.css">
 
 <!-- JS -->
-<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0/dist/js/postboot.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta2/dist/js/postboot.min.js"></script>
 ```
 
 ## Author
