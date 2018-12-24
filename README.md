@@ -40,6 +40,8 @@ npm install postboot@1.0.0-beta2
 <link rel="stylesheet" href="css/postboot.min.css"/>
 
 <!-- JS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/postboot.min.js"></script>
 ```
 
@@ -47,10 +49,13 @@ npm install postboot@1.0.0-beta2
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta2/dist/css/postboot.min.css">
 
 <!-- JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 <script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-beta2/dist/js/postboot.min.js"></script>
 ```
 

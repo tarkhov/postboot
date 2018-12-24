@@ -1,4 +1,4 @@
-// Glass
-@mixin badge-glass-variant($color, $opacity) {
-  @include badge-variant(rgba($color, $opacity));
+// Opacity
+@mixin badge-opacity-variant($color, $alpha) {
+  @include badge-variant(rgba($color, $alpha));
 }

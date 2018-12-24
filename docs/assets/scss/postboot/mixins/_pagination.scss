@@ -1,8 +1,0 @@
-// Unbordered
-@mixin pagination-unbordered($border-radius) {
-  .page-item {
-    .page-link {
-      @include border-radius($border-radius);
-    }
-  }
-}

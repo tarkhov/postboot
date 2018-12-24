@@ -1,0 +1,22 @@
+// Variant
+@mixin form-control-variant($background, $color: $white) {
+  &,
+  &:focus {
+    background-color: $background;
+    border-color: $background;
+    color: $color;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $color;
+  }
+}
+
+// Opacity
+@mixin form-control-opacity-variant($background, $alpha, $color: $white) {
+  @include form-control-variant(rgba($background, $alpha), $color);
+}

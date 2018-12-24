@@ -1,0 +1,11 @@
+@function unicode($str) {
+  @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"")
+}
+
+// Request a color level
+@function color-level($color, $level: 0) {
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}

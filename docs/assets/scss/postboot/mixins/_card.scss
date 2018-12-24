@@ -1,0 +1,11 @@
+// State variant
+@mixin card-state-variant($color) {
+  $color-level: color-level($color, $card-state-color-level);
+
+  color: $color-level;
+  background-color: color-level($color, $card-state-bg-level);
+
+  .card-link {
+    color: darken($color-level, 10%);
+  }
+}
