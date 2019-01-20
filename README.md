@@ -4,14 +4,21 @@ Fast web app prototyping library with Bootstrap framework.
 
 ### Contents
 
-1. [Installation](#installation)
+1. [Compatibility](#compatibility)
+2. [Installation](#installation)
    1. [Manually](#manually)
    2. [NodeJS](#nodejs)
-2. [Usage](#usage)
+3. [Usage](#usage)
    1. [Local](#local)
    2. [CDN](#cdn)
-3. [Author](#author)
-4. [License](#license)
+4. [Author](#author)
+5. [License](#license)
+
+## Compatibility
+
+Library | Version
+------- | -------
+Bootstrap | 4.2.1
 
 ## Installation
 

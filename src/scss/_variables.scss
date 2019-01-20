@@ -37,6 +37,9 @@ $font-weights: (
   "black": 900
 ) !default;
 
+// Background
+$bg-state-level: -9 !default;
+
 // Border
 $border-styles: (
   dashed: dashed,
@@ -188,6 +191,9 @@ $sidebar-light-hover-color:          rgba($black,.7) !default;
 $sidebar-light-active-color:         rgba($black,.9) !default;
 $sidebar-light-disabled-color:       rgba($black,.3) !default;
 $sidebar-light-toggler-border-color: rgba($black,.1) !default;
+
+// Text
+$text-state-level: 6 !default;
 
 // Triple bar
 $tribar-color:      $primary;

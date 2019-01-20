@@ -1,7 +1,7 @@
 /*!
- * PostBoot v1.0.0-beta2 (https://tarkhov.github.io/postboot/)
- * Copyright 2016-2018 Alexander Tarkhov
- * Licensed under  ()
+ * PostBoot v1.0.0-beta3 (https://tarkhov.github.io/postboot/)
+ * Copyright 2016-2019 Alexander Tarkhov
+ * Licensed under MIT
  */
 
 @media (min-width: 576px) {
@@ -10506,6 +10506,110 @@ button.bg-white-90:focus {
 .bg-hover-white-90:hover, .bg-hover-white-90:focus {
   background-color: rgba(255, 255, 255, 0.9) !important; }
 
+.bg-state-primary {
+  background-color: #b8daff !important; }
+
+a.bg-state-primary:hover, a.bg-state-primary:focus,
+button.bg-state-primary:hover,
+button.bg-state-primary:focus {
+  background-color: #85bfff !important; }
+
+.bg-state-secondary {
+  background-color: #d6d8db !important; }
+
+a.bg-state-secondary:hover, a.bg-state-secondary:focus,
+button.bg-state-secondary:hover,
+button.bg-state-secondary:focus {
+  background-color: #bbbec3 !important; }
+
+.bg-state-success {
+  background-color: #c3e6cb !important; }
+
+a.bg-state-success:hover, a.bg-state-success:focus,
+button.bg-state-success:hover,
+button.bg-state-success:focus {
+  background-color: #9fd7ac !important; }
+
+.bg-state-info {
+  background-color: #bee5eb !important; }
+
+a.bg-state-info:hover, a.bg-state-info:focus,
+button.bg-state-info:hover,
+button.bg-state-info:focus {
+  background-color: #97d5df !important; }
+
+.bg-state-warning {
+  background-color: #ffeeba !important; }
+
+a.bg-state-warning:hover, a.bg-state-warning:focus,
+button.bg-state-warning:hover,
+button.bg-state-warning:focus {
+  background-color: #ffe187 !important; }
+
+.bg-state-danger {
+  background-color: #f5c6cb !important; }
+
+a.bg-state-danger:hover, a.bg-state-danger:focus,
+button.bg-state-danger:hover,
+button.bg-state-danger:focus {
+  background-color: #ed9ba3 !important; }
+
+.bg-state-light {
+  background-color: #fdfdfe !important; }
+
+a.bg-state-light:hover, a.bg-state-light:focus,
+button.bg-state-light:hover,
+button.bg-state-light:focus {
+  background-color: #dbdbed !important; }
+
+.bg-state-dark {
+  background-color: #c6c8ca !important; }
+
+a.bg-state-dark:hover, a.bg-state-dark:focus,
+button.bg-state-dark:hover,
+button.bg-state-dark:focus {
+  background-color: #acafb1 !important; }
+
+.bg-state-indigo {
+  background-color: #d4bcfb !important; }
+
+a.bg-state-indigo:hover, a.bg-state-indigo:focus,
+button.bg-state-indigo:hover,
+button.bg-state-indigo:focus {
+  background-color: #b58cf8 !important; }
+
+.bg-state-orange {
+  background-color: #fedbbd !important; }
+
+a.bg-state-orange:hover, a.bg-state-orange:focus,
+button.bg-state-orange:hover,
+button.bg-state-orange:focus {
+  background-color: #fdc08b !important; }
+
+.bg-state-pink {
+  background-color: #f9c9df !important; }
+
+a.bg-state-pink:hover, a.bg-state-pink:focus,
+button.bg-state-pink:hover,
+button.bg-state-pink:focus {
+  background-color: #f49bc4 !important; }
+
+.bg-state-purple {
+  background-color: #d7caee !important; }
+
+a.bg-state-purple:hover, a.bg-state-purple:focus,
+button.bg-state-purple:hover,
+button.bg-state-purple:focus {
+  background-color: #baa3e2 !important; }
+
+.bg-state-teal {
+  background-color: #c1f0e2 !important; }
+
+a.bg-state-teal:hover, a.bg-state-teal:focus,
+button.bg-state-teal:hover,
+button.bg-state-teal:focus {
+  background-color: #98e6cf !important; }
+
 .bg-contain {
   -webkit-background-size: contain;
           background-size: contain; }
@@ -11529,125 +11633,125 @@ button.bg-white-90:focus {
 .border-left-5 {
   border-left-width: 5px !important; }
 
-.font-size-1 {
+.f1 {
   font-size: 0.75rem; }
 
-.font-size-2 {
+.f2 {
   font-size: 0.875rem; }
 
-.font-size-3 {
+.f3 {
   font-size: 1rem; }
 
-.font-size-4 {
+.f4 {
   font-size: 1.25rem; }
 
-.font-size-5 {
+.f5 {
   font-size: 1.5rem; }
 
-.font-size-6 {
+.f6 {
   font-size: 1.75rem; }
 
-.font-size-7 {
+.f7 {
   font-size: 2rem; }
 
-.font-size-8 {
+.f8 {
   font-size: 2.5rem; }
 
 @media (min-width: 576px) {
-  .font-size-sm-1 {
+  .f1-sm {
     font-size: 0.75rem; }
 
-  .font-size-sm-2 {
+  .f2-sm {
     font-size: 0.875rem; }
 
-  .font-size-sm-3 {
+  .f3-sm {
     font-size: 1rem; }
 
-  .font-size-sm-4 {
+  .f4-sm {
     font-size: 1.25rem; }
 
-  .font-size-sm-5 {
+  .f5-sm {
     font-size: 1.5rem; }
 
-  .font-size-sm-6 {
+  .f6-sm {
     font-size: 1.75rem; }
 
-  .font-size-sm-7 {
+  .f7-sm {
     font-size: 2rem; }
 
-  .font-size-sm-8 {
+  .f8-sm {
     font-size: 2.5rem; } }
 @media (min-width: 768px) {
-  .font-size-md-1 {
+  .f1-md {
     font-size: 0.75rem; }
 
-  .font-size-md-2 {
+  .f2-md {
     font-size: 0.875rem; }
 
-  .font-size-md-3 {
+  .f3-md {
     font-size: 1rem; }
 
-  .font-size-md-4 {
+  .f4-md {
     font-size: 1.25rem; }
 
-  .font-size-md-5 {
+  .f5-md {
     font-size: 1.5rem; }
 
-  .font-size-md-6 {
+  .f6-md {
     font-size: 1.75rem; }
 
-  .font-size-md-7 {
+  .f7-md {
     font-size: 2rem; }
 
-  .font-size-md-8 {
+  .f8-md {
     font-size: 2.5rem; } }
 @media (min-width: 992px) {
-  .font-size-lg-1 {
+  .f1-lg {
     font-size: 0.75rem; }
 
-  .font-size-lg-2 {
+  .f2-lg {
     font-size: 0.875rem; }
 
-  .font-size-lg-3 {
+  .f3-lg {
     font-size: 1rem; }
 
-  .font-size-lg-4 {
+  .f4-lg {
     font-size: 1.25rem; }
 
-  .font-size-lg-5 {
+  .f5-lg {
     font-size: 1.5rem; }
 
-  .font-size-lg-6 {
+  .f6-lg {
     font-size: 1.75rem; }
 
-  .font-size-lg-7 {
+  .f7-lg {
     font-size: 2rem; }
 
-  .font-size-lg-8 {
+  .f8-lg {
     font-size: 2.5rem; } }
 @media (min-width: 1200px) {
-  .font-size-xl-1 {
+  .f1-xl {
     font-size: 0.75rem; }
 
-  .font-size-xl-2 {
+  .f2-xl {
     font-size: 0.875rem; }
 
-  .font-size-xl-3 {
+  .f3-xl {
     font-size: 1rem; }
 
-  .font-size-xl-4 {
+  .f4-xl {
     font-size: 1.25rem; }
 
-  .font-size-xl-5 {
+  .f5-xl {
     font-size: 1.5rem; }
 
-  .font-size-xl-6 {
+  .f6-xl {
     font-size: 1.75rem; }
 
-  .font-size-xl-7 {
+  .f7-xl {
     font-size: 2rem; }
 
-  .font-size-xl-8 {
+  .f8-xl {
     font-size: 2.5rem; } }
 .font-weight-thin {
   font-weight: 100; }
@@ -13190,3 +13294,81 @@ a.text-white-90:hover, a.text-white-90:focus {
 
 .text-hover-white-90:hover, .text-hover-white-90:focus {
   color: rgba(255, 255, 255, 0.9) !important; }
+
+.text-state-primary {
+  color: #004085 !important; }
+
+a.text-state-primary:hover, a.text-state-primary:focus {
+  color: #001b39 !important; }
+
+.text-state-secondary {
+  color: #383d41 !important; }
+
+a.text-state-secondary:hover, a.text-state-secondary:focus {
+  color: #151618 !important; }
+
+.text-state-success {
+  color: #155724 !important; }
+
+a.text-state-success:hover, a.text-state-success:focus {
+  color: #06190b !important; }
+
+.text-state-info {
+  color: #0c5460 !important; }
+
+a.text-state-info:hover, a.text-state-info:focus {
+  color: #04191c !important; }
+
+.text-state-warning {
+  color: #856404 !important; }
+
+a.text-state-warning:hover, a.text-state-warning:focus {
+  color: #3b2c02 !important; }
+
+.text-state-danger {
+  color: #721c24 !important; }
+
+a.text-state-danger:hover, a.text-state-danger:focus {
+  color: #350d11 !important; }
+
+.text-state-light {
+  color: #818182 !important; }
+
+a.text-state-light:hover, a.text-state-light:focus {
+  color: #5b5b5c !important; }
+
+.text-state-dark {
+  color: #1b1e21 !important; }
+
+a.text-state-dark:hover, a.text-state-dark:focus {
+  color: black !important; }
+
+.text-state-indigo {
+  color: #35087e !important; }
+
+a.text-state-indigo:hover, a.text-state-indigo:focus {
+  color: #170336 !important; }
+
+.text-state-orange {
+  color: #84420a !important; }
+
+a.text-state-orange:hover, a.text-state-orange:focus {
+  color: #3d1e05 !important; }
+
+.text-state-pink {
+  color: #792049 !important; }
+
+a.text-state-pink:hover, a.text-state-pink:focus {
+  color: #3d1025 !important; }
+
+.text-state-purple {
+  color: #3a2264 !important; }
+
+a.text-state-purple:hover, a.text-state-purple:focus {
+  color: #190f2b !important; }
+
+.text-state-teal {
+  color: #11694f !important; }
+
+a.text-state-teal:hover, a.text-state-teal:focus {
+  color: #06271d !important; }

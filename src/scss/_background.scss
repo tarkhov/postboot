@@ -52,6 +52,14 @@
   }
 }
 
+// State
+@each $color, $value in $theme-colors {
+  @include bg-state-variant('.bg-state-#{$color}', $value);
+}
+@each $color, $value in map-remove($custom-colors, "black", "white") {
+  @include bg-state-variant('.bg-state-#{$color}', $value);
+}
+
 // Contain
 .bg-contain {
   background-size: contain;

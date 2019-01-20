@@ -20,7 +20,7 @@ html(lang="en")
   body.pt-navbar(data-spy="scroll" data-target="#sidebar-left")
     block header
       header.pb-gutter(role="banner")
-        nav#navbar-top.navbar.navbar-expand-xs.navbar-light.bg-light.px-sm-0.fixed-top(role="navigation")
+        nav#navbar-top.navbar.navbar-expand-xs.navbar-light.px-sm-0.fixed-top(role="navigation")
           .container
             a.navbar-brand(href="/" + pkg.name + '/' rel="home") #[span.rounded.py-1.text-white.font-weight-medium.bg-purple(style="padding-left: .6rem;padding-right: .6rem;") P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
 

@@ -1,4 +1,9 @@
-// Alpha
+// Opacity
 @mixin bg-opacity-variant($variant, $color, $alpha) {
   @include bg-variant($variant, rgba($color, $alpha));
+}
+
+// State
+@mixin bg-state-variant($variant, $color) {
+  @include bg-variant($variant, color-level($color, $bg-state-level));
 }

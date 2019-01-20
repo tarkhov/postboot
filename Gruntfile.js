@@ -42,7 +42,7 @@ module.exports = function (grunt) {
     banner: '/*!\n' +
             ' * ' + title + ' v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
             ' * Copyright 2016-<%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n' +
+            ' * Licensed under <%= pkg.license %>\n' +
             ' */\n',
 
     concat: {

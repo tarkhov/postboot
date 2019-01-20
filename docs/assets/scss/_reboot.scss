@@ -1,7 +1,3 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-}
-
 pre,
 code {
   font-size: 100%;
@@ -10,23 +6,11 @@ code {
   padding: 0 !important;
 }
 
+#navbar-top {
+  background-color: #f4f5f9;
+}
+
 #sidebar-left {
   max-height: calc(100vh - (#{$navbar-height} + (#{$grid-gutter-width} * 2)));
   overflow-y: scroll;
-}
-
-.blog-post-title {
-  line-height: 1.3;
-}
-
-.blog-post-description {
-  margin-bottom: $card-spacer-y;
-
-  p {
-    margin-bottom: .5rem;
-  }
-
-  *:last-child {
-    margin-bottom: 0;
-  }
 }

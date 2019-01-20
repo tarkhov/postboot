@@ -46,3 +46,11 @@
     }
   }
 }
+
+// States
+@each $color, $value in $theme-colors {
+  @include text-state-variant('.text-state-#{$color}', $value);
+}
+@each $color, $value in map-remove($custom-colors, "black", "white") {
+  @include text-state-variant('.text-state-#{$color}', $value);
+}
