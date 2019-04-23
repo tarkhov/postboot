@@ -1,0 +1,14 @@
+extends ../example-js.pug
+
+block example_title
+  h4.fw-normal Off click events
+
+block example_code
+  :prismjs(language='javascript')
+    $(document).off('.dropdown.data-api');
+    $(document).on('show.bs.dropdown', '.dropdown-hover', function (e) {
+      var events = $._data(e.relatedTarget, 'events');
+      if (events) {
+        $(e.relatedTarget).off('click.bs.dropdown');
+      }
+    });

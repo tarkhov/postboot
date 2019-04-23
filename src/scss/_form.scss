@@ -39,7 +39,9 @@
 // Input material
 .input-material {
   &,
-  &:focus {
+  &:focus,
+  &.is-valid,
+  &.is-invalid {
     border-top-color: $input-bg;
     border-right-color: $input-bg;
     border-left-color: $input-bg;

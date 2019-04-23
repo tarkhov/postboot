@@ -1,7 +1,7 @@
 /*!
- * PostBoot v1.0.0 (https://tarkhov.github.io/postboot/)
- * Copyright 2016-2018 Alexander Tarkhov
- * Licensed under  ()
+ * PostBoot v1.0.0-beta3 (https://tarkhov.github.io/postboot/)
+ * Copyright 2016-2019 Alexander Tarkhov
+ * Licensed under MIT
  */
 if (!('ontouchstart' in document.documentElement)) {
   (function ($) {
@@ -50,7 +50,7 @@ if (!('ontouchstart' in document.documentElement)) {
   };
 
   var Selector = {
-    MEGA_MENU : '.dropdown-menu-fluid'
+    MEGA_MENU : '.dropdown-mega-menu'
   };
 
   $(document)

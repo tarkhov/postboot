@@ -29,6 +29,7 @@
     "grunt-contrib-pug": "^1.0.0",
     "grunt-contrib-sass": "^1.0.0",
     "grunt-contrib-uglify": "^3.4.0",
+    "jstransformer-prismjs": "^0.1.0",
     "load-grunt-tasks": "^3.5.2"
   }
 }

@@ -6,3 +6,36 @@
     }
   }
 }
+
+// Color
+@mixin breadcrumb-variant($color, $hover-color, $active-color, $divider-color) {
+  .breadcrumb-item {
+    color: $color;
+
+    @include hover-focus {
+      color: $hover-color;
+    }
+
+    &.active {
+      color: $active-color;
+    }
+
+    + .breadcrumb-item::before {
+      color: $divider-color;
+    }
+  }
+
+  .breadcrumb-link {
+    color: $color;
+
+    @include hover-focus {
+      color: $hover-color;
+    }
+
+    .active > &,
+    .show > &,
+    &.active {
+      color: $active-color;
+    }
+  }
+}

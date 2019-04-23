@@ -69,6 +69,48 @@
   }
 }
 
+.sidebar-modal {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $grid-breakpoints);
+    $infix: breakpoint-infix($next, $grid-breakpoints);
+
+    &#{$infix} {
+      @include media-breakpoint-up($next) {
+        @include sidebar-modal;
+      }
+
+      &-down {
+        @include media-breakpoint-down($next) {
+          @include sidebar-modal;
+        }
+      }
+    }
+  }
+}
+
+.sidebar-dialog {
+  margin: 0 !important;
+
+  .sidebar-modal.fade & {
+    @include transition($modal-transition);
+    transform: $sidebar-modal-fade-transform;
+  }
+  .sidebar-modal.show & {
+    transform: $modal-show-transform;
+  }
+}
+
+.modal-open {
+  .sidebar-modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .sidebar {
+    pointer-events: auto;
+  }
+}
+
 .sidebar-light {
   .sidebar-brand {
     color: $sidebar-light-active-color;

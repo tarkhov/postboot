@@ -9,3 +9,50 @@
     color: darken($color-level, 10%);
   }
 }
+
+// Size
+@mixin card-size($padding-y, $padding-x, $font-size) {
+  font-size: $font-size;
+
+  &.card-body,
+  .card-body {
+    padding: $padding-x;
+  }
+
+  .card-title {
+    margin-bottom: $padding-y;
+  }
+
+  .card-subtitle {
+    margin-top: -$padding-y / 2;
+  }
+
+  .card-link {
+    + .card-link {
+      margin-left: $padding-x;
+    }
+  }
+
+  .card-header {
+    padding: $padding-y $padding-x;
+  }
+
+  .card-footer {
+    padding: $padding-y $padding-x;
+  }
+
+  .card-header-tabs {
+    margin-right: -$padding-x / 2;
+    margin-bottom: -$padding-y;
+    margin-left: -$padding-x / 2;
+  }
+
+  .card-header-pills {
+    margin-right: -$padding-x / 2;
+    margin-left: -$padding-x / 2;
+  }
+
+  .card-img-overlay {
+    padding: $padding-x;
+  }
+}

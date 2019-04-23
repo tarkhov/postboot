@@ -204,6 +204,16 @@
     ]
   },
   {
+    "url": "#collapse",
+    "name": "Collapse",
+    "childs": [
+      {
+        "url": "#collapse-horizontal",
+        "name": "Horizontal"
+      }
+    ]
+  },
+  {
     "url": "#dropdown",
     "name": "Dropdown",
     "childs": [
@@ -217,7 +227,13 @@
       },
       {
         "url": "#dropdown-hover",
-        "name": "Hover"
+        "name": "Hover",
+        "childs": [
+          {
+            "url": "#dropdown-off-click",
+            "name": "Off click"
+          }
+        ]
       },
       {
         "url": "#dropdown-mega-menu",
@@ -368,6 +384,10 @@
       {
         "url": "#navbar-tribar",
         "name": "Triple bar"
+      },
+      {
+        "url": "#navbar-scroller",
+        "name": "Scroller"
       }
     ]
   },

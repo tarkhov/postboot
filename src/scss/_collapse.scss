@@ -1,0 +1,6 @@
+// Horizontal
+.collapse-horizontal.collapsing {
+  width: 0;
+  height: auto;
+  @include transition($transition-collapse-horizontal);
+}

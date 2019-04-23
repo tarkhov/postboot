@@ -1,5 +1,5 @@
 // Size
-@mixin navbar-size($padding-y, $font-size, $brand-font-size, $brand-padding-y, $nav-padding-y, $text-padding-y) {
+@mixin navbar-size($padding-y, $font-size, $brand-font-size, $brand-padding-y, $nav-padding-y, $text-padding-y, $nav-height) {
   padding-top: $padding-y;
   padding-bottom: $padding-y;
 
@@ -30,6 +30,10 @@
 
   .navbar-dropdown-menu {
     margin-top: $padding-y;
+  }
+
+  .navbar-scroller {
+    height: $nav-height;
   }
 }
 

@@ -77,3 +77,11 @@
     @include card-state-variant($value);
   }
 }
+
+// Sizes
+.card-xs {
+  @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs);
+}
+.card-sm {
+  @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm);
+}

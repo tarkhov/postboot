@@ -4,7 +4,7 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @each $size, $value in $font-sizes {
-      .f#{$size}#{$infix} { font-size: $value; }
+      .f#{$size}#{$infix} { font-size: $value !important; }
     }
   }
 }
@@ -15,16 +15,7 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @each $weight, $value in $font-weights {
-      .font-weight#{$infix}-#{$weight} { font-weight: $value; }
-    }
-  }
-}
-@each $breakpoint in map-keys(map-remove($grid-breakpoints, "xs")) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, map-remove($grid-breakpoints, "xs"));
-
-    @each $weight, $value in ("light": 300, "normal": 400, "bold": 700) {
-      .font-weight#{$infix}-#{$weight} { font-weight: $value; }
+      .fw#{$infix}-#{$weight} { font-weight: $value !important; }
     }
   }
 }

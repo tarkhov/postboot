@@ -1,34 +1,12 @@
 // Colors
 .breadcrumb-dark {
-  .breadcrumb-item {
-    color: $breadcrumb-dark-color;
+  @include breadcrumb-variant($breadcrumb-dark-color, $breadcrumb-dark-hover-color, $breadcrumb-dark-active-color, $breadcrumb-dark-divider-color);
+}
+.breadcrumb-light {
+  @include breadcrumb-variant($breadcrumb-light-color, $breadcrumb-light-hover-color, $breadcrumb-light-active-color, $breadcrumb-light-divider-color);
+}
 
-    @include hover-focus {
-      color: $breadcrumb-dark-hover-color;
-    }
-
-    &.active {
-      color: $breadcrumb-dark-active-color;
-    }
-
-    + .breadcrumb-item::before {
-      color: $breadcrumb-dark-divider-color;
-    }
-  }
-
-  .breadcrumb-link {
-    color: $breadcrumb-dark-color;
-
-    @include hover-focus {
-      color: $breadcrumb-dark-hover-color;
-    }
-
-    .active > &,
-    .show > &,
-    &.active {
-      color: $breadcrumb-dark-active-color;
-    }
-  }
+.breadcrumb-light {
 }
 
 // Arrows

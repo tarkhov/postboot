@@ -3,12 +3,12 @@ ul.sidebar-nav.nav-tree.nav-x-0.nav-y-sm.pr-gutter
     li.nav-item
       a.nav-link(href=category.url)= category.name
       if category.childs
-        ul.sidebar-nav.nav-tree.nav-x-0.nav-y-sm.font-size-2.pl-3
+        ul.sidebar-nav.nav-tree.nav-x-0.nav-y-sm.f2.pl-3
           each article in category.childs
             li.nav-item
               a.nav-link(href=article.url)= article.name
               if article.childs
-                ul.sidebar-nav.nav-tree.nav-x-0.nav-y-sm.font-size-1.pl-3
+                ul.sidebar-nav.nav-tree.nav-x-0.nav-y-sm.f1.pl-3
                   each subarticle in article.childs
                     li.nav-item
                       a.nav-link(href=subarticle.url)= subarticle.name

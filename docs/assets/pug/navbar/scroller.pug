@@ -1,0 +1,20 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-normal Scrollable
+
+block example_description
+  p Scrollable navbar.
+
+block example_result
+  .navbar.navbar-expand-xs.navbar-dark.bg-dark.px-0
+    .container-fluid
+      a.navbar-brand(href="#") S
+      .navbar-scroller
+        ul.navbar-nav.navbar-scroller-nav
+          - for(var i = 1; i <= 10; i++)
+            li.nav-item: a.nav-link(href='#')= 'Nav item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
