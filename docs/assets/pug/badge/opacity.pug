@@ -1,15 +1,14 @@
 extends ../example.pug
 
 block example_title
-  h3.font-weight-normal Opacity
+  h3.fw-400 Opacity
 
 block example_body
   .card-body.bg-dark.bg-striped
-    each text, variant in colors
-      +badge_alpha(text, variant)
+    +badge_variant('Black', 'black-50')
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each text, variant in colors
-      .badge(class='badge-' + variant + '-50')= text
+    - for(var i = 1; i <= 9; i++)
+      .badge(class='badge-black-' + i * 10)

@@ -1,8 +1,8 @@
 mixin font(text, classes)
   p(class=classes)= text
 
-mixin font_size(text, size)
-  +font(text, 'font-size-' + size)
+mixin font_size(size)
+  +font('Font size ' + size, 'fs-' + size)
 
 mixin font_weight(text, weight)
-  +font(text, 'font-weight-' + weight)
+  +font(text, 'fw-' + weight)

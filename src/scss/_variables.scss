@@ -16,6 +16,10 @@ $font-size-xl:  1.5rem !default;
 $font-size-xxl: 1.75rem !default;
 $font-size-3xl: 2rem !default;
 $font-size-4xl: 2.5rem !default;
+$font-size-5xl: 3.5rem !default;
+$font-size-6xl: 4.5rem !default;
+$font-size-7xl: 5.5rem !default;
+$font-size-8xl: 6rem !default;
 
 $font-sizes: (
   1: $font-size-xs,
@@ -25,19 +29,23 @@ $font-sizes: (
   5: $font-size-xl,
   6: $font-size-xxl,
   7: $font-size-3xl,
-  8: $font-size-4xl
+  8: $font-size-4xl,
+  9: $font-size-5xl,
+  10: $font-size-6xl,
+  11: $font-size-7xl,
+  12: $font-size-8xl
 ) !default;
 
 $font-weights: (
-  "thin": 100,
-  "extra-light": 200,
-  "light": 300,
-  "normal": 400,
-  "medium": 500,
-  "semi-bold": 600,
-  "bold": 700,
-  "extra-bold": 800,
-  "black": 900
+  "100": 100,
+  "200": 200,
+  "300": 300,
+  "400": 400,
+  "500": 500,
+  "600": 600,
+  "700": 700,
+  "800": 800,
+  "900": 900
 ) !default;
 
 // Transition
@@ -50,7 +58,6 @@ $bg-state-level: -9 !default;
 $border-styles: (
   dashed: dashed,
   dotted: dotted,
-  double: double,
   solid: solid
 ) !default;
 
@@ -88,6 +95,10 @@ $btn-state-bg-level: -9 !default;
 $btn-state-color-level: 6 !default;
 $btn-state-border-color: rgba($black, .125) !default;
 
+// Form
+$input-dark-color: $white !default;
+$input-dark-bg: $dark !default;
+
 // Card
 $card-spacer-y-xs: .25rem !default;
 $card-spacer-x-xs: .5rem !default;
@@ -97,6 +108,8 @@ $card-spacer-x-sm: .75rem !default;
 
 $card-state-bg-level: -9 !default;
 $card-state-color-level: 6 !default;
+
+$card-dark-color: $white !default;
 
 // Navbar
 $navbar-padding-y-sm:       ($spacer * .25) !default;
@@ -182,7 +195,7 @@ $dropdown-arrow-outer-color: fade-in($dropdown-border-color, .05) !default;
 $dropdown-menu-body-padding: 1rem 1.5rem !default;
 
 // Position
-$positions: top, right, bottom, left;
+$position-properties: top, right, bottom, left;
 
 // Pre
 $pre-lg: 800px !default;
@@ -202,6 +215,7 @@ $sidebar-toggler-font-size:          $font-size-lg !default;
 $sidebar-toggler-border-radius:      $btn-border-radius !default;
 
 $sidebar-modal-fade-transform:       translate(-50px, 0) !default;
+$sidebar-modal-right-fade-transform: translate(50px, 0) !default;
 
 $sidebar-dark-color:                 rgba($white,.5) !default;
 $sidebar-dark-hover-color:           rgba($white,.75) !default;

@@ -1,12 +1,14 @@
 extends ../example.pug
 
 block example_title
-  h3.font-weight-normal Dark
+  h3.fw-400 Color
 
 block example_result
   +breadcrumb(["breadcrumb-dark", "bg-primary"])
+  +breadcrumb(["breadcrumb-light", "bg-light"])
 
 block example_code
   :encode-pug
     | <!-- Source -->
     ol.breadcrumb.breadcrumb-dark.bg-primary
+    ol.breadcrumb.breadcrumb-light.bg-light

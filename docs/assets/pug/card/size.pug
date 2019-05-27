@@ -1,0 +1,21 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Size
+
+block example_result
+  .row
+    .col-md-4
+      .card.card-body.card-xs
+        h4.h6.card-title Extra small
+        p.card-text Example text
+    .col-md-4
+      .card.card-body.card-sm
+        h4.h5.card-title Small
+        p.card-text Example text
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .card.card-xs
+    .card.card-sm

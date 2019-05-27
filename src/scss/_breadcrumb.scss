@@ -6,9 +6,6 @@
   @include breadcrumb-variant($breadcrumb-light-color, $breadcrumb-light-hover-color, $breadcrumb-light-active-color, $breadcrumb-light-divider-color);
 }
 
-.breadcrumb-light {
-}
-
 // Arrows
 @each $divider, $value in $breadcrumb-dividers {
   .breadcrumb-#{$divider} {

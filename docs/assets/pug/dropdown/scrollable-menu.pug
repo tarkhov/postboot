@@ -1,12 +1,12 @@
 extends ../example.pug
 
 block example_title
-  h3.font-weight-normal Menu scroll
+  h3.fw-400 Scrollable menu
 
 block example_result
   .btn-group.dropdown
     button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Dropdown
-    .dropdown-menu.dropdown-menu-scrolled
+    .dropdown-menu.dropdown-menu-scrollable
       - for(var i = 1; i <= 20; i++)
         = "\n\t"
         a.dropdown-item(href='#')= 'Menu item ' + i
@@ -16,4 +16,4 @@ block example_code
     | <!-- Source -->
     .btn-group.dropdown
       button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown") Dropdown
-      .dropdown-menu.dropdown-menu-scrolled
+      .dropdown-menu.dropdown-menu-scrollable

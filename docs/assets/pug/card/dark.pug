@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Dark
+
+block example_result
+  .row
+    .col-md-6
+      .card.card-dark.bg-dark
+        .card-body
+          h4.card-title Dark
+          p.card-text Example text
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .card.card-dark.bg-dark

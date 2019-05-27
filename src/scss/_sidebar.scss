@@ -43,8 +43,8 @@
   padding: $sidebar-toggler-padding-y $sidebar-toggler-padding-x;
   font-size: $sidebar-toggler-font-size;
   line-height: 1;
-  background: transparent; // remove default button style
-  border: $border-width solid transparent; // remove default button style
+  background: transparent;
+  border: $border-width solid transparent;
   @include border-radius($sidebar-toggler-border-radius);
 
   @include hover-focus {
@@ -86,10 +86,15 @@
       }
     }
   }
+
+  .sidebar {
+    height: 100%;
+  }
 }
 
 .sidebar-dialog {
   margin: 0 !important;
+  height: 100%;
 
   .sidebar-modal.fade & {
     @include transition($modal-transition);
@@ -97,6 +102,10 @@
   }
   .sidebar-modal.show & {
     transform: $modal-show-transform;
+  }
+
+  @include media-breakpoint-up(sm) {
+    max-width: 250px;
   }
 }
 

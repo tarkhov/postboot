@@ -64,6 +64,12 @@
     flex-wrap: nowrap;
   }
 
+  @each $breakpoint, $max-widths in $container-breakpoints {
+    > .container-#{$breakpoint} {
+      flex-wrap: nowrap;
+    }
+  }
+
   .navbar-collapse {
     display: flex !important;
   }

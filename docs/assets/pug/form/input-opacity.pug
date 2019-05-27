@@ -1,18 +1,18 @@
 extends ../example.pug
 
 block example_title
-  h3.font-weight-normal Control color alpha
+  h3.fw-400 Opacity
 
 block example_body
   .card-body.bg-dark.bg-striped
-    .row
-      each text, variant in colors
-        .col-3
-          .form-group
-            +form_control_variant(text, variant + '-50')
+    .form-group
+      +input_dark('Black', 'black-50')
+    .form-group
+      +input_dark_state('Valid', 'black-50', 'valid')
+    +input_dark_state('Invalid', 'black-50', 'invalid')
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each text, variant in colors
-      input.form-control(type='text', placeholder=text class="input-" + variant + '-50')
+    - for(var i = 1; i <= 9; i++)
+      input.form-control(type='text', placeholder='Black' class=['input-dark', 'input-black-' + i * 10])

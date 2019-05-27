@@ -1,29 +1,11 @@
 // Custom
-@each $color, $value in $custom-colors {
-  .badge-#{$color} {
-    @include badge-variant($value);
-    @if $color == 'orange' {
-      color: $white;
-    }
-  }
+.badge-white {
+  @include badge-variant($white);
 }
 
 // Opacity
 @for $alpha from 1 through 9 {
-  @each $color, $value in $theme-colors {
-    .badge-#{$color}-#{($alpha * 10)} {
-      @include badge-opacity-variant($value, ($alpha * .1));
-      @if $color == 'warning' {
-        color: $white;
-      }
-    }
-  }
-  @each $color, $value in $custom-colors {
-    .badge-#{$color}-#{($alpha * 10)} {
-      @include badge-opacity-variant($value, ($alpha * .1));
-      @if $color == 'orange' {
-        color: $white;
-      }
-    }
+  .badge-black-#{($alpha * 10)} {
+    @include badge-variant(rgba($black, ($alpha * .1)));
   }
 }

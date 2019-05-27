@@ -17,15 +17,3 @@
     margin-top: $tribar-margin-top;
   }
 }
-
-// Colors
-@each $color, $value in $theme-colors {
-  .tribar-#{$color} {
-    @include tribar-variant($value);
-  }
-}
-@each $color, $value in $custom-colors {
-  .tribar-#{$color} {
-    @include tribar-variant($value);
-  }
-}

@@ -15,8 +15,8 @@
   </head>
   <body class="pt-navbar" data-spy="scroll" data-target="#sidebar-left">
     <header class="pb-gutter" role="banner">
-      <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
-        <div class="container"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-beta3</sup></a>
+      <nav class="navbar navbar-expand-xs navbar-light px-0 fixed-top" id="navbar-top" role="navigation">
+        <div class="container-xl navbar-container"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-beta3</sup></a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
@@ -31,21 +31,21 @@
         </div>
       </nav>
     </header>
-    <div class="container-lg">
+    <div class="container-xl">
       <div class="row">
         <div class="col-md-2">
           <aside class="sidebar sidebar-light sidebar-expand-md py-0 position-fixed" id="sidebar-left" role="complementary">
             <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm pr-gutter">
               <li class="nav-item"><a class="nav-link" href="#start">Start</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#install">Install</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#install-manually">Manually</a></li>
                       <li class="nav-item"><a class="nav-link" href="#install-nodejs">NodeJS</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#usage">Usage</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#usage-local">Local</a></li>
                       <li class="nav-item"><a class="nav-link" href="#usage-cdn">CDN</a></li>
                     </ul>
@@ -53,15 +53,8 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#background">Background</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#background-custom">Custom</a>
-                  </li>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#background-opacity">Opacity</a>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#background-hover">Hover</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#background-hover-opacity">Opacity</a></li>
-                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#background-contain">Contain</a>
                   </li>
@@ -72,7 +65,7 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#badge">Badge</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#badge-custom">Custom</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#badge-opacity">Opacity</a>
@@ -80,43 +73,28 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#border">Border</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#border-custom">Custom</a>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#border-opacity">Opacity</a>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#border-hover">Hover</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#border-hover-opacity">Opacity</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#border-style">Style</a>
-                  </li>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#border-width">Width</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#breadcrumb">Breadcrumb</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#breadcrumb-arrow">Arrow</a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="#breadcrumb-dark">Dark</a>
+                  <li class="nav-item"><a class="nav-link" href="#breadcrumb-color">Color</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#breadcrumb-pill">Pill</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#button">Button</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#button-custom">Custom</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a>
-                  </li>
                   <li class="nav-item"><a class="nav-link" href="#button-opacity">Opacity</a>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#button-state">State</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-size">Size</a>
                   </li>
@@ -127,97 +105,99 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#card">Card</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#card-state">State</a>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#card-dark">Dark</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#card-footer-pills">Footer pills</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#card-footer-tabs">Footer tabs</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#card-image">Image</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#card-image-responsive">Responsive</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#card-pill">Pill</a>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#card-size">Size</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#collapse">Collapse</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#collapse-horizontal">Horizontal</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#dropdown">Dropdown</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#dropdown-arrow">Arrow</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-disable-caret">Disable caret</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-hover">Hover</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#dropdown-off-click">Off click</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="#dropdown-scrolled-menu">Scrolled menu</a>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-scrollable-menu">Scrollable menu</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#font">Font</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#font-size">Size</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#font-size-responsive">Responsive</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#font-weight">Weight</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#font-weight-responsive">Responsive</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#form">Form</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#input-color">Input color</a>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#input-material">Material</a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="#input-opacity">Input opacity</a>
+                  <li class="nav-item"><a class="nav-link" href="#input-dark">Dark</a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="#input-material">Input material</a>
+                  <li class="nav-item"><a class="nav-link" href="#input-opacity">Opacity</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#grid">Grid</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#grid-container">Container</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing-responsive">Responsive</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#list-group">List group</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#list-group-size">Size</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#list-group-item-size">Item</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#nav">Nav</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#nav-active">Active</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-size">Size</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#nav-tabs-responsive">Responsive</a></li>
                     </ul>
                   </li>
@@ -226,8 +206,10 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#navbar-breadcrumb">Breadcrumb</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-container">Container</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-dropdown-menu">Dropdown menu</a>
                   </li>
@@ -235,56 +217,47 @@
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-nav-align">Nav align</a>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-scroller">Scroller</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-size">Size</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-spacing">Spacing</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-tribar">Triple bar</a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="#navbar-scroller">Scroller</a>
-                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#position">Position</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#position-spacing">Spacing</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#position-spacing-responsive">Responsive</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#progress">Progress</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#progress-size">Size</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#scrollspy">ScrollSpy</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#scrollspy-tree">Tree</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#text">Text</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#text-custom">Custom</a>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#text-opacity">Opacity</a>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#text-hover">Hover</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#text-hover-opacity">Opacity</a></li>
-                    </ul>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#sidebar-modal">Modal</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#tribar">Triple bar</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="#type">Typography</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm f2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#type-heading-responsive">Heading</a>
                   </li>
                 </ul>
@@ -295,14 +268,14 @@
         <main class="col-md-10" role="main">
           <article role="article">
             <div id="start">
-              <h1 class="font-weight-normal">PostBoot</h1>
-              <p class="lead font-weight-normal">Fast web app prototyping library with Bootstrap framework.</p>
+              <h1 class="fw-400">PostBoot</h1>
+              <p class="lead fw-400">Fast web app prototyping library with Bootstrap framework.</p>
               <div class="alert alert-primary" role="alert">Compatibility with Bootstrap <b>v4.2.1</b>.</div>
               <div id="install">
                 <div id="install">
-                  <h3 class="font-weight-normal mb-3">Installation</h3>
+                  <h3 class="fw-400 mb-3">Installation</h3>
                   <div id="install-manually">
-                    <h4 class="font-weight-normal">Manually</h4>
+                    <h4 class="fw-400">Manually</h4>
                     <p><a href="https://github.com/tarkhov/postboot/releases/download/v1.0.0-beta3/postboot-1.0.0-beta3.zip">Download</a> package and unpack it or use following commands:</p>
                     <div class="card bg-light mb-3">
                       <div class="card-body">
@@ -312,7 +285,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                     </div>
                   </div>
                   <div id="install-nodejs">
-                    <h4 class="font-weight-normal">NodeJS</h4>
+                    <h4 class="fw-400">NodeJS</h4>
                     <div class="card bg-light mb-3">
                       <div class="card-body">
                         <pre><code class="language-bash">npm install postboot@1.0.0-beta3</code></pre>
@@ -323,9 +296,9 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
               </div>
               <div id="usage">
                 <div id="usage">
-                  <h3 class="font-weight-normal">Usage</h3>
+                  <h3 class="fw-400">Usage</h3>
                   <div id="usage-local">
-                    <h4 class="font-weight-normal">Local</h4>
+                    <h4 class="fw-400">Local</h4>
                     <div class="card bg-light mb-3">
                       <div class="card-body">
                         <pre><code class="language-markup">&#x3C;!-- CSS --&#x3E;
@@ -340,7 +313,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                     </div>
                   </div>
                   <div id="usage-cdn">
-                    <h4 class="font-weight-normal">CDN</h4>
+                    <h4 class="fw-400">CDN</h4>
                     <div class="card bg-light mb-3">
                       <div class="card-body">
                         <pre><code class="language-markup">&#x3C;!-- CSS --&#x3E;
@@ -359,159 +332,41 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
               </div>
             </div>
             <div id="background">
-              <h2 class="font-weight-normal">Background</h2>
-              <div id="background-custom">
-                <h3 class="font-weight-normal">Custom</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-indigo text-white">Indigo</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-orange text-white">Orange</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-pink text-white">Pink</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-purple text-white">Purple</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-teal text-white">Teal</p>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;bg-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-teal&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
+              <h2 class="fw-400">Background</h2>
               <div id="background-opacity">
-                <h3 class="font-weight-normal">Opacity</h3>
+                <h3 class="fw-400">Opacity</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped text-white">
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-primary-50">Primary</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-secondary-50">Secondary</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-success-50">Success</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-info-50">Info</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-warning-50">Warning</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-danger-50">Danger</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-light-50">Light</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-dark-50">Dark</p>
                                             <p class="p-2 mr-1 mb-2 d-inline-block bg-black-50">Black</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-indigo-50">Indigo</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-orange-50">Orange</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-pink-50">Pink</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-purple-50">Purple</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-teal-50">Teal</p>
                                             <p class="p-2 mr-1 mb-2 d-inline-block bg-white-50">White</p>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;bg-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;bg-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-50&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="background-hover">
-                <h3 class="font-weight-normal">Hover</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-primary bg-hover-primary text-hover-white">Primary</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-secondary bg-hover-secondary text-hover-white">Secondary</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-success bg-hover-success text-hover-white">Success</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-info bg-hover-info text-hover-white">Info</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-warning bg-hover-warning text-hover-white">Warning</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-danger bg-hover-danger text-hover-white">Danger</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-dark bg-hover-dark text-hover-white">Dark</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-black bg-hover-black text-hover-white">Black</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-indigo bg-hover-indigo text-hover-white">Indigo</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-orange bg-hover-orange text-hover-white">Orange</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-pink bg-hover-pink text-hover-white">Pink</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-purple bg-hover-purple text-hover-white">Purple</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-teal bg-hover-teal text-hover-white">Teal</p>
-                  </div>
-                  <div class="card-body bg-dark bg-striped text-white">
-                    <div class="d-inline-block">
-                                              <p class="p-2 mr-1 mb-2 d-inline-block border border-light bg-hover-light text-hover-dark">Light</p>
-                    </div>
-                    <div class="d-inline-block">
-                                              <p class="p-2 mr-1 mb-2 d-inline-block border border-white bg-hover-white text-hover-dark">White</p>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;bg-hover-primary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-success&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-info&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-warning&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-danger&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-light&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-dark&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-black&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-teal&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="background-hover-opacity">
-                <h3 class="font-weight-normal">Hover opacity</h3>
-                <div class="card mb-3">
-                  <div class="card-body bg-dark bg-striped text-white">
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-primary-50 bg-hover-primary-50 text-hover-white">Primary</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-secondary-50 bg-hover-secondary-50 text-hover-white">Secondary</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-success-50 bg-hover-success-50 text-hover-white">Success</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-info-50 bg-hover-info-50 text-hover-white">Info</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-warning-50 bg-hover-warning-50 text-hover-white">Warning</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-danger-50 bg-hover-danger-50 text-hover-white">Danger</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-light-50 bg-hover-light-50 text-hover-white">Light</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-dark-50 bg-hover-dark-50 text-hover-white">Dark</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-black-50 bg-hover-black-50 text-hover-white">Black</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-indigo-50 bg-hover-indigo-50 text-hover-white">Indigo</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-orange-50 bg-hover-orange-50 text-hover-white">Orange</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-pink-50 bg-hover-pink-50 text-hover-white">Pink</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-purple-50 bg-hover-purple-50 text-hover-white">Purple</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-teal-50 bg-hover-teal-50 text-hover-white">Teal</p>
-                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-white-50 bg-hover-white-50 text-hover-white">White</p>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;bg-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;bg-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-black-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;bg-white-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-90&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <div id="background-contain">
-                <h3 class="font-weight-normal">Contain</h3>
+                <h3 class="fw-400">Contain</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
@@ -528,7 +383,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="background-cover">
-                <h3 class="font-weight-normal">Cover</h3>
+                <h3 class="fw-400">Cover</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="bg-cover w-100" style="background-image: url(assets/img/home.jpg);background-repeat: no-repeat;background-position: top left;height: 200px;"></div>
@@ -541,7 +396,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="background-striped">
-                <h3 class="font-weight-normal">Striped</h3>
+                <h3 class="fw-400">Striped</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                 <p class="p-2 mr-1 mb-2 d-inline-block bg-primary bg-striped text-white">Striped</p>
@@ -555,250 +410,53 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
               </div>
             </div>
             <div id="badge">
-              <h2 class="font-weight-normal">Badge</h2>
+              <h2 class="fw-400">Badge</h2>
               <div id="badge-custom">
-                <h3 class="font-weight-normal">Custom</h3>
+                <h3 class="fw-400">Custom</h3>
                 <div class="card mb-3">
-                  <div class="card-body">
-                                            <div class="badge badge-indigo">Indigo</div>
-                                            <div class="badge badge-orange">Orange</div>
-                                            <div class="badge badge-pink">Pink</div>
-                                            <div class="badge badge-purple">Purple</div>
-                                            <div class="badge badge-teal">Teal</div>
-                  </div>
                   <div class="card-body bg-dark bg-striped">
                                             <div class="badge badge-white">White</div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;badge badge-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-white&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;badge badge-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <div id="badge-opacity">
-                <h3 class="font-weight-normal">Opacity</h3>
+                <h3 class="fw-400">Opacity</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
-                                            <div class="badge badge-primary-50">Primary</div>
-                                            <div class="badge badge-secondary-50">Secondary</div>
-                                            <div class="badge badge-success-50">Success</div>
-                                            <div class="badge badge-info-50">Info</div>
-                                            <div class="badge badge-warning-50">Warning</div>
-                                            <div class="badge badge-danger-50">Danger</div>
-                                            <div class="badge badge-light-50">Light</div>
-                                            <div class="badge badge-dark-50">Dark</div>
                                             <div class="badge badge-black-50">Black</div>
-                                            <div class="badge badge-indigo-50">Indigo</div>
-                                            <div class="badge badge-orange-50">Orange</div>
-                                            <div class="badge badge-pink-50">Pink</div>
-                                            <div class="badge badge-purple-50">Purple</div>
-                                            <div class="badge badge-teal-50">Teal</div>
-                                            <div class="badge badge-white-50">White</div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;badge badge-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;badge badge-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-90&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
             </div>
             <div id="border">
-              <h2 class="font-weight-normal">Border</h2>
-              <div id="border-custom">
-                <h3 class="font-weight-normal">Custom</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-indigo text-indigo">Indigo</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-orange text-orange">Orange</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-pink text-pink">Pink</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-purple text-purple">Purple</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-teal text-teal">Teal</div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;border-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-teal&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="border-opacity">
-                <h3 class="font-weight-normal">Opacity</h3>
-                <div class="card mb-3">
-                  <div class="card-body bg-dark bg-striped">
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-primary-50 text-white">Primary</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-secondary-50 text-white">Secondary</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-success-50 text-white">Success</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-info-50 text-white">Info</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-warning-50 text-white">Warning</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-danger-50 text-white">Danger</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-light-50 text-white">Light</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-dark-50 text-white">Dark</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-black-50 text-white">Black</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-indigo-50 text-white">Indigo</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-orange-50 text-white">Orange</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-pink-50 text-white">Pink</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-purple-50 text-white">Purple</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-teal-50 text-white">Teal</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-white-50 text-white">White</div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;border-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-white-50&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="border-hover">
-                <h3 class="font-weight-normal">Hover</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-primary text-primary card">Primary</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-secondary text-secondary card">Secondary</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-success text-success card">Success</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-info text-info card">Info</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-warning text-warning card">Warning</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-danger text-danger card">Danger</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-dark text-dark card">Dark</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-black text-black card">Black</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-indigo text-indigo card">Indigo</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-orange text-orange card">Orange</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-pink text-pink card">Pink</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-purple text-purple card">Purple</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-teal text-teal card">Teal</div>
-                  </div>
-                  <div class="card-body bg-secondary bg-striped text-white">
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-light text-light card bg-transparent border-black">Light</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-white text-white card bg-transparent border-black">White</div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;border-hover-primary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-success&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-info&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-warning&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-danger&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-light&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-dark&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-black&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-teal&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="border-hover-opacity">
-                <h3 class="font-weight-normal">Hover opacity</h3>
-                <div class="card mb-3">
-                  <div class="card-body bg-dark bg-striped text-white">
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-primary-50 border-primary card bg-transparent border-3">Primary</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-secondary-50 border-secondary card bg-transparent border-3">Secondary</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-success-50 border-success card bg-transparent border-3">Success</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-info-50 border-info card bg-transparent border-3">Info</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-warning-50 border-warning card bg-transparent border-3">Warning</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-danger-50 border-danger card bg-transparent border-3">Danger</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-light-50 border-light card bg-transparent border-3">Light</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-dark-50 border-dark card bg-transparent border-3">Dark</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-black-50 border-black card bg-transparent border-3">Black</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-indigo-50 border-indigo card bg-transparent border-3">Indigo</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-orange-50 border-orange card bg-transparent border-3">Orange</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-pink-50 border-pink card bg-transparent border-3">Pink</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-purple-50 border-purple card bg-transparent border-3">Purple</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-teal-50 border-teal card bg-transparent border-3">Teal</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-white-50 border-white card bg-transparent border-3">White</div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;border-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="border-style">
-                <h3 class="font-weight-normal">Style</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-3 border-dashed border-primary text-primary">Dashed</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-3 border-dotted border-primary text-primary">Dotted</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-3 border-double border-primary text-primary">Double</div>
-                                            <div class="d-inline-block mr-1 mb-2 p-2 border-3 border-solid border-primary text-primary">Solid</div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;border-dashed&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-dotted&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-double&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-solid&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
+              <h2 class="fw-400">Border</h2>
               <div id="border-width">
-                <h3 class="font-weight-normal">Widths</h3>
+                <h3 class="fw-400">Widths</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                <div class="mb-3 border-top-solid border-primary border-top-1"></div>
-                                <div class="mb-3 border-top-solid border-primary border-top-2"></div>
-                                <div class="mb-3 border-top-solid border-primary border-top-3"></div>
-                                <div class="mb-3 border-top-solid border-primary border-top-4"></div>
-                                <div class="mb-3 border-top-solid border-primary border-top-5"></div>
+                                <div class="mb-3 border-top border-primary border-top-1"></div>
+                                <div class="mb-3 border-top border-primary border-top-2"></div>
+                                <div class="mb-3 border-top border-primary border-top-3"></div>
+                                <div class="mb-3 border-top border-primary border-top-4"></div>
+                                <div class="mb-3 border-top border-primary border-top-5"></div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
@@ -813,9 +471,9 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
               </div>
             </div>
             <div id="breadcrumb">
-              <h2 class="font-weight-normal">Breadcrumb</h2>
+              <h2 class="fw-400">Breadcrumb</h2>
               <div id="breadcrumb-arrow">
-                <h3 class="font-weight-normal">Arrows</h3>
+                <h3 class="fw-400">Arrows</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
@@ -859,8 +517,8 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="breadcrumb-dark">
-                <h3 class="font-weight-normal">Dark</h3>
+              <div id="breadcrumb-color">
+                <h3 class="fw-400">Color</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                 <ol class="breadcrumb breadcrumb-dark bg-primary">
@@ -868,16 +526,22 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                                   <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
                                   <li class="breadcrumb-item active">Article</li>
                                 </ol>
+                                <ol class="breadcrumb breadcrumb-light bg-light">
+                                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                  <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                  <li class="breadcrumb-item active">Article</li>
+                                </ol>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;ol class=&#x22;breadcrumb breadcrumb-dark bg-primary&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-dark bg-primary&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-light bg-light&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <div id="breadcrumb-pill">
-                <h3 class="font-weight-normal">Pill</h3>
+                <h3 class="fw-400">Pill</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                             <ol class="breadcrumb breadcrumb-pill">
@@ -895,42 +559,25 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
               </div>
             </div>
             <div id="button">
-              <h2 class="font-weight-normal">Button</h2>
+              <h2 class="fw-400">Button</h2>
               <div id="button-custom">
-                <h3 class="font-weight-normal">Custom</h3>
+                <h3 class="fw-400">Custom</h3>
                 <div class="card mb-3">
-                  <div class="card-body">
-                                            <button class="btn mr-1 mb-2 btn-indigo" type="button">Indigo</button>
-                                            <button class="btn mr-1 mb-2 btn-orange" type="button">Orange</button>
-                                            <button class="btn mr-1 mb-2 btn-pink" type="button">Pink</button>
-                                            <button class="btn mr-1 mb-2 btn-purple" type="button">Purple</button>
-                                            <button class="btn mr-1 mb-2 btn-teal" type="button">Teal</button>
-                  </div>
                   <div class="card-body bg-dark bg-striped">
                                             <button class="btn mr-1 mb-2 btn-white" type="button">White</button>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <div id="button-outline">
-                <h3 class="font-weight-normal">Outline</h3>
+                <h3 class="fw-400">Outline</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                             <button class="btn mr-1 mb-2 btn-outline-link" type="button">Link</button>
-                                            <button class="btn mr-1 mb-2 btn-outline-indigo" type="button">Indigo</button>
-                                            <button class="btn mr-1 mb-2 btn-outline-orange" type="button">Orange</button>
-                                            <button class="btn mr-1 mb-2 btn-outline-pink" type="button">Pink</button>
-                                            <button class="btn mr-1 mb-2 btn-outline-purple" type="button">Purple</button>
-                                            <button class="btn mr-1 mb-2 btn-outline-teal" type="button">Teal</button>
                   </div>
                   <div class="card-body bg-dark bg-striped">
                                             <button class="btn mr-1 mb-2 btn-outline-white" type="button">White</button>
@@ -938,133 +585,34 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-link&#x22; type=&#x22;button&#x22;&#x3E;Link&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-outline-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="button-3d">
-                <h3 class="font-weight-normal">3D</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <button class="btn mr-1 mb-2 btn-3d-primary" type="button">Primary</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-secondary" type="button">Secondary</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-success" type="button">Success</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-info" type="button">Info</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-warning" type="button">Warning</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-danger" type="button">Danger</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-light" type="button">Light</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-dark" type="button">Dark</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-indigo" type="button">Indigo</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-orange" type="button">Orange</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-pink" type="button">Pink</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-purple" type="button">Purple</button>
-                                            <button class="btn mr-1 mb-2 btn-3d-teal" type="button">Teal</button>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-3d-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
               <div id="button-opacity">
-                <h3 class="font-weight-normal">Opacity</h3>
+                <h3 class="fw-400">Opacity</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
-                                            <button class="btn mr-1 mb-2 btn-primary-50" type="button">Primary</button>
-                                            <button class="btn mr-1 mb-2 btn-secondary-50" type="button">Secondary</button>
-                                            <button class="btn mr-1 mb-2 btn-success-50" type="button">Success</button>
-                                            <button class="btn mr-1 mb-2 btn-info-50" type="button">Info</button>
-                                            <button class="btn mr-1 mb-2 btn-warning-50" type="button">Warning</button>
-                                            <button class="btn mr-1 mb-2 btn-danger-50" type="button">Danger</button>
-                                            <button class="btn mr-1 mb-2 btn-light-50" type="button">Light</button>
-                                            <button class="btn mr-1 mb-2 btn-dark-50" type="button">Dark</button>
                                             <button class="btn mr-1 mb-2 btn-black-50" type="button">Black</button>
-                                            <button class="btn mr-1 mb-2 btn-indigo-50" type="button">Indigo</button>
-                                            <button class="btn mr-1 mb-2 btn-orange-50" type="button">Orange</button>
-                                            <button class="btn mr-1 mb-2 btn-pink-50" type="button">Pink</button>
-                                            <button class="btn mr-1 mb-2 btn-purple-50" type="button">Purple</button>
-                                            <button class="btn mr-1 mb-2 btn-teal-50" type="button">Teal</button>
-                                            <button class="btn mr-1 mb-2 btn-white-50" type="button">White</button>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-primary-50&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-secondary-50&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-success-50&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-info-50&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-warning-50&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-danger-50&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-light-50&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-dark-50&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-50&#x22; type=&#x22;button&#x22;&#x3E;Black&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-indigo-50&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-orange-50&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-pink-50&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-purple-50&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-teal-50&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-white-50&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="button-state">
-                <h3 class="font-weight-normal">State</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <button class="btn mr-1 mb-2 btn-state-primary" type="button">Primary</button>
-                                            <button class="btn mr-1 mb-2 btn-state-secondary" type="button">Secondary</button>
-                                            <button class="btn mr-1 mb-2 btn-state-success" type="button">Success</button>
-                                            <button class="btn mr-1 mb-2 btn-state-info" type="button">Info</button>
-                                            <button class="btn mr-1 mb-2 btn-state-warning" type="button">Warning</button>
-                                            <button class="btn mr-1 mb-2 btn-state-danger" type="button">Danger</button>
-                                            <button class="btn mr-1 mb-2 btn-state-light" type="button">Light</button>
-                                            <button class="btn mr-1 mb-2 btn-state-dark" type="button">Dark</button>
-                                            <button class="btn mr-1 mb-2 btn-state-indigo" type="button">Indigo</button>
-                                            <button class="btn mr-1 mb-2 btn-state-orange" type="button">Orange</button>
-                                            <button class="btn mr-1 mb-2 btn-state-pink" type="button">Pink</button>
-                                            <button class="btn mr-1 mb-2 btn-state-purple" type="button">Purple</button>
-                                            <button class="btn mr-1 mb-2 btn-state-teal" type="button">Teal</button>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-state-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-state-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;</code></pre>
+&#x3C;button class=&#x22;btn btn-black-10&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-20&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-30&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-40&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-50&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-60&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-70&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-80&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-90&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <div id="button-size">
-                <h3 class="font-weight-normal">Sizes</h3>
+                <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                             <button class="btn mr-1 mb-2 btn-secondary btn-xs" type="button">Extra small</button>
@@ -1079,7 +627,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="button-circle">
-                <h3 class="font-weight-normal">Circle</h3>
+                <h3 class="fw-400">Circle</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                 <button class="btn mr-1 mb-2 btn-primary btn-circle" type="button">C</button>
@@ -1092,7 +640,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="button-pill">
-                <h3 class="font-weight-normal">Pill</h3>
+                <h3 class="fw-400">Pill</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                 <button class="btn mr-1 mb-2 btn-primary btn-pill" type="button">Pill</button>
@@ -1106,113 +654,31 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
               </div>
             </div>
             <div id="card">
-              <h2 class="font-weight-normal">Card</h2>
-              <div id="card-state">
-                <h3 class="font-weight-normal">State</h3>
+              <h2 class="fw-400">Card</h2>
+              <div id="card-dark">
+                <h3 class="fw-400">Dark</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-primary">
-                          <h4 class="card-title">Primary</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-secondary">
-                          <h4 class="card-title">Secondary</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-success">
-                          <h4 class="card-title">Success</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-info">
-                          <h4 class="card-title">Info</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-warning">
-                          <h4 class="card-title">Warning</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-danger">
-                          <h4 class="card-title">Danger</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-light">
-                          <h4 class="card-title">Light</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-dark">
-                          <h4 class="card-title">Dark</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-indigo">
-                          <h4 class="card-title">Indigo</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-orange">
-                          <h4 class="card-title">Orange</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-pink">
-                          <h4 class="card-title">Pink</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-purple">
-                          <h4 class="card-title">Purple</h4>
-                          <p class="card-text">Example text</p>
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="card card-body mb-3 card-state-teal">
-                          <h4 class="card-title">Teal</h4>
-                          <p class="card-text">Example text</p>
+                      <div class="col-md-6">
+                        <div class="card card-dark bg-dark">
+                          <div class="card-body">
+                            <h4 class="card-title">Dark</h4>
+                            <p class="card-text">Example text</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;card card-state-primary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-success&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-info&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-warning&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-danger&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-light&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-dark&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;card card-state-teal&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;card card-dark bg-dark&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <div id="card-footer-pills">
-                <h3 class="font-weight-normal">Footer pills</h3>
+                <h3 class="fw-400">Footer pills</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="card">
@@ -1249,7 +715,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="card-footer-tabs">
-                <h3 class="font-weight-normal">Footer tabs</h3>
+                <h3 class="fw-400">Footer tabs</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="card">
@@ -1286,7 +752,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="card-image">
-                <h3 class="font-weight-normal">Image position</h3>
+                <h3 class="fw-400">Image position</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="card flex-sm-row mb-gutter"><img class="card-img-top card-img-sm-left" src="/postboot/assets/img/thumbnail.jpg">
@@ -1321,7 +787,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="card-image-responsive">
-                <h4 class="font-weight-normal">Responsive image</h4>
+                <h4 class="fw-400">Responsive image</h4>
                 <div class="card card-body bg-light mb-3">
                   <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;img class=&#x22;card-img-sm-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
@@ -1355,7 +821,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 </div>
               </div>
               <div id="card-pill">
-                <h3 class="font-weight-normal">Pill</h3>
+                <h3 class="fw-400">Pill</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
@@ -1374,11 +840,38 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <div id="card-size">
+                <h3 class="fw-400">Size</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="card card-body card-xs">
+                          <h4 class="h6 card-title">Extra small</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card card-body card-sm">
+                          <h4 class="h5 card-title">Small</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;card card-xs&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-sm&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
             </div>
             <div id="collapse">
-              <h2 class="font-weight-normal">Collapse</h2>
+              <h2 class="fw-400">Collapse</h2>
               <div id="collapse-horizontal">
-                <h3 class="font-weight-normal">Horizontal</h3>
+                <h3 class="fw-400">Horizontal</h3>
                 <div class="card mb-3">
                   <div class="card-body"><a class="btn btn-primary" href="#example-collapse-horizontal" data-toggle="collapse">Collapse</a>
                     <div class="collapse collapse-horizontal width" id="example-collapse-horizontal">
@@ -1386,16 +879,19 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                     </div>
                   </div>
                   <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;</code></pre>
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;&#x3C;a class=&#x22;btn btn-primary&#x22; href=&#x22;#example-collapse-horizontal&#x22; data-toggle=&#x22;collapse&#x22;&#x3E;Collapse&#x3C;/a&#x3E;
+&#x3C;div class=&#x22;collapse collapse-horizontal width&#x22; id=&#x22;example-collapse-horizontal&#x22;&#x3E;
+  &#x3C;p style=&#x22;min-width: 500px;&#x22;&#x3E;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
             </div>
             <div id="dropdown">
-              <h2 class="font-weight-normal">Dropdown</h2>
+              <h2 class="fw-400">Dropdown</h2>
               <div id="dropdown-arrow">
-                <h3 class="font-weight-normal">Arrow</h3>
+                <h3 class="fw-400">Arrow</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
@@ -1458,7 +954,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="dropdown-disable-caret">
-                <h3 class="font-weight-normal">Disable caret </h3>
+                <h3 class="fw-400">Disable caret </h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="btn-group dropdown">
@@ -1481,7 +977,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="dropdown-hover">
-                <h3 class="font-weight-normal">Hover</h3>
+                <h3 class="fw-400">Hover</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                 <div class="btn-group dropdown dropdown-hover">
@@ -1504,7 +1000,7 @@ unzip postboot-1.0.0-beta3.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="dropdown-off-click">
-                <h4 class="fw-normal">Off click events</h4>
+                <h4 class="fw-400">Off click events</h4>
                 <div class="card card-body bg-light mb-3">
                   <pre class="pre-scrollable"><code class="language-javascript"><pre><code class="language-javascript">$(document).off(&#39;.dropdown.data-api&#39;);
 $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (e) {
@@ -1516,7 +1012,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
               </div>
               <div id="dropdown-mega-menu">
-                <h3 class="font-weight-normal">Mega menu</h3>
+                <h3 class="fw-400">Mega menu</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <ul class="nav dropdown">
@@ -1546,13 +1042,13 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="dropdown-scrolled-menu">
-                <h3 class="font-weight-normal">Menu scroll</h3>
+              <div id="dropdown-scrollable-menu">
+                <h3 class="fw-400">Scrollable menu</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="btn-group dropdown">
                       <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown</button>
-                      <div class="dropdown-menu dropdown-menu-scrolled">
+                      <div class="dropdown-menu dropdown-menu-scrollable">
 	<a class="dropdown-item" href="#">Menu item 1</a>
 	<a class="dropdown-item" href="#">Menu item 2</a>
 	<a class="dropdown-item" href="#">Menu item 3</a>
@@ -1580,7 +1076,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;btn-group dropdown&#x22;&#x3E;
   &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22;&#x3E;Dropdown&#x3C;/button&#x3E;
-  &#x3C;div class=&#x22;dropdown-menu dropdown-menu-scrolled&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;dropdown-menu dropdown-menu-scrollable&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
@@ -1588,360 +1084,252 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
               </div>
             </div>
             <div id="font">
-              <h2 class="font-weight-normal">Font</h2>
+              <h2 class="fw-400">Font</h2>
               <div id="font-size">
-                <h3 class="font-weight-normal">Font sizes</h3>
+                <h3 class="fw-400">Font sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                            <p class="font-size-1">Font size 1</p>
-                                            <p class="font-size-2">Font size 2</p>
-                                            <p class="font-size-3">Font size 3</p>
-                                            <p class="font-size-4">Font size 4</p>
-                                            <p class="font-size-5">Font size 5</p>
-                                            <p class="font-size-6">Font size 6</p>
-                                            <p class="font-size-7">Font size 7</p>
-                                            <p class="font-size-8">Font size 8</p>
+                                            <p class="fs-1">Font size 1</p>
+                                            <p class="fs-2">Font size 2</p>
+                                            <p class="fs-3">Font size 3</p>
+                                            <p class="fs-4">Font size 4</p>
+                                            <p class="fs-5">Font size 5</p>
+                                            <p class="fs-6">Font size 6</p>
+                                            <p class="fs-7">Font size 7</p>
+                                            <p class="fs-8">Font size 8</p>
+                                            <p class="fs-9">Font size 9</p>
+                                            <p class="fs-10">Font size 10</p>
+                                            <p class="fs-11">Font size 11</p>
+                                            <p class="fs-12">Font size 12</p>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;p class=&#x22;font-size-1&#x22;&#x3E;Font size 1&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-2&#x22;&#x3E;Font size 2&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-3&#x22;&#x3E;Font size 3&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-4&#x22;&#x3E;Font size 4&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-5&#x22;&#x3E;Font size 5&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-6&#x22;&#x3E;Font size 6&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-7&#x22;&#x3E;Font size 7&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-8&#x22;&#x3E;Font size 8&#x3C;/p&#x3E;</code></pre>
+&#x3C;p class=&#x22;fs-1&#x22;&#x3E;Font size 1&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-2&#x22;&#x3E;Font size 2&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-3&#x22;&#x3E;Font size 3&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-4&#x22;&#x3E;Font size 4&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-5&#x22;&#x3E;Font size 5&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-6&#x22;&#x3E;Font size 6&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-7&#x22;&#x3E;Font size 7&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-8&#x22;&#x3E;Font size 8&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-9&#x22;&#x3E;Font size 9&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-10&#x22;&#x3E;Font size 10&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-11&#x22;&#x3E;Font size 11&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-12&#x22;&#x3E;Font size 12&#x3C;/p&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div id="font-size-responsive">
-                  <h4 class="font-weight-normal">Responsive font sizes</h4>
+                  <h4 class="fw-400">Responsive font sizes</h4>
                   <div class="card card-body bg-light mb-3">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;p class=&#x22;font-size-sm-1&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-sm-2&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-sm-3&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-sm-4&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-sm-5&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-sm-6&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-sm-7&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-sm-8&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-1&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-2&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-3&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-4&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-5&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-6&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-7&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-8&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-9&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-10&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-11&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-sm-12&#x22;&#x3E;&#x3C;/p&#x3E;
 
-&#x3C;p class=&#x22;font-size-md-1&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-md-2&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-md-3&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-md-4&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-md-5&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-md-6&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-md-7&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-md-8&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-1&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-2&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-3&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-4&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-5&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-6&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-7&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-8&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-9&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-10&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-11&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-md-12&#x22;&#x3E;&#x3C;/p&#x3E;
 
-&#x3C;p class=&#x22;font-size-lg-1&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-lg-2&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-lg-3&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-lg-4&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-lg-5&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-lg-6&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-lg-7&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-lg-8&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-1&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-2&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-3&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-4&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-5&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-6&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-7&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-8&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-9&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-10&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-11&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-lg-12&#x22;&#x3E;&#x3C;/p&#x3E;
 
-&#x3C;p class=&#x22;font-size-xl-1&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-xl-2&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-xl-3&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-xl-4&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-xl-5&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-xl-6&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-xl-7&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-size-xl-8&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-1&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-2&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-3&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-4&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-5&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-6&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-7&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-8&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-9&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-10&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-11&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fs-xl-12&#x22;&#x3E;&#x3C;/p&#x3E;
 </code></pre>
                   </div>
                 </div>
               </div>
               <div id="font-weight">
-                <h3 class="font-weight-normal">Font weights</h3>
+                <h3 class="fw-400">Font weights</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                            <p class="font-weight-thin">Thin</p>
-                                            <p class="font-weight-extra-light">Extra light</p>
-                                            <p class="font-weight-medium">Medium</p>
-                                            <p class="font-weight-semi-bold">Semi bold</p>
-                                            <p class="font-weight-extra-bold">Extra bold</p>
-                                            <p class="font-weight-black">Black</p>
+                                            <p class="fw-100">Thin</p>
+                                            <p class="fw-200">Extra light</p>
+                                            <p class="fw-300">Light</p>
+                                            <p class="fw-400">Normal</p>
+                                            <p class="fw-500">Medium</p>
+                                            <p class="fw-600">Semi bold</p>
+                                            <p class="fw-700">Bold</p>
+                                            <p class="fw-800">Extra bold</p>
+                                            <p class="fw-900">Black</p>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;p class=&#x22;font-weight-thin&#x22;&#x3E;Thin&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-extra-light&#x22;&#x3E;Extra light&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-medium&#x22;&#x3E;Medium&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-semi-bold&#x22;&#x3E;Semi bold&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-extra-bold&#x22;&#x3E;Extra bold&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-black&#x22;&#x3E;Black&#x3C;/p&#x3E;</code></pre>
+&#x3C;p class=&#x22;fw-100&#x22;&#x3E;Thin&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-200&#x22;&#x3E;Extra light&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-300&#x22;&#x3E;Light&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-400&#x22;&#x3E;Normal&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-500&#x22;&#x3E;Medium&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-600&#x22;&#x3E;Semi bold&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-700&#x22;&#x3E;Bold&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-800&#x22;&#x3E;Extra bold&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-900&#x22;&#x3E;Black&#x3C;/p&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
                 <div id="font-weight-responsive">
-                  <h4 class="font-weight-normal">Responsive font weights</h4>
+                  <h4 class="fw-400">Responsive font weights</h4>
                   <div class="card card-body bg-light mb-3">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-thin&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-extra-light&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-light&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-normal&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-medium&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-semi-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-extra-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-sm-black&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-100&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-200&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-300&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-400&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-500&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-600&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-700&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-800&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-sm-900&#x22;&#x3E;&#x3C;/p&#x3E;
 
-&#x3C;p class=&#x22;font-weight-md-thin&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-md-extra-light&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-md-light&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-md-normal&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-md-medium&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-md-semi-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-md-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-md-extra-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-md-black&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-100&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-200&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-300&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-400&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-500&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-600&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-700&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-800&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-md-900&#x22;&#x3E;&#x3C;/p&#x3E;
 
-&#x3C;p class=&#x22;font-weight-lg-thin&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-lg-extra-light&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-lg-light&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-lg-normal&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-lg-medium&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-lg-semi-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-lg-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-lg-extra-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-lg-black&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-100&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-200&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-300&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-400&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-500&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-600&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-700&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-800&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-lg-900&#x22;&#x3E;&#x3C;/p&#x3E;
 
-&#x3C;p class=&#x22;font-weight-xl-thin&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-xl-extra-light&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-xl-light&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-xl-normal&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-xl-medium&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-xl-semi-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-xl-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-xl-extra-bold&#x22;&#x3E;&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;font-weight-xl-black&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-100&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-200&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-300&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-400&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-500&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-600&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-700&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-800&#x22;&#x3E;&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;fw-xl-900&#x22;&#x3E;&#x3C;/p&#x3E;
 </code></pre>
                   </div>
                 </div>
               </div>
             </div>
             <div id="form">
-              <h2 class="font-weight-normal">Form</h2>
-              <div id="input-color">
-                <h3 class="font-weight-normal">Control color</h3>
+              <h2 class="fw-400">Form</h2>
+              <div id="input-material">
+                <h3 class="fw-400">Input material</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                    <div class="row">
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-primary" type="text" placeholder="Primary">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-secondary" type="text" placeholder="Secondary">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-success" type="text" placeholder="Success">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-info" type="text" placeholder="Info">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-warning" type="text" placeholder="Warning">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-danger" type="text" placeholder="Danger">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-dark" type="text" placeholder="Dark">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-black" type="text" placeholder="Black">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-indigo" type="text" placeholder="Indigo">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-orange" type="text" placeholder="Orange">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-pink" type="text" placeholder="Pink">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-purple" type="text" placeholder="Purple">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-teal" type="text" placeholder="Teal">
-                        </div>
-                      </div>
+                    <div class="form-group">
+                                              <input class="form-control input-material" type="text" placeholder="Material">
                     </div>
+                    <div class="form-group">
+                                              <input class="form-control input-material is-valid" type="text" placeholder="Valid">
+                    </div>
+                                            <input class="form-control input-material is-invalid" type="text" placeholder="Invalid">
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;input class=&#x22;form-control input-primary&#x22; type=&#x22;text&#x22; placeholder=&#x22;Primary&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-secondary&#x22; type=&#x22;text&#x22; placeholder=&#x22;Secondary&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-success&#x22; type=&#x22;text&#x22; placeholder=&#x22;Success&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-info&#x22; type=&#x22;text&#x22; placeholder=&#x22;Info&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-warning&#x22; type=&#x22;text&#x22; placeholder=&#x22;Warning&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-danger&#x22; type=&#x22;text&#x22; placeholder=&#x22;Danger&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-material&#x22; type=&#x22;text&#x22; placeholder=&#x22;Material&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-material is-valid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-material is-invalid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="input-dark">
+                <h3 class="fw-400">Dark</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="form-group">
+                                              <input class="form-control input-dark" type="text" placeholder="Dark">
+                    </div>
+                    <div class="form-group">
+                                              <input class="form-control input-dark is-valid" type="text" placeholder="Valid">
+                    </div>
+                                            <input class="form-control input-dark is-invalid" type="text" placeholder="Invalid">
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;input class=&#x22;form-control input-dark&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-black&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-indigo&#x22; type=&#x22;text&#x22; placeholder=&#x22;Indigo&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-orange&#x22; type=&#x22;text&#x22; placeholder=&#x22;Orange&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-pink&#x22; type=&#x22;text&#x22; placeholder=&#x22;Pink&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-purple&#x22; type=&#x22;text&#x22; placeholder=&#x22;Purple&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-teal&#x22; type=&#x22;text&#x22; placeholder=&#x22;Teal&#x22;/&#x3E;</code></pre>
+&#x3C;input class=&#x22;form-control input-dark is-valid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark is-invalid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
               <div id="input-opacity">
-                <h3 class="font-weight-normal">Control color alpha</h3>
+                <h3 class="fw-400">Opacity</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
-                    <div class="row">
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-primary-50" type="text" placeholder="Primary">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-secondary-50" type="text" placeholder="Secondary">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-success-50" type="text" placeholder="Success">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-info-50" type="text" placeholder="Info">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-warning-50" type="text" placeholder="Warning">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-danger-50" type="text" placeholder="Danger">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-light-50" type="text" placeholder="Light">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-dark-50" type="text" placeholder="Dark">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-black-50" type="text" placeholder="Black">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-indigo-50" type="text" placeholder="Indigo">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-orange-50" type="text" placeholder="Orange">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-pink-50" type="text" placeholder="Pink">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-purple-50" type="text" placeholder="Purple">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-teal-50" type="text" placeholder="Teal">
-                        </div>
-                      </div>
-                      <div class="col-3">
-                        <div class="form-group">
-                                                  <input class="form-control input-white-50" type="text" placeholder="White">
-                        </div>
-                      </div>
+                    <div class="form-group">
+                                              <input class="form-control input-dark input-black-50" type="text" placeholder="Black">
                     </div>
+                    <div class="form-group">
+                                              <input class="form-control input-dark input-black-50 is-valid" type="text" placeholder="Valid">
+                    </div>
+                                            <input class="form-control input-dark input-black-50 is-invalid" type="text" placeholder="Invalid">
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;input class=&#x22;form-control input-primary-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Primary&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-secondary-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Secondary&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-success-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Success&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-info-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Info&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-warning-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Warning&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-danger-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Danger&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-light-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Light&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-black-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-indigo-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Indigo&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-orange-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Orange&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-pink-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Pink&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-purple-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Purple&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-teal-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Teal&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-white-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;White&#x22;/&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="input-material">
-                <h3 class="font-weight-normal">Input material</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                                            <input class="form-control input-material" type="text" placeholder="Material">
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;input class=&#x22;form-control input-material&#x22; type=&#x22;text&#x22; placeholder=&#x22;Material&#x22;/&#x3E;</code></pre>
+&#x3C;input class=&#x22;form-control input-dark input-black-10&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black-20&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black-30&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black-40&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black-60&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black-70&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black-80&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black-90&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
             </div>
             <div id="grid">
-              <h2 class="font-weight-normal">Grid</h2>
+              <h2 class="fw-400">Grid</h2>
               <div id="grid-container">
-                <h3 class="font-weight-normal">Container</h3>
+                <h3 class="fw-400">Container</h3>
                 <div class="card card-body bg-light mb-3">
                   <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;container-md&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -1950,7 +1338,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
               </div>
               <div id="grid-gutter-spacing">
-                <h3 class="font-weight-normal">Gutter spacing</h3>
+                <h3 class="fw-400">Gutter spacing</h3>
                 <div class="card card-body bg-light mb-3">
                   <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;m-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -1970,7 +1358,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
 &#x3C;div class=&#x22;pl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                 </div>
                 <div id="grid-gutter-spacing-responsive">
-                  <h4 class="font-weight-normal">Gutter spacing responsive</h4>
+                  <h4 class="fw-400">Gutter spacing responsive</h4>
                   <div class="card card-body bg-light mb-3">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;m-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -2042,9 +1430,9 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
               </div>
             </div>
             <div id="list-group">
-              <h2 class="font-weight-normal">List group</h2>
+              <h2 class="fw-400">List group</h2>
               <div id="list-group-size">
-                <h3 class="fw-normal">Sizes</h3>
+                <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
@@ -2071,7 +1459,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
                 <div class="clearfix"></div>
                 <div id="list-group-item-size">
-                  <h3 class="fw-normal">Item sizes</h3>
+                  <h3 class="fw-400">Item sizes</h3>
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="row">
@@ -2102,9 +1490,9 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
               </div>
             </div>
             <div id="nav">
-              <h2 class="font-weight-normal">Nav</h2>
+              <h2 class="fw-400">Nav</h2>
               <div id="nav-active">
-                <h3 class="fw-normal">Active</h3>
+                <h3 class="fw-400">Active</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                 <ul class="nav justify-content-start">
@@ -2123,7 +1511,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 <div class="clearfix"></div>
               </div>
               <div id="nav-size">
-                <h3 class="fw-normal">Sizes</h3>
+                <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                             <ul class="nav nav-pills nav-xs mb-3">
@@ -2152,7 +1540,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 <div class="clearfix"></div>
               </div>
               <div id="nav-tabs">
-                <h3 class="fw-normal">Tabs position</h3>
+                <h3 class="fw-400">Tabs position</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
@@ -2191,7 +1579,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
                 <div class="clearfix"></div>
                 <div id="nav-tabs-responsive">
-                  <h4 class="fw-normal">Responsive tabs</h4>
+                  <h4 class="fw-400">Responsive tabs</h4>
                   <div class="card card-body bg-light mb-3">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;ul class=&#x22;nav nav-tabs nav-tabs-sm-right&#x22;&#x3E;&#x3C;/ul&#x3E;
@@ -2210,7 +1598,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
               </div>
               <div id="nav-tree">
-                <h3 class="fw-normal">Tree</h3>
+                <h3 class="fw-400">Tree</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <ul class="nav nav-tree nav-x-0 nav-y-sm flex-column">
@@ -2233,8 +1621,22 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;ul class=&#x22;nav&#x22;&#x3E;
-  &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link active&#x22; href=&#x22;#&#x22;&#x3E;Active&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+&#x3C;ul class=&#x22;nav nav-tree nav-x-0 nav-y-sm flex-column&#x22;&#x3E;
+  &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;li class=&#x22;nav-item show&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Item 2&#x3C;/a&#x3E;
+    &#x3C;ul class=&#x22;nav nav-tree nav-x-0 nav-y-sm font-size-2 pl-3 flex-column&#x22;&#x3E;
+      &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Sub-item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;nav-item show&#x22;&#x3E;&#x3C;a class=&#x22;nav-link active&#x22; href=&#x22;#&#x22;&#x3E;Sub-item 2&#x3C;/a&#x3E;
+        &#x3C;ul class=&#x22;nav nav-tree nav-x-0 nav-y-sm font-size-1 pl-3 flex-column&#x22;&#x3E;
+          &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Sub-item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link active&#x22; href=&#x22;#&#x22;&#x3E;Sub-item 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+          &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Sub-item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;/ul&#x3E;
+      &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Sub-item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;/ul&#x3E;
+  &#x3C;/li&#x3E;
+  &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
 &#x3C;/ul&#x3E;</code></pre>
                   </div>
                 </div>
@@ -2242,9 +1644,9 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
               </div>
             </div>
             <div id="navbar">
-              <h2 class="font-weight-normal">Navbar</h2>
+              <h2 class="fw-400">Navbar</h2>
               <div id="navbar-breadcrumb">
-                <h3 class="font-weight-normal">Breadcrumb</h3>
+                <h3 class="fw-400">Breadcrumb</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <nav class="navbar navbar-expand-xs navbar-dark bg-dark">
@@ -2270,8 +1672,17 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <div id="navbar-container">
+                <h3 class="fw-400">Container</h3>
+                <div class="card card-body bg-light mb-3">
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;navbar px-0&#x22;&#x3E;
+  &#x3C;div class=&#x22;container navbar-container&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
               <div id="navbar-dropdown-menu">
-                <h3 class="font-weight-normal">Dropdown menu</h3>
+                <h3 class="fw-400">Dropdown menu</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -2311,7 +1722,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 <div class="clearfix"></div>
               </div>
               <div id="navbar-expand-size">
-                <h3 class="font-weight-normal">Expand size</h3>
+                <h3 class="fw-400">Expand size</h3>
                 <p>This nav expands on all devices, even smartphones.</p>
                 <div class="card mb-3">
                   <div class="card-body">
@@ -2335,7 +1746,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 <div class="clearfix"></div>
               </div>
               <div id="navbar-nav-align">
-                <h3 class="font-weight-normal">Nav align</h3>
+                <h3 class="fw-400">Nav align</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3 px-0">
@@ -2365,8 +1776,56 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <div id="navbar-scroller">
+                <h3 class="fw-400">Scroller</h3>
+                <p>Scrollable navbar.</p>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="navbar navbar-expand-xs navbar-dark bg-dark px-0">
+                      <div class="container-fluid"><a class="navbar-brand" href="#">S</a>
+                        <div class="navbar-scroller">
+                          <ul class="navbar-nav navbar-scroller-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 6</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 7</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 8</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 9</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 10</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;navbar navbar-expand-xs navbar-dark bg-dark px-0&#x22;&#x3E;
+  &#x3C;div class=&#x22;container-fluid&#x22;&#x3E;&#x3C;a class=&#x22;navbar-brand&#x22; href=&#x22;#&#x22;&#x3E;S&#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;navbar-scroller&#x22;&#x3E;
+      &#x3C;ul class=&#x22;navbar-nav navbar-scroller-nav&#x22;&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 4&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 5&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 6&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 7&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 8&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 9&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 10&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
               <div id="navbar-size">
-                <h3 class="font-weight-normal">Sizes</h3>
+                <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                             <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-sm mb-3">
@@ -2401,7 +1860,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 <div class="clearfix"></div>
               </div>
               <div id="navbar-spacing">
-                <h3 class="font-weight-normal">Fixed padding</h3>
+                <h3 class="fw-400">Fixed padding</h3>
                 <div class="card card-body bg-light mb-3">
                   <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;py-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -2418,7 +1877,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
               </div>
               <div id="navbar-tribar">
-                <h3 class="font-weight-normal">Triple bar</h3>
+                <h3 class="fw-400">Triple bar</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                 <nav class="navbar navbar-expand-xs navbar-dark bg-dark">
@@ -2442,41 +1901,11 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
                 <div class="clearfix"></div>
               </div>
-              <div id="navbar-scroller">
-                <h3 class="fw-normal">Scrollable</h3>
-                <p>Scrollable navbar.</p>
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="navbar navbar-expand-xs navbar-dark bg-dark px-0">
-                      <div class="container-fluid"><a class="navbar-brand" href="#">S</a>
-                        <div class="navbar-scroller">
-                          <ul class="navbar-nav navbar-scroller-nav">
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 6</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 7</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 8</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 9</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#">Nav item 10</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
             </div>
             <div id="position">
-              <h2 class="font-weight-normal">Position</h2>
+              <h2 class="fw-400">Position</h2>
               <div id="position-spacing">
-                <h3 class="font-weight-normal">Spacing</h3>
+                <h3 class="fw-400">Spacing</h3>
                 <div class="card card-body bg-light mb-3">
                   <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;top-0&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -2490,7 +1919,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
 &#x3C;div class=&#x22;left-auto&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                 </div>
                 <div id="position-spacing-responsive">
-                  <h4 class="font-weight-normal">Spacing responsive</h4>
+                  <h4 class="fw-400">Spacing responsive</h4>
                   <div class="card card-body bg-light mb-3">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;top-sm-0&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -2538,9 +1967,9 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
               </div>
             </div>
             <div id="progress">
-              <h2 class="font-weight-normal">Progress</h2>
+              <h2 class="fw-400">Progress</h2>
               <div id="progress-size">
-                <h3 class="fw-normal">Sizes</h3>
+                <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                                             <div class="progress mb-3 progress-xs">
@@ -2568,9 +1997,9 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
               </div>
             </div>
             <div id="scrollspy">
-              <h2 class="font-weight-normal">ScrollSpy</h2>
+              <h2 class="fw-400">ScrollSpy</h2>
               <div id="scrollspy-tree">
-                <h3 class="fw-normal">Tree</h3>
+                <h3 class="fw-400">Tree</h3>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
@@ -2659,7 +2088,7 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
               </div>
             </div>
             <div id="sidebar">
-              <h2 class="font-weight-normal">Sidebar</h2>
+              <h2 class="fw-400">Sidebar</h2>
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="row">
@@ -2691,106 +2120,48 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
               </div>
               <div class="clearfix"></div>
-            </div>
-            <div id="text">
-              <h2 class="font-weight-normal">Text</h2>
-              <div id="text-custom">
-                <h3 class="fw-normal">Custom</h3>
+              <div id="sidebar-modal">
+                <h3 class="fw-400">Modal</h3>
                 <div class="card mb-3">
-                  <div class="card-body"><span class="mr-2 mb-2 text-indigo">Indigo</span><span class="mr-2 mb-2 text-orange">Orange</span><span class="mr-2 mb-2 text-pink">Pink</span><span class="mr-2 mb-2 text-purple">Purple</span><span class="mr-2 mb-2 text-teal">Teal</span>
+                  <div class="card-body"><a href="#" data-toggle="modal" data-target="#sidebar-modal-example"><span class="tribar"></span></a>
+                    <div class="sidebar-modal fade" id="sidebar-modal-example">
+                      <div class="sidebar-dialog modal-dialog">
+                        <div class="sidebar sidebar-dark bg-dark sidebar-expand"><a class="sidebar-brand" href="#">Brand</a>
+                          <ul class="sidebar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;text-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="text-opacity">
-                <h3 class="fw-normal">Alpha</h3>
-                <div class="card mb-3">
-                  <div class="card-body bg-black bg-striped"><span class="mr-2 mb-2 text-primary-50">Primary</span><span class="mr-2 mb-2 text-secondary-50">Secondary</span><span class="mr-2 mb-2 text-success-50">Success</span><span class="mr-2 mb-2 text-info-50">Info</span><span class="mr-2 mb-2 text-warning-50">Warning</span><span class="mr-2 mb-2 text-danger-50">Danger</span><span class="mr-2 mb-2 text-light-50">Light</span><span class="mr-2 mb-2 text-dark-50">Dark</span><span class="mr-2 mb-2 text-black-50">Black</span><span class="mr-2 mb-2 text-indigo-50">Indigo</span><span class="mr-2 mb-2 text-orange-50">Orange</span><span class="mr-2 mb-2 text-pink-50">Pink</span><span class="mr-2 mb-2 text-purple-50">Purple</span><span class="mr-2 mb-2 text-teal-50">Teal</span><span class="mr-2 mb-2 text-white-50">White</span>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;text-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="text-hover">
-                <h3 class="fw-normal">Hover</h3>
-                <div class="card mb-3">
-                  <div class="card-body"><span class="mr-2 mb-2 text-hover-primary">Primary</span><span class="mr-2 mb-2 text-hover-secondary">Secondary</span><span class="mr-2 mb-2 text-hover-success">Success</span><span class="mr-2 mb-2 text-hover-info">Info</span><span class="mr-2 mb-2 text-hover-warning">Warning</span><span class="mr-2 mb-2 text-hover-danger">Danger</span><span class="mr-2 mb-2 text-hover-light">Light</span><span class="mr-2 mb-2 text-hover-dark">Dark</span><span class="mr-2 mb-2 text-hover-black">Black</span><span class="mr-2 mb-2 text-hover-indigo">Indigo</span><span class="mr-2 mb-2 text-hover-orange">Orange</span><span class="mr-2 mb-2 text-hover-pink">Pink</span><span class="mr-2 mb-2 text-hover-purple">Purple</span><span class="mr-2 mb-2 text-hover-teal">Teal</span><span class="mr-2 mb-2 text-hover-white">White</span>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;text-hover-primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-secondary&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-success&#x22;&#x3E;Success&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-info&#x22;&#x3E;Info&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-light&#x22;&#x3E;Light&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-dark&#x22;&#x3E;Dark&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-black&#x22;&#x3E;Black&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-white&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div id="text-hover-opacity">
-                <h4 class="fw-normal">Hover opacity</h4>
-                <div class="card mb-3">
-                  <div class="card-body bg-black bg-striped"><span class="mr-2 mb-2 text-primary text-hover-primary-50">Primary</span><span class="mr-2 mb-2 text-secondary text-hover-secondary-50">Secondary</span><span class="mr-2 mb-2 text-success text-hover-success-50">Success</span><span class="mr-2 mb-2 text-info text-hover-info-50">Info</span><span class="mr-2 mb-2 text-warning text-hover-warning-50">Warning</span><span class="mr-2 mb-2 text-danger text-hover-danger-50">Danger</span><span class="mr-2 mb-2 text-light text-hover-light-50">Light</span><span class="mr-2 mb-2 text-dark text-hover-dark-50">Dark</span><span class="mr-2 mb-2 text-black text-hover-black-50">Black</span><span class="mr-2 mb-2 text-indigo text-hover-indigo-50">Indigo</span><span class="mr-2 mb-2 text-orange text-hover-orange-50">Orange</span><span class="mr-2 mb-2 text-pink text-hover-pink-50">Pink</span><span class="mr-2 mb-2 text-purple text-hover-purple-50">Purple</span><span class="mr-2 mb-2 text-teal text-hover-teal-50">Teal</span><span class="mr-2 mb-2 text-white text-hover-white-50">White</span>
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;text-hover-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;text-hover-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
+&#x3C;a href=&#x22;#&#x22; data-toggle=&#x22;modal&#x22; data-target=&#x22;#sidebar-modal-example&#x22;&#x3E;&#x3C;span class=&#x22;tribar&#x22;&#x3E;&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+&#x3C;div class=&#x22;sidebar-modal fade&#x22; id=&#x22;sidebar-modal-example&#x22;&#x3E;
+  &#x3C;div class=&#x22;sidebar-dialog modal-dialog&#x22;&#x3E;
+    &#x3C;div class=&#x22;sidebar sidebar-dark bg-dark sidebar-expand&#x22;&#x3E;
+      &#x3C;a class=&#x22;sidebar-brand&#x22; href=&#x22;#&#x22;&#x3E;Brand&#x3C;/a&#x3E;
+      &#x3C;ul class=&#x22;sidebar-nav&#x22;&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 4&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 5&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
               </div>
             </div>
             <div id="tribar">
-              <h2 class="font-weight-normal">Triple bar</h2>
+              <h2 class="fw-400">Triple bar</h2>
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="tribar"></div>
@@ -2803,9 +2174,9 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
               <div class="clearfix"></div>
             </div>
             <div id="type">
-              <h2 class="font-weight-normal">Typography</h2>
+              <h2 class="fw-400">Typography</h2>
               <div id="type-heading-responsive">
-                <h3 class="font-weight-normal">Responsive heading</h3>
+                <h3 class="fw-400">Responsive heading</h3>
                 <div class="card card-body bg-light mb-3">
                   <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;h1-sm&#x22;&#x3E;&#x3C;/div&#x3E;

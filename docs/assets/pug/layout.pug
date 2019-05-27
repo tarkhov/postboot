@@ -20,8 +20,8 @@ html(lang="en")
   body.pt-navbar(data-spy="scroll" data-target="#sidebar-left")
     block header
       header.pb-gutter(role="banner")
-        nav#navbar-top.navbar.navbar-expand-xs.navbar-light.px-sm-0.fixed-top(role="navigation")
-          .container
+        nav#navbar-top.navbar.navbar-expand-xs.navbar-light.px-0.fixed-top(role="navigation")
+          .container-xl.navbar-container
             a.navbar-brand(href="/" + pkg.name + '/' rel="home") #[span.rounded.py-1.text-white.font-weight-medium.bg-purple(style="padding-left: .6rem;padding-right: .6rem;") P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
 
             .collapse.navbar-collapse
@@ -38,7 +38,7 @@ html(lang="en")
               a.btn.btn-primary.btn-sm.ml-2(href=downloadUrl) Download
 
     block content
-      .container-lg
+      .container-xl
         .row
           .col-md-2
             aside#sidebar-left.sidebar.sidebar-light.sidebar-expand-md.py-0.position-fixed(role="complementary")

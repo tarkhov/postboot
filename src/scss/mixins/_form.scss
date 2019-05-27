@@ -1,5 +1,36 @@
-// Variant
-@mixin form-control-variant($background, $color: $white) {
+// Validation state
+@mixin form-validation-state-selector($state) {
+  @if ($state == "valid" or $state == "invalid") {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      &,
+      &:focus {
+        @content;
+      }
+    }
+  } @else {
+    &.is-#{$state} {
+      &,
+      &:focus {
+        @content;
+      }
+    }
+  }
+}
+
+// Material
+@mixin input-material-variant($border, $color: $input-color, $focus-border: $input-focus-border-color, $focus-color: $input-focus-color) {
+  border-bottom-color: $border;
+  color: $color;
+
+  &:focus {
+    border-bottom-color: $focus-border;
+    color: $focus-color;
+  }
+}
+
+// Dark
+@mixin input-dark-variant($background, $color: $input-dark-color) {
   &,
   &:focus {
     background-color: $background;
@@ -7,16 +38,12 @@
     color: $color;
   }
 
-  &:focus {
-    box-shadow: none;
-  }
-
   &::placeholder {
     color: $color;
   }
-}
 
-// Opacity
-@mixin form-control-opacity-variant($background, $alpha, $color: $white) {
-  @include form-control-variant(rgba($background, $alpha), $color);
+  &:disabled,
+  &[readonly] {
+    background-color: darken($color, 15%);
+  }
 }

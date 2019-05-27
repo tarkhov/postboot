@@ -45,7 +45,8 @@
       .nav-link {
         @include border-radius(0 $border-radius $border-radius 0);
 
-        @include hover-focus {
+        &:hover,
+        &:focus {
           border-color: $gray-200 $gray-200 $gray-200 $nav-tabs-border-color;
         }
       }
@@ -71,7 +72,8 @@
       .nav-link {
         @include border-radius($border-radius 0 0 $border-radius);
 
-        @include hover-focus {
+        &:hover,
+        &:focus {
           border-color: $gray-200 $nav-tabs-border-color $gray-200 $gray-200;
         }
       }
@@ -99,7 +101,8 @@
   .nav-link {
     @include border-radius(0 0 $border-radius $border-radius);
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       border-color: $nav-tabs-border-color $gray-200 $gray-200;
     }
   }

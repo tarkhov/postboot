@@ -12,70 +12,18 @@
   border-color: $gray-400;
 }
 
-// Custom
-@each $color, $value in $custom-colors {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
-    @if $color == 'orange' {
-      color: $white;
-    }
-  }
-  .btn-outline-#{$color} {
-    @if $color != 'white' {
-      @include button-outline-variant($value, $white);
-    } @else {
-      @include button-outline-variant($value);
-    }
-  }
+// White
+.btn-white {
+  @include button-variant($white, $white);
 }
-
-// State
-@each $color, $value in $theme-colors {
-  .btn-state-#{$color} {
-    @include button-state-variant($value);
-  }
-}
-@each $color, $value in map-remove($custom-colors, "black", "white") {
-  .btn-state-#{$color} {
-    @include button-state-variant($value);
-  }
-}
-
-// 3D
-@each $color, $value in $theme-colors {
-  .btn-3d-#{$color} {
-    @include button-3d-variant($value, $value);
-    @if $color == 'warning' {
-      color: $white;
-    }
-  }
-}
-@each $color, $value in map-remove($custom-colors, "black", "white") {
-  .btn-3d-#{$color} {
-    @include button-3d-variant($value, $value);
-    @if $color == 'orange' {
-      color: $white;
-    }
-  }
+.btn-outline-white {
+  @include button-outline-variant($white);
 }
 
 // Opacity
 @for $alpha from 1 through 9 {
-  @each $color, $value in $theme-colors {
-    .btn-#{$color}-#{($alpha * 10)} {
-      @include button-opacity-variant($value, $value, ($alpha * .1));
-      @if $color == 'warning' {
-        color: $white;
-      }
-    }
-  }
-  @each $color, $value in $custom-colors {
-    .btn-#{$color}-#{($alpha * 10)} {
-      @include button-opacity-variant($value, $value, ($alpha * .1));
-      @if $color == 'orange' {
-        color: $white;
-      }
-    }
+  .btn-black-#{($alpha * 10)} {
+    @include button-variant(rgba($black, ($alpha * .1)), rgba($black, ($alpha * .1)));
   }
 }
 

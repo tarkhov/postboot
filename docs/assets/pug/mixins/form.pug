@@ -1,5 +1,14 @@
-mixin form_control(placeholder, classes)
+mixin input(placeholder, classes)
   input.form-control(type='text', placeholder=placeholder, class=classes)
 
-mixin form_control_variant(placeholder, variant)
-  +form_control(placeholder, 'input-' + variant)
+mixin input_variant(placeholder, variant)
+  +input(placeholder, 'input-' + variant)
+
+mixin input_state(placeholder, variant, state)
+  +input(placeholder, ['input-' + variant, 'is-' + state])
+
+mixin input_dark(placeholder, variant)
+  +input(placeholder, ['input-dark', 'input-' + variant])
+
+mixin input_dark_state(placeholder, variant, state)
+  +input(placeholder, ['input-dark', 'input-' + variant, 'is-' + state])

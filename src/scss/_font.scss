@@ -4,7 +4,7 @@
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
     @each $size, $value in $font-sizes {
-      .f#{$size}#{$infix} { font-size: $value !important; }
+      .fs#{$infix}-#{$size} { font-size: $value !important; }
     }
   }
 }

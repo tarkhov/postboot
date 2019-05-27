@@ -1,54 +1,67 @@
-// Input variants
-@each $color, $value in map-remove($theme-colors, "light") {
-  .input-#{$color} {
-    @include form-control-variant($value);
-    @if $color == 'warning' {
-      color: $white;
-    }
-  }
-}
-@each $color, $value in map-remove($custom-colors, "white") {
-  .input-#{$color} {
-    @include form-control-variant($value);
-    @if $color == 'orange' {
-      color: $white;
-    }
-  }
-}
-
-// Input opacity
-@for $alpha from 1 through 9 {
-  @each $color, $value in $theme-colors {
-    .input-#{$color}-#{($alpha * 10)} {
-      @include form-control-opacity-variant($value, ($alpha * .1));
-      @if $color == 'warning' {
-        color: $white;
-      }
-    }
-  }
-  @each $color, $value in $custom-colors {
-    .input-#{$color}-#{($alpha * 10)} {
-      @include form-control-opacity-variant($value, ($alpha * .1));
-      @if $color == 'orange' {
-        color: $white;
-      }
-    }
-  }
-}
-
 // Input material
 .input-material {
+  padding-right: 0;
+  padding-left: 0;
+  @include border-radius(0);
+
   &,
   &:focus,
-  &.is-valid,
-  &.is-invalid {
-    border-top-color: $input-bg;
-    border-right-color: $input-bg;
-    border-left-color: $input-bg;
+  &:disabled,
+  &[readonly] {
+    background-color: transparent;
+  }
+
+  &,
+  &:focus {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
     box-shadow: none;
   }
 
-  @include border-radius(0);
-  padding-right: 0;
-  padding-left: 0;
+  @each $state, $data in $form-validation-states {
+    @include form-validation-state-selector($state) {
+      border-top-color: transparent;
+      border-right-color: transparent;
+      border-left-color: transparent;
+      box-shadow: none;
+    }
+  }
+}
+
+// Dark
+.input-dark {
+  &,
+  &:focus {
+    background-color: $input-dark-bg;
+    border-color: $input-dark-bg;
+    color: $input-dark-color;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $input-dark-color;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: darken($input-dark-color, 15%);
+  }
+
+  @each $state, $data in $form-validation-states {
+    @include form-validation-state-selector($state) {
+      background-color: map-get($data, color);
+      box-shadow: none;
+    }
+  }
+}
+
+// Opacity
+@for $alpha from 1 through 9 {
+  .input-black-#{($alpha * 10)} {
+    @include input-dark-variant(rgba($black, ($alpha * .1)));
+  }
 }

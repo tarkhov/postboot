@@ -1,12 +1,12 @@
 extends ../example-html.pug
 
 block example_title
-  h4.font-weight-normal Responsive font weights
+  h4.fw-400 Responsive font weights
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each breakpoint in ['sm', 'md', 'lg', 'xl']
-      each text, weight in {'thin': 'Thin', 'extra-light': 'Extra light', 'light': 'Light', 'normal': 'Normal', 'medium': 'Medium', 'semi-bold': 'Semi bold', 'bold': 'Bold', 'extra-bold': 'Extra bold', 'black': 'Black'}
-        p(class='font-weight-' + breakpoint + '-' + weight)
+      each text, weight in {'100': 'Thin', '200': 'Extra light', '300': 'Light', '400': 'Normal', '500': 'Medium', '600': 'Semi bold', '700': 'Bold', '800': 'Extra bold', '900': 'Black'}
+        p(class='fw-' + breakpoint + '-' + weight)
       ="\n"

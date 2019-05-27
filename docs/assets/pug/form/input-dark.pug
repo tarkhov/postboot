@@ -1,0 +1,18 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Dark
+
+block example_result
+  .form-group
+    +input_variant('Dark', 'dark')
+  .form-group
+    +input_state('Valid', 'dark', 'valid')
+  +input_state('Invalid', 'dark', 'invalid')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    input.form-control(type='text', placeholder='Dark' class="input-dark")
+    input.form-control(type='text', placeholder='Dark' class=["input-dark", 'is-valid'])
+    input.form-control(type='text', placeholder='Dark' class=["input-dark", 'is-invalid'])

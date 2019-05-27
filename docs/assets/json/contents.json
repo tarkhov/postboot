@@ -38,22 +38,8 @@
     "name": "Background",
     "childs": [
       {
-        "url": "#background-custom",
-        "name": "Custom"
-      },
-      {
         "url": "#background-opacity",
         "name": "Opacity"
-      },
-      {
-        "url": "#background-hover",
-        "name": "Hover",
-        "childs": [
-          {
-            "url": "#background-hover-opacity",
-            "name": "Opacity"
-          }
-        ]
       },
       {
         "url": "#background-contain",
@@ -88,28 +74,6 @@
     "name": "Border",
     "childs": [
       {
-        "url": "#border-custom",
-        "name": "Custom"
-      },
-      {
-        "url": "#border-opacity",
-        "name": "Opacity"
-      },
-      {
-        "url": "#border-hover",
-        "name": "Hover",
-        "childs": [
-          {
-            "url": "#border-hover-opacity",
-            "name": "Opacity"
-          }
-        ]
-      },
-      {
-        "url": "#border-style",
-        "name": "Style"
-      },
-      {
         "url": "#border-width",
         "name": "Width"
       }
@@ -124,8 +88,8 @@
         "name": "Arrow"
       },
       {
-        "url": "#breadcrumb-dark",
-        "name": "Dark"
+        "url": "#breadcrumb-color",
+        "name": "Color"
       },
       {
         "url": "#breadcrumb-pill",
@@ -146,16 +110,8 @@
         "name": "Outline"
       },
       {
-        "url": "#button-3d",
-        "name": "3D"
-      },
-      {
         "url": "#button-opacity",
         "name": "Opacity"
-      },
-      {
-        "url": "#button-state",
-        "name": "State"
       },
       {
         "url": "#button-size",
@@ -176,8 +132,8 @@
     "name": "Card",
     "childs": [
       {
-        "url": "#card-state",
-        "name": "State"
+        "url": "#card-dark",
+        "name": "Dark"
       },
       {
         "url": "#card-footer-pills",
@@ -200,6 +156,10 @@
       {
         "url": "#card-pill",
         "name": "Pill"
+      },
+      {
+        "url": "#card-size",
+        "name": "Size"
       }
     ]
   },
@@ -240,8 +200,8 @@
         "name": "Mega menu"
       },
       {
-        "url": "#dropdown-scrolled-menu",
-        "name": "Scrolled menu"
+        "url": "#dropdown-scrollable-menu",
+        "name": "Scrollable menu"
       }
     ]
   },
@@ -276,16 +236,16 @@
     "name": "Form",
     "childs": [
       {
-        "url": "#input-color",
-        "name": "Input color"
+        "url": "#input-material",
+        "name": "Material"
+      },
+      {
+        "url": "#input-dark",
+        "name": "Dark"
       },
       {
         "url": "#input-opacity",
-        "name": "Input opacity"
-      },
-      {
-        "url": "#input-material",
-        "name": "Input material"
+        "name": "Opacity"
       }
     ]
   },
@@ -362,6 +322,10 @@
         "name": "Breadcrumb"
       },
       {
+        "url": "#navbar-container",
+        "name": "Container"
+      },
+      {
         "url": "#navbar-dropdown-menu",
         "name": "Dropdown menu"
       },
@@ -374,6 +338,10 @@
         "name": "Nav align"
       },
       {
+        "url": "#navbar-scroller",
+        "name": "Scroller"
+      },
+      {
         "url": "#navbar-size",
         "name": "Size"
       },
@@ -384,10 +352,6 @@
       {
         "url": "#navbar-tribar",
         "name": "Triple bar"
-      },
-      {
-        "url": "#navbar-scroller",
-        "name": "Scroller"
       }
     ]
   },
@@ -429,29 +393,11 @@
   },
   {
     "url": "#sidebar",
-    "name": "Sidebar"
-  },
-  {
-    "url": "#text",
-    "name": "Text",
+    "name": "Sidebar",
     "childs": [
       {
-        "url": "#text-custom",
-        "name": "Custom"
-      },
-      {
-        "url": "#text-opacity",
-        "name": "Opacity"
-      },
-      {
-        "url": "#text-hover",
-        "name": "Hover",
-        "childs": [
-          {
-            "url": "#text-hover-opacity",
-            "name": "Opacity"
-          }
-        ]
+        "url": "#sidebar-modal",
+        "name": "Modal"
       }
     ]
   },

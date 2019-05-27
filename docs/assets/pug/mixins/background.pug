@@ -3,9 +3,3 @@ mixin background(text, classes)
 
 mixin background_variant(text, variant)
   +background(text, 'bg-' + variant)
-
-mixin background_inverse(text, variant)
-  +background(text, ['bg-' + variant, 'text-white'])
-
-mixin background_hover(text, variant, color)
-  +background(text, ['border', 'border-' + variant, 'bg-hover-' + variant, 'text-hover-' + color])

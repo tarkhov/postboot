@@ -184,26 +184,73 @@ module.exports = function (grunt) {
           'docs/v1/index.html': 'docs/assets/pug/index.pug'
         }
       }
+    },
+
+    watch: {
+      dist_js: {
+        files: 'src/js/*.js',
+        tasks: 'dist-js'
+      },
+      dist_css: {
+        files: 'src/scss/*.scss',
+        tasks: 'dist-css'
+      },
+      docs_css: {
+        files: 'docs/assets/scss/*.scss',
+        tasks: 'docs-css'
+      },
+      docs_html: {
+        files: 'docs/assets/pug/*.pug',
+        tasks: 'docs-html'
+      }
+    },
+
+    notify: {
+      dist_css: {
+        options: {
+          message: 'CSS distribution task completed.'
+        }
+      },
+      dist_js: {
+        options: {
+          message: 'JS distribution task completed.'
+        }
+      },
+      docs_css: {
+        options: {
+          message: 'CSS docs task completed.'
+        }
+      },
+      docs_js: {
+        options: {
+          message: 'JS docs task completed.'
+        }
+      },
+      docs_html: {
+        options: {
+          message: 'HTML docs task completed.'
+        }
+      }
     }
   });
 
   // JS distribution task.
-  grunt.registerTask('dist-js', ['concat:dist', 'uglify:dist']);
+  grunt.registerTask('dist-js', ['concat:dist', 'uglify:dist', 'notify:dist_js']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['sass:dist', 'autoprefixer:dist', 'usebanner', 'cssmin:dist']);
+  grunt.registerTask('dist-css', ['sass:dist', 'autoprefixer:dist', 'usebanner', 'cssmin:dist', 'notify:dist_css']);
 
   // Full distribution task.
   grunt.registerTask('dist', ['dist-js', 'dist-css']);
 
   // JS docs task.
-  grunt.registerTask('docs-js', ['concat:docs', 'uglify:docs']);
+  grunt.registerTask('docs-js', ['concat:docs', 'uglify:docs', 'notify:docs_js']);
 
   // CSS docs task.
-  grunt.registerTask('docs-css', ['sass:docs', 'autoprefixer:docs', 'cssmin:docs']);
+  grunt.registerTask('docs-css', ['sass:docs', 'autoprefixer:docs', 'cssmin:docs', 'notify:docs_css']);
 
   // HTML docs task.
-  grunt.registerTask('docs-html', 'pug:docs');
+  grunt.registerTask('docs-html', ['pug:docs', 'notify:docs_html']);
 
   // Docs task.
   grunt.registerTask('docs', ['docs-css', 'docs-js', 'docs-html']);

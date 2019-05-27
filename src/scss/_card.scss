@@ -66,22 +66,30 @@
   }
 }
 
-// States
-@each $color, $value in $theme-colors {
-  .card-state-#{$color} {
-    @include card-state-variant($value);
-  }
-}
-@each $color, $value in map-remove($custom-colors, "black", "white") {
-  .card-state-#{$color} {
-    @include card-state-variant($value);
+// Dark
+.card-dark {
+  &,
+  a {
+    color: $card-dark-color;
   }
 }
 
 // Sizes
 .card-xs {
   @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs);
+
+  @include media-breakpoint-down(sm) {
+    &-down {
+      @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs);
+    }
+  }
 }
 .card-sm {
   @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm);
+
+  @include media-breakpoint-down(md) {
+    &-down {
+      @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm);
+    }
+  }
 }

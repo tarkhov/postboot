@@ -2,19 +2,10 @@ mixin button(text, classes)
   button.btn.mr-1.mb-2(type='button' class=classes)!= text
 
 mixin button_variant(text, variant)
-  +button(text, 'btn-'+variant)
+  +button(text, 'btn-' + variant)
 
 mixin button_outline(text, variant)
   +button(text, 'btn-outline-' + variant)
-
-mixin button_alpha(text, variant)
-  +button(text, 'btn-' + variant + '-50')
-
-mixin button_3d(text, variant)
-  +button(text, 'btn-3d-' + variant)
-
-mixin button_state(text, variant)
-  +button(text, 'btn-state-' + variant)
 
 mixin button_size(text, size)
   +button(text, ['btn-secondary', 'btn-' + size])

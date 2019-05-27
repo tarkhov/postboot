@@ -12,7 +12,8 @@
   .breadcrumb-item {
     color: $color;
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       color: $hover-color;
     }
 
@@ -28,7 +29,8 @@
   .breadcrumb-link {
     color: $color;
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       color: $hover-color;
     }
 

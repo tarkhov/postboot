@@ -33,23 +33,25 @@
     }
   }
 
-  .card-header {
-    padding: $padding-y $padding-x;
-  }
-
+  .card-header,
   .card-footer {
     padding: $padding-y $padding-x;
   }
 
-  .card-header-tabs {
+  .card-header-tabs,
+  .card-header-pills,
+  .card-footer-tabs,
+  .card-footer-pills {
     margin-right: -$padding-x / 2;
-    margin-bottom: -$padding-y;
     margin-left: -$padding-x / 2;
   }
 
-  .card-header-pills {
-    margin-right: -$padding-x / 2;
-    margin-left: -$padding-x / 2;
+  .card-header-tabs {
+    margin-bottom: -$padding-y;
+  }
+
+  .card-footer-tabs {
+    margin-top: -$padding-y;
   }
 
   .card-img-overlay {
