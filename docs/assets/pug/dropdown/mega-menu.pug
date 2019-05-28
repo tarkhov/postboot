@@ -5,9 +5,9 @@ block example_title
 
 block example_result
   ul.nav.dropdown
-    li.nav-item.dropdown-hover.position-static
+    li.nav-item.dropdown-hover.dropdown-mega
       a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Fluid
-      .dropdown-menu.dropdown-menu-fluid
+      .dropdown-menu.dropdown-menu-fluid.dropdown-mega-menu
         .dropdown-menu-body
           ul.list-unstyled
             - for(var i = 1; i <= 3; i++)
@@ -17,7 +17,8 @@ block example_code
   :encode-pug
     | <!-- Source -->
     ul.nav.dropdown
-      li.nav-item.dropdown-hover.position-static
+      li.nav-item.dropdown-hover.dropdown-mega
+        = "\n\t"
         a.nav-link.dropdown-toggle(href="#" data-toggle='dropdown' data-hover='dropdown') Fluid
-        .dropdown-menu.dropdown-menu-fluid
+        .dropdown-menu.dropdown-menu-fluid.dropdown-mega-menu
           .dropdown-menu-body

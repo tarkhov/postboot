@@ -143,6 +143,10 @@
 }
 
 // Mega menu
+.dropdown-mega {
+  position: static !important;
+}
+
 .dropdown-menu-fluid {
   left: 0 !important;
   right: 0 !important;

@@ -1,5 +1,5 @@
 /*!
- * PostBoot v1.0.0-beta3 (https://tarkhov.github.io/postboot/)
+ * PostBoot v1.0.0-rc1 (https://tarkhov.github.io/postboot/)
  * Copyright 2016-2019 Alexander Tarkhov
  * Licensed under MIT
  */
