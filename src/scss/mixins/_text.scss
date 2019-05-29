@@ -1,0 +1,9 @@
+// Opacity
+@mixin text-opacity-variant($variant, $color, $alpha) {
+  @include text-emphasis-variant($variant, rgba($color, $alpha));
+}
+
+// State
+@mixin text-state-variant($variant, $color) {
+  @include text-emphasis-variant($variant, color-level($color, $text-state-level));
+}

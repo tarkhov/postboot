@@ -1,7 +1,7 @@
 extends ../example.pug
 
 block example_title
-  h3.fw-400 Input material
+  h3.fw-400 Material
 
 block example_result
   .form-group
@@ -14,5 +14,5 @@ block example_code
   :encode-pug
     | <!-- Source -->
     input.form-control.input-material(type='text', placeholder='Material')
-    input.form-control(type='text', placeholder='Dark' class=["input-material", 'is-valid'])
-    input.form-control(type='text', placeholder='Dark' class=["input-material", 'is-invalid'])
+    input.form-control.input-material.is-valid(type='text', placeholder='Valid')
+    input.form-control.input-material.is-invalid(type='text', placeholder='Invalid')

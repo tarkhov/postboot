@@ -1,0 +1,21 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Hover
+
+block example_body
+  .card-body
+    each text, variant in colors
+      if variant != 'light' && variant != 'white'
+        +background_hover(text, variant, 'white')
+  .card-body.bg-dark.bg-striped.text-white
+    .d-inline-block
+      +background_hover('Light', 'light', 'dark')
+    .d-inline-block
+      +background_hover('White', 'white', 'dark')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      div(class='bg-hover-' + variant)

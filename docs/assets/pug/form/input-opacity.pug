@@ -5,14 +5,16 @@ block example_title
 
 block example_body
   .card-body.bg-dark.bg-striped
-    .form-group
-      +input_dark('Black', 'black-50')
-    .form-group
-      +input_dark_state('Valid', 'black-50', 'valid')
-    +input_dark_state('Invalid', 'black-50', 'invalid')
+    .row
+      each text, variant in colors
+        if variant != 'light'
+          .col-3
+            .form-group
+              +input_dark(text, variant + '-50')
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    - for(var i = 1; i <= 9; i++)
-      input.form-control(type='text', placeholder='Black' class=['input-dark', 'input-black-' + i * 10])
+    each text, variant in colors
+      if variant != 'light'
+        input.form-control.input-dark(type='text', placeholder=text class="input-" + variant + '-50')

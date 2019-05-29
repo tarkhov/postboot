@@ -4,10 +4,16 @@ block example_title
   h3.fw-400 Custom
 
 block example_body
+  .card-body
+    each text, variant in extraColors
+      if variant != 'black' && variant != 'white'
+        +badge_variant(text, variant)
   .card-body.bg-dark.bg-striped
     +badge_variant('White', 'white')
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    .badge.badge-white
+    each text, variant in extraColors
+      if variant != 'black'
+        .badge(class='badge-' + variant)= text

@@ -15,8 +15,8 @@
   </head>
   <body class="pt-navbar" data-spy="scroll" data-target="#sidebar-left">
     <header class="pb-gutter" role="banner">
-      <nav class="navbar navbar-expand-xs navbar-light px-0 fixed-top" id="navbar-top" role="navigation">
-        <div class="container-xl navbar-container"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-rc1</sup></a>
+      <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
+        <div class="container"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-rc2</sup></a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
@@ -26,12 +26,12 @@
             <ul class="navbar-nav">
               <li class="nav-item"><a class="nav-link" href="https://github.com/tarkhov/postboot"><i class="fab fa-github-alt"></i><span class="d-none d-md-inline">&nbsp;&nbsp;GitHub</span></a></li>
               <li class="nav-item"><a class="nav-link" href="https://www.producthunt.com/posts/postboot"><i class="fab fa-product-hunt"></i><span class="d-none d-md-inline">&nbsp;&nbsp;ProductHunt</span></a></li>
-            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc1/postboot-1.0.0-rc1.zip">Download</a>
+            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc2/postboot-1.0.0-rc2.zip">Download</a>
           </div>
         </div>
       </nav>
     </header>
-    <div class="container-xl">
+    <div class="container-lg">
       <div class="row">
         <div class="col-md-2">
           <aside class="sidebar sidebar-light sidebar-expand-md py-0 position-fixed" id="sidebar-left" role="complementary">
@@ -54,7 +54,14 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="#background">Background</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#background-custom">Custom</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#background-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#background-hover">Hover</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#background-hover-opacity">Opacity</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#background-contain">Contain</a>
                   </li>
@@ -74,6 +81,17 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="#border">Border</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#border-custom">Custom</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-hover">Hover</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#border-hover-opacity">Opacity</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-style">Style</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#border-width">Width</a>
                   </li>
                 </ul>
@@ -94,7 +112,11 @@
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#button-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-state">State</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-size">Size</a>
                   </li>
@@ -106,7 +128,9 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="#card">Card</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#card-dark">Dark</a>
+                  <li class="nav-item"><a class="nav-link" href="#card-color">Color</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#card-state">State</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#card-footer-pills">Footer pills</a>
                   </li>
@@ -142,7 +166,7 @@
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a>
                   </li>
-                  <li class="nav-item"><a class="nav-link" href="#dropdown-scrollable-menu">Scrollable menu</a>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-scrollable-menu">Scrollable</a>
                   </li>
                 </ul>
               </li>
@@ -162,11 +186,13 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="#form">Form</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#input-material">Material</a>
-                  </li>
                   <li class="nav-item"><a class="nav-link" href="#input-dark">Dark</a>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#input-color">Color</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#input-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#input-material">Material</a>
                   </li>
                 </ul>
               </li>
@@ -254,7 +280,26 @@
                   </li>
                 </ul>
               </li>
+              <li class="nav-item"><a class="nav-link" href="#text">Text</a>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#text-custom">Custom</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#text-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#text-hover">Hover</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#text-hover-opacity">Opacity</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#text-state">State</a>
+                  </li>
+                </ul>
+              </li>
               <li class="nav-item"><a class="nav-link" href="#tribar">Triple bar</a>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#tribar-color">Color</a>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#type">Typography</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
@@ -276,11 +321,11 @@
                   <h3 class="fw-400 mb-3">Installation</h3>
                   <div id="install-manually">
                     <h4 class="fw-400">Manually</h4>
-                    <p><a href="https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc1/postboot-1.0.0-rc1.zip">Download</a> package and unpack it or use following commands:</p>
+                    <p><a href="https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc2/postboot-1.0.0-rc2.zip">Download</a> package and unpack it or use following commands:</p>
                     <div class="card bg-light mb-3">
                       <div class="card-body">
-                        <pre><code class="language-bash">wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc1/postboot-1.0.0-rc1.zip
-unzip postboot-1.0.0-rc1.zip</code></pre>
+                        <pre><code class="language-bash">wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc2/postboot-1.0.0-rc2.zip
+unzip postboot-1.0.0-rc2.zip</code></pre>
                       </div>
                     </div>
                   </div>
@@ -288,7 +333,7 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                     <h4 class="fw-400">NodeJS</h4>
                     <div class="card bg-light mb-3">
                       <div class="card-body">
-                        <pre><code class="language-bash">npm install postboot@1.0.0-rc1</code></pre>
+                        <pre><code class="language-bash">npm install postboot@1.0.0-rc2</code></pre>
                       </div>
                     </div>
                   </div>
@@ -318,13 +363,13 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                       <div class="card-body">
                         <pre><code class="language-markup">&#x3C;!-- CSS --&#x3E;
 &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&#x22;/&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc1/dist/css/postboot.min.css&#x22;/&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc2/dist/css/postboot.min.css&#x22;/&#x3E;
 
 &#x3C;!-- JS --&#x3E;
 &#x3C;script src=&#x22;https://code.jquery.com/jquery-3.3.1.slim.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
 &#x3C;script src=&#x22;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
 &#x3C;script src=&#x22;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc1/dist/js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
+&#x3C;script src=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc2/dist/js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
                       </div>
                     </div>
                   </div>
@@ -333,34 +378,152 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
             </div>
             <div id="background">
               <h2 class="fw-400">Background</h2>
+              <div id="background-custom">
+                <h3 class="fw-400">Custom</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-indigo text-white">Indigo</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-orange text-white">Orange</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-pink text-white">Pink</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-purple text-white">Purple</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-teal text-white">Teal</p>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;bg-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-teal&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
               <div id="background-opacity">
                 <h3 class="fw-400">Opacity</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped text-white">
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-primary-50">Primary</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-secondary-50">Secondary</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-success-50">Success</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-info-50">Info</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-warning-50">Warning</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-danger-50">Danger</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-light-50">Light</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-dark-50">Dark</p>
                                             <p class="p-2 mr-1 mb-2 d-inline-block bg-black-50">Black</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-indigo-50">Indigo</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-orange-50">Orange</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-pink-50">Pink</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-purple-50">Purple</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block bg-teal-50">Teal</p>
                                             <p class="p-2 mr-1 mb-2 d-inline-block bg-white-50">White</p>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;bg-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;bg-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-black-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;bg-white-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;bg-white-90&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;bg-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-white-50&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="background-hover">
+                <h3 class="fw-400">Hover</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-primary bg-hover-primary text-hover-white">Primary</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-secondary bg-hover-secondary text-hover-white">Secondary</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-success bg-hover-success text-hover-white">Success</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-info bg-hover-info text-hover-white">Info</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-warning bg-hover-warning text-hover-white">Warning</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-danger bg-hover-danger text-hover-white">Danger</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-dark bg-hover-dark text-hover-white">Dark</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-black bg-hover-black text-hover-white">Black</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-indigo bg-hover-indigo text-hover-white">Indigo</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-orange bg-hover-orange text-hover-white">Orange</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-pink bg-hover-pink text-hover-white">Pink</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-purple bg-hover-purple text-hover-white">Purple</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-teal bg-hover-teal text-hover-white">Teal</p>
+                  </div>
+                  <div class="card-body bg-dark bg-striped text-white">
+                    <div class="d-inline-block">
+                                              <p class="p-2 mr-1 mb-2 d-inline-block border border-light bg-hover-light text-hover-dark">Light</p>
+                    </div>
+                    <div class="d-inline-block">
+                                              <p class="p-2 mr-1 mb-2 d-inline-block border border-white bg-hover-white text-hover-dark">White</p>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;bg-hover-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-light&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-black&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-teal&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="background-hover-opacity">
+                <h3 class="fw-400">Hover opacity</h3>
+                <div class="card mb-3">
+                  <div class="card-body bg-dark bg-striped text-white">
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-primary-50 bg-hover-primary-50 text-hover-white">Primary</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-secondary-50 bg-hover-secondary-50 text-hover-white">Secondary</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-success-50 bg-hover-success-50 text-hover-white">Success</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-info-50 bg-hover-info-50 text-hover-white">Info</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-warning-50 bg-hover-warning-50 text-hover-white">Warning</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-danger-50 bg-hover-danger-50 text-hover-white">Danger</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-light-50 bg-hover-light-50 text-hover-white">Light</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-dark-50 bg-hover-dark-50 text-hover-white">Dark</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-black-50 bg-hover-black-50 text-hover-white">Black</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-indigo-50 bg-hover-indigo-50 text-hover-white">Indigo</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-orange-50 bg-hover-orange-50 text-hover-white">Orange</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-pink-50 bg-hover-pink-50 text-hover-white">Pink</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-purple-50 bg-hover-purple-50 text-hover-white">Purple</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-teal-50 bg-hover-teal-50 text-hover-white">Teal</p>
+                                            <p class="p-2 mr-1 mb-2 d-inline-block border border-white-50 bg-hover-white-50 text-hover-white">White</p>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;bg-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;bg-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -371,7 +534,7 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                   <div class="card-body">
                     <div class="row">
                       <div class="col-10 col-sm-8 col-md-6">
-                        <div class="bg-contain w-100" style="background-image: url(/postboot/assets/img/home.jpg);background-repeat: no-repeat;height: 100px;"></div>
+                        <div class="bg-contain w-100" style="background-image: url(assets/img/home.jpg);background-repeat: no-repeat;height: 100px;"></div>
                       </div>
                     </div>
                   </div>
@@ -386,7 +549,7 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                 <h3 class="fw-400">Cover</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                    <div class="bg-cover w-100" style="background-image: url(/postboot/assets/img/home.jpg);background-repeat: no-repeat;background-position: top left;height: 200px;"></div>
+                    <div class="bg-cover w-100" style="background-image: url(assets/img/home.jpg);background-repeat: no-repeat;background-position: top left;height: 200px;"></div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
@@ -414,12 +577,24 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
               <div id="badge-custom">
                 <h3 class="fw-400">Custom</h3>
                 <div class="card mb-3">
+                  <div class="card-body">
+                                            <div class="badge badge-indigo">Indigo</div>
+                                            <div class="badge badge-orange">Orange</div>
+                                            <div class="badge badge-pink">Pink</div>
+                                            <div class="badge badge-purple">Purple</div>
+                                            <div class="badge badge-teal">Teal</div>
+                  </div>
                   <div class="card-body bg-dark bg-striped">
                                             <div class="badge badge-white">White</div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;badge badge-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;badge badge-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-white&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -428,19 +603,39 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                 <h3 class="fw-400">Opacity</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
+                                            <div class="badge badge-primary-50">Primary</div>
+                                            <div class="badge badge-secondary-50">Secondary</div>
+                                            <div class="badge badge-success-50">Success</div>
+                                            <div class="badge badge-info-50">Info</div>
+                                            <div class="badge badge-warning-50">Warning</div>
+                                            <div class="badge badge-danger-50">Danger</div>
+                                            <div class="badge badge-light-50">Light</div>
+                                            <div class="badge badge-dark-50">Dark</div>
                                             <div class="badge badge-black-50">Black</div>
+                                            <div class="badge badge-indigo-50">Indigo</div>
+                                            <div class="badge badge-orange-50">Orange</div>
+                                            <div class="badge badge-pink-50">Pink</div>
+                                            <div class="badge badge-purple-50">Purple</div>
+                                            <div class="badge badge-teal-50">Teal</div>
+                                            <div class="badge badge-white-50">White</div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;badge badge-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;badge badge-black-90&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;badge badge-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;badge badge-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -448,15 +643,180 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
             </div>
             <div id="border">
               <h2 class="fw-400">Border</h2>
+              <div id="border-custom">
+                <h3 class="fw-400">Custom</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-indigo text-indigo">Indigo</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-orange text-orange">Orange</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-pink text-pink">Pink</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-purple text-purple">Purple</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-teal text-teal">Teal</div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-teal&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="border-opacity">
+                <h3 class="fw-400">Opacity</h3>
+                <div class="card mb-3">
+                  <div class="card-body bg-dark bg-striped">
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-primary-50 text-white">Primary</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-secondary-50 text-white">Secondary</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-success-50 text-white">Success</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-info-50 text-white">Info</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-warning-50 text-white">Warning</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-danger-50 text-white">Danger</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-light-50 text-white">Light</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-dark-50 text-white">Dark</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-black-50 text-white">Black</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-indigo-50 text-white">Indigo</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-orange-50 text-white">Orange</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-pink-50 text-white">Pink</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-purple-50 text-white">Purple</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-teal-50 text-white">Teal</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-3 border-white-50 text-white">White</div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-white-50&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="border-hover">
+                <h3 class="fw-400">Hover</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-primary text-primary card">Primary</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-secondary text-secondary card">Secondary</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-success text-success card">Success</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-info text-info card">Info</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-warning text-warning card">Warning</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-danger text-danger card">Danger</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-dark text-dark card">Dark</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-black text-black card">Black</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-indigo text-indigo card">Indigo</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-orange text-orange card">Orange</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-pink text-pink card">Pink</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-purple text-purple card">Purple</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-teal text-teal card">Teal</div>
+                  </div>
+                  <div class="card-body bg-secondary bg-striped text-white">
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-light text-light card bg-transparent border-black">Light</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-white text-white card bg-transparent border-black">White</div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-hover-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="border-hover-opacity">
+                <h3 class="fw-400">Hover opacity</h3>
+                <div class="card mb-3">
+                  <div class="card-body bg-dark bg-striped text-white">
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-primary-50 border-primary card bg-transparent border-3">Primary</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-secondary-50 border-secondary card bg-transparent border-3">Secondary</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-success-50 border-success card bg-transparent border-3">Success</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-info-50 border-info card bg-transparent border-3">Info</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-warning-50 border-warning card bg-transparent border-3">Warning</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-danger-50 border-danger card bg-transparent border-3">Danger</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-light-50 border-light card bg-transparent border-3">Light</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-dark-50 border-dark card bg-transparent border-3">Dark</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-black-50 border-black card bg-transparent border-3">Black</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-indigo-50 border-indigo card bg-transparent border-3">Indigo</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-orange-50 border-orange card bg-transparent border-3">Orange</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-pink-50 border-pink card bg-transparent border-3">Pink</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-purple-50 border-purple card bg-transparent border-3">Purple</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-teal-50 border-teal card bg-transparent border-3">Teal</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-hover-white-50 border-white card bg-transparent border-3">White</div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="border-style">
+                <h3 class="fw-400">Style</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-3 border-dashed border-primary text-primary">Dashed</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-3 border-dotted border-primary text-primary">Dotted</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-3 border-double border-primary text-primary">Double</div>
+                                            <div class="d-inline-block mr-1 mb-2 p-2 border-3 border-solid border-primary text-primary">Solid</div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-dashed&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-dotted&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-double&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-solid&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
               <div id="border-width">
                 <h3 class="fw-400">Widths</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                <div class="mb-3 border-top border-primary border-top-1"></div>
-                                <div class="mb-3 border-top border-primary border-top-2"></div>
-                                <div class="mb-3 border-top border-primary border-top-3"></div>
-                                <div class="mb-3 border-top border-primary border-top-4"></div>
-                                <div class="mb-3 border-top border-primary border-top-5"></div>
+                                <div class="mb-3 border-top-solid border-primary border-top-1"></div>
+                                <div class="mb-3 border-top-solid border-primary border-top-2"></div>
+                                <div class="mb-3 border-top-solid border-primary border-top-3"></div>
+                                <div class="mb-3 border-top-solid border-primary border-top-4"></div>
+                                <div class="mb-3 border-top-solid border-primary border-top-5"></div>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
@@ -563,11 +923,23 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
               <div id="button-custom">
                 <h3 class="fw-400">Custom</h3>
                 <div class="card mb-3">
+                  <div class="card-body">
+                                            <button class="btn mr-1 mb-2 btn-indigo" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 btn-orange" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 btn-pink" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 btn-purple" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 btn-teal" type="button">Teal</button>
+                  </div>
                   <div class="card-body bg-dark bg-striped">
                                             <button class="btn mr-1 mb-2 btn-white" type="button">White</button>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
@@ -578,6 +950,11 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                 <div class="card mb-3">
                   <div class="card-body">
                                             <button class="btn mr-1 mb-2 btn-outline-link" type="button">Link</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-indigo" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-orange" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-pink" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-purple" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 btn-outline-teal" type="button">Teal</button>
                   </div>
                   <div class="card-body bg-dark bg-striped">
                                             <button class="btn mr-1 mb-2 btn-outline-white" type="button">White</button>
@@ -585,7 +962,49 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-link&#x22; type=&#x22;button&#x22;&#x3E;Link&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="button-3d">
+                <h3 class="fw-400">3D</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <button class="btn mr-1 mb-2 btn-3d-primary" type="button">Primary</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-secondary" type="button">Secondary</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-success" type="button">Success</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-info" type="button">Info</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-warning" type="button">Warning</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-danger" type="button">Danger</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-light" type="button">Light</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-dark" type="button">Dark</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-indigo" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-orange" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-pink" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-purple" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 btn-3d-teal" type="button">Teal</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-3d-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -594,19 +1013,76 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                 <h3 class="fw-400">Opacity</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
+                                            <button class="btn mr-1 mb-2 btn-primary-50" type="button">Primary</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary-50" type="button">Secondary</button>
+                                            <button class="btn mr-1 mb-2 btn-success-50" type="button">Success</button>
+                                            <button class="btn mr-1 mb-2 btn-info-50" type="button">Info</button>
+                                            <button class="btn mr-1 mb-2 btn-warning-50" type="button">Warning</button>
+                                            <button class="btn mr-1 mb-2 btn-danger-50" type="button">Danger</button>
+                                            <button class="btn mr-1 mb-2 btn-light-50" type="button">Light</button>
+                                            <button class="btn mr-1 mb-2 btn-dark-50" type="button">Dark</button>
                                             <button class="btn mr-1 mb-2 btn-black-50" type="button">Black</button>
+                                            <button class="btn mr-1 mb-2 btn-indigo-50" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 btn-orange-50" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 btn-pink-50" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 btn-purple-50" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 btn-teal-50" type="button">Teal</button>
+                                            <button class="btn mr-1 mb-2 btn-white-50" type="button">White</button>
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-black-10&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-20&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-30&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-40&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-50&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-60&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-70&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-80&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-black-90&#x22; type=&#x22;button&#x22;&#x3E;&#x3C;/button&#x3E;</code></pre>
+&#x3C;button class=&#x22;btn btn-primary-50&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary-50&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-success-50&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-info-50&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-warning-50&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-danger-50&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-light-50&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-dark-50&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-black-50&#x22; type=&#x22;button&#x22;&#x3E;Black&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-indigo-50&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-orange-50&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-pink-50&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-purple-50&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-teal-50&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-white-50&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="button-state">
+                <h3 class="fw-400">State</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <button class="btn mr-1 mb-2 btn-state-primary" type="button">Primary</button>
+                                            <button class="btn mr-1 mb-2 btn-state-secondary" type="button">Secondary</button>
+                                            <button class="btn mr-1 mb-2 btn-state-success" type="button">Success</button>
+                                            <button class="btn mr-1 mb-2 btn-state-info" type="button">Info</button>
+                                            <button class="btn mr-1 mb-2 btn-state-warning" type="button">Warning</button>
+                                            <button class="btn mr-1 mb-2 btn-state-danger" type="button">Danger</button>
+                                            <button class="btn mr-1 mb-2 btn-state-light" type="button">Light</button>
+                                            <button class="btn mr-1 mb-2 btn-state-dark" type="button">Dark</button>
+                                            <button class="btn mr-1 mb-2 btn-state-indigo" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 btn-state-orange" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 btn-state-pink" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 btn-state-purple" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 btn-state-teal" type="button">Teal</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-state-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-state-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -655,7 +1131,7 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
             </div>
             <div id="card">
               <h2 class="fw-400">Card</h2>
-              <div id="card-dark">
+              <div id="card-color">
                 <h3 class="fw-400">Dark</h3>
                 <div class="card mb-3">
                   <div class="card-body">
@@ -673,6 +1149,110 @@ unzip postboot-1.0.0-rc1.zip</code></pre>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;card card-dark bg-dark&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="card-state">
+                <h3 class="fw-400">State</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-primary">
+                          <h4 class="card-title">Primary</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-secondary">
+                          <h4 class="card-title">Secondary</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-success">
+                          <h4 class="card-title">Success</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-info">
+                          <h4 class="card-title">Info</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-warning">
+                          <h4 class="card-title">Warning</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-danger">
+                          <h4 class="card-title">Danger</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-light">
+                          <h4 class="card-title">Light</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-dark">
+                          <h4 class="card-title">Dark</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-indigo">
+                          <h4 class="card-title">Indigo</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-orange">
+                          <h4 class="card-title">Orange</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-pink">
+                          <h4 class="card-title">Pink</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-purple">
+                          <h4 class="card-title">Purple</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="card card-body mb-3 card-state-teal">
+                          <h4 class="card-title">Teal</h4>
+                          <p class="card-text">Example text</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;card card-state-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-light&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card card-state-teal&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -1258,27 +1838,6 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
             </div>
             <div id="form">
               <h2 class="fw-400">Form</h2>
-              <div id="input-material">
-                <h3 class="fw-400">Input material</h3>
-                <div class="card mb-3">
-                  <div class="card-body">
-                    <div class="form-group">
-                                              <input class="form-control input-material" type="text" placeholder="Material">
-                    </div>
-                    <div class="form-group">
-                                              <input class="form-control input-material is-valid" type="text" placeholder="Valid">
-                    </div>
-                                            <input class="form-control input-material is-invalid" type="text" placeholder="Invalid">
-                  </div>
-                  <div class="card-footer">
-                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;input class=&#x22;form-control input-material&#x22; type=&#x22;text&#x22; placeholder=&#x22;Material&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-material is-valid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-material is-invalid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;</code></pre>
-                  </div>
-                </div>
-                <div class="clearfix"></div>
-              </div>
               <div id="input-dark">
                 <h3 class="fw-400">Dark</h3>
                 <div class="card mb-3">
@@ -1294,8 +1853,93 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;input class=&#x22;form-control input-dark&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark is-valid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark is-invalid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;</code></pre>
+&#x3C;input class=&#x22;form-control input-dark is-valid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Valid&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark is-invalid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Invalid&#x22;/&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="input-color">
+                <h3 class="fw-400">Color</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-primary" type="text" placeholder="Primary">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-secondary" type="text" placeholder="Secondary">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-success" type="text" placeholder="Success">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-info" type="text" placeholder="Info">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-warning" type="text" placeholder="Warning">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-danger" type="text" placeholder="Danger">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-black" type="text" placeholder="Black">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-indigo" type="text" placeholder="Indigo">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-orange" type="text" placeholder="Orange">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-pink" type="text" placeholder="Pink">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-purple" type="text" placeholder="Purple">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-teal" type="text" placeholder="Teal">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-primary&#x22; type=&#x22;text&#x22; placeholder=&#x22;Primary&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-secondary&#x22; type=&#x22;text&#x22; placeholder=&#x22;Secondary&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-success&#x22; type=&#x22;text&#x22; placeholder=&#x22;Success&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-info&#x22; type=&#x22;text&#x22; placeholder=&#x22;Info&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-warning&#x22; type=&#x22;text&#x22; placeholder=&#x22;Warning&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-danger&#x22; type=&#x22;text&#x22; placeholder=&#x22;Danger&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-black&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-indigo&#x22; type=&#x22;text&#x22; placeholder=&#x22;Indigo&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-orange&#x22; type=&#x22;text&#x22; placeholder=&#x22;Orange&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-pink&#x22; type=&#x22;text&#x22; placeholder=&#x22;Pink&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-purple&#x22; type=&#x22;text&#x22; placeholder=&#x22;Purple&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-teal&#x22; type=&#x22;text&#x22; placeholder=&#x22;Teal&#x22;/&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -1304,25 +1948,116 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 <h3 class="fw-400">Opacity</h3>
                 <div class="card mb-3">
                   <div class="card-body bg-dark bg-striped">
-                    <div class="form-group">
-                                              <input class="form-control input-dark input-black-50" type="text" placeholder="Black">
+                    <div class="row">
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-primary-50" type="text" placeholder="Primary">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-secondary-50" type="text" placeholder="Secondary">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-success-50" type="text" placeholder="Success">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-info-50" type="text" placeholder="Info">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-warning-50" type="text" placeholder="Warning">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-danger-50" type="text" placeholder="Danger">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-dark-50" type="text" placeholder="Dark">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-black-50" type="text" placeholder="Black">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-indigo-50" type="text" placeholder="Indigo">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-orange-50" type="text" placeholder="Orange">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-pink-50" type="text" placeholder="Pink">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-purple-50" type="text" placeholder="Purple">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-teal-50" type="text" placeholder="Teal">
+                        </div>
+                      </div>
+                      <div class="col-3">
+                        <div class="form-group">
+                                                  <input class="form-control input-dark input-white-50" type="text" placeholder="White">
+                        </div>
+                      </div>
                     </div>
-                    <div class="form-group">
-                                              <input class="form-control input-dark input-black-50 is-valid" type="text" placeholder="Valid">
-                    </div>
-                                            <input class="form-control input-dark input-black-50 is-invalid" type="text" placeholder="Invalid">
                   </div>
                   <div class="card-footer">
                     <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;input class=&#x22;form-control input-dark input-black-10&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark input-black-20&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark input-black-30&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark input-black-40&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-primary-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Primary&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-secondary-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Secondary&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-success-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Success&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-info-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Info&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-warning-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Warning&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-danger-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Danger&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-dark-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Dark&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-dark input-black-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark input-black-60&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark input-black-70&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark input-black-80&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-dark input-black-90&#x22; type=&#x22;text&#x22; placeholder=&#x22;Black&#x22;/&#x3E;</code></pre>
+&#x3C;input class=&#x22;form-control input-dark input-indigo-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Indigo&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-orange-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Orange&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-pink-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Pink&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-purple-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Purple&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-teal-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;Teal&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-dark input-white-50&#x22; type=&#x22;text&#x22; placeholder=&#x22;White&#x22;/&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="input-material">
+                <h3 class="fw-400">Material</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="form-group">
+                                              <input class="form-control input-material" type="text" placeholder="Material">
+                    </div>
+                    <div class="form-group">
+                                              <input class="form-control input-material is-valid" type="text" placeholder="Valid">
+                    </div>
+                                            <input class="form-control input-material is-invalid" type="text" placeholder="Invalid">
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;input class=&#x22;form-control input-material&#x22; type=&#x22;text&#x22; placeholder=&#x22;Material&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-material is-valid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Valid&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-material is-invalid&#x22; type=&#x22;text&#x22; placeholder=&#x22;Invalid&#x22;/&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -2162,6 +2897,127 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 <div class="clearfix"></div>
               </div>
             </div>
+            <div id="text">
+              <h2 class="fw-400">Text</h2>
+              <div id="text-custom">
+                <h3 class="fw-400">Custom</h3>
+                <div class="card mb-3">
+                  <div class="card-body"><span class="mr-2 mb-2 text-indigo">Indigo</span><span class="mr-2 mb-2 text-orange">Orange</span><span class="mr-2 mb-2 text-pink">Pink</span><span class="mr-2 mb-2 text-purple">Purple</span><span class="mr-2 mb-2 text-teal">Teal</span>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="text-opacity">
+                <h3 class="fw-400">Alpha</h3>
+                <div class="card mb-3">
+                  <div class="card-body bg-black bg-striped"><span class="mr-2 mb-2 text-primary-50">Primary</span><span class="mr-2 mb-2 text-secondary-50">Secondary</span><span class="mr-2 mb-2 text-success-50">Success</span><span class="mr-2 mb-2 text-info-50">Info</span><span class="mr-2 mb-2 text-warning-50">Warning</span><span class="mr-2 mb-2 text-danger-50">Danger</span><span class="mr-2 mb-2 text-light-50">Light</span><span class="mr-2 mb-2 text-dark-50">Dark</span><span class="mr-2 mb-2 text-black-50">Black</span><span class="mr-2 mb-2 text-indigo-50">Indigo</span><span class="mr-2 mb-2 text-orange-50">Orange</span><span class="mr-2 mb-2 text-pink-50">Pink</span><span class="mr-2 mb-2 text-purple-50">Purple</span><span class="mr-2 mb-2 text-teal-50">Teal</span><span class="mr-2 mb-2 text-white-50">White</span>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="text-hover">
+                <h3 class="fw-400">Hover</h3>
+                <div class="card mb-3">
+                  <div class="card-body"><span class="mr-2 mb-2 text-hover-primary">Primary</span><span class="mr-2 mb-2 text-hover-secondary">Secondary</span><span class="mr-2 mb-2 text-hover-success">Success</span><span class="mr-2 mb-2 text-hover-info">Info</span><span class="mr-2 mb-2 text-hover-warning">Warning</span><span class="mr-2 mb-2 text-hover-danger">Danger</span><span class="mr-2 mb-2 text-hover-light">Light</span><span class="mr-2 mb-2 text-hover-dark">Dark</span><span class="mr-2 mb-2 text-hover-black">Black</span><span class="mr-2 mb-2 text-hover-indigo">Indigo</span><span class="mr-2 mb-2 text-hover-orange">Orange</span><span class="mr-2 mb-2 text-hover-pink">Pink</span><span class="mr-2 mb-2 text-hover-purple">Purple</span><span class="mr-2 mb-2 text-hover-teal">Teal</span><span class="mr-2 mb-2 text-hover-white">White</span>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-hover-primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-secondary&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-success&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-info&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-light&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-dark&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-black&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-white&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="text-hover-opacity">
+                <h4 class="fw-400">Hover opacity</h4>
+                <div class="card mb-3">
+                  <div class="card-body bg-black bg-striped"><span class="mr-2 mb-2 text-primary text-hover-primary-50">Primary</span><span class="mr-2 mb-2 text-secondary text-hover-secondary-50">Secondary</span><span class="mr-2 mb-2 text-success text-hover-success-50">Success</span><span class="mr-2 mb-2 text-info text-hover-info-50">Info</span><span class="mr-2 mb-2 text-warning text-hover-warning-50">Warning</span><span class="mr-2 mb-2 text-danger text-hover-danger-50">Danger</span><span class="mr-2 mb-2 text-light text-hover-light-50">Light</span><span class="mr-2 mb-2 text-dark text-hover-dark-50">Dark</span><span class="mr-2 mb-2 text-black text-hover-black-50">Black</span><span class="mr-2 mb-2 text-indigo text-hover-indigo-50">Indigo</span><span class="mr-2 mb-2 text-orange text-hover-orange-50">Orange</span><span class="mr-2 mb-2 text-pink text-hover-pink-50">Pink</span><span class="mr-2 mb-2 text-purple text-hover-purple-50">Purple</span><span class="mr-2 mb-2 text-teal text-hover-teal-50">Teal</span><span class="mr-2 mb-2 text-white text-hover-white-50">White</span>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-hover-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-hover-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="text-state">
+                <h3 class="fw-400">State</h3>
+                <div class="card mb-3">
+                  <div class="card-body"><span class="mr-2 mb-2 text-state-primary">Primary</span><span class="mr-2 mb-2 text-state-secondary">Secondary</span><span class="mr-2 mb-2 text-state-success">Success</span><span class="mr-2 mb-2 text-state-info">Info</span><span class="mr-2 mb-2 text-state-warning">Warning</span><span class="mr-2 mb-2 text-state-danger">Danger</span><span class="mr-2 mb-2 text-state-light">Light</span><span class="mr-2 mb-2 text-state-dark">Dark</span><span class="mr-2 mb-2 text-state-indigo">Indigo</span><span class="mr-2 mb-2 text-state-orange">Orange</span><span class="mr-2 mb-2 text-state-pink">Pink</span><span class="mr-2 mb-2 text-state-purple">Purple</span><span class="mr-2 mb-2 text-state-teal">Teal</span>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-state-primary&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-secondary&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-success&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-info&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-warning&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-danger&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-light&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-dark&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-purple&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-state-teal&#x22;&#x3E;Teal&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
             <div id="tribar">
               <h2 class="fw-400">Triple bar</h2>
               <div class="card mb-3">
@@ -2174,6 +3030,77 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 </div>
               </div>
               <div class="clearfix"></div>
+              <div id="tribar-color">
+                <h3 class="fw-400">Color</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-primary"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-secondary"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-success"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-info"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-warning"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-danger"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-light"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-dark"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-black"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-indigo"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-orange"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-pink"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-purple"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-teal"></div>
+                    </div>
+                    <div class="d-inline-block mr-1 mb-2">
+                      <div class="tribar tribar-white"></div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;tribar tribar-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-light&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-black&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-teal&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;tribar tribar-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
             </div>
             <div id="type">
               <h2 class="fw-400">Typography</h2>

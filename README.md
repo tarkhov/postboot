@@ -24,17 +24,17 @@ Bootstrap | 4.3.1
 
 ### Manually
 
-[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc1/postboot-1.0.0-rc1.zip) package and unpack it or use following commands:
+[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc2/postboot-1.0.0-rc2.zip) package and unpack it or use following commands:
 
 ```bash
-wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc1/postboot-1.0.0-rc1.zip
-unzip postboot-1.0.0-rc1.zip
+wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc2/postboot-1.0.0-rc2.zip
+unzip postboot-1.0.0-rc2.zip
 ```
 
 ### NodeJS
 
 ```bash
-npm install postboot@1.0.0-rc1
+npm install postboot@1.0.0-rc2
 ```
 
 ## Usage
@@ -57,13 +57,13 @@ npm install postboot@1.0.0-rc1
 ```html
 <!-- CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc1/dist/css/postboot.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc2/dist/css/postboot.min.css">
 
 <!-- JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc1/dist/js/postboot.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc2/dist/js/postboot.min.js"></script>
 ```
 
 ## Author

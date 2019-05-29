@@ -38,8 +38,22 @@
     "name": "Background",
     "childs": [
       {
+        "url": "#background-custom",
+        "name": "Custom"
+      },
+      {
         "url": "#background-opacity",
         "name": "Opacity"
+      },
+      {
+        "url": "#background-hover",
+        "name": "Hover",
+        "childs": [
+          {
+            "url": "#background-hover-opacity",
+            "name": "Opacity"
+          }
+        ]
       },
       {
         "url": "#background-contain",
@@ -73,6 +87,28 @@
     "url": "#border",
     "name": "Border",
     "childs": [
+      {
+        "url": "#border-custom",
+        "name": "Custom"
+      },
+      {
+        "url": "#border-opacity",
+        "name": "Opacity"
+      },
+      {
+        "url": "#border-hover",
+        "name": "Hover",
+        "childs": [
+          {
+            "url": "#border-hover-opacity",
+            "name": "Opacity"
+          }
+        ]
+      },
+      {
+        "url": "#border-style",
+        "name": "Style"
+      },
       {
         "url": "#border-width",
         "name": "Width"
@@ -110,8 +146,16 @@
         "name": "Outline"
       },
       {
+        "url": "#button-3d",
+        "name": "3D"
+      },
+      {
         "url": "#button-opacity",
         "name": "Opacity"
+      },
+      {
+        "url": "#button-state",
+        "name": "State"
       },
       {
         "url": "#button-size",
@@ -132,8 +176,12 @@
     "name": "Card",
     "childs": [
       {
-        "url": "#card-dark",
-        "name": "Dark"
+        "url": "#card-color",
+        "name": "Color"
+      },
+      {
+        "url": "#card-state",
+        "name": "State"
       },
       {
         "url": "#card-footer-pills",
@@ -201,7 +249,7 @@
       },
       {
         "url": "#dropdown-scrollable-menu",
-        "name": "Scrollable menu"
+        "name": "Scrollable"
       }
     ]
   },
@@ -236,16 +284,20 @@
     "name": "Form",
     "childs": [
       {
-        "url": "#input-material",
-        "name": "Material"
-      },
-      {
         "url": "#input-dark",
         "name": "Dark"
       },
       {
+        "url": "#input-color",
+        "name": "Color"
+      },
+      {
         "url": "#input-opacity",
         "name": "Opacity"
+      },
+      {
+        "url": "#input-material",
+        "name": "Material"
       }
     ]
   },
@@ -402,8 +454,42 @@
     ]
   },
   {
+    "url": "#text",
+    "name": "Text",
+    "childs": [
+      {
+        "url": "#text-custom",
+        "name": "Custom"
+      },
+      {
+        "url": "#text-opacity",
+        "name": "Opacity"
+      },
+      {
+        "url": "#text-hover",
+        "name": "Hover",
+        "childs": [
+          {
+            "url": "#text-hover-opacity",
+            "name": "Opacity"
+          }
+        ]
+      },
+      {
+        "url": "#text-state",
+        "name": "State"
+      }
+    ]
+  },
+  {
     "url": "#tribar",
-    "name": "Triple bar"
+    "name": "Triple bar",
+    "childs": [
+      {
+        "url": "#tribar-color",
+        "name": "Color"
+      }
+    ]
   },
   {
     "url": "#type",

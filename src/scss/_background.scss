@@ -1,10 +1,65 @@
+// Custom
+@each $color, $value in map-remove($custom-colors, "white") {
+  .bg-#{$color} {
+    background-color: $value !important;
+  }
+}
+
 // Opacity
 @for $alpha from 1 through 9 {
-  .bg-black-#{($alpha * 10)} {
-    background-color: rgba($black, ($alpha * .1)) !important;
+  @each $color, $value in $theme-colors {
+    .bg-#{$color}-#{($alpha * 10)} {
+      background-color: rgba($value, ($alpha * .1)) !important;
+    }
   }
-  .bg-white-#{($alpha * 10)} {
-    background-color: rgba($white, ($alpha * .1)) !important;
+  @each $color, $value in $custom-colors {
+    .bg-#{$color}-#{($alpha * 10)} {
+      background-color: rgba($value, ($alpha * .1)) !important;
+    }
+  }
+}
+
+// Hover
+@each $color, $value in $theme-colors {
+  .bg-hover-#{$color} {
+    @include hover-focus {
+      background-color: $value !important;
+    }
+  }
+
+  @for $alpha from 1 through 9 {
+    .bg-hover-#{$color}-#{($alpha * 10)} {
+      @include hover-focus {
+        background-color: rgba($value, ($alpha * .1)) !important;
+      }
+    }
+  }
+}
+@each $color, $value in $custom-colors {
+  .bg-hover-#{$color} {
+    @include hover-focus {
+      background-color: $value !important;
+    }
+  }
+
+  @for $alpha from 1 through 9 {
+    .bg-hover-#{$color}-#{($alpha * 10)} {
+      @include hover-focus {
+        background-color: rgba($value, ($alpha * .1)) !important;
+      }
+    }
+  }
+}
+
+// State
+@each $color, $value in $theme-colors {
+  .bg-state-#{$color} {
+    background-color: color-level($value, $bg-state-level) !important;
+  }
+}
+@each $color, $value in map-remove($custom-colors, "black", "white") {
+  .bg-state-#{$color} {
+    background-color: color-level($value, $bg-state-level) !important;
   }
 }
 

@@ -1,0 +1,20 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 State
+
+block example_result
+  .row
+    each text, variant in colors
+      if variant != 'black' && variant != 'white'
+        .col-3
+          .card.card-body.mb-3(class='card-state-' + variant)
+            h4.card-title= text
+            p.card-text Example text
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      if variant != 'black' && variant != 'white'
+        .card(class='card-state-' + variant)

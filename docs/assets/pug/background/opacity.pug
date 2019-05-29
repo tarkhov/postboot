@@ -5,14 +5,11 @@ block example_title
 
 block example_body
   .card-body.bg-dark.bg-striped.text-white
-    +background_variant('Black', 'black-50')
-    +background_variant('White', 'white-50')
+    each text, variant in colors
+      +background_variant(text, variant + '-50')
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    - for(var i = 1; i <= 9; i++)
-      div(class='bg-black-' + i * 10)
-    = "\n"
-    - for(var i = 1; i <= 9; i++)
-      div(class='bg-white-' + i * 10)
+    each text, variant in colors
+      div(class='bg-' + variant + '-50')

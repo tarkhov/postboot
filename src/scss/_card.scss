@@ -74,6 +74,18 @@
   }
 }
 
+// States
+@each $color, $value in $theme-colors {
+  .card-state-#{$color} {
+    @include card-state-variant($value);
+  }
+}
+@each $color, $value in map-remove($custom-colors, "black", "white") {
+  .card-state-#{$color} {
+    @include card-state-variant($value);
+  }
+}
+
 // Sizes
 .card-xs {
   @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs);

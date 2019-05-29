@@ -13,6 +13,6 @@ block example_result
 block example_code
   :encode-pug
     | <!-- Source -->
-    input.form-control(type='text', placeholder='Dark' class="input-dark")
-    input.form-control(type='text', placeholder='Dark' class=["input-dark", 'is-valid'])
-    input.form-control(type='text', placeholder='Dark' class=["input-dark", 'is-invalid'])
+    input.form-control.input-dark(type='text', placeholder='Dark')
+    input.form-control.input-dark.is-valid(type='text', placeholder='Valid')
+    input.form-control.input-dark.is-invalid(type='text', placeholder='Invalid')

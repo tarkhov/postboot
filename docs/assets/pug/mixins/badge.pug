@@ -3,3 +3,6 @@ mixin badge(text, classes)
 
 mixin badge_variant(text, variant)
   +badge(text, 'badge-' + variant)
+
+mixin badge_alpha(text, variant)
+  +badge(text, 'badge-' + variant + '-50')

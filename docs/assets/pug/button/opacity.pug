@@ -5,10 +5,11 @@ block example_title
 
 block example_body
   .card-body.bg-dark.bg-striped
-    +button_variant('Black', 'black-50')
+    each text, variant in colors
+      +button_alpha(text, variant)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    - for(var i = 1; i <= 9; i++)
-      button.btn(type='button' class='btn-black-' + i * 10)
+    each text, variant in colors
+      button.btn(type='button' class='btn-' + variant + '-50')= text

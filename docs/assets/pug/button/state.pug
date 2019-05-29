@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 State
+
+block example_body
+  .card-body
+    each text, variant in colors
+      if variant != 'black' && variant != 'white'
+        +button_state(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      if variant != 'black' && variant != 'white'
+        button.btn(type='button' class='btn-state-' + variant)= text

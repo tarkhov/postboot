@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Style
+
+block example_result
+  each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
+    +border_style(text, style)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
+      div(class='border-' + style)

@@ -1,0 +1,17 @@
+mixin text(text, classes)
+  span.mr-2.mb-2(class=classes)= text
+
+mixin text_variant(text, variant)
+  +text(text, 'text-' + variant)
+
+mixin text_alpha(text, variant)
+  +text_variant(text, variant + '-50')
+
+mixin text_hover(text, variant)
+  +text_variant(text, 'hover-' + variant)
+
+mixin text_hover_alpha(text, variant, alpha)
+  +text(text, ['text-' + variant, 'text-hover-' + variant + '-' + alpha])
+
+mixin text_state(text, variant)
+  +text_variant(text, 'state-' + variant)

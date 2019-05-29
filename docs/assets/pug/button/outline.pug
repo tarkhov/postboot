@@ -6,6 +6,9 @@ block example_title
 block example_body
   .card-body
     +button_outline('Link', 'link')
+    each text, variant in extraColors
+      if variant != 'black' && variant != 'white'
+        +button_outline(text, variant)
   .card-body.bg-dark.bg-striped
     +button_outline('White', 'white')
 
@@ -13,4 +16,6 @@ block example_code
   :encode-pug
     | <!-- Source -->
     button.btn.btn-outline-link(type='button') Link
-    button.btn.btn-outline-white(type='button') White
+    each text, variant in extraColors
+      if variant != 'black'
+        button.btn(type='button' class='btn-outline-' + variant)= text
