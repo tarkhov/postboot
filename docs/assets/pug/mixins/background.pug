@@ -9,3 +9,7 @@ mixin background_inverse(text, variant)
 
 mixin background_hover(text, variant, color)
   +background(text, ['border', 'border-' + variant, 'bg-hover-' + variant, 'text-hover-' + color])
+
+mixin background_state(text, variant)
+  +background(text, ['bg-state-' + variant, 'text-state-' + variant])
+

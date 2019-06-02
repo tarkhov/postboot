@@ -46,6 +46,10 @@
         "name": "Opacity"
       },
       {
+        "url": "#background-state",
+        "name": "State"
+      },
+      {
         "url": "#background-hover",
         "name": "Hover",
         "childs": [
