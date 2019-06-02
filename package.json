@@ -33,5 +33,8 @@
     "grunt-notify": "^0.4.5",
     "jstransformer-prismjs": "^0.1.0",
     "load-grunt-tasks": "^3.5.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
   }
 }
