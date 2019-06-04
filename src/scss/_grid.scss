@@ -17,12 +17,12 @@
     }
   }
 
-  .container-2-md {
+  .container-md-2 {
     @include make-container();
     @include make-container-max-widths(map-remove(map-get($container-sizes, 2), sm));
   }
 
-  .container-3-lg {
+  .container-lg-3 {
     @include make-container();
     @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md));
   }
