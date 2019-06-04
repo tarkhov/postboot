@@ -73,6 +73,27 @@ $container-breakpoints: (
   )
 ) !default;
 
+$container-sizes: (
+  1: (
+    sm: map-get($container-max-widths, sm),
+    md: map-get($container-max-widths, sm),
+    lg: map-get($container-max-widths, sm),
+    xl: map-get($container-max-widths, sm)
+  ),
+  2: (
+    sm: map-get($container-max-widths, sm),
+    md: map-get($container-max-widths, md),
+    lg: map-get($container-max-widths, md),
+    xl: map-get($container-max-widths, md)
+  ),
+  3: (
+    sm: map-get($container-max-widths, sm),
+    md: map-get($container-max-widths, md),
+    lg: map-get($container-max-widths, lg),
+    xl: map-get($container-max-widths, lg)
+  )
+) !default;
+
 // Components
 $border-radius-circle: 50% !default;
 $border-radius-pill: 1.875rem !default;

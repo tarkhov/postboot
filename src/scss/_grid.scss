@@ -8,6 +8,16 @@
   }
 }
 
+// Container sizes
+@if $enable-grid-classes {
+  @each $size, $max-widths in $container-sizes {
+    .container-#{$size} {
+      @include make-container();
+      @include make-container-max-widths($max-widths);
+    }
+  }
+}
+
 // Margin and padding
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
