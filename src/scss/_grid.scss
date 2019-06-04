@@ -16,6 +16,16 @@
       @include make-container-max-widths($max-widths);
     }
   }
+
+  .container-2-md {
+    @include make-container();
+    @include make-container-max-widths(map-remove(map-get($container-sizes, 2), sm));
+  }
+
+  .container-3-lg {
+    @include make-container();
+    @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md));
+  }
 }
 
 // Margin and padding

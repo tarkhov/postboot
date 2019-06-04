@@ -252,6 +252,35 @@
     .container-3 {
       max-width: 960px; } }
 
+.container-2-md {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 768px) {
+    .container-2-md {
+      max-width: 720px; } }
+  @media (min-width: 992px) {
+    .container-2-md {
+      max-width: 720px; } }
+  @media (min-width: 1200px) {
+    .container-2-md {
+      max-width: 720px; } }
+
+.container-3-lg {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 992px) {
+    .container-3-lg {
+      max-width: 960px; } }
+  @media (min-width: 1200px) {
+    .container-3-lg {
+      max-width: 960px; } }
+
 .m-gutter {
   margin: 30px !important; }
 

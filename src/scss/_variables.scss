@@ -73,25 +73,34 @@ $container-breakpoints: (
   )
 ) !default;
 
+$container-max-width-sm: map-get($container-max-widths, sm);
+$container-max-width-md: map-get($container-max-widths, md);
+$container-max-width-lg: map-get($container-max-widths, lg);
+
 $container-sizes: (
   1: (
-    sm: map-get($container-max-widths, sm),
-    md: map-get($container-max-widths, sm),
-    lg: map-get($container-max-widths, sm),
-    xl: map-get($container-max-widths, sm)
+    sm: $container-max-width-sm,
+    md: $container-max-width-sm,
+    lg: $container-max-width-sm,
+    xl: $container-max-width-sm
   ),
   2: (
-    sm: map-get($container-max-widths, sm),
-    md: map-get($container-max-widths, md),
-    lg: map-get($container-max-widths, md),
-    xl: map-get($container-max-widths, md)
+    sm: $container-max-width-sm,
+    md: $container-max-width-md,
+    lg: $container-max-width-md,
+    xl: $container-max-width-md
   ),
   3: (
-    sm: map-get($container-max-widths, sm),
-    md: map-get($container-max-widths, md),
-    lg: map-get($container-max-widths, lg),
-    xl: map-get($container-max-widths, lg)
+    sm: $container-max-width-sm,
+    md: $container-max-width-md,
+    lg: $container-max-width-lg,
+    xl: $container-max-width-lg
   )
+) !default;
+
+$container-size-breakpoints: (
+  2: map-remove(map-get($container-sizes, 2), sm),
+  3: map-remove(map-get($container-sizes, 3), sm, md)
 ) !default;
 
 // Components
