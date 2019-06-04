@@ -6,10 +6,12 @@ block example_title
 block example_body
   .card-body.bg-dark.bg-striped
     each text, variant in colors
-      +button_alpha(text, variant)
+      +button_variant(text, variant + '-50')
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      button.btn(type='button' class='btn-' + variant + '-50')= text
+      - for(var i = 1; i <= 9; i++)
+        button.btn(type='button' class='btn-' + variant + '-' + i * 10)= text
+      = "\n"

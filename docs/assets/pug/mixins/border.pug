@@ -5,7 +5,7 @@ mixin border_variant(text, variant)
   +border(text, ['border-solid', 'border-1', 'border-' + variant, 'text-' + variant])
 
 mixin border_alpha(text, variant)
-  +border(text, ['border-solid', 'border-3', 'border-' + variant + '-50', 'text-white'])
+  +border(text, ['border-solid', 'border-3', 'border-' + variant, 'text-white'])
 
 mixin border_hover(text, variant)
   +border(text, ['border-hover-' + variant, 'text-' + variant, 'card'])

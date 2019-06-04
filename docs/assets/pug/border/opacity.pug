@@ -6,10 +6,12 @@ block example_title
 block example_body
   .card-body.bg-dark.bg-striped
     each text, variant in colors
-      +border_alpha(text, variant)
+      +border_alpha(text, variant + '-50')
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      div(class='border-' + variant + '-50')
+      - for(var i = 1; i <= 9; i++)
+        div(class='border-' + variant + '-' + i * 10)
+      = "\n"

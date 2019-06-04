@@ -17,4 +17,6 @@ block example_code
     | <!-- Source -->
     each text, variant in colors
       if variant != 'light'
-        input.form-control.input-dark(type='text', placeholder=text class="input-" + variant + '-50')
+        - for(var i = 1; i <= 9; i++)
+          input.form-control.input-dark(type='text', placeholder=text class="input-" + variant + '-' + i * 10)
+        = "\n"
