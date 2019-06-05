@@ -11,7 +11,7 @@
 }
 
 // Size
-@mixin card-size($padding-y, $padding-x, $font-size) {
+@mixin card-size($padding-y, $padding-x, $font-size, $nav-link-padding-y, $nav-link-padding-x) {
   font-size: $font-size;
 
   &.card-body,
@@ -44,6 +44,7 @@
   .card-footer-pills {
     margin-right: -$padding-x / 2;
     margin-left: -$padding-x / 2;
+    @include nav-size($nav-link-padding-y, $nav-link-padding-x, $font-size);
   }
 
   .card-header-tabs {

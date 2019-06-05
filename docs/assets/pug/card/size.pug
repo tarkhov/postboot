@@ -6,13 +6,35 @@ block example_title
 block example_result
   .row
     .col-md-4
-      .card.card-body.card-xs
-        h4.h6.card-title Extra small
-        p.card-text Example text
+      .card.card-xs
+        .card-header
+          ul.nav.nav-tabs.card-header-tabs
+            li.nav-item: a.nav-link.active(href="#") Active
+            li.nav-item: a.nav-link(href="#") Link
+            li.nav-item: a.nav-link.disabled(href="#") Disabled
+        .card-body
+          h4.h6.card-title Extra small
+          p.card-text Example text
+        .card-footer
+          ul.nav.nav-pills.card-footer-pills
+            li.nav-item: a.nav-link.active(href="#") Active
+            li.nav-item: a.nav-link(href="#") Link
+            li.nav-item: a.nav-link.disabled(href="#") Disabled
     .col-md-4
-      .card.card-body.card-sm
-        h4.h5.card-title Small
-        p.card-text Example text
+      .card.card-sm
+        .card-header
+          ul.nav.nav-tabs.card-header-tabs
+            li.nav-item: a.nav-link.active(href="#") Active
+            li.nav-item: a.nav-link(href="#") Link
+            li.nav-item: a.nav-link.disabled(href="#") Disabled
+        .card-body
+          h4.h5.card-title Small
+          p.card-text Example text
+        .card-footer
+          ul.nav.nav-pills.card-footer-pills
+            li.nav-item: a.nav-link.active(href="#") Active
+            li.nav-item: a.nav-link(href="#") Link
+            li.nav-item: a.nav-link.disabled(href="#") Disabled
 
 block example_code
   :encode-pug

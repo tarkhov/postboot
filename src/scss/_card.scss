@@ -88,20 +88,20 @@
 
 // Sizes
 .card-xs {
-  @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs);
+  @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs, $nav-link-padding-y-xs, $nav-link-padding-x-xs);
 
   @include media-breakpoint-down(sm) {
     &-down {
-      @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs);
+      @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs, $nav-link-padding-y-xs, $nav-link-padding-x-xs);
     }
   }
 }
 .card-sm {
-  @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm);
+  @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm, $nav-link-padding-y-sm, $nav-link-padding-x-sm);
 
   @include media-breakpoint-down(md) {
     &-down {
-      @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm);
+      @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm, $nav-link-padding-y-sm, $nav-link-padding-x-sm);
     }
   }
 }

@@ -7749,7 +7749,17 @@
   .card-xs .card-footer-tabs,
   .card-xs .card-footer-pills {
     margin-right: -0.25rem;
-    margin-left: -0.25rem; }
+    margin-left: -0.25rem;
+    font-size: 0.75rem; }
+    .card-xs .card-header-tabs > .nav-link,
+    .card-xs .card-header-tabs > .nav-item > .nav-link,
+    .card-xs .card-header-pills > .nav-link,
+    .card-xs .card-header-pills > .nav-item > .nav-link,
+    .card-xs .card-footer-tabs > .nav-link,
+    .card-xs .card-footer-tabs > .nav-item > .nav-link,
+    .card-xs .card-footer-pills > .nav-link,
+    .card-xs .card-footer-pills > .nav-item > .nav-link {
+      padding: 0.1rem 0.25rem; }
   .card-xs .card-header-tabs {
     margin-bottom: -0.25rem; }
   .card-xs .card-footer-tabs {
@@ -7776,7 +7786,17 @@
       .card-xs-down .card-footer-tabs,
       .card-xs-down .card-footer-pills {
         margin-right: -0.25rem;
-        margin-left: -0.25rem; }
+        margin-left: -0.25rem;
+        font-size: 0.75rem; }
+        .card-xs-down .card-header-tabs > .nav-link,
+        .card-xs-down .card-header-tabs > .nav-item > .nav-link,
+        .card-xs-down .card-header-pills > .nav-link,
+        .card-xs-down .card-header-pills > .nav-item > .nav-link,
+        .card-xs-down .card-footer-tabs > .nav-link,
+        .card-xs-down .card-footer-tabs > .nav-item > .nav-link,
+        .card-xs-down .card-footer-pills > .nav-link,
+        .card-xs-down .card-footer-pills > .nav-item > .nav-link {
+          padding: 0.1rem 0.25rem; }
       .card-xs-down .card-header-tabs {
         margin-bottom: -0.25rem; }
       .card-xs-down .card-footer-tabs {
@@ -7803,7 +7823,17 @@
   .card-sm .card-footer-tabs,
   .card-sm .card-footer-pills {
     margin-right: -0.375rem;
-    margin-left: -0.375rem; }
+    margin-left: -0.375rem;
+    font-size: 0.875rem; }
+    .card-sm .card-header-tabs > .nav-link,
+    .card-sm .card-header-tabs > .nav-item > .nav-link,
+    .card-sm .card-header-pills > .nav-link,
+    .card-sm .card-header-pills > .nav-item > .nav-link,
+    .card-sm .card-footer-tabs > .nav-link,
+    .card-sm .card-footer-tabs > .nav-item > .nav-link,
+    .card-sm .card-footer-pills > .nav-link,
+    .card-sm .card-footer-pills > .nav-item > .nav-link {
+      padding: 0.25rem 0.5rem; }
   .card-sm .card-header-tabs {
     margin-bottom: -0.5rem; }
   .card-sm .card-footer-tabs {
@@ -7830,7 +7860,17 @@
       .card-sm-down .card-footer-tabs,
       .card-sm-down .card-footer-pills {
         margin-right: -0.375rem;
-        margin-left: -0.375rem; }
+        margin-left: -0.375rem;
+        font-size: 0.875rem; }
+        .card-sm-down .card-header-tabs > .nav-link,
+        .card-sm-down .card-header-tabs > .nav-item > .nav-link,
+        .card-sm-down .card-header-pills > .nav-link,
+        .card-sm-down .card-header-pills > .nav-item > .nav-link,
+        .card-sm-down .card-footer-tabs > .nav-link,
+        .card-sm-down .card-footer-tabs > .nav-item > .nav-link,
+        .card-sm-down .card-footer-pills > .nav-link,
+        .card-sm-down .card-footer-pills > .nav-item > .nav-link {
+          padding: 0.25rem 0.5rem; }
       .card-sm-down .card-header-tabs {
         margin-bottom: -0.5rem; }
       .card-sm-down .card-footer-tabs {
