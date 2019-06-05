@@ -1,12 +1,44 @@
 // State variant
 @mixin card-state-variant($color) {
   $color-level: color-level($color, $card-state-color-level);
+  $background: color-level($color, $card-state-bg-level);
 
   color: $color-level;
-  background-color: color-level($color, $card-state-bg-level);
+  background-color: $background;
 
-  .card-link {
+  a {
     color: darken($color-level, 10%);
+  }
+
+  .card-header-pills,
+  .card-footer-pills {
+    .nav-link.active,
+    .show > .nav-link {
+      color: $nav-link-active-color;
+      background-color: $nav-pills-link-active-color;
+    }
+  }
+
+  .card-header-tabs,
+  .card-footer-tabs {
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      background-color: $background;
+    }
+  }
+
+  .card-header-tabs {
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      border-color: $card-border-color $card-border-color $background;
+    }
+  }
+
+  .card-footer-tabs {
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      border-color: $background $card-border-color $card-border-color;
+    }
   }
 }
 
@@ -44,7 +76,10 @@
   .card-footer-pills {
     margin-right: -$padding-x / 2;
     margin-left: -$padding-x / 2;
-    @include nav-size($nav-link-padding-y, $nav-link-padding-x, $font-size);
+
+    .nav-link {
+      padding: $nav-link-padding-y $nav-link-padding-x;
+    }
   }
 
   .card-header-tabs {

@@ -7655,80 +7655,301 @@
 .card-state-primary {
   color: #004085;
   background-color: #b8daff; }
-  .card-state-primary .card-link {
+  .card-state-primary a {
     color: #002752; }
+  .card-state-primary .card-header-pills .nav-link.active,
+  .card-state-primary .card-header-pills .show > .nav-link,
+  .card-state-primary .card-footer-pills .nav-link.active,
+  .card-state-primary .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-primary .card-header-tabs .nav-link.active,
+  .card-state-primary .card-header-tabs .nav-item.show .nav-link,
+  .card-state-primary .card-footer-tabs .nav-link.active,
+  .card-state-primary .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #b8daff; }
+  .card-state-primary .card-header-tabs .nav-link.active,
+  .card-state-primary .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #b8daff; }
+  .card-state-primary .card-footer-tabs .nav-link.active,
+  .card-state-primary .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #b8daff rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-secondary {
   color: #383d41;
   background-color: #d6d8db; }
-  .card-state-secondary .card-link {
+  .card-state-secondary a {
     color: #202326; }
+  .card-state-secondary .card-header-pills .nav-link.active,
+  .card-state-secondary .card-header-pills .show > .nav-link,
+  .card-state-secondary .card-footer-pills .nav-link.active,
+  .card-state-secondary .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-secondary .card-header-tabs .nav-link.active,
+  .card-state-secondary .card-header-tabs .nav-item.show .nav-link,
+  .card-state-secondary .card-footer-tabs .nav-link.active,
+  .card-state-secondary .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #d6d8db; }
+  .card-state-secondary .card-header-tabs .nav-link.active,
+  .card-state-secondary .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #d6d8db; }
+  .card-state-secondary .card-footer-tabs .nav-link.active,
+  .card-state-secondary .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #d6d8db rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-success {
   color: #155724;
   background-color: #c3e6cb; }
-  .card-state-success .card-link {
+  .card-state-success a {
     color: #0b2e13; }
+  .card-state-success .card-header-pills .nav-link.active,
+  .card-state-success .card-header-pills .show > .nav-link,
+  .card-state-success .card-footer-pills .nav-link.active,
+  .card-state-success .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-success .card-header-tabs .nav-link.active,
+  .card-state-success .card-header-tabs .nav-item.show .nav-link,
+  .card-state-success .card-footer-tabs .nav-link.active,
+  .card-state-success .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #c3e6cb; }
+  .card-state-success .card-header-tabs .nav-link.active,
+  .card-state-success .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #c3e6cb; }
+  .card-state-success .card-footer-tabs .nav-link.active,
+  .card-state-success .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #c3e6cb rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-info {
   color: #0c5460;
   background-color: #bee5eb; }
-  .card-state-info .card-link {
+  .card-state-info a {
     color: #062c33; }
+  .card-state-info .card-header-pills .nav-link.active,
+  .card-state-info .card-header-pills .show > .nav-link,
+  .card-state-info .card-footer-pills .nav-link.active,
+  .card-state-info .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-info .card-header-tabs .nav-link.active,
+  .card-state-info .card-header-tabs .nav-item.show .nav-link,
+  .card-state-info .card-footer-tabs .nav-link.active,
+  .card-state-info .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #bee5eb; }
+  .card-state-info .card-header-tabs .nav-link.active,
+  .card-state-info .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #bee5eb; }
+  .card-state-info .card-footer-tabs .nav-link.active,
+  .card-state-info .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #bee5eb rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-warning {
   color: #856404;
   background-color: #ffeeba; }
-  .card-state-warning .card-link {
+  .card-state-warning a {
     color: #533f03; }
+  .card-state-warning .card-header-pills .nav-link.active,
+  .card-state-warning .card-header-pills .show > .nav-link,
+  .card-state-warning .card-footer-pills .nav-link.active,
+  .card-state-warning .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-warning .card-header-tabs .nav-link.active,
+  .card-state-warning .card-header-tabs .nav-item.show .nav-link,
+  .card-state-warning .card-footer-tabs .nav-link.active,
+  .card-state-warning .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #ffeeba; }
+  .card-state-warning .card-header-tabs .nav-link.active,
+  .card-state-warning .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #ffeeba; }
+  .card-state-warning .card-footer-tabs .nav-link.active,
+  .card-state-warning .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #ffeeba rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-danger {
   color: #721c24;
   background-color: #f5c6cb; }
-  .card-state-danger .card-link {
+  .card-state-danger a {
     color: #491217; }
+  .card-state-danger .card-header-pills .nav-link.active,
+  .card-state-danger .card-header-pills .show > .nav-link,
+  .card-state-danger .card-footer-pills .nav-link.active,
+  .card-state-danger .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-danger .card-header-tabs .nav-link.active,
+  .card-state-danger .card-header-tabs .nav-item.show .nav-link,
+  .card-state-danger .card-footer-tabs .nav-link.active,
+  .card-state-danger .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #f5c6cb; }
+  .card-state-danger .card-header-tabs .nav-link.active,
+  .card-state-danger .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #f5c6cb; }
+  .card-state-danger .card-footer-tabs .nav-link.active,
+  .card-state-danger .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #f5c6cb rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-light {
   color: #818182;
   background-color: #fdfdfe; }
-  .card-state-light .card-link {
+  .card-state-light a {
     color: #686868; }
+  .card-state-light .card-header-pills .nav-link.active,
+  .card-state-light .card-header-pills .show > .nav-link,
+  .card-state-light .card-footer-pills .nav-link.active,
+  .card-state-light .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-light .card-header-tabs .nav-link.active,
+  .card-state-light .card-header-tabs .nav-item.show .nav-link,
+  .card-state-light .card-footer-tabs .nav-link.active,
+  .card-state-light .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #fdfdfe; }
+  .card-state-light .card-header-tabs .nav-link.active,
+  .card-state-light .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #fdfdfe; }
+  .card-state-light .card-footer-tabs .nav-link.active,
+  .card-state-light .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #fdfdfe rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-dark {
   color: #1b1e21;
   background-color: #c6c8ca; }
-  .card-state-dark .card-link {
+  .card-state-dark a {
     color: #040505; }
+  .card-state-dark .card-header-pills .nav-link.active,
+  .card-state-dark .card-header-pills .show > .nav-link,
+  .card-state-dark .card-footer-pills .nav-link.active,
+  .card-state-dark .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-dark .card-header-tabs .nav-link.active,
+  .card-state-dark .card-header-tabs .nav-item.show .nav-link,
+  .card-state-dark .card-footer-tabs .nav-link.active,
+  .card-state-dark .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #c6c8ca; }
+  .card-state-dark .card-header-tabs .nav-link.active,
+  .card-state-dark .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #c6c8ca; }
+  .card-state-dark .card-footer-tabs .nav-link.active,
+  .card-state-dark .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #c6c8ca rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-indigo {
   color: #35087e;
   background-color: #d4bcfb; }
-  .card-state-indigo .card-link {
+  .card-state-indigo a {
     color: #21054e; }
+  .card-state-indigo .card-header-pills .nav-link.active,
+  .card-state-indigo .card-header-pills .show > .nav-link,
+  .card-state-indigo .card-footer-pills .nav-link.active,
+  .card-state-indigo .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-indigo .card-header-tabs .nav-link.active,
+  .card-state-indigo .card-header-tabs .nav-item.show .nav-link,
+  .card-state-indigo .card-footer-tabs .nav-link.active,
+  .card-state-indigo .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #d4bcfb; }
+  .card-state-indigo .card-header-tabs .nav-link.active,
+  .card-state-indigo .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #d4bcfb; }
+  .card-state-indigo .card-footer-tabs .nav-link.active,
+  .card-state-indigo .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #d4bcfb rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-orange {
   color: #84420a;
   background-color: #fedbbd; }
-  .card-state-orange .card-link {
+  .card-state-orange a {
     color: #552a06; }
+  .card-state-orange .card-header-pills .nav-link.active,
+  .card-state-orange .card-header-pills .show > .nav-link,
+  .card-state-orange .card-footer-pills .nav-link.active,
+  .card-state-orange .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-orange .card-header-tabs .nav-link.active,
+  .card-state-orange .card-header-tabs .nav-item.show .nav-link,
+  .card-state-orange .card-footer-tabs .nav-link.active,
+  .card-state-orange .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #fedbbd; }
+  .card-state-orange .card-header-tabs .nav-link.active,
+  .card-state-orange .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #fedbbd; }
+  .card-state-orange .card-footer-tabs .nav-link.active,
+  .card-state-orange .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #fedbbd rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-pink {
   color: #792049;
   background-color: #f9c9df; }
-  .card-state-pink .card-link {
+  .card-state-pink a {
     color: #511531; }
+  .card-state-pink .card-header-pills .nav-link.active,
+  .card-state-pink .card-header-pills .show > .nav-link,
+  .card-state-pink .card-footer-pills .nav-link.active,
+  .card-state-pink .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-pink .card-header-tabs .nav-link.active,
+  .card-state-pink .card-header-tabs .nav-item.show .nav-link,
+  .card-state-pink .card-footer-tabs .nav-link.active,
+  .card-state-pink .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #f9c9df; }
+  .card-state-pink .card-header-tabs .nav-link.active,
+  .card-state-pink .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #f9c9df; }
+  .card-state-pink .card-footer-tabs .nav-link.active,
+  .card-state-pink .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #f9c9df rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-purple {
   color: #3a2264;
   background-color: #d7caee; }
-  .card-state-purple .card-link {
+  .card-state-purple a {
     color: #24153e; }
+  .card-state-purple .card-header-pills .nav-link.active,
+  .card-state-purple .card-header-pills .show > .nav-link,
+  .card-state-purple .card-footer-pills .nav-link.active,
+  .card-state-purple .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-purple .card-header-tabs .nav-link.active,
+  .card-state-purple .card-header-tabs .nav-item.show .nav-link,
+  .card-state-purple .card-footer-tabs .nav-link.active,
+  .card-state-purple .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #d7caee; }
+  .card-state-purple .card-header-tabs .nav-link.active,
+  .card-state-purple .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #d7caee; }
+  .card-state-purple .card-footer-tabs .nav-link.active,
+  .card-state-purple .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #d7caee rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-state-teal {
   color: #11694f;
   background-color: #c1f0e2; }
-  .card-state-teal .card-link {
+  .card-state-teal a {
     color: #0a3d2e; }
+  .card-state-teal .card-header-pills .nav-link.active,
+  .card-state-teal .card-header-pills .show > .nav-link,
+  .card-state-teal .card-footer-pills .nav-link.active,
+  .card-state-teal .card-footer-pills .show > .nav-link {
+    color: #495057;
+    background-color: #fff; }
+  .card-state-teal .card-header-tabs .nav-link.active,
+  .card-state-teal .card-header-tabs .nav-item.show .nav-link,
+  .card-state-teal .card-footer-tabs .nav-link.active,
+  .card-state-teal .card-footer-tabs .nav-item.show .nav-link {
+    background-color: #c1f0e2; }
+  .card-state-teal .card-header-tabs .nav-link.active,
+  .card-state-teal .card-header-tabs .nav-item.show .nav-link {
+    border-color: rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125) #c1f0e2; }
+  .card-state-teal .card-footer-tabs .nav-link.active,
+  .card-state-teal .card-footer-tabs .nav-item.show .nav-link {
+    border-color: #c1f0e2 rgba(0, 0, 0, 0.125) rgba(0, 0, 0, 0.125); }
 
 .card-xs {
   font-size: 0.75rem; }
@@ -7749,16 +7970,11 @@
   .card-xs .card-footer-tabs,
   .card-xs .card-footer-pills {
     margin-right: -0.25rem;
-    margin-left: -0.25rem;
-    font-size: 0.75rem; }
-    .card-xs .card-header-tabs > .nav-link,
-    .card-xs .card-header-tabs > .nav-item > .nav-link,
-    .card-xs .card-header-pills > .nav-link,
-    .card-xs .card-header-pills > .nav-item > .nav-link,
-    .card-xs .card-footer-tabs > .nav-link,
-    .card-xs .card-footer-tabs > .nav-item > .nav-link,
-    .card-xs .card-footer-pills > .nav-link,
-    .card-xs .card-footer-pills > .nav-item > .nav-link {
+    margin-left: -0.25rem; }
+    .card-xs .card-header-tabs .nav-link,
+    .card-xs .card-header-pills .nav-link,
+    .card-xs .card-footer-tabs .nav-link,
+    .card-xs .card-footer-pills .nav-link {
       padding: 0.1rem 0.25rem; }
   .card-xs .card-header-tabs {
     margin-bottom: -0.25rem; }
@@ -7786,16 +8002,11 @@
       .card-xs-down .card-footer-tabs,
       .card-xs-down .card-footer-pills {
         margin-right: -0.25rem;
-        margin-left: -0.25rem;
-        font-size: 0.75rem; }
-        .card-xs-down .card-header-tabs > .nav-link,
-        .card-xs-down .card-header-tabs > .nav-item > .nav-link,
-        .card-xs-down .card-header-pills > .nav-link,
-        .card-xs-down .card-header-pills > .nav-item > .nav-link,
-        .card-xs-down .card-footer-tabs > .nav-link,
-        .card-xs-down .card-footer-tabs > .nav-item > .nav-link,
-        .card-xs-down .card-footer-pills > .nav-link,
-        .card-xs-down .card-footer-pills > .nav-item > .nav-link {
+        margin-left: -0.25rem; }
+        .card-xs-down .card-header-tabs .nav-link,
+        .card-xs-down .card-header-pills .nav-link,
+        .card-xs-down .card-footer-tabs .nav-link,
+        .card-xs-down .card-footer-pills .nav-link {
           padding: 0.1rem 0.25rem; }
       .card-xs-down .card-header-tabs {
         margin-bottom: -0.25rem; }
@@ -7823,16 +8034,11 @@
   .card-sm .card-footer-tabs,
   .card-sm .card-footer-pills {
     margin-right: -0.375rem;
-    margin-left: -0.375rem;
-    font-size: 0.875rem; }
-    .card-sm .card-header-tabs > .nav-link,
-    .card-sm .card-header-tabs > .nav-item > .nav-link,
-    .card-sm .card-header-pills > .nav-link,
-    .card-sm .card-header-pills > .nav-item > .nav-link,
-    .card-sm .card-footer-tabs > .nav-link,
-    .card-sm .card-footer-tabs > .nav-item > .nav-link,
-    .card-sm .card-footer-pills > .nav-link,
-    .card-sm .card-footer-pills > .nav-item > .nav-link {
+    margin-left: -0.375rem; }
+    .card-sm .card-header-tabs .nav-link,
+    .card-sm .card-header-pills .nav-link,
+    .card-sm .card-footer-tabs .nav-link,
+    .card-sm .card-footer-pills .nav-link {
       padding: 0.25rem 0.5rem; }
   .card-sm .card-header-tabs {
     margin-bottom: -0.5rem; }
@@ -7860,16 +8066,11 @@
       .card-sm-down .card-footer-tabs,
       .card-sm-down .card-footer-pills {
         margin-right: -0.375rem;
-        margin-left: -0.375rem;
-        font-size: 0.875rem; }
-        .card-sm-down .card-header-tabs > .nav-link,
-        .card-sm-down .card-header-tabs > .nav-item > .nav-link,
-        .card-sm-down .card-header-pills > .nav-link,
-        .card-sm-down .card-header-pills > .nav-item > .nav-link,
-        .card-sm-down .card-footer-tabs > .nav-link,
-        .card-sm-down .card-footer-tabs > .nav-item > .nav-link,
-        .card-sm-down .card-footer-pills > .nav-link,
-        .card-sm-down .card-footer-pills > .nav-item > .nav-link {
+        margin-left: -0.375rem; }
+        .card-sm-down .card-header-tabs .nav-link,
+        .card-sm-down .card-header-pills .nav-link,
+        .card-sm-down .card-footer-tabs .nav-link,
+        .card-sm-down .card-footer-pills .nav-link {
           padding: 0.25rem 0.5rem; }
       .card-sm-down .card-header-tabs {
         margin-bottom: -0.5rem; }

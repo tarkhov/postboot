@@ -7,10 +7,21 @@ block example_result
   .row
     each text, variant in colors
       if variant != 'black' && variant != 'white'
-        .col-3
-          .card.card-body.mb-3(class='card-state-' + variant)
-            h4.card-title= text
-            p.card-text Example text
+        .col-sm-6
+          .card.mb-3(class='card-state-' + variant)
+            .card-header
+              ul.nav.nav-tabs.card-header-tabs
+                li.nav-item: a.nav-link.active(href="#") Active
+                li.nav-item: a.nav-link(href="#") Link
+                li.nav-item: a.nav-link.disabled(href="#") Disabled
+            .card-body
+              h4.card-title= text
+              p.card-text Example text
+            .card-footer
+              ul.nav.nav-pills.card-footer-pills
+                li.nav-item: a.nav-link.active(href="#") Active
+                li.nav-item: a.nav-link(href="#") Link
+                li.nav-item: a.nav-link.disabled(href="#") Disabled
 
 block example_code
   :encode-pug
