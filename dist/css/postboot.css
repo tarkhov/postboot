@@ -7663,6 +7663,10 @@
   .card-state-primary .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-primary .card-header-tabs .nav-link:hover, .card-state-primary .card-header-tabs .nav-link:focus,
+  .card-state-primary .card-footer-tabs .nav-link:hover,
+  .card-state-primary .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-primary .card-header-tabs .nav-link.active,
   .card-state-primary .card-header-tabs .nav-item.show .nav-link,
   .card-state-primary .card-footer-tabs .nav-link.active,
@@ -7686,6 +7690,10 @@
   .card-state-secondary .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-secondary .card-header-tabs .nav-link:hover, .card-state-secondary .card-header-tabs .nav-link:focus,
+  .card-state-secondary .card-footer-tabs .nav-link:hover,
+  .card-state-secondary .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-secondary .card-header-tabs .nav-link.active,
   .card-state-secondary .card-header-tabs .nav-item.show .nav-link,
   .card-state-secondary .card-footer-tabs .nav-link.active,
@@ -7709,6 +7717,10 @@
   .card-state-success .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-success .card-header-tabs .nav-link:hover, .card-state-success .card-header-tabs .nav-link:focus,
+  .card-state-success .card-footer-tabs .nav-link:hover,
+  .card-state-success .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-success .card-header-tabs .nav-link.active,
   .card-state-success .card-header-tabs .nav-item.show .nav-link,
   .card-state-success .card-footer-tabs .nav-link.active,
@@ -7732,6 +7744,10 @@
   .card-state-info .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-info .card-header-tabs .nav-link:hover, .card-state-info .card-header-tabs .nav-link:focus,
+  .card-state-info .card-footer-tabs .nav-link:hover,
+  .card-state-info .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-info .card-header-tabs .nav-link.active,
   .card-state-info .card-header-tabs .nav-item.show .nav-link,
   .card-state-info .card-footer-tabs .nav-link.active,
@@ -7755,6 +7771,10 @@
   .card-state-warning .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-warning .card-header-tabs .nav-link:hover, .card-state-warning .card-header-tabs .nav-link:focus,
+  .card-state-warning .card-footer-tabs .nav-link:hover,
+  .card-state-warning .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-warning .card-header-tabs .nav-link.active,
   .card-state-warning .card-header-tabs .nav-item.show .nav-link,
   .card-state-warning .card-footer-tabs .nav-link.active,
@@ -7778,6 +7798,10 @@
   .card-state-danger .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-danger .card-header-tabs .nav-link:hover, .card-state-danger .card-header-tabs .nav-link:focus,
+  .card-state-danger .card-footer-tabs .nav-link:hover,
+  .card-state-danger .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-danger .card-header-tabs .nav-link.active,
   .card-state-danger .card-header-tabs .nav-item.show .nav-link,
   .card-state-danger .card-footer-tabs .nav-link.active,
@@ -7801,6 +7825,10 @@
   .card-state-light .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-light .card-header-tabs .nav-link:hover, .card-state-light .card-header-tabs .nav-link:focus,
+  .card-state-light .card-footer-tabs .nav-link:hover,
+  .card-state-light .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-light .card-header-tabs .nav-link.active,
   .card-state-light .card-header-tabs .nav-item.show .nav-link,
   .card-state-light .card-footer-tabs .nav-link.active,
@@ -7824,6 +7852,10 @@
   .card-state-dark .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-dark .card-header-tabs .nav-link:hover, .card-state-dark .card-header-tabs .nav-link:focus,
+  .card-state-dark .card-footer-tabs .nav-link:hover,
+  .card-state-dark .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-dark .card-header-tabs .nav-link.active,
   .card-state-dark .card-header-tabs .nav-item.show .nav-link,
   .card-state-dark .card-footer-tabs .nav-link.active,
@@ -7847,6 +7879,10 @@
   .card-state-indigo .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-indigo .card-header-tabs .nav-link:hover, .card-state-indigo .card-header-tabs .nav-link:focus,
+  .card-state-indigo .card-footer-tabs .nav-link:hover,
+  .card-state-indigo .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-indigo .card-header-tabs .nav-link.active,
   .card-state-indigo .card-header-tabs .nav-item.show .nav-link,
   .card-state-indigo .card-footer-tabs .nav-link.active,
@@ -7870,6 +7906,10 @@
   .card-state-orange .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-orange .card-header-tabs .nav-link:hover, .card-state-orange .card-header-tabs .nav-link:focus,
+  .card-state-orange .card-footer-tabs .nav-link:hover,
+  .card-state-orange .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-orange .card-header-tabs .nav-link.active,
   .card-state-orange .card-header-tabs .nav-item.show .nav-link,
   .card-state-orange .card-footer-tabs .nav-link.active,
@@ -7893,6 +7933,10 @@
   .card-state-pink .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-pink .card-header-tabs .nav-link:hover, .card-state-pink .card-header-tabs .nav-link:focus,
+  .card-state-pink .card-footer-tabs .nav-link:hover,
+  .card-state-pink .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-pink .card-header-tabs .nav-link.active,
   .card-state-pink .card-header-tabs .nav-item.show .nav-link,
   .card-state-pink .card-footer-tabs .nav-link.active,
@@ -7916,6 +7960,10 @@
   .card-state-purple .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-purple .card-header-tabs .nav-link:hover, .card-state-purple .card-header-tabs .nav-link:focus,
+  .card-state-purple .card-footer-tabs .nav-link:hover,
+  .card-state-purple .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-purple .card-header-tabs .nav-link.active,
   .card-state-purple .card-header-tabs .nav-item.show .nav-link,
   .card-state-purple .card-footer-tabs .nav-link.active,
@@ -7939,6 +7987,10 @@
   .card-state-teal .card-footer-pills .show > .nav-link {
     color: #495057;
     background-color: #fff; }
+  .card-state-teal .card-header-tabs .nav-link:hover, .card-state-teal .card-header-tabs .nav-link:focus,
+  .card-state-teal .card-footer-tabs .nav-link:hover,
+  .card-state-teal .card-footer-tabs .nav-link:focus {
+    border-color: rgba(0, 0, 0, 0.125); }
   .card-state-teal .card-header-tabs .nav-link.active,
   .card-state-teal .card-header-tabs .nav-item.show .nav-link,
   .card-state-teal .card-footer-tabs .nav-link.active,

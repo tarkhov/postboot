@@ -21,6 +21,13 @@
 
   .card-header-tabs,
   .card-footer-tabs {
+    .nav-link {
+      &:hover,
+      &:focus {
+        border-color: $card-border-color;
+      }
+    }
+
     .nav-link.active,
     .nav-item.show .nav-link {
       background-color: $background;
