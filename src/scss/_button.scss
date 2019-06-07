@@ -46,7 +46,11 @@
   .btn-3d-#{$color} {
     @include button-3d-variant($value, $value);
     @if $color == 'warning' {
-      color: $white;
+      &,
+      &:hover,
+      &:focus {
+        color: $white;
+      }
     }
   }
 }
@@ -65,7 +69,11 @@
     .btn-#{$color}-#{($alpha * 10)} {
       @include button-variant(rgba($value, ($alpha * .1)), transparent);
       @if $color == 'warning' {
-        color: $white;
+        &,
+        &:hover,
+        &:focus {
+          color: $white;
+        }
       }
     }
   }
