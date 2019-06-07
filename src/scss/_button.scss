@@ -63,7 +63,7 @@
 @for $alpha from 1 through 9 {
   @each $color, $value in $theme-colors {
     .btn-#{$color}-#{($alpha * 10)} {
-      @include button-opacity-variant($value, $value, ($alpha * .1));
+      @include button-variant(rgba($value, ($alpha * .1)), transparent);
       @if $color == 'warning' {
         color: $white;
       }
@@ -71,7 +71,7 @@
   }
   @each $color, $value in $custom-colors {
     .btn-#{$color}-#{($alpha * 10)} {
-      @include button-opacity-variant($value, $value, ($alpha * .1));
+      @include button-variant(rgba($value, ($alpha * .1)), transparent);
       @if $color == 'orange' {
         color: $white;
       }

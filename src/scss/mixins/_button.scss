@@ -10,11 +10,6 @@
   height: ($font-size * 2.5);
 }
 
-// Opacity
-@mixin button-opacity-variant($background, $border, $alpha) {
-  @include button-variant(rgba($background, $alpha), rgba($border, $alpha));
-}
-
 // State
 @mixin button-state-variant($background, $border: $btn-state-border-color) {
   @include button-variant(color-level($background, $btn-state-bg-level), $border);
