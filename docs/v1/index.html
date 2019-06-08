@@ -16,7 +16,7 @@
   <body class="pt-navbar" data-spy="scroll" data-target="#sidebar-left">
     <header class="pb-gutter" role="banner">
       <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
-        <div class="container"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-rc2</sup></a>
+        <div class="container-fluid container-xl"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-rc2</sup></a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
@@ -31,7 +31,7 @@
         </div>
       </nav>
     </header>
-    <div class="container-lg">
+    <div class="container-fluid container-xl">
       <div class="row">
         <div class="col-md-2">
           <aside class="sidebar sidebar-light sidebar-expand-md py-0 position-fixed" id="sidebar-left" role="complementary">
@@ -201,6 +201,9 @@
               <li class="nav-item"><a class="nav-link" href="#grid">Grid</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#grid-container">Container</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#grid-container-size">Size</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a>
                     <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
@@ -3284,9 +3287,18 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                 <h3 class="fw-400">Container</h3>
                 <div class="card card-body bg-light mb-3">
                   <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;container-md&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;container-lg&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;container-xl&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;container-fluid container-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container-fluid container-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container-fluid container-xl&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+                <div id="grid-container-size">
+                  <h4 class="fw-400">Size</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;container container-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container container-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container container-3&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
                 </div>
               </div>
               <div id="grid-gutter-spacing">

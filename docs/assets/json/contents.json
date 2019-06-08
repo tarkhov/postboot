@@ -311,7 +311,13 @@
     "childs": [
       {
         "url": "#grid-container",
-        "name": "Container"
+        "name": "Container",
+        "childs": [
+          {
+            "url": "#grid-container-size",
+            "name": "Size"
+          }
+        ]
       },
       {
         "url": "#grid-gutter-spacing",

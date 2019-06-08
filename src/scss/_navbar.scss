@@ -15,33 +15,6 @@
   }
 }
 
-// Container sizes
-.navbar {
-  %navbar-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  @each $breakpoint, $max-widths in $container-breakpoints {
-    > .container-#{$breakpoint} {
-      @extend %navbar-container;
-    }
-  }
-
-  @each $size, $max-widths in $container-sizes {
-    > .container-#{$size} {
-      @extend %navbar-container;
-    }
-  }
-
-  > .container-md-2,
-  > .container-lg-3 {
-    @extend %navbar-container;
-  }
-}
-
 // Expand
 .navbar-expand-xs {
   @include media-breakpoint-down(xs) {
@@ -71,77 +44,12 @@
   }
 
   > .container,
-  > .container-fluid,
-  > .container-md-2,
-  > .container-lg-3 {
+  > .container-fluid {
     flex-wrap: nowrap;
-  }
-
-  @each $breakpoint, $max-widths in $container-breakpoints {
-    > .container-#{$breakpoint} {
-      flex-wrap: nowrap;
-    }
-  }
-
-  @each $size, $max-widths in $container-sizes {
-    > .container-#{$size} {
-      flex-wrap: nowrap;
-    }
   }
 
   .navbar-collapse {
     display: flex !important;
-  }
-}
-
-// Container expand
-.navbar-expand {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($next, $grid-breakpoints);
-
-    &#{$infix} {
-      @include media-breakpoint-down($breakpoint) {
-        @each $breakpoint, $max-widths in $container-breakpoints {
-          > .container-#{$breakpoint} {
-            padding-right: 0;
-            padding-left: 0;
-          }
-        }
-
-        @each $size, $max-widths in $container-sizes {
-          > .container-#{$size} {
-            padding-right: 0;
-            padding-left: 0;
-          }
-        }
-
-        > .container-md-2,
-        > .container-lg-3 {
-          padding-right: 0;
-          padding-left: 0;
-        }
-      }
-
-      @include media-breakpoint-up($next) {
-        @each $breakpoint, $max-widths in $container-breakpoints {
-          > .container-#{$breakpoint} {
-            flex-wrap: nowrap;
-          }
-        }
-
-        @each $size, $max-widths in $container-sizes {
-          > .container-#{$size} {
-            flex-wrap: nowrap;
-          }
-        }
-
-        > .container-md-2,
-        > .container-lg-3 {
-          flex-wrap: nowrap;
-        }
-      }
-    }
   }
 }
 

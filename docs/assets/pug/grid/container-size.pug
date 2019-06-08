@@ -1,0 +1,10 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Size
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var i = 1; i <= 3; i++)
+      .container(class='container-' + i)

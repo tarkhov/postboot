@@ -2,7 +2,6 @@
 @if $enable-grid-classes {
   @each $breakpoint, $max-widths in $container-breakpoints {
     .container-#{$breakpoint} {
-      @include make-container();
       @include make-container-max-widths($max-widths);
     }
   }
@@ -12,18 +11,15 @@
 @if $enable-grid-classes {
   @each $size, $max-widths in $container-sizes {
     .container-#{$size} {
-      @include make-container();
       @include make-container-max-widths($max-widths);
     }
   }
 
   .container-md-2 {
-    @include make-container();
     @include make-container-max-widths(map-remove(map-get($container-sizes, 2), sm));
   }
 
   .container-lg-3 {
-    @include make-container();
     @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md));
   }
 }
