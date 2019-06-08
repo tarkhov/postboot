@@ -226,6 +226,9 @@
                   <li class="nav-item"><a class="nav-link" href="#nav-active">Active</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-size">Size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#nav-size-direction">Direction</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a>
                     <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
@@ -2673,14 +2676,16 @@ unzip postboot-1.0.0-rc2.zip</code></pre>
                 <div class="clearfix"></div>
               </div>
               <div id="dropdown-off-click">
-                <h4 class="fw-400">Off click events</h4>
+                <h4 class="fw-400">Disable dropdown on click</h4>
                 <div class="card card-body bg-light mb-3">
-                  <pre class="pre-scrollable"><code class="language-javascript"><pre><code class="language-javascript">$(document).off(&#39;.dropdown.data-api&#39;);
-$(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (e) {
-  var events = $._data(e.relatedTarget, &#39;events&#39;);
-  if (events) {
-    $(e.relatedTarget).off(&#39;click.bs.dropdown&#39;);
-  }
+                  <pre class="pre-scrollable"><code class="language-javascript"><pre><code class="language-javascript">jQuery(document).ready(function ($) {
+  $(document).off(&#39;.dropdown.data-api&#39;);
+  $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (e) {
+    var events = $._data(e.relatedTarget, &#39;events&#39;);
+    if (events) {
+      $(e.relatedTarget).off(&#39;click.bs.dropdown&#39;);
+    }
+  });
 });</code></pre></code></pre>
                 </div>
               </div>
@@ -3502,6 +3507,24 @@ $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (
                   </div>
                 </div>
                 <div class="clearfix"></div>
+                <div id="nav-size-direction">
+                  <h4 class="fw-400">Direction</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;nav nav-x-xs&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-xs&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;nav nav-x-sm&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-sm&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;nav nav-x-lg&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-lg&#x22;&#x3E;&#x3C;/ul&#x3E;
+</code></pre>
+                  </div>
+                </div>
               </div>
               <div id="nav-tabs">
                 <h3 class="fw-400">Tabs position</h3>

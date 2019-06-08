@@ -1,14 +1,16 @@
 extends ../example-js.pug
 
 block example_title
-  h4.fw-400 Off click events
+  h4.fw-400 Disable dropdown on click
 
 block example_code
   :prismjs(language='javascript')
-    $(document).off('.dropdown.data-api');
-    $(document).on('show.bs.dropdown', '.dropdown-hover', function (e) {
-      var events = $._data(e.relatedTarget, 'events');
-      if (events) {
-        $(e.relatedTarget).off('click.bs.dropdown');
-      }
+    jQuery(document).ready(function ($) {
+      $(document).off('.dropdown.data-api');
+      $(document).on('show.bs.dropdown', '.dropdown-hover', function (e) {
+        var events = $._data(e.relatedTarget, 'events');
+        if (events) {
+          $(e.relatedTarget).off('click.bs.dropdown');
+        }
+      });
     });

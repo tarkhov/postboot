@@ -357,7 +357,13 @@
       },
       {
         "url": "#nav-size",
-        "name": "Size"
+        "name": "Size",
+        "childs": [
+          {
+            "url": "#nav-size-direction",
+            "name": "Direction"
+          }
+        ]
       },
       {
         "url": "#nav-tabs",

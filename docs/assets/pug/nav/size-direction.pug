@@ -1,0 +1,12 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Direction
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each size in [0, 'xs', 'sm', 'lg']
+      each dir in ['x', 'y']
+        ul.nav(class='nav-' + dir + '-' + size)
+      = "\n"
