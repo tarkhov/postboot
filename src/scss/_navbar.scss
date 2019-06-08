@@ -17,7 +17,7 @@
 
 // Container sizes
 .navbar {
-  %container-breakpoint {
+  %navbar-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -26,8 +26,19 @@
 
   @each $breakpoint, $max-widths in $container-breakpoints {
     > .container-#{$breakpoint} {
-      @extend %container-breakpoint;
+      @extend %navbar-container;
     }
+  }
+
+  @each $size, $max-widths in $container-sizes {
+    > .container-#{$size} {
+      @extend %navbar-container;
+    }
+  }
+
+  > .container-md-2,
+  > .container-lg-3 {
+    @extend %navbar-container;
   }
 }
 
@@ -60,12 +71,20 @@
   }
 
   > .container,
-  > .container-fluid {
+  > .container-fluid,
+  > .container-md-2,
+  > .container-lg-3 {
     flex-wrap: nowrap;
   }
 
   @each $breakpoint, $max-widths in $container-breakpoints {
     > .container-#{$breakpoint} {
+      flex-wrap: nowrap;
+    }
+  }
+
+  @each $size, $max-widths in $container-sizes {
+    > .container-#{$size} {
       flex-wrap: nowrap;
     }
   }
@@ -89,6 +108,19 @@
             padding-left: 0;
           }
         }
+
+        @each $size, $max-widths in $container-sizes {
+          > .container-#{$size} {
+            padding-right: 0;
+            padding-left: 0;
+          }
+        }
+
+        > .container-md-2,
+        > .container-lg-3 {
+          padding-right: 0;
+          padding-left: 0;
+        }
       }
 
       @include media-breakpoint-up($next) {
@@ -96,6 +128,17 @@
           > .container-#{$breakpoint} {
             flex-wrap: nowrap;
           }
+        }
+
+        @each $size, $max-widths in $container-sizes {
+          > .container-#{$size} {
+            flex-wrap: nowrap;
+          }
+        }
+
+        > .container-md-2,
+        > .container-lg-3 {
+          flex-wrap: nowrap;
         }
       }
     }
