@@ -2,9 +2,11 @@ extends ../example.pug
 
 block example_title
   h3.fw-400 Scroller
+  span.badge.badge-success.text-uppercase.mb-3 New
 
 block example_description
-  p Scrollable navbar.
+  p Horizontal scrolling navbar.
+  .alert.alert-warning(role="alert") Works only on touch devices like #[b tablet] and #[b phone].
 
 block example_result
   .navbar.navbar-expand-xs.navbar-dark.bg-dark.px-0
