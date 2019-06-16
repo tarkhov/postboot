@@ -19,7 +19,7 @@
 }
 
 // Material
-@mixin input-material-variant($border, $color: $input-color, $focus-border: $input-focus-border-color, $focus-color: $input-focus-color) {
+@mixin input-material-variant($border, $color: $input-color, $focus-border: $border, $focus-color: $color, $placeholder-color: $color) {
   border-bottom-color: $border;
   color: $color;
 
@@ -27,15 +27,22 @@
     border-bottom-color: $focus-border;
     color: $focus-color;
   }
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
 }
 
 // Dark
-@mixin input-dark-variant($background, $color: $input-dark-color) {
-  &,
+@mixin input-dark-variant($background, $color: $input-dark-color, $focus-background: $background, $focus-color: $color) {
+  background-color: $background;
+  border-color: $background;
+  color: $color;
+
   &:focus {
-    background-color: $background;
-    border-color: $background;
-    color: $color;
+    background-color: $focus-background;
+    border-color: $focus-background;
+    color: $focus-color;
   }
 
   &::placeholder {

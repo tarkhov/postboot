@@ -180,14 +180,6 @@
     "name": "Card",
     "childs": [
       {
-        "url": "#card-color",
-        "name": "Color"
-      },
-      {
-        "url": "#card-state",
-        "name": "State"
-      },
-      {
         "url": "#card-footer-pills",
         "name": "Footer pills"
       },
