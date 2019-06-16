@@ -20,6 +20,8 @@ Library | Version
 ------- | -------
 Bootstrap | 4.3.1
 
+PostBoot does **not overwrite** any components of Bootstrap, but only extends most of them.
+
 ## Installation
 
 ### Manually
