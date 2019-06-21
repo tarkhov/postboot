@@ -21,6 +21,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.9.0",
     "grunt": "^1.0.4",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-banner": "^0.6.0",
@@ -31,8 +32,10 @@
     "grunt-contrib-uglify": "^3.4.0",
     "grunt-contrib-watch": "^1.1.0",
     "grunt-notify": "^0.4.5",
+    "jquery": "^3.4.1",
     "jstransformer-prismjs": "^0.1.0",
-    "load-grunt-tasks": "^3.5.2"
+    "load-grunt-tasks": "^3.5.2",
+    "prismjs": "^1.16.0"
   },
   "dependencies": {
     "bootstrap": "^4.3.1"

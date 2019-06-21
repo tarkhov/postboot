@@ -59,10 +59,10 @@ module.exports = function (grunt) {
       },
       docs: {
         src: [
-          'docs/assets/js/vendor/jquery.min.js',
-          'docs/assets/js/vendor/bootstrap.bundle.min.js',
-          'docs/assets/js/vendor/prism.js',
-          'docs/assets/js/vendor/fontawesome-all.min.js',
+          'node_modules/jquery/dist/jquery.min.js',
+          'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+          'node_modules/prismjs/prism.js',
+          'node_modules/@fortawesome/fontawesome-free/js/all.min.js',
           'dist/js/<%= pkg.name %>.min.js'
         ],
         dest: 'docs/assets/js/app.js'
@@ -119,10 +119,10 @@ module.exports = function (grunt) {
       docs: {	
         files: {	
           'docs/assets/css/app.min.css': [
-            'docs/assets/css/bootstrap.min.css',
+            'node_modules/bootstrap/dist/css/bootstrap.min.css',
             '<%= cssmin.dist.dest %>',
-            'docs/assets/css/prism.css',
-            'docs/assets/css/fa-svg-with-js.css',
+            'node_modules/prismjs/themes/prism.css',
+            'node_modules/@fortawesome/fontawesome-free/css/svg-with-js.min.css',
             'docs/assets/css/main.css'
           ]
         }
