@@ -24,6 +24,21 @@
   }
 }
 
+// Grid sizes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  $infix: breakpoint-infix($breakpoint);
+
+  .col#{$infix}-2-5 {
+    @include make-col-ready();
+  }
+
+  @include media-breakpoint-up($breakpoint) {
+    .col#{$infix}-2-5 {
+      @include make-col(2.4);
+    }
+  }
+}
+
 // Margin and padding
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {

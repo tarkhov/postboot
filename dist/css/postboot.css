@@ -233,6 +233,61 @@
   .container-lg-3 {
     max-width: 960px; } }
 
+.col-2-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+.col-2-5 {
+  -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
+  max-width: 20%; }
+
+.col-sm-2-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+@media (min-width: 576px) {
+  .col-sm-2-5 {
+    -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+    max-width: 20%; } }
+.col-md-2-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+@media (min-width: 768px) {
+  .col-md-2-5 {
+    -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+    max-width: 20%; } }
+.col-lg-2-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+@media (min-width: 992px) {
+  .col-lg-2-5 {
+    -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+    max-width: 20%; } }
+.col-xl-2-5 {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px; }
+
+@media (min-width: 1200px) {
+  .col-xl-2-5 {
+    -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+    max-width: 20%; } }
 .m-gutter {
   margin: 30px !important; }
 
