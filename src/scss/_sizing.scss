@@ -1,0 +1,7 @@
+// Size
+@each $size, $length in $sizes {
+  .s-#{$size} {
+    width: $length !important;
+    height: $length !important;
+  }
+}
