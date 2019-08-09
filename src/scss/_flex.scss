@@ -1,0 +1,21 @@
+// Flex center
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .flex#{$infix}-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flex-x#{$infix}-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .flex-y#{$infix}-center {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

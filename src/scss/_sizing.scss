@@ -5,3 +5,18 @@
     height: $length !important;
   }
 }
+
+.ms-100 {
+  max-width: 100% !important;
+  max-height: 100% !important;
+}
+
+.min-vs-100 {
+  min-width: 100vw !important;
+  min-height: 100vh !important;
+}
+
+.vs-100 {
+  width: 100vw !important;
+  height: 100vh !important;
+}
