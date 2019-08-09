@@ -11580,6 +11580,906 @@
 .border-left-5 {
   border-left-width: 5px !important; }
 
+.fill-primary {
+  fill: #007bff !important; }
+
+.fill-secondary {
+  fill: #6c757d !important; }
+
+.fill-success {
+  fill: #28a745 !important; }
+
+.fill-info {
+  fill: #17a2b8 !important; }
+
+.fill-warning {
+  fill: #ffc107 !important; }
+
+.fill-danger {
+  fill: #dc3545 !important; }
+
+.fill-light {
+  fill: #f8f9fa !important; }
+
+.fill-dark {
+  fill: #343a40 !important; }
+
+.fill-black {
+  fill: #000 !important; }
+
+.fill-indigo {
+  fill: #6610f2 !important; }
+
+.fill-orange {
+  fill: #fd7e14 !important; }
+
+.fill-pink {
+  fill: #e83e8c !important; }
+
+.fill-purple {
+  fill: #6f42c1 !important; }
+
+.fill-teal {
+  fill: #20c997 !important; }
+
+.fill-white {
+  fill: #fff !important; }
+
+.fill-primary-10 {
+  fill: rgba(0, 123, 255, 0.1) !important; }
+
+.fill-secondary-10 {
+  fill: rgba(108, 117, 125, 0.1) !important; }
+
+.fill-success-10 {
+  fill: rgba(40, 167, 69, 0.1) !important; }
+
+.fill-info-10 {
+  fill: rgba(23, 162, 184, 0.1) !important; }
+
+.fill-warning-10 {
+  fill: rgba(255, 193, 7, 0.1) !important; }
+
+.fill-danger-10 {
+  fill: rgba(220, 53, 69, 0.1) !important; }
+
+.fill-light-10 {
+  fill: rgba(248, 249, 250, 0.1) !important; }
+
+.fill-dark-10 {
+  fill: rgba(52, 58, 64, 0.1) !important; }
+
+.fill-black-10 {
+  fill: rgba(0, 0, 0, 0.1) !important; }
+
+.fill-indigo-10 {
+  fill: rgba(102, 16, 242, 0.1) !important; }
+
+.fill-orange-10 {
+  fill: rgba(253, 126, 20, 0.1) !important; }
+
+.fill-pink-10 {
+  fill: rgba(232, 62, 140, 0.1) !important; }
+
+.fill-purple-10 {
+  fill: rgba(111, 66, 193, 0.1) !important; }
+
+.fill-teal-10 {
+  fill: rgba(32, 201, 151, 0.1) !important; }
+
+.fill-white-10 {
+  fill: rgba(255, 255, 255, 0.1) !important; }
+
+.fill-primary-20 {
+  fill: rgba(0, 123, 255, 0.2) !important; }
+
+.fill-secondary-20 {
+  fill: rgba(108, 117, 125, 0.2) !important; }
+
+.fill-success-20 {
+  fill: rgba(40, 167, 69, 0.2) !important; }
+
+.fill-info-20 {
+  fill: rgba(23, 162, 184, 0.2) !important; }
+
+.fill-warning-20 {
+  fill: rgba(255, 193, 7, 0.2) !important; }
+
+.fill-danger-20 {
+  fill: rgba(220, 53, 69, 0.2) !important; }
+
+.fill-light-20 {
+  fill: rgba(248, 249, 250, 0.2) !important; }
+
+.fill-dark-20 {
+  fill: rgba(52, 58, 64, 0.2) !important; }
+
+.fill-black-20 {
+  fill: rgba(0, 0, 0, 0.2) !important; }
+
+.fill-indigo-20 {
+  fill: rgba(102, 16, 242, 0.2) !important; }
+
+.fill-orange-20 {
+  fill: rgba(253, 126, 20, 0.2) !important; }
+
+.fill-pink-20 {
+  fill: rgba(232, 62, 140, 0.2) !important; }
+
+.fill-purple-20 {
+  fill: rgba(111, 66, 193, 0.2) !important; }
+
+.fill-teal-20 {
+  fill: rgba(32, 201, 151, 0.2) !important; }
+
+.fill-white-20 {
+  fill: rgba(255, 255, 255, 0.2) !important; }
+
+.fill-primary-30 {
+  fill: rgba(0, 123, 255, 0.3) !important; }
+
+.fill-secondary-30 {
+  fill: rgba(108, 117, 125, 0.3) !important; }
+
+.fill-success-30 {
+  fill: rgba(40, 167, 69, 0.3) !important; }
+
+.fill-info-30 {
+  fill: rgba(23, 162, 184, 0.3) !important; }
+
+.fill-warning-30 {
+  fill: rgba(255, 193, 7, 0.3) !important; }
+
+.fill-danger-30 {
+  fill: rgba(220, 53, 69, 0.3) !important; }
+
+.fill-light-30 {
+  fill: rgba(248, 249, 250, 0.3) !important; }
+
+.fill-dark-30 {
+  fill: rgba(52, 58, 64, 0.3) !important; }
+
+.fill-black-30 {
+  fill: rgba(0, 0, 0, 0.3) !important; }
+
+.fill-indigo-30 {
+  fill: rgba(102, 16, 242, 0.3) !important; }
+
+.fill-orange-30 {
+  fill: rgba(253, 126, 20, 0.3) !important; }
+
+.fill-pink-30 {
+  fill: rgba(232, 62, 140, 0.3) !important; }
+
+.fill-purple-30 {
+  fill: rgba(111, 66, 193, 0.3) !important; }
+
+.fill-teal-30 {
+  fill: rgba(32, 201, 151, 0.3) !important; }
+
+.fill-white-30 {
+  fill: rgba(255, 255, 255, 0.3) !important; }
+
+.fill-primary-40 {
+  fill: rgba(0, 123, 255, 0.4) !important; }
+
+.fill-secondary-40 {
+  fill: rgba(108, 117, 125, 0.4) !important; }
+
+.fill-success-40 {
+  fill: rgba(40, 167, 69, 0.4) !important; }
+
+.fill-info-40 {
+  fill: rgba(23, 162, 184, 0.4) !important; }
+
+.fill-warning-40 {
+  fill: rgba(255, 193, 7, 0.4) !important; }
+
+.fill-danger-40 {
+  fill: rgba(220, 53, 69, 0.4) !important; }
+
+.fill-light-40 {
+  fill: rgba(248, 249, 250, 0.4) !important; }
+
+.fill-dark-40 {
+  fill: rgba(52, 58, 64, 0.4) !important; }
+
+.fill-black-40 {
+  fill: rgba(0, 0, 0, 0.4) !important; }
+
+.fill-indigo-40 {
+  fill: rgba(102, 16, 242, 0.4) !important; }
+
+.fill-orange-40 {
+  fill: rgba(253, 126, 20, 0.4) !important; }
+
+.fill-pink-40 {
+  fill: rgba(232, 62, 140, 0.4) !important; }
+
+.fill-purple-40 {
+  fill: rgba(111, 66, 193, 0.4) !important; }
+
+.fill-teal-40 {
+  fill: rgba(32, 201, 151, 0.4) !important; }
+
+.fill-white-40 {
+  fill: rgba(255, 255, 255, 0.4) !important; }
+
+.fill-primary-50 {
+  fill: rgba(0, 123, 255, 0.5) !important; }
+
+.fill-secondary-50 {
+  fill: rgba(108, 117, 125, 0.5) !important; }
+
+.fill-success-50 {
+  fill: rgba(40, 167, 69, 0.5) !important; }
+
+.fill-info-50 {
+  fill: rgba(23, 162, 184, 0.5) !important; }
+
+.fill-warning-50 {
+  fill: rgba(255, 193, 7, 0.5) !important; }
+
+.fill-danger-50 {
+  fill: rgba(220, 53, 69, 0.5) !important; }
+
+.fill-light-50 {
+  fill: rgba(248, 249, 250, 0.5) !important; }
+
+.fill-dark-50 {
+  fill: rgba(52, 58, 64, 0.5) !important; }
+
+.fill-black-50 {
+  fill: rgba(0, 0, 0, 0.5) !important; }
+
+.fill-indigo-50 {
+  fill: rgba(102, 16, 242, 0.5) !important; }
+
+.fill-orange-50 {
+  fill: rgba(253, 126, 20, 0.5) !important; }
+
+.fill-pink-50 {
+  fill: rgba(232, 62, 140, 0.5) !important; }
+
+.fill-purple-50 {
+  fill: rgba(111, 66, 193, 0.5) !important; }
+
+.fill-teal-50 {
+  fill: rgba(32, 201, 151, 0.5) !important; }
+
+.fill-white-50 {
+  fill: rgba(255, 255, 255, 0.5) !important; }
+
+.fill-primary-60 {
+  fill: rgba(0, 123, 255, 0.6) !important; }
+
+.fill-secondary-60 {
+  fill: rgba(108, 117, 125, 0.6) !important; }
+
+.fill-success-60 {
+  fill: rgba(40, 167, 69, 0.6) !important; }
+
+.fill-info-60 {
+  fill: rgba(23, 162, 184, 0.6) !important; }
+
+.fill-warning-60 {
+  fill: rgba(255, 193, 7, 0.6) !important; }
+
+.fill-danger-60 {
+  fill: rgba(220, 53, 69, 0.6) !important; }
+
+.fill-light-60 {
+  fill: rgba(248, 249, 250, 0.6) !important; }
+
+.fill-dark-60 {
+  fill: rgba(52, 58, 64, 0.6) !important; }
+
+.fill-black-60 {
+  fill: rgba(0, 0, 0, 0.6) !important; }
+
+.fill-indigo-60 {
+  fill: rgba(102, 16, 242, 0.6) !important; }
+
+.fill-orange-60 {
+  fill: rgba(253, 126, 20, 0.6) !important; }
+
+.fill-pink-60 {
+  fill: rgba(232, 62, 140, 0.6) !important; }
+
+.fill-purple-60 {
+  fill: rgba(111, 66, 193, 0.6) !important; }
+
+.fill-teal-60 {
+  fill: rgba(32, 201, 151, 0.6) !important; }
+
+.fill-white-60 {
+  fill: rgba(255, 255, 255, 0.6) !important; }
+
+.fill-primary-70 {
+  fill: rgba(0, 123, 255, 0.7) !important; }
+
+.fill-secondary-70 {
+  fill: rgba(108, 117, 125, 0.7) !important; }
+
+.fill-success-70 {
+  fill: rgba(40, 167, 69, 0.7) !important; }
+
+.fill-info-70 {
+  fill: rgba(23, 162, 184, 0.7) !important; }
+
+.fill-warning-70 {
+  fill: rgba(255, 193, 7, 0.7) !important; }
+
+.fill-danger-70 {
+  fill: rgba(220, 53, 69, 0.7) !important; }
+
+.fill-light-70 {
+  fill: rgba(248, 249, 250, 0.7) !important; }
+
+.fill-dark-70 {
+  fill: rgba(52, 58, 64, 0.7) !important; }
+
+.fill-black-70 {
+  fill: rgba(0, 0, 0, 0.7) !important; }
+
+.fill-indigo-70 {
+  fill: rgba(102, 16, 242, 0.7) !important; }
+
+.fill-orange-70 {
+  fill: rgba(253, 126, 20, 0.7) !important; }
+
+.fill-pink-70 {
+  fill: rgba(232, 62, 140, 0.7) !important; }
+
+.fill-purple-70 {
+  fill: rgba(111, 66, 193, 0.7) !important; }
+
+.fill-teal-70 {
+  fill: rgba(32, 201, 151, 0.7) !important; }
+
+.fill-white-70 {
+  fill: rgba(255, 255, 255, 0.7) !important; }
+
+.fill-primary-80 {
+  fill: rgba(0, 123, 255, 0.8) !important; }
+
+.fill-secondary-80 {
+  fill: rgba(108, 117, 125, 0.8) !important; }
+
+.fill-success-80 {
+  fill: rgba(40, 167, 69, 0.8) !important; }
+
+.fill-info-80 {
+  fill: rgba(23, 162, 184, 0.8) !important; }
+
+.fill-warning-80 {
+  fill: rgba(255, 193, 7, 0.8) !important; }
+
+.fill-danger-80 {
+  fill: rgba(220, 53, 69, 0.8) !important; }
+
+.fill-light-80 {
+  fill: rgba(248, 249, 250, 0.8) !important; }
+
+.fill-dark-80 {
+  fill: rgba(52, 58, 64, 0.8) !important; }
+
+.fill-black-80 {
+  fill: rgba(0, 0, 0, 0.8) !important; }
+
+.fill-indigo-80 {
+  fill: rgba(102, 16, 242, 0.8) !important; }
+
+.fill-orange-80 {
+  fill: rgba(253, 126, 20, 0.8) !important; }
+
+.fill-pink-80 {
+  fill: rgba(232, 62, 140, 0.8) !important; }
+
+.fill-purple-80 {
+  fill: rgba(111, 66, 193, 0.8) !important; }
+
+.fill-teal-80 {
+  fill: rgba(32, 201, 151, 0.8) !important; }
+
+.fill-white-80 {
+  fill: rgba(255, 255, 255, 0.8) !important; }
+
+.fill-primary-90 {
+  fill: rgba(0, 123, 255, 0.9) !important; }
+
+.fill-secondary-90 {
+  fill: rgba(108, 117, 125, 0.9) !important; }
+
+.fill-success-90 {
+  fill: rgba(40, 167, 69, 0.9) !important; }
+
+.fill-info-90 {
+  fill: rgba(23, 162, 184, 0.9) !important; }
+
+.fill-warning-90 {
+  fill: rgba(255, 193, 7, 0.9) !important; }
+
+.fill-danger-90 {
+  fill: rgba(220, 53, 69, 0.9) !important; }
+
+.fill-light-90 {
+  fill: rgba(248, 249, 250, 0.9) !important; }
+
+.fill-dark-90 {
+  fill: rgba(52, 58, 64, 0.9) !important; }
+
+.fill-black-90 {
+  fill: rgba(0, 0, 0, 0.9) !important; }
+
+.fill-indigo-90 {
+  fill: rgba(102, 16, 242, 0.9) !important; }
+
+.fill-orange-90 {
+  fill: rgba(253, 126, 20, 0.9) !important; }
+
+.fill-pink-90 {
+  fill: rgba(232, 62, 140, 0.9) !important; }
+
+.fill-purple-90 {
+  fill: rgba(111, 66, 193, 0.9) !important; }
+
+.fill-teal-90 {
+  fill: rgba(32, 201, 151, 0.9) !important; }
+
+.fill-white-90 {
+  fill: rgba(255, 255, 255, 0.9) !important; }
+
+.fill-hover-primary:hover, .fill-hover-primary:focus {
+  fill: #007bff !important; }
+
+.fill-hover-primary-10:hover, .fill-hover-primary-10:focus {
+  fill: rgba(0, 123, 255, 0.1) !important; }
+
+.fill-hover-primary-20:hover, .fill-hover-primary-20:focus {
+  fill: rgba(0, 123, 255, 0.2) !important; }
+
+.fill-hover-primary-30:hover, .fill-hover-primary-30:focus {
+  fill: rgba(0, 123, 255, 0.3) !important; }
+
+.fill-hover-primary-40:hover, .fill-hover-primary-40:focus {
+  fill: rgba(0, 123, 255, 0.4) !important; }
+
+.fill-hover-primary-50:hover, .fill-hover-primary-50:focus {
+  fill: rgba(0, 123, 255, 0.5) !important; }
+
+.fill-hover-primary-60:hover, .fill-hover-primary-60:focus {
+  fill: rgba(0, 123, 255, 0.6) !important; }
+
+.fill-hover-primary-70:hover, .fill-hover-primary-70:focus {
+  fill: rgba(0, 123, 255, 0.7) !important; }
+
+.fill-hover-primary-80:hover, .fill-hover-primary-80:focus {
+  fill: rgba(0, 123, 255, 0.8) !important; }
+
+.fill-hover-primary-90:hover, .fill-hover-primary-90:focus {
+  fill: rgba(0, 123, 255, 0.9) !important; }
+
+.fill-hover-secondary:hover, .fill-hover-secondary:focus {
+  fill: #6c757d !important; }
+
+.fill-hover-secondary-10:hover, .fill-hover-secondary-10:focus {
+  fill: rgba(108, 117, 125, 0.1) !important; }
+
+.fill-hover-secondary-20:hover, .fill-hover-secondary-20:focus {
+  fill: rgba(108, 117, 125, 0.2) !important; }
+
+.fill-hover-secondary-30:hover, .fill-hover-secondary-30:focus {
+  fill: rgba(108, 117, 125, 0.3) !important; }
+
+.fill-hover-secondary-40:hover, .fill-hover-secondary-40:focus {
+  fill: rgba(108, 117, 125, 0.4) !important; }
+
+.fill-hover-secondary-50:hover, .fill-hover-secondary-50:focus {
+  fill: rgba(108, 117, 125, 0.5) !important; }
+
+.fill-hover-secondary-60:hover, .fill-hover-secondary-60:focus {
+  fill: rgba(108, 117, 125, 0.6) !important; }
+
+.fill-hover-secondary-70:hover, .fill-hover-secondary-70:focus {
+  fill: rgba(108, 117, 125, 0.7) !important; }
+
+.fill-hover-secondary-80:hover, .fill-hover-secondary-80:focus {
+  fill: rgba(108, 117, 125, 0.8) !important; }
+
+.fill-hover-secondary-90:hover, .fill-hover-secondary-90:focus {
+  fill: rgba(108, 117, 125, 0.9) !important; }
+
+.fill-hover-success:hover, .fill-hover-success:focus {
+  fill: #28a745 !important; }
+
+.fill-hover-success-10:hover, .fill-hover-success-10:focus {
+  fill: rgba(40, 167, 69, 0.1) !important; }
+
+.fill-hover-success-20:hover, .fill-hover-success-20:focus {
+  fill: rgba(40, 167, 69, 0.2) !important; }
+
+.fill-hover-success-30:hover, .fill-hover-success-30:focus {
+  fill: rgba(40, 167, 69, 0.3) !important; }
+
+.fill-hover-success-40:hover, .fill-hover-success-40:focus {
+  fill: rgba(40, 167, 69, 0.4) !important; }
+
+.fill-hover-success-50:hover, .fill-hover-success-50:focus {
+  fill: rgba(40, 167, 69, 0.5) !important; }
+
+.fill-hover-success-60:hover, .fill-hover-success-60:focus {
+  fill: rgba(40, 167, 69, 0.6) !important; }
+
+.fill-hover-success-70:hover, .fill-hover-success-70:focus {
+  fill: rgba(40, 167, 69, 0.7) !important; }
+
+.fill-hover-success-80:hover, .fill-hover-success-80:focus {
+  fill: rgba(40, 167, 69, 0.8) !important; }
+
+.fill-hover-success-90:hover, .fill-hover-success-90:focus {
+  fill: rgba(40, 167, 69, 0.9) !important; }
+
+.fill-hover-info:hover, .fill-hover-info:focus {
+  fill: #17a2b8 !important; }
+
+.fill-hover-info-10:hover, .fill-hover-info-10:focus {
+  fill: rgba(23, 162, 184, 0.1) !important; }
+
+.fill-hover-info-20:hover, .fill-hover-info-20:focus {
+  fill: rgba(23, 162, 184, 0.2) !important; }
+
+.fill-hover-info-30:hover, .fill-hover-info-30:focus {
+  fill: rgba(23, 162, 184, 0.3) !important; }
+
+.fill-hover-info-40:hover, .fill-hover-info-40:focus {
+  fill: rgba(23, 162, 184, 0.4) !important; }
+
+.fill-hover-info-50:hover, .fill-hover-info-50:focus {
+  fill: rgba(23, 162, 184, 0.5) !important; }
+
+.fill-hover-info-60:hover, .fill-hover-info-60:focus {
+  fill: rgba(23, 162, 184, 0.6) !important; }
+
+.fill-hover-info-70:hover, .fill-hover-info-70:focus {
+  fill: rgba(23, 162, 184, 0.7) !important; }
+
+.fill-hover-info-80:hover, .fill-hover-info-80:focus {
+  fill: rgba(23, 162, 184, 0.8) !important; }
+
+.fill-hover-info-90:hover, .fill-hover-info-90:focus {
+  fill: rgba(23, 162, 184, 0.9) !important; }
+
+.fill-hover-warning:hover, .fill-hover-warning:focus {
+  fill: #ffc107 !important; }
+
+.fill-hover-warning-10:hover, .fill-hover-warning-10:focus {
+  fill: rgba(255, 193, 7, 0.1) !important; }
+
+.fill-hover-warning-20:hover, .fill-hover-warning-20:focus {
+  fill: rgba(255, 193, 7, 0.2) !important; }
+
+.fill-hover-warning-30:hover, .fill-hover-warning-30:focus {
+  fill: rgba(255, 193, 7, 0.3) !important; }
+
+.fill-hover-warning-40:hover, .fill-hover-warning-40:focus {
+  fill: rgba(255, 193, 7, 0.4) !important; }
+
+.fill-hover-warning-50:hover, .fill-hover-warning-50:focus {
+  fill: rgba(255, 193, 7, 0.5) !important; }
+
+.fill-hover-warning-60:hover, .fill-hover-warning-60:focus {
+  fill: rgba(255, 193, 7, 0.6) !important; }
+
+.fill-hover-warning-70:hover, .fill-hover-warning-70:focus {
+  fill: rgba(255, 193, 7, 0.7) !important; }
+
+.fill-hover-warning-80:hover, .fill-hover-warning-80:focus {
+  fill: rgba(255, 193, 7, 0.8) !important; }
+
+.fill-hover-warning-90:hover, .fill-hover-warning-90:focus {
+  fill: rgba(255, 193, 7, 0.9) !important; }
+
+.fill-hover-danger:hover, .fill-hover-danger:focus {
+  fill: #dc3545 !important; }
+
+.fill-hover-danger-10:hover, .fill-hover-danger-10:focus {
+  fill: rgba(220, 53, 69, 0.1) !important; }
+
+.fill-hover-danger-20:hover, .fill-hover-danger-20:focus {
+  fill: rgba(220, 53, 69, 0.2) !important; }
+
+.fill-hover-danger-30:hover, .fill-hover-danger-30:focus {
+  fill: rgba(220, 53, 69, 0.3) !important; }
+
+.fill-hover-danger-40:hover, .fill-hover-danger-40:focus {
+  fill: rgba(220, 53, 69, 0.4) !important; }
+
+.fill-hover-danger-50:hover, .fill-hover-danger-50:focus {
+  fill: rgba(220, 53, 69, 0.5) !important; }
+
+.fill-hover-danger-60:hover, .fill-hover-danger-60:focus {
+  fill: rgba(220, 53, 69, 0.6) !important; }
+
+.fill-hover-danger-70:hover, .fill-hover-danger-70:focus {
+  fill: rgba(220, 53, 69, 0.7) !important; }
+
+.fill-hover-danger-80:hover, .fill-hover-danger-80:focus {
+  fill: rgba(220, 53, 69, 0.8) !important; }
+
+.fill-hover-danger-90:hover, .fill-hover-danger-90:focus {
+  fill: rgba(220, 53, 69, 0.9) !important; }
+
+.fill-hover-light:hover, .fill-hover-light:focus {
+  fill: #f8f9fa !important; }
+
+.fill-hover-light-10:hover, .fill-hover-light-10:focus {
+  fill: rgba(248, 249, 250, 0.1) !important; }
+
+.fill-hover-light-20:hover, .fill-hover-light-20:focus {
+  fill: rgba(248, 249, 250, 0.2) !important; }
+
+.fill-hover-light-30:hover, .fill-hover-light-30:focus {
+  fill: rgba(248, 249, 250, 0.3) !important; }
+
+.fill-hover-light-40:hover, .fill-hover-light-40:focus {
+  fill: rgba(248, 249, 250, 0.4) !important; }
+
+.fill-hover-light-50:hover, .fill-hover-light-50:focus {
+  fill: rgba(248, 249, 250, 0.5) !important; }
+
+.fill-hover-light-60:hover, .fill-hover-light-60:focus {
+  fill: rgba(248, 249, 250, 0.6) !important; }
+
+.fill-hover-light-70:hover, .fill-hover-light-70:focus {
+  fill: rgba(248, 249, 250, 0.7) !important; }
+
+.fill-hover-light-80:hover, .fill-hover-light-80:focus {
+  fill: rgba(248, 249, 250, 0.8) !important; }
+
+.fill-hover-light-90:hover, .fill-hover-light-90:focus {
+  fill: rgba(248, 249, 250, 0.9) !important; }
+
+.fill-hover-dark:hover, .fill-hover-dark:focus {
+  fill: #343a40 !important; }
+
+.fill-hover-dark-10:hover, .fill-hover-dark-10:focus {
+  fill: rgba(52, 58, 64, 0.1) !important; }
+
+.fill-hover-dark-20:hover, .fill-hover-dark-20:focus {
+  fill: rgba(52, 58, 64, 0.2) !important; }
+
+.fill-hover-dark-30:hover, .fill-hover-dark-30:focus {
+  fill: rgba(52, 58, 64, 0.3) !important; }
+
+.fill-hover-dark-40:hover, .fill-hover-dark-40:focus {
+  fill: rgba(52, 58, 64, 0.4) !important; }
+
+.fill-hover-dark-50:hover, .fill-hover-dark-50:focus {
+  fill: rgba(52, 58, 64, 0.5) !important; }
+
+.fill-hover-dark-60:hover, .fill-hover-dark-60:focus {
+  fill: rgba(52, 58, 64, 0.6) !important; }
+
+.fill-hover-dark-70:hover, .fill-hover-dark-70:focus {
+  fill: rgba(52, 58, 64, 0.7) !important; }
+
+.fill-hover-dark-80:hover, .fill-hover-dark-80:focus {
+  fill: rgba(52, 58, 64, 0.8) !important; }
+
+.fill-hover-dark-90:hover, .fill-hover-dark-90:focus {
+  fill: rgba(52, 58, 64, 0.9) !important; }
+
+.fill-hover-black:hover, .fill-hover-black:focus {
+  fill: #000 !important; }
+
+.fill-hover-black-10:hover, .fill-hover-black-10:focus {
+  fill: rgba(0, 0, 0, 0.1) !important; }
+
+.fill-hover-black-20:hover, .fill-hover-black-20:focus {
+  fill: rgba(0, 0, 0, 0.2) !important; }
+
+.fill-hover-black-30:hover, .fill-hover-black-30:focus {
+  fill: rgba(0, 0, 0, 0.3) !important; }
+
+.fill-hover-black-40:hover, .fill-hover-black-40:focus {
+  fill: rgba(0, 0, 0, 0.4) !important; }
+
+.fill-hover-black-50:hover, .fill-hover-black-50:focus {
+  fill: rgba(0, 0, 0, 0.5) !important; }
+
+.fill-hover-black-60:hover, .fill-hover-black-60:focus {
+  fill: rgba(0, 0, 0, 0.6) !important; }
+
+.fill-hover-black-70:hover, .fill-hover-black-70:focus {
+  fill: rgba(0, 0, 0, 0.7) !important; }
+
+.fill-hover-black-80:hover, .fill-hover-black-80:focus {
+  fill: rgba(0, 0, 0, 0.8) !important; }
+
+.fill-hover-black-90:hover, .fill-hover-black-90:focus {
+  fill: rgba(0, 0, 0, 0.9) !important; }
+
+.fill-hover-indigo:hover, .fill-hover-indigo:focus {
+  fill: #6610f2 !important; }
+
+.fill-hover-indigo-10:hover, .fill-hover-indigo-10:focus {
+  fill: rgba(102, 16, 242, 0.1) !important; }
+
+.fill-hover-indigo-20:hover, .fill-hover-indigo-20:focus {
+  fill: rgba(102, 16, 242, 0.2) !important; }
+
+.fill-hover-indigo-30:hover, .fill-hover-indigo-30:focus {
+  fill: rgba(102, 16, 242, 0.3) !important; }
+
+.fill-hover-indigo-40:hover, .fill-hover-indigo-40:focus {
+  fill: rgba(102, 16, 242, 0.4) !important; }
+
+.fill-hover-indigo-50:hover, .fill-hover-indigo-50:focus {
+  fill: rgba(102, 16, 242, 0.5) !important; }
+
+.fill-hover-indigo-60:hover, .fill-hover-indigo-60:focus {
+  fill: rgba(102, 16, 242, 0.6) !important; }
+
+.fill-hover-indigo-70:hover, .fill-hover-indigo-70:focus {
+  fill: rgba(102, 16, 242, 0.7) !important; }
+
+.fill-hover-indigo-80:hover, .fill-hover-indigo-80:focus {
+  fill: rgba(102, 16, 242, 0.8) !important; }
+
+.fill-hover-indigo-90:hover, .fill-hover-indigo-90:focus {
+  fill: rgba(102, 16, 242, 0.9) !important; }
+
+.fill-hover-orange:hover, .fill-hover-orange:focus {
+  fill: #fd7e14 !important; }
+
+.fill-hover-orange-10:hover, .fill-hover-orange-10:focus {
+  fill: rgba(253, 126, 20, 0.1) !important; }
+
+.fill-hover-orange-20:hover, .fill-hover-orange-20:focus {
+  fill: rgba(253, 126, 20, 0.2) !important; }
+
+.fill-hover-orange-30:hover, .fill-hover-orange-30:focus {
+  fill: rgba(253, 126, 20, 0.3) !important; }
+
+.fill-hover-orange-40:hover, .fill-hover-orange-40:focus {
+  fill: rgba(253, 126, 20, 0.4) !important; }
+
+.fill-hover-orange-50:hover, .fill-hover-orange-50:focus {
+  fill: rgba(253, 126, 20, 0.5) !important; }
+
+.fill-hover-orange-60:hover, .fill-hover-orange-60:focus {
+  fill: rgba(253, 126, 20, 0.6) !important; }
+
+.fill-hover-orange-70:hover, .fill-hover-orange-70:focus {
+  fill: rgba(253, 126, 20, 0.7) !important; }
+
+.fill-hover-orange-80:hover, .fill-hover-orange-80:focus {
+  fill: rgba(253, 126, 20, 0.8) !important; }
+
+.fill-hover-orange-90:hover, .fill-hover-orange-90:focus {
+  fill: rgba(253, 126, 20, 0.9) !important; }
+
+.fill-hover-pink:hover, .fill-hover-pink:focus {
+  fill: #e83e8c !important; }
+
+.fill-hover-pink-10:hover, .fill-hover-pink-10:focus {
+  fill: rgba(232, 62, 140, 0.1) !important; }
+
+.fill-hover-pink-20:hover, .fill-hover-pink-20:focus {
+  fill: rgba(232, 62, 140, 0.2) !important; }
+
+.fill-hover-pink-30:hover, .fill-hover-pink-30:focus {
+  fill: rgba(232, 62, 140, 0.3) !important; }
+
+.fill-hover-pink-40:hover, .fill-hover-pink-40:focus {
+  fill: rgba(232, 62, 140, 0.4) !important; }
+
+.fill-hover-pink-50:hover, .fill-hover-pink-50:focus {
+  fill: rgba(232, 62, 140, 0.5) !important; }
+
+.fill-hover-pink-60:hover, .fill-hover-pink-60:focus {
+  fill: rgba(232, 62, 140, 0.6) !important; }
+
+.fill-hover-pink-70:hover, .fill-hover-pink-70:focus {
+  fill: rgba(232, 62, 140, 0.7) !important; }
+
+.fill-hover-pink-80:hover, .fill-hover-pink-80:focus {
+  fill: rgba(232, 62, 140, 0.8) !important; }
+
+.fill-hover-pink-90:hover, .fill-hover-pink-90:focus {
+  fill: rgba(232, 62, 140, 0.9) !important; }
+
+.fill-hover-purple:hover, .fill-hover-purple:focus {
+  fill: #6f42c1 !important; }
+
+.fill-hover-purple-10:hover, .fill-hover-purple-10:focus {
+  fill: rgba(111, 66, 193, 0.1) !important; }
+
+.fill-hover-purple-20:hover, .fill-hover-purple-20:focus {
+  fill: rgba(111, 66, 193, 0.2) !important; }
+
+.fill-hover-purple-30:hover, .fill-hover-purple-30:focus {
+  fill: rgba(111, 66, 193, 0.3) !important; }
+
+.fill-hover-purple-40:hover, .fill-hover-purple-40:focus {
+  fill: rgba(111, 66, 193, 0.4) !important; }
+
+.fill-hover-purple-50:hover, .fill-hover-purple-50:focus {
+  fill: rgba(111, 66, 193, 0.5) !important; }
+
+.fill-hover-purple-60:hover, .fill-hover-purple-60:focus {
+  fill: rgba(111, 66, 193, 0.6) !important; }
+
+.fill-hover-purple-70:hover, .fill-hover-purple-70:focus {
+  fill: rgba(111, 66, 193, 0.7) !important; }
+
+.fill-hover-purple-80:hover, .fill-hover-purple-80:focus {
+  fill: rgba(111, 66, 193, 0.8) !important; }
+
+.fill-hover-purple-90:hover, .fill-hover-purple-90:focus {
+  fill: rgba(111, 66, 193, 0.9) !important; }
+
+.fill-hover-teal:hover, .fill-hover-teal:focus {
+  fill: #20c997 !important; }
+
+.fill-hover-teal-10:hover, .fill-hover-teal-10:focus {
+  fill: rgba(32, 201, 151, 0.1) !important; }
+
+.fill-hover-teal-20:hover, .fill-hover-teal-20:focus {
+  fill: rgba(32, 201, 151, 0.2) !important; }
+
+.fill-hover-teal-30:hover, .fill-hover-teal-30:focus {
+  fill: rgba(32, 201, 151, 0.3) !important; }
+
+.fill-hover-teal-40:hover, .fill-hover-teal-40:focus {
+  fill: rgba(32, 201, 151, 0.4) !important; }
+
+.fill-hover-teal-50:hover, .fill-hover-teal-50:focus {
+  fill: rgba(32, 201, 151, 0.5) !important; }
+
+.fill-hover-teal-60:hover, .fill-hover-teal-60:focus {
+  fill: rgba(32, 201, 151, 0.6) !important; }
+
+.fill-hover-teal-70:hover, .fill-hover-teal-70:focus {
+  fill: rgba(32, 201, 151, 0.7) !important; }
+
+.fill-hover-teal-80:hover, .fill-hover-teal-80:focus {
+  fill: rgba(32, 201, 151, 0.8) !important; }
+
+.fill-hover-teal-90:hover, .fill-hover-teal-90:focus {
+  fill: rgba(32, 201, 151, 0.9) !important; }
+
+.fill-hover-white:hover, .fill-hover-white:focus {
+  fill: #fff !important; }
+
+.fill-hover-white-10:hover, .fill-hover-white-10:focus {
+  fill: rgba(255, 255, 255, 0.1) !important; }
+
+.fill-hover-white-20:hover, .fill-hover-white-20:focus {
+  fill: rgba(255, 255, 255, 0.2) !important; }
+
+.fill-hover-white-30:hover, .fill-hover-white-30:focus {
+  fill: rgba(255, 255, 255, 0.3) !important; }
+
+.fill-hover-white-40:hover, .fill-hover-white-40:focus {
+  fill: rgba(255, 255, 255, 0.4) !important; }
+
+.fill-hover-white-50:hover, .fill-hover-white-50:focus {
+  fill: rgba(255, 255, 255, 0.5) !important; }
+
+.fill-hover-white-60:hover, .fill-hover-white-60:focus {
+  fill: rgba(255, 255, 255, 0.6) !important; }
+
+.fill-hover-white-70:hover, .fill-hover-white-70:focus {
+  fill: rgba(255, 255, 255, 0.7) !important; }
+
+.fill-hover-white-80:hover, .fill-hover-white-80:focus {
+  fill: rgba(255, 255, 255, 0.8) !important; }
+
+.fill-hover-white-90:hover, .fill-hover-white-90:focus {
+  fill: rgba(255, 255, 255, 0.9) !important; }
+
 .flex-center {
   display: -ms-flexbox;
   display: flex;
