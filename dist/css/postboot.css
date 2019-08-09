@@ -9336,6 +9336,9 @@
   font-size: 1.5rem;
   height: 1.75rem; }
 
+.list-group-striped .list-group-item:nth-child(even) {
+  background-color: #f8f9fa; }
+
 .list-group-xs .list-group-item {
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem; }
