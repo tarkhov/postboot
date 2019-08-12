@@ -26,22 +26,10 @@
 
 // Row sizes
 .row-xs {
-  @include make-row($grid-gutter-width / 3);
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: $grid-gutter-width / 2 / 3;
-    padding-left: $grid-gutter-width / 2 / 3;
-  }
+  @include row-size(3);
 }
 .row-sm {
-  @include make-row($grid-gutter-width / 1.5);
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: $grid-gutter-width / 2 / 1.5;
-    padding-left: $grid-gutter-width / 2 / 1.5;
-  }
+  @include row-size(1.5);
 }
 
 // Column sizes

@@ -1,0 +1,125 @@
+// Fill colors
+@each $color, $value in $theme-colors {
+  .fill-#{$color} {
+    fill: $value !important;
+  }
+}
+
+@each $color, $value in $custom-colors {
+  .fill-#{$color} {
+    fill: $value !important;
+  }
+}
+
+// Fill opacity
+@for $alpha from 1 through 9 {
+  @each $color, $value in $theme-colors {
+    .fill-#{$color}-#{($alpha * 10)} {
+      fill: rgba($value, ($alpha * .1)) !important;
+    }
+  }
+  @each $color, $value in $custom-colors {
+    .fill-#{$color}-#{($alpha * 10)} {
+      fill: rgba($value, ($alpha * .1)) !important;
+    }
+  }
+}
+
+// Fill hover
+@each $color, $value in $theme-colors {
+  .fill-hover-#{$color} {
+    &:hover,
+    &:focus {
+      fill: $value !important;
+    }
+  }
+
+  @for $alpha from 1 through 9 {
+    .fill-hover-#{$color}-#{($alpha * 10)} {
+      &:hover,
+      &:focus {
+        fill: rgba($value, ($alpha * .1)) !important;
+      }
+    }
+  }
+}
+@each $color, $value in $custom-colors {
+  .fill-hover-#{$color} {
+    &:hover,
+    &:focus {
+      fill: $value !important;
+    }
+  }
+
+  @for $alpha from 1 through 9 {
+    .fill-hover-#{$color}-#{($alpha * 10)} {
+      &:hover,
+      &:focus {
+        fill: rgba($value, ($alpha * .1)) !important;
+      }
+    }
+  }
+}
+
+// Stroke colors
+@each $color, $value in $theme-colors {
+  .stroke-#{$color} {
+    stroke: $value !important;
+  }
+}
+
+@each $color, $value in $custom-colors {
+  .stroke-#{$color} {
+    stroke: $value !important;
+  }
+}
+
+// Stroke opacity
+@for $alpha from 1 through 9 {
+  @each $color, $value in $theme-colors {
+    .stroke-#{$color}-#{($alpha * 10)} {
+      stroke: rgba($value, ($alpha * .1)) !important;
+    }
+  }
+  @each $color, $value in $custom-colors {
+    .stroke-#{$color}-#{($alpha * 10)} {
+      stroke: rgba($value, ($alpha * .1)) !important;
+    }
+  }
+}
+
+// Stroke hover
+@each $color, $value in $theme-colors {
+  .stroke-hover-#{$color} {
+    &:hover,
+    &:focus {
+      stroke: $value !important;
+    }
+  }
+
+  @for $alpha from 1 through 9 {
+    .stroke-hover-#{$color}-#{($alpha * 10)} {
+      &:hover,
+      &:focus {
+        stroke: rgba($value, ($alpha * .1)) !important;
+      }
+    }
+  }
+}
+@each $color, $value in $custom-colors {
+  .stroke-hover-#{$color} {
+    &:hover,
+    &:focus {
+      stroke: $value !important;
+    }
+  }
+
+  @for $alpha from 1 through 9 {
+    .stroke-hover-#{$color}-#{($alpha * 10)} {
+      &:hover,
+      &:focus {
+        stroke: rgba($value, ($alpha * .1)) !important;
+      }
+    }
+  }
+}

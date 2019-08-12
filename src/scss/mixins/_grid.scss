@@ -1,0 +1,10 @@
+// Row sizes
+@mixin row-size($size) {
+  @include make-row($grid-gutter-width / $size);
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: $grid-gutter-width / 2 / $size;
+    padding-left: $grid-gutter-width / 2 / $size;
+  }
+}
