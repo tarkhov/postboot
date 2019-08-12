@@ -3209,6 +3209,26 @@
   .input-white-90:disabled, .input-white-90[readonly] {
     background-color: #d9d9d9; }
 
+.btn-block {
+  display: block;
+  width: 100%; }
+
+@media (min-width: 576px) {
+  .btn-sm-block {
+    display: block;
+    width: 100%; } }
+@media (min-width: 768px) {
+  .btn-md-block {
+    display: block;
+    width: 100%; } }
+@media (min-width: 992px) {
+  .btn-lg-block {
+    display: block;
+    width: 100%; } }
+@media (min-width: 1200px) {
+  .btn-xl-block {
+    display: block;
+    width: 100%; } }
 .btn-xs {
   padding: 0.1rem 0.25rem;
   font-size: 0.75rem;

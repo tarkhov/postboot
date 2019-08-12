@@ -1,3 +1,15 @@
+// Responsive block
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .btn#{$infix}-block {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
 // Sizes
 .btn-xs {
   @include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, $font-size-xs, $line-height-xs, $btn-border-radius-xs);
