@@ -7014,6 +7014,30 @@
 .dropleft .dropdown-menu {
   top: calc(-0.5rem - 1px) !important; }
 
+.dropdown-menu-xs {
+  padding: 0.375rem 0;
+  font-size: 0.75rem; }
+  .dropdown-menu-xs .dropdown-item {
+    padding: 0.1rem 0.5rem; }
+  @media (max-width: 767.98px) {
+    .dropdown-menu-xs-down {
+      padding: 0.375rem 0;
+      font-size: 0.75rem; }
+      .dropdown-menu-xs-down .dropdown-item {
+        padding: 0.1rem 0.5rem; } }
+
+.dropdown-menu-sm {
+  padding: 0.25rem 0;
+  font-size: 0.875rem; }
+  .dropdown-menu-sm .dropdown-item {
+    padding: 0.15rem 1rem; }
+  @media (max-width: 991.98px) {
+    .dropdown-menu-sm-down {
+      padding: 0.25rem 0;
+      font-size: 0.875rem; }
+      .dropdown-menu-sm-down .dropdown-item {
+        padding: 0.15rem 1rem; } }
+
 .dropdown-arrow {
   position: absolute;
   display: block;

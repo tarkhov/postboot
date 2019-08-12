@@ -1,0 +1,9 @@
+// Sizes
+@mixin dropdown-menu-size($padding-y, $item-padding-y, $item-padding-x, $font-size) {
+  padding: $padding-y 0;
+  font-size: $font-size;
+
+  .dropdown-item {
+    padding: $item-padding-y $item-padding-x;
+  }
+}
