@@ -11,20 +11,6 @@
   }
 }
 
-// Fill opacity
-@for $alpha from 1 through 9 {
-  @each $color, $value in $theme-colors {
-    .fill-#{$color}-#{($alpha * 10)} {
-      fill: rgba($value, ($alpha * .1)) !important;
-    }
-  }
-  @each $color, $value in $custom-colors {
-    .fill-#{$color}-#{($alpha * 10)} {
-      fill: rgba($value, ($alpha * .1)) !important;
-    }
-  }
-}
-
 // Fill hover
 @each $color, $value in $theme-colors {
   .fill-hover-#{$color} {
@@ -71,20 +57,6 @@
 @each $color, $value in $custom-colors {
   .stroke-#{$color} {
     stroke: $value !important;
-  }
-}
-
-// Stroke opacity
-@for $alpha from 1 through 9 {
-  @each $color, $value in $theme-colors {
-    .stroke-#{$color}-#{($alpha * 10)} {
-      stroke: rgba($value, ($alpha * .1)) !important;
-    }
-  }
-  @each $color, $value in $custom-colors {
-    .stroke-#{$color}-#{($alpha * 10)} {
-      stroke: rgba($value, ($alpha * .1)) !important;
-    }
   }
 }
 

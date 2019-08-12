@@ -1,3 +1,18 @@
+// Responsive
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @if $breakpoint != 'xs' {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      .border#{$infix}        { border: $border-width solid $border-color !important; }
+      .border#{$infix}-top    { border-top: $border-width solid $border-color !important; }
+      .border#{$infix}-right  { border-right: $border-width solid $border-color !important; }
+      .border#{$infix}-bottom { border-bottom: $border-width solid $border-color !important; }
+      .border#{$infix}-left   { border-left: $border-width solid $border-color !important; }
+    }
+  }
+}
+
 // Custom
 @each $color, $value in map-remove($custom-colors, "white") {
   .border-#{$color} {
