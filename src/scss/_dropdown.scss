@@ -8,20 +8,20 @@
 
 // Size
 .dropdown-menu-xs {
-  @include dropdown-menu-size($dropdown-padding-y-xs, $dropdown-item-padding-y-xs, $dropdown-item-padding-x-xs, $font-size-xs);
+  @include dropdown-menu-size($dropdown-padding-y-xs, $dropdown-item-padding-y-xs, $dropdown-item-padding-x-xs, $dropdown-font-size-xs);
 
   @include media-breakpoint-down(sm) {
     &-down {
-      @include dropdown-menu-size($dropdown-padding-y-xs, $dropdown-item-padding-y-xs, $dropdown-item-padding-x-xs, $font-size-xs);
+      @include dropdown-menu-size($dropdown-padding-y-xs, $dropdown-item-padding-y-xs, $dropdown-item-padding-x-xs, $dropdown-font-size-xs);
     }
   }
 }
 .dropdown-menu-sm {
-  @include dropdown-menu-size($dropdown-padding-y-sm, $dropdown-item-padding-y-sm, $dropdown-item-padding-x-sm, $font-size-sm);
+  @include dropdown-menu-size($dropdown-padding-y-sm, $dropdown-item-padding-y-sm, $dropdown-item-padding-x-sm, $dropdown-font-size-sm);
 
   @include media-breakpoint-down(md) {
     &-down {
-      @include dropdown-menu-size($dropdown-padding-y-sm, $dropdown-item-padding-y-sm, $dropdown-item-padding-x-sm, $font-size-sm);
+      @include dropdown-menu-size($dropdown-padding-y-sm, $dropdown-item-padding-y-sm, $dropdown-item-padding-x-sm, $dropdown-font-size-sm);
     }
   }
 }
