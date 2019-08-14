@@ -115,6 +115,8 @@ $line-height-xl: 1.5 !default;
 // Buttons
 $input-btn-padding-y-xs: .1rem !default;
 $input-btn-padding-x-xs: .25rem !default;
+$input-btn-font-size-xs: $font-size-xs !default;
+$input-btn-line-height-xs: $line-height-xs !default;
 
 $input-btn-padding-y-xl: .625rem !default;
 $input-btn-padding-x-xl: 1.25rem !default;
@@ -127,6 +129,13 @@ $btn-state-color-level: 6 !default;
 $btn-state-border-color: rgba($black, .125) !default;
 
 // Form
+$input-line-height-xs:   $input-btn-line-height-xs !default;
+$input-height-xs:        calc(#{$input-line-height-xs * 1em} + #{$input-btn-padding-y-xs * 2} + #{$input-height-border}) !default;
+$input-padding-y-xs:     $input-btn-padding-y-xs !default;
+$input-padding-x-xs:     $input-btn-padding-x-xs !default;
+$input-font-size-xs:     $input-btn-font-size-xs !default;
+$input-border-radius-xs: $border-radius-xs !default;
+
 $input-dark-color: $white !default;
 $input-dark-bg: $dark !default;
 

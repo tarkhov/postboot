@@ -1,3 +1,8 @@
+// Size
+.form-control-xs {
+  @include input-size($input-height-xs, $input-padding-y-xs, $input-padding-x-xs, $input-font-size-xs, $input-line-height-xs, $input-border-radius-xs);
+}
+
 // Input material
 .input-material {
   padding-right: 0;
