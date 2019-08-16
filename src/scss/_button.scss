@@ -76,24 +76,26 @@
 }
 
 // Opacity
-@for $alpha from 1 through 9 {
-  @each $color, $value in $theme-colors {
-    .btn-#{$color}-#{($alpha * 10)} {
-      @include button-variant(rgba($value, ($alpha * .1)), transparent);
-      @if $color == 'warning' {
-        &,
-        &:hover,
-        &:focus {
-          color: $white;
+@if $enable-opacity {
+  @for $alpha from 1 through 9 {
+    @each $color, $value in $theme-colors {
+      .btn-#{$color}-#{($alpha * 10)} {
+        @include button-variant(rgba($value, ($alpha * .1)), transparent);
+        @if $color == 'warning' {
+          &,
+          &:hover,
+          &:focus {
+            color: $white;
+          }
         }
       }
     }
-  }
-  @each $color, $value in $custom-colors {
-    .btn-#{$color}-#{($alpha * 10)} {
-      @include button-variant(rgba($value, ($alpha * .1)), transparent);
-      @if $color == 'orange' {
-        color: $white;
+    @each $color, $value in $custom-colors {
+      .btn-#{$color}-#{($alpha * 10)} {
+        @include button-variant(rgba($value, ($alpha * .1)), transparent);
+        @if $color == 'orange' {
+          color: $white;
+        }
       }
     }
   }

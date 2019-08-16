@@ -88,7 +88,9 @@ module.exports = function (grunt) {
       },
       dist: {
         files: {
-          'dist/css/<%= pkg.name %>.css': 'src/scss/main.scss'
+          'dist/css/<%= pkg.name %>.css': 'src/scss/main.scss',
+          'dist/css/<%= pkg.name %>-grid.css': 'src/scss/grid/main.scss',
+          'dist/css/<%= pkg.name %>-light.css': 'src/scss/light/main.scss'
         }
       },
       docs: {	
@@ -101,7 +103,9 @@ module.exports = function (grunt) {
     autoprefixer: {
       dist: {
         files: {
-          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css'
+          'dist/css/<%= pkg.name %>.css': 'dist/css/<%= pkg.name %>.css',
+          'dist/css/<%= pkg.name %>-grid.css': 'dist/css/<%= pkg.name %>-grid.css',
+          'dist/css/<%= pkg.name %>-light.css': 'dist/css/<%= pkg.name %>-light.css'
         }
       },
       docs: {	
@@ -113,8 +117,11 @@ module.exports = function (grunt) {
 
     cssmin: {
       dist: {
-        src: 'dist/css/<%= pkg.name %>.css',
-        dest: 'dist/css/<%= pkg.name %>.min.css'
+        files: {
+          'dist/css/<%= pkg.name %>.min.css': 'dist/css/<%= pkg.name %>.css',
+          'dist/css/<%= pkg.name %>-grid.min.css': 'dist/css/<%= pkg.name %>-grid.css',
+          'dist/css/<%= pkg.name %>-light.min.css': 'dist/css/<%= pkg.name %>-light.css'
+        }
       },
       docs: {	
         files: {	

@@ -76,15 +76,17 @@
 }
 
 // Opacity
-@for $alpha from 1 through 9 {
-  @each $color, $value in map-remove($theme-colors, "light") {
-    .input-#{$color}-#{($alpha * 10)} {
-      @include input-dark-variant(rgba($value, ($alpha * .1)));
+@if $enable-opacity {
+  @for $alpha from 1 through 9 {
+    @each $color, $value in map-remove($theme-colors, "light") {
+      .input-#{$color}-#{($alpha * 10)} {
+        @include input-dark-variant(rgba($value, ($alpha * .1)));
+      }
     }
-  }
-  @each $color, $value in $custom-colors {
-    .input-#{$color}-#{($alpha * 10)} {
-      @include input-dark-variant(rgba($value, ($alpha * .1)));
+    @each $color, $value in $custom-colors {
+      .input-#{$color}-#{($alpha * 10)} {
+        @include input-dark-variant(rgba($value, ($alpha * .1)));
+      }
     }
   }
 }

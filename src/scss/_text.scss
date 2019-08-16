@@ -4,13 +4,15 @@
 }
 
 // Opacity
-@for $alpha from 1 through 9 {
-  @each $color, $value in $theme-colors {
-    @include text-opacity-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
-  }
-  @each $color, $value in $custom-colors {
-    @if $color not in 'white', 'black' and $alpha != 5 {
+@if $enable-opacity {
+  @for $alpha from 1 through 9 {
+    @each $color, $value in $theme-colors {
       @include text-opacity-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+    }
+    @each $color, $value in $custom-colors {
+      @if $color not in 'white', 'black' and $alpha != 5 {
+        @include text-opacity-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+      }
     }
   }
 }
@@ -23,10 +25,12 @@
     }
   }
 
-  @for $alpha from 1 through 9 {
-    .text-hover-#{$color}-#{($alpha * 10)} {
-      @include hover-focus {
-        color: rgba($value, ($alpha * .1)) !important;
+  @if $enable-opacity {
+    @for $alpha from 1 through 9 {
+      .text-hover-#{$color}-#{($alpha * 10)} {
+        @include hover-focus {
+          color: rgba($value, ($alpha * .1)) !important;
+        }
       }
     }
   }
@@ -38,10 +42,12 @@
     }
   }
 
-  @for $alpha from 1 through 9 {
-    .text-hover-#{$color}-#{($alpha * 10)} {
-      @include hover-focus {
-        color: rgba($value, ($alpha * .1)) !important;
+  @if $enable-opacity {
+    @for $alpha from 1 through 9 {
+      .text-hover-#{$color}-#{($alpha * 10)} {
+        @include hover-focus {
+          color: rgba($value, ($alpha * .1)) !important;
+        }
       }
     }
   }

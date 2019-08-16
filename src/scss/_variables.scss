@@ -10,6 +10,9 @@ $custom-colors: map-merge((
   "white":  $white
 ), $custom-colors);
 
+// Opacity
+$enable-opacity: true !default;
+
 // Fonts
 $font-size-xs:  .75rem !default;
 $font-size-xl:  1.5rem !default;
