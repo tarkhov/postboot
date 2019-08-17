@@ -104,6 +104,26 @@
   }
 }
 
+// Active
+@each $color, $value in $theme-colors {
+  .btn-active-#{$color} {
+    @if $color == 'warning' {
+      @include button-active-variant($value, $value, $white);
+    } @else {
+      @include button-active-variant($value, $value);
+    }
+  }
+}
+@each $color, $value in $custom-colors {
+  .btn-active-#{$color} {
+    @if $color == 'orange' {
+      @include button-active-variant($value, $value, $white);
+    } @else {
+      @include button-active-variant($value, $value);
+    }
+  }
+}
+
 // Circle
 .btn-circle {
   border-radius: $border-radius-circle;

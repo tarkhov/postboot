@@ -1,3 +1,16 @@
+// Active
+@mixin button-active-variant($background, $border, $color: color-yiq($background)) {
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    color: $color;
+    background-color: $background;
+    @if $enable-gradients {
+      background-image: none;
+    }
+    border-color: $border;
+  }
+}
+
 // 3D
 @mixin button-3d-variant($background, $border) {
   border-bottom-width: 4px;

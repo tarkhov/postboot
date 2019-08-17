@@ -7393,6 +7393,81 @@
     .btn-white-90:not(:disabled):not(.disabled):active:focus, .btn-white-90:not(:disabled):not(.disabled).active:focus, .show > .btn-white-90.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5); }
 
+.btn-active-primary:not(:disabled):not(.disabled).active, .show > .btn-active-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff; }
+
+.btn-active-secondary:not(:disabled):not(.disabled).active, .show > .btn-active-secondary.dropdown-toggle {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d; }
+
+.btn-active-success:not(:disabled):not(.disabled).active, .show > .btn-active-success.dropdown-toggle {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745; }
+
+.btn-active-info:not(:disabled):not(.disabled).active, .show > .btn-active-info.dropdown-toggle {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8; }
+
+.btn-active-warning:not(:disabled):not(.disabled).active, .show > .btn-active-warning.dropdown-toggle {
+  color: #fff;
+  background-color: #ffc107;
+  border-color: #ffc107; }
+
+.btn-active-danger:not(:disabled):not(.disabled).active, .show > .btn-active-danger.dropdown-toggle {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545; }
+
+.btn-active-light:not(:disabled):not(.disabled).active, .show > .btn-active-light.dropdown-toggle {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa; }
+
+.btn-active-dark:not(:disabled):not(.disabled).active, .show > .btn-active-dark.dropdown-toggle {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40; }
+
+.btn-active-black:not(:disabled):not(.disabled).active, .show > .btn-active-black.dropdown-toggle {
+  color: #fff;
+  background-color: #000;
+  border-color: #000; }
+
+.btn-active-indigo:not(:disabled):not(.disabled).active, .show > .btn-active-indigo.dropdown-toggle {
+  color: #fff;
+  background-color: #6610f2;
+  border-color: #6610f2; }
+
+.btn-active-orange:not(:disabled):not(.disabled).active, .show > .btn-active-orange.dropdown-toggle {
+  color: #fff;
+  background-color: #fd7e14;
+  border-color: #fd7e14; }
+
+.btn-active-pink:not(:disabled):not(.disabled).active, .show > .btn-active-pink.dropdown-toggle {
+  color: #fff;
+  background-color: #e83e8c;
+  border-color: #e83e8c; }
+
+.btn-active-purple:not(:disabled):not(.disabled).active, .show > .btn-active-purple.dropdown-toggle {
+  color: #fff;
+  background-color: #6f42c1;
+  border-color: #6f42c1; }
+
+.btn-active-teal:not(:disabled):not(.disabled).active, .show > .btn-active-teal.dropdown-toggle {
+  color: #fff;
+  background-color: #20c997;
+  border-color: #20c997; }
+
+.btn-active-white:not(:disabled):not(.disabled).active, .show > .btn-active-white.dropdown-toggle {
+  color: #212529;
+  background-color: #fff;
+  border-color: #fff; }
+
 .btn-circle {
   border-radius: 50%;
   padding: 0;
