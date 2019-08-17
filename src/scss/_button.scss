@@ -1,21 +1,24 @@
-// Responsive block
+// Sizes
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .btn#{$infix}-block {
-      display: block;
-      width: 100%;
+    .btn#{$infix}-1 {
+      @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
+    }
+    .btn#{$infix}-2 {
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+    }
+    .btn#{$infix}-3 {
+      @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    }
+    .btn#{$infix}-4 {
+      @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+    }
+    .btn#{$infix}-5 {
+      @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-xl, $btn-line-height-xl, $btn-border-radius-xl);
     }
   }
-}
-
-// Sizes
-.btn-xs {
-  @include button-size($input-btn-padding-y-xs, $input-btn-padding-x-xs, $input-btn-font-size-xs, $input-btn-line-height-xs, $btn-border-radius-xs);
-}
-.btn-xl {
-  @include button-size($input-btn-padding-y-xl, $input-btn-padding-x-xl, $font-size-xl, $line-height-xl, $btn-border-radius-xl);
 }
 
 // Link
@@ -108,19 +111,28 @@
   line-height: normal;
   overflow: hidden;
 
-  @include button-circle-size($font-size-base);
+  @include button-circle-size($btn-font-size);
 
-  &.btn-xs {
-    @include button-circle-size($font-size-xs);
-  }
-  &.btn-sm {
-    @include button-circle-size($font-size-sm);
-  }
-  &.btn-lg {
-    @include button-circle-size($font-size-lg);
-  }
-  &.btn-xl {
-    @include button-circle-size($font-size-xl);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      &.btn#{$infix}-1 {
+        @include button-circle-size($btn-font-size-xs);
+      }
+      &.btn#{$infix}-2 {
+        @include button-circle-size($btn-font-size-sm);
+      }
+      &.btn#{$infix}-3 {
+        @include button-circle-size($btn-font-size);
+      }
+      &.btn#{$infix}-4 {
+        @include button-circle-size($btn-font-size-lg);
+      }
+      &.btn#{$infix}-5 {
+        @include button-circle-size($btn-font-size-xl);
+      }
+    }
   }
 }
 
@@ -128,3 +140,16 @@
 .btn-pill {
   border-radius: $rounded-pill;
 }
+
+// Responsive block
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .btn#{$infix}-block {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+

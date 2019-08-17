@@ -1,3 +1,20 @@
+// Size
+@mixin breadcrumb-size($padding-y, $padding-x, $font-size, $border-radius, $item-padding) {
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  font-size: $font-size;
+  @include border-radius($border-radius);
+
+  .breadcrumb-item {
+    + .breadcrumb-item {
+      padding-left: $item-padding;
+
+      &::before {
+        padding-right: $item-padding;
+      }
+    }
+  }
+}
+
 // Divider
 @mixin breadcrumb-divider($divider) {
   .breadcrumb-item {

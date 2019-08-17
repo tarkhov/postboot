@@ -25,11 +25,20 @@
 }
 
 // Row sizes
-.row-xs {
-  @include row-size(3);
-}
-.row-sm {
-  @include row-size(1.5);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .row#{$infix}-1 {
+      @include row-size(3);
+    }
+    .row#{$infix}-2 {
+      @include row-size(1.5);
+    }
+    .row#{$infix}-3 {
+      @include row-size(1);
+    }
+  }
 }
 
 // Column sizes

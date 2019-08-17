@@ -95,11 +95,20 @@
 }
 
 // Sizes
-.navbar-sm {
-  @include navbar-size($navbar-padding-y-sm, $font-size-sm, $font-size-base, $navbar-brand-padding-y-sm, $navbar-nav-padding-y-sm, $navbar-text-padding-y-sm, $navbar-nav-height-sm);
-}
-.navbar-lg {
-  @include navbar-size($navbar-padding-y-lg, $font-size-lg, $font-size-xl, $navbar-brand-padding-y-lg, $navbar-nav-padding-y-lg, $navbar-text-padding-y-lg, $navbar-nav-height-lg);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .navbar#{$infix}-2 {
+      @include navbar-size($navbar-padding-y-sm, $font-size-sm, $font-size-base, $navbar-brand-padding-y-sm, $navbar-nav-padding-y-sm, $navbar-nav-height-sm);
+    }
+    .navbar#{$infix}-3 {
+      @include navbar-size($navbar-padding-y, $font-size-base, $font-size-lg, $navbar-brand-padding-y, $nav-link-padding-y, $navbar-nav-height);
+    }
+    .navbar#{$infix}-4 {
+      @include navbar-size($navbar-padding-y-lg, $font-size-lg, $font-size-xl, $navbar-brand-padding-y-lg, $navbar-nav-padding-y-lg, $navbar-nav-height-lg);
+    }
+  }
 }
 
 // Padding

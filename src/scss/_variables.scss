@@ -123,9 +123,21 @@ $input-btn-line-height-xs: $line-height-xs !default;
 
 $input-btn-padding-y-xl: .625rem !default;
 $input-btn-padding-x-xl: 1.25rem !default;
+$input-btn-font-size-xl: $font-size-xl !default;
+$input-btn-line-height-xl: $line-height-xl !default;
 
 $btn-border-radius-xs: $border-radius-xs !default;
 $btn-border-radius-xl: $border-radius-xl !default;
+
+$btn-padding-y-xs: $input-btn-padding-y-xs !default;
+$btn-padding-x-xs: $input-btn-padding-x-xs !default;
+$btn-font-size-xs: $input-btn-font-size-xs !default;
+$btn-line-height-xs: $input-btn-line-height-xs !default;
+
+$btn-padding-y-xl: $input-btn-padding-y-xl !default;
+$btn-padding-x-xl: $input-btn-padding-x-xl !default;
+$btn-font-size-xl: $input-btn-font-size-xl !default;
+$btn-line-height-xl: $input-btn-line-height-xl !default;
 
 $btn-state-bg-level: -9 !default;
 $btn-state-color-level: 6 !default;
@@ -158,12 +170,10 @@ $card-dark-color: $white !default;
 $navbar-padding-y-sm:       ($spacer * .25) !default;
 $navbar-brand-padding-y-sm: .1rem !default;
 $navbar-nav-padding-y-sm:   .25rem !default;
-$navbar-text-padding-y-sm:  .25rem !default;
 
 $navbar-padding-y-lg:       ($spacer * .75) !default;
 $navbar-brand-padding-y-lg: .5rem !default;
 $navbar-nav-padding-y-lg:   .675rem !default;
-$navbar-text-padding-y-lg:  .675rem !default;
 
 $navbar-height:    3.5rem !default;
 $navbar-height-sm: 2.2rem !default;
@@ -211,6 +221,18 @@ $list-group-item-padding-y-lg: 1rem !default;
 $list-group-striped-bg: $light !default;
 
 // Breadcrumb
+$breadcrumb-padding-y-xs: .25rem !default;
+$breadcrumb-padding-x-xs: .5rem !default;
+$breadcrumb-item-padding-xs: .25rem !default;
+$breadcrumb-font-size-xs: $font-size-xs !default;
+$breadcrumb-border-radius-xs: $border-radius-xs !default;
+
+$breadcrumb-padding-y-sm: .5rem !default;
+$breadcrumb-padding-x-sm: .75rem !default;
+$breadcrumb-item-padding-sm: .375rem !default;
+$breadcrumb-font-size-sm: $font-size-sm !default;
+$breadcrumb-border-radius-sm: $border-radius-sm !default;
+
 $breadcrumb-dividers: (
   rang:   "27E9",
   raquo:  "00BB",

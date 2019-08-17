@@ -67,21 +67,18 @@
 }
 
 // Sizes
-.card-xs {
-  @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs, $nav-link-padding-y-xs, $nav-link-padding-x-xs);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-  @include media-breakpoint-down(sm) {
-    &-down {
+    .card#{$infix}-1 {
       @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs, $nav-link-padding-y-xs, $nav-link-padding-x-xs);
     }
-  }
-}
-.card-sm {
-  @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm, $nav-link-padding-y-sm, $nav-link-padding-x-sm);
-
-  @include media-breakpoint-down(md) {
-    &-down {
+    .card#{$infix}-2 {
       @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm, $nav-link-padding-y-sm, $nav-link-padding-x-sm);
+    }
+    .card#{$infix}-3 {
+      @include card-size($card-spacer-y, $card-spacer-x, $font-size-base, $nav-link-padding-y, $nav-link-padding-x);
     }
   }
 }

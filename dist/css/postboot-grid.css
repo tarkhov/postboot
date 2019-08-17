@@ -81,30 +81,186 @@
   .container-lg-3 {
     max-width: 960px; } }
 
-.row-xs {
+.row-1 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-right: -5px;
   margin-left: -5px; }
-  .row-xs > .col,
-  .row-xs > [class*="col-"] {
+  .row-1 > .col,
+  .row-1 > [class*="col-"] {
     padding-right: 5px;
     padding-left: 5px; }
 
-.row-sm {
+.row-2 {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-right: -10px;
   margin-left: -10px; }
-  .row-sm > .col,
-  .row-sm > [class*="col-"] {
+  .row-2 > .col,
+  .row-2 > [class*="col-"] {
     padding-right: 10px;
     padding-left: 10px; }
 
+.row-3 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+  .row-3 > .col,
+  .row-3 > [class*="col-"] {
+    padding-right: 15px;
+    padding-left: 15px; }
+
+@media (min-width: 576px) {
+  .row-sm-1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px; }
+    .row-sm-1 > .col,
+    .row-sm-1 > [class*="col-"] {
+      padding-right: 5px;
+      padding-left: 5px; }
+
+  .row-sm-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px; }
+    .row-sm-2 > .col,
+    .row-sm-2 > [class*="col-"] {
+      padding-right: 10px;
+      padding-left: 10px; }
+
+  .row-sm-3 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+    .row-sm-3 > .col,
+    .row-sm-3 > [class*="col-"] {
+      padding-right: 15px;
+      padding-left: 15px; } }
+@media (min-width: 768px) {
+  .row-md-1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px; }
+    .row-md-1 > .col,
+    .row-md-1 > [class*="col-"] {
+      padding-right: 5px;
+      padding-left: 5px; }
+
+  .row-md-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px; }
+    .row-md-2 > .col,
+    .row-md-2 > [class*="col-"] {
+      padding-right: 10px;
+      padding-left: 10px; }
+
+  .row-md-3 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+    .row-md-3 > .col,
+    .row-md-3 > [class*="col-"] {
+      padding-right: 15px;
+      padding-left: 15px; } }
+@media (min-width: 992px) {
+  .row-lg-1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px; }
+    .row-lg-1 > .col,
+    .row-lg-1 > [class*="col-"] {
+      padding-right: 5px;
+      padding-left: 5px; }
+
+  .row-lg-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px; }
+    .row-lg-2 > .col,
+    .row-lg-2 > [class*="col-"] {
+      padding-right: 10px;
+      padding-left: 10px; }
+
+  .row-lg-3 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+    .row-lg-3 > .col,
+    .row-lg-3 > [class*="col-"] {
+      padding-right: 15px;
+      padding-left: 15px; } }
+@media (min-width: 1200px) {
+  .row-xl-1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px; }
+    .row-xl-1 > .col,
+    .row-xl-1 > [class*="col-"] {
+      padding-right: 5px;
+      padding-left: 5px; }
+
+  .row-xl-2 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -10px;
+    margin-left: -10px; }
+    .row-xl-2 > .col,
+    .row-xl-2 > [class*="col-"] {
+      padding-right: 10px;
+      padding-left: 10px; }
+
+  .row-xl-3 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; }
+    .row-xl-3 > .col,
+    .row-xl-3 > [class*="col-"] {
+      padding-right: 15px;
+      padding-left: 15px; } }
 .col-2-5 {
   position: relative;
   width: 100%;

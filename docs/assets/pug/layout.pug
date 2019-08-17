@@ -33,8 +33,6 @@ html(lang="en")
               ul.navbar-nav
                 li.nav-item
                   a.nav-link(href=githubUrl + "/" + username + "/" + pkg.name) #[i.fab.fa-github-alt]#[span.d-none.d-md-inline!= "&nbsp;&nbsp;GitHub"]
-                li.nav-item
-                  a.nav-link(href="https://www.producthunt.com/posts/" + pkg.name) #[i.fab.fa-product-hunt]#[span.d-none.d-md-inline!="&nbsp;&nbsp;ProductHunt"]
               a.btn.btn-primary.btn-sm.ml-2(href=downloadUrl) Download
 
     block content
