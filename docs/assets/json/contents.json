@@ -405,11 +405,23 @@
       },
       {
         "url": "#navbar-scroller",
-        "name": "Scroller"
+        "name": "Scroller",
+        "childs": [
+          {
+            "url": "#navbar-scroller-size",
+            "name": "Size"
+          }
+        ]
       },
       {
         "url": "#navbar-size",
-        "name": "Size"
+        "name": "Size",
+        "childs": [
+          {
+            "url": "#navbar-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       },
       {
         "url": "#navbar-spacing",

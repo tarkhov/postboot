@@ -250,8 +250,14 @@
                   <li class="nav-item"><a class="nav-link" href="#navbar-nav-align">Nav align</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-scroller">Scroller</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#navbar-scroller-size">Size</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-size">Size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#navbar-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-spacing">Spacing</a>
                   </li>
@@ -3530,12 +3536,96 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+                <div id="navbar-scroller-size">
+                  <h4 class="fw-400">Scroller sizes</h4>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <div class="navbar mb-3 navbar-2 navbar-expand-xs navbar-dark bg-dark px-0">
+                        <div class="container-fluid"><a class="navbar-brand" href="#">S</a>
+                          <div class="navbar-scroller">
+                            <ul class="navbar-nav navbar-scroller-nav">
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 6</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 7</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 8</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 9</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 10</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="navbar navbar-4 navbar-expand-xs navbar-dark bg-dark px-0">
+                        <div class="container-fluid"><a class="navbar-brand" href="#">S</a>
+                          <div class="navbar-scroller">
+                            <ul class="navbar-nav navbar-scroller-nav">
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 6</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 7</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 8</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 9</a></li>
+                              <li class="nav-item"><a class="nav-link" href="#">Nav item 10</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-footer">
+                      <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;navbar navbar-2 navbar-expand-xs navbar-dark bg-dark px-0&#x22;&#x3E;
+  &#x3C;div class=&#x22;container-fluid&#x22;&#x3E;&#x3C;a class=&#x22;navbar-brand&#x22; href=&#x22;#&#x22;&#x3E;S&#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;navbar-scroller&#x22;&#x3E;
+      &#x3C;ul class=&#x22;navbar-nav navbar-scroller-nav&#x22;&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 4&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 5&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 6&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 7&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 8&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 9&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 10&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;navbar navbar-4 navbar-expand-xs navbar-dark bg-dark px-0&#x22;&#x3E;
+  &#x3C;div class=&#x22;container-fluid&#x22;&#x3E;&#x3C;a class=&#x22;navbar-brand&#x22; href=&#x22;#&#x22;&#x3E;S&#x3C;/a&#x3E;
+    &#x3C;div class=&#x22;navbar-scroller&#x22;&#x3E;
+      &#x3C;ul class=&#x22;navbar-nav navbar-scroller-nav&#x22;&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 4&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 5&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 6&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 7&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 8&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 9&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 10&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+    &#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
               </div>
               <div id="navbar-size">
                 <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                            <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-sm mb-3">
+                                            <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-2 mb-3">
                                               <button class="navbar-toggler mr-3" type="button"><span class="tribar navbar-toggler-tribar"></span></button>
 	<a class="navbar-brand" href="#">Navbar</a>
                                               <div class="collapse navbar-collapse">
@@ -3546,7 +3636,18 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                                                 </ul>
                                               </div>
                                             </nav>
-                                            <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-lg mb-3">
+                                            <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-3 mb-3">
+                                              <button class="navbar-toggler mr-3" type="button"><span class="tribar navbar-toggler-tribar"></span></button>
+	<a class="navbar-brand" href="#">Navbar</a>
+                                              <div class="collapse navbar-collapse">
+                                                <ul class="navbar-nav">
+                                                  <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                                                  <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                                  <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                                </ul>
+                                              </div>
+                                            </nav>
+                                            <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-4 mb-3">
                                               <button class="navbar-toggler mr-3" type="button"><span class="tribar navbar-toggler-tribar"></span></button>
 	<a class="navbar-brand" href="#">Navbar</a>
                                               <div class="collapse navbar-collapse">
@@ -3560,11 +3661,34 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                   <div class="card-footer">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;nav class=&#x22;navbar navbar-sm&#x22;&#x3E;&#x3C;/nav&#x3E;
-&#x3C;nav class=&#x22;navbar navbar-lg&#x22;&#x3E;&#x3C;/nav&#x3E;</code></pre>
+&#x3C;nav class=&#x22;navbar navbar-2&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-3&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-4&#x22;&#x3E;&#x3C;/nav&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+                <div id="navbar-size-responsive">
+                  <h4 class="fw-400">Responsive navbar sizes</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-sm-2&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-sm-3&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-sm-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+
+&#x3C;nav class=&#x22;navbar navbar-md-2&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-md-3&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-md-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+
+&#x3C;nav class=&#x22;navbar navbar-lg-2&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-lg-3&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-lg-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+
+&#x3C;nav class=&#x22;navbar navbar-xl-2&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-xl-3&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-xl-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+</code></pre>
+                  </div>
+                </div>
               </div>
               <div id="navbar-spacing">
                 <h3 class="fw-400">Fixed padding</h3>
@@ -4623,8 +4747,14 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <li class="nav-item"><a class="nav-link" href="#navbar-nav-align">Nav align</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-scroller">Scroller</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#navbar-scroller-size">Size</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-size">Size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#navbar-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-spacing">Spacing</a>
                   </li>

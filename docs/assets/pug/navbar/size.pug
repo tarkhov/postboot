@@ -4,11 +4,11 @@ block example_title
   h3.fw-400 Sizes
 
 block example_result
-  each size in ['sm', 'lg']
+  - for(var size = 2; size <= 4; size++)
     +navbar_size(size)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each size in ['sm', 'lg']
+    - for(var size = 2; size <= 4; size++)
       nav.navbar(class='navbar-' + size)

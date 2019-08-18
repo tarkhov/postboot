@@ -1,0 +1,12 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Responsive navbar sizes
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 2; size <= 4; size++)
+        nav.navbar(class='navbar-' + breakpoint + '-' + size)
+      ="\n"
