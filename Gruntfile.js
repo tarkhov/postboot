@@ -127,7 +127,7 @@ module.exports = function (grunt) {
         files: {	
           'docs/assets/css/app.min.css': [
             'node_modules/bootstrap/dist/css/bootstrap.min.css',
-            '<%= cssmin.dist.dest %>',
+            'dist/css/<%= pkg.name %>.min.css',
             'node_modules/prismjs/themes/prism.css',
             'node_modules/@fortawesome/fontawesome-free/css/svg-with-js.min.css',
             'docs/assets/css/main.css'

@@ -2990,26 +2990,196 @@
 .pb-navbar {
   padding-bottom: 3.5rem; }
 
-.py-navbar-sm {
+.py-navbar-2 {
   padding-top: 2.2rem;
   padding-bottom: 2.2rem; }
 
-.pt-navbar-sm {
+.pt-navbar-2 {
   padding-top: 2.2rem; }
 
-.pb-navbar-sm {
+.pb-navbar-2 {
   padding-bottom: 2.2rem; }
 
-.py-navbar-lg {
+.py-navbar-3 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem; }
+
+.pt-navbar-3 {
+  padding-top: 3.5rem; }
+
+.pb-navbar-3 {
+  padding-bottom: 3.5rem; }
+
+.py-navbar-4 {
   padding-top: 4.75rem;
   padding-bottom: 4.75rem; }
 
-.pt-navbar-lg {
+.pt-navbar-4 {
   padding-top: 4.75rem; }
 
-.pb-navbar-lg {
+.pb-navbar-4 {
   padding-bottom: 4.75rem; }
 
+@media (min-width: 576px) {
+  .py-navbar-sm {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+  .pt-navbar-sm {
+    padding-top: 3.5rem; }
+
+  .pb-navbar-sm {
+    padding-bottom: 3.5rem; }
+
+  .py-navbar-sm-2 {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem; }
+
+  .pt-navbar-sm-2 {
+    padding-top: 2.2rem; }
+
+  .pb-navbar-sm-2 {
+    padding-bottom: 2.2rem; }
+
+  .py-navbar-sm-3 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+  .pt-navbar-sm-3 {
+    padding-top: 3.5rem; }
+
+  .pb-navbar-sm-3 {
+    padding-bottom: 3.5rem; }
+
+  .py-navbar-sm-4 {
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem; }
+
+  .pt-navbar-sm-4 {
+    padding-top: 4.75rem; }
+
+  .pb-navbar-sm-4 {
+    padding-bottom: 4.75rem; } }
+@media (min-width: 768px) {
+  .py-navbar-md {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+  .pt-navbar-md {
+    padding-top: 3.5rem; }
+
+  .pb-navbar-md {
+    padding-bottom: 3.5rem; }
+
+  .py-navbar-md-2 {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem; }
+
+  .pt-navbar-md-2 {
+    padding-top: 2.2rem; }
+
+  .pb-navbar-md-2 {
+    padding-bottom: 2.2rem; }
+
+  .py-navbar-md-3 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+  .pt-navbar-md-3 {
+    padding-top: 3.5rem; }
+
+  .pb-navbar-md-3 {
+    padding-bottom: 3.5rem; }
+
+  .py-navbar-md-4 {
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem; }
+
+  .pt-navbar-md-4 {
+    padding-top: 4.75rem; }
+
+  .pb-navbar-md-4 {
+    padding-bottom: 4.75rem; } }
+@media (min-width: 992px) {
+  .py-navbar-lg {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+  .pt-navbar-lg {
+    padding-top: 3.5rem; }
+
+  .pb-navbar-lg {
+    padding-bottom: 3.5rem; }
+
+  .py-navbar-lg-2 {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem; }
+
+  .pt-navbar-lg-2 {
+    padding-top: 2.2rem; }
+
+  .pb-navbar-lg-2 {
+    padding-bottom: 2.2rem; }
+
+  .py-navbar-lg-3 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+  .pt-navbar-lg-3 {
+    padding-top: 3.5rem; }
+
+  .pb-navbar-lg-3 {
+    padding-bottom: 3.5rem; }
+
+  .py-navbar-lg-4 {
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem; }
+
+  .pt-navbar-lg-4 {
+    padding-top: 4.75rem; }
+
+  .pb-navbar-lg-4 {
+    padding-bottom: 4.75rem; } }
+@media (min-width: 1200px) {
+  .py-navbar-xl {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+  .pt-navbar-xl {
+    padding-top: 3.5rem; }
+
+  .pb-navbar-xl {
+    padding-bottom: 3.5rem; }
+
+  .py-navbar-xl-2 {
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem; }
+
+  .pt-navbar-xl-2 {
+    padding-top: 2.2rem; }
+
+  .pb-navbar-xl-2 {
+    padding-bottom: 2.2rem; }
+
+  .py-navbar-xl-3 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem; }
+
+  .pt-navbar-xl-3 {
+    padding-top: 3.5rem; }
+
+  .pb-navbar-xl-3 {
+    padding-bottom: 3.5rem; }
+
+  .py-navbar-xl-4 {
+    padding-top: 4.75rem;
+    padding-bottom: 4.75rem; }
+
+  .pt-navbar-xl-4 {
+    padding-top: 4.75rem; }
+
+  .pb-navbar-xl-4 {
+    padding-bottom: 4.75rem; } }
 .card-img-left {
   width: auto;
   height: 100%;

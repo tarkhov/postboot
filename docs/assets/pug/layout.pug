@@ -17,7 +17,7 @@ html(lang="en")
     link(rel="dns-prefetch" href="https://fonts.googleapis.com")
     link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet")
     link(rel="stylesheet" href="/" + pkg.name + "/assets/css/app.min.css")
-  body.pt-navbar(data-spy="scroll" data-target="#sidebar-left")
+  body.pt-navbar.pb-navbar-2.pb-md-0(data-spy="scroll" data-target=".contents-nav")
     block header
       header.pb-gutter(role="banner")
         nav#navbar-top.navbar.navbar-expand-xs.navbar-light.px-sm-0.fixed-top(role="navigation")
@@ -39,10 +39,30 @@ html(lang="en")
       .container-fluid.container-xl
         .row
           .col-md-2
-            aside#sidebar-left.sidebar.sidebar-light.sidebar-expand-md.py-0.position-fixed(role="complementary")
+            aside#sidebar-left.contents-nav.sidebar.sidebar-light.sidebar-expand-md.py-0.position-fixed(role="complementary")
               block sidebar
           main.col-md-10(role="main")
             article(role="article")
               block main
+
+    block footer
+      footer.pt-gutter.d-block.d-md-none(role="contentinfo")
+        nav.contents-nav.navbar.navbar-2.navbar-expand-xs.navbar-light.px-sm-0.fixed-bottom.border-top.bg-white(role="navigation")
+          .container-fluid
+            .navbar-scroller
+              ul.navbar-nav.navbar-nav-left.navbar-scroller-nav
+                each category in contents
+                  li.nav-item
+                    a.nav-link(href=category.url)= category.name
+                    if category.childs
+                      ul.d-none
+                        each article in category.childs
+                          li.nav-item
+                            a.nav-link(href=article.url)= article.name
+                            if article.childs
+                              ul.d-none
+                                each subarticle in article.childs
+                                  li.nav-item
+                                    a.nav-link(href=subarticle.url)= subarticle.name
 
     script(src="/" + pkg.name + "/assets/js/app.min.js")

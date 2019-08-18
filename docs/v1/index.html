@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
     <link rel="stylesheet" href="/postboot/assets/css/app.min.css">
   </head>
-  <body class="pt-navbar" data-spy="scroll" data-target="#sidebar-left">
+  <body class="pt-navbar pb-navbar-2 pb-md-0" data-spy="scroll" data-target=".contents-nav">
     <header class="pb-gutter" role="banner">
       <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
         <div class="container-fluid container-xl"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-rc3</sup></a>
@@ -33,18 +33,18 @@
     <div class="container-fluid container-xl">
       <div class="row">
         <div class="col-md-2">
-          <aside class="sidebar sidebar-light sidebar-expand-md py-0 position-fixed" id="sidebar-left" role="complementary">
-            <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm pr-gutter">
+          <aside class="contents-nav sidebar sidebar-light sidebar-expand-md py-0 position-fixed" id="sidebar-left" role="complementary">
+            <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 pr-gutter">
               <li class="nav-item"><a class="nav-link" href="#start">Start</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#install">Install</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#install-manually">Manually</a></li>
                       <li class="nav-item"><a class="nav-link" href="#install-nodejs">NodeJS</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#usage">Usage</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#usage-local">Local</a></li>
                       <li class="nav-item"><a class="nav-link" href="#usage-cdn">CDN</a></li>
                     </ul>
@@ -52,7 +52,7 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#background">Background</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#background-custom">Custom</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#background-opacity">Opacity</a>
@@ -60,7 +60,7 @@
                   <li class="nav-item"><a class="nav-link" href="#background-state">State</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#background-hover">Hover</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#background-hover-opacity">Opacity</a></li>
                     </ul>
                   </li>
@@ -73,7 +73,7 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#badge">Badge</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#badge-custom">Custom</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#badge-opacity">Opacity</a>
@@ -81,13 +81,13 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#border">Border</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#border-custom">Custom</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#border-opacity">Opacity</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#border-hover">Hover</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#border-hover-opacity">Opacity</a></li>
                     </ul>
                   </li>
@@ -98,7 +98,7 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#breadcrumb">Breadcrumb</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#breadcrumb-arrow">Arrow</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#breadcrumb-color">Color</a>
@@ -108,7 +108,7 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#button">Button</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#button-custom">Custom</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a>
@@ -128,13 +128,13 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#card">Card</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#card-footer-pills">Footer pills</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#card-footer-tabs">Footer tabs</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#card-image">Image</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#card-image-responsive">Responsive</a></li>
                     </ul>
                   </li>
@@ -145,19 +145,19 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#collapse">Collapse</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#collapse-horizontal">Horizontal</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#dropdown">Dropdown</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#dropdown-arrow">Arrow</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-disable-caret">Disable caret</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-hover">Hover</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#dropdown-off-click">Off click</a></li>
                     </ul>
                   </li>
@@ -168,21 +168,21 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#font">Font</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#font-size">Size</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#font-size-responsive">Responsive</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#font-weight">Weight</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#font-weight-responsive">Responsive</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#form">Form</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#input-dark">Dark</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#input-color">Color</a>
@@ -194,39 +194,39 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#grid">Grid</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#grid-container">Container</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#grid-container-size">Size</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing-responsive">Responsive</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#list-group">List group</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#list-group-size">Size</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#list-group-item-size">Item</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#nav">Nav</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#nav-active">Active</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-size">Size</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#nav-size-direction">Direction</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#nav-tabs-responsive">Responsive</a></li>
                     </ul>
                   </li>
@@ -235,7 +235,7 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#navbar-breadcrumb">Breadcrumb</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-container">Container</a>
@@ -257,40 +257,40 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#position">Position</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#position-spacing">Spacing</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#position-spacing-responsive">Responsive</a></li>
                     </ul>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#progress">Progress</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#progress-size">Size</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#scrollspy">ScrollSpy</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#scrollspy-tree">Tree</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#sidebar-modal">Modal</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#text">Text</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#text-custom">Custom</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#text-opacity">Opacity</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#text-hover">Hover</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-1 pl-3">
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#text-hover-opacity">Opacity</a></li>
                     </ul>
                   </li>
@@ -299,13 +299,13 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#tribar">Triple bar</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#tribar-color">Color</a>
                   </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#type">Typography</a>
-                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-sm fs-2 pl-3">
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#type-heading-responsive">Heading</a>
                   </li>
                 </ul>
@@ -4355,6 +4355,291 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
         </main>
       </div>
     </div>
+    <footer class="pt-gutter d-block d-md-none" role="contentinfo">
+      <nav class="contents-nav navbar navbar-2 navbar-expand-xs navbar-light px-sm-0 fixed-bottom border-top bg-white" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-scroller">
+            <ul class="navbar-nav navbar-nav-left navbar-scroller-nav">
+              <li class="nav-item"><a class="nav-link" href="#start">Start</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#install">Install</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#install-manually">Manually</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#install-nodejs">NodeJS</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#usage">Usage</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#usage-local">Local</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#usage-cdn">CDN</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#background">Background</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#background-custom">Custom</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#background-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#background-state">State</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#background-hover">Hover</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#background-hover-opacity">Opacity</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#background-contain">Contain</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#background-cover">Cover</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#background-striped">Striped</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#badge">Badge</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#badge-custom">Custom</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#badge-opacity">Opacity</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#border">Border</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#border-custom">Custom</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-hover">Hover</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#border-hover-opacity">Opacity</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-style">Style</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-width">Width</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#breadcrumb">Breadcrumb</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#breadcrumb-arrow">Arrow</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#breadcrumb-color">Color</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#breadcrumb-pill">Pill</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#button">Button</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#button-custom">Custom</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-state">State</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-size">Size</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-circle">Circle</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-pill">Pill</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#card">Card</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#card-footer-pills">Footer pills</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#card-footer-tabs">Footer tabs</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#card-image">Image</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#card-image-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#card-pill">Pill</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#card-size">Size</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#collapse">Collapse</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#collapse-horizontal">Horizontal</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#dropdown">Dropdown</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-arrow">Arrow</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-disable-caret">Disable caret</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-hover">Hover</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-off-click">Off click</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-scrollable-menu">Scrollable</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#font">Font</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#font-size">Size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#font-size-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#font-weight">Weight</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#font-weight-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#form">Form</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#input-dark">Dark</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#input-color">Color</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#input-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#input-material">Material</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#grid">Grid</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#grid-container">Container</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#grid-container-size">Size</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#list-group">List group</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#list-group-size">Size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#list-group-item-size">Item</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#nav">Nav</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#nav-active">Active</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#nav-size">Size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#nav-size-direction">Direction</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#nav-tabs-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#nav-tree">Tree</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#navbar">Navbar</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#navbar-breadcrumb">Breadcrumb</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-container">Container</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-dropdown-menu">Dropdown menu</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-expand-size">Expand size</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-nav-align">Nav align</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-scroller">Scroller</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-size">Size</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-spacing">Spacing</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#navbar-tribar">Triple bar</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#position">Position</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#position-spacing">Spacing</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#position-spacing-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#progress">Progress</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#progress-size">Size</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#scrollspy">ScrollSpy</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#scrollspy-tree">Tree</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#sidebar-modal">Modal</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#text">Text</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#text-custom">Custom</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#text-opacity">Opacity</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#text-hover">Hover</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#text-hover-opacity">Opacity</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#text-state">State</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#tribar">Triple bar</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#tribar-color">Color</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#type">Typography</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#type-heading-responsive">Heading</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
     <script src="/postboot/assets/js/app.min.js"></script>
   </body>
 </html>
