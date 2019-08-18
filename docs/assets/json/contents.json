@@ -203,7 +203,13 @@
       },
       {
         "url": "#card-size",
-        "name": "Size"
+        "name": "Size",
+        "childs": [
+          {
+            "url": "#card-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       }
     ]
   },
