@@ -7,7 +7,7 @@ block example_title
 block example_code
   :encode-pug
     | <!-- Source -->
-    each size in [0, 'xs', 'sm', 'lg']
+    - for(var size = 0; size <= 4; size++)
       each dir in ['x', 'y']
         ul.nav(class='nav-' + dir + '-' + size)
       = "\n"

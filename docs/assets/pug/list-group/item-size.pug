@@ -7,15 +7,15 @@ block example_result
   .row
     .col-md-4
       .list-group
-        +list_group_item_variant('Large', 'lg')
-        +list_group_item_variant('Base', 'x-lg')
-        +list_group_item('Small' , ['list-group-item-sm', 'list-group-item-x-lg'])
-        +list_group_item('Extra small', ['list-group-item-xs', 'list-group-item-x-lg'])
+        +list_group_item_variant('Large', '4')
+        +list_group_item_variant('Base', 'x-4')
+        +list_group_item('Small' , ['list-group-item-2', 'list-group-item-x-4'])
+        +list_group_item('Extra small', ['list-group-item-1', 'list-group-item-x-4'])
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each size in ['xs', 'sm', 'lg']
+    - for(var size = 1; size <= 4; size++)
       div(class='list-group-item-' + size)
       each coordinate in ['x', 'y']
         div(class='list-group-item-' + coordinate + '-' + size)

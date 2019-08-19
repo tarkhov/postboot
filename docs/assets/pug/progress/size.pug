@@ -4,11 +4,11 @@ block example_title
   h3.fw-400 Sizes
 
 block example_result
-  each size in ['xs', 'md', 'lg', 'xl']
+  - for(var size = 1; size <= 5; size++)
     +progress_variant(size)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each size in ['xs', 'md', 'lg', 'xl']
+    - for(var size = 1; size <= 5; size++)
       .progress(class='progress-' + size)

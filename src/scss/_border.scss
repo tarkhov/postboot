@@ -82,10 +82,24 @@
 }
 
 // Width
-@for $width from 1 through $border-widths {
-  .border-#{$width} { border-width: #{$width}px !important; }
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-  @each $position in $position-properties {
-    .border-#{$position}-#{$width} { border-#{$position}-width: #{$width}px !important; }
+    @if $breakpoint != 'xs' {
+      .border#{$infix}-0 { border-width: 0 !important; }
+
+      @each $position in $position-properties {
+        .border-#{$position}#{$infix}-0 { border-#{$position}-width: 0 !important; }
+      }
+    }
+
+    @for $width from 1 through $border-widths {
+      .border#{$infix}-#{$width} { border-width: #{$width}px !important; }
+
+      @each $position in $position-properties {
+        .border-#{$position}#{$infix}-#{$width} { border-#{$position}-width: #{$width}px !important; }
+      }
+    }
   }
 }

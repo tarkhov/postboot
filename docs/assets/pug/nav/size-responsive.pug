@@ -1,0 +1,15 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Responsive nav sizes
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 0; size <= 4; size++)
+        if size != 0
+          ul.nav(class='nav-' + breakpoint + '-' + size)
+        each dir in ['x', 'y']
+          ul.nav(class='nav-' + dir + '-' + breakpoint + '-' + size)
+      ="\n"

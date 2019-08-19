@@ -1,0 +1,12 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Responsive progress sizes
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 5; size++)
+        .progress(class='progress-' + breakpoint + '-' + size)
+      ="\n"

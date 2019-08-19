@@ -5,12 +5,12 @@ block example_title
 
 block example_result
   .row
-    each size in ['xs', 'sm', 'lg']
-      .col-md-4
+    - for(var size = 1; size <= 4; size++)
+      .col-md-3
         +list_group_variant(size)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each size in ['xs', 'sm', 'lg']
+    - for(var size = 1; size <= 4; size++)
       .list-group(class='list-group-' + size)

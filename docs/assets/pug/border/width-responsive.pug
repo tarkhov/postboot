@@ -1,0 +1,12 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Responsive border widths
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var width = 0; width <= 5; width++)
+        p(class='border-' + breakpoint + '-' + width)= width + 'px'
+      ="\n"

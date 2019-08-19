@@ -94,6 +94,9 @@
                   <li class="nav-item"><a class="nav-link" href="#border-style">Style</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#border-width">Width</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#border-width-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -120,6 +123,9 @@
                   <li class="nav-item"><a class="nav-link" href="#button-state">State</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-size">Size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#button-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-circle">Circle</a>
                   </li>
@@ -215,6 +221,7 @@
                   <li class="nav-item"><a class="nav-link" href="#list-group-size">Size</a>
                     <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#list-group-item-size">Item</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#list-group-size-responsive">Responsive</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -226,6 +233,7 @@
                   <li class="nav-item"><a class="nav-link" href="#nav-size">Size</a>
                     <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#nav-size-direction">Direction</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#nav-size-responsive">Responsive</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a>
@@ -277,6 +285,9 @@
               <li class="nav-item"><a class="nav-link" href="#progress">Progress</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
                   <li class="nav-item"><a class="nav-link" href="#progress-size">Size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#progress-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -1553,6 +1564,40 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+                <div id="border-width-responsive">
+                  <h4 class="fw-400">Responsive border widths</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;p class=&#x22;border-sm-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-sm-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-sm-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-sm-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-sm-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-sm-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+
+&#x3C;p class=&#x22;border-md-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-md-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-md-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-md-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-md-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-md-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+
+&#x3C;p class=&#x22;border-lg-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-lg-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-lg-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-lg-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-lg-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-lg-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+
+&#x3C;p class=&#x22;border-xl-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-xl-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-xl-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-xl-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-xl-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-xl-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+</code></pre>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="breadcrumb">
@@ -1960,16 +2005,52 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                 <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                            <button class="btn mr-1 mb-2 btn-secondary btn-xs" type="button">Extra small</button>
-                                            <button class="btn mr-1 mb-2 btn-secondary btn-xl" type="button">Extra large</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-1" type="button">Button</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-2" type="button">Button</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-3" type="button">Button</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-4" type="button">Button</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-5" type="button">Button</button>
                   </div>
                   <div class="card-footer">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;button class=&#x22;btn btn-secondary btn-xs&#x22; type=&#x22;button&#x22;&#x3E;Extra small&#x3C;/button&#x3E;
-&#x3C;button class=&#x22;btn btn-secondary btn-xl&#x22; type=&#x22;button&#x22;&#x3E;Extra large&#x3C;/button&#x3E;</code></pre>
+&#x3C;button class=&#x22;btn btn-secondary btn-1&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-2&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-3&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-4&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-5&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+                <div id="button-size-responsive">
+                  <h4 class="fw-400">Responsive button sizes</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-sm-1&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-sm-2&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-sm-3&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-sm-4&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-sm-5&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+
+&#x3C;button class=&#x22;btn btn-secondary btn-md-1&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-md-2&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-md-3&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-md-4&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-md-5&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+
+&#x3C;button class=&#x22;btn btn-secondary btn-lg-1&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-lg-2&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-lg-3&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-lg-4&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-lg-5&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+
+&#x3C;button class=&#x22;btn btn-secondary btn-xl-1&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-xl-2&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-xl-3&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-xl-4&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-xl-5&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+</code></pre>
+                  </div>
+                </div>
               </div>
               <div id="button-circle">
                 <h3 class="fw-400">Circle</h3>
@@ -3130,25 +3211,30 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                 <div class="card mb-3">
                   <div class="card-body">
                     <div class="row">
-                      <div class="col-md-4">
-                                                <div class="list-group list-group-xs"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
+                      <div class="col-md-3">
+                                                <div class="list-group list-group-1"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
                                                 </div>
                       </div>
-                      <div class="col-md-4">
-                                                <div class="list-group list-group-sm"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
+                      <div class="col-md-3">
+                                                <div class="list-group list-group-2"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
                                                 </div>
                       </div>
-                      <div class="col-md-4">
-                                                <div class="list-group list-group-lg"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
+                      <div class="col-md-3">
+                                                <div class="list-group list-group-3"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
+                                                </div>
+                      </div>
+                      <div class="col-md-3">
+                                                <div class="list-group list-group-4"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
                                                 </div>
                       </div>
                     </div>
                   </div>
                   <div class="card-footer">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;list-group list-group-xs&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group list-group-sm&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group list-group-lg&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;list-group list-group-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-4&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -3158,28 +3244,106 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                     <div class="card-body">
                       <div class="row">
                         <div class="col-md-4">
-                          <div class="list-group"><a class="list-group-item list-group-item-action list-group-item-lg" href="#">Large</a><a class="list-group-item list-group-item-action list-group-item-x-lg" href="#">Base</a><a class="list-group-item list-group-item-action list-group-item-sm list-group-item-x-lg" href="#">Small</a><a class="list-group-item list-group-item-action list-group-item-xs list-group-item-x-lg" href="#">Extra small</a>
+                          <div class="list-group"><a class="list-group-item list-group-item-action list-group-item-4" href="#">Large</a><a class="list-group-item list-group-item-action list-group-item-x-4" href="#">Base</a><a class="list-group-item list-group-item-action list-group-item-2 list-group-item-x-4" href="#">Small</a><a class="list-group-item list-group-item-action list-group-item-1 list-group-item-x-4" href="#">Extra small</a>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div class="card-footer">
                       <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;list-group-item-xs&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group-item-x-xs&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group-item-y-xs&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;list-group-item-sm&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group-item-x-sm&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group-item-y-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;list-group-item-lg&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group-item-x-lg&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group-item-y-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;list-group-item-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-4&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
                     </div>
                   </div>
                   <div class="clearfix"></div>
+                </div>
+                <div id="list-group-size-responsive">
+                  <h4 class="fw-400">Responsive list group sizes</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;list-group list-group-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;list-group list-group-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;list-group list-group-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;list-group list-group-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                  </div>
                 </div>
               </div>
             </div>
@@ -3208,17 +3372,22 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                 <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                            <ul class="nav nav-pills nav-xs mb-3">
+                                            <ul class="nav nav-pills nav-1 mb-3">
                                               <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
                                               <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
                                               <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
                                             </ul>
-                                            <ul class="nav nav-pills nav-sm mb-3">
+                                            <ul class="nav nav-pills nav-2 mb-3">
                                               <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
                                               <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
                                               <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
                                             </ul>
-                                            <ul class="nav nav-pills nav-lg mb-3">
+                                            <ul class="nav nav-pills nav-3 mb-3">
+                                              <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                              <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                              <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                            </ul>
+                                            <ul class="nav nav-pills nav-4 mb-3">
                                               <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
                                               <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
                                               <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
@@ -3226,9 +3395,10 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                   <div class="card-footer">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;ul class=&#x22;nav nav-xs&#x22;&#x3E;&#x3C;/ul&#x3E;
-&#x3C;ul class=&#x22;nav nav-sm&#x22;&#x3E;&#x3C;/ul&#x3E;
-&#x3C;ul class=&#x22;nav nav-lg&#x22;&#x3E;&#x3C;/ul&#x3E;</code></pre>
+&#x3C;ul class=&#x22;nav nav-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-4&#x22;&#x3E;&#x3C;/ul&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -3239,14 +3409,83 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;ul class=&#x22;nav nav-x-0&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-0&#x22;&#x3E;&#x3C;/ul&#x3E;
 
-&#x3C;ul class=&#x22;nav nav-x-xs&#x22;&#x3E;&#x3C;/ul&#x3E;
-&#x3C;ul class=&#x22;nav nav-y-xs&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 
-&#x3C;ul class=&#x22;nav nav-x-sm&#x22;&#x3E;&#x3C;/ul&#x3E;
-&#x3C;ul class=&#x22;nav nav-y-sm&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 
-&#x3C;ul class=&#x22;nav nav-x-lg&#x22;&#x3E;&#x3C;/ul&#x3E;
-&#x3C;ul class=&#x22;nav nav-y-lg&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;nav nav-x-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+</code></pre>
+                  </div>
+                </div>
+                <div id="nav-size-responsive">
+                  <h4 class="fw-400">Responsive nav sizes</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-sm-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-sm-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-sm-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-sm-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-sm-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-sm-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-sm-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-sm-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-sm-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-sm-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-sm-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-sm-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-sm-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-sm-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;nav nav-x-md-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-md-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-md-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-md-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-md-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-md-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-md-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-md-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-md-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-md-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-md-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;nav nav-x-lg-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-lg-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-lg-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-lg-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-lg-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-lg-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-lg-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-lg-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-lg-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-lg-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-lg-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-lg-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-lg-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-lg-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;nav nav-x-xl-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-xl-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-xl-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-xl-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-xl-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-xl-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-xl-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-xl-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-xl-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-xl-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-xl-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-x-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-y-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 </code></pre>
                   </div>
                 </div>
@@ -3803,28 +4042,62 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                 <h3 class="fw-400">Sizes</h3>
                 <div class="card mb-3">
                   <div class="card-body">
-                                            <div class="progress mb-3 progress-xs">
+                                            <div class="progress mb-3 progress-1">
                                               <div class="progress-bar w-100">100%</div>
                                             </div>
-                                            <div class="progress mb-3 progress-md">
+                                            <div class="progress mb-3 progress-2">
                                               <div class="progress-bar w-100">100%</div>
                                             </div>
-                                            <div class="progress mb-3 progress-lg">
+                                            <div class="progress mb-3 progress-3">
                                               <div class="progress-bar w-100">100%</div>
                                             </div>
-                                            <div class="progress mb-3 progress-xl">
+                                            <div class="progress mb-3 progress-4">
+                                              <div class="progress-bar w-100">100%</div>
+                                            </div>
+                                            <div class="progress mb-3 progress-5">
                                               <div class="progress-bar w-100">100%</div>
                                             </div>
                   </div>
                   <div class="card-footer">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;progress progress-xs&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;progress progress-md&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;progress progress-lg&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;progress progress-xl&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;progress progress-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-5&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+                <div id="progress-size-responsive">
+                  <h4 class="fw-400">Responsive progress sizes</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;progress progress-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;progress progress-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;progress progress-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;progress progress-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;progress progress-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="scrollspy">
@@ -4591,6 +4864,9 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <li class="nav-item"><a class="nav-link" href="#border-style">Style</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#border-width">Width</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#border-width-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -4617,6 +4893,9 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <li class="nav-item"><a class="nav-link" href="#button-state">State</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-size">Size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#button-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-circle">Circle</a>
                   </li>
@@ -4712,6 +4991,7 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <li class="nav-item"><a class="nav-link" href="#list-group-size">Size</a>
                     <ul class="d-none">
                       <li class="nav-item"><a class="nav-link" href="#list-group-item-size">Item</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#list-group-size-responsive">Responsive</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -4723,6 +5003,7 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <li class="nav-item"><a class="nav-link" href="#nav-size">Size</a>
                     <ul class="d-none">
                       <li class="nav-item"><a class="nav-link" href="#nav-size-direction">Direction</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#nav-size-responsive">Responsive</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a>
@@ -4774,6 +5055,9 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
               <li class="nav-item"><a class="nav-link" href="#progress">Progress</a>
                 <ul class="d-none">
                   <li class="nav-item"><a class="nav-link" href="#progress-size">Size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#progress-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>

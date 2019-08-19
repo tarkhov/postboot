@@ -51,21 +51,40 @@
     }
 
     .list-group#{$infix}-3 {
-      @include list-group-size($list-group-item-padding-y-lg, $list-group-item-padding-x-lg, $font-size-lg);
+      @include list-group-size($list-group-item-padding-y, $list-group-item-padding-x, $font-size-base);
     }
     .list-group-y#{$infix}-3 {
-      @include list-group-size-y($list-group-item-padding-y-lg);
+      @include list-group-size-y($list-group-item-padding-y);
     }
     .list-group-x#{$infix}-3 {
-      @include list-group-size-x($list-group-item-padding-x-lg);
+      @include list-group-size-x($list-group-item-padding-x);
     }
     .list-group-item#{$infix}-3 {
-      @include list-group-item-size($list-group-item-padding-y-lg, $list-group-item-padding-x-lg, $font-size-lg);
+      @include list-group-item-size($list-group-item-padding-y, $list-group-item-padding-x, $font-size-base);
     }
     .list-group-item-y#{$infix}-3 {
-      @include list-group-item-size-y($list-group-item-padding-y-lg);
+      @include list-group-item-size-y($list-group-item-padding-y);
     }
     .list-group-item-x#{$infix}-3 {
+      @include list-group-item-size-x($list-group-item-padding-x);
+    }
+
+    .list-group#{$infix}-4 {
+      @include list-group-size($list-group-item-padding-y-lg, $list-group-item-padding-x-lg, $font-size-lg);
+    }
+    .list-group-y#{$infix}-4 {
+      @include list-group-size-y($list-group-item-padding-y-lg);
+    }
+    .list-group-x#{$infix}-4 {
+      @include list-group-size-x($list-group-item-padding-x-lg);
+    }
+    .list-group-item#{$infix}-4 {
+      @include list-group-item-size($list-group-item-padding-y-lg, $list-group-item-padding-x-lg, $font-size-lg);
+    }
+    .list-group-item-y#{$infix}-4 {
+      @include list-group-item-size-y($list-group-item-padding-y-lg);
+    }
+    .list-group-item-x#{$infix}-4 {
       @include list-group-item-size-x($list-group-item-padding-x-lg);
     }
   }

@@ -115,7 +115,13 @@
       },
       {
         "url": "#border-width",
-        "name": "Width"
+        "name": "Width",
+        "childs": [
+          {
+            "url": "#border-width-responsive",
+            "name": "Responsive"
+          }
+        ]
       }
     ]
   },
@@ -163,7 +169,13 @@
       },
       {
         "url": "#button-size",
-        "name": "Size"
+        "name": "Size",
+        "childs": [
+          {
+            "url": "#button-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       },
       {
         "url": "#button-circle",
@@ -340,6 +352,10 @@
           {
             "url": "#list-group-item-size",
             "name": "Item"
+          },
+          {
+            "url": "#list-group-size-responsive",
+            "name": "Responsive"
           }
         ]
       }
@@ -360,6 +376,10 @@
           {
             "url": "#nav-size-direction",
             "name": "Direction"
+          },
+          {
+            "url": "#nav-size-responsive",
+            "name": "Responsive"
           }
         ]
       },
@@ -455,7 +475,13 @@
     "childs": [
       {
         "url": "#progress-size",
-        "name": "Size"
+        "name": "Size",
+        "childs": [
+          {
+            "url": "#progress-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       }
     ]
   },

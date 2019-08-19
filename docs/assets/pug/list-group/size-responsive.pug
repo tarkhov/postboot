@@ -1,0 +1,15 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Responsive list group sizes
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 4; size++)
+        .list-group(class='list-group-' + breakpoint + '-' + size)
+        div(class='list-group-item-' + breakpoint + '-' + size)
+        each coordinate in ['x', 'y']
+          div(class='list-group-item-' + coordinate + '-' + breakpoint + '-' + size)
+      ="\n"
