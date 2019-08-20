@@ -1,6 +1,6 @@
 // Size
 @mixin breadcrumb-size($padding-y, $padding-x, $font-size, $border-radius, $item-padding) {
-  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  padding: $padding-y $padding-x;
   font-size: $font-size;
   @include border-radius($border-radius);
 

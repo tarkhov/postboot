@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Sizes
+
+block example_result
+  - for(var size = 1; size <= 3; size++)
+    +breadcrumb_variant(size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 3; size++)
+      ol.breadcrumb(class='breadcrumb-' + size)

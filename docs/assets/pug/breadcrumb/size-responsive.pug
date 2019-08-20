@@ -1,0 +1,12 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Responsive breadcrumb sizes
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 3; size++)
+        ol.breadcrumb(class='breadcrumb-' + breakpoint + '-' + size)
+      ="\n"

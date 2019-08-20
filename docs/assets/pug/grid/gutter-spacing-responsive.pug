@@ -23,3 +23,20 @@ block example_code
       div(class='pb-' + breakpoint + '-gutter')
       div(class='pl-' + breakpoint + '-gutter')
       ="\n"
+      - for(var size = 1; size <= 3; size++)
+        div(class='m-' + breakpoint + '-gutter-' + size)
+        div(class='mx-' + breakpoint + '-gutter-' + size)
+        div(class='my-' + breakpoint + '-gutter-' + size)
+        div(class='mt-' + breakpoint + '-gutter-' + size)
+        div(class='mr-' + breakpoint + '-gutter-' + size)
+        div(class='mb-' + breakpoint + '-gutter-' + size)
+        div(class='ml-' + breakpoint + '-gutter-' + size)
+        ="\n"
+        div(class='p-' + breakpoint + '-gutter-' + size)
+        div(class='px-' + breakpoint + '-gutter-' + size)
+        div(class='py-' + breakpoint + '-gutter-' + size)
+        div(class='pt-' + breakpoint + '-gutter-' + size)
+        div(class='pr-' + breakpoint + '-gutter-' + size)
+        div(class='pb-' + breakpoint + '-gutter-' + size)
+        div(class='pl-' + breakpoint + '-gutter-' + size)
+        ="\n"

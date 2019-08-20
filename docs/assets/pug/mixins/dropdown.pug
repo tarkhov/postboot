@@ -22,3 +22,14 @@ mixin dropdown_hover()
   .btn-group.dropdown.dropdown-hover
     button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown" data-hover="dropdown") Hover
     +dropdown_menu()
+
+mixin dropdown_menu_size(size)
+  .dropdown-menu(class='dropdown-menu-' + size)
+    - for(var i = 1; i <= 3; i++)
+      = "\n\t"
+      a.dropdown-item(href='#')= 'Menu item ' + i
+
+mixin dropdown_size(size)
+  .btn-group.dropdown
+    button.btn.btn-secondary.dropdown-toggle(type="button" data-toggle="dropdown" class="btn-" + size)= 'Dropdown ' + size
+    +dropdown_menu_size(size)

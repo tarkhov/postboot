@@ -24,7 +24,8 @@ $font-size-6xl: 4.5rem !default;
 $font-size-7xl: 5.5rem !default;
 $font-size-8xl: 6rem !default;
 
-$font-sizes: (
+$font-sizes: () !default;
+$font-sizes: map-merge((
   1: $font-size-xs,
   2: $font-size-sm,
   3: $font-size-base,
@@ -37,9 +38,10 @@ $font-sizes: (
   10: $font-size-6xl,
   11: $font-size-7xl,
   12: $font-size-8xl
-) !default;
+), $font-sizes);
 
-$font-weights: (
+$font-weights: () !default;
+$font-weights: map-merge((
   "100": 100,
   "200": 200,
   "300": 300,
@@ -49,7 +51,7 @@ $font-weights: (
   "700": 700,
   "800": 800,
   "900": 900
-) !default;
+), $font-weights);
 
 // Transition
 $transition-collapse-horizontal: width .35s ease !default;
@@ -58,29 +60,32 @@ $transition-collapse-horizontal: width .35s ease !default;
 $bg-state-level: -9 !default;
 
 // Border
-$border-styles: (
+$border-styles: () !default;
+$border-styles: map-merge((
   dashed: dashed,
   dotted: dotted,
   double: double,
   solid: solid
-) !default;
+), $border-styles);
 
 $border-widths: 5 !default;
 
 // Grid containers
-$container-breakpoints: (
+$container-breakpoints: () !default;
+$container-breakpoints: map-merge((
   md: map-remove($container-max-widths, sm),
   lg: map-remove($container-max-widths, sm, md),
   xl: (
     xl: map-get($container-max-widths, xl)
   )
-) !default;
+), $container-breakpoints);
 
 $container-max-width-sm: map-get($container-max-widths, sm);
 $container-max-width-md: map-get($container-max-widths, md);
 $container-max-width-lg: map-get($container-max-widths, lg);
 
-$container-sizes: (
+$container-sizes: () !default;
+$container-sizes: map-merge((
   1: (
     sm: $container-max-width-sm,
     md: $container-max-width-sm,
@@ -99,12 +104,21 @@ $container-sizes: (
     lg: $container-max-width-lg,
     xl: $container-max-width-lg
   )
-) !default;
+), $container-sizes);
 
-$container-size-breakpoints: (
+$container-size-breakpoints: () !default;
+$container-size-breakpoints: map-merge((
   2: map-remove(map-get($container-sizes, 2), sm),
   3: map-remove(map-get($container-sizes, 3), sm, md)
-) !default;
+), $container-size-breakpoints);
+
+// Grid gutter spacing
+$grid-gutter-widths: () !default;
+$grid-gutter-widths: map-merge((
+  1: $grid-gutter-width / 3,
+  2: $grid-gutter-width / 1.5,
+  3: $grid-gutter-width / 1
+), $grid-gutter-widths);
 
 // Components
 $border-radius-circle: 50% !default;
@@ -233,12 +247,13 @@ $breadcrumb-item-padding-sm: .375rem !default;
 $breadcrumb-font-size-sm: $font-size-sm !default;
 $breadcrumb-border-radius-sm: $border-radius-sm !default;
 
-$breadcrumb-dividers: (
+$breadcrumb-dividers: () !default;
+$breadcrumb-dividers: map-merge((
   rang:   "27E9",
   raquo:  "00BB",
   rarr:   "2192",
   rsaquo: "203A"
-) !default;
+), $breadcrumb-dividers);
 
 $breadcrumb-dark-color:         rgba($white,1) !default;
 $breadcrumb-dark-hover-color:   rgba($white,.75) !default;
@@ -272,6 +287,10 @@ $dropdown-arrow-color:       $dropdown-bg !default;
 $dropdown-arrow-outer-color: fade-in($dropdown-border-color, .05) !default;
 
 $dropdown-menu-body-padding: 1rem 1.5rem !default;
+
+// Pagination
+$pagination-padding-y-xs: .1rem !default;
+$pagination-padding-x-xs: .25rem !default;
 
 // Position
 $position-properties: top, right, bottom, left;

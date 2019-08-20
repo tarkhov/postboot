@@ -1,0 +1,18 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Responsive fixed padding
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      div(class="py-" + breakpoint + "-navbar")
+      div(class="pt-" + breakpoint + "-navbar")
+      div(class="pb-" + breakpoint + "-navbar")
+      = "\n"
+      - for(var size = 2; size <= 4; size++)
+        div(class="py-" + breakpoint + "-navbar-" + size)
+        div(class="pt-" + breakpoint + "-navbar-" + size)
+        div(class="pb-" + breakpoint + "-navbar-" + size)
+        = "\n"

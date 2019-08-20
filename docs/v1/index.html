@@ -108,6 +108,11 @@
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#breadcrumb-pill">Pill</a>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#breadcrumb-size">Size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#breadcrumb-size-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#button">Button</a>
@@ -171,6 +176,11 @@
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-menu-size">Menu size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-menu-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-scrollable-menu">Scrollable</a>
                   </li>
@@ -268,8 +278,20 @@
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-spacing">Spacing</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#navbar-spacing-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-tribar">Triple bar</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#pagination">Pagination</a>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#pagination-size">Size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#pagination-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -1696,6 +1718,57 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <div id="breadcrumb-size">
+                <h3 class="fw-400">Sizes</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <ol class="breadcrumb breadcrumb-1">
+                                              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                              <li class="breadcrumb-item active">Article</li>
+                                            </ol>
+                                            <ol class="breadcrumb breadcrumb-2">
+                                              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                              <li class="breadcrumb-item active">Article</li>
+                                            </ol>
+                                            <ol class="breadcrumb breadcrumb-3">
+                                              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Home</a></li>
+                                              <li class="breadcrumb-item"><a class="breadcrumb-link" href="#">Category</a></li>
+                                              <li class="breadcrumb-item active">Article</li>
+                                            </ol>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-3&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="breadcrumb-size-responsive">
+                  <h4 class="fw-400">Responsive breadcrumb sizes</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-sm-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-sm-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-sm-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-md-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-md-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-md-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-lg-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-lg-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-lg-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-xl-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-xl-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;breadcrumb breadcrumb-xl-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+</code></pre>
+                  </div>
+                </div>
+              </div>
             </div>
             <div id="button">
               <h2 class="fw-400">Button</h2>
@@ -2527,6 +2600,66 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                 </div>
                 <div class="clearfix"></div>
               </div>
+              <div id="dropdown-menu-size">
+                <h3 class="fw-400">Menu size</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                <div class="btn-group dropdown">
+                                  <button class="btn btn-secondary dropdown-toggle btn-1" type="button" data-toggle="dropdown">Dropdown 1</button>
+                                              <div class="dropdown-menu dropdown-menu-1">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                              </div>
+                                </div>
+                                <div class="btn-group dropdown">
+                                  <button class="btn btn-secondary dropdown-toggle btn-2" type="button" data-toggle="dropdown">Dropdown 2</button>
+                                              <div class="dropdown-menu dropdown-menu-2">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                              </div>
+                                </div>
+                                <div class="btn-group dropdown">
+                                  <button class="btn btn-secondary dropdown-toggle btn-3" type="button" data-toggle="dropdown">Dropdown 3</button>
+                                              <div class="dropdown-menu dropdown-menu-3">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                                              </div>
+                                </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-3&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="dropdown-menu-size-responsive">
+                  <h4 class="fw-400">Responsive menu size</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                  </div>
+                </div>
+              </div>
               <div id="dropdown-scrollable-menu">
                 <h3 class="fw-400">Scrollable menu</h3>
                 <div class="card mb-3">
@@ -3115,7 +3248,7 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
               <div id="grid-gutter-spacing">
                 <h3 class="fw-400">Gutter spacing</h3>
                 <div class="card card-body bg-light mb-3">
-                  <pre><code class="language-markup">&#x3C;!-- Source --&#x3E;
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;m-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;mx-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;my-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3130,7 +3263,53 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pt-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pr-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;pl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                 </div>
                 <div id="grid-gutter-spacing-responsive">
                   <h4 class="fw-400">Gutter spacing responsive</h4>
@@ -3152,6 +3331,54 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pb-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pl-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 
+&#x3C;div class=&#x22;m-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;m-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;mx-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;my-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3167,6 +3394,54 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pr-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pl-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;m-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;mx-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3184,6 +3459,54 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pb-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pl-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 
+&#x3C;div class=&#x22;m-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;m-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;mx-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;my-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3199,6 +3522,54 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pr-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pl-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;m-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;p-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
                   </div>
                 </div>
@@ -3937,13 +4308,88 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pt-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;py-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;py-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;py-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                </div>
+                <div id="navbar-spacing-responsive">
+                  <h4 class="fw-400">Responsive fixed padding</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;py-sm-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-sm-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-sm-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-sm-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-sm-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-sm-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-sm-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-sm-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-sm-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-sm-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-sm-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-sm-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-md-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-md-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-md-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-md-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-md-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-md-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-md-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-md-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-md-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-md-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-md-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-md-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-lg-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-lg-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-lg-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-lg-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-lg-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-lg-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-lg-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-lg-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-lg-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-lg-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-lg-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-lg-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-xl-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-xl-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-xl-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-xl-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-xl-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-xl-navbar-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-xl-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-xl-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-xl-navbar-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-xl-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-xl-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-xl-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                  </div>
                 </div>
               </div>
               <div id="navbar-tribar">
@@ -3970,6 +4416,70 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+              </div>
+            </div>
+            <div id="pagination">
+              <h2 class="fw-400">Pagination</h2>
+              <div id="pagination-size">
+                <h3 class="fw-400">Sizes</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <ol class="pagination mb-3 pagination-1">
+                                              <li class="page-item active"><span class="page-link">1</span></li>
+                                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            </ol>
+                                            <ol class="pagination mb-3 pagination-2">
+                                              <li class="page-item active"><span class="page-link">1</span></li>
+                                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            </ol>
+                                            <ol class="pagination mb-3 pagination-3">
+                                              <li class="page-item active"><span class="page-link">1</span></li>
+                                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            </ol>
+                                            <ol class="pagination mb-3 pagination-4">
+                                              <li class="page-item active"><span class="page-link">1</span></li>
+                                              <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                            </ol>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-4&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="pagination-size-responsive">
+                  <h4 class="fw-400">Responsive pagination sizes</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-sm-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-sm-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-sm-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-sm-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+
+&#x3C;ol class=&#x22;pagination pagination-md-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-md-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-md-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-md-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+
+&#x3C;ol class=&#x22;pagination pagination-lg-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-lg-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-lg-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-lg-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+
+&#x3C;ol class=&#x22;pagination pagination-xl-1&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-xl-2&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-xl-3&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-xl-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+</code></pre>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="position">
@@ -4878,6 +5388,11 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#breadcrumb-pill">Pill</a>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#breadcrumb-size">Size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#breadcrumb-size-responsive">Responsive</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#button">Button</a>
@@ -4941,6 +5456,11 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-mega-menu">Mega menu</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#dropdown-menu-size">Menu size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#dropdown-menu-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-scrollable-menu">Scrollable</a>
                   </li>
@@ -5038,8 +5558,20 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-spacing">Spacing</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#navbar-spacing-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#navbar-tribar">Triple bar</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#pagination">Pagination</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#pagination-size">Size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#pagination-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>

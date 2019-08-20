@@ -1,22 +1,40 @@
-h3.fw-400 Gutter spacing
+extends ../example-html.pug
 
-.card.card-body.bg-light.mb-3
-  pre
-    code.language-markup
-      :encode-pug
-        | <!-- Source -->
-        .m-gutter
-        .mx-gutter
-        .my-gutter
-        .mt-gutter
-        .mr-gutter
-        .mb-gutter
-        .ml-gutter
-        ="\n"
-        .p-gutter
-        .px-gutter
-        .py-gutter
-        .pt-gutter
-        .pr-gutter
-        .pb-gutter
-        .pl-gutter
+block example_title
+  h3.fw-400 Gutter spacing
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .m-gutter
+    .mx-gutter
+    .my-gutter
+    .mt-gutter
+    .mr-gutter
+    .mb-gutter
+    .ml-gutter
+    ="\n"
+    .p-gutter
+    .px-gutter
+    .py-gutter
+    .pt-gutter
+    .pr-gutter
+    .pb-gutter
+    .pl-gutter
+    ="\n"
+    - for(var size = 1; size <= 3; size++)
+      div(class='m-gutter-' + size)
+      div(class='mx-gutter-' + size)
+      div(class='my-gutter-' + size)
+      div(class='mt-gutter-' + size)
+      div(class='mr-gutter-' + size)
+      div(class='mb-gutter-' + size)
+      div(class='ml-gutter-' + size)
+      ="\n"
+      div(class='p-gutter-' + size)
+      div(class='px-gutter-' + size)
+      div(class='py-gutter-' + size)
+      div(class='pt-gutter-' + size)
+      div(class='pr-gutter-' + size)
+      div(class='pb-gutter-' + size)
+      div(class='pl-gutter-' + size)

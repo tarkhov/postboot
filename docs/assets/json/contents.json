@@ -140,6 +140,16 @@
       {
         "url": "#breadcrumb-pill",
         "name": "Pill"
+      },
+      {
+        "url": "#breadcrumb-size",
+        "name": "Size",
+        "childs": [
+          {
+            "url": "#breadcrumb-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       }
     ]
   },
@@ -260,6 +270,16 @@
       {
         "url": "#dropdown-mega-menu",
         "name": "Mega menu"
+      },
+      {
+        "url": "#dropdown-menu-size",
+        "name": "Menu size",
+        "childs": [
+          {
+            "url": "#dropdown-menu-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       },
       {
         "url": "#dropdown-scrollable-menu",
@@ -445,11 +465,33 @@
       },
       {
         "url": "#navbar-spacing",
-        "name": "Spacing"
+        "name": "Spacing",
+        "childs": [
+          {
+            "url": "#navbar-spacing-responsive",
+            "name": "Responsive"
+          }
+        ]
       },
       {
         "url": "#navbar-tribar",
         "name": "Triple bar"
+      }
+    ]
+  },
+  {
+    "url": "#pagination",
+    "name": "Pagination",
+    "childs": [
+      {
+        "url": "#pagination-size",
+        "name": "Size",
+        "childs": [
+          {
+            "url": "#pagination-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       }
     ]
   },

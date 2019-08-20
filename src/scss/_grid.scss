@@ -76,5 +76,23 @@
         #{$prop}-bottom: $grid-gutter-width !important;
       }
     }
+
+    @each $size, $width in $grid-gutter-widths {
+      @each $prop, $abbrev in (margin: m, padding: p) {
+        .#{$abbrev}#{$infix}-gutter-#{$size}  { #{$prop}:        $width !important; }
+        .#{$abbrev}t#{$infix}-gutter-#{$size} { #{$prop}-top:    $width !important; }
+        .#{$abbrev}r#{$infix}-gutter-#{$size} { #{$prop}-right:  $width !important; }
+        .#{$abbrev}b#{$infix}-gutter-#{$size} { #{$prop}-bottom: $width !important; }
+        .#{$abbrev}l#{$infix}-gutter-#{$size} { #{$prop}-left:   $width !important; }
+        .#{$abbrev}x#{$infix}-gutter-#{$size} {
+          #{$prop}-right: $width !important;
+          #{$prop}-left:  $width !important;
+        }
+        .#{$abbrev}y#{$infix}-gutter-#{$size} {
+          #{$prop}-top:    $width !important;
+          #{$prop}-bottom: $width !important;
+        }
+      }
+    }
   }
 }

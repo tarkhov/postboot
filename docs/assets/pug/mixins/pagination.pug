@@ -1,0 +1,12 @@
+mixin pagination(classes)
+  ol.pagination.mb-3(class=classes)
+    - for(var i = 1; i <= 3; i++)
+      if i == 1
+        li.page-item.active
+          span.page-link= i
+      else
+        li.page-item
+          a.page-link(href="#")= i
+
+mixin pagination_size(size)
+  +pagination('pagination-' + size)
