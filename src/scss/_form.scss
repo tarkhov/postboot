@@ -1,18 +1,18 @@
-// Size
+// Input size
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .form-control#{$infix}-1 {
+    .input#{$infix}-1 {
       @include input-size($input-height-xs, $input-padding-y-xs, $input-padding-x-xs, $input-font-size-xs, $input-line-height-xs, $input-border-radius-xs);
     }
-    .form-control#{$infix}-2 {
+    .input#{$infix}-2 {
       @include input-size($input-height-sm, $input-padding-y-sm, $input-padding-x-sm, $input-font-size-sm, $input-line-height-sm, $input-border-radius-sm);
     }
-    .form-control#{$infix}-3 {
+    .input#{$infix}-3 {
       @include input-size($input-height, $input-padding-y, $input-padding-x, $input-font-size, $input-line-height, $input-border-radius);
     }
-    .form-control#{$infix}-4 {
+    .input#{$infix}-4 {
       @include input-size($input-height-lg, $input-padding-y-lg, $input-padding-x-lg, $input-font-size-lg, $input-line-height-lg, $input-border-radius-lg);
     }
   }
@@ -49,7 +49,7 @@
   }
 }
 
-// Dark
+// Dark input
 .input-dark {
   &,
   &:focus {
@@ -79,6 +79,7 @@
   }
 }
 
+// Input color
 @each $color, $value in map-remove($theme-colors, "dark", "light") {
   .input-#{$color} {
     @include input-dark-variant($value);
@@ -90,7 +91,7 @@
   }
 }
 
-// Opacity
+// Input opacity
 @if $enable-opacity {
   @for $alpha from 1 through 9 {
     @each $color, $value in map-remove($theme-colors, "light") {

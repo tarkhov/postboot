@@ -1,0 +1,15 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Input sizes
+
+block example_result
+  - for(var size = 1; size <= 4; size++)
+    .mb-3
+      +input_variant(size, size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 4; size++)
+      input.form-control(type='text', placeholder=size class='input-' + size)

@@ -332,6 +332,16 @@
       {
         "url": "#input-material",
         "name": "Material"
+      },
+      {
+        "url": "#input-size",
+        "name": "Size",
+        "childs": [
+          {
+            "url": "#input-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       }
     ]
   },
