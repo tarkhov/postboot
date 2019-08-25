@@ -468,6 +468,16 @@
         "name": "Nav align"
       },
       {
+        "url": "#navbar-nav-size",
+        "name": "Nav size",
+        "childs": [
+          {
+            "url": "#navbar-nav-size-responsive",
+            "name": "Responsive"
+          }
+        ]
+      },
+      {
         "url": "#navbar-scroller",
         "name": "Scroller",
         "childs": [

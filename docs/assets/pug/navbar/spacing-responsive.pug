@@ -11,8 +11,8 @@ block example_code
       div(class="pt-" + breakpoint + "-navbar")
       div(class="pb-" + breakpoint + "-navbar")
       = "\n"
-      - for(var size = 2; size <= 4; size++)
-        div(class="py-" + breakpoint + "-navbar-" + size)
-        div(class="pt-" + breakpoint + "-navbar-" + size)
-        div(class="pb-" + breakpoint + "-navbar-" + size)
+      - for(var size = 1; size <= 4; size++)
+        div(class="py-navbar-" + breakpoint + "-" + size)
+        div(class="pt-navbar-" + breakpoint + "-" + size)
+        div(class="pb-navbar-" + breakpoint + "-" + size)
         = "\n"

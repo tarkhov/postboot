@@ -124,6 +124,13 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
+    .nav-y#{$infix}-0 {
+      @include nav-size-y(0);
+    }
+    .nav-x#{$infix}-0 {
+      @include nav-size-x(0);
+    }
+
     .nav#{$infix}-1 {
       @include nav-size($nav-link-padding-y-xs, $nav-link-padding-x-xs, $font-size-xs);
     }
@@ -162,13 +169,6 @@
     }
     .nav-x#{$infix}-4 {
       @include nav-size-x($nav-link-padding-x-lg);
-    }
-
-    .nav-y#{$infix}-0 {
-      @include nav-size-y(0);
-    }
-    .nav-x#{$infix}-0 {
-      @include nav-size-x(0);
     }
   }
 }

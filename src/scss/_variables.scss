@@ -181,19 +181,30 @@ $card-state-color-level: 6 !default;
 $card-dark-color: $white !default;
 
 // Navbar
-$navbar-padding-y-sm:       ($spacer * .25) !default;
-$navbar-brand-padding-y-sm: .1rem !default;
-$navbar-nav-padding-y-sm:   .25rem !default;
+$navbar-nav-link-padding-y: $nav-link-padding-y !default;
 
-$navbar-padding-y-lg:       ($spacer * .75) !default;
-$navbar-brand-padding-y-lg: .5rem !default;
-$navbar-nav-padding-y-lg:   .675rem !default;
+$navbar-padding-y-xs:          ($spacer * .1) !default;
+$navbar-brand-padding-y-xs:    .05rem !default;
+$navbar-nav-link-padding-y-xs: .1rem !default;
+$navbar-nav-link-padding-x-xs: .25rem !default;
+
+$navbar-padding-y-sm:          ($spacer * .25) !default;
+$navbar-brand-padding-y-sm:    .1rem !default;
+$navbar-nav-link-padding-y-sm: .25rem !default;
+$navbar-nav-link-padding-x-sm: .375rem !default;
+
+$navbar-padding-y-lg:          ($spacer * .75) !default;
+$navbar-brand-padding-y-lg:    .5rem !default;
+$navbar-nav-link-padding-y-lg: .675rem !default;
+$navbar-nav-link-padding-x-lg: .75rem !default;
 
 $navbar-height:    3.5rem !default;
+$navbar-height-xs: 1.5625rem !default;
 $navbar-height-sm: 2.2rem !default;
 $navbar-height-lg: 4.75rem !default;
 
 $navbar-nav-height:    2.5rem !default;
+$navbar-nav-height-xs: 1.3125rem !default;
 $navbar-nav-height-sm: 1.8125rem !default;
 $navbar-nav-height-lg: 3.25rem !default;
 
