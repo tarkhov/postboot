@@ -30,6 +30,20 @@
             "name": "CDN"
           }
         ]
+      },
+      {
+        "url": "#requirements",
+        "name": "Requirements",
+        "childs": [
+          {
+            "url": "#requirements-css",
+            "name": "CSS"
+          },
+          {
+            "url": "#requirements-js",
+            "name": "JS"
+          }
+        ]
       }
     ]
   },

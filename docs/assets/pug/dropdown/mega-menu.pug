@@ -3,6 +3,9 @@ extends ../example.pug
 block example_title
   h3.fw-400 Mega menu
 
+block example_description
+  .alert.alert-primary This component requires #[b= pkg.name + '.js'] or #[b dropdown-mega.js].
+
 block example_result
   ul.nav.dropdown
     li.nav-item.dropdown-hover.dropdown-mega
