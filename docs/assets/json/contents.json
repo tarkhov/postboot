@@ -570,6 +570,10 @@
         "name": "Color"
       },
       {
+        "url": "#sidebar-expand",
+        "name": "Expand"
+      },
+      {
         "url": "#sidebar-modal",
         "name": "Modal"
       }

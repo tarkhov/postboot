@@ -332,6 +332,10 @@
               </li>
               <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#sidebar-color">Color</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#sidebar-expand">Expand</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#sidebar-modal">Modal</a>
                   </li>
                 </ul>
@@ -4837,24 +4841,37 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
             </div>
             <div id="sidebar">
               <h2 class="fw-400">Sidebar</h2>
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <div class="sidebar sidebar-dark bg-dark sidebar-expand"><a class="sidebar-brand" href="#">Brand</a>
-                        <ul class="sidebar-nav">
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
-                        </ul>
+              <div id="sidebar-color">
+                <h3 class="fw-400">Color</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-lg-4 col-sm mb-gutter">
+                        <div class="sidebar sidebar-dark bg-dark sidebar-expand"><a class="sidebar-brand" href="#">Brand</a>
+                          <ul class="sidebar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-sm-6 mb-gutter">
+                        <div class="sidebar sidebar-light bg-light sidebar-expand"><a class="sidebar-brand" href="#">Brand</a>
+                          <ul class="sidebar-nav">
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
+                          </ul>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="card-footer">
-                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;sidebar sidebar-dark bg-dark sidebar-expand&#x22;&#x3E;
   &#x3C;a class=&#x22;sidebar-brand&#x22; href=&#x22;#&#x22;&#x3E;Brand&#x3C;/a&#x3E;
   &#x3C;ul class=&#x22;sidebar-nav&#x22;&#x3E;
@@ -4864,10 +4881,32 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
     &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 4&#x3C;/a&#x3E;&#x3C;/li&#x3E;
     &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 5&#x3C;/a&#x3E;&#x3C;/li&#x3E;
   &#x3C;/ul&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;sidebar sidebar-light bg-light sidebar-expand&#x22;&#x3E;
+  &#x3C;a class=&#x22;sidebar-brand&#x22; href=&#x22;#&#x22;&#x3E;Brand&#x3C;/a&#x3E;
+  &#x3C;ul class=&#x22;sidebar-nav&#x22;&#x3E;
+    &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 4&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+    &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 5&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
 &#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="sidebar-expand">
+                <h3 class="fw-400">Expand</h3>
+                <div class="card card-body bg-light mb-3">
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;sidebar sidebar-expand&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;sidebar sidebar-expand-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;sidebar sidebar-expand-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;sidebar sidebar-expand-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;sidebar sidebar-expand-xl&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
                 </div>
               </div>
-              <div class="clearfix"></div>
               <div id="sidebar-modal">
                 <h3 class="fw-400">Modal</h3><span class="badge badge-success text-uppercase mb-3">New</span>
                 <div class="card mb-3">
@@ -5746,6 +5785,10 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
               </li>
               <li class="nav-item"><a class="nav-link" href="#sidebar">Sidebar</a>
                 <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#sidebar-color">Color</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#sidebar-expand">Expand</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#sidebar-modal">Modal</a>
                   </li>
                 </ul>
