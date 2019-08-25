@@ -566,6 +566,10 @@
     "name": "Sidebar",
     "childs": [
       {
+        "url": "#sidebar-color",
+        "name": "Color"
+      },
+      {
         "url": "#sidebar-modal",
         "name": "Modal"
       }
