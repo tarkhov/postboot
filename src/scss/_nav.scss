@@ -119,6 +119,82 @@
   }
 }
 
+// Tabs material
+.nav-tabs-material {
+  .nav-link {
+    border: none;
+    border-bottom: $nav-tabs-border-width solid transparent;
+    @include border-radius(0);
+
+    &:hover,
+    &:focus {
+      border-bottom-color: $nav-tabs-link-active-color;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    border-bottom-color: $nav-tabs-link-active-color;
+  }
+
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+      &.nav-tabs#{$infix}-left {
+        .nav-link {
+          border: none;
+          border-right: $nav-tabs-border-width solid transparent;
+
+          &:hover,
+          &:focus {
+            border-right-color: $nav-tabs-link-active-color;
+          }
+        }
+
+        .nav-link.active,
+        .nav-item.show .nav-link {
+          border-right-color: $nav-tabs-link-active-color;
+        }
+      }
+
+      &.nav-tabs#{$infix}-right {
+        .nav-link {
+          border: none;
+          border-left: $nav-tabs-border-width solid transparent;
+
+          &:hover,
+          &:focus {
+            border-left-color: $nav-tabs-link-active-color;
+          }
+        }
+
+        .nav-link.active,
+        .nav-item.show .nav-link {
+          border-left-color: $nav-tabs-link-active-color;
+        }
+      }
+
+      &.nav-tabs#{$infix}-bottom {
+        .nav-link {
+          border: none;
+          border-top: $nav-tabs-border-width solid transparent;
+
+          &:hover,
+          &:focus {
+            border-top-color: $nav-tabs-link-active-color;
+          }
+        }
+
+        .nav-link.active,
+        .nav-item.show .nav-link {
+          border-top-color: $nav-tabs-link-active-color;
+        }
+      }
+    }
+  }
+}
+
 // Sizes
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
