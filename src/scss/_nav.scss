@@ -174,23 +174,23 @@
           border-left-color: $nav-tabs-link-active-color;
         }
       }
+    }
+  }
 
-      &.nav-tabs#{$infix}-bottom {
-        .nav-link {
-          border: none;
-          border-top: $nav-tabs-border-width solid transparent;
+  &.nav-tabs#{$infix}-bottom {
+    .nav-link {
+      border: none;
+      border-top: $nav-tabs-border-width solid transparent;
 
-          &:hover,
-          &:focus {
-            border-top-color: $nav-tabs-link-active-color;
-          }
-        }
-
-        .nav-link.active,
-        .nav-item.show .nav-link {
-          border-top-color: $nav-tabs-link-active-color;
-        }
+      &:hover,
+      &:focus {
+        border-top-color: $nav-tabs-link-active-color;
       }
+    }
+
+    .nav-link.active,
+    .nav-item.show .nav-link {
+      border-top-color: $nav-tabs-link-active-color;
     }
   }
 }
