@@ -2873,14 +2873,6 @@
 .nav-tabs-material.nav-tabs-right .nav-link.active,
 .nav-tabs-material.nav-tabs-right .nav-item.show .nav-link {
   border-left-color: #495057; }
-.nav-tabs-material.nav-tabs-bottom .nav-link {
-  border: none;
-  border-top: 1px solid transparent; }
-  .nav-tabs-material.nav-tabs-bottom .nav-link:hover, .nav-tabs-material.nav-tabs-bottom .nav-link:focus {
-    border-top-color: #495057; }
-.nav-tabs-material.nav-tabs-bottom .nav-link.active,
-.nav-tabs-material.nav-tabs-bottom .nav-item.show .nav-link {
-  border-top-color: #495057; }
 @media (min-width: 576px) {
   .nav-tabs-material.nav-tabs-sm-left .nav-link {
     border: none;
@@ -2897,15 +2889,7 @@
       border-left-color: #495057; }
   .nav-tabs-material.nav-tabs-sm-right .nav-link.active,
   .nav-tabs-material.nav-tabs-sm-right .nav-item.show .nav-link {
-    border-left-color: #495057; }
-  .nav-tabs-material.nav-tabs-sm-bottom .nav-link {
-    border: none;
-    border-top: 1px solid transparent; }
-    .nav-tabs-material.nav-tabs-sm-bottom .nav-link:hover, .nav-tabs-material.nav-tabs-sm-bottom .nav-link:focus {
-      border-top-color: #495057; }
-  .nav-tabs-material.nav-tabs-sm-bottom .nav-link.active,
-  .nav-tabs-material.nav-tabs-sm-bottom .nav-item.show .nav-link {
-    border-top-color: #495057; } }
+    border-left-color: #495057; } }
 @media (min-width: 768px) {
   .nav-tabs-material.nav-tabs-md-left .nav-link {
     border: none;
@@ -2922,15 +2906,7 @@
       border-left-color: #495057; }
   .nav-tabs-material.nav-tabs-md-right .nav-link.active,
   .nav-tabs-material.nav-tabs-md-right .nav-item.show .nav-link {
-    border-left-color: #495057; }
-  .nav-tabs-material.nav-tabs-md-bottom .nav-link {
-    border: none;
-    border-top: 1px solid transparent; }
-    .nav-tabs-material.nav-tabs-md-bottom .nav-link:hover, .nav-tabs-material.nav-tabs-md-bottom .nav-link:focus {
-      border-top-color: #495057; }
-  .nav-tabs-material.nav-tabs-md-bottom .nav-link.active,
-  .nav-tabs-material.nav-tabs-md-bottom .nav-item.show .nav-link {
-    border-top-color: #495057; } }
+    border-left-color: #495057; } }
 @media (min-width: 992px) {
   .nav-tabs-material.nav-tabs-lg-left .nav-link {
     border: none;
@@ -2947,15 +2923,7 @@
       border-left-color: #495057; }
   .nav-tabs-material.nav-tabs-lg-right .nav-link.active,
   .nav-tabs-material.nav-tabs-lg-right .nav-item.show .nav-link {
-    border-left-color: #495057; }
-  .nav-tabs-material.nav-tabs-lg-bottom .nav-link {
-    border: none;
-    border-top: 1px solid transparent; }
-    .nav-tabs-material.nav-tabs-lg-bottom .nav-link:hover, .nav-tabs-material.nav-tabs-lg-bottom .nav-link:focus {
-      border-top-color: #495057; }
-  .nav-tabs-material.nav-tabs-lg-bottom .nav-link.active,
-  .nav-tabs-material.nav-tabs-lg-bottom .nav-item.show .nav-link {
-    border-top-color: #495057; } }
+    border-left-color: #495057; } }
 @media (min-width: 1200px) {
   .nav-tabs-material.nav-tabs-xl-left .nav-link {
     border: none;
@@ -2972,15 +2940,15 @@
       border-left-color: #495057; }
   .nav-tabs-material.nav-tabs-xl-right .nav-link.active,
   .nav-tabs-material.nav-tabs-xl-right .nav-item.show .nav-link {
-    border-left-color: #495057; }
-  .nav-tabs-material.nav-tabs-xl-bottom .nav-link {
-    border: none;
-    border-top: 1px solid transparent; }
-    .nav-tabs-material.nav-tabs-xl-bottom .nav-link:hover, .nav-tabs-material.nav-tabs-xl-bottom .nav-link:focus {
-      border-top-color: #495057; }
-  .nav-tabs-material.nav-tabs-xl-bottom .nav-link.active,
-  .nav-tabs-material.nav-tabs-xl-bottom .nav-item.show .nav-link {
-    border-top-color: #495057; } }
+    border-left-color: #495057; } }
+.nav-tabs-material.nav-tabs-bottom .nav-link {
+  border: none;
+  border-top: 1px solid transparent; }
+  .nav-tabs-material.nav-tabs-bottom .nav-link:hover, .nav-tabs-material.nav-tabs-bottom .nav-link:focus {
+    border-top-color: #495057; }
+.nav-tabs-material.nav-tabs-bottom .nav-link.active,
+.nav-tabs-material.nav-tabs-bottom .nav-item.show .nav-link {
+  border-top-color: #495057; }
 
 .nav-y-0 > .nav-link,
 .nav-y-0 > .nav-item > .nav-link {
