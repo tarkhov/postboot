@@ -1,26 +1,3 @@
-// Sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-
-    .btn#{$infix}-1 {
-      @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
-    }
-    .btn#{$infix}-2 {
-      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
-    }
-    .btn#{$infix}-3 {
-      @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
-    }
-    .btn#{$infix}-4 {
-      @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
-    }
-    .btn#{$infix}-5 {
-      @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-xl, $btn-line-height-xl, $btn-border-radius-xl);
-    }
-  }
-}
-
 // Link
 .btn-outline-link {
   @include button-outline-variant($link-color);
@@ -104,6 +81,26 @@
   }
 }
 
+// Hover
+@each $color, $value in $theme-colors {
+  .btn-hover-#{$color} {
+    @if $color == 'warning' {
+      @include button-hover-variant($value, $value, $white);
+    } @else {
+      @include button-hover-variant($value, $value);
+    }
+  }
+}
+@each $color, $value in $custom-colors {
+  .btn-hover-#{$color} {
+    @if $color == 'orange' {
+      @include button-hover-variant($value, $value, $white);
+    } @else {
+      @include button-hover-variant($value, $value);
+    }
+  }
+}
+
 // Active
 @each $color, $value in $theme-colors {
   .btn-active-#{$color} {
@@ -123,6 +120,30 @@
     }
   }
 }
+
+// Sizes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .btn#{$infix}-1 {
+      @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $btn-font-size-xs, $btn-line-height-xs, $btn-border-radius-xs);
+    }
+    .btn#{$infix}-2 {
+      @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+    }
+    .btn#{$infix}-3 {
+      @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+    }
+    .btn#{$infix}-4 {
+      @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+    }
+    .btn#{$infix}-5 {
+      @include button-size($btn-padding-y-xl, $btn-padding-x-xl, $btn-font-size-xl, $btn-line-height-xl, $btn-border-radius-xl);
+    }
+  }
+}
+
 
 // Circle
 .btn-circle {
@@ -172,4 +193,3 @@
     }
   }
 }
-

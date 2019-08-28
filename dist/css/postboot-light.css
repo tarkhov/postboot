@@ -1687,156 +1687,6 @@
   .input-danger:disabled, .input-danger[readonly] {
     background-color: #d9d9d9; }
 
-.btn-1 {
-  padding: 0.1rem 0.25rem;
-  font-size: 0.75rem;
-  line-height: 1.5;
-  border-radius: 0.1rem; }
-
-.btn-2 {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  border-radius: 0.2rem; }
-
-.btn-3 {
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  border-radius: 0.25rem; }
-
-.btn-4 {
-  padding: 0.5rem 1rem;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  border-radius: 0.3rem; }
-
-.btn-5 {
-  padding: 0.625rem 1.25rem;
-  font-size: 1.5rem;
-  line-height: 1.5;
-  border-radius: 0.35rem; }
-
-@media (min-width: 576px) {
-  .btn-sm-1 {
-    padding: 0.1rem 0.25rem;
-    font-size: 0.75rem;
-    line-height: 1.5;
-    border-radius: 0.1rem; }
-
-  .btn-sm-2 {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    border-radius: 0.2rem; }
-
-  .btn-sm-3 {
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem; }
-
-  .btn-sm-4 {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem; }
-
-  .btn-sm-5 {
-    padding: 0.625rem 1.25rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    border-radius: 0.35rem; } }
-@media (min-width: 768px) {
-  .btn-md-1 {
-    padding: 0.1rem 0.25rem;
-    font-size: 0.75rem;
-    line-height: 1.5;
-    border-radius: 0.1rem; }
-
-  .btn-md-2 {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    border-radius: 0.2rem; }
-
-  .btn-md-3 {
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem; }
-
-  .btn-md-4 {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem; }
-
-  .btn-md-5 {
-    padding: 0.625rem 1.25rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    border-radius: 0.35rem; } }
-@media (min-width: 992px) {
-  .btn-lg-1 {
-    padding: 0.1rem 0.25rem;
-    font-size: 0.75rem;
-    line-height: 1.5;
-    border-radius: 0.1rem; }
-
-  .btn-lg-2 {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    border-radius: 0.2rem; }
-
-  .btn-lg-3 {
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem; }
-
-  .btn-lg-4 {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem; }
-
-  .btn-lg-5 {
-    padding: 0.625rem 1.25rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    border-radius: 0.35rem; } }
-@media (min-width: 1200px) {
-  .btn-xl-1 {
-    padding: 0.1rem 0.25rem;
-    font-size: 0.75rem;
-    line-height: 1.5;
-    border-radius: 0.1rem; }
-
-  .btn-xl-2 {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    border-radius: 0.2rem; }
-
-  .btn-xl-3 {
-    padding: 0.375rem 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 0.25rem; }
-
-  .btn-xl-4 {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem; }
-
-  .btn-xl-5 {
-    padding: 0.625rem 1.25rem;
-    font-size: 1.5rem;
-    line-height: 1.5;
-    border-radius: 0.35rem; } }
 .btn-outline-link {
   color: #007bff;
   border-color: #007bff;
@@ -2211,6 +2061,46 @@
     .btn-3d-dark:not(:disabled):not(.disabled):active:focus, .btn-3d-dark:not(:disabled):not(.disabled).active:focus, .show > .btn-3d-dark.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(63, 66, 69, 0.5); }
 
+.btn-hover-primary:hover {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff; }
+
+.btn-hover-secondary:hover {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d; }
+
+.btn-hover-success:hover {
+  color: #fff;
+  background-color: #28a745;
+  border-color: #28a745; }
+
+.btn-hover-info:hover {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8; }
+
+.btn-hover-warning:hover {
+  color: #fff;
+  background-color: #ffc107;
+  border-color: #ffc107; }
+
+.btn-hover-danger:hover {
+  color: #fff;
+  background-color: #dc3545;
+  border-color: #dc3545; }
+
+.btn-hover-light:hover {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa; }
+
+.btn-hover-dark:hover {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #343a40; }
+
 .btn-active-primary:not(:disabled):not(.disabled).active, .show > .btn-active-primary.dropdown-toggle {
   color: #fff;
   background-color: #007bff;
@@ -2251,6 +2141,156 @@
   background-color: #343a40;
   border-color: #343a40; }
 
+.btn-1 {
+  padding: 0.1rem 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  border-radius: 0.1rem; }
+
+.btn-2 {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  border-radius: 0.2rem; }
+
+.btn-3 {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem; }
+
+.btn-4 {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: 0.3rem; }
+
+.btn-5 {
+  padding: 0.625rem 1.25rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  border-radius: 0.35rem; }
+
+@media (min-width: 576px) {
+  .btn-sm-1 {
+    padding: 0.1rem 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.1rem; }
+
+  .btn-sm-2 {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem; }
+
+  .btn-sm-3 {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem; }
+
+  .btn-sm-4 {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem; }
+
+  .btn-sm-5 {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: 0.35rem; } }
+@media (min-width: 768px) {
+  .btn-md-1 {
+    padding: 0.1rem 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.1rem; }
+
+  .btn-md-2 {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem; }
+
+  .btn-md-3 {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem; }
+
+  .btn-md-4 {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem; }
+
+  .btn-md-5 {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: 0.35rem; } }
+@media (min-width: 992px) {
+  .btn-lg-1 {
+    padding: 0.1rem 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.1rem; }
+
+  .btn-lg-2 {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem; }
+
+  .btn-lg-3 {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem; }
+
+  .btn-lg-4 {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem; }
+
+  .btn-lg-5 {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: 0.35rem; } }
+@media (min-width: 1200px) {
+  .btn-xl-1 {
+    padding: 0.1rem 0.25rem;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    border-radius: 0.1rem; }
+
+  .btn-xl-2 {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 0.2rem; }
+
+  .btn-xl-3 {
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem; }
+
+  .btn-xl-4 {
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem; }
+
+  .btn-xl-5 {
+    padding: 0.625rem 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    border-radius: 0.35rem; } }
 .btn-circle {
   border-radius: 50%;
   padding: 0;
@@ -4507,27 +4547,6 @@
   margin-right: -0.625rem;
   margin-left: -0.625rem; }
 
-.card-pill {
-  border-radius: 30px; }
-  .card-pill .card-header:first-child {
-    border-radius: 30px 30px 0 0; }
-  .card-pill .card-footer:last-child {
-    border-radius: 0 0 30px 30px; }
-  .card-pill .card-img {
-    border-radius: 30px; }
-  .card-pill .card-img-top {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px; }
-  .card-pill .card-img-right {
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px; }
-  .card-pill .card-img-bottom {
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px; }
-  .card-pill .card-img-left {
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px; }
-
 .card-1 {
   font-size: 0.75rem; }
   .card-1.card-body,
@@ -5008,6 +5027,27 @@
       margin-top: -0.75rem; }
     .card-xl-3 .card-img-overlay {
       padding: 1.25rem; } }
+.card-pill {
+  border-radius: 30px; }
+  .card-pill .card-header:first-child {
+    border-radius: 30px 30px 0 0; }
+  .card-pill .card-footer:last-child {
+    border-radius: 0 0 30px 30px; }
+  .card-pill .card-img {
+    border-radius: 30px; }
+  .card-pill .card-img-top {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px; }
+  .card-pill .card-img-right {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px; }
+  .card-pill .card-img-bottom {
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px; }
+  .card-pill .card-img-left {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px; }
+
 .breadcrumb-dark .breadcrumb-item {
   color: white; }
   .breadcrumb-dark .breadcrumb-item:hover, .breadcrumb-dark .breadcrumb-item:focus {

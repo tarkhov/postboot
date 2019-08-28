@@ -11,6 +11,15 @@
   }
 }
 
+// Hover
+@mixin button-hover-variant($background, $border, $color: color-yiq($background)) {
+  &:hover {
+    color: $color;
+    @include gradient-bg($background);
+    border-color: $border;
+  }
+}
+
 // 3D
 @mixin button-3d-variant($background, $border) {
   border-bottom-width: 4px;
