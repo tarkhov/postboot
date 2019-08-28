@@ -653,49 +653,49 @@
   padding-bottom: 30px !important; }
 
 @media (min-width: 576px) {
-  .m-sm-gutter {
+  .m-gutter-sm {
     margin: 30px !important; }
 
-  .mt-sm-gutter {
+  .mt-gutter-sm {
     margin-top: 30px !important; }
 
-  .mr-sm-gutter {
+  .mr-gutter-sm {
     margin-right: 30px !important; }
 
-  .mb-sm-gutter {
+  .mb-gutter-sm {
     margin-bottom: 30px !important; }
 
-  .ml-sm-gutter {
+  .ml-gutter-sm {
     margin-left: 30px !important; }
 
-  .mx-sm-gutter {
+  .mx-gutter-sm {
     margin-right: 30px !important;
     margin-left: 30px !important; }
 
-  .my-sm-gutter {
+  .my-gutter-sm {
     margin-top: 30px !important;
     margin-bottom: 30px !important; }
 
-  .p-sm-gutter {
+  .p-gutter-sm {
     padding: 30px !important; }
 
-  .pt-sm-gutter {
+  .pt-gutter-sm {
     padding-top: 30px !important; }
 
-  .pr-sm-gutter {
+  .pr-gutter-sm {
     padding-right: 30px !important; }
 
-  .pb-sm-gutter {
+  .pb-gutter-sm {
     padding-bottom: 30px !important; }
 
-  .pl-sm-gutter {
+  .pl-gutter-sm {
     padding-left: 30px !important; }
 
-  .px-sm-gutter {
+  .px-gutter-sm {
     padding-right: 30px !important;
     padding-left: 30px !important; }
 
-  .py-sm-gutter {
+  .py-gutter-sm {
     padding-top: 30px !important;
     padding-bottom: 30px !important; }
 
@@ -837,49 +837,49 @@
     padding-top: 30px !important;
     padding-bottom: 30px !important; } }
 @media (min-width: 768px) {
-  .m-md-gutter {
+  .m-gutter-md {
     margin: 30px !important; }
 
-  .mt-md-gutter {
+  .mt-gutter-md {
     margin-top: 30px !important; }
 
-  .mr-md-gutter {
+  .mr-gutter-md {
     margin-right: 30px !important; }
 
-  .mb-md-gutter {
+  .mb-gutter-md {
     margin-bottom: 30px !important; }
 
-  .ml-md-gutter {
+  .ml-gutter-md {
     margin-left: 30px !important; }
 
-  .mx-md-gutter {
+  .mx-gutter-md {
     margin-right: 30px !important;
     margin-left: 30px !important; }
 
-  .my-md-gutter {
+  .my-gutter-md {
     margin-top: 30px !important;
     margin-bottom: 30px !important; }
 
-  .p-md-gutter {
+  .p-gutter-md {
     padding: 30px !important; }
 
-  .pt-md-gutter {
+  .pt-gutter-md {
     padding-top: 30px !important; }
 
-  .pr-md-gutter {
+  .pr-gutter-md {
     padding-right: 30px !important; }
 
-  .pb-md-gutter {
+  .pb-gutter-md {
     padding-bottom: 30px !important; }
 
-  .pl-md-gutter {
+  .pl-gutter-md {
     padding-left: 30px !important; }
 
-  .px-md-gutter {
+  .px-gutter-md {
     padding-right: 30px !important;
     padding-left: 30px !important; }
 
-  .py-md-gutter {
+  .py-gutter-md {
     padding-top: 30px !important;
     padding-bottom: 30px !important; }
 
@@ -1021,49 +1021,49 @@
     padding-top: 30px !important;
     padding-bottom: 30px !important; } }
 @media (min-width: 992px) {
-  .m-lg-gutter {
+  .m-gutter-lg {
     margin: 30px !important; }
 
-  .mt-lg-gutter {
+  .mt-gutter-lg {
     margin-top: 30px !important; }
 
-  .mr-lg-gutter {
+  .mr-gutter-lg {
     margin-right: 30px !important; }
 
-  .mb-lg-gutter {
+  .mb-gutter-lg {
     margin-bottom: 30px !important; }
 
-  .ml-lg-gutter {
+  .ml-gutter-lg {
     margin-left: 30px !important; }
 
-  .mx-lg-gutter {
+  .mx-gutter-lg {
     margin-right: 30px !important;
     margin-left: 30px !important; }
 
-  .my-lg-gutter {
+  .my-gutter-lg {
     margin-top: 30px !important;
     margin-bottom: 30px !important; }
 
-  .p-lg-gutter {
+  .p-gutter-lg {
     padding: 30px !important; }
 
-  .pt-lg-gutter {
+  .pt-gutter-lg {
     padding-top: 30px !important; }
 
-  .pr-lg-gutter {
+  .pr-gutter-lg {
     padding-right: 30px !important; }
 
-  .pb-lg-gutter {
+  .pb-gutter-lg {
     padding-bottom: 30px !important; }
 
-  .pl-lg-gutter {
+  .pl-gutter-lg {
     padding-left: 30px !important; }
 
-  .px-lg-gutter {
+  .px-gutter-lg {
     padding-right: 30px !important;
     padding-left: 30px !important; }
 
-  .py-lg-gutter {
+  .py-gutter-lg {
     padding-top: 30px !important;
     padding-bottom: 30px !important; }
 
@@ -1205,49 +1205,49 @@
     padding-top: 30px !important;
     padding-bottom: 30px !important; } }
 @media (min-width: 1200px) {
-  .m-xl-gutter {
+  .m-gutter-xl {
     margin: 30px !important; }
 
-  .mt-xl-gutter {
+  .mt-gutter-xl {
     margin-top: 30px !important; }
 
-  .mr-xl-gutter {
+  .mr-gutter-xl {
     margin-right: 30px !important; }
 
-  .mb-xl-gutter {
+  .mb-gutter-xl {
     margin-bottom: 30px !important; }
 
-  .ml-xl-gutter {
+  .ml-gutter-xl {
     margin-left: 30px !important; }
 
-  .mx-xl-gutter {
+  .mx-gutter-xl {
     margin-right: 30px !important;
     margin-left: 30px !important; }
 
-  .my-xl-gutter {
+  .my-gutter-xl {
     margin-top: 30px !important;
     margin-bottom: 30px !important; }
 
-  .p-xl-gutter {
+  .p-gutter-xl {
     padding: 30px !important; }
 
-  .pt-xl-gutter {
+  .pt-gutter-xl {
     padding-top: 30px !important; }
 
-  .pr-xl-gutter {
+  .pr-gutter-xl {
     padding-right: 30px !important; }
 
-  .pb-xl-gutter {
+  .pb-gutter-xl {
     padding-bottom: 30px !important; }
 
-  .pl-xl-gutter {
+  .pl-gutter-xl {
     padding-left: 30px !important; }
 
-  .px-xl-gutter {
+  .px-gutter-xl {
     padding-right: 30px !important;
     padding-left: 30px !important; }
 
-  .py-xl-gutter {
+  .py-gutter-xl {
     padding-top: 30px !important;
     padding-bottom: 30px !important; }
 
@@ -10265,14 +10265,14 @@
   padding-bottom: 4.75rem; }
 
 @media (min-width: 576px) {
-  .py-sm-navbar {
+  .py-navbar-sm {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem; }
 
-  .pt-sm-navbar {
+  .pt-navbar-sm {
     padding-top: 3.5rem; }
 
-  .pb-sm-navbar {
+  .pb-navbar-sm {
     padding-bottom: 3.5rem; }
 
   .py-navbar-sm-1 {
@@ -10315,14 +10315,14 @@
   .pb-navbar-sm-4 {
     padding-bottom: 4.75rem; } }
 @media (min-width: 768px) {
-  .py-md-navbar {
+  .py-navbar-md {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem; }
 
-  .pt-md-navbar {
+  .pt-navbar-md {
     padding-top: 3.5rem; }
 
-  .pb-md-navbar {
+  .pb-navbar-md {
     padding-bottom: 3.5rem; }
 
   .py-navbar-md-1 {
@@ -10365,14 +10365,14 @@
   .pb-navbar-md-4 {
     padding-bottom: 4.75rem; } }
 @media (min-width: 992px) {
-  .py-lg-navbar {
+  .py-navbar-lg {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem; }
 
-  .pt-lg-navbar {
+  .pt-navbar-lg {
     padding-top: 3.5rem; }
 
-  .pb-lg-navbar {
+  .pb-navbar-lg {
     padding-bottom: 3.5rem; }
 
   .py-navbar-lg-1 {
@@ -10415,14 +10415,14 @@
   .pb-navbar-lg-4 {
     padding-bottom: 4.75rem; } }
 @media (min-width: 1200px) {
-  .py-xl-navbar {
+  .py-navbar-xl {
     padding-top: 3.5rem;
     padding-bottom: 3.5rem; }
 
-  .pt-xl-navbar {
+  .pt-navbar-xl {
     padding-top: 3.5rem; }
 
-  .pb-xl-navbar {
+  .pb-navbar-xl {
     padding-bottom: 3.5rem; }
 
   .py-navbar-xl-1 {

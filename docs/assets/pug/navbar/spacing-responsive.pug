@@ -7,9 +7,9 @@ block example_code
   :encode-pug
     | <!-- Source -->
     each breakpoint in ['sm', 'md', 'lg', 'xl']
-      div(class="py-" + breakpoint + "-navbar")
-      div(class="pt-" + breakpoint + "-navbar")
-      div(class="pb-" + breakpoint + "-navbar")
+      div(class="py-navbar-" + breakpoint)
+      div(class="pt-navbar-" + breakpoint)
+      div(class="pb-navbar-" + breakpoint)
       = "\n"
       - for(var size = 1; size <= 4; size++)
         div(class="py-navbar-" + breakpoint + "-" + size)

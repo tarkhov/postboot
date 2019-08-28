@@ -12,3 +12,6 @@ block example_code
     | <!-- Source -->
     each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
       div(class='border-' + style)
+      each position in ['top', 'right', 'bottom', 'left']
+        div(class='border-' + position + '-' + style)
+      ="\n"

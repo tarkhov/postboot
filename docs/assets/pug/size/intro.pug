@@ -1,0 +1,13 @@
+extends ../example-html.pug
+
+block example_title
+  h2.fw-400 Size
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each size in [25, 50, 75, 100, 'auto']
+      div(class='s-' + size)
+    .ms-100
+    .min-vs-100
+    .vs-100

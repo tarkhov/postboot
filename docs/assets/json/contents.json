@@ -180,6 +180,14 @@
         "name": "Outline"
       },
       {
+        "url": "#button-hover",
+        "name": "Hover"
+      },
+      {
+        "url": "#button-active",
+        "name": "Active"
+      },
+      {
         "url": "#button-3d",
         "name": "3D"
       },
@@ -208,6 +216,10 @@
       {
         "url": "#button-pill",
         "name": "Pill"
+      },
+      {
+        "url": "#button-block-responsive",
+        "name": "Block responsive"
       }
     ]
   },
@@ -298,6 +310,22 @@
       {
         "url": "#dropdown-scrollable-menu",
         "name": "Scrollable"
+      }
+    ]
+  },
+  {
+    "url": "#flex",
+    "name": "Flex",
+    "childs": [
+      {
+        "url": "#flex-align",
+        "name": "Align",
+        "childs": [
+          {
+            "url": "#flex-align-responsive",
+            "name": "Responsive"
+          }
+        ]
       }
     ]
   },
@@ -434,6 +462,10 @@
           {
             "url": "#nav-tabs-responsive",
             "name": "Responsive"
+          },
+          {
+            "url": "#nav-tabs-material",
+            "name": "Material"
           }
         ]
       },
@@ -588,6 +620,10 @@
         "name": "Modal"
       }
     ]
+  },
+  {
+    "url": "#size",
+    "name": "Size"
   },
   {
     "url": "#text",

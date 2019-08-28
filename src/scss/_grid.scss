@@ -61,34 +61,22 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    @each $prop, $abbrev in (margin: m, padding: p) {
-      .#{$abbrev}#{$infix}-gutter  { #{$prop}:        $grid-gutter-width !important; }
-      .#{$abbrev}t#{$infix}-gutter { #{$prop}-top:    $grid-gutter-width !important; }
-      .#{$abbrev}r#{$infix}-gutter { #{$prop}-right:  $grid-gutter-width !important; }
-      .#{$abbrev}b#{$infix}-gutter { #{$prop}-bottom: $grid-gutter-width !important; }
-      .#{$abbrev}l#{$infix}-gutter { #{$prop}-left:   $grid-gutter-width !important; }
-      .#{$abbrev}x#{$infix}-gutter {
-        #{$prop}-right: $grid-gutter-width !important;
-        #{$prop}-left:  $grid-gutter-width !important;
-      }
-      .#{$abbrev}y#{$infix}-gutter {
-        #{$prop}-top:    $grid-gutter-width !important;
-        #{$prop}-bottom: $grid-gutter-width !important;
-      }
-    }
-
     @each $size, $width in $grid-gutter-widths {
+      @if $size != '' {
+        $size: "-#{$size}";
+      }
+
       @each $prop, $abbrev in (margin: m, padding: p) {
-        .#{$abbrev}-gutter#{$infix}-#{$size}  { #{$prop}:        $width !important; }
-        .#{$abbrev}t-gutter#{$infix}-#{$size} { #{$prop}-top:    $width !important; }
-        .#{$abbrev}r-gutter#{$infix}-#{$size} { #{$prop}-right:  $width !important; }
-        .#{$abbrev}b-gutter#{$infix}-#{$size} { #{$prop}-bottom: $width !important; }
-        .#{$abbrev}l-gutter#{$infix}-#{$size} { #{$prop}-left:   $width !important; }
-        .#{$abbrev}x-gutter#{$infix}-#{$size} {
+        .#{$abbrev}-gutter#{$infix}#{$size}  { #{$prop}:        $width !important; }
+        .#{$abbrev}t-gutter#{$infix}#{$size} { #{$prop}-top:    $width !important; }
+        .#{$abbrev}r-gutter#{$infix}#{$size} { #{$prop}-right:  $width !important; }
+        .#{$abbrev}b-gutter#{$infix}#{$size} { #{$prop}-bottom: $width !important; }
+        .#{$abbrev}l-gutter#{$infix}#{$size} { #{$prop}-left:   $width !important; }
+        .#{$abbrev}x-gutter#{$infix}#{$size} {
           #{$prop}-right: $width !important;
           #{$prop}-left:  $width !important;
         }
-        .#{$abbrev}y-gutter#{$infix}-#{$size} {
+        .#{$abbrev}y-gutter#{$infix}#{$size} {
           #{$prop}-top:    $width !important;
           #{$prop}-bottom: $width !important;
         }

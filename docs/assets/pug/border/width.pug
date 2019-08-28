@@ -12,3 +12,6 @@ block example_code
     | <!-- Source -->
     - for(var width = 1; width <= 5; width++)
       p(class='border-' + width)= width + 'px'
+      each position in ['top', 'right', 'bottom', 'left']
+        p(class='border-' + position + '-' + width)= width + 'px'
+      ="\n"

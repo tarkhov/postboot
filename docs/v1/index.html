@@ -127,6 +127,10 @@
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-hover">Hover</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-active">Active</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-opacity">Opacity</a>
@@ -141,6 +145,8 @@
                   <li class="nav-item"><a class="nav-link" href="#button-circle">Circle</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-pill">Pill</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-block-responsive">Block responsive</a>
                   </li>
                 </ul>
               </li>
@@ -189,6 +195,15 @@
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-scrollable-menu">Scrollable</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#flex">Flex</a>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#flex-align">Align</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#flex-align-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -260,6 +275,7 @@
                   <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a>
                     <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#nav-tabs-responsive">Responsive</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#nav-tabs-material">Material</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-tree">Tree</a>
@@ -344,6 +360,8 @@
                   <li class="nav-item"><a class="nav-link" href="#sidebar-modal">Modal</a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#size">Size</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="#text">Text</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
@@ -1646,9 +1664,29 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <div class="card-footer">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;border-dashed&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-top-dashed&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-right-dashed&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom-dashed&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-left-dashed&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;border-dotted&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-top-dotted&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-right-dotted&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom-dotted&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-left-dotted&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;border-double&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;border-solid&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;border-top-double&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-right-double&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom-double&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-left-double&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-solid&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-top-solid&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-right-solid&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom-solid&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-left-solid&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -1666,10 +1704,35 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <div class="card-footer">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;p class=&#x22;border-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
-&#x3C;p class=&#x22;border-5&#x22;&#x3E;5px&#x3C;/p&#x3E;</code></pre>
+&#x3C;p class=&#x22;border-top-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+
+&#x3C;p class=&#x22;border-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -1678,32 +1741,148 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <div class="card card-body bg-light mb-3">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;p class=&#x22;border-sm-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-sm-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-sm-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-sm-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-sm-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-sm-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-sm-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-sm-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-sm-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-sm-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-sm-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-sm-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-sm-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-sm-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-sm-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-sm-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-sm-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-sm-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-sm-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-sm-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-sm-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-sm-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-sm-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-sm-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-sm-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-sm-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-sm-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-sm-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-sm-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-sm-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
 
 &#x3C;p class=&#x22;border-md-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-md-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-md-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-md-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-md-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-md-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-md-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-md-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-md-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-md-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-md-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-md-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-md-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-md-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-md-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-md-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-md-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-md-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-md-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-md-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-md-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-md-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-md-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-md-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-md-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-md-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-md-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-md-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-md-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-md-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
 
 &#x3C;p class=&#x22;border-lg-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-lg-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-lg-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-lg-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-lg-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-lg-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-lg-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-lg-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-lg-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-lg-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-lg-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-lg-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-lg-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-lg-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-lg-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-lg-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-lg-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-lg-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-lg-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-lg-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-lg-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-lg-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-lg-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-lg-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-lg-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-lg-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-lg-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-lg-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-lg-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-lg-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
 
 &#x3C;p class=&#x22;border-xl-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-xl-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-xl-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-xl-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-xl-0&#x22;&#x3E;0px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-xl-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-xl-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-xl-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-xl-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-xl-1&#x22;&#x3E;1px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-xl-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-xl-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-xl-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-xl-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-xl-2&#x22;&#x3E;2px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-xl-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-xl-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-xl-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-xl-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-xl-3&#x22;&#x3E;3px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-xl-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-xl-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-xl-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-xl-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-xl-4&#x22;&#x3E;4px&#x3C;/p&#x3E;
+
 &#x3C;p class=&#x22;border-xl-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-top-xl-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-right-xl-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-bottom-xl-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;border-left-xl-5&#x22;&#x3E;5px&#x3C;/p&#x3E;
 </code></pre>
                   </div>
                 </div>
@@ -1907,6 +2086,84 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;button class=&#x22;btn btn-outline-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="button-hover">
+                <h3 class="fw-400">Hover</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-primary" type="button">Primary</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-secondary" type="button">Secondary</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-success" type="button">Success</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-info" type="button">Info</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-warning" type="button">Warning</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-danger" type="button">Danger</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-light" type="button">Light</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-dark" type="button">Dark</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-indigo" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-orange" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-pink" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-purple" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-teal" type="button">Teal</button>
+                                            <button class="btn mr-1 mb-2 btn-secondary btn-hover-white" type="button">White</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="button-active">
+                <h3 class="fw-400">Active</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-primary" type="button">Primary</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-secondary" type="button">Secondary</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-success" type="button">Success</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-info" type="button">Info</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-warning" type="button">Warning</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-danger" type="button">Danger</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-light" type="button">Light</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-dark" type="button">Dark</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-indigo" type="button">Indigo</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-orange" type="button">Orange</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-pink" type="button">Pink</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-purple" type="button">Purple</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-teal" type="button">Teal</button>
+                                            <button class="btn mr-1 mb-2 active btn-secondary btn-active-white" type="button">White</button>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-primary&#x22; type=&#x22;button&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-secondary&#x22; type=&#x22;button&#x22;&#x3E;Secondary&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-success&#x22; type=&#x22;button&#x22;&#x3E;Success&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-info&#x22; type=&#x22;button&#x22;&#x3E;Info&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-warning&#x22; type=&#x22;button&#x22;&#x3E;Warning&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-purple&#x22; type=&#x22;button&#x22;&#x3E;Purple&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-teal&#x22; type=&#x22;button&#x22;&#x3E;Teal&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-white&#x22; type=&#x22;button&#x22;&#x3E;White&#x3C;/button&#x3E;</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
@@ -2237,6 +2494,16 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+              </div>
+              <div id="button-block-responsive">
+                <h4 class="fw-400">Responsive button block</h4>
+                <div class="card card-body bg-light mb-3">
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-sm-block&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-md-block&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-lg-block&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary btn-xl-block&#x22; type=&#x22;button&#x22;&#x3E;Button&#x3C;/button&#x3E;</code></pre>
+                </div>
               </div>
             </div>
             <div id="card">
@@ -2788,6 +3055,40 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+              </div>
+            </div>
+            <div id="flex">
+              <h2 class="fw-400">Flex</h2>
+              <div id="flex-align">
+                <h3 class="fw-400">Align</h3>
+                <div class="card card-body bg-light mb-3">
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;flex-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-y-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-x-center&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+                <div id="flex-align-responsive">
+                  <h4 class="fw-400">Responsive flex align</h4>
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;flex-sm-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-y-sm-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-x-sm-center&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;flex-md-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-y-md-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-x-md-center&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;flex-lg-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-y-lg-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-x-lg-center&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;flex-xl-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-y-xl-center&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;flex-x-xl-center&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="font">
@@ -3422,6 +3723,7 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pr-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;m-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;mx-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;my-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3437,6 +3739,7 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pr-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;m-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;mx-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;my-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3451,267 +3754,268 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pt-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pr-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;pl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
                 </div>
                 <div id="grid-gutter-spacing-responsive">
                   <h4 class="fw-400">Gutter spacing responsive</h4>
                   <div class="card card-body bg-light mb-3">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;m-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-sm-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-sm-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-sm-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-sm-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-sm-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-sm-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-sm-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-sm&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-sm-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-sm-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-sm-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-md-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-md-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-md-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-md-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-md-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-md-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-md-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-md&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-md-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-md-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-md-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-lg-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-lg-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-lg-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-lg-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-lg-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-lg-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-lg-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-lg&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-lg-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-lg-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-lg-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-xl-gutter&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-xl-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-xl-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-xl-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-xl-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-xl-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-xl-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-xl&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-xl-gutter-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-xl-gutter-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;m-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mx-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;my-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mt-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mr-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;mb-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;ml-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mx-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;my-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mt-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mr-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;mb-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ml-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;p-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;px-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;py-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pr-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pl-xl-gutter-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;p-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;px-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pr-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pl-gutter-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
                   </div>
                 </div>
@@ -3792,14 +4096,17 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;list-group-item-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3809,14 +4116,17 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;list-group-item-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3826,14 +4136,17 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;list-group-item-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3843,14 +4156,17 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;list-group-item-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -3942,60 +4258,76 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-sm-0&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-sm-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-sm-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-sm-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-sm-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-sm-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-sm-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-sm-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-sm-3&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-sm-3&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-sm-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-sm-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-sm-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-sm-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 
 &#x3C;ul class=&#x22;nav nav-x-md-0&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-md-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-md-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-md-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-md-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-md-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-md-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-md-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-md-3&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-md-3&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-md-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 
 &#x3C;ul class=&#x22;nav nav-x-lg-0&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-lg-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-lg-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-lg-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-lg-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-lg-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-lg-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-lg-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-lg-3&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-lg-3&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-lg-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-lg-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-lg-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-lg-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 
 &#x3C;ul class=&#x22;nav nav-x-xl-0&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-xl-0&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-xl-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-xl-1&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-xl-1&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-xl-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-xl-2&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-xl-2&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-xl-3&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-xl-3&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-xl-3&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 &#x3C;ul class=&#x22;nav nav-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-x-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;nav nav-y-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
@@ -4059,6 +4391,48 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;ul class=&#x22;nav nav-tabs nav-tabs-xl-left&#x22;&#x3E;&#x3C;/ul&#x3E;
 </code></pre>
                   </div>
+                </div>
+                <div id="nav-tabs-material">
+                  <h4 class="fw-400">Material</h4>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                                  <ul class="nav nav-tabs nav-tabs-material mb-5">
+                                    <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                  </ul>
+                      <div class="row">
+                        <div class="col-md-4">
+                                      <ul class="nav nav-tabs nav-tabs-left nav-tabs-material mb-5">
+                                        <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                      </ul>
+                        </div>
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                                      <ul class="nav nav-tabs nav-tabs-right nav-tabs-material justify-content-end mb-5">
+                                        <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                        <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                      </ul>
+                        </div>
+                      </div>
+                                  <ul class="nav nav-tabs nav-tabs-bottom nav-tabs-material">
+                                    <li class="nav-item"><a class="nav-link active" href="#">Nav item 1</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+                                  </ul>
+                    </div>
+                    <div class="card-footer">
+                      <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;nav nav-tabs nav-tabs-material&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-tabs nav-tabs-left nav-tabs-material&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-tabs nav-tabs-right nav-tabs-material&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;nav nav-tabs nav-tabs-bottom nav-tabs-material&#x22;&#x3E;&#x3C;/ul&#x3E;</code></pre>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
                 </div>
               </div>
               <div id="nav-tree">
@@ -4851,9 +5225,9 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <h4 class="fw-400">Responsive fixed padding</h4>
                   <div class="card card-body bg-light mb-3">
                     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;py-sm-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-sm-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-sm-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-sm&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;py-navbar-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -4871,9 +5245,9 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pt-navbar-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;py-md-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-md-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-md-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-navbar-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-md&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-md&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;py-navbar-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -4891,9 +5265,9 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pt-navbar-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;py-lg-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-lg-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-lg-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;py-navbar-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -4911,9 +5285,9 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;pt-navbar-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;py-xl-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pt-xl-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;pb-xl-navbar&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;py-navbar-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-xl&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-xl&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;py-navbar-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -5350,6 +5724,20 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                 </div>
                 <div class="clearfix"></div>
+              </div>
+            </div>
+            <div id="size">
+              <h2 class="fw-400">Size</h2>
+              <div class="card card-body bg-light mb-3">
+                <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;s-25&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;s-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;s-75&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;s-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;s-auto&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ms-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-vs-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;vs-100&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
               </div>
             </div>
             <div id="text">
@@ -5985,6 +6373,10 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-outline">Outline</a>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-hover">Hover</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-active">Active</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#button-3d">3D</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-opacity">Opacity</a>
@@ -5999,6 +6391,8 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <li class="nav-item"><a class="nav-link" href="#button-circle">Circle</a>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#button-pill">Pill</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#button-block-responsive">Block responsive</a>
                   </li>
                 </ul>
               </li>
@@ -6047,6 +6441,15 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#dropdown-scrollable-menu">Scrollable</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#flex">Flex</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#flex-align">Align</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#flex-align-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -6118,6 +6521,7 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <li class="nav-item"><a class="nav-link" href="#nav-tabs">Tabs</a>
                     <ul class="d-none">
                       <li class="nav-item"><a class="nav-link" href="#nav-tabs-responsive">Responsive</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#nav-tabs-material">Material</a></li>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#nav-tree">Tree</a>
@@ -6202,6 +6606,8 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   <li class="nav-item"><a class="nav-link" href="#sidebar-modal">Modal</a>
                   </li>
                 </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#size">Size</a>
               </li>
               <li class="nav-item"><a class="nav-link" href="#text">Text</a>
                 <ul class="d-none">

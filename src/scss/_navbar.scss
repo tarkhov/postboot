@@ -174,14 +174,14 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .py#{$infix}-navbar {
+    .py-navbar#{$infix} {
       padding-top: $navbar-height;
       padding-bottom: $navbar-height;
     }
-    .pt#{$infix}-navbar {
+    .pt-navbar#{$infix} {
       padding-top: $navbar-height;
     }
-    .pb#{$infix}-navbar {
+    .pb-navbar#{$infix} {
       padding-bottom: $navbar-height;
     }
 

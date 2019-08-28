@@ -15,3 +15,9 @@ mixin button_state(text, variant)
 
 mixin button_size(text, size)
   +button(text, ['btn-secondary', 'btn-' + size])
+
+mixin button_active(text, variant)
+  +button(text, ['active', 'btn-secondary', 'btn-active-' + variant])
+
+mixin button_hover(text, variant)
+  +button(text, ['btn-secondary', 'btn-hover-' + variant])

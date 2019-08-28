@@ -1,0 +1,22 @@
+extends ../example.pug
+
+block example_title
+  h4.fw-400 Material
+
+block example_result
+  +nav(['nav-tabs', 'nav-tabs-material', 'mb-5'])
+  .row
+    .col-md-4
+      +nav(['nav-tabs', 'nav-tabs-left', 'nav-tabs-material', 'mb-5'])
+    .col-md-4
+    .col-md-4
+      +nav(['nav-tabs', 'nav-tabs-right', 'nav-tabs-material', 'justify-content-end', 'mb-5'])
+  +nav(['nav-tabs', 'nav-tabs-bottom', 'nav-tabs-material'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ul.nav.nav-tabs.nav-tabs-material
+    ul.nav.nav-tabs.nav-tabs-left.nav-tabs-material
+    ul.nav.nav-tabs.nav-tabs-right.nav-tabs-material
+    ul.nav.nav-tabs.nav-tabs-bottom.nav-tabs-material

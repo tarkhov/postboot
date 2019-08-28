@@ -9,4 +9,6 @@ block example_code
     each breakpoint in ['sm', 'md', 'lg', 'xl']
       - for(var width = 0; width <= 5; width++)
         p(class='border-' + breakpoint + '-' + width)= width + 'px'
-      ="\n"
+        each position in ['top', 'right', 'bottom', 'left']
+          p(class='border-' + position + '-' + breakpoint + '-' + width)= width + 'px'
+        ="\n"

@@ -1,0 +1,13 @@
+extends ../example-html.pug
+
+block example_title
+  h4.fw-400 Responsive flex align
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      div(class='flex-' + breakpoint + '-center')
+      div(class='flex-y-' + breakpoint + '-center')
+      div(class='flex-x-' + breakpoint + '-center')
+      ="\n"

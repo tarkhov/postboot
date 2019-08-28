@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Hover
+
+block example_result
+  each text, variant in colors
+    if variant != 'black'
+      +button_hover(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      if variant != 'black'
+        button.btn.btn-secondary.active(type='button' class='btn-active-' + variant)= text
