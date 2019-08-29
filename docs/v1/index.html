@@ -245,6 +245,10 @@
                       <li class="nav-item"><a class="nav-link" href="#grid-container-size">Size</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#grid-row-size">Row size</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#grid-column-size">Column size</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a>
                     <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing-responsive">Responsive</a></li>
@@ -362,6 +366,22 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#size">Size</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#svg">SVG</a>
+                <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
+                  <li class="nav-item"><a class="nav-link" href="#svg-fill">Fill</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#svg-fill-hover">Hover</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#svg-fill-hover-opacity">Hover opacity</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#svg-stroke">Stroke</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#svg-stroke-hover">Hover</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#svg-stroke-hover-opacity">Hover opacity</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#text">Text</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
@@ -3688,6 +3708,95 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                   </div>
                 </div>
               </div>
+              <div id="grid-row-size">
+                <h4 class="fw-400">Row size</h4><span class="badge badge-success text-uppercase mb-3">New</span>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="mb-3 row-1">
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                    </div>
+                    <div class="mb-3 row-2">
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                    </div>
+                    <div class="mb-3 row-3">
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-3">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;row-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-3&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div id="grid-column-size">
+                <h4 class="fw-400">Column size</h4><span class="badge badge-success text-uppercase mb-3">New</span>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-2-5">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-2-5">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-2-5">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-2-5">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                      <div class="col-2-5">
+                        <div class="w-100 bg-secondary" style="height: 40px;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;col-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-sm-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-md-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-lg-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xl-2-5&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
               <div id="grid-gutter-spacing">
                 <h3 class="fw-400">Gutter spacing</h3>
                 <div class="card card-body bg-light mb-3">
@@ -5740,6 +5849,705 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
 &#x3C;div class=&#x22;vs-100&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
               </div>
             </div>
+            <div id="svg">
+              <h2 class="fw-400">SVG</h2>
+              <div id="svg-fill">
+                <h3 class="fw-400">Fill</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;fill-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-light&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-black&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-teal&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="svg-fill-hover">
+                  <h4 class="fw-400">Hover</h4>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <svg class="fill-hover-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-footer">
+                      <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div id="svg-fill-hover-opacity">
+                  <h4 class="fw-400">Hover opacity</h4>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <svg class="fill-hover-primary-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-secondary-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-success-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-info-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-warning-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-danger-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-light-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-dark-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-black-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-indigo-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-orange-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-pink-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-purple-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-teal-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="fill-hover-white-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-footer">
+                      <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-primary-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-secondary-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-secondary-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-success-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-success-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-info-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-info-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-warning-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-warning-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-danger-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-danger-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-light-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-light-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-dark-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-dark-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-black-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-indigo-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-indigo-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-orange-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-orange-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-pink-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-pink-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-purple-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-purple-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-teal-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-teal-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;fill-hover-white-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;fill-hover-white-90&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div id="svg-stroke">
+                <h3 class="fw-400">Stroke</h3>
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <svg class="stroke-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                    <svg class="stroke-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                      <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                    </svg>
+                  </div>
+                  <div class="card-footer">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;stroke-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-light&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-black&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-teal&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="svg-stroke-hover">
+                  <h4 class="fw-400">Hover</h4>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <svg class="stroke-hover-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-footer">
+                      <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+                <div id="svg-stroke-hover-opacity">
+                  <h4 class="fw-400">Hover opacity</h4>
+                  <div class="card mb-3">
+                    <div class="card-body">
+                      <svg class="stroke-hover-primary-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-secondary-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-success-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-info-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-warning-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-danger-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-light-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-dark-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-black-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-indigo-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-orange-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-pink-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-purple-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-teal-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                      <svg class="stroke-hover-white-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
+                      </svg>
+                    </div>
+                    <div class="card-footer">
+                      <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-primary-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-secondary-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-secondary-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-success-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-success-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-info-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-info-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-warning-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-warning-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-danger-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-danger-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-light-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-light-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-dark-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-dark-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-black-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-indigo-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-indigo-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-orange-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-orange-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-pink-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-pink-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-purple-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-purple-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-teal-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-teal-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;stroke-hover-white-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;stroke-hover-white-90&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
             <div id="text">
               <h2 class="fw-400">Text</h2>
               <div id="text-custom">
@@ -6491,6 +7299,10 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                       <li class="nav-item"><a class="nav-link" href="#grid-container-size">Size</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#grid-row-size">Row size</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#grid-column-size">Column size</a>
+                  </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a>
                     <ul class="d-none">
                       <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing-responsive">Responsive</a></li>
@@ -6608,6 +7420,22 @@ unzip postboot-1.0.0-rc3.zip</code></pre>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#size">Size</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#svg">SVG</a>
+                <ul class="d-none">
+                  <li class="nav-item"><a class="nav-link" href="#svg-fill">Fill</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#svg-fill-hover">Hover</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#svg-fill-hover-opacity">Hover opacity</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#svg-stroke">Stroke</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#svg-stroke-hover">Hover</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#svg-stroke-hover-opacity">Hover opacity</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#text">Text</a>
                 <ul class="d-none">

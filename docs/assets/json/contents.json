@@ -402,6 +402,14 @@
         ]
       },
       {
+        "url": "#grid-row-size",
+        "name": "Row size"
+      },
+      {
+        "url": "#grid-column-size",
+        "name": "Column size"
+      },
+      {
         "url": "#grid-gutter-spacing",
         "name": "Gutter spacing",
         "childs": [
@@ -624,6 +632,40 @@
   {
     "url": "#size",
     "name": "Size"
+  },
+  {
+    "url": "#svg",
+    "name": "SVG",
+    "childs": [
+      {
+        "url": "#svg-fill",
+        "name": "Fill",
+        "childs": [
+          {
+            "url": "#svg-fill-hover",
+            "name": "Hover"
+          },
+          {
+            "url": "#svg-fill-hover-opacity",
+            "name": "Hover opacity"
+          }
+        ]
+      },
+      {
+        "url": "#svg-stroke",
+        "name": "Stroke",
+        "childs": [
+          {
+            "url": "#svg-stroke-hover",
+            "name": "Hover"
+          },
+          {
+            "url": "#svg-stroke-hover-opacity",
+            "name": "Hover opacity"
+          }
+        ]
+      }
+    ]
   },
   {
     "url": "#text",
