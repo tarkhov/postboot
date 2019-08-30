@@ -21,7 +21,7 @@
   margin-right: -($card-spacer-x / 2);
   margin-top: -$card-spacer-y;
   margin-left: -($card-spacer-x / 2);
-  border-top: 0;
+  border-top: 0 !important;
 }
 
 .card-footer-pills {
