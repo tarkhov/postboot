@@ -8,15 +8,77 @@
       justify-content: center;
       align-items: center;
     }
-
     .flex-x#{$infix}-center {
       display: flex;
       justify-content: center;
     }
-
     .flex-y#{$infix}-center {
       display: flex;
       align-items: center;
+    }
+    .flex#{$infix}-left {
+      display: flex !important;
+      justify-content: flex-start !important;
+    }
+    .flex#{$infix}-right {
+      display: flex !important;
+      justify-content: flex-end !important;
+    }
+    .flex#{$infix}-between {
+      display: flex !important;
+      justify-content: space-between !important;
+    }
+    .flex#{$infix}-around {
+      display: flex !important;
+      justify-content: space-around !important;
+    }
+    .flex#{$infix}-top {
+      display: flex !important;
+      align-items: flex-start !important;
+    }
+    .flex#{$infix}-bottom {
+      display: flex !important;
+      align-items: flex-end !important;
+    }
+    .flex#{$infix}-baseline {
+      display: flex !important;
+      align-items: baseline !important;
+    }
+    .flex#{$infix}-stretch {
+      display: flex !important;
+      align-items: stretch !important;
+    }
+
+    // Align
+    .flex-align#{$infix}-between {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-content: space-between !important;
+    }
+    .flex-align#{$infix}-around {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-content: space-around !important;
+    }
+    .flex-align#{$infix}-start {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-content: flex-start !important;
+    }
+    .flex-align#{$infix}-end {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-content: flex-end !important;
+    }
+    .flex-align#{$infix}-center {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-content: center !important;
+    }
+    .flex-align#{$infix}-stretch {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-content: stretch !important;
     }
   }
 }

@@ -62,7 +62,7 @@ module.exports = function (grunt) {
           'node_modules/jquery/dist/jquery.min.js',
           'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
           'node_modules/prismjs/prism.js',
-          'node_modules/@fortawesome/fontawesome-free/js/all.min.js',
+          // 'node_modules/@fortawesome/fontawesome-free/js/all.min.js',
           'dist/js/<%= pkg.name %>.min.js'
         ],
         dest: 'docs/assets/js/app.js'
