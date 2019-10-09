@@ -70,6 +70,9 @@ module.exports = function (grunt) {
     },
 
     uglify: {
+      options: {
+        banner: '<%= banner %>'
+      },
       dist: {
         files: {
           'dist/js/<%= pkg.name %>.min.js': '<%= concat.dist.dest %>'
