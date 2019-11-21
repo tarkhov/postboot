@@ -121,6 +121,16 @@ $grid-gutter-widths: map-merge((
   3: $grid-gutter-width
 ), $grid-gutter-widths);
 
+// Grid row sizing
+$grid-row-sizes: () !default;
+$grid-row-sizes: map-merge((
+  1: 3,
+  2: 1.5,
+  3: 1,
+  4: .75,
+  5: .5
+), $grid-row-sizes);
+
 // Components
 $border-radius-circle: 50% !default;
 $border-radius-pill: 30px !default;
@@ -176,6 +186,12 @@ $card-spacer-x-xs: .5rem !default;
 $card-spacer-y-sm: .5rem !default;
 $card-spacer-x-sm: .75rem !default;
 
+$card-spacer-y-lg: 1rem !default;
+$card-spacer-x-lg: 1.5rem !default;
+
+$card-spacer-y-xl: 1.25rem !default;
+$card-spacer-x-xl: 1.75rem !default;
+
 $card-state-bg-level: -9 !default;
 $card-state-color-level: 6 !default;
 
@@ -220,6 +236,9 @@ $nav-link-padding-y-sm: .25rem !default;
 
 $nav-link-padding-x-lg: 1.5rem !default;
 $nav-link-padding-y-lg: .75rem !default;
+
+$nav-link-padding-x-xl: 2rem !default;
+$nav-link-padding-y-xl: 1rem !default;
 
 // Progress
 $progress-height-xs:    .75rem !default;

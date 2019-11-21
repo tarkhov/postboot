@@ -29,20 +29,10 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    .row#{$infix}-1 {
-      @include row-size(3);
-    }
-    .row#{$infix}-2 {
-      @include row-size(1.5);
-    }
-    .row#{$infix}-3 {
-      @include row-size(1);
-    }
-    .row#{$infix}-4 {
-      @include row-size(.75);
-    }
-    .row#{$infix}-5 {
-      @include row-size(.5);
+    @each $size, $divider in $grid-row-sizes {
+      .row#{$infix}-#{$size} {
+        @include row-size($divider);
+      }
     }
   }
 }
