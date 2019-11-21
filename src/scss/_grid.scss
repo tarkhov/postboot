@@ -38,6 +38,12 @@
     .row#{$infix}-3 {
       @include row-size(1);
     }
+    .row#{$infix}-4 {
+      @include row-size(.75);
+    }
+    .row#{$infix}-5 {
+      @include row-size(.5);
+    }
   }
 }
 
