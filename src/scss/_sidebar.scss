@@ -100,12 +100,18 @@
     @include transition($modal-transition);
     transform: $sidebar-modal-fade-transform;
   }
+  .sidebar-modal-right.fade & {
+    transform: $sidebar-modal-right-fade-transform;
+  }
+  .sidebar-modal-right & {
+    float: right;
+  }
   .sidebar-modal.show & {
     transform: $modal-show-transform;
   }
 
   @include media-breakpoint-up(sm) {
-    max-width: 250px;
+    width: 250px;
   }
 }
 
@@ -113,6 +119,9 @@
   .sidebar-modal {
     overflow-x: hidden;
     overflow-y: auto;
+  }
+  .sidebar-modal-right {
+    padding-right: 0 !important;
   }
 
   .sidebar {
