@@ -301,15 +301,25 @@ $breadcrumb-pill-padding-x: 1.5rem !default;
 // Dropdown
 $dropdown-padding-y-xs: .375rem !default;
 $dropdown-padding-y-sm: .25rem !default;
+$dropdown-padding-y-lg: .75rem !default;
+$dropdown-padding-y-xl: 1rem !default;
 
 $dropdown-font-size-xs: $font-size-xs !default;
 $dropdown-font-size-sm: $font-size-sm !default;
+$dropdown-font-size-lg: $font-size-lg !default;
+$dropdown-font-size-xl: $font-size-xl !default;
 
 $dropdown-item-padding-y-xs: .1rem !default;
 $dropdown-item-padding-x-xs: .5rem !default;
 
 $dropdown-item-padding-y-sm: .15rem !default;
 $dropdown-item-padding-x-sm: 1rem !default;
+
+$dropdown-item-padding-y-lg: .5rem !default;
+$dropdown-item-padding-x-lg: 2rem !default;
+
+$dropdown-item-padding-y-xl: .75rem !default;
+$dropdown-item-padding-x-xl: 2.5rem !default;
 
 $dropdown-arrow-position:    5px !default;
 $dropdown-arrow-width:       1rem !default;
