@@ -2096,6 +2096,18 @@
   .dropdown-menu-3 .dropdown-item {
     padding: 0.25rem 1.5rem; }
 
+.dropdown-menu-4 {
+  padding: 0.75rem 0;
+  font-size: 1.25rem; }
+  .dropdown-menu-4 .dropdown-item {
+    padding: 0.5rem 2rem; }
+
+.dropdown-menu-5 {
+  padding: 1rem 0;
+  font-size: 1.5rem; }
+  .dropdown-menu-5 .dropdown-item {
+    padding: 0.75rem 2.5rem; }
+
 @media (min-width: 576px) {
   .dropdown-menu-sm-1 {
     padding: 0.375rem 0;
@@ -2113,7 +2125,19 @@
     padding: 0.5rem 0;
     font-size: 1rem; }
     .dropdown-menu-sm-3 .dropdown-item {
-      padding: 0.25rem 1.5rem; } }
+      padding: 0.25rem 1.5rem; }
+
+  .dropdown-menu-sm-4 {
+    padding: 0.75rem 0;
+    font-size: 1.25rem; }
+    .dropdown-menu-sm-4 .dropdown-item {
+      padding: 0.5rem 2rem; }
+
+  .dropdown-menu-sm-5 {
+    padding: 1rem 0;
+    font-size: 1.5rem; }
+    .dropdown-menu-sm-5 .dropdown-item {
+      padding: 0.75rem 2.5rem; } }
 @media (min-width: 768px) {
   .dropdown-menu-md-1 {
     padding: 0.375rem 0;
@@ -2131,7 +2155,19 @@
     padding: 0.5rem 0;
     font-size: 1rem; }
     .dropdown-menu-md-3 .dropdown-item {
-      padding: 0.25rem 1.5rem; } }
+      padding: 0.25rem 1.5rem; }
+
+  .dropdown-menu-md-4 {
+    padding: 0.75rem 0;
+    font-size: 1.25rem; }
+    .dropdown-menu-md-4 .dropdown-item {
+      padding: 0.5rem 2rem; }
+
+  .dropdown-menu-md-5 {
+    padding: 1rem 0;
+    font-size: 1.5rem; }
+    .dropdown-menu-md-5 .dropdown-item {
+      padding: 0.75rem 2.5rem; } }
 @media (min-width: 992px) {
   .dropdown-menu-lg-1 {
     padding: 0.375rem 0;
@@ -2149,7 +2185,19 @@
     padding: 0.5rem 0;
     font-size: 1rem; }
     .dropdown-menu-lg-3 .dropdown-item {
-      padding: 0.25rem 1.5rem; } }
+      padding: 0.25rem 1.5rem; }
+
+  .dropdown-menu-lg-4 {
+    padding: 0.75rem 0;
+    font-size: 1.25rem; }
+    .dropdown-menu-lg-4 .dropdown-item {
+      padding: 0.5rem 2rem; }
+
+  .dropdown-menu-lg-5 {
+    padding: 1rem 0;
+    font-size: 1.5rem; }
+    .dropdown-menu-lg-5 .dropdown-item {
+      padding: 0.75rem 2.5rem; } }
 @media (min-width: 1200px) {
   .dropdown-menu-xl-1 {
     padding: 0.375rem 0;
@@ -2167,7 +2215,19 @@
     padding: 0.5rem 0;
     font-size: 1rem; }
     .dropdown-menu-xl-3 .dropdown-item {
-      padding: 0.25rem 1.5rem; } }
+      padding: 0.25rem 1.5rem; }
+
+  .dropdown-menu-xl-4 {
+    padding: 0.75rem 0;
+    font-size: 1.25rem; }
+    .dropdown-menu-xl-4 .dropdown-item {
+      padding: 0.5rem 2rem; }
+
+  .dropdown-menu-xl-5 {
+    padding: 1rem 0;
+    font-size: 1.5rem; }
+    .dropdown-menu-xl-5 .dropdown-item {
+      padding: 0.75rem 2.5rem; } }
 .tribar {
   border-top: 2px solid #007bff; }
   .tribar, .tribar::before, .tribar::after {
@@ -3147,6 +3207,31 @@
   .navbar-4 .navbar-scroller {
     height: 3.25rem; }
 
+.navbar-5 {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+  .navbar-5 .navbar-brand {
+    font-size: 1.75rem;
+    padding-top: 0.675rem;
+    padding-bottom: 0.675rem; }
+  .navbar-5 .navbar-nav {
+    font-size: 1.5rem; }
+    .navbar-5 .navbar-nav .nav-link {
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+  .navbar-5 .navbar-text {
+    font-size: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; }
+  .navbar-5 .navbar-breadcrumb {
+    font-size: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem; }
+  .navbar-5 .navbar-dropdown-menu {
+    margin-top: 1rem; }
+  .navbar-5 .navbar-scroller {
+    height: 4.5rem; }
+
 @media (min-width: 576px) {
   .navbar-sm-1 {
     padding-top: 0.1rem;
@@ -3246,7 +3331,32 @@
     .navbar-sm-4 .navbar-dropdown-menu {
       margin-top: 0.75rem; }
     .navbar-sm-4 .navbar-scroller {
-      height: 3.25rem; } }
+      height: 3.25rem; }
+
+  .navbar-sm-5 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .navbar-sm-5 .navbar-brand {
+      font-size: 1.75rem;
+      padding-top: 0.675rem;
+      padding-bottom: 0.675rem; }
+    .navbar-sm-5 .navbar-nav {
+      font-size: 1.5rem; }
+      .navbar-sm-5 .navbar-nav .nav-link {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem; }
+    .navbar-sm-5 .navbar-text {
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    .navbar-sm-5 .navbar-breadcrumb {
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    .navbar-sm-5 .navbar-dropdown-menu {
+      margin-top: 1rem; }
+    .navbar-sm-5 .navbar-scroller {
+      height: 4.5rem; } }
 @media (min-width: 768px) {
   .navbar-md-1 {
     padding-top: 0.1rem;
@@ -3346,7 +3456,32 @@
     .navbar-md-4 .navbar-dropdown-menu {
       margin-top: 0.75rem; }
     .navbar-md-4 .navbar-scroller {
-      height: 3.25rem; } }
+      height: 3.25rem; }
+
+  .navbar-md-5 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .navbar-md-5 .navbar-brand {
+      font-size: 1.75rem;
+      padding-top: 0.675rem;
+      padding-bottom: 0.675rem; }
+    .navbar-md-5 .navbar-nav {
+      font-size: 1.5rem; }
+      .navbar-md-5 .navbar-nav .nav-link {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem; }
+    .navbar-md-5 .navbar-text {
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    .navbar-md-5 .navbar-breadcrumb {
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    .navbar-md-5 .navbar-dropdown-menu {
+      margin-top: 1rem; }
+    .navbar-md-5 .navbar-scroller {
+      height: 4.5rem; } }
 @media (min-width: 992px) {
   .navbar-lg-1 {
     padding-top: 0.1rem;
@@ -3446,7 +3581,32 @@
     .navbar-lg-4 .navbar-dropdown-menu {
       margin-top: 0.75rem; }
     .navbar-lg-4 .navbar-scroller {
-      height: 3.25rem; } }
+      height: 3.25rem; }
+
+  .navbar-lg-5 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .navbar-lg-5 .navbar-brand {
+      font-size: 1.75rem;
+      padding-top: 0.675rem;
+      padding-bottom: 0.675rem; }
+    .navbar-lg-5 .navbar-nav {
+      font-size: 1.5rem; }
+      .navbar-lg-5 .navbar-nav .nav-link {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem; }
+    .navbar-lg-5 .navbar-text {
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    .navbar-lg-5 .navbar-breadcrumb {
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    .navbar-lg-5 .navbar-dropdown-menu {
+      margin-top: 1rem; }
+    .navbar-lg-5 .navbar-scroller {
+      height: 4.5rem; } }
 @media (min-width: 1200px) {
   .navbar-xl-1 {
     padding-top: 0.1rem;
@@ -3546,7 +3706,32 @@
     .navbar-xl-4 .navbar-dropdown-menu {
       margin-top: 0.75rem; }
     .navbar-xl-4 .navbar-scroller {
-      height: 3.25rem; } }
+      height: 3.25rem; }
+
+  .navbar-xl-5 {
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .navbar-xl-5 .navbar-brand {
+      font-size: 1.75rem;
+      padding-top: 0.675rem;
+      padding-bottom: 0.675rem; }
+    .navbar-xl-5 .navbar-nav {
+      font-size: 1.5rem; }
+      .navbar-xl-5 .navbar-nav .nav-link {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem; }
+    .navbar-xl-5 .navbar-text {
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    .navbar-xl-5 .navbar-breadcrumb {
+      font-size: 1.5rem;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem; }
+    .navbar-xl-5 .navbar-dropdown-menu {
+      margin-top: 1rem; }
+    .navbar-xl-5 .navbar-scroller {
+      height: 4.5rem; } }
 .navbar-nav-y-0 .nav-link {
   padding-top: 0 !important;
   padding-bottom: 0 !important; }

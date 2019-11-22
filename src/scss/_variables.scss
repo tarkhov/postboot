@@ -215,15 +215,22 @@ $navbar-brand-padding-y-lg:    .5rem !default;
 $navbar-nav-link-padding-y-lg: .675rem !default;
 $navbar-nav-link-padding-x-lg: .75rem !default;
 
+$navbar-padding-y-xl:          $spacer !default;
+$navbar-brand-padding-y-xl:    .675rem !default;
+$navbar-nav-link-padding-y-xl: .75rem !default;
+$navbar-nav-link-padding-x-xl: 1rem !default;
+
 $navbar-height:    3.5rem !default;
 $navbar-height-xs: 1.5625rem !default;
 $navbar-height-sm: 2.2rem !default;
 $navbar-height-lg: 4.75rem !default;
+$navbar-height-xl: 6rem !default;
 
 $navbar-nav-height:    2.5rem !default;
 $navbar-nav-height-xs: 1.3125rem !default;
 $navbar-nav-height-sm: 1.8125rem !default;
 $navbar-nav-height-lg: 3.25rem !default;
+$navbar-nav-height-xl: 3.75rem !default;
 
 // Navs
 $nav-link-active-color: $gray-700 !default;
