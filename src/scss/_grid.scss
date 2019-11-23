@@ -25,56 +25,73 @@
 }
 
 // Row sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@if $enable-grid-classes {
+  $all-grid-breakpoints: map-merge($grid-breakpoints, $wide-grid-breakpoints);
 
-    @each $size, $divider in $grid-row-sizes {
-      .row#{$infix}-#{$size} {
-        @include row-size($divider);
+  @each $breakpoint in map-keys($all-grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+
+      @each $size, $divider in $grid-row-sizes {
+        .row#{$infix}-#{$size} {
+          @include row-size($divider);
+        }
       }
     }
   }
 }
 
+// Wide columns
+@if $enable-grid-classes {
+  @include make-grid-columns($grid-columns, $grid-gutter-width, $wide-grid-breakpoints);
+}
+
 // Column sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  $infix: breakpoint-infix($breakpoint);
+@if $enable-grid-classes {
+  $all-grid-breakpoints: map-merge($grid-breakpoints, $wide-grid-breakpoints);
 
-  .col#{$infix}-2-5 {
-    @include make-col-ready();
-  }
+  @each $breakpoint in map-keys($all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-  @include media-breakpoint-up($breakpoint) {
     .col#{$infix}-2-5 {
-      @include make-col(2.4);
+      @include make-col-ready();
+    }
+
+    @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+      .col#{$infix}-2-5 {
+        @include make-col(2.4);
+      }
     }
   }
 }
 
 // Margin and padding
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@if $enable-grid-classes {
+  $all-grid-breakpoints: map-merge($grid-breakpoints, $wide-grid-breakpoints);
 
-    @each $size, $width in $grid-gutter-widths {
-      @if $size != '' {
-        $size: "-#{$size}";
-      }
+  @each $breakpoint in map-keys($all-grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+      $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-      @each $prop, $abbrev in (margin: m, padding: p) {
-        .#{$abbrev}-gutter#{$infix}#{$size}  { #{$prop}:        $width !important; }
-        .#{$abbrev}t-gutter#{$infix}#{$size} { #{$prop}-top:    $width !important; }
-        .#{$abbrev}r-gutter#{$infix}#{$size} { #{$prop}-right:  $width !important; }
-        .#{$abbrev}b-gutter#{$infix}#{$size} { #{$prop}-bottom: $width !important; }
-        .#{$abbrev}l-gutter#{$infix}#{$size} { #{$prop}-left:   $width !important; }
-        .#{$abbrev}x-gutter#{$infix}#{$size} {
-          #{$prop}-right: $width !important;
-          #{$prop}-left:  $width !important;
+      @each $size, $width in $grid-gutter-widths {
+        @if $size != '' {
+          $size: "-#{$size}";
         }
-        .#{$abbrev}y-gutter#{$infix}#{$size} {
-          #{$prop}-top:    $width !important;
-          #{$prop}-bottom: $width !important;
+
+        @each $prop, $abbrev in (margin: m, padding: p) {
+          .#{$abbrev}-gutter#{$infix}#{$size}  { #{$prop}:        $width !important; }
+          .#{$abbrev}t-gutter#{$infix}#{$size} { #{$prop}-top:    $width !important; }
+          .#{$abbrev}r-gutter#{$infix}#{$size} { #{$prop}-right:  $width !important; }
+          .#{$abbrev}b-gutter#{$infix}#{$size} { #{$prop}-bottom: $width !important; }
+          .#{$abbrev}l-gutter#{$infix}#{$size} { #{$prop}-left:   $width !important; }
+          .#{$abbrev}x-gutter#{$infix}#{$size} {
+            #{$prop}-right: $width !important;
+            #{$prop}-left:  $width !important;
+          }
+          .#{$abbrev}y-gutter#{$infix}#{$size} {
+            #{$prop}-top:    $width !important;
+            #{$prop}-bottom: $width !important;
+          }
         }
       }
     }

@@ -13,6 +13,13 @@ $custom-colors: map-merge((
 // Opacity
 $enable-opacity: true !default;
 
+// Wide grid
+$wide-grid-breakpoints: (
+  xxl: 1440px,
+  3xl: 1600px,
+  4xl: 1920px
+) !default;
+
 // Fonts
 $font-size-xs:  .75rem !default;
 $font-size-xl:  1.5rem !default;
@@ -116,6 +123,7 @@ $container-size-breakpoints: map-merge((
 $grid-gutter-widths: () !default;
 $grid-gutter-widths: map-merge((
   '': $grid-gutter-width,
+  0: 0,
   1: $grid-gutter-width / 3,
   2: $grid-gutter-width / 1.5,
   3: $grid-gutter-width
@@ -235,17 +243,17 @@ $navbar-nav-height-xl: 3.75rem !default;
 // Navs
 $nav-link-active-color: $gray-700 !default;
 
-$nav-link-padding-x-xs: .25rem !default;
 $nav-link-padding-y-xs: .1rem !default;
+$nav-link-padding-x-xs: .25rem !default;
 
-$nav-link-padding-x-sm: .5rem !default;
 $nav-link-padding-y-sm: .25rem !default;
+$nav-link-padding-x-sm: .5rem !default;
 
-$nav-link-padding-x-lg: 1.5rem !default;
 $nav-link-padding-y-lg: .75rem !default;
+$nav-link-padding-x-lg: 1.5rem !default;
 
-$nav-link-padding-x-xl: 2rem !default;
 $nav-link-padding-y-xl: 1rem !default;
+$nav-link-padding-x-xl: 2rem !default;
 
 // Progress
 $progress-height-xs:    .75rem !default;
@@ -349,11 +357,41 @@ $pre-md: 500px !default;
 $pre-sm: 300px !default;
 
 // Sidebar
-$sidebar-padding-y:                  ($spacer / 2) !default;
+$sidebar-padding-y:             ($spacer / 2) !default;
+$sidebar-font-size:             $font-size-base !default;
+$sidebar-nav-link-padding-y:    $nav-link-padding-y !default;
+$sidebar-nav-link-padding-x:    $nav-link-padding-x !default;
 
-$sidebar-brand-font-size:            $font-size-lg !default;
-$sidebar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
-$sidebar-brand-padding-y:            $nav-link-padding-y !default;
+$sidebar-brand-font-size:       $font-size-lg !default;
+$sidebar-brand-padding-y:       $nav-link-padding-y !default;
+
+$sidebar-padding-y-xs:          ($spacer * .1) !default;
+$sidebar-font-size-xs:          $font-size-xs !default;
+$sidebar-brand-font-size-xs:    $font-size-sm !default;
+$sidebar-brand-padding-y-xs:    .1rem !default;
+$sidebar-nav-link-padding-y-xs: .1rem !default;
+$sidebar-nav-link-padding-x-xs: .25rem !default;
+
+$sidebar-padding-y-sm:          ($spacer * .25) !default;
+$sidebar-font-size-sm:          $font-size-sm !default;
+$sidebar-brand-font-size-sm:    $font-size-base !default;
+$sidebar-brand-padding-y-sm:    .25rem !default;
+$sidebar-nav-link-padding-y-sm: .25rem !default;
+$sidebar-nav-link-padding-x-sm: .5rem !default;
+
+$sidebar-padding-y-lg:          ($spacer * .75) !default;
+$sidebar-font-size-lg:          $font-size-lg !default;
+$sidebar-brand-font-size-lg:    $font-size-xl !default;
+$sidebar-brand-padding-y-lg:    .675rem !default;
+$sidebar-nav-link-padding-y-lg: .675rem !default;
+$sidebar-nav-link-padding-x-lg: 1.5rem !default;
+
+$sidebar-padding-y-xl:          $spacer !default;
+$sidebar-font-size-xl:          $font-size-xl !default;
+$sidebar-brand-font-size-xl:    $font-size-xxl !default;
+$sidebar-brand-padding-y-xl:    .75rem !default;
+$sidebar-nav-link-padding-y-xl: .75rem !default;
+$sidebar-nav-link-padding-x-xl: 2rem !default;
 
 $sidebar-toggler-padding-y:          .25rem !default;
 $sidebar-toggler-padding-x:          .75rem !default;
