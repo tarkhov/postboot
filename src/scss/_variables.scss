@@ -122,11 +122,12 @@ $container-size-breakpoints: map-merge((
 // Grid gutter spacing
 $grid-gutter-widths: () !default;
 $grid-gutter-widths: map-merge((
-  '': $grid-gutter-width,
   0: 0,
-  1: $grid-gutter-width / 3,
-  2: $grid-gutter-width / 1.5,
-  3: $grid-gutter-width
+  1: $grid-gutter-width / 6,
+  2: $grid-gutter-width / 3,
+  3: $grid-gutter-width / 1.5,
+  4: $grid-gutter-width,
+  '': $grid-gutter-width
 ), $grid-gutter-widths);
 
 // Grid row sizing
