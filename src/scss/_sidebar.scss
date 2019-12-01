@@ -100,12 +100,18 @@
     @include transition($modal-transition);
     transform: $sidebar-modal-fade-transform;
   }
+  .sidebar-modal-right.fade & {
+    transform: $sidebar-modal-right-fade-transform;
+  }
+  .sidebar-modal-right & {
+    float: right;
+  }
   .sidebar-modal.show & {
     transform: $modal-show-transform;
   }
 
   @include media-breakpoint-up(sm) {
-    max-width: 250px;
+    width: 250px;
   }
 }
 
@@ -113,6 +119,9 @@
   .sidebar-modal {
     overflow-x: hidden;
     overflow-y: auto;
+  }
+  .sidebar-modal-right {
+    padding-right: 0 !important;
   }
 
   .sidebar {
@@ -200,5 +209,92 @@
 
   .sidebar-text {
     color: $sidebar-dark-color;
+  }
+}
+
+// Sizes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .sidebar#{$infix}-1 {
+      @include sidebar-size($sidebar-padding-y-xs, $sidebar-font-size-xs, $sidebar-brand-font-size-xs, $sidebar-brand-padding-y-xs, $sidebar-nav-link-padding-y-xs);
+    }
+    .sidebar#{$infix}-2 {
+      @include sidebar-size($sidebar-padding-y-sm, $sidebar-font-size-sm, $sidebar-brand-font-size-sm, $sidebar-brand-padding-y-sm, $sidebar-nav-link-padding-y-sm);
+    }
+    .sidebar#{$infix}-3 {
+      @include sidebar-size($sidebar-padding-y, $sidebar-font-size, $sidebar-brand-font-size, $sidebar-brand-padding-y, $sidebar-nav-link-padding-y);
+    }
+    .sidebar#{$infix}-4 {
+      @include sidebar-size($sidebar-padding-y-lg, $sidebar-font-size-lg, $sidebar-brand-font-size-lg, $sidebar-brand-padding-y-lg, $sidebar-nav-link-padding-y-lg);
+    }
+    .sidebar#{$infix}-5 {
+      @include sidebar-size($sidebar-padding-y-xl, $sidebar-font-size-xl, $sidebar-brand-font-size-xl, $sidebar-brand-padding-y-xl, $sidebar-nav-link-padding-y-xl);
+    }
+  }
+}
+
+// Nav size
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .sidebar-nav-y#{$infix}-0 {
+      @include sidebar-nav-size-y(0);
+    }
+    .sidebar-nav-x#{$infix}-0 {
+      @include sidebar-nav-size-x(0);
+    }
+
+    .sidebar-nav#{$infix}-1 {
+      @include sidebar-nav-size($sidebar-nav-link-padding-y-xs, $sidebar-nav-link-padding-x-xs, $sidebar-font-size-xs);
+    }
+    .sidebar-nav-y#{$infix}-1 {
+      @include sidebar-nav-size-y($sidebar-nav-link-padding-y-xs);
+    }
+    .sidebar-nav-x#{$infix}-1 {
+      @include sidebar-nav-size-x($sidebar-nav-link-padding-x-xs);
+    }
+
+    .sidebar-nav#{$infix}-2 {
+      @include sidebar-nav-size($sidebar-nav-link-padding-y-sm, $sidebar-nav-link-padding-x-sm, $sidebar-font-size-sm);
+    }
+    .sidebar-nav-y#{$infix}-2 {
+      @include sidebar-nav-size-y($sidebar-nav-link-padding-y-sm);
+    }
+    .sidebar-nav-x#{$infix}-2 {
+      @include sidebar-nav-size-x($sidebar-nav-link-padding-x-sm);
+    }
+
+    .sidebar-nav#{$infix}-3 {
+      @include sidebar-nav-size($sidebar-nav-link-padding-y, $sidebar-nav-link-padding-x, $sidebar-font-size);
+    }
+    .sidebar-nav-y#{$infix}-3 {
+      @include sidebar-nav-size-y($sidebar-nav-link-padding-y);
+    }
+    .sidebar-nav-x#{$infix}-3 {
+      @include sidebar-nav-size-x($sidebar-nav-link-padding-x);
+    }
+
+    .sidebar-nav#{$infix}-4 {
+      @include sidebar-nav-size($sidebar-nav-link-padding-y-lg, $sidebar-nav-link-padding-x-lg, $sidebar-font-size-lg);
+    }
+    .sidebar-nav-y#{$infix}-4 {
+      @include sidebar-nav-size-y($sidebar-nav-link-padding-y-lg);
+    }
+    .sidebar-nav-x#{$infix}-4 {
+      @include sidebar-nav-size-x($sidebar-nav-link-padding-x-lg);
+    }
+
+    .sidebar-nav#{$infix}-5 {
+      @include sidebar-nav-size($sidebar-nav-link-padding-y-xl, $sidebar-nav-link-padding-x-xl, $sidebar-font-size-xl);
+    }
+    .sidebar-nav-y#{$infix}-5 {
+      @include sidebar-nav-size-y($sidebar-nav-link-padding-y-xl);
+    }
+    .sidebar-nav-x#{$infix}-5 {
+      @include sidebar-nav-size-x($sidebar-nav-link-padding-x-xl);
+    }
   }
 }

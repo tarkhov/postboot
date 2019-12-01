@@ -103,3 +103,8 @@
     }
   }
 }
+
+// Border radius
+@each $position in $position-properties {
+  .rounded-#{$position}-0 { border-radius: 0 !important; }
+}

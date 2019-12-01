@@ -246,6 +246,16 @@
     .nav-x#{$infix}-4 {
       @include nav-size-x($nav-link-padding-x-lg);
     }
+
+    .nav#{$infix}-5 {
+      @include nav-size($nav-link-padding-y-xl, $nav-link-padding-x-xl, $font-size-xl);
+    }
+    .nav-y#{$infix}-5 {
+      @include nav-size-y($nav-link-padding-y-xl);
+    }
+    .nav-x#{$infix}-5 {
+      @include nav-size-x($nav-link-padding-x-xl);
+    }
   }
 }
 
