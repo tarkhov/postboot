@@ -6,7 +6,7 @@ block example_title
 
 block example_result
   .row
-    - for(var i = 1; i <= 3; i++)
+    - for(var i = 1; i <= 5; i++)
       .col-md-4
         .card(class="card-" + i)
           .card-header
@@ -26,5 +26,5 @@ block example_result
 block example_code
   :encode-pug
     | <!-- Source -->
-    - for(var i = 1; i <= 3; i++)
+    - for(var i = 1; i <= 5; i++)
       .card(class="card-" + i)
