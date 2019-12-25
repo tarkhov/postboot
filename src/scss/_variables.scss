@@ -13,6 +13,13 @@ $custom-colors: map-merge((
 // Opacity
 $enable-opacity: true !default;
 
+// Wide grid
+$wide-grid-breakpoints: (
+  xxl: 1366px,
+  3xl: 1600px,
+  4xl: 1920px
+) !default;
+
 // Fonts
 $font-size-xs:  .75rem !default;
 $font-size-xl:  1.5rem !default;
@@ -115,11 +122,23 @@ $container-size-breakpoints: map-merge((
 // Grid gutter spacing
 $grid-gutter-widths: () !default;
 $grid-gutter-widths: map-merge((
-  '': $grid-gutter-width,
-  1: $grid-gutter-width / 3,
-  2: $grid-gutter-width / 1.5,
-  3: $grid-gutter-width
+  0: 0,
+  1: $grid-gutter-width / 6,
+  2: $grid-gutter-width / 3,
+  3: $grid-gutter-width / 1.5,
+  4: $grid-gutter-width,
+  '': $grid-gutter-width
 ), $grid-gutter-widths);
+
+// Grid row sizing
+$grid-row-sizes: () !default;
+$grid-row-sizes: map-merge((
+  1: 3,
+  2: 1.5,
+  3: 1,
+  4: .75,
+  5: .5
+), $grid-row-sizes);
 
 // Components
 $border-radius-circle: 50% !default;
@@ -176,6 +195,12 @@ $card-spacer-x-xs: .5rem !default;
 $card-spacer-y-sm: .5rem !default;
 $card-spacer-x-sm: .75rem !default;
 
+$card-spacer-y-lg: 1rem !default;
+$card-spacer-x-lg: 1.5rem !default;
+
+$card-spacer-y-xl: 1.25rem !default;
+$card-spacer-x-xl: 1.75rem !default;
+
 $card-state-bg-level: -9 !default;
 $card-state-color-level: 6 !default;
 
@@ -199,27 +224,37 @@ $navbar-brand-padding-y-lg:    .5rem !default;
 $navbar-nav-link-padding-y-lg: .675rem !default;
 $navbar-nav-link-padding-x-lg: .75rem !default;
 
+$navbar-padding-y-xl:          $spacer !default;
+$navbar-brand-padding-y-xl:    .675rem !default;
+$navbar-nav-link-padding-y-xl: .75rem !default;
+$navbar-nav-link-padding-x-xl: 1rem !default;
+
 $navbar-height:    3.5rem !default;
 $navbar-height-xs: 1.5625rem !default;
 $navbar-height-sm: 2.2rem !default;
 $navbar-height-lg: 4.75rem !default;
+$navbar-height-xl: 6rem !default;
 
 $navbar-nav-height:    2.5rem !default;
 $navbar-nav-height-xs: 1.3125rem !default;
 $navbar-nav-height-sm: 1.8125rem !default;
 $navbar-nav-height-lg: 3.25rem !default;
+$navbar-nav-height-xl: 3.75rem !default;
 
 // Navs
 $nav-link-active-color: $gray-700 !default;
 
-$nav-link-padding-x-xs: .25rem !default;
 $nav-link-padding-y-xs: .1rem !default;
+$nav-link-padding-x-xs: .25rem !default;
 
-$nav-link-padding-x-sm: .5rem !default;
 $nav-link-padding-y-sm: .25rem !default;
+$nav-link-padding-x-sm: .5rem !default;
 
-$nav-link-padding-x-lg: 1.5rem !default;
 $nav-link-padding-y-lg: .75rem !default;
+$nav-link-padding-x-lg: 1.5rem !default;
+
+$nav-link-padding-y-xl: 1rem !default;
+$nav-link-padding-x-xl: 2rem !default;
 
 // Progress
 $progress-height-xs:    .75rem !default;
@@ -282,15 +317,25 @@ $breadcrumb-pill-padding-x: 1.5rem !default;
 // Dropdown
 $dropdown-padding-y-xs: .375rem !default;
 $dropdown-padding-y-sm: .25rem !default;
+$dropdown-padding-y-lg: .75rem !default;
+$dropdown-padding-y-xl: 1rem !default;
 
 $dropdown-font-size-xs: $font-size-xs !default;
 $dropdown-font-size-sm: $font-size-sm !default;
+$dropdown-font-size-lg: $font-size-lg !default;
+$dropdown-font-size-xl: $font-size-xl !default;
 
 $dropdown-item-padding-y-xs: .1rem !default;
 $dropdown-item-padding-x-xs: .5rem !default;
 
 $dropdown-item-padding-y-sm: .15rem !default;
 $dropdown-item-padding-x-sm: 1rem !default;
+
+$dropdown-item-padding-y-lg: .5rem !default;
+$dropdown-item-padding-x-lg: 2rem !default;
+
+$dropdown-item-padding-y-xl: .75rem !default;
+$dropdown-item-padding-x-xl: 2.5rem !default;
 
 $dropdown-arrow-position:    5px !default;
 $dropdown-arrow-width:       1rem !default;
@@ -313,11 +358,41 @@ $pre-md: 500px !default;
 $pre-sm: 300px !default;
 
 // Sidebar
-$sidebar-padding-y:                  ($spacer / 2) !default;
+$sidebar-padding-y:             ($spacer / 2) !default;
+$sidebar-font-size:             $font-size-base !default;
+$sidebar-nav-link-padding-y:    $nav-link-padding-y !default;
+$sidebar-nav-link-padding-x:    $nav-link-padding-x !default;
 
-$sidebar-brand-font-size:            $font-size-lg !default;
-$sidebar-brand-height:               ($font-size-base * $line-height-base + $nav-link-padding-y * 2) !default;
-$sidebar-brand-padding-y:            $nav-link-padding-y !default;
+$sidebar-brand-font-size:       $font-size-lg !default;
+$sidebar-brand-padding-y:       $nav-link-padding-y !default;
+
+$sidebar-padding-y-xs:          ($spacer * .1) !default;
+$sidebar-font-size-xs:          $font-size-xs !default;
+$sidebar-brand-font-size-xs:    $font-size-sm !default;
+$sidebar-brand-padding-y-xs:    .1rem !default;
+$sidebar-nav-link-padding-y-xs: .1rem !default;
+$sidebar-nav-link-padding-x-xs: .25rem !default;
+
+$sidebar-padding-y-sm:          ($spacer * .25) !default;
+$sidebar-font-size-sm:          $font-size-sm !default;
+$sidebar-brand-font-size-sm:    $font-size-base !default;
+$sidebar-brand-padding-y-sm:    .25rem !default;
+$sidebar-nav-link-padding-y-sm: .25rem !default;
+$sidebar-nav-link-padding-x-sm: .5rem !default;
+
+$sidebar-padding-y-lg:          ($spacer * .75) !default;
+$sidebar-font-size-lg:          $font-size-lg !default;
+$sidebar-brand-font-size-lg:    $font-size-xl !default;
+$sidebar-brand-padding-y-lg:    .675rem !default;
+$sidebar-nav-link-padding-y-lg: .675rem !default;
+$sidebar-nav-link-padding-x-lg: 1.5rem !default;
+
+$sidebar-padding-y-xl:          $spacer !default;
+$sidebar-font-size-xl:          $font-size-xl !default;
+$sidebar-brand-font-size-xl:    $font-size-xxl !default;
+$sidebar-brand-padding-y-xl:    .75rem !default;
+$sidebar-nav-link-padding-y-xl: .75rem !default;
+$sidebar-nav-link-padding-x-xl: 2rem !default;
 
 $sidebar-toggler-padding-y:          .25rem !default;
 $sidebar-toggler-padding-x:          .75rem !default;

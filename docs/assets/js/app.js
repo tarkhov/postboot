@@ -1,5 +1,5 @@
 /*!
- * PostBoot v1.0.0-rc4 (https://tarkhov.github.io/postboot/)
+ * PostBoot v1.0.0 (https://tarkhov.github.io/postboot/)
  * Copyright 2016-2019 Alexander Tarkhov
  * Licensed under MIT
  */
@@ -984,7 +984,7 @@ Prism.languages.js = Prism.languages.javascript;
 })();
 
 /*!
- * PostBoot v1.0.0-rc4 (https://tarkhov.github.io/postboot/)
+ * PostBoot v1.0.0 (https://tarkhov.github.io/postboot/)
  * Copyright 2016-2019 Alexander Tarkhov
  * Licensed under MIT
  */

@@ -177,5 +177,11 @@
     .dropdown-menu#{$infix}-3 {
       @include dropdown-menu-size($dropdown-padding-y, $dropdown-item-padding-y, $dropdown-item-padding-x, $dropdown-font-size);
     }
+    .dropdown-menu#{$infix}-4 {
+      @include dropdown-menu-size($dropdown-padding-y-lg, $dropdown-item-padding-y-lg, $dropdown-item-padding-x-lg, $dropdown-font-size-lg);
+    }
+    .dropdown-menu#{$infix}-5 {
+      @include dropdown-menu-size($dropdown-padding-y-xl, $dropdown-item-padding-y-xl, $dropdown-item-padding-x-xl, $dropdown-font-size-xl);
+    }
   }
 }

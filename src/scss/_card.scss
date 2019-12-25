@@ -43,6 +43,12 @@
     .card#{$infix}-3 {
       @include card-size($card-spacer-y, $card-spacer-x, $font-size-base, $nav-link-padding-y, $nav-link-padding-x);
     }
+    .card#{$infix}-4 {
+      @include card-size($card-spacer-y-lg, $card-spacer-x-lg, $font-size-lg, $nav-link-padding-y-lg, $nav-link-padding-x-lg);
+    }
+    .card#{$infix}-5 {
+      @include card-size($card-spacer-y-xl, $card-spacer-x-xl, $font-size-xl, $nav-link-padding-y-xl, $nav-link-padding-x-xl);
+    }
   }
 }
 
