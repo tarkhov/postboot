@@ -158,6 +158,7 @@ module.exports = function (grunt) {
           return {
             colors: colors,
             extraColors: customColors,
+            customColors: customColors,
             pkg: pkg,
             contents: require('./docs/assets/json/contents.json'),
             title: title,

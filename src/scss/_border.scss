@@ -103,3 +103,38 @@
     }
   }
 }
+
+// Rounded
+.rounded-top-pill {
+  border-top-left-radius: $rounded-pill !important;
+  border-top-right-radius: $rounded-pill !important;
+}
+.rounded-right-pill {
+  border-top-right-radius: $rounded-pill !important;
+  border-bottom-right-radius: $rounded-pill !important;
+}
+.rounded-bottom-pill {
+  border-bottom-right-radius: $rounded-pill !important;
+  border-bottom-left-radius: $rounded-pill !important;
+}
+.rounded-left-pill {
+  border-top-left-radius: $rounded-pill !important;
+  border-bottom-left-radius: $rounded-pill !important;
+}
+
+.rounded-top-0 {
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
+.rounded-right-0 {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+.rounded-bottom-0 {
+  border-bottom-right-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+.rounded-left-0 {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
