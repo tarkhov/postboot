@@ -21,18 +21,14 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .breadcrumb#{$infix}-1 {
-      @include breadcrumb-size($breadcrumb-padding-y-xs, $breadcrumb-padding-x-xs, $breadcrumb-font-size-xs, $breadcrumb-border-radius-xs, $breadcrumb-item-padding-xs);
-    }
-    .breadcrumb#{$infix}-2 {
-      @include breadcrumb-size($breadcrumb-padding-y-sm, $breadcrumb-padding-x-sm, $breadcrumb-font-size-sm, $breadcrumb-border-radius-sm, $breadcrumb-item-padding-sm);
-    }
-    .breadcrumb#{$infix}-3 {
-      @include breadcrumb-size($breadcrumb-padding-y, $breadcrumb-padding-x, $font-size-base, $breadcrumb-border-radius, $breadcrumb-item-padding);
+    @each $size, $breadcrumb in $breadcrumb-sizes {
+      .breadcrumb#{$infix}-#{$size} {
+        @include breadcrumb-size(map-get($breadcrumb, 'padding-y'), map-get($breadcrumb, 'padding-x'), map-get($breadcrumb, 'font-size'), map-get($breadcrumb, 'border-radius'), map-get($breadcrumb, 'item-padding'));
+      }
     }
   }
 }

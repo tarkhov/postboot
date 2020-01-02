@@ -1,19 +1,12 @@
 // Sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .pagination#{$infix}-1 {
-      @include pagination-size($pagination-padding-y-xs, $pagination-padding-x-xs, $font-size-xs, $line-height-xs, $border-radius-xs);
-    }
-    .pagination#{$infix}-2 {
-      @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm, $border-radius-sm);
-    }
-    .pagination#{$infix}-3 {
-      @include pagination-size($pagination-padding-y, $pagination-padding-x, $font-size-base, $line-height-base, $border-radius);
-    }
-    .pagination#{$infix}-4 {
-      @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg, $border-radius-lg);
+    @each $size, $pagination in $pagination-sizes {
+      .pagination#{$infix}-#{$size} {
+        @include pagination-size(map-get($pagination, 'padding-y'), map-get($pagination, 'padding-x'), map-get($pagination, 'font-size'), map-get($pagination, 'line-height'), map-get($pagination, 'border-radius'));
+      }
     }
   }
 }

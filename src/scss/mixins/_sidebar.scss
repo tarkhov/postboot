@@ -12,7 +12,7 @@
 }
 
 // Size
-@mixin sidebar-size($padding-y, $font-size, $brand-font-size, $brand-padding-y, $nav-link-padding-y) {
+@mixin sidebar-size($padding-y, $font-size, $brand-font-size, $brand-padding-y, $link-padding-y) {
   padding-top: $padding-y;
   padding-bottom: $padding-y;
 
@@ -26,15 +26,15 @@
     font-size: $font-size;
 
     .nav-link {
-      padding-top: $nav-link-padding-y;
-      padding-bottom: $nav-link-padding-y;
+      padding-top: $link-padding-y;
+      padding-bottom: $link-padding-y;
     }
   }
 
   .sidebar-text {
     font-size: $font-size;
-    padding-top: $nav-link-padding-y;
-    padding-bottom: $nav-link-padding-y;
+    padding-top: $link-padding-y;
+    padding-bottom: $link-padding-y;
   }
 }
 

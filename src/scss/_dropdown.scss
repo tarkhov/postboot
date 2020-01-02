@@ -164,24 +164,14 @@
 }
 
 // Size
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .dropdown-menu#{$infix}-1 {
-      @include dropdown-menu-size($dropdown-padding-y-xs, $dropdown-item-padding-y-xs, $dropdown-item-padding-x-xs, $dropdown-font-size-xs);
-    }
-    .dropdown-menu#{$infix}-2 {
-      @include dropdown-menu-size($dropdown-padding-y-sm, $dropdown-item-padding-y-sm, $dropdown-item-padding-x-sm, $dropdown-font-size-sm);
-    }
-    .dropdown-menu#{$infix}-3 {
-      @include dropdown-menu-size($dropdown-padding-y, $dropdown-item-padding-y, $dropdown-item-padding-x, $dropdown-font-size);
-    }
-    .dropdown-menu#{$infix}-4 {
-      @include dropdown-menu-size($dropdown-padding-y-lg, $dropdown-item-padding-y-lg, $dropdown-item-padding-x-lg, $dropdown-font-size-lg);
-    }
-    .dropdown-menu#{$infix}-5 {
-      @include dropdown-menu-size($dropdown-padding-y-xl, $dropdown-item-padding-y-xl, $dropdown-item-padding-x-xl, $dropdown-font-size-xl);
+    @each $size, $dropdown-menu in $dropdown-menu-sizes {
+      .dropdown-menu#{$infix}-#{$size} {
+        @include dropdown-menu-size(map-get($dropdown-menu, 'padding-y'), map-get($dropdown-menu, 'item-padding-y'), map-get($dropdown-menu, 'item-padding-x'), map-get($dropdown-menu, 'font-size'));
+      }
     }
   }
 }

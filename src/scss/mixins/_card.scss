@@ -50,7 +50,7 @@
 }
 
 // Size
-@mixin card-size($padding-y, $padding-x, $font-size, $nav-link-padding-y, $nav-link-padding-x) {
+@mixin card-size($padding-y, $padding-x, $font-size, $link-padding-y, $link-padding-x) {
   font-size: $font-size;
 
   &.card-body,
@@ -85,7 +85,7 @@
     margin-left: -$padding-x / 2;
 
     .nav-link {
-      padding: $nav-link-padding-y $nav-link-padding-x;
+      padding: $link-padding-y $link-padding-x;
     }
   }
 

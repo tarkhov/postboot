@@ -95,162 +95,60 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .navbar#{$infix}-1 {
-      @include navbar-size($navbar-padding-y-xs, $font-size-xs, $font-size-sm, $navbar-brand-padding-y-xs, $navbar-nav-link-padding-y-xs, $navbar-nav-height-xs);
-    }
-
-    .navbar#{$infix}-2 {
-      @include navbar-size($navbar-padding-y-sm, $font-size-sm, $font-size-base, $navbar-brand-padding-y-sm, $navbar-nav-link-padding-y-sm, $navbar-nav-height-sm);
-    }
-    .navbar#{$infix}-3 {
-      @include navbar-size($navbar-padding-y, $font-size-base, $font-size-lg, $navbar-brand-padding-y, $navbar-nav-link-padding-y, $navbar-nav-height);
-    }
-    .navbar#{$infix}-4 {
-      @include navbar-size($navbar-padding-y-lg, $font-size-lg, $font-size-xl, $navbar-brand-padding-y-lg, $navbar-nav-link-padding-y-lg, $navbar-nav-height-lg);
-    }
-    .navbar#{$infix}-5 {
-      @include navbar-size($navbar-padding-y-xl, $font-size-xl, $font-size-xxl, $navbar-brand-padding-y-xl, $navbar-nav-link-padding-y-xl, $navbar-nav-height-xl);
+    @each $size, $navbar in $navbar-sizes {
+      .navbar#{$infix}-#{$size} {
+        @include navbar-size(map-get($navbar, 'padding-y'), map-get($navbar, 'font-size'), map-get($navbar, 'brand-font-size'), map-get($navbar, 'brand-padding-y'), map-get($navbar, 'nav-link-padding-y'), map-get($navbar, 'nav-height'));
+      }
     }
   }
 }
 
 // Nav size
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .navbar-nav-y#{$infix}-0 {
-      @include navbar-nav-size-y(0);
-    }
-    .navbar-nav-x#{$infix}-0 {
-      @include navbar-nav-size-x(0);
-    }
+    @each $size, $nav in $navbar-nav-sizes {
+      @if $size != 0 {
+        .navbar-nav#{$infix}-#{$size} {
+          @include navbar-nav-size(map-get($nav, 'link-padding-y'), map-get($nav, 'link-padding-x'), map-get($nav, 'font-size'));
+        }
+      }
 
-    .navbar-nav#{$infix}-1 {
-      @include navbar-nav-size($navbar-nav-link-padding-y-xs, $navbar-nav-link-padding-x-xs, $font-size-xs);
-    }
-    .navbar-nav-y#{$infix}-1 {
-      @include navbar-nav-size-y($navbar-nav-link-padding-y-xs);
-    }
-    .navbar-nav-x#{$infix}-1 {
-      @include navbar-nav-size-x($navbar-nav-link-padding-x-xs);
-    }
-
-    .navbar-nav#{$infix}-2 {
-      @include navbar-nav-size($navbar-nav-link-padding-y-sm, $navbar-nav-link-padding-x-sm, $font-size-sm);
-    }
-    .navbar-nav-y#{$infix}-2 {
-      @include navbar-nav-size-y($navbar-nav-link-padding-y-sm);
-    }
-    .navbar-nav-x#{$infix}-2 {
-      @include navbar-nav-size-x($navbar-nav-link-padding-x-sm);
-    }
-
-    .navbar-nav#{$infix}-3 {
-      @include navbar-nav-size($navbar-nav-link-padding-y, $navbar-nav-link-padding-x, $font-size-base);
-    }
-    .navbar-nav-y#{$infix}-3 {
-      @include navbar-nav-size-y($navbar-nav-link-padding-y);
-    }
-    .navbar-nav-x#{$infix}-3 {
-      @include navbar-nav-size-x($navbar-nav-link-padding-x);
-    }
-
-    .navbar-nav#{$infix}-4 {
-      @include navbar-nav-size($navbar-nav-link-padding-y-lg, $navbar-nav-link-padding-x-lg, $font-size-lg);
-    }
-    .navbar-nav-y#{$infix}-4 {
-      @include navbar-nav-size-y($navbar-nav-link-padding-y-lg);
-    }
-    .navbar-nav-x#{$infix}-4 {
-      @include navbar-nav-size-x($navbar-nav-link-padding-x-lg);
-    }
-
-    .navbar-nav#{$infix}-5 {
-      @include navbar-nav-size($navbar-nav-link-padding-y-xl, $navbar-nav-link-padding-x-xl, $font-size-xl);
-    }
-    .navbar-nav-y#{$infix}-5 {
-      @include navbar-nav-size-y($navbar-nav-link-padding-y-xl);
-    }
-    .navbar-nav-x#{$infix}-5 {
-      @include navbar-nav-size-x($navbar-nav-link-padding-x-xl);
+      .navbar-nav-y#{$infix}-#{$size} {
+        @include navbar-nav-size-y(map-get($nav, 'link-padding-y'));
+      }
+      .navbar-nav-x#{$infix}-#{$size} {
+        @include navbar-nav-size-x(map-get($nav, 'link-padding-x'));
+      }
     }
   }
 }
 
 // Padding
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .py-navbar#{$infix} {
-      padding-top: $navbar-height;
-      padding-bottom: $navbar-height;
-    }
-    .pt-navbar#{$infix} {
-      padding-top: $navbar-height;
-    }
-    .pb-navbar#{$infix} {
-      padding-bottom: $navbar-height;
-    }
+    @each $size, $height in $navbar-heights {
+      @if $size != '' {
+        $size: "-#{$size}";
+      }
 
-    .py-navbar#{$infix}-1 {
-      padding-top: $navbar-height-xs;
-      padding-bottom: $navbar-height-xs;
-    }
-    .pt-navbar#{$infix}-1 {
-      padding-top: $navbar-height-xs;
-    }
-    .pb-navbar#{$infix}-1 {
-      padding-bottom: $navbar-height-xs;
-    }
-
-    .py-navbar#{$infix}-2 {
-      padding-top: $navbar-height-sm;
-      padding-bottom: $navbar-height-sm;
-    }
-    .pt-navbar#{$infix}-2 {
-      padding-top: $navbar-height-sm;
-    }
-    .pb-navbar#{$infix}-2 {
-      padding-bottom: $navbar-height-sm;
-    }
-
-    .py-navbar#{$infix}-3 {
-      padding-top: $navbar-height;
-      padding-bottom: $navbar-height;
-    }
-    .pt-navbar#{$infix}-3 {
-      padding-top: $navbar-height;
-    }
-    .pb-navbar#{$infix}-3 {
-      padding-bottom: $navbar-height;
-    }
-
-    .py-navbar#{$infix}-4 {
-      padding-top: $navbar-height-lg;
-      padding-bottom: $navbar-height-lg;
-    }
-    .pt-navbar#{$infix}-4 {
-      padding-top: $navbar-height-lg;
-    }
-    .pb-navbar#{$infix}-4 {
-      padding-bottom: $navbar-height-lg;
-    }
-
-    .py-navbar#{$infix}-5 {
-      padding-top: $navbar-height-xl;
-      padding-bottom: $navbar-height-xl;
-    }
-    .pt-navbar#{$infix}-5 {
-      padding-top: $navbar-height-xl;
-    }
-    .pb-navbar#{$infix}-5 {
-      padding-bottom: $navbar-height-xl;
+      .py-navbar#{$infix}#{$size} {
+        padding-top: $height !important;
+        padding-bottom: $height !important;
+      }
+      .pt-navbar#{$infix}#{$size} {
+        padding-top: $height !important;
+      }
+      .pb-navbar#{$infix}#{$size} {
+        padding-bottom: $height !important;
+      }
     }
   }
 }

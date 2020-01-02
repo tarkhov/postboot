@@ -1,6 +1,6 @@
 // Responsive headings
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
     @if $breakpoint != xs {
       .h1-#{$breakpoint} { font-size: $h1-font-size; }
       .h2-#{$breakpoint} { font-size: $h2-font-size; }

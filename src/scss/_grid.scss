@@ -26,8 +26,6 @@
 
 // Row sizes
 @if $enable-grid-classes {
-  $all-grid-breakpoints: map-merge($grid-breakpoints, $wide-grid-breakpoints);
-
   @each $breakpoint in map-keys($all-grid-breakpoints) {
     @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
       $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
@@ -48,8 +46,6 @@
 
 // Column sizes
 @if $enable-grid-classes {
-  $all-grid-breakpoints: map-merge($grid-breakpoints, $wide-grid-breakpoints);
-
   @each $breakpoint in map-keys($all-grid-breakpoints) {
     $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
@@ -67,8 +63,6 @@
 
 // Margin and padding
 @if $enable-grid-classes {
-  $all-grid-breakpoints: map-merge($grid-breakpoints, $wide-grid-breakpoints);
-
   @each $breakpoint in map-keys($all-grid-breakpoints) {
     @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
       $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);

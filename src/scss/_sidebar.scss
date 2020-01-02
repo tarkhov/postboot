@@ -53,12 +53,12 @@
 }
 
 .sidebar-expand {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($next, $grid-breakpoints);
+  @each $breakpoint in map-keys($all-grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $all-grid-breakpoints);
+    $infix: breakpoint-infix($next, $all-grid-breakpoints);
 
     &#{$infix} {
-      @include media-breakpoint-up($next) {
+      @include media-breakpoint-up($next, $all-grid-breakpoints) {
         display: block !important;
 
         .nav-text {
@@ -70,12 +70,12 @@
 }
 
 .sidebar-modal {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $grid-breakpoints);
-    $infix: breakpoint-infix($next, $grid-breakpoints);
+  @each $breakpoint in map-keys($all-grid-breakpoints) {
+    $next: breakpoint-next($breakpoint, $all-grid-breakpoints);
+    $infix: breakpoint-infix($next, $all-grid-breakpoints);
 
     &#{$infix} {
-      @include media-breakpoint-up($next) {
+      @include media-breakpoint-up($next, $all-grid-breakpoints) {
         @include sidebar-modal;
       }
 
@@ -110,7 +110,7 @@
     transform: $modal-show-transform;
   }
 
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(sm, $all-grid-breakpoints) {
     width: 250px;
   }
 }
@@ -213,88 +213,37 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .sidebar#{$infix}-1 {
-      @include sidebar-size($sidebar-padding-y-xs, $sidebar-font-size-xs, $sidebar-brand-font-size-xs, $sidebar-brand-padding-y-xs, $sidebar-nav-link-padding-y-xs);
-    }
-    .sidebar#{$infix}-2 {
-      @include sidebar-size($sidebar-padding-y-sm, $sidebar-font-size-sm, $sidebar-brand-font-size-sm, $sidebar-brand-padding-y-sm, $sidebar-nav-link-padding-y-sm);
-    }
-    .sidebar#{$infix}-3 {
-      @include sidebar-size($sidebar-padding-y, $sidebar-font-size, $sidebar-brand-font-size, $sidebar-brand-padding-y, $sidebar-nav-link-padding-y);
-    }
-    .sidebar#{$infix}-4 {
-      @include sidebar-size($sidebar-padding-y-lg, $sidebar-font-size-lg, $sidebar-brand-font-size-lg, $sidebar-brand-padding-y-lg, $sidebar-nav-link-padding-y-lg);
-    }
-    .sidebar#{$infix}-5 {
-      @include sidebar-size($sidebar-padding-y-xl, $sidebar-font-size-xl, $sidebar-brand-font-size-xl, $sidebar-brand-padding-y-xl, $sidebar-nav-link-padding-y-xl);
+    @each $size, $sidebar in $sidebar-sizes {
+      @if $size != 0 {
+        .sidebar#{$infix}-#{$size} {
+          @include sidebar-size(map-get($sidebar, 'padding-y'), map-get($sidebar, 'font-size'), map-get($sidebar, 'brand-font-size'), map-get($sidebar, 'brand-padding-y'), map-get($sidebar, 'link-padding-y'));
+        }
+      }
     }
   }
 }
 
 // Nav size
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .sidebar-nav-y#{$infix}-0 {
-      @include sidebar-nav-size-y(0);
-    }
-    .sidebar-nav-x#{$infix}-0 {
-      @include sidebar-nav-size-x(0);
-    }
-
-    .sidebar-nav#{$infix}-1 {
-      @include sidebar-nav-size($sidebar-nav-link-padding-y-xs, $sidebar-nav-link-padding-x-xs, $sidebar-font-size-xs);
-    }
-    .sidebar-nav-y#{$infix}-1 {
-      @include sidebar-nav-size-y($sidebar-nav-link-padding-y-xs);
-    }
-    .sidebar-nav-x#{$infix}-1 {
-      @include sidebar-nav-size-x($sidebar-nav-link-padding-x-xs);
-    }
-
-    .sidebar-nav#{$infix}-2 {
-      @include sidebar-nav-size($sidebar-nav-link-padding-y-sm, $sidebar-nav-link-padding-x-sm, $sidebar-font-size-sm);
-    }
-    .sidebar-nav-y#{$infix}-2 {
-      @include sidebar-nav-size-y($sidebar-nav-link-padding-y-sm);
-    }
-    .sidebar-nav-x#{$infix}-2 {
-      @include sidebar-nav-size-x($sidebar-nav-link-padding-x-sm);
-    }
-
-    .sidebar-nav#{$infix}-3 {
-      @include sidebar-nav-size($sidebar-nav-link-padding-y, $sidebar-nav-link-padding-x, $sidebar-font-size);
-    }
-    .sidebar-nav-y#{$infix}-3 {
-      @include sidebar-nav-size-y($sidebar-nav-link-padding-y);
-    }
-    .sidebar-nav-x#{$infix}-3 {
-      @include sidebar-nav-size-x($sidebar-nav-link-padding-x);
-    }
-
-    .sidebar-nav#{$infix}-4 {
-      @include sidebar-nav-size($sidebar-nav-link-padding-y-lg, $sidebar-nav-link-padding-x-lg, $sidebar-font-size-lg);
-    }
-    .sidebar-nav-y#{$infix}-4 {
-      @include sidebar-nav-size-y($sidebar-nav-link-padding-y-lg);
-    }
-    .sidebar-nav-x#{$infix}-4 {
-      @include sidebar-nav-size-x($sidebar-nav-link-padding-x-lg);
-    }
-
-    .sidebar-nav#{$infix}-5 {
-      @include sidebar-nav-size($sidebar-nav-link-padding-y-xl, $sidebar-nav-link-padding-x-xl, $sidebar-font-size-xl);
-    }
-    .sidebar-nav-y#{$infix}-5 {
-      @include sidebar-nav-size-y($sidebar-nav-link-padding-y-xl);
-    }
-    .sidebar-nav-x#{$infix}-5 {
-      @include sidebar-nav-size-x($sidebar-nav-link-padding-x-xl);
+    @each $size, $sidebar in $sidebar-sizes {
+      @if $size != 0 {
+        .sidebar-nav#{$infix}-#{$size} {
+          @include sidebar-nav-size(map-get($sidebar, 'link-padding-y'), map-get($sidebar, 'link-padding-x'), map-get($sidebar, 'font-size'));
+        }
+      }
+      .sidebar-nav-y#{$infix}-#{$size} {
+        @include sidebar-nav-size-y(map-get($sidebar, 'link-padding-y'));
+      }
+      .sidebar-nav-x#{$infix}-#{$size} {
+        @include sidebar-nav-size-x(map-get($sidebar, 'link-padding-x'));
+      }
     }
   }
 }

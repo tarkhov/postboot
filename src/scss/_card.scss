@@ -1,7 +1,7 @@
 // Image position
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
     .card-img#{$infix}-left {
       width: auto;
@@ -30,24 +30,14 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .card#{$infix}-1 {
-      @include card-size($card-spacer-y-xs, $card-spacer-x-xs, $font-size-xs, $nav-link-padding-y-xs, $nav-link-padding-x-xs);
-    }
-    .card#{$infix}-2 {
-      @include card-size($card-spacer-y-sm, $card-spacer-x-sm, $font-size-sm, $nav-link-padding-y-sm, $nav-link-padding-x-sm);
-    }
-    .card#{$infix}-3 {
-      @include card-size($card-spacer-y, $card-spacer-x, $font-size-base, $nav-link-padding-y, $nav-link-padding-x);
-    }
-    .card#{$infix}-4 {
-      @include card-size($card-spacer-y-lg, $card-spacer-x-lg, $font-size-lg, $nav-link-padding-y-lg, $nav-link-padding-x-lg);
-    }
-    .card#{$infix}-5 {
-      @include card-size($card-spacer-y-xl, $card-spacer-x-xl, $font-size-xl, $nav-link-padding-y-xl, $nav-link-padding-x-xl);
+    @each $size, $card in $card-sizes {
+      .card#{$infix}-#{$size} {
+        @include card-size(map-get($card, 'padding-y'), map-get($card, 'padding-x'), map-get($card, 'font-size'), map-get($card, 'link-padding-y'), map-get($card, 'link-padding-x'));
+      }
     }
   }
 }

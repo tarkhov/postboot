@@ -8,84 +8,29 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .list-group#{$infix}-1 {
-      @include list-group-size($list-group-item-padding-y-xs, $list-group-item-padding-x-xs, $font-size-xs);
-    }
-    .list-group-y#{$infix}-1 {
-      @include list-group-size-y($list-group-item-padding-y-xs);
-    }
-    .list-group-x#{$infix}-1 {
-      @include list-group-size-x($list-group-item-padding-x-xs);
-    }
-    .list-group-item#{$infix}-1 {
-      @include list-group-item-size($list-group-item-padding-y-xs, $list-group-item-padding-x-xs, $font-size-xs);
-    }
-    .list-group-item-y#{$infix}-1 {
-      @include list-group-item-size-y($list-group-item-padding-y-xs);
-    }
-    .list-group-item-x#{$infix}-1 {
-      @include list-group-item-size-x($list-group-item-padding-x-xs);
-    }
-
-    .list-group#{$infix}-2 {
-      @include list-group-size($list-group-item-padding-y-sm, $list-group-item-padding-x-sm, $font-size-sm);
-    }
-    .list-group-y#{$infix}-2 {
-      @include list-group-size-y($list-group-item-padding-y-sm);
-    }
-    .list-group-x#{$infix}-2 {
-      @include list-group-size-x($list-group-item-padding-x-sm);
-    }
-    .list-group-item#{$infix}-2 {
-      @include list-group-item-size($list-group-item-padding-y-sm, $list-group-item-padding-x-sm, $font-size-sm);
-    }
-    .list-group-item-y#{$infix}-2 {
-      @include list-group-item-size-y($list-group-item-padding-y-sm);
-    }
-    .list-group-item-x#{$infix}-2 {
-      @include list-group-item-size-x($list-group-item-padding-x-sm);
-    }
-
-    .list-group#{$infix}-3 {
-      @include list-group-size($list-group-item-padding-y, $list-group-item-padding-x, $font-size-base);
-    }
-    .list-group-y#{$infix}-3 {
-      @include list-group-size-y($list-group-item-padding-y);
-    }
-    .list-group-x#{$infix}-3 {
-      @include list-group-size-x($list-group-item-padding-x);
-    }
-    .list-group-item#{$infix}-3 {
-      @include list-group-item-size($list-group-item-padding-y, $list-group-item-padding-x, $font-size-base);
-    }
-    .list-group-item-y#{$infix}-3 {
-      @include list-group-item-size-y($list-group-item-padding-y);
-    }
-    .list-group-item-x#{$infix}-3 {
-      @include list-group-item-size-x($list-group-item-padding-x);
-    }
-
-    .list-group#{$infix}-4 {
-      @include list-group-size($list-group-item-padding-y-lg, $list-group-item-padding-x-lg, $font-size-lg);
-    }
-    .list-group-y#{$infix}-4 {
-      @include list-group-size-y($list-group-item-padding-y-lg);
-    }
-    .list-group-x#{$infix}-4 {
-      @include list-group-size-x($list-group-item-padding-x-lg);
-    }
-    .list-group-item#{$infix}-4 {
-      @include list-group-item-size($list-group-item-padding-y-lg, $list-group-item-padding-x-lg, $font-size-lg);
-    }
-    .list-group-item-y#{$infix}-4 {
-      @include list-group-item-size-y($list-group-item-padding-y-lg);
-    }
-    .list-group-item-x#{$infix}-4 {
-      @include list-group-item-size-x($list-group-item-padding-x-lg);
+    @each $size, $list-group in $list-group-sizes {
+      .list-group#{$infix}-#{$size} {
+        @include list-group-size(map-get($list-group, 'padding-y'), map-get($list-group, 'padding-x'), map-get($list-group, 'font-size'));
+      }
+      .list-group-y#{$infix}-#{$size} {
+        @include list-group-size-y(map-get($list-group, 'padding-y'));
+      }
+      .list-group-x#{$infix}-#{$size} {
+        @include list-group-size-x(map-get($list-group, 'padding-x'));
+      }
+      .list-group-item#{$infix}-#{$size} {
+        @include list-group-item-size(map-get($list-group, 'padding-y'), map-get($list-group, 'padding-x'), map-get($list-group, 'font-size'));
+      }
+      .list-group-item-y#{$infix}-#{$size} {
+        @include list-group-item-size-y(map-get($list-group, 'padding-y'));
+      }
+      .list-group-item-x#{$infix}-#{$size} {
+        @include list-group-item-size-x(map-get($list-group, 'padding-x'));
+      }
     }
   }
 }

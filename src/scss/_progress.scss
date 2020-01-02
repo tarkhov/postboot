@@ -1,22 +1,12 @@
 // Sizes
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+@each $breakpoint in map-keys($all-grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
 
-    .progress#{$infix}-1 {
-      @include progress-size($progress-height-xs, $progress-font-size-xs);
-    }
-    .progress#{$infix}-2 {
-      @include progress-size($progress-height, $progress-font-size);
-    }
-    .progress#{$infix}-3 {
-      @include progress-size($progress-height-md, $progress-font-size-md);
-    }
-    .progress#{$infix}-4 {
-      @include progress-size($progress-height-lg, $progress-font-size-lg);
-    }
-    .progress#{$infix}-5 {
-      @include progress-size($progress-height-xl, $progress-font-size-xl);
+    @each $size, $progress in $progress-sizes {
+      .progress#{$infix}-#{$size} {
+        @include progress-size(map-get($progress, 'height'), map-get($progress, 'font-size'));
+      }
     }
   }
 }
