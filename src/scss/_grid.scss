@@ -18,9 +18,14 @@
   .container-md-2 {
     @include make-container-max-widths(map-remove(map-get($container-sizes, 2), sm));
   }
-
   .container-lg-3 {
     @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md));
+  }
+  .container-xl-4 {
+    @include make-container-max-widths(map-remove(map-get($container-sizes, 4), sm, md, lg));
+  }
+  .container-xxl-5 {
+    @include make-container-max-widths(map-remove(map-get($container-sizes, 5), sm, md, lg, xl));
   }
 }
 
