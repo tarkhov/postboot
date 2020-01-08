@@ -1,17 +1,23 @@
 // Custom
 @each $color, $value in map-remove($custom-colors, "white") {
-  @include text-emphasis-variant(".text-#{$color}", $value);
+  .text-#{$color} {
+    color: $value !important;
+  }
 }
 
 // Opacity
 @if $enable-opacity {
   @for $alpha from 1 through 9 {
     @each $color, $value in $theme-colors {
-      @include text-opacity-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+      .text-#{$color}-#{($alpha * 10)} {
+        color: rgba($value, ($alpha * .1)) !important;
+      }
     }
     @each $color, $value in $custom-colors {
       @if $color not in 'white', 'black' and $alpha != 5 {
-        @include text-opacity-variant('.text-#{$color}-#{($alpha * 10)}', $value, ($alpha * .1));
+        .text-#{$color}-#{($alpha * 10)} {
+          color: rgba($value, ($alpha * .1)) !important;
+        }
       }
     }
   }
@@ -55,8 +61,12 @@
 
 // States
 @each $color, $value in $theme-colors {
-  @include text-state-variant('.text-state-#{$color}', $value);
+  .text-state-#{$color} {
+    color: color-level($value, $text-state-level) !important;
+  }
 }
 @each $color, $value in map-remove($custom-colors, "black", "white") {
-  @include text-state-variant('.text-state-#{$color}', $value);
+  .text-state-#{$color} {
+    color: color-level($value, $text-state-level) !important;
+  }
 }

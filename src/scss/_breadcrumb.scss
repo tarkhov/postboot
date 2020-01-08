@@ -21,9 +21,9 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($all-grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
 
     @each $size, $breadcrumb in $breadcrumb-sizes {
       .breadcrumb#{$infix}-#{$size} {

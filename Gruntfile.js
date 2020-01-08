@@ -63,7 +63,8 @@ module.exports = function (grunt) {
           'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
           'node_modules/prismjs/prism.js',
           // 'node_modules/@fortawesome/fontawesome-free/js/all.min.js',
-          'dist/js/<%= pkg.name %>.min.js'
+          'dist/js/<%= pkg.name %>.min.js',
+          'docs/assets/js/main.js'
         ],
         dest: 'docs/assets/js/app.js'
       }
@@ -179,7 +180,9 @@ module.exports = function (grunt) {
       docs: {
         files: {
           'docs/index.html': 'docs/assets/pug/index.pug',
-          'docs/v1/index.html': 'docs/assets/pug/index.pug'
+          'docs/content.html': 'docs/assets/pug/main.pug',
+          'docs/v1/index.html': 'docs/assets/pug/index.pug',
+          'docs/v1/content.html': 'docs/assets/pug/main.pug'
         }
       }
     },

@@ -17,9 +17,9 @@
   }
 }
 
-@each $breakpoint in map-keys($all-grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
 
     .nav-tabs#{$infix}-right,
     .nav-tabs#{$infix}-left {
@@ -137,9 +137,9 @@
     border-bottom-color: $nav-tabs-link-active-color;
   }
 
-  @each $breakpoint in map-keys($all-grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-      $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint);
 
       &.nav-tabs#{$infix}-left {
         .nav-link {
@@ -196,9 +196,9 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($all-grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
 
     @each $size, $nav in $nav-sizes {
       @if $size != 0 {

@@ -1,8 +1,22 @@
 // Container breakpoints
 @if $enable-grid-classes {
-  @each $breakpoint, $max-widths in $container-breakpoints {
+  @each $breakpoint, $container-max-width in $wide-container-max-widths {
     .container-#{$breakpoint} {
-      @include make-container-max-widths($max-widths);
+      @include make-container();
+    }
+
+    @include media-breakpoint-up($breakpoint, $wide-grid-breakpoints) {
+      %responsive-container-#{$breakpoint} {
+        max-width: $container-max-width;
+      }
+
+      @each $name, $width in $wide-grid-breakpoints {
+        @if ($container-max-width > $width or $breakpoint == $name) {
+          .container#{breakpoint-infix($name, $wide-grid-breakpoints)} {
+            @extend %responsive-container-#{$breakpoint};
+          }
+        }
+      }
     }
   }
 }
@@ -22,18 +36,18 @@
     @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md));
   }
   .container-xl-4 {
-    @include make-container-max-widths(map-remove(map-get($container-sizes, 4), sm, md, lg));
+    @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md, lg));
   }
   .container-xxl-5 {
-    @include make-container-max-widths(map-remove(map-get($container-sizes, 5), sm, md, lg, xl));
+    @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md, lg, xl));
   }
 }
 
 // Row sizes
 @if $enable-grid-classes {
-  @each $breakpoint in map-keys($all-grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-      $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint);
 
       @each $size, $divider in $grid-row-sizes {
         .row#{$infix}-#{$size} {
@@ -68,9 +82,9 @@
 
 // Margin and padding
 @if $enable-grid-classes {
-  @each $breakpoint in map-keys($all-grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-      $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint);
 
       @each $size, $width in $grid-gutter-widths {
         @if $size != '' {

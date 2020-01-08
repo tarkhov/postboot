@@ -53,12 +53,12 @@
 }
 
 .sidebar-expand {
-  @each $breakpoint in map-keys($all-grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $all-grid-breakpoints);
-    $infix: breakpoint-infix($next, $all-grid-breakpoints);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint);
+    $infix: breakpoint-infix($next);
 
     &#{$infix} {
-      @include media-breakpoint-up($next, $all-grid-breakpoints) {
+      @include media-breakpoint-up($next) {
         display: block !important;
 
         .nav-text {
@@ -70,12 +70,12 @@
 }
 
 .sidebar-modal {
-  @each $breakpoint in map-keys($all-grid-breakpoints) {
-    $next: breakpoint-next($breakpoint, $all-grid-breakpoints);
-    $infix: breakpoint-infix($next, $all-grid-breakpoints);
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    $next: breakpoint-next($breakpoint);
+    $infix: breakpoint-infix($next);
 
     &#{$infix} {
-      @include media-breakpoint-up($next, $all-grid-breakpoints) {
+      @include media-breakpoint-up($next) {
         @include sidebar-modal;
       }
 
@@ -110,7 +110,7 @@
     transform: $modal-show-transform;
   }
 
-  @include media-breakpoint-up(sm, $all-grid-breakpoints) {
+  @include media-breakpoint-up(sm) {
     width: 250px;
   }
 }
@@ -213,9 +213,9 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($all-grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
 
     @each $size, $sidebar in $sidebar-sizes {
       @if $size != 0 {
@@ -228,9 +228,9 @@
 }
 
 // Nav size
-@each $breakpoint in map-keys($all-grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
 
     @each $size, $sidebar in $sidebar-sizes {
       @if $size != 0 {

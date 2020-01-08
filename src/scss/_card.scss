@@ -1,7 +1,7 @@
 // Image position
-@each $breakpoint in map-keys($all-grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
 
     .card-img#{$infix}-left {
       width: auto;
@@ -30,9 +30,9 @@
 }
 
 // Sizes
-@each $breakpoint in map-keys($all-grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
 
     @each $size, $card in $card-sizes {
       .card#{$infix}-#{$size} {

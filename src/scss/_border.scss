@@ -1,8 +1,8 @@
 // Responsive
-@each $breakpoint in map-keys($all-grid-breakpoints) {
+@each $breakpoint in map-keys($grid-breakpoints) {
   @if $breakpoint != 'xs' {
-    @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-      $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint);
 
       .border#{$infix} { border: $border-width solid $border-color !important; }
       @each $position in $position-properties {
@@ -81,9 +81,9 @@
 }
 
 // Width
-@each $breakpoint in map-keys($all-grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint, $all-grid-breakpoints) {
-    $infix: breakpoint-infix($breakpoint, $all-grid-breakpoints);
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
 
     @if $breakpoint != 'xs' {
       .border#{$infix}-0 { border-width: 0 !important; }

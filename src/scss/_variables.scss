@@ -16,7 +16,10 @@ $enable-opacity: true !default;
 // Wide grid
 $wide-grid-breakpoints: (
   xxl: 1600px,
-  3xl: 1920px
+  3xl: 1920px, // 2K
+  4xl: 3840px, // 4K
+  5xl: 5120px, // 5K
+  6xl: 7680px  // 8K
 ) !default;
 
 $all-grid-breakpoints: () !default;
@@ -84,25 +87,14 @@ $border-widths: 5 !default;
 
 // Grid containers
 $wide-container-max-widths: (
-  xxl: 1600px,
-  3xl: 1920px
+  xxl: 1570px
 ) !default;
-
-$container-breakpoints: () !default;
-$container-breakpoints: map-merge((
-  md: map-remove($container-max-widths, sm),
-  lg: map-remove($container-max-widths, sm, md),
-  xl: (
-    xl: map-get($container-max-widths, xl)
-  )
-), $container-breakpoints);
 
 $container-max-width-sm: map-get($container-max-widths, sm);
 $container-max-width-md: map-get($container-max-widths, md);
 $container-max-width-lg: map-get($container-max-widths, lg);
 $container-max-width-xl: map-get($container-max-widths, xl);
 $container-max-width-xxl: map-get($wide-container-max-widths, xxl);
-$container-max-width-3xl: map-get($wide-container-max-widths, 3xl);
 
 $container-sizes: () !default;
 $container-sizes: map-merge((
@@ -593,6 +585,18 @@ $breadcrumb-item-padding-sm: .375rem !default;
 $breadcrumb-font-size-sm: $font-size-sm !default;
 $breadcrumb-border-radius-sm: $border-radius-sm !default;
 
+$breadcrumb-padding-y-lg: 1rem !default;
+$breadcrumb-padding-x-lg: 1.25rem !default;
+$breadcrumb-item-padding-lg: .625rem !default;
+$breadcrumb-font-size-lg: $font-size-lg !default;
+$breadcrumb-border-radius-lg: $border-radius-lg !default;
+
+$breadcrumb-padding-y-xl: 1.25rem !default;
+$breadcrumb-padding-x-xl: 1.5rem !default;
+$breadcrumb-item-padding-xl: .75rem !default;
+$breadcrumb-font-size-xl: $font-size-xl !default;
+$breadcrumb-border-radius-xl: $border-radius-xl !default;
+
 $breadcrumb-dividers: () !default;
 $breadcrumb-dividers: map-merge((
   rang:   "27E9",
@@ -635,6 +639,20 @@ $breadcrumb-sizes: map-merge((
     'font-size': $font-size-base,
     'border-radius': $breadcrumb-border-radius,
     'item-padding': $breadcrumb-item-padding
+  ),
+  4: (
+    'padding-y': $breadcrumb-padding-y-lg,
+    'padding-x': $breadcrumb-padding-x-lg,
+    'font-size': $breadcrumb-font-size-lg,
+    'border-radius': $breadcrumb-border-radius-lg,
+    'item-padding': $breadcrumb-item-padding-lg
+  ),
+  5: (
+    'padding-y': $breadcrumb-padding-y-xl,
+    'padding-x': $breadcrumb-padding-x-xl,
+    'font-size': $breadcrumb-font-size-xl,
+    'border-radius': $breadcrumb-border-radius-xl,
+    'item-padding': $breadcrumb-item-padding-xl
   )
 ), $breadcrumb-sizes);
 
