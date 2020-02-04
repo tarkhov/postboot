@@ -10,13 +10,13 @@ block example_result
   .row
     .col-lg-3
       #sidebar-scrollspy.sidebar.sidebar-light.bg-light.sidebar-expand
-        ul.sidebar-nav.nav-tree.nav-y-sm
+        ul.sidebar-nav.nav-tree.nav-y-2
           li.nav-item
             a.nav-link(href="#scrollspy-nav-item") Nav item
-            ul.sidebar-nav.nav-tree.nav-y-sm.font-size-2.pl-3
+            ul.sidebar-nav.nav-tree.nav-y-2.fs-2.pl-3
               li.nav-item
                 a.nav-link(href="#scrollspy-nav-subitem") Sub item
-                ul.sidebar-nav.nav-tree.nav-y-sm.font-size-1.pl-3
+                ul.sidebar-nav.nav-tree.nav-y-2.fs-1.pl-3
                   - for(var i = 1; i <= 3; i++)
                     li.nav-item
                       a.nav-link(href="#scrollspy-nav-subitem" + i)= 'Sub item ' + i

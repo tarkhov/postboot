@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Switch reverse
+  span.badge.badge-success.text-uppercase.mb-3 New
+
+block example_result
+  .custom-control.custom-switch.custom-switch-reverse
+    input.custom-control-input(type="checkbox" id="customSwitch1")
+    label.custom-control-label(for="customSwitch1") Toggle this switch element
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .custom-control.custom-switch.custom-switch-reverse
+      input.custom-control-input(type="checkbox" id="customSwitch1")
+      label.custom-control-label(for="customSwitch1") Toggle this switch element

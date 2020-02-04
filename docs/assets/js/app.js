@@ -1,5 +1,5 @@
 /*!
- * PostBoot v1.0.0-rc4 (https://tarkhov.github.io/postboot/)
+ * PostBoot v1.0.0 (https://tarkhov.github.io/postboot/)
  * Copyright 2016-2020 Alexander Tarkhov
  * Licensed under MIT
  */
@@ -984,7 +984,7 @@ Prism.languages.js = Prism.languages.javascript;
 })();
 
 /*!
- * PostBoot v1.0.0-rc4 (https://tarkhov.github.io/postboot/)
+ * PostBoot v1.0.0 (https://tarkhov.github.io/postboot/)
  * Copyright 2016-2020 Alexander Tarkhov
  * Licensed under MIT
  */
@@ -992,11 +992,15 @@ Prism.languages.js = Prism.languages.javascript;
 "ontouchstart"in document.documentElement||function(t){var n=".bs.dropdown-hover",o=".data-api",r={MOUSEENTER_DATA_API:"mouseenter"+n+o,MOUSELEAVE_DATA_API:"mouseleave"+n+o},a="show",e='[data-hover="dropdown"]',d=".dropdown-hover.show";t(document).on(r.MOUSEENTER_DATA_API,e,function(){var n=t(this),o=n.closest(d);o&&!o.hasClass(a)&&n.dropdown("toggle")}).on(r.MOUSELEAVE_DATA_API,d,function(){var n=t(this).children(e);n.length&&n.dropdown("toggle")})}(jQuery),function(n){var o={CLICK_DATA_API:"click.bs.dropdown-mega.data-api"};jQuery(document).on(o.CLICK_DATA_API,".dropdown-mega-menu",function(n){n.stopPropagation()})}(),function(d){var n={ACTIVATE:"activate.bs.scrollspy"},s="dropdown-item",i="nav-link",l="show",a='[data-spy="scroll"]',u=".dropdown-menu",A=".dropup, .dropright, .dropdown, .dropleft",h=".nav-item",c=".show";d(window).on(n.ACTIVATE,function(n,o){var t=o.relatedTarget,e='[href="'+t+'"], [data-target="'+t+'"]',r=d(a);if(!r.length)return!0;r.each(function(){var n=d(this).attr("data-target");if(!n)return!0;var o=d(n);if(!o.length)return!0;var t=o.find(e);if(!t.length)return!0;var r=o.find(c);r.length&&r.removeClass(l);var a=null;t.hasClass(s)?a=u+","+A:t.hasClass(i)&&(a=h),null!==a&&t.parentsUntil(n,a).addClass(l)})})}(jQuery);
 jQuery(document).ready(function ($) {
   setTimeout(function () {
-    $.get('content.html', function (data) {
-      $('.spinner').remove();
-      $('.content').html(data);
-      Prism.highlightAll();
-      $('.collapse-content').collapse('show');
+    $.ajax({
+      url: 'content.html',
+      cache: false,
+      success: function (data) {
+        $('.spinner').remove();
+        $('.content').html(data);
+        Prism.highlightAll();
+        $('.collapse-content').collapse('show');
+      }
     });
   }, 2000);
 });

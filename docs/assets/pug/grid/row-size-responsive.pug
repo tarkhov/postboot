@@ -1,7 +1,7 @@
 extends ../example-html.pug
 
 block example_title
-  h4.fw-400 Responsive pagination sizes
+  h4.fw-400 Row size responsive
   span.badge.badge-success.text-uppercase.mb-3 New
 
 block example_code
@@ -9,5 +9,5 @@ block example_code
     | <!-- Source -->
     each breakpoint in ['sm', 'md', 'lg', 'xl']
       - for(var size = 1; size <= 5; size++)
-        ol.pagination(class='pagination-' + breakpoint + '-' + size)
+        div(class="row-" + breakpoint + '-' + size)
       ="\n"

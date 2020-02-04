@@ -7,5 +7,10 @@ block example_title
 block example_code
   :encode-pug
     | <!-- Source -->
-    - for(var i = 1; i <= 3; i++)
+    - for(var i = 1; i <= 5; i++)
       .container(class='container-' + i)
+    ="\n"
+    .container-md-2
+    .container-lg-3
+    .container-xl-4
+    .container-xxl-5

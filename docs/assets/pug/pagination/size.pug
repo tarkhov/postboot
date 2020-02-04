@@ -5,11 +5,11 @@ block example_title
   span.badge.badge-success.text-uppercase.mb-3 New
 
 block example_result
-  - for(var size = 1; size <= 4; size++)
+  - for(var size = 1; size <= 5; size++)
     +pagination_size(size)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    - for(var size = 1; size <= 4; size++)
+    - for(var size = 1; size <= 5; size++)
       ol.pagination(class='pagination-' + size)

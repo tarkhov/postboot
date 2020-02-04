@@ -18,7 +18,7 @@ Web app prototyping library based on Bootstrap framework.
 
 Library | Version
 ------- | -------
-Bootstrap | 4.3.1
+Bootstrap | 4.4.1
 
 PostBoot does **not overwrite** any components of Bootstrap, but only extends most of them.
 
@@ -26,17 +26,17 @@ PostBoot does **not overwrite** any components of Bootstrap, but only extends mo
 
 ### Manually
 
-[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc4/postboot-1.0.0-rc4.zip) package and unpack it or use following commands:
+[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.0/postboot-1.0.0.zip) package and unpack it or use following commands:
 
 ```bash
-wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc4/postboot-1.0.0-rc4.zip
-unzip postboot-1.0.0-rc4.zip
+wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0/postboot-1.0.0.zip
+unzip postboot-1.0.0.zip
 ```
 
 ### NodeJS
 
 ```bash
-npm install postboot@1.0.0-rc4
+npm install postboot@1.0.0
 ```
 
 ## Usage
@@ -58,14 +58,14 @@ npm install postboot@1.0.0-rc4
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc4/dist/css/postboot.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0/dist/css/postboot.min.css">
 
 <!-- JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc4/dist/js/postboot.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.0/dist/js/postboot.min.js"></script>
 ```
 
 ## Author

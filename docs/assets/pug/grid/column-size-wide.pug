@@ -1,0 +1,13 @@
+extends ../example-html.pug
+
+block example_title
+  h3.fw-400 Wide
+  span.badge.badge-success.text-uppercase.mb-3 New
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['xxl', '3xl', '4xl', '5xl', '6xl']
+      - for(var size = 1; size <= 12; size++)
+        div(class='col-' + breakpoint + '-' + size)
+      ="\n"

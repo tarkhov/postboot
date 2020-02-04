@@ -1,0 +1,15 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Horizontal flush
+
+block example_result
+  .card
+    .card-body
+      div Card body.
+    +list_group(['list-group-horizontal', 'list-group-horizontal-flush'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .list-group.list-group-horizontal.list-group-horizontal-flush

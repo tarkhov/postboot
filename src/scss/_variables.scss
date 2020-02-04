@@ -227,11 +227,18 @@ $button-sizes: map-merge((
 
 // Form
 $input-line-height-xs:   $input-btn-line-height-xs !default;
-$input-height-xs:        calc(#{$input-line-height-xs * 1em} + #{$input-btn-padding-y-xs * 2} + #{$input-height-border}) !default;
 $input-padding-y-xs:     $input-btn-padding-y-xs !default;
 $input-padding-x-xs:     $input-btn-padding-x-xs !default;
 $input-font-size-xs:     $input-btn-font-size-xs !default;
 $input-border-radius-xs: $border-radius-xs !default;
+$input-height-xs:        add($input-line-height-xs * 1em, add($input-padding-y-xs * 2, $input-height-border, false)) !default;
+
+$input-line-height-xl:   $input-btn-line-height-xl !default;
+$input-padding-y-xl:     $input-btn-padding-y-xl !default;
+$input-padding-x-xl:     $input-btn-padding-x-xl !default;
+$input-font-size-xl:     $input-btn-font-size-xl !default;
+$input-border-radius-xl: $border-radius-xl !default;
+$input-height-xl:        add($input-line-height-xl * 1em, add($input-padding-y-xl * 2, $input-height-border, false)) !default;
 
 $input-dark-color: $white !default;
 $input-dark-bg: $dark !default;
@@ -269,6 +276,14 @@ $input-sizes: map-merge((
     'font-size': $input-font-size-lg,
     'line-height': $input-line-height-lg,
     'border-radius': $input-border-radius-lg
+  ),
+  5: (
+    'height': $input-height-xl,
+    'padding-y': $input-padding-y-xl,
+    'padding-x': $input-padding-x-xl,
+    'font-size': $input-font-size-xl,
+    'line-height': $input-line-height-xl,
+    'border-radius': $input-border-radius-xl
   )
 ), $input-sizes);
 
@@ -539,12 +554,19 @@ $progress-sizes: map-merge((
 // List group
 $list-group-item-padding-x-xs: .75rem !default;
 $list-group-item-padding-y-xs: .25rem !default;
+$list-group-item-font-size-xs: $font-size-xs !default;
 
 $list-group-item-padding-x-sm: 1rem !default;
 $list-group-item-padding-y-sm: .5rem !default;
+$list-group-item-font-size-sm: $font-size-sm !default;
 
 $list-group-item-padding-x-lg: 1.5rem !default;
 $list-group-item-padding-y-lg: 1rem !default;
+$list-group-item-font-size-lg: $font-size-lg !default;
+
+$list-group-item-padding-x-xl: 1.75rem !default;
+$list-group-item-padding-y-xl: 1.25rem !default;
+$list-group-item-font-size-xl: $font-size-xl !default;
 
 $list-group-striped-bg: $light !default;
 
@@ -553,12 +575,12 @@ $list-group-sizes: map-merge((
   1: (
     'padding-y': $list-group-item-padding-y-xs,
     'padding-x': $list-group-item-padding-x-xs,
-    'font-size': $font-size-xs
+    'font-size': $list-group-item-font-size-xs
   ),
   2: (
     'padding-y': $list-group-item-padding-y-sm,
     'padding-x': $list-group-item-padding-x-sm,
-    'font-size': $font-size-sm
+    'font-size': $list-group-item-font-size-sm
   ),
   3: (
     'padding-y': $list-group-item-padding-y,
@@ -568,7 +590,12 @@ $list-group-sizes: map-merge((
   4: (
     'padding-y': $list-group-item-padding-y-lg,
     'padding-x': $list-group-item-padding-x-lg,
-    'font-size': $font-size-lg
+    'font-size': $list-group-item-font-size-lg
+  ),
+  5: (
+    'padding-y': $list-group-item-padding-y-xl,
+    'padding-x': $list-group-item-padding-x-xl,
+    'font-size': $list-group-item-font-size-xl
   )
 ), $list-group-sizes);
 
@@ -725,6 +752,9 @@ $dropdown-menu-sizes: map-merge((
 $pagination-padding-y-xs: .1rem !default;
 $pagination-padding-x-xs: .25rem !default;
 
+$pagination-padding-y-xl: 1rem !default;
+$pagination-padding-x-xl: 2rem !default;
+
 $pagination-sizes: () !default;
 $pagination-sizes: map-merge((
   1: (
@@ -754,6 +784,13 @@ $pagination-sizes: map-merge((
     'font-size': $font-size-lg,
     'line-height': $line-height-lg,
     'border-radius': $border-radius-lg
+  ),
+  5: (
+    'padding-y': $pagination-padding-y-xl,
+    'padding-x': $pagination-padding-x-xl,
+    'font-size': $font-size-xl,
+    'line-height': $line-height-xl,
+    'border-radius': $border-radius-xl
   )
 ), $pagination-sizes);
 

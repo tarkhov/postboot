@@ -10,7 +10,4 @@ block example_code
       each horizontal in ['right', 'left']
         ="\n"
         img(class="card-img-" + breakpoint + "-" + horizontal src="/" + pkg.name + "/assets/img/thumbnail.jpg")
-        each vertical in ['top', 'bottom']
-          ="\n"
-          img(class="card-img-" + breakpoint + "-" + vertical + "-" + horizontal src="/" + pkg.name + "/assets/img/thumbnail.jpg")
       ="\n"

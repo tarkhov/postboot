@@ -5,12 +5,12 @@ block example_title
   span.badge.badge-success.text-uppercase.mb-3 New
 
 block example_result
-  - for(var size = 1; size <= 4; size++)
+  - for(var size = 1; size <= 5; size++)
     .mb-3
       +input_variant(size, size)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    - for(var size = 1; size <= 4; size++)
+    - for(var size = 1; size <= 5; size++)
       input.form-control(type='text', placeholder=size class='input-' + size)

@@ -7,15 +7,15 @@ block example_title
 block example_result
   .row
     - for(var i = 1; i <= 5; i++)
-      .col-md-4
-        .card(class="card-" + i)
+      div(class='col-md-' + (i <= 3 ? 4 : 12))
+        .card.mb-gutter(class="card-" + i)
           .card-header
             ul.nav.nav-tabs.card-header-tabs
               li.nav-item: a.nav-link.active(href="#") Active
               li.nav-item: a.nav-link(href="#") Link
               li.nav-item: a.nav-link.disabled(href="#") Disabled
           .card-body
-            h4.h6.card-title Example title
+            h4.card-title(class="fs-" + (i + 2)) Example title
             p.card-text Example text
           .card-footer
             ul.nav.nav-pills.card-footer-pills

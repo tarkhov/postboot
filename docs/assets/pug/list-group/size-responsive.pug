@@ -8,7 +8,7 @@ block example_code
   :encode-pug
     | <!-- Source -->
     each breakpoint in ['sm', 'md', 'lg', 'xl']
-      - for(var size = 1; size <= 4; size++)
+      - for(var size = 1; size <= 5; size++)
         .list-group(class='list-group-' + breakpoint + '-' + size)
         div(class='list-group-item-' + breakpoint + '-' + size)
         each coordinate in ['x', 'y']

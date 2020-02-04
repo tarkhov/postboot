@@ -6,12 +6,10 @@ block example_title
 
 block example_result
   each text, variant in colors
-    if variant != 'black'
-      +button_active(text, variant)
+    +button_active(text, variant)
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
-      if variant != 'black'
-        button.btn.btn-secondary.active(type='button' class='btn-active-' + variant)= text
+      button.btn.btn-secondary.active(type='button' class='btn-active-' + variant)= text

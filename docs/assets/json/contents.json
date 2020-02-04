@@ -136,6 +136,10 @@
             "name": "Responsive"
           }
         ]
+      },
+      {
+        "url": "#border-radius",
+        "name": "Radius"
       }
     ]
   },
@@ -384,6 +388,10 @@
             "name": "Responsive"
           }
         ]
+      },
+      {
+        "url": "#switch-reverse",
+        "name": "Swtich reverse"
       }
     ]
   },
@@ -403,11 +411,23 @@
       },
       {
         "url": "#grid-row-size",
-        "name": "Row size"
+        "name": "Row size",
+        "childs": [
+          {
+            "url": "#grid-row-size-responsive",
+            "name": "Responsive"
+          }
+        ]
       },
       {
         "url": "#grid-column-size",
-        "name": "Column size"
+        "name": "Column size",
+        "childs": [
+          {
+            "url": "#grid-column-size-wide",
+            "name": "Wide"
+          }
+        ]
       },
       {
         "url": "#grid-gutter-spacing",
@@ -438,6 +458,14 @@
             "name": "Responsive"
           }
         ]
+      },
+      {
+        "url": "#list-group-horizontal-flush",
+        "name": "Horizontal flush"
+      },
+      {
+        "url": "#list-group-striped",
+        "name": "Striped"
       }
     ]
   },
@@ -631,39 +659,11 @@
   },
   {
     "url": "#size",
-    "name": "Size"
-  },
-  {
-    "url": "#svg",
-    "name": "SVG",
+    "name": "Size",
     "childs": [
       {
-        "url": "#svg-fill",
-        "name": "Fill",
-        "childs": [
-          {
-            "url": "#svg-fill-hover",
-            "name": "Hover"
-          },
-          {
-            "url": "#svg-fill-hover-opacity",
-            "name": "Hover opacity"
-          }
-        ]
-      },
-      {
-        "url": "#svg-stroke",
-        "name": "Stroke",
-        "childs": [
-          {
-            "url": "#svg-stroke-hover",
-            "name": "Hover"
-          },
-          {
-            "url": "#svg-stroke-hover-opacity",
-            "name": "Hover opacity"
-          }
-        ]
+        "url": "#size-responsive",
+        "name": "Responsive"
       }
     ]
   },

@@ -1,22 +1,35 @@
 // Size
-@each $size, $length in $sizes {
-  .s-#{$size} {
-    width: $length !important;
-    height: $length !important;
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+
+    @if $breakpoint != xs {
+      @each $prop, $abbrev in (width: w, height: h) {
+        .#{$abbrev}#{$infix}-100 { #{$prop}: 100% !important; }
+        .m#{$abbrev}#{$infix}-100 { max-#{$prop}: 100% !important; }
+        .min-v#{$abbrev}#{$infix}-100 { min-#{$prop}: 100v#{$abbrev} !important; }
+        .v#{$abbrev}#{$infix}-100 { #{$prop}: 100v#{$abbrev} !important; }
+      }
+    }
+
+    .s#{$infix}-100 {
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .ms#{$infix}-100 {
+      max-width: 100% !important;
+      max-height: 100% !important;
+    }
+
+    .min-vs#{$infix}-100 {
+      min-width: 100vw !important;
+      min-height: 100vh !important;
+    }
+
+    .vs#{$infix}-100 {
+      width: 100vw !important;
+      height: 100vh !important;
+    }
   }
-}
-
-.ms-100 {
-  max-width: 100% !important;
-  max-height: 100% !important;
-}
-
-.min-vs-100 {
-  min-width: 100vw !important;
-  min-height: 100vh !important;
-}
-
-.vs-100 {
-  width: 100vw !important;
-  height: 100vh !important;
 }

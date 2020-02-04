@@ -1,4 +1,136 @@
 
+<div id="start">
+  <h1 class="fw-400">PostBoot</h1>
+  <p class="lead fw-400">Web app prototyping library based on Bootstrap framework.</p>
+  <div class="alert alert-primary" role="alert">Compatibility with Bootstrap <b>v4.4.1</b>.</div>
+  <div class="alert alert-success" role="alert">PostBoot does <b>not overwrite</b> any components of Bootstrap, but only extends most of them.</div>
+  <div id="install">
+    <div id="install">
+      <h3 class="fw-400 mb-3">Installation</h3>
+      <div id="install-manually">
+        <h4 class="fw-400">Manually</h4>
+        <p><a href="https://github.com/tarkhov/postboot/releases/download/v1.0.0/postboot-1.0.0.zip">Download</a> package and unpack it or use following commands:</p>
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <pre><code class="language-bash">wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0/postboot-1.0.0.zip
+unzip postboot-1.0.0.zip</code></pre>
+          </div>
+        </div>
+      </div>
+      <div id="install-nodejs">
+        <h4 class="fw-400">NodeJS</h4>
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <pre><code class="language-bash">npm install postboot@1.0.0</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="usage">
+    <div id="usage">
+      <h3 class="fw-400">Usage</h3>
+      <div id="usage-local">
+        <h4 class="fw-400">Local</h4>
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <pre><code class="language-markup">&#x3C;!-- CSS --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/bootstrap.min.css&#x22;/&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/postboot.min.css&#x22;/&#x3E;
+
+&#x3C;!-- JS --&#x3E;
+&#x3C;script src=&#x22;js/jquery.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;js/bootstrap.bundle.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
+          </div>
+        </div>
+      </div>
+      <div id="usage-cdn">
+        <h4 class="fw-400">CDN</h4>
+        <div class="card bg-light mb-3">
+          <div class="card-body">
+            <pre><code class="language-markup">&#x3C;!-- CSS --&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css&#x22;/&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.0/dist/css/postboot.min.css&#x22;/&#x3E;
+
+&#x3C;!-- JS --&#x3E;
+&#x3C;script src=&#x22;https://code.jquery.com/jquery-3.4.1.slim.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.0/dist/js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="requirements">
+    <div id="requirements">
+      <h3 class="fw-400 mb-3">Requirements</h3><span class="badge badge-success text-uppercase mb-3">New</span>
+      <div id="requirements-css">
+        <h4 class="fw-400">CSS</h4>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col">File</th>
+              <th scope="col">Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>postboot.css</td>
+              <td>bootstrap.css</td>
+            </tr>
+            <tr>
+              <td>postboot-grid.css</td>
+              <td>bootstrap-grid.css</td>
+            </tr>
+            <tr>
+              <td>postboot-light.css</td>
+              <td>bootstrap.css</td>
+            </tr>
+          </tbody>
+        </table>
+        <div id="requirements-css-js">
+          <p>List of css components that requires  <b>postboot.js</b>:</p>
+          <ul>
+            <li><a href="#dropdown-hover">Dropdown hover</a></li>
+            <li><a href="#dropdown-mega-menu">Dropdown mega menu</a></li>
+            <li><a href="#scrollspy-tree">ScrollSpy tree</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="requirements-js">
+        <h4 class="fw-400">JS</h4>
+        <table class="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th scope="col">File</th>
+              <th scope="col">Requirement</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>postboot.js</td>
+              <td>bootstrap.js</td>
+            </tr>
+            <tr>
+              <td>dropdown-hover.js</td>
+              <td>dropdown.js</td>
+            </tr>
+            <tr>
+              <td>dropdown-mega.js</td>
+              <td>dropdown.js</td>
+            </tr>
+            <tr>
+              <td>scrollspy-tree.js</td>
+              <td>scrollspy.js</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
 <div id="background">
   <h2 class="fw-400">Background</h2>
   <div id="background-custom">
@@ -716,6 +848,7 @@
     <h3 class="fw-400">Custom</h3>
     <div class="card mb-3">
       <div class="card-body">
+        <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-black text-black">Black</div>
         <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-indigo text-indigo">Indigo</div>
         <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-orange text-orange">Orange</div>
         <div class="d-inline-block mr-1 mb-2 p-2 border-solid border-1 border-pink text-pink">Pink</div>
@@ -724,6 +857,7 @@
       </div>
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-black&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;border-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;border-orange&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;border-pink&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -1363,6 +1497,35 @@
       </div>
     </div>
   </div>
+  <div id="border-radius">
+    <h3 class="fw-400">Radius directions</h3>
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="d-inline-block mr-1 mb-2 p-2 border border-primary text-primary rounded rounded-top-0">Top</div>
+        <div class="d-inline-block mr-1 mb-2 p-2 border border-primary text-primary rounded rounded-right-0">Right</div>
+        <div class="d-inline-block mr-1 mb-2 p-2 border border-primary text-primary rounded rounded-bottom-0">Bottom</div>
+        <div class="d-inline-block mr-1 mb-2 p-2 border border-primary text-primary rounded rounded-left-0">Left</div>
+        <div class="d-inline-block mr-1 mb-2 p-2 border border-primary text-primary rounded rounded-top-pill">Top</div>
+        <div class="d-inline-block mr-1 mb-2 p-2 border border-primary text-primary rounded rounded-right-pill">Right</div>
+        <div class="d-inline-block mr-1 mb-2 p-2 border border-primary text-primary rounded rounded-bottom-pill">Bottom</div>
+        <div class="d-inline-block mr-1 mb-2 p-2 border border-primary text-primary rounded rounded-left-pill">Left</div>
+      </div>
+      <div class="card-footer">
+        <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-top-0&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-right-0&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom-0&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-left-0&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-top-pill&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-right-pill&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom-pill&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-left-pill&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
 </div>
 <div id="breadcrumb">
   <h2 class="fw-400">Breadcrumb</h2>
@@ -1538,6 +1701,7 @@
     <h3 class="fw-400">Custom</h3>
     <div class="card mb-3">
       <div class="card-body">
+        <button class="btn mr-1 mb-2 btn-black" type="button">Black</button>
         <button class="btn mr-1 mb-2 btn-indigo" type="button">Indigo</button>
         <button class="btn mr-1 mb-2 btn-orange" type="button">Orange</button>
         <button class="btn mr-1 mb-2 btn-pink" type="button">Pink</button>
@@ -1549,6 +1713,7 @@
       </div>
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;button class=&#x22;btn btn-black&#x22; type=&#x22;button&#x22;&#x3E;Black&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
@@ -1564,6 +1729,7 @@
     <div class="card mb-3">
       <div class="card-body">
         <button class="btn mr-1 mb-2 btn-outline-link" type="button">Link</button>
+        <button class="btn mr-1 mb-2 btn-outline-black" type="button">Black</button>
         <button class="btn mr-1 mb-2 btn-outline-indigo" type="button">Indigo</button>
         <button class="btn mr-1 mb-2 btn-outline-orange" type="button">Orange</button>
         <button class="btn mr-1 mb-2 btn-outline-pink" type="button">Pink</button>
@@ -1576,6 +1742,7 @@
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-link&#x22; type=&#x22;button&#x22;&#x3E;Link&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-outline-black&#x22; type=&#x22;button&#x22;&#x3E;Black&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-outline-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
@@ -1598,6 +1765,7 @@
         <button class="btn mr-1 mb-2 btn-secondary btn-hover-danger" type="button">Danger</button>
         <button class="btn mr-1 mb-2 btn-secondary btn-hover-light" type="button">Light</button>
         <button class="btn mr-1 mb-2 btn-secondary btn-hover-dark" type="button">Dark</button>
+        <button class="btn mr-1 mb-2 btn-secondary btn-hover-black" type="button">Black</button>
         <button class="btn mr-1 mb-2 btn-secondary btn-hover-indigo" type="button">Indigo</button>
         <button class="btn mr-1 mb-2 btn-secondary btn-hover-orange" type="button">Orange</button>
         <button class="btn mr-1 mb-2 btn-secondary btn-hover-pink" type="button">Pink</button>
@@ -1615,6 +1783,7 @@
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-black&#x22; type=&#x22;button&#x22;&#x3E;Black&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
@@ -1637,6 +1806,7 @@
         <button class="btn mr-1 mb-2 active btn-secondary btn-active-danger" type="button">Danger</button>
         <button class="btn mr-1 mb-2 active btn-secondary btn-active-light" type="button">Light</button>
         <button class="btn mr-1 mb-2 active btn-secondary btn-active-dark" type="button">Dark</button>
+        <button class="btn mr-1 mb-2 active btn-secondary btn-active-black" type="button">Black</button>
         <button class="btn mr-1 mb-2 active btn-secondary btn-active-indigo" type="button">Indigo</button>
         <button class="btn mr-1 mb-2 active btn-secondary btn-active-orange" type="button">Orange</button>
         <button class="btn mr-1 mb-2 active btn-secondary btn-active-pink" type="button">Pink</button>
@@ -1654,6 +1824,7 @@
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-danger&#x22; type=&#x22;button&#x22;&#x3E;Danger&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-light&#x22; type=&#x22;button&#x22;&#x3E;Light&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-dark&#x22; type=&#x22;button&#x22;&#x3E;Dark&#x3C;/button&#x3E;
+&#x3C;button class=&#x22;btn btn-secondary active btn-active-black&#x22; type=&#x22;button&#x22;&#x3E;Black&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-indigo&#x22; type=&#x22;button&#x22;&#x3E;Indigo&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-orange&#x22; type=&#x22;button&#x22;&#x3E;Orange&#x3C;/button&#x3E;
 &#x3C;button class=&#x22;btn btn-secondary active btn-active-pink&#x22; type=&#x22;button&#x22;&#x3E;Pink&#x3C;/button&#x3E;
@@ -2118,32 +2289,16 @@
     <div class="card card-body bg-light mb-3">
       <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;img class=&#x22;card-img-sm-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-sm-top-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-sm-bottom-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
 &#x3C;img class=&#x22;card-img-sm-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-sm-top-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-sm-bottom-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
 
 &#x3C;img class=&#x22;card-img-md-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-md-top-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-md-bottom-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
 &#x3C;img class=&#x22;card-img-md-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-md-top-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-md-bottom-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
 
 &#x3C;img class=&#x22;card-img-lg-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-lg-top-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-lg-bottom-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
 &#x3C;img class=&#x22;card-img-lg-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-lg-top-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-lg-bottom-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
 
 &#x3C;img class=&#x22;card-img-xl-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-xl-top-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-xl-bottom-right&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
 &#x3C;img class=&#x22;card-img-xl-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-xl-top-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
-&#x3C;img class=&#x22;card-img-xl-bottom-left&#x22; src=&#x22;/postboot/assets/img/thumbnail.jpg&#x22;/&#x3E;
 </code></pre>
     </div>
   </div>
@@ -2173,7 +2328,7 @@
       <div class="card-body">
         <div class="row">
           <div class="col-md-4">
-            <div class="card card-1">
+            <div class="card mb-gutter card-1">
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
@@ -2182,7 +2337,7 @@
                 </ul>
               </div>
               <div class="card-body">
-                <h4 class="h6 card-title">Example title</h4>
+                <h4 class="card-title fs-3">Example title</h4>
                 <p class="card-text">Example text</p>
               </div>
               <div class="card-footer">
@@ -2195,7 +2350,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card card-2">
+            <div class="card mb-gutter card-2">
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
@@ -2204,7 +2359,7 @@
                 </ul>
               </div>
               <div class="card-body">
-                <h4 class="h6 card-title">Example title</h4>
+                <h4 class="card-title fs-4">Example title</h4>
                 <p class="card-text">Example text</p>
               </div>
               <div class="card-footer">
@@ -2217,7 +2372,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card card-3">
+            <div class="card mb-gutter card-3">
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
@@ -2226,7 +2381,7 @@
                 </ul>
               </div>
               <div class="card-body">
-                <h4 class="h6 card-title">Example title</h4>
+                <h4 class="card-title fs-5">Example title</h4>
                 <p class="card-text">Example text</p>
               </div>
               <div class="card-footer">
@@ -2238,8 +2393,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card card-4">
+          <div class="col-md-12">
+            <div class="card mb-gutter card-4">
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
@@ -2248,7 +2403,7 @@
                 </ul>
               </div>
               <div class="card-body">
-                <h4 class="h6 card-title">Example title</h4>
+                <h4 class="card-title fs-6">Example title</h4>
                 <p class="card-text">Example text</p>
               </div>
               <div class="card-footer">
@@ -2260,8 +2415,8 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="card card-5">
+          <div class="col-md-12">
+            <div class="card mb-gutter card-5">
               <div class="card-header">
                 <ul class="nav nav-tabs card-header-tabs">
                   <li class="nav-item"><a class="nav-link active" href="#">Active</a></li>
@@ -2270,7 +2425,7 @@
                 </ul>
               </div>
               <div class="card-body">
-                <h4 class="h6 card-title">Example title</h4>
+                <h4 class="card-title fs-7">Example title</h4>
                 <p class="card-text">Example text</p>
               </div>
               <div class="card-footer">
@@ -2526,12 +2681,30 @@
 	<a class="dropdown-item" href="#">Menu item 3</a>
           </div>
         </div>
+        <div class="btn-group dropdown">
+          <button class="btn btn-secondary dropdown-toggle btn-4" type="button" data-toggle="dropdown">Dropdown 4</button>
+          <div class="dropdown-menu dropdown-menu-4">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+          </div>
+        </div>
+        <div class="btn-group dropdown">
+          <button class="btn btn-secondary dropdown-toggle btn-5" type="button" data-toggle="dropdown">Dropdown 5</button>
+          <div class="dropdown-menu dropdown-menu-5">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+          </div>
+        </div>
       </div>
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;dropdown-menu dropdown-menu-3&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-5&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -2542,18 +2715,26 @@
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
       </div>
     </div>
@@ -3247,13 +3428,17 @@
         <div class="mb-3">
           <input class="form-control input-4" type="text" placeholder="4"/>
         </div>
+        <div class="mb-3">
+          <input class="form-control input-5" type="text" placeholder="5"/>
+        </div>
       </div>
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;input class=&#x22;form-control input-1&#x22; type=&#x22;text&#x22; placeholder=&#x22;1&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-2&#x22; type=&#x22;text&#x22; placeholder=&#x22;2&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-3&#x22; type=&#x22;text&#x22; placeholder=&#x22;3&#x22;/&#x3E;
-&#x3C;input class=&#x22;form-control input-4&#x22; type=&#x22;text&#x22; placeholder=&#x22;4&#x22;/&#x3E;</code></pre>
+&#x3C;input class=&#x22;form-control input-4&#x22; type=&#x22;text&#x22; placeholder=&#x22;4&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-5&#x22; type=&#x22;text&#x22; placeholder=&#x22;5&#x22;/&#x3E;</code></pre>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -3265,24 +3450,47 @@
 &#x3C;input class=&#x22;form-control input-sm-2&#x22; type=&#x22;text&#x22; placeholder=&#x22;2&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-sm-3&#x22; type=&#x22;text&#x22; placeholder=&#x22;3&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-sm-4&#x22; type=&#x22;text&#x22; placeholder=&#x22;4&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-sm-5&#x22; type=&#x22;text&#x22; placeholder=&#x22;5&#x22;/&#x3E;
 
 &#x3C;input class=&#x22;form-control input-md-1&#x22; type=&#x22;text&#x22; placeholder=&#x22;1&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-md-2&#x22; type=&#x22;text&#x22; placeholder=&#x22;2&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-md-3&#x22; type=&#x22;text&#x22; placeholder=&#x22;3&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-md-4&#x22; type=&#x22;text&#x22; placeholder=&#x22;4&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-md-5&#x22; type=&#x22;text&#x22; placeholder=&#x22;5&#x22;/&#x3E;
 
 &#x3C;input class=&#x22;form-control input-lg-1&#x22; type=&#x22;text&#x22; placeholder=&#x22;1&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-lg-2&#x22; type=&#x22;text&#x22; placeholder=&#x22;2&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-lg-3&#x22; type=&#x22;text&#x22; placeholder=&#x22;3&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-lg-4&#x22; type=&#x22;text&#x22; placeholder=&#x22;4&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-lg-5&#x22; type=&#x22;text&#x22; placeholder=&#x22;5&#x22;/&#x3E;
 
 &#x3C;input class=&#x22;form-control input-xl-1&#x22; type=&#x22;text&#x22; placeholder=&#x22;1&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-xl-2&#x22; type=&#x22;text&#x22; placeholder=&#x22;2&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-xl-3&#x22; type=&#x22;text&#x22; placeholder=&#x22;3&#x22;/&#x3E;
 &#x3C;input class=&#x22;form-control input-xl-4&#x22; type=&#x22;text&#x22; placeholder=&#x22;4&#x22;/&#x3E;
+&#x3C;input class=&#x22;form-control input-xl-5&#x22; type=&#x22;text&#x22; placeholder=&#x22;5&#x22;/&#x3E;
 </code></pre>
       </div>
     </div>
+  </div>
+  <div id="switch-reverse">
+    <h3 class="fw-400">Switch reverse</h3><span class="badge badge-success text-uppercase mb-3">New</span>
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="custom-control custom-switch custom-switch-reverse">
+          <input class="custom-control-input" type="checkbox" id="customSwitch1"/>
+          <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+        </div>
+      </div>
+      <div class="card-footer">
+        <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;custom-control custom-switch custom-switch-reverse&#x22;&#x3E;
+  &#x3C;input class=&#x22;custom-control-input&#x22; type=&#x22;checkbox&#x22; id=&#x22;customSwitch1&#x22;/&#x3E;
+  &#x3C;label class=&#x22;custom-control-label&#x22; for=&#x22;customSwitch1&#x22;&#x3E;Toggle this switch element&#x3C;/label&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+      </div>
+    </div>
+    <div class="clearfix"></div>
   </div>
 </div>
 <div id="grid">
@@ -3291,9 +3499,7 @@
     <h3 class="fw-400">Container</h3>
     <div class="card card-body bg-light mb-3">
       <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;container-fluid container-md&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;container-fluid container-lg&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;container-fluid container-xl&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;container-xxl&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
     </div>
     <div id="grid-container-size">
       <h4 class="fw-400">Size</h4><span class="badge badge-success text-uppercase mb-3">New</span>
@@ -3301,7 +3507,14 @@
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;div class=&#x22;container container-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;container container-2&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;container container-3&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;container container-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container container-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container container-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;container-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;container-xxl-5&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
       </div>
     </div>
   </div>
@@ -3390,6 +3603,36 @@
       </div>
     </div>
     <div class="clearfix"></div>
+    <div id="grid-row-size-responsive">
+      <h4 class="fw-400">Row size responsive</h4><span class="badge badge-success text-uppercase mb-3">New</span>
+      <div class="card card-body bg-light mb-3">
+        <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;row-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;row-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;row-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+      </div>
+    </div>
   </div>
   <div id="grid-column-size">
     <h4 class="fw-400">Column size</h4><span class="badge badge-success text-uppercase mb-3">New</span>
@@ -3419,10 +3662,86 @@
 &#x3C;div class=&#x22;col-sm-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;col-md-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;col-lg-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;col-xl-2-5&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;col-xl-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-2-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-2-5&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
       </div>
     </div>
     <div class="clearfix"></div>
+    <div id="grid-column-size-wide">
+      <h3 class="fw-400">Wide</h3><span class="badge badge-success text-uppercase mb-3">New</span>
+      <div class="card card-body bg-light mb-3">
+        <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;col-xxl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-6&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-7&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-8&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-9&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-11&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-xxl-12&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;col-3xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-6&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-7&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-8&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-9&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-11&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-3xl-12&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;col-4xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-6&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-7&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-8&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-9&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-11&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-4xl-12&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;col-5xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-6&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-7&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-8&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-9&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-11&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-5xl-12&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;col-6xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-6&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-7&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-8&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-9&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-11&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;col-6xl-12&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+      </div>
+    </div>
   </div>
   <div id="grid-gutter-spacing">
     <h3 class="fw-400">Gutter spacing</h3><span class="badge badge-success text-uppercase mb-3">New</span>
@@ -3924,20 +4243,24 @@
     <div class="card mb-3">
       <div class="card-body">
         <div class="row">
-          <div class="col-md-3">
+          <div class="mb-gutter col-md-3">
             <div class="list-group list-group-1"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="mb-gutter col-md-3">
             <div class="list-group list-group-2"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="mb-gutter col-md-3">
             <div class="list-group list-group-3"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
             </div>
           </div>
-          <div class="col-md-3">
+          <div class="mb-gutter col-md-3">
             <div class="list-group list-group-4"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
+            </div>
+          </div>
+          <div class="mb-gutter col-md-4">
+            <div class="list-group list-group-5"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
             </div>
           </div>
         </div>
@@ -3947,7 +4270,8 @@
 &#x3C;div class=&#x22;list-group list-group-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group list-group-2&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group list-group-3&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;list-group list-group-4&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+&#x3C;div class=&#x22;list-group list-group-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group list-group-5&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -3979,6 +4303,10 @@
 &#x3C;div class=&#x22;list-group-item-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;list-group-item-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-5&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
         </div>
       </div>
@@ -4008,6 +4336,11 @@
 &#x3C;div class=&#x22;list-group-item-x-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
 
+&#x3C;div class=&#x22;list-group list-group-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -4027,6 +4360,11 @@
 &#x3C;div class=&#x22;list-group-item-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;list-group list-group-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;list-group list-group-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -4048,6 +4386,11 @@
 &#x3C;div class=&#x22;list-group-item-x-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
 
+&#x3C;div class=&#x22;list-group list-group-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;list-group list-group-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -4067,9 +4410,51 @@
 &#x3C;div class=&#x22;list-group-item-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-x-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;list-group-item-y-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;list-group list-group-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-x-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;list-group-item-y-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
       </div>
     </div>
+  </div>
+  <div id="list-group-horizontal-flush">
+    <h3 class="fw-400">Horizontal flush</h3>
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="card">
+          <div class="card-body">
+            <div>Card body.</div>
+          </div>
+          <div class="list-group list-group-horizontal list-group-horizontal-flush"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;list-group list-group-horizontal list-group-horizontal-flush&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div id="list-group-striped">
+    <h3 class="fw-400">Striped</h3>
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="list-group list-group-striped"><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 1</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 2</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 3</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 4</a><a class="list-group-item list-group-item-action list-group-item-action" href="#">List item 5</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;list-group list-group-striped&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+      </div>
+    </div>
+    <div class="clearfix"></div>
   </div>
 </div>
 <div id="nav">
@@ -4668,6 +5053,39 @@
             </ul>
           </div>
         </nav>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+          <button class="navbar-toggler mr-3" type="button"><span class="tribar navbar-toggler-tribar"></span></button>
+	<a class="navbar-brand" href="#">Navbar</a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav navbar-nav-5">
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+          <button class="navbar-toggler mr-3" type="button"><span class="tribar navbar-toggler-tribar"></span></button>
+	<a class="navbar-brand" href="#">Navbar</a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav navbar-nav-y-5">
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+          <button class="navbar-toggler mr-3" type="button"><span class="tribar navbar-toggler-tribar"></span></button>
+	<a class="navbar-brand" href="#">Navbar</a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav navbar-nav-x-5">
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
@@ -4689,6 +5107,10 @@
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-y-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-x-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-y-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-x-5&#x22;&#x3E;&#x3C;/ul&#x3E;
 </code></pre>
       </div>
     </div>
@@ -4716,6 +5138,10 @@
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-y-sm-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-x-sm-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-sm-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-y-sm-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-x-sm-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-y-md-0&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-x-md-0&#x22;&#x3E;&#x3C;/ul&#x3E;
@@ -4735,6 +5161,10 @@
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-y-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-x-md-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-md-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-y-md-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-x-md-5&#x22;&#x3E;&#x3C;/ul&#x3E;
 
 
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-y-lg-0&#x22;&#x3E;&#x3C;/ul&#x3E;
@@ -4756,6 +5186,10 @@
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-y-lg-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-x-lg-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-lg-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-y-lg-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-x-lg-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+
 
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-y-xl-0&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-x-xl-0&#x22;&#x3E;&#x3C;/ul&#x3E;
@@ -4775,6 +5209,10 @@
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-y-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
 &#x3C;ul class=&#x22;navbar-nav navbar-nav-x-xl-4&#x22;&#x3E;&#x3C;/ul&#x3E;
+
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-xl-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-y-xl-5&#x22;&#x3E;&#x3C;/ul&#x3E;
+&#x3C;ul class=&#x22;navbar-nav navbar-nav-x-xl-5&#x22;&#x3E;&#x3C;/ul&#x3E;
 
 </code></pre>
       </div>
@@ -5055,13 +5493,25 @@
             </ul>
           </div>
         </nav>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark navbar-5 mb-3">
+          <button class="navbar-toggler mr-3" type="button"><span class="tribar navbar-toggler-tribar"></span></button>
+	<a class="navbar-brand" href="#">Navbar</a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-1&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-2&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-3&#x22;&#x3E;&#x3C;/nav&#x3E;
-&#x3C;nav class=&#x22;navbar navbar-4&#x22;&#x3E;&#x3C;/nav&#x3E;</code></pre>
+&#x3C;nav class=&#x22;navbar navbar-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-5&#x22;&#x3E;&#x3C;/nav&#x3E;</code></pre>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -5073,21 +5523,25 @@
 &#x3C;nav class=&#x22;navbar navbar-sm-2&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-sm-3&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-sm-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-sm-5&#x22;&#x3E;&#x3C;/nav&#x3E;
 
 &#x3C;nav class=&#x22;navbar navbar-md-1&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-md-2&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-md-3&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-md-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-md-5&#x22;&#x3E;&#x3C;/nav&#x3E;
 
 &#x3C;nav class=&#x22;navbar navbar-lg-1&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-lg-2&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-lg-3&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-lg-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-lg-5&#x22;&#x3E;&#x3C;/nav&#x3E;
 
 &#x3C;nav class=&#x22;navbar navbar-xl-1&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-xl-2&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-xl-3&#x22;&#x3E;&#x3C;/nav&#x3E;
 &#x3C;nav class=&#x22;navbar navbar-xl-4&#x22;&#x3E;&#x3C;/nav&#x3E;
+&#x3C;nav class=&#x22;navbar navbar-xl-5&#x22;&#x3E;&#x3C;/nav&#x3E;
 </code></pre>
       </div>
     </div>
@@ -5115,6 +5569,10 @@
 &#x3C;div class=&#x22;py-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-navbar-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-5&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
     </div>
     <div id="navbar-spacing-responsive">
@@ -5141,6 +5599,10 @@
 &#x3C;div class=&#x22;pt-navbar-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
 
+&#x3C;div class=&#x22;py-navbar-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;py-navbar-md&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-md&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-md&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -5160,6 +5622,10 @@
 &#x3C;div class=&#x22;py-navbar-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-navbar-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
 
 &#x3C;div class=&#x22;py-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-lg&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -5181,6 +5647,10 @@
 &#x3C;div class=&#x22;pt-navbar-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
 
+&#x3C;div class=&#x22;py-navbar-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
 &#x3C;div class=&#x22;py-navbar-xl&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-xl&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-xl&#x22;&#x3E;&#x3C;/div&#x3E;
@@ -5200,6 +5670,10 @@
 &#x3C;div class=&#x22;py-navbar-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pt-navbar-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;pb-navbar-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;py-navbar-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pt-navbar-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;pb-navbar-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
       </div>
     </div>
@@ -5256,13 +5730,19 @@
           <li class="page-item"><a class="page-link" href="#">2</a></li>
           <li class="page-item"><a class="page-link" href="#">3</a></li>
         </ol>
+        <ol class="pagination mb-3 pagination-5">
+          <li class="page-item active"><span class="page-link">1</span></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+        </ol>
       </div>
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-1&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-2&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-3&#x22;&#x3E;&#x3C;/ol&#x3E;
-&#x3C;ol class=&#x22;pagination pagination-4&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
+&#x3C;ol class=&#x22;pagination pagination-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-5&#x22;&#x3E;&#x3C;/ol&#x3E;</code></pre>
       </div>
     </div>
     <div class="clearfix"></div>
@@ -5274,21 +5754,25 @@
 &#x3C;ol class=&#x22;pagination pagination-sm-2&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-sm-3&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-sm-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-sm-5&#x22;&#x3E;&#x3C;/ol&#x3E;
 
 &#x3C;ol class=&#x22;pagination pagination-md-1&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-md-2&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-md-3&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-md-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-md-5&#x22;&#x3E;&#x3C;/ol&#x3E;
 
 &#x3C;ol class=&#x22;pagination pagination-lg-1&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-lg-2&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-lg-3&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-lg-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-lg-5&#x22;&#x3E;&#x3C;/ol&#x3E;
 
 &#x3C;ol class=&#x22;pagination pagination-xl-1&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-xl-2&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-xl-3&#x22;&#x3E;&#x3C;/ol&#x3E;
 &#x3C;ol class=&#x22;pagination pagination-xl-4&#x22;&#x3E;&#x3C;/ol&#x3E;
+&#x3C;ol class=&#x22;pagination pagination-xl-5&#x22;&#x3E;&#x3C;/ol&#x3E;
 </code></pre>
       </div>
     </div>
@@ -5432,11 +5916,11 @@
         <div class="row">
           <div class="col-lg-3">
             <div class="sidebar sidebar-light bg-light sidebar-expand" id="sidebar-scrollspy">
-              <ul class="sidebar-nav nav-tree nav-y-sm">
+              <ul class="sidebar-nav nav-tree nav-y-2">
                 <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-item">Nav item</a>
-                  <ul class="sidebar-nav nav-tree nav-y-sm font-size-2 pl-3">
+                  <ul class="sidebar-nav nav-tree nav-y-2 fs-2 pl-3">
                     <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem">Sub item</a>
-                      <ul class="sidebar-nav nav-tree nav-y-sm font-size-1 pl-3">
+                      <ul class="sidebar-nav nav-tree nav-y-2 fs-1 pl-3">
                         <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem1">Sub item 1</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem2">Sub item 2</a></li>
                         <li class="nav-item"><a class="nav-link" href="#scrollspy-nav-subitem3">Sub item 3</a></li>
@@ -5626,712 +6110,55 @@
   <h2 class="fw-400">Size</h2><span class="badge badge-success text-uppercase mb-3">New</span>
   <div class="card card-body bg-light mb-3">
     <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;s-25&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;s-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;s-75&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;s-100&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;s-auto&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;ms-100&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;min-vs-100&#x22;&#x3E;&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;vs-100&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
   </div>
-</div>
-<div id="svg">
-  <h2 class="fw-400">SVG</h2>
-  <div id="svg-fill">
-    <h3 class="fw-400">Fill</h3><span class="badge badge-success text-uppercase mb-3">New</span>
-    <div class="card mb-3">
-      <div class="card-body">
-        <svg class="fill-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-      </div>
-      <div class="card-footer">
-        <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;fill-primary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-success&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-info&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-warning&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-danger&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-light&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-dark&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-black&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-teal&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <div id="svg-fill-hover">
-      <h4 class="fw-400">Hover</h4><span class="badge badge-success text-uppercase mb-3">New</span>
-      <div class="card mb-3">
-        <div class="card-body">
-          <svg class="fill-hover-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-        </div>
-        <div class="card-footer">
-          <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
-    <div id="svg-fill-hover-opacity">
-      <h4 class="fw-400">Hover opacity</h4><span class="badge badge-success text-uppercase mb-3">New</span>
-      <div class="card mb-3">
-        <div class="card-body">
-          <svg class="fill-hover-primary-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-secondary-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-success-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-info-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-warning-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-danger-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-light-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-dark-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-black-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-indigo-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-orange-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-pink-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-purple-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-teal-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="fill-hover-white-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-        </div>
-        <div class="card-footer">
-          <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-primary-90&#x22;&#x3E;&#x3C;/div&#x3E;
+  <div id="size-responsive">
+    <h3 class="fw-400">Responsive</h3><span class="badge badge-success text-uppercase mb-3">New</span>
+    <div class="card card-body bg-light mb-3">
+      <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;w-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;h-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-v-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;v-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;s-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ms-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-s-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;vs-sm-100&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;fill-hover-secondary-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-secondary-90&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;w-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;h-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-v-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;v-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;s-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ms-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-s-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;vs-md-100&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;fill-hover-success-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-success-90&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;w-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;h-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-v-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;v-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;s-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ms-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-s-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;vs-lg-100&#x22;&#x3E;&#x3C;/div&#x3E;
 
-&#x3C;div class=&#x22;fill-hover-info-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-info-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-warning-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-warning-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-danger-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-danger-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-light-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-light-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-dark-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-dark-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-black-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-indigo-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-indigo-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-orange-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-orange-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-pink-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-pink-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-purple-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-purple-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-teal-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-teal-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;fill-hover-white-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;fill-hover-white-90&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;w-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;h-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;m-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-v-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;v-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;s-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;ms-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;min-s-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;vs-xl-100&#x22;&#x3E;&#x3C;/div&#x3E;
 </code></pre>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
-  </div>
-  <div id="svg-stroke">
-    <h3 class="fw-400">Stroke</h3><span class="badge badge-success text-uppercase mb-3">New</span>
-    <div class="card mb-3">
-      <div class="card-body">
-        <svg class="stroke-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-        <svg class="stroke-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-        </svg>
-      </div>
-      <div class="card-footer">
-        <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;stroke-primary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-success&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-info&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-warning&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-danger&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-light&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-dark&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-black&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-teal&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-      </div>
-    </div>
-    <div class="clearfix"></div>
-    <div id="svg-stroke-hover">
-      <h4 class="fw-400">Hover</h4><span class="badge badge-success text-uppercase mb-3">New</span>
-      <div class="card mb-3">
-        <div class="card-body">
-          <svg class="stroke-hover-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-success" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-info" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-warning" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-danger" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-indigo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-purple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-teal" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-        </div>
-        <div class="card-footer">
-          <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
-        </div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
-    <div id="svg-stroke-hover-opacity">
-      <h4 class="fw-400">Hover opacity</h4><span class="badge badge-success text-uppercase mb-3">New</span>
-      <div class="card mb-3">
-        <div class="card-body">
-          <svg class="stroke-hover-primary-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-secondary-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-success-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-info-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-warning-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-danger-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-light-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-dark-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-black-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-indigo-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-orange-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-pink-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-purple-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-teal-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-          <svg class="stroke-hover-white-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-            <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z"></path>
-          </svg>
-        </div>
-        <div class="card-footer">
-          <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-primary-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-secondary-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-secondary-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-success-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-success-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-info-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-info-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-warning-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-warning-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-danger-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-danger-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-light-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-light-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-dark-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-dark-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-black-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-indigo-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-indigo-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-orange-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-orange-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-pink-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-pink-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-purple-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-purple-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-teal-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-teal-90&#x22;&#x3E;&#x3C;/div&#x3E;
-
-&#x3C;div class=&#x22;stroke-hover-white-10&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white-20&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white-30&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white-40&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white-60&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white-70&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white-80&#x22;&#x3E;&#x3C;/div&#x3E;
-&#x3C;div class=&#x22;stroke-hover-white-90&#x22;&#x3E;&#x3C;/div&#x3E;
-</code></pre>
-        </div>
-      </div>
-      <div class="clearfix"></div>
     </div>
   </div>
 </div>
@@ -6340,10 +6167,11 @@
   <div id="text-custom">
     <h3 class="fw-400">Custom</h3>
     <div class="card mb-3">
-      <div class="card-body"><span class="mr-2 mb-2 text-indigo">Indigo</span><span class="mr-2 mb-2 text-orange">Orange</span><span class="mr-2 mb-2 text-pink">Pink</span><span class="mr-2 mb-2 text-purple">Purple</span><span class="mr-2 mb-2 text-teal">Teal</span>
+      <div class="card-body"><span class="mr-2 mb-2 text-black">Black</span><span class="mr-2 mb-2 text-indigo">Indigo</span><span class="mr-2 mb-2 text-orange">Orange</span><span class="mr-2 mb-2 text-pink">Pink</span><span class="mr-2 mb-2 text-purple">Purple</span><span class="mr-2 mb-2 text-teal">Teal</span>
       </div>
       <div class="card-footer">
         <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-black&#x22;&#x3E;Black&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;text-indigo&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;text-orange&#x22;&#x3E;Orange&#x3C;/div&#x3E;
 &#x3C;div class=&#x22;text-pink&#x22;&#x3E;Pink&#x3C;/div&#x3E;

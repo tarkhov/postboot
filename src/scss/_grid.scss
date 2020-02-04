@@ -80,7 +80,7 @@
   }
 }
 
-// Margin and padding
+// Gutter margin and padding
 @if $enable-grid-classes {
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-up($breakpoint) {

@@ -21,3 +21,6 @@ mixin border_style(text, style)
 
 mixin border_width(width)
   .mb-3.border-top-solid.border-primary(class="border-top-" + width)
+
+mixin border_radius(text, position, radius)
+  +border(text, ['border', 'border-primary', 'text-primary', 'rounded', 'rounded-' + position + '-' + radius])

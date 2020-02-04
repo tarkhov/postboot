@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Radius directions
+
+block example_result
+  each radius in [0, 'pill']
+    each text, position in {'top': 'Top', 'right': 'Right', 'bottom': 'Bottom', 'left': 'Left'}
+      +border_radius(text, position, radius)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each radius in [0, 'pill']
+      each text, position in {'top': 'Top', 'right': 'Right', 'bottom': 'Bottom', 'left': 'Left'}
+        div(class='border-' + position + '-' + radius)
+      ="\n"

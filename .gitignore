@@ -62,3 +62,6 @@ node_modules
 *.css.map
 *.sass.map
 *.scss.map
+
+# Custom
+package-lock.json

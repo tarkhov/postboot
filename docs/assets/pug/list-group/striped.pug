@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_title
+  h3.fw-400 Striped
+
+block example_result
+  .row
+    .col-md-4
+      +list_group('list-group-striped')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .list-group.list-group-striped

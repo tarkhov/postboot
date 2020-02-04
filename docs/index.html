@@ -16,7 +16,7 @@
   <body class="pt-navbar pb-navbar-2 pb-md-0" data-spy="scroll" data-target=".contents-nav">
     <header class="pb-gutter" role="banner">
       <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
-        <div class="container-fluid container-xl"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0-rc4</sup></a>
+        <div class="container-fluid container-xl"><a class="navbar-brand" href="/postboot/" rel="home"><span class="rounded py-1 text-white font-weight-medium bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.0</sup></a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
@@ -28,7 +28,7 @@
                   <svg class="svg-inline--fa fa-github-alt fa-w-15" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github-alt" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512" data-fa-i2svg="">
                     <path fill="currentColor" d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path>
                   </svg><i class="fab fa-github-alt"></i><span class="d-none d-md-inline">&nbsp;&nbsp;GitHub</span></a></li>
-            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc4/postboot-1.0.0-rc4.zip">Download</a>
+            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.0/postboot-1.0.0.zip">Download</a>
           </div>
         </div>
       </nav>
@@ -106,6 +106,8 @@
                     <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
                       <li class="nav-item"><a class="nav-link" href="#border-width-responsive">Responsive</a></li>
                     </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-radius">Radius</a>
                   </li>
                 </ul>
               </li>
@@ -239,6 +241,8 @@
                       <li class="nav-item"><a class="nav-link" href="#input-size-responsive">Responsive</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#switch-reverse">Swtich reverse</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#grid">Grid</a>
@@ -249,8 +253,14 @@
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-row-size">Row size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#grid-row-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-column-size">Column size</a>
+                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
+                      <li class="nav-item"><a class="nav-link" href="#grid-column-size-wide">Wide</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a>
                     <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
@@ -266,6 +276,10 @@
                       <li class="nav-item"><a class="nav-link" href="#list-group-item-size">Item</a></li>
                       <li class="nav-item"><a class="nav-link" href="#list-group-size-responsive">Responsive</a></li>
                     </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#list-group-horizontal-flush">Horizontal flush</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#list-group-striped">Striped</a>
                   </li>
                 </ul>
               </li>
@@ -369,20 +383,8 @@
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#size">Size</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#svg">SVG</a>
                 <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-2 pl-3">
-                  <li class="nav-item"><a class="nav-link" href="#svg-fill">Fill</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#svg-fill-hover">Hover</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#svg-fill-hover-opacity">Hover opacity</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#svg-stroke">Stroke</a>
-                    <ul class="sidebar-nav nav-tree nav-x-0 nav-y-2 fs-1 pl-3">
-                      <li class="nav-item"><a class="nav-link" href="#svg-stroke-hover">Hover</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#svg-stroke-hover-opacity">Hover opacity</a></li>
-                    </ul>
+                  <li class="nav-item"><a class="nav-link" href="#size-responsive">Responsive</a>
                   </li>
                 </ul>
               </li>
@@ -418,142 +420,12 @@
         </div>
         <main class="col-md-10" role="main">
           <article role="article">
-            <div id="start">
-              <h1 class="fw-400">PostBoot</h1>
-              <p class="lead fw-400">Web app prototyping library based on Bootstrap framework.</p>
-              <div class="alert alert-primary" role="alert">Compatibility with Bootstrap <b>v4.3.1</b>.</div>
-              <div class="alert alert-success" role="alert">PostBoot does <b>not overwrite</b> any components of Bootstrap, but only extends most of them.</div>
-              <div id="install">
-                <div id="install">
-                  <h3 class="fw-400 mb-3">Installation</h3>
-                  <div id="install-manually">
-                    <h4 class="fw-400">Manually</h4>
-                    <p><a href="https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc4/postboot-1.0.0-rc4.zip">Download</a> package and unpack it or use following commands:</p>
-                    <div class="card bg-light mb-3">
-                      <div class="card-body">
-                        <pre><code class="language-bash">wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.0-rc4/postboot-1.0.0-rc4.zip
-unzip postboot-1.0.0-rc4.zip</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="install-nodejs">
-                    <h4 class="fw-400">NodeJS</h4>
-                    <div class="card bg-light mb-3">
-                      <div class="card-body">
-                        <pre><code class="language-bash">npm install postboot@1.0.0-rc4</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="usage">
-                <div id="usage">
-                  <h3 class="fw-400">Usage</h3>
-                  <div id="usage-local">
-                    <h4 class="fw-400">Local</h4>
-                    <div class="card bg-light mb-3">
-                      <div class="card-body">
-                        <pre><code class="language-markup">&#x3C;!-- CSS --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/bootstrap.min.css&#x22;/&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;css/postboot.min.css&#x22;/&#x3E;
-
-&#x3C;!-- JS --&#x3E;
-&#x3C;script src=&#x22;js/jquery.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;js/bootstrap.bundle.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                  <div id="usage-cdn">
-                    <h4 class="fw-400">CDN</h4>
-                    <div class="card bg-light mb-3">
-                      <div class="card-body">
-                        <pre><code class="language-markup">&#x3C;!-- CSS --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css&#x22;/&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc4/dist/css/postboot.min.css&#x22;/&#x3E;
-
-&#x3C;!-- JS --&#x3E;
-&#x3C;script src=&#x22;https://code.jquery.com/jquery-3.3.1.slim.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.0-rc4/dist/js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="requirements">
-                <div id="requirements">
-                  <h3 class="fw-400 mb-3">Requirements</h3><span class="badge badge-success text-uppercase mb-3">New</span>
-                  <div id="requirements-css">
-                    <h4 class="fw-400">CSS</h4>
-                    <table class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th scope="col">File</th>
-                          <th scope="col">Requirement</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>postboot.css</td>
-                          <td>bootstrap.css</td>
-                        </tr>
-                        <tr>
-                          <td>postboot-grid.css</td>
-                          <td>bootstrap-grid.css</td>
-                        </tr>
-                        <tr>
-                          <td>postboot-light.css</td>
-                          <td>bootstrap.css</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <div id="requirements-css-js">
-                      <p>List of css components that requires  <b>postboot.js</b>:</p>
-                      <ul>
-                        <li><a href="#dropdown-hover">Dropdown hover</a></li>
-                        <li><a href="#dropdown-mega-menu">Dropdown mega menu</a></li>
-                        <li><a href="#scrollspy-tree">ScrollSpy tree</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div id="requirements-js">
-                    <h4 class="fw-400">JS</h4>
-                    <table class="table table-bordered table-striped">
-                      <thead>
-                        <tr>
-                          <th scope="col">File</th>
-                          <th scope="col">Requirement</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>postboot.js</td>
-                          <td>bootstrap.js</td>
-                        </tr>
-                        <tr>
-                          <td>dropdown-hover.js</td>
-                          <td>dropdown.js</td>
-                        </tr>
-                        <tr>
-                          <td>dropdown-mega.js</td>
-                          <td>dropdown.js</td>
-                        </tr>
-                        <tr>
-                          <td>scrollspy-tree.js</td>
-                          <td>scrollspy.js</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
+            <div class="alert alert-warning spinner fs-4">
+              <div class="flex-y-center h-100"><span class="spinner-grow mr-3" role="alert"></span>
+                <div>Loading...</div>
               </div>
             </div>
-            <div class="text-center">
-              <div class="spinner spinner-grow text-primary" role="status" style="width: 200px;height: 200px;"><span class="sr-only">Loading...</span></div>
-            </div>
-            <div class="collapse collapse-content fade" style="transition: opacity .7s linear;">
+            <div class="collapse collapse-content">
               <div class="content"></div>
             </div>
           </article>
@@ -634,6 +506,8 @@ unzip postboot-1.0.0-rc4.zip</code></pre>
                       <li class="nav-item"><a class="nav-link" href="#border-width-responsive">Responsive</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#border-radius">Radius</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#breadcrumb">Breadcrumb</a>
@@ -766,6 +640,8 @@ unzip postboot-1.0.0-rc4.zip</code></pre>
                       <li class="nav-item"><a class="nav-link" href="#input-size-responsive">Responsive</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item"><a class="nav-link" href="#switch-reverse">Swtich reverse</a>
+                  </li>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#grid">Grid</a>
@@ -776,8 +652,14 @@ unzip postboot-1.0.0-rc4.zip</code></pre>
                     </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-row-size">Row size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#grid-row-size-responsive">Responsive</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-column-size">Column size</a>
+                    <ul class="d-none">
+                      <li class="nav-item"><a class="nav-link" href="#grid-column-size-wide">Wide</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item"><a class="nav-link" href="#grid-gutter-spacing">Gutter spacing</a>
                     <ul class="d-none">
@@ -793,6 +675,10 @@ unzip postboot-1.0.0-rc4.zip</code></pre>
                       <li class="nav-item"><a class="nav-link" href="#list-group-item-size">Item</a></li>
                       <li class="nav-item"><a class="nav-link" href="#list-group-size-responsive">Responsive</a></li>
                     </ul>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#list-group-horizontal-flush">Horizontal flush</a>
+                  </li>
+                  <li class="nav-item"><a class="nav-link" href="#list-group-striped">Striped</a>
                   </li>
                 </ul>
               </li>
@@ -896,20 +782,8 @@ unzip postboot-1.0.0-rc4.zip</code></pre>
                 </ul>
               </li>
               <li class="nav-item"><a class="nav-link" href="#size">Size</a>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#svg">SVG</a>
                 <ul class="d-none">
-                  <li class="nav-item"><a class="nav-link" href="#svg-fill">Fill</a>
-                    <ul class="d-none">
-                      <li class="nav-item"><a class="nav-link" href="#svg-fill-hover">Hover</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#svg-fill-hover-opacity">Hover opacity</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item"><a class="nav-link" href="#svg-stroke">Stroke</a>
-                    <ul class="d-none">
-                      <li class="nav-item"><a class="nav-link" href="#svg-stroke-hover">Hover</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#svg-stroke-hover-opacity">Hover opacity</a></li>
-                    </ul>
+                  <li class="nav-item"><a class="nav-link" href="#size-responsive">Responsive</a>
                   </li>
                 </ul>
               </li>

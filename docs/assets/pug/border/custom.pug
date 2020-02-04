@@ -4,13 +4,13 @@ block example_title
   h3.fw-400 Custom
 
 block example_result
-  each text, variant in extraColors
-    if variant != 'black' && variant != 'white'
+  each text, variant in customColors
+    if variant != 'white'
       +border_variant(text, variant)
 
 block example_code
   :encode-pug
     | <!-- Source -->
-    each text, variant in extraColors
-      if variant != 'black' && variant != 'white'
+    each text, variant in customColors
+      if variant != 'white'
         div(class='border-' + variant)

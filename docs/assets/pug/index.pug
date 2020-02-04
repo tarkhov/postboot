@@ -10,9 +10,9 @@ block sidebar
   include sidebar-left.pug
 
 block main
-  include start.pug
-  .text-center
-    .spinner.spinner-grow.text-primary(role="status" style="width: 200px;height: 200px;")
-      span.sr-only Loading...
-  .collapse.collapse-content.fade(style="transition: opacity .7s linear;")
+  .alert.alert-warning.spinner.fs-4
+    .flex-y-center.h-100
+      span.spinner-grow.mr-3(role="alert")
+      div Loading...
+  .collapse.collapse-content
     .content
