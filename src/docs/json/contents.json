@@ -550,7 +550,7 @@
       }
     }
   },
-  "list_group": {
+  "list-group": {
     "url": "list-group",
     "template": "list-group",
     "name": "List group",
