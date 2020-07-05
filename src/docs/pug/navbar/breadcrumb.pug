@@ -1,0 +1,26 @@
+extends ../example.pug
+
+block example_description
+  +example_description('navbar', 'breadcrumb')
+
+block example_result
+  nav.navbar.navbar-expand-xs.navbar-dark.bg-dark.px-0
+    .container-fluid.navbar-container
+      = "\n  "
+      a.navbar-brand.d-none.d-sm-inline-block(href="#") Brand
+      ol.breadcrumb.breadcrumb-dark.bg-transparent.px-0.navbar-breadcrumb
+        li.breadcrumb-item: a.breadcrumb-link(href='#') Home
+        li.breadcrumb-item: a.breadcrumb-link(href='#') Category
+        li.breadcrumb-item.active Article
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    nav.navbar.navbar-expand-xs.navbar-dark.bg-dark.px-0
+      .container-fluid.navbar-container
+        = "\n  "
+        a.navbar-brand.d-none.d-sm-inline-block(href="#") Navbar
+        ol.breadcrumb.breadcrumb-dark.bg-transparent.px-0.navbar-breadcrumb
+          li.breadcrumb-item: a.breadcrumb-link(href='#') Home
+          li.breadcrumb-item: a.breadcrumb-link(href='#') Category
+          li.breadcrumb-item.active Article

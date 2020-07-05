@@ -1,0 +1,32 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('sidebar', 'size')
+
+block example_result
+  .row
+    - for(var size = 1; size <= 5; size++)
+      .col-12.col-sm-6.mb-gutter(class=size >= 4 ? ['col-xl-5', 'col-md-6'] : 'col-md-4')
+        .sidebar.sidebar-dark.bg-dark.sidebar-expand(class='sidebar-' + size)
+          a.sidebar-brand(href="#") Brand
+          ul.sidebar-nav
+            - for(var i = 1; i <= 5; i++)
+              li.nav-item
+                a.nav-link(href="#")= 'Nav item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 5; size++)
+      .sidebar.sidebar-dark.bg-dark.sidebar-expand(class='sidebar-' + size)
+
+block responsive_description
+  h2.h3.fw-400 Responsive sidebar sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 5; size++)
+        .sidebar(class='sidebar-' + breakpoint + '-' + size)
+      ="\n"

@@ -1,0 +1,929 @@
+{
+  "background": {
+    "url": "background",
+    "template": "background",
+    "name": "Background",
+    "description": "Basically, the background color palette was increased and several responsive utilities were added.",
+    "examples": {
+      "custom": {
+        "url": "custom-colors",
+        "template": "custom",
+        "image": "custom.png",
+        "name": "Custom colors",
+        "description": "Increase the color palette of backgrounds."
+      },
+      "striped": {
+        "url": "striped-colors",
+        "template": "striped",
+        "image": "striped.png",
+        "name": "Striped colors",
+        "description": "Striped background colors inspired from progress bar component."
+      },
+      "opacity": {
+        "url": "opacity-colors",
+        "template": "opacity",
+        "image": "opacity.png",
+        "description": "Standard and new background colors with opacity in the range from 0.1 to 0.9.",
+        "name": "Opacity colors"
+      },
+      "state": {
+        "url": "state-colors",
+        "template": "state",
+        "image": "state.png",
+        "description": "State backgrounds inspired from Bootstrap alerts and can be used to identify block state.",
+        "name": "State colors"
+      },
+      "hover": {
+        "url": "hover-colors",
+        "template": "hover",
+        "image": "hover.png",
+        "description": "Change background colors only by hover or focusing on element.",
+        "name": "Hover colors"
+      },
+      "hover_opacity": {
+        "url": "opacity-hover-colors",
+        "template": "hover-opacity",
+        "image": "hover-opacity.png",
+        "description": "Background hover colors with opacity in the range from 0.1 to 0.9.",
+        "name": "Opacity hover colors"
+      },
+      "contain": {
+        "url": "contain-size",
+        "template": "contain",
+        "image": "contain.png",
+        "description": "This utility implements background-size: contain css style which can change size of background image to scale the width and height in an element.",
+        "name": "Contain size"
+      },
+      "cover": {
+        "url": "image-full-width",
+        "template": "cover",
+        "image": "cover.png",
+        "description": "Mostly used for creating full width hero headers with background image and implements background-size: cover css style.",
+        "name": "Image full width"
+      }
+    }
+  },
+  "badge": {
+    "url": "badge",
+    "template": "badge",
+    "name": "Badge",
+    "description": "More colors and shape of the badges.",
+    "examples": {
+      "custom": {
+        "url": "custom-colors",
+        "template": "custom",
+        "image": "custom.png",
+        "description": "Additional badge colors that exist but not used.",
+        "name": "Custom colors"
+      },
+      "opacity": {
+        "url": "opacity-colors",
+        "template": "opacity",
+        "image": "opacity.png",
+        "description": "Badge opacity colors in the range from 0.1 to 0.9.",
+        "name": "Opacity colors"
+      }
+    }
+  },
+  "border": {
+    "url": "border",
+    "template": "border",
+    "name": "Border",
+    "description": "More border styles, sizes, increased color palette and responsive styles.",
+    "examples": {
+      "custom": {
+        "url": "custom-colors",
+        "template": "custom",
+        "image": "custom.png",
+        "description": "New border colors not used by default.",
+        "name": "Custom colors"
+      },
+      "hover": {
+        "url": "hover-colors",
+        "template": "hover",
+        "image": "hover.png",
+        "description": "All border colors by hover and focus on element.",
+        "name": "Hover colors "
+      },
+      "opacity": {
+        "url": "opacity-colors",
+        "template": "opacity",
+        "image": "opacity.png",
+        "description": "Default and custom border colors with opacity in the range from 0.1 to 0.9.",
+        "name": "Opacity colors"
+      },
+      "hover_opacity": {
+        "url": "opacity-hover-colors",
+        "template": "hover-opacity",
+        "image": "hover-opacity.png",
+        "description": "Border colors with opacity by hover or focus on element in the range from 0.1 to 0.9.",
+        "name": "Opacity hover colors"
+      },
+      "responsive": {
+        "url": "responsive",
+        "template": "responsive",
+        "image": "responsive.png",
+        "description": "Responsive border visibility to all directions.",
+        "name": "Responsive"
+      },
+      "style": {
+        "url": "styles",
+        "template": "style",
+        "image": "style.png",
+        "description": "Change border style with useful classes.",
+        "name": "Styles"
+      },
+      "width": {
+        "url": "widths",
+        "template": "width",
+        "image": "width.png",
+        "description": "Customize border width easily.",
+        "title": "Border widths",
+        "name": "Widths"
+      },
+      "rounded_pill": {
+        "url": "rounded-pill-positions",
+        "template": "rounded-pill",
+        "image": "rounded-pill.png",
+        "description": "Add ellipsis border radius with specific direction.",
+        "name": "Rounded pill positions"
+      },
+      "rounded_0": {
+        "url": "rounded-0-positions",
+        "template": "rounded-0",
+        "image": "rounded-0.png",
+        "description": "Remove border radius with specific direction.",
+        "name": "Rounded 0 positions"
+      }
+    }
+  },
+  "breadcrumb": {
+    "url": "breadcrumb",
+    "template": "breadcrumb",
+    "name": "Breadcrumb",
+    "description": "Do not limit yourself to just standard breadcrumbs and get the opportunity to use breadcrumbs with other components.",
+    "examples": {
+      "color": {
+        "url": "styles",
+        "template": "color",
+        "image": "color.png",
+        "description": "Change breadcrumb background color, link and divider color, inspired by navbar component.",
+        "name": "Styles"
+      },
+      "pill": {
+        "url": "pill",
+        "template": "pill",
+        "image": "pill.png",
+        "description": "Recommended to use breadcrumb pill style instead of rounded-pill utility for a better view.",
+        "name": "Pill"
+      },
+      "arrow": {
+        "url": "arrow-dividers",
+        "template": "arrow",
+        "image": "arrow.png",
+        "description": "Replace predefined separator of breadcrumb just by arrows.",
+        "name": "Arrow dividers"
+      },
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Responsive breadcrumb sizes for different devices.",
+        "title": "Breadcrumb sizes",
+        "name": "Sizes"
+      }
+    }
+  },
+  "button": {
+    "url": "button",
+    "template": "button",
+    "name": "Button",
+    "description": "Responsive button sizes, custom colors and shapes can make buttons special and recognizable.",
+    "examples": {
+      "custom": {
+        "url": "custom-colors",
+        "template": "custom",
+        "image": "custom.png",
+        "description": "More contextual button colors diversify their place of application.",
+        "name": "Custom colors"
+      },
+      "outline": {
+        "url": "custom-outline-colors",
+        "template": "outline",
+        "image": "outline.png",
+        "description": "Modern outline buttons implementation with more range of colors.",
+        "name": "Custom outline colors"
+      },
+      "hover": {
+        "url": "hover-colors",
+        "template": "hover",
+        "image": "hover.png",
+        "description": "Change button color on hover just with add custom class.",
+        "name": "Hover colors"
+      },
+      "active": {
+        "url": "active-colors",
+        "template": "active",
+        "image": "active.png",
+        "description": "Make any button variant active style.",
+        "name": "Active colors"
+      },
+      "3d": {
+        "url": "3d",
+        "template": "3d",
+        "image": "3d.png",
+        "description": "3D buttons inspired by Lumen Bootswatch template.",
+        "name": "3D"
+      },
+      "opacity": {
+        "url": "opacity-colors",
+        "template": "opacity",
+        "image": "opacity.png",
+        "description": "Transparent buttons with opacity in the range from 0.1 to 0.9.",
+        "name": "Opacity colors"
+      },
+      "state": {
+        "url": "state-colors",
+        "template": "state",
+        "image": "state.png",
+        "description": "State buttons inspired by alert component colors and can add additional contextual sense.",
+        "name": "State colors"
+      },
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Standard buttons can change only 3 sizes without responsive behavior, with this component you can do it now.",
+        "title": "Button sizes",
+        "name": "Sizes"
+      },
+      "circle": {
+        "url": "circle",
+        "template": "circle",
+        "image": "circle.png",
+        "description": "Circle buttons inspired by material design buttons.",
+        "name": "Circle"
+      },
+      "pill": {
+        "url": "pill",
+        "template": "pill",
+        "image": "pill.png",
+        "description": "Pill buttons better than rounded-pill utility, because they can work with button groups.",
+        "name": "Pill"
+      },
+      "block_responsive": {
+        "url": "responsive-block",
+        "template": "block-responsive",
+        "image": "responsive-block.png",
+        "description": "Control block buttons on different devices.",
+        "name": "Responsive block"
+      }
+    }
+  },
+  "card": {
+    "url": "card",
+    "template": "card",
+    "name": "Card",
+    "description": "Additional card components directions, card sizing and lot more.",
+    "examples": {
+      "footer_pills": {
+        "url": "footer-pills",
+        "template": "footer-pills",
+        "image": "footer-pills.png",
+        "description": "Standard card nav pill work only with header, now it can be done with footer.",
+        "name": "Footer pills"
+      },
+      "footer_tabs": {
+        "url": "footer-tabs",
+        "template": "footer-tabs",
+        "image": "footer-tabs.png",
+        "description": "Add nav tabs to card footer easily.",
+        "name": "Footer tabs"
+      },
+      "image_left": {
+        "url": "image-left",
+        "template": "image-left",
+        "image": "image-left.png",
+        "description": "Align the image to the left of the card body.",
+        "title": "Card image left",
+        "name": "Image left"
+      },
+      "image_right": {
+        "url": "image-right",
+        "template": "image-right",
+        "image": "image-right.png",
+        "description": "Align the image to the right of the card body.",
+        "title": "Card image right",
+        "name": "Image right"
+      },
+      "pill": {
+        "url": "pill",
+        "template": "pill",
+        "image": "pill.png",
+        "description": "Ellipsis card border radius.",
+        "name": "Pill"
+      },
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Responsive card and card components size is possible to change now.",
+        "title": "Card sizes",
+        "name": "Sizes"
+      }
+    }
+  },
+  "collapse": {
+    "url": "collapse",
+    "template": "collapse",
+    "name": "Collapse",
+    "description": "Look at hidden possibilities of collapse component.",
+    "examples": {
+      "horizontal": {
+        "url": "horizontal",
+        "template": "horizontal",
+        "image": "horizontal.png",
+        "description": "Standard collapse component can hide and show elements not only vertical, but horizontal.",
+        "name": "Horizontal"
+      }
+    }
+  },
+  "dropdown": {
+    "url": "dropdown",
+    "template": "dropdown",
+    "name": "Dropdown",
+    "description": "Your dropdown menu may be more flexible and convenient than you can imagine.",
+    "examples": {
+      "arrow": {
+        "url": "arrows",
+        "template": "arrow",
+        "image": "arrow.png",
+        "description": "Add arrows to any dropdown menu.",
+        "name": "Arrows"
+      },
+      "disable_caret": {
+        "url": "disable-caret",
+        "template": "disable-caret",
+        "image": "disable-caret.png",
+        "description": "Sometimes is needed to change standard dropdown caret icon and no easy way to do it up to this point.",
+        "name": "Disable caret"
+      },
+      "hover": {
+        "url": "hover",
+        "template": "hover",
+        "image": "hover.png",
+        "description": "Dropdown on hover has been deleted from a while ago in favor of mobile devices, but we returned this opportunity.",
+        "title": "Dropdown hover",
+        "name": "Hover"
+      },
+      "mega_menu": {
+        "url": "mega-menu",
+        "template": "mega-menu",
+        "image": "mega-menu.png",
+        "description": "Mega menu is very popular for magazines web apps as a showcase of products and categories.",
+        "name": "Mega menu"
+      },
+      "menu_size": {
+        "url": "menu-sizes",
+        "template": "menu-size",
+        "image": "menu-size.png",
+        "description": "Change dropdown menu size on all devices by adding additional classes.",
+        "title": "Dropdown menu sizes",
+        "name": "Menu sizes"
+      },
+      "scrollable_menu": {
+        "url": "scrollable-menu",
+        "template": "scrollable-menu",
+        "image": "scrollable-menu.png",
+        "description": "Sometimes dropdown menu is too long and very useful to limit number of items.",
+        "name": "Scrollable menu"
+      }
+    }
+  },
+  "flex": {
+    "url": "flex",
+    "template": "flex",
+    "name": "Flex",
+    "description": "More complex flex utilities and simpler class names.",
+    "examples": {
+      "align": {
+        "url": "align",
+        "template": "align",
+        "image": "align.png",
+        "description": "Magic combination of display: flex, justify-content and align-items in simple classes.",
+        "title": "Flex align",
+        "name": "Align"
+      },
+      "align_content": {
+        "url": "align-content",
+        "template": "align-content",
+        "image": "align-content.png",
+        "description": "Align multiple flex elements using short classes.",
+        "title": "Flex align content",
+        "name": "Align content"
+      }
+    }
+  },
+  "font": {
+    "url": "font",
+    "template": "font",
+    "name": "Font",
+    "description": "Now you can manage the style of your font on different devices with minimal effort, enjoy the development.",
+    "examples": {
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Manage font sizes on multiple devices.",
+        "title": "Font sizes",
+        "name": "Sizes"
+      },
+      "weight": {
+        "url": "weights",
+        "template": "weight",
+        "image": "weight.png",
+        "description": "Set the font weight for specific device.",
+        "title": "Font weights",
+        "name": "Weights"
+      }
+    }
+  },
+  "form": {
+    "url": "form",
+    "template": "form",
+    "name": "Form",
+    "description": "Your form may take on an unusual style and be used with more components than before.",
+    "examples": {
+      "input_dark": {
+        "url": "input-dark",
+        "template": "input-dark",
+        "image": "input-dark.png",
+        "description": "Add modern dark input to your forms.",
+        "name": "Input dark "
+      },
+      "input_material": {
+        "url": "input-material",
+        "template": "input-material",
+        "image": "input-material.png",
+        "description": "Inspired by google material design forms.",
+        "name": "Input material"
+      },
+      "input_color": {
+        "url": "input-colors",
+        "template": "input-color",
+        "image": "input-color.png",
+        "description": "Additional form input colors by changing the class.",
+        "name": "Input colors"
+      },
+      "input_opacity": {
+        "url": "input-opacity-colors",
+        "template": "input-opacity",
+        "image": "input-opacity.png",
+        "description": "Input color classes with opacity in the range from 0.1 to 0.9.",
+        "name": "Input opacity colors"
+      },
+      "input_size": {
+        "url": "input-sizes",
+        "template": "input-size",
+        "image": "input-size.png",
+        "description": "Form input sizes replaced by number start with 1 and text sizes like sm, md, lg replaced by responsive breakpoints.",
+        "name": "Input sizes"
+      },
+      "switch_reverse": {
+        "url": "switch-reverse",
+        "template": "switch-reverse",
+        "image": "switch-reverse.png",
+        "description": "Modify default switch position by adding simple class.",
+        "name": "Switch reverse"
+      }
+    }
+  },
+  "grid": {
+    "url": "grid",
+    "template": "grid",
+    "name": "Grid",
+    "description": "Why confine yourself to small screens and standard sizes of columns, rows and containers, you deserve more.",
+    "examples": {
+      "wide_container_responsive": {
+        "url": "wide-responsive-containers",
+        "template": "wide-container-responsive",
+        "image": "wide-container-responsive.png",
+        "description": "Responsive container sizes for wide screens.",
+        "name": "Wide responsive containers"
+      },
+      "column_5": {
+        "url": "5-columns",
+        "template": "column-5",
+        "image": "column-5.png",
+        "description": "5 columns grid is possible now.",
+        "name": "5 columns"
+      },
+      "container_size": {
+        "url": "container-sizes",
+        "template": "container-size",
+        "image": "container-size.png",
+        "description": "Modify container size for specific device.",
+        "name": "Container sizes"
+      },
+      "row_size": {
+        "url": "row-sizes",
+        "template": "row-size",
+        "image": "row-size.png",
+        "description": "Manage margin between columns by row sizes.",
+        "title": "Grid row sizes",
+        "name": "Row sizes"
+      },
+      "column_size_wide": {
+        "url": "wide-column-sizes",
+        "template": "column-size-wide",
+        "image": "column-size-wide.png",
+        "description": "More and more people has large screen sizes and your web app must be prepared for this.",
+        "name": "Wide column sizes"
+      },
+      "gutter_spacing": {
+        "url": "gutter-spacing",
+        "template": "gutter-spacing",
+        "image": "gutter-spacing.png",
+        "description": "Add grid padding and margin utilities matching to grid columns padding.",
+        "title": "Grid gutter spacing",
+        "name": "Gutter spacing"
+      }
+    }
+  },
+  "list_group": {
+    "url": "list-group",
+    "template": "list-group",
+    "name": "List group",
+    "description": "Responsive list group modifications.",
+    "examples": {
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Change list group items padding, font size and border radius by adding class.",
+        "name": "Sizes"
+      },
+      "item_size": {
+        "url": "item-sizes",
+        "template": "item-size",
+        "image": "item-size.png",
+        "description": "Modify specific list group item padding, border radius, font size by adding class.",
+        "name": "Item sizes"
+      },
+      "horizontal_flush": {
+        "url": "horizontal-flush",
+        "template": "horizontal-flush",
+        "image": "horizontal-flush.png",
+        "description": "Horizontal list group without top and bottom borders.",
+        "name": "Horizontal flush"
+      },
+      "striped": {
+        "url": "striped",
+        "template": "striped",
+        "image": "striped.png",
+        "description": "Striped list group item colors inspired by table striped component.",
+        "name": "Striped"
+      }
+    }
+  },
+  "nav": {
+    "url": "nav",
+    "template": "nav",
+    "name": "Nav",
+    "description": "Responsive nav sizes, tabs directions, material design like nav and nav tree.",
+    "examples": {
+      "active": {
+        "url": "active-link",
+        "template": "active",
+        "image": "active.png",
+        "description": "Add active nav link color.",
+        "name": "Active link"
+      },
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Change nav size by adding class.",
+        "name": "Sizes"
+      },
+      "tabs_left": {
+        "url": "tabs-left",
+        "template": "tabs-left",
+        "image": "tabs-left.png",
+        "description": "Responsive left nav tabs.",
+        "name": "Tabs left"
+      },
+      "tabs_right": {
+        "url": "tabs-right",
+        "template": "tabs-right",
+        "image": "tabs-right.png",
+        "description": "Responsive right nav tabs.",
+        "name": "Tabs right"
+      },
+      "tabs_bottom": {
+        "url": "tabs-bottom",
+        "template": "tabs-bottom",
+        "image": "tabs-bottom.png",
+        "description": "Responsive bottom nav tabs.",
+        "name": "Tabs bottom"
+      },
+      "tabs_material": {
+        "url": "tabs-material",
+        "template": "tabs-material",
+        "image": "tabs-material.png",
+        "description": "Material design navs.",
+        "name": "Tabs material"
+      },
+      "tree": {
+        "url": "tree",
+        "template": "tree",
+        "image": "tree.png",
+        "description": "Nav with tree structure.",
+        "name": "Tree"
+      }
+    }
+  },
+  "navbar": {
+    "url": "navbar",
+    "template": "navbar",
+    "name": "Navbar",
+    "description": "See what you can do with your navbar using the new classes for different needs.",
+    "examples": {
+      "breadcrumb": {
+        "url": "breadcrumbs",
+        "template": "breadcrumb",
+        "image": "breadcrumb.png",
+        "description": "Use breadcrumbs with navbars.",
+        "name": "Breadcrumbs"
+      },
+      "container": {
+        "url": "container",
+        "template": "container",
+        "image": "container.png",
+        "description": "Fix navbar horizontal padding.",
+        "name": "Container"
+      },
+      "dropdown_menu": {
+        "url": "dropdown-menu",
+        "template": "dropdown-menu",
+        "image": "dropdown-menu.png",
+        "description": "Fix navbar dropdown menu margin.",
+        "name": "Dropdown menu"
+      },
+      "expand_xs": {
+        "url": "expand-on-mobile",
+        "template": "expand-xs",
+        "image": "expand-xs.png",
+        "description": "This nav expands on all devices, even smartphones.",
+        "name": "Expand on mobile"
+      },
+      "nav_align_left": {
+        "url": "nav-align-left",
+        "template": "nav-align-left",
+        "image": "nav-align-left.png",
+        "description": "Align nav to the left of navbar.",
+        "name": "Nav align left"
+      },
+      "nav_align_right": {
+        "url": "nav-align-right",
+        "template": "nav-align-right",
+        "image": "nav-align-right.png",
+        "description": "Align nav to the left of navbar.",
+        "name": "Nav align right"
+      },
+      "nav_size": {
+        "url": "nav-sizes",
+        "template": "nav-size",
+        "image": "nav-size.png",
+        "description": "Change nav size by adding class for different devices.",
+        "name": "Nav sizes"
+      },
+      "scroller": {
+        "url": "scrollable",
+        "template": "scroller",
+        "image": "scroller.png",
+        "description": "Scrollable navbar nav.",
+        "name": "Scrollable"
+      },
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Change navbar height, font size, brand size and other components by adding class.",
+        "name": "Sizes"
+      },
+      "padding_vertical": {
+        "url": "fixed-body-padding",
+        "template": "padding-vertical",
+        "image": "fixed-body-padding.png",
+        "description": "Add body top and bottom padding by adding class.",
+        "name": "Fixed body padding"
+      },
+      "tribar": {
+        "url": "toggler-triple-bar",
+        "template": "tribar",
+        "image": "tribar.png",
+        "description": "Modern navbar toggler icon with animation and without image.",
+        "name": "Toggler triple bar"
+      }
+    }
+  },
+  "pagination": {
+    "url": "pagination",
+    "template": "pagination",
+    "name": "Pagination",
+    "description": "More diverse pagination is now without much effort and development.",
+    "examples": {
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Change pagination size by adding class on different devices.",
+        "name": "Sizes"
+      }
+    }
+  },
+  "position": {
+    "url": "position",
+    "template": "position",
+    "name": "Position",
+    "description": "Change of position has never been so easy and quick.",
+    "examples": {
+      "spacing": {
+        "url": "sizes",
+        "template": "spacing",
+        "image": "sizes.png",
+        "description": "Set absolute and fixed position value.",
+        "name": "Sizes"
+      }
+    }
+  },
+  "progress": {
+    "url": "progress",
+    "template": "progress",
+    "name": "Progress",
+    "description": "You have now ability to change progress size or orientation, this gives you more freedom and predefined classes.",
+    "examples": {
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Responsive progress bar height, padding and font size.",
+        "name": "Sizes"
+      }
+    }
+  },
+  "scrollspy": {
+    "url": "scrollspy",
+    "template": "scrollspy",
+    "name": "ScrollSpy",
+    "description": "Discover all the power of scrollspy and get smart scrolling now.",
+    "examples": {
+      "tree": {
+        "url": "tree",
+        "template": "tree",
+        "image": "tree.png",
+        "description": "Show nested nav elements using scrollspy tree.",
+        "name": "Tree"
+      }
+    }
+  },
+  "sidebar": {
+    "url": "sidebar",
+    "template": "sidebar",
+    "name": "Sidebar",
+    "description": "A completely new component in the best traditions of Bootstrap taking inspiration from the navbar component.",
+    "examples": {
+      "color": {
+        "url": "colors",
+        "template": "color",
+        "image": "color.png",
+        "description": "Change sidebar color by adding class very similar to navbar.",
+        "name": "Colors"
+      },
+      "expand": {
+        "url": "responsive-visibility",
+        "template": "expand",
+        "image": "responsive-visibility.png",
+        "description": "Control sidebar text visibility on multiple devices.",
+        "name": "Responsive visibility"
+      },
+      "modal": {
+        "url": "modal",
+        "template": "modal",
+        "image": "modal.png",
+        "description": "Show sidebar on dark background.",
+        "name": "Modal"
+      },
+      "size": {
+        "url": "sizes",
+        "template": "size",
+        "image": "size.png",
+        "description": "Change sidebar size on different devices by adding class.",
+        "name": "Sizes"
+      },
+      "nav_size": {
+        "url": "nav-sizes",
+        "template": "nav-size",
+        "image": "nav-size.png",
+        "description": "Control specified sidebar nav sizes on any device.",
+        "name": "Nav sizes"
+      }
+    }
+  },
+  "size": {
+    "url": "size",
+    "template": "size",
+    "name": "Size",
+    "description": "Useful utilities for adjusting the width and height of blocks and components.",
+    "examples": {
+      "full": {
+        "url": "full-width-and-height",
+        "template": "full",
+        "image": "full-width-and-height.png",
+        "description": "Change width and height of element by adding simple class.",
+        "name": "Full width and height"
+      }
+    }
+  },
+  "text": {
+    "url": "text",
+    "template": "text",
+    "name": "Text",
+    "description": "Text utilities received new color schemes and various color modifications.",
+    "examples": {
+      "custom": {
+        "url": "custom-colors",
+        "template": "custom",
+        "image": "custom.png",
+        "description": "Additional text colors from extended color palette.",
+        "name": "Custom colors"
+      },
+      "opacity": {
+        "url": "opacity-colors",
+        "template": "opacity",
+        "image": "opacity.png",
+        "description": "Text colors with opacity in the range from 0.1 to 0.9.",
+        "name": "Opacity colors "
+      },
+      "hover": {
+        "url": "hover-colors",
+        "template": "hover",
+        "image": "hover.png",
+        "description": "Change text color on hover or focus.",
+        "name": "Hover colors"
+      },
+      "hover_opacity": {
+        "url": "opacity-hover-colors",
+        "template": "hover-opacity",
+        "image": "hover-opacity.png",
+        "description": "Modify text color on hover or focus with opacity in the range from 0.1 to 0.9.",
+        "name": "Opacity hover colors"
+      },
+      "state": {
+        "url": "state-colors",
+        "template": "state",
+        "image": "state.png",
+        "description": "Text state colors inspired by alert component.",
+        "name": "State colors"
+      }
+    }
+  },
+  "tribar": {
+    "url": "triple-bar",
+    "template": "tribar",
+    "name": "Triple bar",
+    "description": "Modern hamburger menu with a variety of color choices and the ability to change the icon depending on the status of the menu.",
+    "examples": {
+      "tribar": {
+        "url": "icon-without-image",
+        "template": "tribar",
+        "image": "tribar.png",
+        "description": "Animated hamburger triple bar icon without image, only css.",
+        "name": "Icon without image"
+      },
+      "color": {
+        "url": "colors",
+        "template": "color",
+        "image": "color.png",
+        "description": "Custom colors for triple bar icon component.",
+        "name": "Colors"
+      }
+    }
+  },
+  "type": {
+    "url": "type",
+    "template": "type",
+    "name": "Typography",
+    "description": "Hidden responsive features of text elements.",
+    "examples": {
+      "heading_responsive": {
+        "url": "responsive-headings",
+        "template": "heading-responsive",
+        "image": "responsive-heading.png",
+        "description": "Manage heading size on different devices.",
+        "name": "Responsive headings"
+      }
+    }
+  }
+}

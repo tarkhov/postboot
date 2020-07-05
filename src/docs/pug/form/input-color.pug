@@ -1,0 +1,19 @@
+extends ../example.pug
+
+block example_description
+  +example_description('form', 'input_color')
+
+block example_result
+  .row
+    each text, variant in colors
+      if variant != 'dark' && variant != 'light' && variant != 'white'
+        .col-12.col-sm-6.col-md-3
+          .form-group
+            +input_dark(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      if variant != 'dark' && variant != 'light' && variant != 'white'
+        input.form-control.input-dark(type='text', placeholder=text class="input-" + variant)

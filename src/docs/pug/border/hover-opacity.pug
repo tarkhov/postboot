@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_description
+  +example_description('border', 'hover_opacity')
+
+block example_body
+  .card-body.bg-dark.bg-striped.text-white
+    each text, variant in colors
+      +border_hover_alpha(text, variant, 50)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      - for(var i = 1; i <= 9; i++)
+        div(class='border-hover-' + variant + '-' + i * 10)
+      = "\n"

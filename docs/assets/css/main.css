@@ -11,6 +11,13 @@ code {
 #navbar-top {
   background-color: #f4f5f9; }
 
-#sidebar-left {
-  max-height: calc(100vh - (3.5rem + (30px * 2)));
-  overflow-y: scroll; }
+.extension-image {
+  margin-bottom: 1.25rem; }
+
+.extension-name {
+  line-height: 1.3; }
+
+@media (max-width: 575.98px) {
+  .example-card-img-responsive {
+    width: 150px;
+    height: 100px; } }

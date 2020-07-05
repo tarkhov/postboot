@@ -1,0 +1,40 @@
+mixin navbar_nav(classes)
+  ul.navbar-nav(class=classes)
+    - for(var i = 1; i <= 3; i++)
+      li.nav-item: a.nav-link(href='#')= 'Item ' + i
+
+mixin responsive_navbar_nav(size, classes)
+  ul.navbar-nav(class=classes)
+    - var linkClass = ''
+    - for(var i = 1; i <= 3; i++)
+      if size <= 3 && i == 3
+        - var linkClass = ['d-none', 'd-sm-block']
+      else if size == 4 && i >= 2
+        - var linkClass = ['d-none', 'd-sm-block']
+      else if size == 5 && i >= 2
+        - var linkClass = ['d-none', 'd-md-block']
+      li.nav-item: a.nav-link(href='#' class=linkClass)= 'Nav item ' + i
+
+mixin navbar(classes)
+  nav.navbar.px-0(class=classes)
+    .container-fluid.navbar-container
+      = "\n\t"
+      a.navbar-brand(href="#") Brand
+      .collapse.navbar-collapse
+        +navbar_nav()
+
+mixin navbar_nav_size(size)
+  nav.navbar.navbar-expand-xs.navbar-dark.bg-dark.mb-3.px-0
+    .container-fluid.navbar-container
+      = "\n\t"
+      a.navbar-brand(href="#") Brand
+      .collapse.navbar-collapse
+        +responsive_navbar_nav(size, 'navbar-nav-' + size)
+
+mixin navbar_size(size)
+  nav.navbar.navbar-expand-xs.navbar-dark.bg-dark.mb-3.px-0(class='navbar-' + size)
+    .container-fluid.navbar-container
+      = "\n\t"
+      a.navbar-brand(href="#") Brand
+      .collapse.navbar-collapse
+        +responsive_navbar_nav(size)

@@ -1,0 +1,35 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('grid', 'container_size')
+
+block example_body
+  table.table.table-bordered.table-striped.card-table.mb-0
+    thead
+      tr
+        th Class
+        th Size 
+        th Device width
+    tbody
+      each container, width in [{'size': '540px', 'breakpoint': '≥576px'}, {'size': '720px', 'breakpoint': '≥768px'}, {'size': '960px', 'breakpoint': '≥992px'}, {'size': '1140px', 'breakpoint': '≥1200px'}, {'size': '1570px', 'breakpoint': '≥1600px'}]
+        tr
+          td #[code.fs-2= '.container-' + (width + 1)]
+          td= container.size
+          td= container.breakpoint
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var i = 1; i <= 5; i++)
+      .container(class='container-' + i)
+
+block responsive_description
+  h2.h3.fw-400 Responsive container sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    .container-md-2
+    .container-lg-3
+    .container-xl-4
+    .container-xxl-5

@@ -1,0 +1,27 @@
+extends ../example.pug
+
+block example_description
+  +example_description('collapse', 'horizontal')
+
+block example_result
+  a.btn.btn-primary.mb-3(href="#example-collapse-horizontal" data-toggle="collapse") Collapse
+  .collapse.collapse-horizontal.width#example-collapse-horizontal
+    .sidebar.sidebar-dark.bg-dark.sidebar-expand(style="width: 300px;")
+      a.sidebar-brand(href="#") Sidebar
+      ul.sidebar-nav
+        - for(var i = 1; i <= 5; i++)
+          li.nav-item
+            a.nav-link(href="#")= 'Nav item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    = "\n"
+    a.btn.btn-primary.mb-3(href="#example-collapse-horizontal" data-toggle="collapse") Collapse
+    .collapse.collapse-horizontal.width#example-collapse-horizontal
+      .sidebar.sidebar-dark.bg-dark.sidebar-expand(style="width: 300px;")
+        a.sidebar-brand(href="#") Sidebar
+        ul.sidebar-nav
+          - for(var i = 1; i <= 5; i++)
+            li.nav-item
+              a.nav-link(href="#")= 'Nav item ' + i

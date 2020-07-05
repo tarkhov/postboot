@@ -1,4 +1,0 @@
-// Opacity
-@mixin text-opacity-variant($variant, $color, $alpha) {
-  @include text-emphasis-variant($variant, rgba($color, $alpha));
-}

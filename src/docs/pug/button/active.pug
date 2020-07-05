@@ -1,0 +1,20 @@
+extends ../example.pug
+
+block example_description
+  +example_description('button', 'active')
+
+block example_result
+  .btn-group
+    button.btn.btn-secondary.btn-active-primary.active(type='button') Active
+    button.btn.btn-secondary(type='button') Secondary
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .btn-group
+      button.btn.btn-secondary.btn-active-primary.active(type='button') Active
+      button.btn.btn-secondary(type='button') Secondary
+    ="\n\n"
+    | <!-- All colors -->
+    each text, variant in colors
+      button.btn.btn-secondary.active(type='button' class='btn-active-' + variant)= text

@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_description
+  +example_description('breadcrumb', 'pill')
+
+block example_result
+  +breadcrumb_variant('pill')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ol.breadcrumb.breadcrumb-pill

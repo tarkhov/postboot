@@ -1,0 +1,20 @@
+extends ../example.pug
+
+block example_description
+  +example_description('button', 'outline')
+
+block example_body
+  .card-body
+    +button_outline('Link', 'link')
+    each text, variant in customColors
+      if variant != 'white'
+        +button_outline(text, variant)
+  .card-body.bg-dark.bg-striped
+    +button_outline('White', 'white')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    button.btn.btn-outline-link(type='button') Link
+    each text, variant in customColors
+      button.btn(type='button' class='btn-outline-' + variant)= text

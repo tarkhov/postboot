@@ -1,0 +1,36 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('list_group', 'item_size')
+
+block example_result
+  .row
+    .col-md-4
+      .list-group
+        +list_group_item_variant('Extra large', '5')
+        +list_group_item('Large', ['list-group-item-4', 'list-group-item-x-5'])
+        +list_group_item_variant('Medium', 'x-5')
+        +list_group_item('Small', ['list-group-item-2', 'list-group-item-x-5'])
+        +list_group_item('Extra small', ['list-group-item-1', 'list-group-item-x-5'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 5; size++)
+      div(class='list-group-item-' + size)
+      div(class='list-group-item-x-' + size)
+      div(class='list-group-item-y-' + size)
+      ="\n"
+
+block responsive_description
+  h2.h3.fw-400 Responsive list group item sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 5; size++)
+        div(class='list-group-item-' + breakpoint + '-' + size)
+        each coordinate in ['x', 'y']
+          div(class='list-group-item-' + coordinate + '-' + breakpoint + '-' + size)
+        ="\n"

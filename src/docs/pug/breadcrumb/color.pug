@@ -1,0 +1,21 @@
+extends ../example.pug
+
+block example_description
+  +example_description('breadcrumb', 'color')
+
+block example_result
+  +breadcrumb(["breadcrumb-dark", "bg-primary"])
+  +breadcrumb(["breadcrumb-light", "bg-light"])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ol.breadcrumb.breadcrumb-dark.bg-primary
+      li.breadcrumb-item: a.breadcrumb-link(href='#') Home
+      li.breadcrumb-item: a.breadcrumb-link(href='#') Category
+      li.breadcrumb-item.active Article
+    = "\n"
+    ol.breadcrumb.breadcrumb-light.bg-light
+      li.breadcrumb-item: a.breadcrumb-link(href='#') Home
+      li.breadcrumb-item: a.breadcrumb-link(href='#') Category
+      li.breadcrumb-item.active Article

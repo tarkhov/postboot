@@ -1,0 +1,13 @@
+extends ../example.pug
+
+block example_description
+  +example_description('navbar', 'container')
+
+block example_result
+  +navbar(['navbar-expand-xs', 'navbar-dark', 'bg-dark'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .navbar.px-0
+      .container.navbar-container

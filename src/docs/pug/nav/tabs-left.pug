@@ -1,0 +1,23 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('nav', 'tabs_left')
+
+block example_result
+  .row
+    .col-md-4
+      +nav(['nav-tabs', 'nav-tabs-left'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ul.nav.nav-tabs.nav-tabs-left
+
+block responsive_description
+  h2.h3.fw-400 Responsive tabs left
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      ul.nav.nav-tabs(class='nav-tabs-' + breakpoint + '-left')

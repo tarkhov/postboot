@@ -34,6 +34,19 @@ module.exports = function (grunt) {
 
   var pkg = grunt.file.readJSON('package.json');
 
+  var templates = {
+    'docs/index.html': 'src/docs/pug/index.pug'
+  };
+  var contents = grunt.file.readJSON('./src/docs/json/contents.json');
+  for (var c in contents) {
+    var component = contents[c];
+    templates['docs/' + component.url + '/index.html'] = 'src/docs/pug/' + component.template + '.pug';
+    for (var e in component.examples) {
+      var article = contents[c].examples[e];
+      templates['docs/' + component.url + '/' + article.url + '/index.html'] = 'src/docs/pug/' + component.template + '/' + article.template + '.pug';
+    }
+  }
+
   require('load-grunt-tasks')(grunt);
 
   // Project configuration.
@@ -64,7 +77,6 @@ module.exports = function (grunt) {
           'node_modules/prismjs/prism.js',
           'node_modules/@fortawesome/fontawesome-free/js/all.min.js',
           'dist/js/<%= pkg.name %>.min.js',
-          'docs/assets/js/main.js'
         ],
         dest: 'docs/assets/js/app.js'
       }
@@ -99,7 +111,7 @@ module.exports = function (grunt) {
       },
       docs: {	
         files: {	
-          'docs/assets/css/main.css': 'docs/assets/scss/main.scss'	
+          'docs/assets/css/main.css': 'src/docs/scss/main.scss'	
         }
       }
     },
@@ -161,7 +173,7 @@ module.exports = function (grunt) {
             extraColors: customColors,
             customColors: customColors,
             pkg: pkg,
-            contents: require('./docs/assets/json/contents.json'),
+            contents: contents,
             title: title,
             url: url,
             username: 'tarkhov'
@@ -178,12 +190,7 @@ module.exports = function (grunt) {
         }
       },
       docs: {
-        files: {
-          'docs/index.html': 'docs/assets/pug/index.pug',
-          'docs/content.html': 'docs/assets/pug/main.pug',
-          'docs/v1/index.html': 'docs/assets/pug/index.pug',
-          'docs/v1/content.html': 'docs/assets/pug/main.pug'
-        }
+        files: templates
       }
     },
 
@@ -197,11 +204,11 @@ module.exports = function (grunt) {
         tasks: 'dist-css'
       },
       docs_css: {
-        files: 'docs/assets/scss/*.scss',
+        files: 'src/docs/scss/*.scss',
         tasks: 'docs-css'
       },
       docs_html: {
-        files: 'docs/assets/pug/*.pug',
+        files: 'src/docs/pug/*.pug',
         tasks: 'docs-html'
       }
     },

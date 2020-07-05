@@ -1,0 +1,26 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('form', 'input_size')
+
+block example_result
+  - for(var size = 1; size <= 5; size++)
+    .mb-3
+      +input_variant(size, size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 5; size++)
+      input.form-control(type='text', placeholder=size class='input-' + size)
+
+block responsive_description
+  h2.h3.fw-400 Responsive input sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 5; size++)
+        input.form-control(type='text', placeholder=size class='input-' + breakpoint + '-' + size)
+      ="\n"

@@ -1,0 +1,26 @@
+extends ../example.pug
+
+block example_description
+  +example_description('grid', 'column_size_wide')
+
+block example_body
+  table.table.table-bordered.table-striped.card-table.mb-0
+    thead
+      tr
+        th Class
+        th Device width
+        th Standard
+    tbody
+      each column in [{'size': 'xxl', 'width': '≥1600px', 'standard': ''}, {'size': '3xl', 'width': '≥1920px', 'standard': '2K'}, {'size': '4xl', 'width': '≥3840px', 'standard': '4K'}, {'size': '5xl', 'width': '≥5120px', 'standard': '5K'}, {'size': '6xl', 'width': '≥7680px', 'standard': '8K'}]
+        tr
+          td #[code.fs-2= '.col-' + column.size + '-']
+          td= column.width
+          td= column.standard
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['xxl', '3xl', '4xl', '5xl', '6xl']
+      - for(var size = 1; size <= 12; size++)
+        div(class='col-' + breakpoint + '-' + size)
+      ="\n"

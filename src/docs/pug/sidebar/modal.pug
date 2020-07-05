@@ -1,0 +1,50 @@
+extends ../example.pug
+
+block example_description
+  +example_description('sidebar', 'modal')
+
+block example_result
+  .flex-between
+    a.btn.btn-primary(href="#" data-toggle="modal" data-target="#sidebar-modal-example") Left
+    a.btn.btn-primary(href="#" data-toggle="modal" data-target="#sidebar-modal-right-example") Right
+  .sidebar-modal.fade#sidebar-modal-example
+    .sidebar-dialog.modal-dialog
+      .sidebar.sidebar-dark.bg-dark.sidebar-expand
+        a.sidebar-brand(href="#") Brand
+        ul.sidebar-nav
+          - for(var i = 1; i <= 5; i++)
+            li.nav-item
+              a.nav-link(href="#")= 'Nav item ' + i
+  .sidebar-modal.sidebar-modal-right.fade#sidebar-modal-right-example
+    .sidebar-dialog.modal-dialog
+      .sidebar.sidebar-dark.bg-dark.sidebar-expand
+        ="\n      "
+        a.sidebar-brand(href="#") Brand
+        ul.sidebar-nav
+          - for(var i = 1; i <= 5; i++)
+            li.nav-item
+              a.nav-link(href="#")= 'Nav item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .flex-between
+      a.btn.btn-primary(href="#" data-toggle="modal" data-target="#sidebar-modal-example") Left
+      a.btn.btn-primary(href="#" data-toggle="modal" data-target="#sidebar-modal-right-example") Right
+    .sidebar-modal.fade#sidebar-modal-example
+      .sidebar-dialog.modal-dialog
+        .sidebar.sidebar-dark.bg-dark.sidebar-expand
+          a.sidebar-brand(href="#") Brand
+          ul.sidebar-nav
+            - for(var i = 1; i <= 5; i++)
+              li.nav-item
+                a.nav-link(href="#")= 'Nav item ' + i
+    .sidebar-modal.sidebar-modal-right.fade#sidebar-modal-right-example
+      .sidebar-dialog.modal-dialog
+        .sidebar.sidebar-dark.bg-dark.sidebar-expand
+          ="\n      "
+          a.sidebar-brand(href="#") Brand
+          ul.sidebar-nav
+            - for(var i = 1; i <= 5; i++)
+              li.nav-item
+                a.nav-link(href="#")= 'Nav item ' + i

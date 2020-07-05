@@ -1,0 +1,32 @@
+extends ../example.pug
+
+block example_description
+  +example_description('dropdown', 'hover')
+  .alert.alert-primary This component requires #[b bootstrap.js] and #[b= pkg.name + '.js'] or just #[b dropdown.js] and #[b dropdown-hover.js].
+
+block example_result
+  +dropdown_hover()
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .btn-group.dropdown.dropdown-hover
+      button.btn.btn-secondary.dropdown-toggle(type="button" data-hover="dropdown") Hover
+      .dropdown-menu
+
+block example_after
+  h2.h3.fw-400.pt-3 Dropdown disable click event
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  .card.card-body.bg-light.mb-3
+    pre.pre-scrollable
+      code.language-javascript
+        :prismjs(language='javascript')
+          jQuery(document).ready(function ($) {
+            $(document).off('.dropdown.data-api');
+            $(document).on('show.bs.dropdown', '.dropdown-hover', function (e) {
+              var events = $._data(e.relatedTarget, 'events');
+              if (events) {
+                $(e.relatedTarget).off('click.bs.dropdown');
+              }
+            });
+          });

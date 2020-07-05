@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Alexander Tarkhov">
+    <link rel="apple-touch-icon" href="/postboot/assets/img/apple-touch-icon.png">
+    <link rel="icon" href="/postboot/assets/img/favicon.ico">
+    <link rel="manifest" href="/postboot/assets/json/manifest.json">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="/postboot/assets/css/app.min.css">
+  </head>
+  <body class="pt-navbar pb-navbar-2 pb-md-0" data-spy="scroll" data-target=".contents-nav">
+    <header class="pb-gutter" role="banner">
+      <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
+        <div class="container-fluid container-xl"><a class="navbar-brand mr-2 mr-sm-3" href="/postboot/" rel="home"><span class="rounded py-1 text-white fw-500 bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.1</sup></a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="/postboot/">v1</a></div>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-x-lg-4">
+              <li class="nav-item"><a class="nav-link" href="https://twitter.com/postbootjs" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Twitter</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://medium.com/@postboot" target="_blank" rel="nofollow"><i class="fab fa-medium"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Medium</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://t.me/postboot" target="_blank" rel="nofollow"><i class="fab fa-telegram-plane"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Telegram</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://github.com/tarkhov/postboot" target="_blank" rel="nofollow"><i class="fab fa-github-alt"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;GitHub</span></a></li>
+            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.1/postboot-1.0.1.zip" rel="nofollow">Download</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid container-xl">
+      <div class="row">
+        <div class="col-md-2">
+          <aside class="sidebar sidebar-light py-0 d-none d-md-block" role="complementary">
+            <ul class="sidebar-nav nav-x-0 nav-y-2">
+              <li class="nav-item"><a class="nav-link" href="/postboot/background/">Background</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/badge/">Badge</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/border/">Border</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/breadcrumb/">Breadcrumb</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/button/">Button</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/card/">Card</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/collapse/">Collapse</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/dropdown/">Dropdown</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/flex/">Flex</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/font/">Font</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/form/">Form</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/grid/">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/list-group/">List group</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/nav/">Nav</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/navbar/">Navbar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/pagination/">Pagination</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/position/">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/progress/">Progress</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/scrollspy/">ScrollSpy</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/sidebar/">Sidebar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/size/">Size</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/text/">Text</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/triple-bar/">Triple bar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/type/">Typography</a></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="col-md-10 col-lg-8">
+          <main role="main">
+            <article role="article">
+              <div id="description">
+                <h1 class="h2 fw-400">Border opacity hover colors</h1>
+                <p class="fs-4 mb-4">Border colors with opacity by hover or focus on element in the range from 0.1 to 0.9.</p>
+              </div>
+              <div class="card mb-3" id="example">
+                <div class="card-body bg-dark bg-striped text-white">
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-primary-50 border-primary card bg-transparent border-3">Primary</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-secondary-50 border-secondary card bg-transparent border-3">Secondary</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-success-50 border-success card bg-transparent border-3">Success</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-info-50 border-info card bg-transparent border-3">Info</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-warning-50 border-warning card bg-transparent border-3">Warning</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-danger-50 border-danger card bg-transparent border-3">Danger</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-light-50 border-light card bg-transparent border-3">Light</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-dark-50 border-dark card bg-transparent border-3">Dark</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-black-50 border-black card bg-transparent border-3">Black</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-indigo-50 border-indigo card bg-transparent border-3">Indigo</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-orange-50 border-orange card bg-transparent border-3">Orange</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-pink-50 border-pink card bg-transparent border-3">Pink</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-purple-50 border-purple card bg-transparent border-3">Purple</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-teal-50 border-teal card bg-transparent border-3">Teal</div>
+                  <div class="d-inline-block mr-1 mb-2 p-2 border-hover-white-50 border-white card bg-transparent border-3">White</div>
+                </div>
+                <div class="card-footer">
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-primary-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-secondary-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-secondary-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-success-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-success-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-info-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-info-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-warning-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-warning-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-danger-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-danger-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-light-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-light-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-dark-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-dark-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-black-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-black-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-indigo-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-indigo-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-orange-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-orange-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-pink-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-pink-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-purple-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-purple-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-teal-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-teal-90&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;border-hover-white-10&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-20&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-30&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-40&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-50&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-60&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-70&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-80&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-hover-white-90&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </article>
+          </main>
+        </div>
+        <div class="col-md-2">
+          <aside class="contents-nav sidebar sidebar-light sidebar-expand-lg py-0 position-fixed" role="complementary">
+            <ul class="sidebar-nav nav-tree nav-tabs nav-tabs-material nav-tabs-right nav-y-2 fs-2">
+              <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
+              <li class="nav-item"><a class="nav-link" href="#example">Example</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <footer class="pt-gutter d-block d-md-none" role="contentinfo">
+      <nav class="contents-nav navbar navbar-2 navbar-expand-xs navbar-light px-sm-0 fixed-bottom border-top bg-white" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-scroller">
+            <ul class="navbar-nav navbar-nav-left navbar-scroller-nav">
+              <li class="nav-item"><a class="nav-link" href="/postboot/background/">Background</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/badge/">Badge</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/border/">Border</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/breadcrumb/">Breadcrumb</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/button/">Button</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/card/">Card</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/collapse/">Collapse</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/dropdown/">Dropdown</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/flex/">Flex</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/font/">Font</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/form/">Form</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/grid/">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/list-group/">List group</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/nav/">Nav</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/navbar/">Navbar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/pagination/">Pagination</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/position/">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/progress/">Progress</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/scrollspy/">ScrollSpy</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/sidebar/">Sidebar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/size/">Size</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/text/">Text</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/triple-bar/">Triple bar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/type/">Typography</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <script src="/postboot/assets/js/app.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_description
+  +example_description('border', 'responsive')
+
+block example_result
+  .d-inline-block.border-sm.p-2 Border
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      div(class='border-' + breakpoint)
+      each position in ['top', 'right', 'bottom', 'left']
+        div(class='border-' + breakpoint + '-' + position)
+      ="\n"

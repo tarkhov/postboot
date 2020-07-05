@@ -1,0 +1,25 @@
+extends layout.pug
+
+block main
+  #description
+    block example_title
+    block example_description
+  #example.card.mb-3
+    block example_header
+    block example_body
+      .card-body
+        block example_result
+    block example_footer
+      .card-footer
+        pre.pre-scrollable
+          code.language-markup
+            block example_code
+  .clearfix
+  block example_after
+
+block sidebar_right
+  ul.sidebar-nav.nav-tree.nav-tabs.nav-tabs-material.nav-tabs-right.nav-y-2.fs-2
+    li.nav-item
+      a.nav-link(href="#description") Description
+    li.nav-item
+      a.nav-link(href="#example") Example

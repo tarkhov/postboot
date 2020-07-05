@@ -1,0 +1,30 @@
+a {
+  outline: none !important;
+}
+
+pre,
+code {
+  font-size: 100%;
+  background: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#navbar-top {
+  background-color: #f4f5f9;
+}
+
+.extension-image {
+  margin-bottom: $card-spacer-x;
+}
+
+.extension-name {
+  line-height: 1.3;
+}
+
+.example-card-img-responsive {
+  @include media-breakpoint-down(xs) {
+    width: 150px;
+    height: 100px;
+  }
+}

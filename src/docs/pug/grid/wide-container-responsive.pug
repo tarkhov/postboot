@@ -1,0 +1,25 @@
+extends ../example.pug
+
+block example_description
+  +example_description('grid', 'wide_container_responsive')
+
+block example_body
+  table.table.table-bordered.table-striped.card-table.mb-0
+    thead
+      tr
+        th Class
+        th Size 
+        th Device width
+    tbody
+      each container in [{'size': 'xxl', 'width': '1570px', 'breakpoint': '≥1600px'}]
+        tr
+          td #[code.fs-2= '.container-' + container.size]
+          td= container.width
+          td= container.breakpoint
+
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['xxl']
+      div(class='container-' + breakpoint)

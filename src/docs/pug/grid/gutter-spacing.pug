@@ -1,0 +1,107 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('grid', 'gutter_spacing')
+
+block example_result
+  .bg-state-warning.d-inline-block.border.border-warning
+    .d-flex
+      .flex-y-center
+        .fs-2.text-state-warning.px-2.px-sm-3 30px
+      div
+        .flex-x-center
+          .fs-2.text-state-warning.py-2.py-sm-3 30px
+        .bg-state-success.d-inline-block.border.border-success
+          .d-flex
+            .flex-y-center
+              .fs-2.text-state-success.px-2.px-sm-3 30px
+            div
+              .flex-x-center
+                .fs-2.text-state-success.py-2.py-sm-3 30px
+              .bg-state-primary.text-state-primary.d-inline-block.p-2.border.border-primary Element
+              .flex-x-center
+                .fs-2.text-state-success.py-2.py-sm-3 30px
+            .flex-y-center
+              .fs-2.text-state-success.px-2.px-sm-3 30px
+        .flex-x-center
+          .fs-2.text-state-warning.py-2.py-sm-3 30px
+      .flex-y-center
+        .fs-2.text-state-warning.px-2.px-sm-3 30px
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .m-gutter
+    .mx-gutter
+    .my-gutter
+    .mt-gutter
+    .mr-gutter
+    .mb-gutter
+    .ml-gutter
+    ="\n"
+    .p-gutter
+    .px-gutter
+    .py-gutter
+    .pt-gutter
+    .pr-gutter
+    .pb-gutter
+    .pl-gutter
+    ="\n"
+    - for(var size = 0; size <= 4; size++)
+      div(class='m-gutter-' + size)
+      div(class='mx-gutter-' + size)
+      div(class='my-gutter-' + size)
+      div(class='mt-gutter-' + size)
+      div(class='mr-gutter-' + size)
+      div(class='mb-gutter-' + size)
+      div(class='ml-gutter-' + size)
+      ="\n"
+      div(class='p-gutter-' + size)
+      div(class='px-gutter-' + size)
+      div(class='py-gutter-' + size)
+      div(class='pt-gutter-' + size)
+      div(class='pr-gutter-' + size)
+      div(class='pb-gutter-' + size)
+      div(class='pl-gutter-' + size)
+      ="\n"
+
+block responsive_description
+  h2.h3.fw-400 Responsive grid gutter spacing
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      div(class='m-gutter-' + breakpoint)
+      div(class='mx-gutter-' + breakpoint)
+      div(class='my-gutter-' + breakpoint)
+      div(class='mt-gutter-' + breakpoint)
+      div(class='mr-gutter-' + breakpoint)
+      div(class='mb-gutter-' + breakpoint)
+      div(class='ml-gutter-' + breakpoint)
+      ="\n"
+      div(class='p-' + breakpoint + '-gutter-' + breakpoint)
+      div(class='px-' + breakpoint + '-gutter-' + breakpoint)
+      div(class='py-' + breakpoint + '-gutter-' + breakpoint)
+      div(class='pt-' + breakpoint + '-gutter-' + breakpoint)
+      div(class='pr-' + breakpoint + '-gutter-' + breakpoint)
+      div(class='pb-' + breakpoint + '-gutter-' + breakpoint)
+      div(class='pl-gutter-' + breakpoint)
+      ="\n"
+      - for(var size = 0; size <= 4; size++)
+        div(class='m-gutter-' + breakpoint + '-' + size)
+        div(class='mx-gutter-' + breakpoint + '-' + size)
+        div(class='my-gutter-' + breakpoint + '-' + size)
+        div(class='mt-gutter-' + breakpoint + '-' + size)
+        div(class='mr-gutter-' + breakpoint + '-' + size)
+        div(class='mb-gutter-' + breakpoint + '-' + size)
+        div(class='ml-gutter-' + breakpoint + '-' + size)
+        ="\n"
+        div(class='p-gutter-' + breakpoint + '-' + size)
+        div(class='px-gutter-' + breakpoint + '-' + size)
+        div(class='py-gutter-' + breakpoint + '-' + size)
+        div(class='pt-gutter-' + breakpoint + '-' + size)
+        div(class='pr-gutter-' + breakpoint + '-' + size)
+        div(class='pb-gutter-' + breakpoint + '-' + size)
+        div(class='pl-gutter-' + breakpoint + '-' + size)
+        ="\n"

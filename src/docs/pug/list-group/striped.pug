@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_description
+  +example_description('list_group', 'striped')
+
+block example_result
+  .row
+    .col-md-4
+      +list_group_variant('striped')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .list-group.list-group-striped

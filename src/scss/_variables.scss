@@ -810,34 +810,39 @@ $sidebar-nav-link-padding-x:    $nav-link-padding-x !default;
 
 $sidebar-brand-font-size:       $font-size-lg !default;
 $sidebar-brand-padding-y:       $nav-link-padding-y !default;
+$sidebar-brand-padding-x:       $nav-link-padding-x !default;
 
 $sidebar-padding-y-xs:          ($spacer * .1) !default;
 $sidebar-font-size-xs:          $font-size-xs !default;
-$sidebar-brand-font-size-xs:    $font-size-sm !default;
-$sidebar-brand-padding-y-xs:    .1rem !default;
 $sidebar-nav-link-padding-y-xs: .1rem !default;
 $sidebar-nav-link-padding-x-xs: .25rem !default;
+$sidebar-brand-font-size-xs:    $font-size-sm !default;
+$sidebar-brand-padding-y-xs:    $sidebar-nav-link-padding-y-xs !default;
+$sidebar-brand-padding-x-xs:    $sidebar-nav-link-padding-x-xs !default;
 
 $sidebar-padding-y-sm:          ($spacer * .25) !default;
 $sidebar-font-size-sm:          $font-size-sm !default;
-$sidebar-brand-font-size-sm:    $font-size-base !default;
-$sidebar-brand-padding-y-sm:    .25rem !default;
 $sidebar-nav-link-padding-y-sm: .25rem !default;
 $sidebar-nav-link-padding-x-sm: .5rem !default;
+$sidebar-brand-font-size-sm:    $font-size-base !default;
+$sidebar-brand-padding-y-sm:    $sidebar-nav-link-padding-y-sm !default;
+$sidebar-brand-padding-x-sm:    $sidebar-nav-link-padding-x-sm !default;
 
 $sidebar-padding-y-lg:          ($spacer * .75) !default;
 $sidebar-font-size-lg:          $font-size-lg !default;
-$sidebar-brand-font-size-lg:    $font-size-xl !default;
-$sidebar-brand-padding-y-lg:    .675rem !default;
 $sidebar-nav-link-padding-y-lg: .675rem !default;
 $sidebar-nav-link-padding-x-lg: 1.5rem !default;
+$sidebar-brand-font-size-lg:    $font-size-xl !default;
+$sidebar-brand-padding-y-lg:    $sidebar-nav-link-padding-y-lg !default;
+$sidebar-brand-padding-x-lg:    $sidebar-nav-link-padding-x-lg !default;
 
 $sidebar-padding-y-xl:          $spacer !default;
 $sidebar-font-size-xl:          $font-size-xl !default;
-$sidebar-brand-font-size-xl:    $font-size-xxl !default;
-$sidebar-brand-padding-y-xl:    .75rem !default;
 $sidebar-nav-link-padding-y-xl: .75rem !default;
 $sidebar-nav-link-padding-x-xl: 2rem !default;
+$sidebar-brand-font-size-xl:    $font-size-xxl !default;
+$sidebar-brand-padding-y-xl:    $sidebar-nav-link-padding-y-xl !default;
+$sidebar-brand-padding-x-xl:    $sidebar-nav-link-padding-x-xl !default;
 
 $sidebar-toggler-padding-y:          .25rem !default;
 $sidebar-toggler-padding-x:          .75rem !default;
@@ -870,6 +875,7 @@ $sidebar-sizes: map-merge((
     'font-size': $sidebar-font-size-xs,
     'brand-font-size': $sidebar-brand-font-size-xs,
     'brand-padding-y': $sidebar-brand-padding-y-xs,
+    'brand-padding-x': $sidebar-brand-padding-x-xs,
     'link-padding-y': $sidebar-nav-link-padding-y-xs,
     'link-padding-x': $sidebar-nav-link-padding-x-xs
   ),
@@ -878,6 +884,7 @@ $sidebar-sizes: map-merge((
     'font-size': $sidebar-font-size-sm,
     'brand-font-size': $sidebar-brand-font-size-sm,
     'brand-padding-y': $sidebar-brand-padding-y-sm,
+    'brand-padding-x': $sidebar-brand-padding-x-sm,
     'link-padding-y': $sidebar-nav-link-padding-y-sm,
     'link-padding-x': $sidebar-nav-link-padding-x-sm
   ),
@@ -886,6 +893,7 @@ $sidebar-sizes: map-merge((
     'font-size': $sidebar-font-size,
     'brand-font-size': $sidebar-brand-font-size,
     'brand-padding-y': $sidebar-brand-padding-y,
+    'brand-padding-x': $sidebar-brand-padding-x,
     'link-padding-y': $sidebar-nav-link-padding-y,
     'link-padding-x': $sidebar-nav-link-padding-x
   ),
@@ -894,6 +902,7 @@ $sidebar-sizes: map-merge((
     'font-size': $sidebar-font-size-lg,
     'brand-font-size': $sidebar-brand-font-size-lg,
     'brand-padding-y': $sidebar-brand-padding-y-lg,
+    'brand-padding-x': $sidebar-brand-padding-x-lg,
     'link-padding-y': $sidebar-nav-link-padding-y-lg,
     'link-padding-x': $sidebar-nav-link-padding-x-lg
   ),
@@ -902,6 +911,7 @@ $sidebar-sizes: map-merge((
     'font-size': $sidebar-font-size-xl,
     'brand-font-size': $sidebar-brand-font-size-xl,
     'brand-padding-y': $sidebar-brand-padding-y-xl,
+    'brand-padding-x': $sidebar-brand-padding-x-xl,
     'link-padding-y': $sidebar-nav-link-padding-y-xl,
     'link-padding-x': $sidebar-nav-link-padding-x-xl
   )

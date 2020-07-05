@@ -1,0 +1,49 @@
+mixin example_breadcrumb(category)
+  nav(role="navigation")
+    ol.breadcrumb.breadcrumb-light.breadcrumb-rsaquo.bg-transparent.p-0.mb-2(itemscope itemtype="http://schema.org/BreadcrumbList")
+      li.breadcrumb-item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.breadcrumb-link(href='/' + pkg.name + '/' itemprop="item") #[span(itemprop="name") Home]
+        meta(itemprop="position" content="1")
+      li.breadcrumb-item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
+        a.breadcrumb-link(href='/' + pkg.name + '/' + category.url + '/' itemprop="item") #[span(itemprop="name")= category.name]
+        meta(itemprop="position" content="2")
+
+mixin example_description(componentName, exampleName)
+  - var component = contents[componentName]
+  - var example = component.examples[exampleName]
+  h1.h2.fw-400= component.name + ' ' + example.name.toLowerCase()
+  p.fs-4.mb-4= example.description
+
+mixin component_description(componentName)
+  - var component = contents[componentName]
+  h1.h2.fw-400= component.name
+  p.fs-4.mb-4= component.description
+
+mixin new_component_description(componentName)
+  - var component = contents[componentName]
+  .flex-y-center.mb-2
+    h1.h2.fw-400.mb-0.mr-2= component.name
+    span.badge.badge-success.text-uppercase New
+  p.fs-4.mb-4= component.description
+
+mixin example_card(componentName, component, example)
+  - var url = '/' + pkg.name + '/' + component.url + '/' + example.url + '/'
+  .col-12.col-sm-6.d-sm-flex.mb-gutter
+    .card.w-100
+      .card-body.d-sm-flex.flex-sm-column
+        a.d-block(href=url)
+          img.img-fluid.extension-image(
+            src="/" + pkg.name + "/assets/img/component/" + componentName + "/" + example.image
+            width="303px"
+            alt=component.name + " " + example.name.toLowerCase()
+          )
+        a.extension-name.card-title.d-block.fs-4.fw-500.text-body.text-hover-primary.text-decoration-none(
+          href=url
+        )= example.name
+        p.card-text= example.description
+
+mixin component_examples(componentName)
+  - var component = contents[componentName]
+  .row
+    each example in component.examples
+      +example_card(componentName, component, example)

@@ -1,0 +1,18 @@
+extends ../example.pug
+
+block example_description
+  +example_description('type', 'heading_responsive')
+
+block example_result
+  h1.h5.h4-sm.h3-md.h2-lg.h1-xl.mb-0 Responsive title
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 6; size++)
+        div(class='h' + size + '-' + breakpoint)
+      ="\n"
+      - for(var size = 1; size <= 4; size++)
+        div(class='display-' + breakpoint + '-' + size)
+      ="\n"

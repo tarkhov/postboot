@@ -6,6 +6,7 @@
     @each $position in $position-properties {
       .#{$position}#{$infix}-auto { #{$position}: auto; }
       .#{$position}#{$infix}-0 { #{$position}: 0; }
+      .#{$position}#{$infix}-50 { #{$position}: 50%; }
     }
   }
 }

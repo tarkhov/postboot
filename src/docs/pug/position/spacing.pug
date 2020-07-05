@@ -1,0 +1,53 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('position', 'spacing')
+
+block example_result
+  .bg-state-warning.d-inline-block.border.border-warning
+    .d-flex
+      .flex-y-center
+        .fs-2.text-state-warning.px-2.px-sm-3 0
+      div
+        .flex-x-center
+          .fs-2.text-state-warning.py-2.py-sm-3 0
+        .bg-state-success.d-inline-block.border.border-success
+          .d-flex
+            .flex-y-center
+              .fs-2.text-state-success.px-2.px-sm-3 auto
+            div
+              .flex-x-center
+                .fs-2.text-state-success.py-2.py-sm-3 auto
+              .bg-state-primary.text-state-primary.d-inline-block.p-2.border.border-primary 50%
+              .flex-x-center
+                .fs-2.text-state-success.py-2.py-sm-3 auto
+            .flex-y-center
+              .fs-2.text-state-success.px-2.px-sm-3 auto
+        .flex-x-center
+          .fs-2.text-state-warning.py-2.py-sm-3 0
+      .flex-y-center
+        .fs-2.text-state-warning.px-2.px-sm-3 0
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each size in ['0', '50', 'auto']
+      div(class='top-' + size)
+      div(class='right-' + size)
+      div(class='bottom-' + size)
+      div(class='left-' + size)
+      ="\n"
+
+block responsive_description
+  h2.h3.fw-400 Responsive position sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each size in ['0', '50', 'auto']
+      each breakpoint in ['sm', 'md', 'lg', 'xl']
+        div(class='top-' + breakpoint + '-' + size)
+        div(class='right-' + breakpoint + '-' + size)
+        div(class='bottom-' + breakpoint + '-' + size)
+        div(class='left-' + breakpoint + '-' + size)
+        ="\n"

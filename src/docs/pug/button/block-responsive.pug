@@ -1,0 +1,13 @@
+extends ../example.pug
+
+block example_description
+  +example_description('button', 'block_responsive')
+
+block example_result
+  button.btn.btn-secondary.btn-xl-block(type='button') Block
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      button.btn.btn-secondary(type='button' class='btn-' + breakpoint + '-block') Button

@@ -1,0 +1,19 @@
+extends ../example.pug
+
+block example_description
+  +example_description('border', 'hover')
+
+block example_body
+  .card-body
+    each text, variant in colors
+      if variant != 'light' && variant != 'white'
+        +border_hover(text, variant)
+  .card-body.bg-secondary.bg-striped.text-white
+    +border_hover_inverse('Light', 'light')
+    +border_hover_inverse('White', 'white')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      div(class='border-hover-' + variant)

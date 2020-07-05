@@ -1,0 +1,25 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('font', 'size')
+
+block example_result
+  - for(var size = 1; size <= 12; size++)
+    +font_size('Font size ' + size, size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 12; size++)
+      p(class='fs-' + size)= 'Font size ' + size
+
+block responsive_description
+  h2.h3.fw-400 Responsive font sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 12; size++)
+        p(class='fs-' + breakpoint + '-' + size)
+      ="\n"

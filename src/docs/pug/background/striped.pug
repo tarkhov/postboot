@@ -1,0 +1,13 @@
+extends ../example.pug
+
+block example_description
+  +example_description('background', 'striped')
+  p Can be activated by adding #[code.fs-2 .bg-striped] class to any background.
+
+block example_result
+  +background('Striped', ['bg-primary', 'bg-striped', 'text-white'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .bg-striped.bg-primary

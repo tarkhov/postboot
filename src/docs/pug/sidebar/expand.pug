@@ -1,0 +1,28 @@
+extends ../example.pug
+
+block example_description
+  +example_description('sidebar', 'expand')
+
+block example_result
+  .row
+    .col-auto
+      .sidebar.sidebar-dark.bg-dark.sidebar-expand-xl.rounded
+        a.sidebar-brand(href="#") #[i.fab.fa-bootstrap] #[span.sidebar-collapse.collapse.width.ml-2 Bootstrap]
+        ul.sidebar-nav
+          li.nav-item
+            a.nav-link(href="#") #[i.fas.fa-home] #[span.sidebar-collapse.collapse.width.ml-2 Home]
+          li.nav-item
+            a.nav-link(href="#") #[i.fas.fa-shopping-cart] #[span.sidebar-collapse.collapse.width.ml-2 Products]
+          li.nav-item
+            a.nav-link(href="#") #[i.fas.fa-user-friends] #[span.sidebar-collapse.collapse.width.ml-2 Users]
+          li.nav-item
+            a.nav-link(href="#") #[i.fas.fa-chart-pie] #[span.sidebar-collapse.collapse.width.ml-2 Analytics]
+          li.nav-item
+            a.nav-link(href="#") #[i.fas.fa-comment] #[span.sidebar-collapse.collapse.width.ml-2 Comments]
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .sidebar.sidebar-expand
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      .sidebar(class="sidebar-expand-" + breakpoint)

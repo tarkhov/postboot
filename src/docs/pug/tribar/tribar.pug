@@ -1,0 +1,13 @@
+extends ../example.pug
+
+block example_description
+  +example_description('tribar', 'tribar')
+
+block example_result
+  .d-inline-block
+    .tribar
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .tribar

@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_description
+  +example_description('text', 'custom')
+
+block example_result
+  each text, variant in customColors
+    if variant != 'white'
+      +text_variant(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in customColors
+      if variant != 'white'
+        div(class='text-' + variant)= text

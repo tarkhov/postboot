@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_description
+  +example_description('background', 'custom')
+
+block example_result
+  each text, variant in customColors
+    if variant != 'white'
+      +background_inverse(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in customColors
+      if variant != 'white'
+        div(class='bg-' + variant)

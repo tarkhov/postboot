@@ -1,0 +1,15 @@
+extends ../example.pug
+
+block example_description
+  +example_description('border', 'rounded_pill')
+
+block example_result
+  each text, position in {'top': 'Top', 'right': 'Right', 'bottom': 'Bottom', 'left': 'Left'}
+    +border_radius(text, position, 'pill')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, position in {'top': 'Top', 'right': 'Right', 'bottom': 'Bottom', 'left': 'Left'}
+      div(class='rounded-' + position + '-pill')
+    ="\n"

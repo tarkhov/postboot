@@ -1,0 +1,40 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('card', 'size')
+
+block example_result
+  .row
+    - for(var i = 1; i <= 5; i++)
+      div(class='col-md-' + (i < 3 ? 6 : 12))
+        .card.mb-gutter(class="card-" + i)
+          .card-header
+            ul.nav.nav-tabs.card-header-tabs
+              li.nav-item: a.nav-link.active(href="#") Active
+              li.nav-item: a.nav-link(href="#") Link
+              li.nav-item: a.nav-link.disabled.d-sm-block.d-none(href="#") Disabled
+          .card-body
+            h4.card-title(class="fs-" + (i + 2)) Example title
+            p.card-text Example text
+          .card-footer
+            ul.nav.nav-pills.card-footer-pills
+              li.nav-item: a.nav-link.active(href="#") Active
+              li.nav-item: a.nav-link(href="#") Link
+              li.nav-item: a.nav-link.disabled.d-sm-block.d-none(href="#") Disabled
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var i = 1; i <= 5; i++)
+      .card(class="card-" + i)
+
+block responsive_description
+  h2.h3.fw-400 Responsive card sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 3; size++)
+        .card(class="card-" + breakpoint + '-' + size)
+      ="\n"

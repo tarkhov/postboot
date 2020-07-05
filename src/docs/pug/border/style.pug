@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_description
+  +example_description('border', 'style')
+
+block example_result
+  each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
+    +border_style(text, style)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, style in {'dashed': 'Dashed', 'dotted': 'Dotted', 'double': 'Double', 'solid': 'Solid'}
+      div(class='border-' + style)
+      each position in ['top', 'right', 'bottom', 'left']
+        div(class='border-' + position + '-' + style)
+      ="\n"

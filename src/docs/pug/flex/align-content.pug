@@ -1,0 +1,38 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('flex', 'align_content')
+
+block example_result
+  each align in ['between', 'around', 'start', 'end', 'center', 'stretch']
+    .mb-3.bg-dark.p-3.d-none(class='flex-align-md-' + align style="height: 250px")
+      - for(var i = 1; i <= 16; i++)
+        .p-2.mr-1.mb-2.bg-primary.text-white= 'Item ' + i
+    .mb-3.bg-dark.p-3.d-md-none.d-flex.flex-wrap(class='align-content-' + align style="height: 200px")
+      - for(var i = 1; i <= 8; i++)
+        .p-2.mr-1.mb-2.bg-primary.text-white= 'Item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .flex-align-between
+    .flex-align-around
+    .flex-align-start
+    .flex-align-end
+    .flex-align-center
+    .flex-align-stretch
+
+block responsive_description
+  h2.h3.fw-400 Responsive flex align content
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      div(class='flex-align-' + breakpoint + '-between')
+      div(class='flex-align-' + breakpoint + '-around')
+      div(class='flex-align-' + breakpoint + '-start')
+      div(class='flex-align-' + breakpoint + '-end')
+      div(class='flex-align-' + breakpoint + '-center')
+      div(class='flex-align-' + breakpoint + '-stretch')
+      ="\n"

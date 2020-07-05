@@ -2,6 +2,7 @@
 @mixin nav-size($padding-y, $padding-x, $font-size) {
   font-size: $font-size;
 
+  > .nav-text,
   > .nav-link,
   > .nav-item > .nav-link {
     padding: $padding-y $padding-x;
@@ -9,6 +10,7 @@
 }
 
 @mixin nav-size-y($padding-y) {
+  > .nav-text,
   > .nav-link,
   > .nav-item > .nav-link {
     padding-top: $padding-y;
@@ -17,6 +19,7 @@
 }
 
 @mixin nav-size-x($padding-x) {
+  > .nav-text,
   > .nav-link,
   > .nav-item > .nav-link {
     padding-left: $padding-x;

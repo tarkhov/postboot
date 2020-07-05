@@ -1,0 +1,14 @@
+extends layout.pug
+
+block main
+  #description
+    block component_description
+  #examples
+    block component_examples
+
+block sidebar_right
+  ul.sidebar-nav.nav-tree.nav-tabs.nav-tabs-material.nav-tabs-right.nav-y-2.fs-2
+    li.nav-item
+      a.nav-link(href="#description") Description
+    li.nav-item
+      a.nav-link(href="#examples") Examples

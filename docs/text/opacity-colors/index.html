@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Alexander Tarkhov">
+    <link rel="apple-touch-icon" href="/postboot/assets/img/apple-touch-icon.png">
+    <link rel="icon" href="/postboot/assets/img/favicon.ico">
+    <link rel="manifest" href="/postboot/assets/json/manifest.json">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="/postboot/assets/css/app.min.css">
+  </head>
+  <body class="pt-navbar pb-navbar-2 pb-md-0" data-spy="scroll" data-target=".contents-nav">
+    <header class="pb-gutter" role="banner">
+      <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
+        <div class="container-fluid container-xl"><a class="navbar-brand mr-2 mr-sm-3" href="/postboot/" rel="home"><span class="rounded py-1 text-white fw-500 bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.1</sup></a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="/postboot/">v1</a></div>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-x-lg-4">
+              <li class="nav-item"><a class="nav-link" href="https://twitter.com/postbootjs" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Twitter</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://medium.com/@postboot" target="_blank" rel="nofollow"><i class="fab fa-medium"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Medium</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://t.me/postboot" target="_blank" rel="nofollow"><i class="fab fa-telegram-plane"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Telegram</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://github.com/tarkhov/postboot" target="_blank" rel="nofollow"><i class="fab fa-github-alt"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;GitHub</span></a></li>
+            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.1/postboot-1.0.1.zip" rel="nofollow">Download</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid container-xl">
+      <div class="row">
+        <div class="col-md-2">
+          <aside class="sidebar sidebar-light py-0 d-none d-md-block" role="complementary">
+            <ul class="sidebar-nav nav-x-0 nav-y-2">
+              <li class="nav-item"><a class="nav-link" href="/postboot/background/">Background</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/badge/">Badge</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/border/">Border</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/breadcrumb/">Breadcrumb</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/button/">Button</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/card/">Card</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/collapse/">Collapse</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/dropdown/">Dropdown</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/flex/">Flex</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/font/">Font</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/form/">Form</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/grid/">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/list-group/">List group</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/nav/">Nav</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/navbar/">Navbar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/pagination/">Pagination</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/position/">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/progress/">Progress</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/scrollspy/">ScrollSpy</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/sidebar/">Sidebar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/size/">Size</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/text/">Text</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/triple-bar/">Triple bar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/type/">Typography</a></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="col-md-10 col-lg-8">
+          <main role="main">
+            <article role="article">
+              <div id="description">
+                <h1 class="h2 fw-400">Text opacity colors </h1>
+                <p class="fs-4 mb-4">Text colors with opacity in the range from 0.1 to 0.9.</p>
+              </div>
+              <div class="card mb-3" id="example">
+                <div class="card-body bg-black bg-striped"><span class="mr-2 mb-2 d-inline-block text-primary-50">Primary</span><span class="mr-2 mb-2 d-inline-block text-secondary-50">Secondary</span><span class="mr-2 mb-2 d-inline-block text-success-50">Success</span><span class="mr-2 mb-2 d-inline-block text-info-50">Info</span><span class="mr-2 mb-2 d-inline-block text-warning-50">Warning</span><span class="mr-2 mb-2 d-inline-block text-danger-50">Danger</span><span class="mr-2 mb-2 d-inline-block text-light-50">Light</span><span class="mr-2 mb-2 d-inline-block text-dark-50">Dark</span><span class="mr-2 mb-2 d-inline-block text-black-50">Black</span><span class="mr-2 mb-2 d-inline-block text-indigo-50">Indigo</span><span class="mr-2 mb-2 d-inline-block text-orange-50">Orange</span><span class="mr-2 mb-2 d-inline-block text-pink-50">Pink</span><span class="mr-2 mb-2 d-inline-block text-purple-50">Purple</span><span class="mr-2 mb-2 d-inline-block text-teal-50">Teal</span><span class="mr-2 mb-2 d-inline-block text-white-50">White</span>
+                </div>
+                <div class="card-footer">
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;text-primary-10&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-primary-20&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-primary-30&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-primary-40&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-primary-50&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-primary-60&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-primary-70&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-primary-80&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-primary-90&#x22;&#x3E;Primary&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-secondary-10&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-20&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-30&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-40&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-50&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-60&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-70&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-80&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-secondary-90&#x22;&#x3E;Secondary&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-success-10&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-20&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-30&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-40&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-50&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-60&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-70&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-80&#x22;&#x3E;Success&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-success-90&#x22;&#x3E;Success&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-info-10&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-20&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-30&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-40&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-50&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-60&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-70&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-80&#x22;&#x3E;Info&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-info-90&#x22;&#x3E;Info&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-warning-10&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-20&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-30&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-40&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-50&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-60&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-70&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-80&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-warning-90&#x22;&#x3E;Warning&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-danger-10&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-20&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-30&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-40&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-50&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-60&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-70&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-80&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-danger-90&#x22;&#x3E;Danger&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-light-10&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-20&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-30&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-40&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-50&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-60&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-70&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-80&#x22;&#x3E;Light&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-light-90&#x22;&#x3E;Light&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-dark-10&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-20&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-30&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-40&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-50&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-60&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-70&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-80&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-dark-90&#x22;&#x3E;Dark&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-black-10&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-20&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-30&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-40&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-50&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-60&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-70&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-80&#x22;&#x3E;Black&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-black-90&#x22;&#x3E;Black&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-indigo-10&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-20&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-30&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-40&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-50&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-60&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-70&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-80&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-indigo-90&#x22;&#x3E;Indigo&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-orange-10&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-20&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-30&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-40&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-50&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-60&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-70&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-80&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-orange-90&#x22;&#x3E;Orange&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-pink-10&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-20&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-30&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-40&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-50&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-60&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-70&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-80&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-pink-90&#x22;&#x3E;Pink&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-purple-10&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-20&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-30&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-40&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-50&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-60&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-70&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-80&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-purple-90&#x22;&#x3E;Purple&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-teal-10&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-20&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-30&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-40&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-50&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-60&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-70&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-80&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-teal-90&#x22;&#x3E;Teal&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;text-white-10&#x22;&#x3E;White&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-20&#x22;&#x3E;White&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-30&#x22;&#x3E;White&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-40&#x22;&#x3E;White&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-50&#x22;&#x3E;White&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-60&#x22;&#x3E;White&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-70&#x22;&#x3E;White&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-80&#x22;&#x3E;White&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;text-white-90&#x22;&#x3E;White&#x3C;/div&#x3E;
+</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </article>
+          </main>
+        </div>
+        <div class="col-md-2">
+          <aside class="contents-nav sidebar sidebar-light sidebar-expand-lg py-0 position-fixed" role="complementary">
+            <ul class="sidebar-nav nav-tree nav-tabs nav-tabs-material nav-tabs-right nav-y-2 fs-2">
+              <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
+              <li class="nav-item"><a class="nav-link" href="#example">Example</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <footer class="pt-gutter d-block d-md-none" role="contentinfo">
+      <nav class="contents-nav navbar navbar-2 navbar-expand-xs navbar-light px-sm-0 fixed-bottom border-top bg-white" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-scroller">
+            <ul class="navbar-nav navbar-nav-left navbar-scroller-nav">
+              <li class="nav-item"><a class="nav-link" href="/postboot/background/">Background</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/badge/">Badge</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/border/">Border</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/breadcrumb/">Breadcrumb</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/button/">Button</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/card/">Card</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/collapse/">Collapse</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/dropdown/">Dropdown</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/flex/">Flex</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/font/">Font</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/form/">Form</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/grid/">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/list-group/">List group</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/nav/">Nav</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/navbar/">Navbar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/pagination/">Pagination</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/position/">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/progress/">Progress</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/scrollspy/">ScrollSpy</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/sidebar/">Sidebar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/size/">Size</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/text/">Text</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/triple-bar/">Triple bar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/type/">Typography</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <script src="/postboot/assets/js/app.min.js"></script>
+  </body>
+</html>

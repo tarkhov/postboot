@@ -1,0 +1,18 @@
+extends ../example.pug
+
+block example_description
+  +example_description('form', 'input_material')
+
+block example_result
+  .form-group
+    +input_variant('Material', 'material')
+  .form-group
+    +input_state('Valid', 'material', 'valid')
+  +input_state('Invalid', 'material', 'invalid')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    input.form-control.input-material(type='text', placeholder='Material')
+    input.form-control.input-material.is-valid(type='text', placeholder='Valid')
+    input.form-control.input-material.is-invalid(type='text', placeholder='Invalid')

@@ -1,0 +1,13 @@
+extends ../example.pug
+
+block example_description
+  +example_description('nav', 'active')
+
+block example_result
+  +nav('justify-content-start')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ul.nav
+      li.nav-item: a.nav-link.active(href='#') Active

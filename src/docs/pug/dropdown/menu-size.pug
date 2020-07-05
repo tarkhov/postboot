@@ -1,0 +1,26 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('dropdown', 'menu_size')
+
+block example_result
+  - for(var size = 1; size <= 5; size++)
+    .d-block.d-sm-inline-block.mb-2.mr-sm-1.mr-lg-0
+      +dropdown_size(size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 5; size++)
+      .dropdown-menu(class='dropdown-menu-' + size)
+
+block responsive_description
+  h2.h3.fw-400 Responsive dropdown menu sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 5; size++)
+        .dropdown-menu(class='dropdown-menu-' + breakpoint + '-' + size)
+      ="\n"

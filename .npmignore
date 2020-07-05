@@ -65,4 +65,5 @@ node_modules
 
 # https://github.com/tarkhov/postboot/issues/17
 docs
+src/docs/
 logo.xcf

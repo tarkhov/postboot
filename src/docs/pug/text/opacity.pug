@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_description
+  +example_description('text', 'opacity')
+
+block example_body
+  .card-body.bg-black.bg-striped
+    each text, variant in colors
+      +text_alpha(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      - for(var i = 1; i <= 9; i++)
+        div(class='text-' + variant + '-' + i * 10)= text
+      = "\n"

@@ -1,0 +1,18 @@
+extends ../example.pug
+
+block example_description
+  +example_description('form', 'input_dark')
+
+block example_result
+  .form-group
+    +input_variant('Dark', 'dark')
+  .form-group
+    +input_state('Valid', 'dark', 'valid')
+  +input_state('Invalid', 'dark', 'invalid')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    input.form-control.input-dark(type='text', placeholder='Dark')
+    input.form-control.input-dark.is-valid(type='text', placeholder='Valid')
+    input.form-control.input-dark.is-invalid(type='text', placeholder='Invalid')

@@ -1,0 +1,20 @@
+extends ../example.pug
+
+block example_description
+  +example_description('navbar', 'tribar')
+
+block example_result
+  nav.navbar.navbar-expand-xs.navbar-dark.bg-dark.px-0
+    .container-fluid.navbar-container
+      button.navbar-toggler.mr-3(type="button")
+        ="\n  "
+        span.tribar.navbar-toggler-tribar
+      = "\n\t"
+      a.navbar-brand.mr-auto(href="#") Brand
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    button.navbar-toggler(type="button")
+      ="\n  "
+      span.tribar.navbar-toggler-tribar

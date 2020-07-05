@@ -1,0 +1,16 @@
+extends ../example.pug
+
+block example_description
+  +example_description('breadcrumb', 'arrow')
+
+block example_result
+  .row
+    each arrow in ['rang', 'raquo', 'rarr', 'rsaquo']
+      .col-sm-6
+        +breadcrumb_variant(arrow)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each arrow in ['rang', 'raquo', 'rarr', 'rsaquo']
+      ol.breadcrumb(class='breadcrumb-' + arrow)

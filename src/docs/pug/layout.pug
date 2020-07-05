@@ -1,0 +1,84 @@
+include variables.pug
+include mixins.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+
+    block head_title
+    block meta_description
+    block meta_keywords
+    meta(name="author" content=pkg.author)
+
+    link(rel="apple-touch-icon" href="/" + pkg.name + "/assets/img/apple-touch-icon.png")
+    link(rel="icon" href="/" + pkg.name + "/assets/img/favicon.ico")
+    link(rel="manifest" href="/" + pkg.name + "/assets/json/manifest.json")
+
+    link(rel="dns-prefetch" href="https://fonts.googleapis.com")
+    link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet")
+    block css
+      link(rel="stylesheet" href="/" + pkg.name + "/assets/css/app.min.css")
+  body.pt-navbar.pb-navbar-2.pb-md-0(data-spy="scroll" data-target=".contents-nav")
+    block header
+      header.pb-gutter(role="banner")
+        nav#navbar-top.navbar.navbar-expand-xs.navbar-light.px-sm-0.fixed-top(role="navigation")
+          .container-fluid.container-xl
+            a.navbar-brand.mr-2.mr-sm-3(href="/" + pkg.name + '/' rel="home") #[span.rounded.py-1.text-white.fw-500.bg-purple(style="padding-left: .6rem;padding-right: .6rem;") P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
+
+            .collapse.navbar-collapse
+              ul.navbar-nav.mr-auto
+                li.nav-item.dropdown.dropdown-hover
+                  a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" data-hover="dropdown") Version
+                  .dropdown-menu
+                    a.dropdown-item(href="/" + pkg.name + "/" class=url=="/" ? "active": "") v1
+              ul.navbar-nav.navbar-nav-x-lg-4
+                li.nav-item
+                  a.nav-link(href="https://twitter.com/" + pkg.name + "js" target="_blank" rel="nofollow")
+                    i.fab.fa-twitter
+                    span.d-none.d-lg-inline!= "&nbsp;&nbsp;Twitter"
+                li.nav-item
+                  a.nav-link(href="https://medium.com/@" + pkg.name target="_blank" rel="nofollow")
+                    i.fab.fa-medium
+                    span.d-none.d-lg-inline!= "&nbsp;&nbsp;Medium"
+                li.nav-item
+                  a.nav-link(href="https://t.me/" + pkg.name target="_blank" rel="nofollow")
+                    i.fab.fa-telegram-plane
+                    span.d-none.d-lg-inline!= "&nbsp;&nbsp;Telegram"
+                li.nav-item
+                  a.nav-link(href=githubUrl + "/" + username + "/" + pkg.name target="_blank" rel="nofollow")
+                    i.fab.fa-github-alt
+                    span.d-none.d-lg-inline!= "&nbsp;&nbsp;GitHub"
+              a.btn.btn-primary.btn-sm.ml-2(href=downloadUrl rel="nofollow") Download
+
+    block content
+      .container-fluid.container-xl
+        .row
+          .col-md-2
+            aside.sidebar.sidebar-light.py-0.d-none.d-md-block(role="complementary")
+              block sidebar_left
+                ul.sidebar-nav.nav-x-0.nav-y-2
+                  each category in contents
+                    li.nav-item
+                      a.nav-link(href='/' + pkg.name + '/' + category.url + '/' class=url=="/" + category.url + "/" ? "active": "")= category.name
+          .col-md-10.col-lg-8
+            block breadcrumb
+            main(role="main")
+              article(role="article")
+                block main
+          .col-md-2
+            aside.contents-nav.sidebar.sidebar-light.sidebar-expand-lg.py-0.position-fixed(role="complementary")
+              block sidebar_right
+
+    block footer
+      footer.pt-gutter.d-block.d-md-none(role="contentinfo")
+        nav.contents-nav.navbar.navbar-2.navbar-expand-xs.navbar-light.px-sm-0.fixed-bottom.border-top.bg-white(role="navigation")
+          .container-fluid
+            .navbar-scroller
+              ul.navbar-nav.navbar-nav-left.navbar-scroller-nav
+                each category in contents
+                  li.nav-item
+                    a.nav-link(href='/' + pkg.name + '/' + category.url + '/' class=url=="/" + category.url + "/" ? "active": "")= category.name
+
+    block js
+      script(src="/" + pkg.name + "/assets/js/app.min.js")

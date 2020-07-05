@@ -1,0 +1,17 @@
+extends ../example.pug
+
+block example_description
+  +example_description('grid', 'column_5')
+
+block example_result
+  .row-md-3.row-1
+    - for(var i = 1; i <= 5; i++)
+      .col-2-5
+        .w-100.bg-secondary(style="height: 40px;")
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .col-2-5
+    each breakpoint in ['sm', 'md', 'lg', 'xl', 'xxl', '3xl', '4xl', '5xl', '6xl']
+      div(class='col-' + breakpoint + '-2-5')

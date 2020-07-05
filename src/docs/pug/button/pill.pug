@@ -1,0 +1,12 @@
+extends ../example.pug
+
+block example_description
+  +example_description('button', 'pill')
+
+block example_result
+  +button('Ellipse', ['btn-primary', 'btn-pill'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    button.btn.btn-primary.btn-pill(type='button') Ellipse

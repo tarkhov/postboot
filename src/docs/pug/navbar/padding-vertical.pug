@@ -1,0 +1,47 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('navbar', 'padding_vertical')
+
+block example_result
+  .bg-state-success.d-inline-block.border.border-success
+    .d-flex
+      .flex-y-center
+        .fs-2.text-state-success.px-3
+      div
+        .flex-x-center
+          .fs-2.text-state-success.py-3 3.5rem
+        .bg-state-primary.text-state-primary.d-inline-block.p-2.border.border-primary Element
+        .flex-x-center
+          .fs-2.text-state-success.py-3 3.5rem
+      .flex-y-center
+        .fs-2.text-state-success.px-3
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .py-navbar
+    ="\n"
+    - for(var size = 1; size <= 5; size++)
+      div(class="py-navbar-" + size)
+      div(class="pt-navbar-" + size)
+      div(class="pb-navbar-" + size)
+      ="\n"
+
+block responsive_description
+  h2.h3.fw-400 Responsive navbar sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      div(class="py-navbar-" + breakpoint)
+      div(class="pt-navbar-" + breakpoint)
+      div(class="pb-navbar-" + breakpoint)
+      ="\n"
+      - for(var size = 1; size <= 5; size++)
+        div(class="py-navbar-" + breakpoint + "-" + size)
+        div(class="pt-navbar-" + breakpoint + "-" + size)
+        div(class="pb-navbar-" + breakpoint + "-" + size)
+        ="\n"
+      ="\n"

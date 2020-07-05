@@ -1,0 +1,22 @@
+extends ../example.pug
+
+block example_description
+  +example_description('tribar', 'color')
+
+block example_body
+  .card-body
+    each text, variant in colors
+      if variant != 'light' && variant != 'white'
+        .d-inline-block.mr-1.mb-2
+          .tribar(class='tribar-' + variant)
+  .card-body.bg-dark.bg-striped
+    .d-inline-block.mr-1
+      .tribar.tribar-light
+    .d-inline-block
+      .tribar.tribar-white
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      .tribar(class='tribar-' + variant)

@@ -1,0 +1,14 @@
+extends ../example.pug
+
+block example_description
+  +example_description('button', 'hover')
+
+block example_result
+  each text, variant in colors
+    +button_hover(text, variant)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      button.btn.btn-secondary.active(type='button' class='btn-active-' + variant)= text

@@ -1,0 +1,36 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('nav', 'size')
+
+block example_result
+  - for(var size = 1; size <= 5; size++)
+    if size < 4
+      +nav_size(size)
+    else
+      +responsive_nav_size(size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 0; size <= 5; size++)
+      if size != 0
+        ul.nav(class='nav-' + size)
+      ul.nav(class='nav-x-' + size)
+      ul.nav(class='nav-y-' + size)
+      ="\n"
+
+block responsive_description
+  h2.h3.fw-400 Responsive nav sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 0; size <= 5; size++)
+        if size != 0
+          ul.nav(class='nav-' + breakpoint + '-' + size)
+        ul.nav(class='nav-x-' + breakpoint + '-' + size)
+        ul.nav(class='nav-y-' + breakpoint + '-' + size)
+        ="\n"
+      ="\n"

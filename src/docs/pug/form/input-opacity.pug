@@ -1,0 +1,22 @@
+extends ../example.pug
+
+block example_description
+  +example_description('form', 'input_opacity')
+
+block example_body
+  .card-body.bg-dark.bg-striped
+    .row
+      each text, variant in colors
+        if variant != 'light'
+          .col-12.col-sm-6.col-md-3
+            .form-group
+              +input_dark(text, variant + '-50')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in colors
+      if variant != 'light'
+        - for(var i = 1; i <= 9; i++)
+          input.form-control.input-dark(type='text', placeholder=text class="input-" + variant + '-' + i * 10)
+        = "\n"

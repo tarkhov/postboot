@@ -1,17 +1,13 @@
 .sidebar {
-  display: none;
+  display: block;
   padding-top: $sidebar-padding-y;
   padding-bottom: $sidebar-padding-y;
   position: relative;
-
-  .nav-text {
-    display: none;
-  }
 }
 
 .sidebar-brand {
   display: inline-block;
-  padding: $sidebar-brand-padding-y $nav-link-padding-x;
+  padding: $sidebar-brand-padding-y $sidebar-brand-padding-x;
   font-size: $sidebar-brand-font-size;
   line-height: inherit;
   white-space: nowrap;
@@ -23,20 +19,14 @@
 
 .sidebar-nav {
   display: flex;
-  flex-direction: column; // cannot use `inherit` to get the `.sidebar`s value
+  flex-direction: column; // cannot use `inherit` to get the `.navbar`s value
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-
-  .nav-link {
-    display: block;
-  }
 }
 
 .sidebar-text {
-  display: inline-block;
-  padding-top: $nav-link-padding-y;
-  padding-bottom: $nav-link-padding-y;
+  padding: $nav-link-padding-y $nav-link-padding-x;
 }
 
 .sidebar-toggler {
@@ -59,10 +49,8 @@
 
     &#{$infix} {
       @include media-breakpoint-up($next) {
-        display: block !important;
-
-        .nav-text {
-          display: block;
+        .sidebar-collapse {
+          display: inline-block !important;
         }
       }
     }
@@ -75,57 +63,54 @@
     $infix: breakpoint-infix($next);
 
     &#{$infix} {
+      @include media-breakpoint-down($breakpoint) {
+        &.fade {
+          opacity: 1;
+        }
+      }
+
       @include media-breakpoint-up($next) {
         @include sidebar-modal;
       }
 
       &-down {
-        @include media-breakpoint-down($next) {
+        @include media-breakpoint-up($next) {
+          &.fade {
+            opacity: 1;
+          }
+        }
+
+        @include media-breakpoint-down($breakpoint) {
           @include sidebar-modal;
         }
       }
     }
   }
-
-  .sidebar {
-    height: 100%;
-  }
 }
 
 .sidebar-dialog {
   margin: 0 !important;
-  height: 100%;
-
-  .sidebar-modal.fade & {
-    @include transition($modal-transition);
-    transform: $sidebar-modal-fade-transform;
-  }
-  .sidebar-modal-right.fade & {
-    transform: $sidebar-modal-right-fade-transform;
-  }
-  .sidebar-modal-right & {
-    float: right;
-  }
-  .sidebar-modal.show & {
-    transform: $modal-show-transform;
-  }
-
-  @include media-breakpoint-up(sm) {
-    width: 250px;
-  }
+  max-width: none;
 }
 
 .modal-open {
   .sidebar-modal {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  .sidebar-modal-right {
-    padding-right: 0 !important;
-  }
+    @each $breakpoint in map-keys($grid-breakpoints) {
+      $next: breakpoint-next($breakpoint);
+      $infix: breakpoint-infix($next);
 
-  .sidebar {
-    pointer-events: auto;
+      &#{$infix} {
+        @include media-breakpoint-up($next) {
+          @include sidebar-modal-open;
+        }
+
+        &-down {
+          @include media-breakpoint-down($next) {
+            @include sidebar-modal-open;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -220,7 +205,7 @@
     @each $size, $sidebar in $sidebar-sizes {
       @if $size != 0 {
         .sidebar#{$infix}-#{$size} {
-          @include sidebar-size(map-get($sidebar, 'padding-y'), map-get($sidebar, 'font-size'), map-get($sidebar, 'brand-font-size'), map-get($sidebar, 'brand-padding-y'), map-get($sidebar, 'link-padding-y'));
+          @include sidebar-size(map-get($sidebar, 'padding-y'), map-get($sidebar, 'font-size'), map-get($sidebar, 'brand-font-size'), map-get($sidebar, 'brand-padding-y'), map-get($sidebar, 'brand-padding-x'), map-get($sidebar, 'link-padding-y'), map-get($sidebar, 'link-padding-x'));
         }
       }
     }

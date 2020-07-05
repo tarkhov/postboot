@@ -1,0 +1,31 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('border', 'width')
+
+block example_result
+  - for(var width = 1; width <= 5; width++)
+    +border_width(width)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var width = 1; width <= 5; width++)
+      p(class='border-' + width)= width + 'px'
+      each position in ['top', 'right', 'bottom', 'left']
+        p(class='border-' + position + '-' + width)= width + 'px'
+      ="\n"
+
+block responsive_description
+  h2.h3.fw-400 Responsive border widths
+  p Make your border width responsive by adding class #[code.fs-2 .border-breakpoint-width].
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var width = 0; width <= 5; width++)
+        p(class='border-' + breakpoint + '-' + width)= width + 'px'
+        each position in ['top', 'right', 'bottom', 'left']
+          p(class='border-' + position + '-' + breakpoint + '-' + width)= width + 'px'
+        ="\n"

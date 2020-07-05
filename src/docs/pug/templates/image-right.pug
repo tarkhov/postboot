@@ -1,0 +1,35 @@
+extends ../example-responsive.pug
+
+block breadcrumb
+  +example_breadcrumb(contents.card)
+
+block example_description
+  h1.h2.fw-400= contents.card.examples.image_right.title
+  p.fs-4.mb-4= contents.card.examples.image_right.description
+
+block example_result
+  .card.flex-sm-row
+    .card-body
+      h4.card-title Right image
+      p.card-text Example text
+    img.card-img-bottom.card-img-sm-right(src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .card.flex-sm-row
+      .card-body
+        h4.card-title Right image
+        p.card-text Example text
+      img.card-img-bottom.card-img-sm-right(src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+
+block responsive_description
+  h2.h3.fw-400 Responsive card image right
+  p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      ="\n"
+      img(class="card-img-" + breakpoint + "-right" src="/" + pkg.name + "/assets/img/thumbnail.jpg")

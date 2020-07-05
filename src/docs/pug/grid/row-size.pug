@@ -1,0 +1,28 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('grid', 'row_size')
+
+block example_result
+  - for(var size = 1; size <= 5; size++)
+    .mb-3(class="row-" + size)
+      - for(var i = 1; i <= 4; i++)
+        .col-3
+          .w-100.bg-secondary(style="height: 40px;")
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 5; size++)
+      div(class="row-" + size)
+
+block responsive_description
+  h2.h3.fw-400 Responsive row sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 5; size++)
+        div(class="row-" + breakpoint + '-' + size)
+      ="\n"

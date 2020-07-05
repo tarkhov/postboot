@@ -1,0 +1,18 @@
+extends ../example.pug
+
+block example_description
+  +example_description('button', 'custom')
+
+block example_body
+  .card-body
+    each text, variant in customColors
+      if variant != 'white'
+        +button_variant(text, variant)
+  .card-body.bg-dark.bg-striped
+    +button_variant('White', 'white')
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    each text, variant in customColors
+      button.btn(type='button' class='btn-' + variant)= text

@@ -1,0 +1,30 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('card', 'image_left')
+
+block example_result
+  .card.flex-row
+    img.card-img-left.example-card-img-responsive(src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+    .card-body
+      h4.card-title.h5.h4-sm Left image
+      p.card-text Example text
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .card.flex-row
+      img.card-img-left.example-card-img-responsive(src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+      .card-body
+        h4.card-title.h5.h4-sm Left image
+        p.card-text Example text
+
+block responsive_description
+  h2.h3.fw-400 Responsive card image left
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      ="\n"
+      img(class="card-img-" + breakpoint + "-left" src="/" + pkg.name + "/assets/img/thumbnail.jpg")

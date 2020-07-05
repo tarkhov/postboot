@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Alexander Tarkhov">
+    <link rel="apple-touch-icon" href="/postboot/assets/img/apple-touch-icon.png">
+    <link rel="icon" href="/postboot/assets/img/favicon.ico">
+    <link rel="manifest" href="/postboot/assets/json/manifest.json">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="/postboot/assets/css/app.min.css">
+  </head>
+  <body class="pt-navbar pb-navbar-2 pb-md-0" data-spy="scroll" data-target=".contents-nav">
+    <header class="pb-gutter" role="banner">
+      <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
+        <div class="container-fluid container-xl"><a class="navbar-brand mr-2 mr-sm-3" href="/postboot/" rel="home"><span class="rounded py-1 text-white fw-500 bg-purple" style="padding-left: .6rem;padding-right: .6rem;">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.1</sup></a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
+                <div class="dropdown-menu"><a class="dropdown-item" href="/postboot/">v1</a></div>
+              </li>
+            </ul>
+            <ul class="navbar-nav navbar-nav-x-lg-4">
+              <li class="nav-item"><a class="nav-link" href="https://twitter.com/postbootjs" target="_blank" rel="nofollow"><i class="fab fa-twitter"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Twitter</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://medium.com/@postboot" target="_blank" rel="nofollow"><i class="fab fa-medium"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Medium</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://t.me/postboot" target="_blank" rel="nofollow"><i class="fab fa-telegram-plane"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Telegram</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="https://github.com/tarkhov/postboot" target="_blank" rel="nofollow"><i class="fab fa-github-alt"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;GitHub</span></a></li>
+            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.1/postboot-1.0.1.zip" rel="nofollow">Download</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid container-xl">
+      <div class="row">
+        <div class="col-md-2">
+          <aside class="sidebar sidebar-light py-0 d-none d-md-block" role="complementary">
+            <ul class="sidebar-nav nav-x-0 nav-y-2">
+              <li class="nav-item"><a class="nav-link" href="/postboot/background/">Background</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/badge/">Badge</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/border/">Border</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/breadcrumb/">Breadcrumb</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/button/">Button</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/card/">Card</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/collapse/">Collapse</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/dropdown/">Dropdown</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/flex/">Flex</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/font/">Font</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/form/">Form</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/grid/">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/list-group/">List group</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/nav/">Nav</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/navbar/">Navbar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/pagination/">Pagination</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/position/">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/progress/">Progress</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/scrollspy/">ScrollSpy</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/sidebar/">Sidebar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/size/">Size</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/text/">Text</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/triple-bar/">Triple bar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/type/">Typography</a></li>
+            </ul>
+          </aside>
+        </div>
+        <div class="col-md-10 col-lg-8">
+          <main role="main">
+            <article role="article">
+              <div id="description">
+                <h1 class="h2 fw-400">Dropdown menu sizes</h1>
+                <p class="fs-4 mb-4">Change dropdown menu size on all devices by adding additional classes.</p>
+              </div>
+              <div class="card mb-3" id="example">
+                <div class="card-body">
+                  <div class="d-block d-sm-inline-block mb-2 mr-sm-1 mr-lg-0">
+                    <div class="btn-group dropdown">
+                      <button class="btn btn-secondary dropdown-toggle btn-1" type="button" data-toggle="dropdown">Dropdown 1</button>
+                      <div class="dropdown-menu dropdown-menu-1">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block d-sm-inline-block mb-2 mr-sm-1 mr-lg-0">
+                    <div class="btn-group dropdown">
+                      <button class="btn btn-secondary dropdown-toggle btn-2" type="button" data-toggle="dropdown">Dropdown 2</button>
+                      <div class="dropdown-menu dropdown-menu-2">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block d-sm-inline-block mb-2 mr-sm-1 mr-lg-0">
+                    <div class="btn-group dropdown">
+                      <button class="btn btn-secondary dropdown-toggle btn-3" type="button" data-toggle="dropdown">Dropdown 3</button>
+                      <div class="dropdown-menu dropdown-menu-3">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block d-sm-inline-block mb-2 mr-sm-1 mr-lg-0">
+                    <div class="btn-group dropdown">
+                      <button class="btn btn-secondary dropdown-toggle btn-4" type="button" data-toggle="dropdown">Dropdown 4</button>
+                      <div class="dropdown-menu dropdown-menu-4">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-block d-sm-inline-block mb-2 mr-sm-1 mr-lg-0">
+                    <div class="btn-group dropdown">
+                      <button class="btn btn-secondary dropdown-toggle btn-5" type="button" data-toggle="dropdown">Dropdown 5</button>
+                      <div class="dropdown-menu dropdown-menu-5">
+	<a class="dropdown-item" href="#">Menu item 1</a>
+	<a class="dropdown-item" href="#">Menu item 2</a>
+	<a class="dropdown-item" href="#">Menu item 3</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-5&#x22;&#x3E;&#x3C;/div&#x3E;</code></pre>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="pt-3" id="responsive">
+                <div id="responsive-description">
+                  <h2 class="h3 fw-400">Responsive dropdown menu sizes</h2>
+                </div>
+                <div id="responsive-example">
+                  <div class="card card-body bg-light mb-3">
+                    <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-sm-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-md-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-lg-5&#x22;&#x3E;&#x3C;/div&#x3E;
+
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-1&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-2&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-3&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-4&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;dropdown-menu dropdown-menu-xl-5&#x22;&#x3E;&#x3C;/div&#x3E;
+</code></pre>
+                  </div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </article>
+          </main>
+        </div>
+        <div class="col-md-2">
+          <aside class="contents-nav sidebar sidebar-light sidebar-expand-lg py-0 position-fixed" role="complementary">
+            <ul class="sidebar-nav nav-tree nav-tabs nav-tabs-material nav-tabs-right nav-y-2 fs-2">
+              <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
+              <li class="nav-item"><a class="nav-link" href="#example">Example</a></li>
+              <li class="nav-item"><a class="nav-link" href="#responsive">Responsive</a></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </div>
+    <footer class="pt-gutter d-block d-md-none" role="contentinfo">
+      <nav class="contents-nav navbar navbar-2 navbar-expand-xs navbar-light px-sm-0 fixed-bottom border-top bg-white" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-scroller">
+            <ul class="navbar-nav navbar-nav-left navbar-scroller-nav">
+              <li class="nav-item"><a class="nav-link" href="/postboot/background/">Background</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/badge/">Badge</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/border/">Border</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/breadcrumb/">Breadcrumb</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/button/">Button</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/card/">Card</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/collapse/">Collapse</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/dropdown/">Dropdown</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/flex/">Flex</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/font/">Font</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/form/">Form</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/grid/">Grid</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/list-group/">List group</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/nav/">Nav</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/navbar/">Navbar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/pagination/">Pagination</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/position/">Position</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/progress/">Progress</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/scrollspy/">ScrollSpy</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/sidebar/">Sidebar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/size/">Size</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/text/">Text</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/triple-bar/">Triple bar</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/type/">Typography</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </footer>
+    <script src="/postboot/assets/js/app.min.js"></script>
+  </body>
+</html>

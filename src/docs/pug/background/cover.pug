@@ -1,0 +1,13 @@
+extends ../example.pug
+
+block example_description
+  +example_description('background', 'cover')
+  p Add #[code.fs-2 .bg-cover] class to any element which uses #[strong background-image] property.
+
+block example_result
+  .bg-cover.w-100(style="background-image: url(/" + pkg.name + "/assets/img/home.jpg);background-repeat: no-repeat;background-position: top left;height: 200px;")
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .bg-cover

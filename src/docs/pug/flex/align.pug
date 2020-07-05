@@ -1,0 +1,53 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('flex', 'align')
+
+block example_result
+  each align in ['center', 'y-center']
+    .mb-3.bg-dark.p-3(class='flex-' + align style="height: 150px")
+      - for(var i = 1; i <= 3; i++)
+        .p-2.mr-1.bg-primary.text-white= 'Item ' + i
+  each align in ['x-center', 'left', 'right', 'between', 'around']
+    .mb-3.bg-dark.p-3(class='flex-' + align)
+      - for(var i = 1; i <= 3; i++)
+        .p-2.mr-1.bg-primary.text-white= 'Item ' + i
+  each align in ['top', 'bottom', 'baseline', 'stretch']
+    .mb-3.bg-dark.p-3(class='flex-' + align style="height: 150px")
+      - for(var i = 1; i <= 3; i++)
+        .p-2.mr-1.bg-primary.text-white= 'Item ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .flex-center
+    .flex-y-center
+    .flex-x-center
+    .flex-left
+    .flex-right
+    .flex-between
+    .flex-around
+    .flex-top
+    .flex-bottom
+    .flex-baseline
+    .flex-stretch
+
+block responsive_description
+  h2.h3.fw-400 Responsive flex align
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      div(class='flex-' + breakpoint + '-center')
+      div(class='flex-y-' + breakpoint + '-center')
+      div(class='flex-x-' + breakpoint + '-center')
+      div(class='flex-' + breakpoint + '-left')
+      div(class='flex-' + breakpoint + '-right')
+      div(class='flex-' + breakpoint + '-between')
+      div(class='flex-' + breakpoint + '-around')
+      div(class='flex-' + breakpoint + '-top')
+      div(class='flex-' + breakpoint + '-bottom')
+      div(class='flex-' + breakpoint + '-baseline')
+      div(class='flex-' + breakpoint + '-stretch')
+      ="\n"

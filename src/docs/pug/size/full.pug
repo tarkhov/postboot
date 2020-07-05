@@ -1,0 +1,46 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('size', 'full')
+
+block example_result
+  div(style="width: 100px;height: 100px;")
+    .s-100.bg-state-primary.text-state-primary.border.border-primary
+      .flex-center.s-100
+        div 100%
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .s-100
+    .ms-100
+    .min-s-100
+    .min-vs-100
+    .vs-100
+
+block responsive_description
+  h2.h3.fw-400 Responsive full width and height
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    .s-100
+    .ms-100
+    .min-s-100
+    .min-vs-100
+    .vs-100
+    ="\n"
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      div(class="s-" + breakpoint + "-100")
+      div(class="ms-" + breakpoint + "-100")
+      div(class="min-s-" + breakpoint + "-100")
+      div(class="min-vs-" + breakpoint + "-100")
+      div(class="vs-" + breakpoint + "-100")
+      ="\n"
+      each length in ['w', 'h']
+        div(class=length + "-" + breakpoint + "-100")
+        div(class="m" + length + "-" + breakpoint + "-100")
+        div(class="min-v" + length + "-" + breakpoint + "-100")
+        div(class="v" + length + "-" + breakpoint + "-100")
+        ="\n"
+      ="\n"

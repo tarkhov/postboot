@@ -1,4 +1,0 @@
-// Opacity
-@mixin badge-opacity-variant($color, $alpha) {
-  @include badge-variant(rgba($color, $alpha));
-}

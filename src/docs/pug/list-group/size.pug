@@ -1,0 +1,27 @@
+extends ../example-responsive.pug
+
+block example_description
+  +example_description('list_group', 'size')
+
+block example_result
+  .row
+    - for(var size = 1; size <= 5; size++)
+      .mb-gutter.col-12(class='col-md-' + (size <= 3 ? 4 : 6))
+        +list_group_variant(size)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var size = 1; size <= 5; size++)
+      .list-group(class='list-group-' + size)
+
+block responsive_description
+  h2.h3.fw-400 Responsive list group sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 5; size++)
+        .list-group(class='list-group-' + breakpoint + '-' + size)
+      ="\n"

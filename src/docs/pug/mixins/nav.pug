@@ -1,0 +1,17 @@
+mixin nav(classes)
+  ul.nav(class=classes)
+    - for(var i = 1; i <= 3; i++)
+      li.nav-item
+        a.nav-link(href='#' class={ active: i === 1 })= 'Item ' + i
+
+mixin responsive_nav(classes)
+  ul.nav(class=classes)
+    - for(var i = 1; i <= 3; i++)
+      li.nav-item
+        a.nav-link(href='#' class={ active: i === 1, 'd-none d-sm-block': i > 2 })= 'Item ' + i
+
+mixin nav_size(size)
+  +nav(['nav-pills', 'nav-' + size, 'mb-3'])
+
+mixin responsive_nav_size(size)
+  +responsive_nav(['nav-pills', 'nav-' + size, 'mb-3'])

@@ -1,0 +1,21 @@
+extends ../example.pug
+
+block example_description
+  +example_description('list_group', 'horizontal_flush')
+
+block example_result
+  .d-none.d-lg-block
+    +list_group(['list-group-horizontal', 'list-group-horizontal-flush', 'text-center'])
+  .d-none.d-sm-block.d-lg-none
+    .list-group.list-group-horizontal.list-group-horizontal-flush.text-center
+      - for(var i = 1; i <= 3; i++)
+        +list_group_item('List item ' + i)
+  .d-block.d-sm-none
+    .list-group.list-group-horizontal.list-group-horizontal-flush.text-center
+      - for(var i = 1; i <= 2; i++)
+        +list_group_item('List item ' + i)
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .list-group.list-group-horizontal.list-group-horizontal-flush
