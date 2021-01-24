@@ -67,43 +67,88 @@
           <main role="main">
             <article role="article">
               <div id="description">
-                <h1 class="h2 fw-400">Dropdown hover</h1>
-                <p class="fs-4 mb-4">Dropdown on hover has been deleted from a while ago in favor of mobile devices, but we returned this opportunity.</p>
-                <div class="alert alert-primary">This component requires <b>bootstrap.js</b> and <b>postboot.js</b> or just <b>dropdown.js</b> and <b>dropdown-hover.js</b>.</div>
+                <h1 class="h2 fw-400">Card table</h1>
+                <p class="fs-4 mb-4">Tables formatted for the card.</p>
               </div>
               <div class="card mb-3" id="example">
-                <div class="card-body">
-                  <div class="btn-group dropdown dropdown-hover">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown">Hover</button>
-                    <div class="dropdown-menu">
-	<a class="dropdown-item" href="#">Menu item 1</a>
-	<a class="dropdown-item" href="#">Menu item 2</a>
-	<a class="dropdown-item" href="#">Menu item 3</a>
-                    </div>
-                  </div>
+                <div class="table-responsive">
+                  <table class="table table-bordered card-table mb-0">
+                    <thead>
+                      <tr>
+                        <th>Head 1</th>
+                        <th>Head 2</th>
+                        <th>Head 3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Column 1</td>
+                        <td>Column 2</td>
+                        <td>Column 3</td>
+                      </tr>
+                      <tr>
+                        <td>Column 1</td>
+                        <td>Column 2</td>
+                        <td>Column 3</td>
+                      </tr>
+                      <tr>
+                        <td>Column 1</td>
+                        <td>Column 2</td>
+                        <td>Column 3</td>
+                      </tr>
+                      <tr>
+                        <td>Column 1</td>
+                        <td>Column 2</td>
+                        <td>Column 3</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div class="card-footer">
                   <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;btn-group dropdown dropdown-hover&#x22;&#x3E;
-  &#x3C;button class=&#x22;btn btn-secondary dropdown-toggle&#x22; type=&#x22;button&#x22; data-hover=&#x22;dropdown&#x22;&#x3E;Hover&#x3C;/button&#x3E;
-  &#x3C;div class=&#x22;dropdown-menu&#x22;&#x3E;&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;card&#x22;&#x3E;
+  &#x3C;div class=&#x22;table-responsive&#x22;&#x3E;
+    &#x3C;table class=&#x22;table table-bordered card-table mb-0&#x22;&#x3E;
+      &#x3C;thead&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;th&#x3E;Head 1&#x3C;/th&#x3E;
+          &#x3C;th&#x3E;Head 2&#x3C;/th&#x3E;
+          &#x3C;th&#x3E;Head 3&#x3C;/th&#x3E;
+          &#x3C;th&#x3E;Head 4&#x3C;/th&#x3E;
+        &#x3C;/tr&#x3E;
+      &#x3C;/thead&#x3E;
+      &#x3C;tbody&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;td&#x3E;Column 1&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 2&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 3&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 4&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;td&#x3E;Column 1&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 2&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 3&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 4&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;td&#x3E;Column 1&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 2&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 3&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 4&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+        &#x3C;tr&#x3E;
+          &#x3C;td&#x3E;Column 1&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 2&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 3&#x3C;/td&#x3E;
+          &#x3C;td&#x3E;Column 4&#x3C;/td&#x3E;
+        &#x3C;/tr&#x3E;
+      &#x3C;/tbody&#x3E;
+    &#x3C;/table&#x3E;
+  &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre>
                 </div>
               </div>
               <div class="clearfix"></div>
-              <h2 class="h3 fw-400 pt-3">Dropdown disable click event</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="card card-body bg-light mb-3">
-                <pre class="pre-scrollable"><code class="language-javascript"><pre><code class="language-javascript">jQuery(document).ready(function ($) {
-  $(document).off(&#39;.dropdown.data-api&#39;);
-  $(document).on(&#39;show.bs.dropdown&#39;, &#39;.dropdown-hover&#39;, function (e) {
-    var events = $._data(e.relatedTarget, &#39;events&#39;);
-    if (events) {
-      $(e.relatedTarget).off(&#39;click.bs.dropdown&#39;);
-    }
-  });
-});</code></pre></code></pre>
-              </div>
             </article>
           </main>
         </div>

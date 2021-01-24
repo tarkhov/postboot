@@ -54,19 +54,19 @@ html(lang="en")
     block content
       .container-fluid.container-xl
         .row
-          .col-md-2
+          .col-md.col-md-auto.col-lg-2
             aside.sidebar.sidebar-light.py-0.d-none.d-md-block(role="complementary")
               block sidebar_left
                 ul.sidebar-nav.nav-x-0.nav-y-2
                   each category in contents
                     li.nav-item
                       a.nav-link(href='/' + pkg.name + '/' + category.url + '/' class=url=="/" + category.url + "/" ? "active": "")= category.name
-          .col-md-10.col-lg-8
+          .col-12.col-md.col-lg-8
             block breadcrumb
             main(role="main")
               article(role="article")
                 block main
-          .col-md-2
+          .col-lg-2
             aside.contents-nav.sidebar.sidebar-light.sidebar-expand-lg.py-0.position-fixed(role="complementary")
               block sidebar_right
 

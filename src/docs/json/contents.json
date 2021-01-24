@@ -330,6 +330,14 @@
         "description": "Responsive card and card components size is possible to change now.",
         "title": "Card sizes",
         "name": "Sizes"
+      },
+      "table": {
+        "url": "table",
+        "template": "table",
+        "image": "table.png",
+        "description": "Tables formatted for the card.",
+        "title": "Card table",
+        "name": "Table"
       }
     }
   },

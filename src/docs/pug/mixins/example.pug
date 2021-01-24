@@ -28,22 +28,34 @@ mixin new_component_description(componentName)
 
 mixin example_card(componentName, component, example)
   - var url = '/' + pkg.name + '/' + component.url + '/' + example.url + '/'
-  .col-12.col-sm-6.d-sm-flex.mb-gutter
-    .card.w-100
-      .card-body.d-sm-flex.flex-sm-column
-        a.d-block(href=url)
-          img.img-fluid.extension-image(
-            src="/" + pkg.name + "/assets/img/component/" + componentName + "/" + example.image
-            width="303px"
-            alt=component.name + " " + example.name.toLowerCase()
-          )
-        a.extension-name.card-title.d-block.fs-4.fw-500.text-body.text-hover-primary.text-decoration-none(
+  .col-6.d-flex.mb-gutter-md-3.mb-gutter-2
+    .card.card-md-3.card-sm-2.card-1.w-100.border-hover-primary
+      .card-body.d-flex.flex-column
+        img.img-fluid.extension-image(
+          src="/" + pkg.name + "/assets/img/component/" + componentName + "/" + example.image
+          width="303px"
+          alt=component.name + " " + example.name.toLowerCase()
+        )
+        a(
+          class=[
+            'extension-name',
+            'card-title',
+            'd-block',
+            'fs-md-4',
+            'fs-sm-3',
+            'fs-2',
+            'fw-500',
+            'text-body',
+            'text-hover-primary',
+            'text-decoration-none',
+            'stretched-link'
+          ]
           href=url
         )= example.name
         p.card-text= example.description
 
 mixin component_examples(componentName)
   - var component = contents[componentName]
-  .row
+  .row-md-3.row-1
     each example in component.examples
       +example_card(componentName, component, example)
