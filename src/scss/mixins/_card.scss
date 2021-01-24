@@ -101,3 +101,8 @@
     padding: $padding-x;
   }
 }
+
+// Body size
+@mixin card-body-size($padding) {
+  padding: $padding !important;
+}

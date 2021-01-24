@@ -331,6 +331,14 @@
         "title": "Card sizes",
         "name": "Sizes"
       },
+      "body_size": {
+        "url": "body-sizes",
+        "template": "body-size",
+        "image": "body-size.png",
+        "description": "Responsive card body sizes.",
+        "title": "Card body sizes",
+        "name": "Body sizes"
+      },
       "table": {
         "url": "table",
         "template": "table",

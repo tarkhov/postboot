@@ -35,6 +35,6 @@ block responsive_code
   :encode-pug
     | <!-- Source -->
     each breakpoint in ['sm', 'md', 'lg', 'xl']
-      - for(var size = 1; size <= 3; size++)
+      - for(var size = 1; size <= 5; size++)
         .card(class="card-" + breakpoint + '-' + size)
       ="\n"

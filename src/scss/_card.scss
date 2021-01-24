@@ -42,6 +42,19 @@
   }
 }
 
+// Body sizes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+
+    @each $size, $card in $card-sizes {
+      .card-body#{$infix}-#{$size} {
+        @include card-body-size(map-get($card, 'padding-x'));
+      }
+    }
+  }
+}
+
 // Pill
 .card-pill {
   @include border-radius($border-radius-pill);
