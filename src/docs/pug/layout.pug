@@ -60,7 +60,16 @@ html(lang="en")
                 ul.sidebar-nav.nav-x-0.nav-y-2
                   each category in contents
                     li.nav-item
-                      a.nav-link(href='/' + pkg.name + '/' + category.url + '/' class=url=="/" + category.url + "/" ? "active": "")= category.name
+                      a.nav-link(
+                        href='/' + pkg.name + '/' + category.url + '/'
+                        class=[
+                          url=="/" + category.url + "/" ? "active": "",
+                          category.new ? 'flex-y-center' : ''
+                        ]
+                      )
+                        span= category.name
+                        if category.new
+                          span.badge.badge-success.text-uppercase.ml-2 New
           .col-12.col-md.col-lg-8
             block breadcrumb
             main(role="main")

@@ -421,6 +421,7 @@
     "template": "flex",
     "name": "Flex",
     "description": "More complex flex utilities and simpler class names.",
+    "new": true,
     "examples": {
       "align": {
         "url": "align",
@@ -786,6 +787,13 @@
         "image": "size.png",
         "description": "Responsive progress bar height, padding and font size.",
         "name": "Sizes"
+      },
+      "vertical": {
+        "url": "vertical",
+        "template": "vertical",
+        "image": "size.png",
+        "description": "Vertical progress bar.",
+        "name": "Vertical"
       }
     }
   },
@@ -809,6 +817,7 @@
     "template": "sidebar",
     "name": "Sidebar",
     "description": "A completely new component in the best traditions of Bootstrap taking inspiration from the navbar component.",
+    "new": true,
     "examples": {
       "color": {
         "url": "colors",
@@ -910,6 +919,7 @@
     "template": "tribar",
     "name": "Triple bar",
     "description": "Modern hamburger menu with a variety of color choices and the ability to change the icon depending on the status of the menu.",
+    "new": true,
     "examples": {
       "tribar": {
         "url": "icon-without-image",

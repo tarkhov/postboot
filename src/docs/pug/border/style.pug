@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('border', 'style')
+
+block meta_description
+  +example_meta_description('border', 'style')
+
+block breadcrumb
+  +example_breadcrumb('border')
+
 block example_description
   +example_description('border', 'style')
 

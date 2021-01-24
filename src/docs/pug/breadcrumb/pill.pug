@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('breadcrumb', 'pill')
+
+block meta_description
+  +example_meta_description('breadcrumb', 'pill')
+
+block breadcrumb
+  +example_breadcrumb('breadcrumb')
+
 block example_description
   +example_description('breadcrumb', 'pill')
 

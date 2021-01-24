@@ -15810,106 +15810,163 @@
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.5); }
 
+.progress-vertical {
+  width: 1rem;
+  -ms-flex-align: end;
+      align-items: flex-end; }
+  .progress-vertical .progress-bar {
+    width: 100%; }
+
 .progress-1 {
   font-size: 0.6rem;
   height: 0.75rem; }
+  .progress-1.progress-vertical {
+    width: 0.75rem; }
 
 .progress-2 {
   font-size: 0.75rem;
   height: 1rem; }
+  .progress-2.progress-vertical {
+    width: 1rem; }
 
 .progress-3 {
   font-size: 1rem;
   height: 1.25rem; }
+  .progress-3.progress-vertical {
+    width: 1.25rem; }
 
 .progress-4 {
   font-size: 1.25rem;
   height: 1.5rem; }
+  .progress-4.progress-vertical {
+    width: 1.5rem; }
 
 .progress-5 {
   font-size: 1.5rem;
   height: 1.75rem; }
+  .progress-5.progress-vertical {
+    width: 1.75rem; }
 
 @media (min-width: 576px) {
   .progress-sm-1 {
     font-size: 0.6rem;
     height: 0.75rem; }
+    .progress-sm-1.progress-vertical {
+      width: 0.75rem; }
 
   .progress-sm-2 {
     font-size: 0.75rem;
     height: 1rem; }
+    .progress-sm-2.progress-vertical {
+      width: 1rem; }
 
   .progress-sm-3 {
     font-size: 1rem;
     height: 1.25rem; }
+    .progress-sm-3.progress-vertical {
+      width: 1.25rem; }
 
   .progress-sm-4 {
     font-size: 1.25rem;
     height: 1.5rem; }
+    .progress-sm-4.progress-vertical {
+      width: 1.5rem; }
 
   .progress-sm-5 {
     font-size: 1.5rem;
-    height: 1.75rem; } }
+    height: 1.75rem; }
+    .progress-sm-5.progress-vertical {
+      width: 1.75rem; } }
 @media (min-width: 768px) {
   .progress-md-1 {
     font-size: 0.6rem;
     height: 0.75rem; }
+    .progress-md-1.progress-vertical {
+      width: 0.75rem; }
 
   .progress-md-2 {
     font-size: 0.75rem;
     height: 1rem; }
+    .progress-md-2.progress-vertical {
+      width: 1rem; }
 
   .progress-md-3 {
     font-size: 1rem;
     height: 1.25rem; }
+    .progress-md-3.progress-vertical {
+      width: 1.25rem; }
 
   .progress-md-4 {
     font-size: 1.25rem;
     height: 1.5rem; }
+    .progress-md-4.progress-vertical {
+      width: 1.5rem; }
 
   .progress-md-5 {
     font-size: 1.5rem;
-    height: 1.75rem; } }
+    height: 1.75rem; }
+    .progress-md-5.progress-vertical {
+      width: 1.75rem; } }
 @media (min-width: 992px) {
   .progress-lg-1 {
     font-size: 0.6rem;
     height: 0.75rem; }
+    .progress-lg-1.progress-vertical {
+      width: 0.75rem; }
 
   .progress-lg-2 {
     font-size: 0.75rem;
     height: 1rem; }
+    .progress-lg-2.progress-vertical {
+      width: 1rem; }
 
   .progress-lg-3 {
     font-size: 1rem;
     height: 1.25rem; }
+    .progress-lg-3.progress-vertical {
+      width: 1.25rem; }
 
   .progress-lg-4 {
     font-size: 1.25rem;
     height: 1.5rem; }
+    .progress-lg-4.progress-vertical {
+      width: 1.5rem; }
 
   .progress-lg-5 {
     font-size: 1.5rem;
-    height: 1.75rem; } }
+    height: 1.75rem; }
+    .progress-lg-5.progress-vertical {
+      width: 1.75rem; } }
 @media (min-width: 1200px) {
   .progress-xl-1 {
     font-size: 0.6rem;
     height: 0.75rem; }
+    .progress-xl-1.progress-vertical {
+      width: 0.75rem; }
 
   .progress-xl-2 {
     font-size: 0.75rem;
     height: 1rem; }
+    .progress-xl-2.progress-vertical {
+      width: 1rem; }
 
   .progress-xl-3 {
     font-size: 1rem;
     height: 1.25rem; }
+    .progress-xl-3.progress-vertical {
+      width: 1.25rem; }
 
   .progress-xl-4 {
     font-size: 1.25rem;
     height: 1.5rem; }
+    .progress-xl-4.progress-vertical {
+      width: 1.5rem; }
 
   .progress-xl-5 {
     font-size: 1.5rem;
-    height: 1.75rem; } }
+    height: 1.75rem; }
+    .progress-xl-5.progress-vertical {
+      width: 1.75rem; } }
 .list-group-striped .list-group-item:nth-child(even) {
   background-color: #f8f9fa; }
 

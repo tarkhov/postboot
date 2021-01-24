@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('dropdown', 'disable_caret')
+
+block meta_description
+  +example_meta_description('dropdown', 'disable_caret')
+
+block breadcrumb
+  +example_breadcrumb('dropdown')
+
 block example_description
   +example_description('dropdown', 'disable_caret')
 

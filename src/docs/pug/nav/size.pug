@@ -1,5 +1,14 @@
 extends ../example-responsive.pug
 
+block head_title
+  +example_head_title('nav', 'size')
+
+block meta_description
+  +example_meta_description('nav', 'size')
+
+block breadcrumb
+  +example_breadcrumb('nav')
+
 block example_description
   +example_description('nav', 'size')
 

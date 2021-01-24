@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('collapse', 'horizontal')
+
+block meta_description
+  +example_meta_description('collapse', 'horizontal')
+
+block breadcrumb
+  +example_breadcrumb('collapse')
+
 block example_description
   +example_description('collapse', 'horizontal')
 

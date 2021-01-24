@@ -515,37 +515,48 @@ $card-sizes: map-merge((
 ), $card-sizes);
 
 // Progress
+$progress-width: $progress-height !default;
+
 $progress-height-xs:    .75rem !default;
+$progress-width-xs:     $progress-height-xs !default;
 $progress-font-size-xs: .6rem !default;
 
 $progress-height-md:    1.25rem !default;
+$progress-width-md:     $progress-height-md !default;
 $progress-font-size-md: 1rem !default;
 
 $progress-height-lg:    1.5rem !default;
+$progress-width-lg:     $progress-height-lg !default;
 $progress-font-size-lg: 1.25rem !default;
 
 $progress-height-xl:    1.75rem !default;
+$progress-width-xl:     $progress-height-xl !default;
 $progress-font-size-xl: 1.5rem !default;
 
 $progress-sizes: () !default;
 $progress-sizes: map-merge((
   1: (
+    'width': $progress-width-xs,
     'height': $progress-height-xs,
     'font-size': $progress-font-size-xs
   ),
   2: (
+    'width': $progress-width,
     'height': $progress-height,
     'font-size': $progress-font-size
   ),
   3: (
+    'width': $progress-width-md,
     'height': $progress-height-md,
     'font-size': $progress-font-size-md
   ),
   4: (
+    'width': $progress-width-lg,
     'height': $progress-height-lg,
     'font-size': $progress-font-size-lg
   ),
   5: (
+    'width': $progress-width-xl,
     'height': $progress-height-xl,
     'font-size': $progress-font-size-xl
   )

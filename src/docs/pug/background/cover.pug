@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('background', 'cover')
+
+block meta_description
+  +example_meta_description('background', 'cover')
+
+block breadcrumb
+  +example_breadcrumb('background')
+
 block example_description
   +example_description('background', 'cover')
   p Add #[code.fs-2 .bg-cover] class to any element which uses #[strong background-image] property.

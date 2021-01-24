@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Navbar scrollable based on Bootstrap 4</title>
-    <meta name="description" content="Scrollable navbar nav."/>
+    <title>Progress vertical based on Bootstrap 4</title>
+    <meta name="description" content="Vertical progress bar."/>
     <meta name="author" content="Alexander Tarkhov">
     <link rel="apple-touch-icon" href="/postboot/assets/img/apple-touch-icon.png">
     <link rel="icon" href="/postboot/assets/img/favicon.ico">
@@ -71,7 +71,7 @@
               <li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-link" href="/postboot/" itemprop="item"><span itemprop="name">Home</span></a>
                 <meta itemprop="position" content="1"/>
               </li>
-              <li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-link" href="/postboot/navbar/" itemprop="item"><span itemprop="name">Navbar</span></a>
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-link" href="/postboot/progress/" itemprop="item"><span itemprop="name">Progress</span></a>
                 <meta itemprop="position" content="2"/>
               </li>
             </ol>
@@ -79,53 +79,40 @@
           <main role="main">
             <article role="article">
               <div id="description">
-                <h1 class="h2 fw-400">Navbar scrollable based on Bootstrap 4</h1>
-                <p class="fs-4 mb-4">Scrollable navbar nav.</p>
-                <div class="alert alert-primary" role="alert">Works only on touch devices like <b>tablet</b> and <b>phone</b>.</div>
+                <h1 class="h2 fw-400">Progress vertical based on Bootstrap 4</h1>
+                <p class="fs-4 mb-4">Vertical progress bar.</p>
               </div>
               <div class="card mb-3" id="example">
                 <div class="card-body">
-                  <div class="navbar navbar-expand-xs navbar-dark bg-dark px-0">
-                    <div class="container-fluid navbar-container">
-                      <div class="navbar-scroller">
-                        <ul class="navbar-nav navbar-scroller-nav">
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 1</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 2</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 3</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 4</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 5</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 6</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 7</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 8</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 9</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 10</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 11</a></li>
-                          <li class="nav-item"><a class="nav-link" href="#">Nav item 12</a></li>
-                        </ul>
-                      </div>
+                  <div class="d-flex">
+                    <div class="progress progress-vertical mr-gutter" style="height:300px;">
+                      <div class="progress-bar" style="height:25%;"></div>
+                    </div>
+                    <div class="progress progress-vertical mr-gutter" style="height:300px;">
+                      <div class="progress-bar" style="height:50%;"></div>
+                    </div>
+                    <div class="progress progress-vertical mr-gutter" style="height:300px;">
+                      <div class="progress-bar" style="height:75%;"></div>
+                    </div>
+                    <div class="progress progress-vertical mr-gutter" style="height:300px;">
+                      <div class="progress-bar" style="height:100%;"></div>
                     </div>
                   </div>
                 </div>
                 <div class="card-footer">
                   <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
-&#x3C;div class=&#x22;navbar navbar-expand-xs navbar-dark bg-dark px-0&#x22;&#x3E;
-  &#x3C;div class=&#x22;container-fluid navbar-container&#x22;&#x3E;
-    &#x3C;div class=&#x22;navbar-scroller&#x22;&#x3E;
-      &#x3C;ul class=&#x22;navbar-nav navbar-scroller-nav&#x22;&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 1&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 4&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 5&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 6&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 7&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 8&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 9&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 10&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 11&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Nav item 12&#x3C;/a&#x3E;&#x3C;/li&#x3E;
-      &#x3C;/ul&#x3E;
-    &#x3C;/div&#x3E;
+&#x3C;div class=&#x22;d-flex&#x22;&#x3E;
+  &#x3C;div class=&#x22;progress progress-vertical mr-gutter&#x22; style=&#x22;height:300px;&#x22;&#x3E;
+    &#x3C;div class=&#x22;progress-bar&#x22; style=&#x22;height:25%;&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;progress progress-vertical mr-gutter&#x22; style=&#x22;height:300px;&#x22;&#x3E;
+    &#x3C;div class=&#x22;progress-bar&#x22; style=&#x22;height:50%;&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;progress progress-vertical mr-gutter&#x22; style=&#x22;height:300px;&#x22;&#x3E;
+    &#x3C;div class=&#x22;progress-bar&#x22; style=&#x22;height:75%;&#x22;&#x3E;&#x3C;/div&#x3E;
+  &#x3C;/div&#x3E;
+  &#x3C;div class=&#x22;progress progress-vertical mr-gutter&#x22; style=&#x22;height:300px;&#x22;&#x3E;
+    &#x3C;div class=&#x22;progress-bar&#x22; style=&#x22;height:100%;&#x22;&#x3E;&#x3C;/div&#x3E;
   &#x3C;/div&#x3E;
 &#x3C;/div&#x3E;</code></pre>
                 </div>

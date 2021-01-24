@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('type', 'heading_responsive')
+
+block meta_description
+  +example_meta_description('type', 'heading_responsive')
+
+block breadcrumb
+  +example_breadcrumb('type')
+
 block example_description
   +example_description('type', 'heading_responsive')
 
