@@ -33,3 +33,7 @@ code {
   padding-left: .6rem;
   padding-right: .6rem;
 }
+
+#sidebar-left .sidebar-nav .nav-item:first-child .nav-link {
+  padding-top: 0;
+}

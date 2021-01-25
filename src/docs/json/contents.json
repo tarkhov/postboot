@@ -791,7 +791,7 @@
       "vertical": {
         "url": "vertical",
         "template": "vertical",
-        "image": "size.png",
+        "image": "vertical.png",
         "description": "Vertical progress bar.",
         "name": "Vertical"
       }
