@@ -37,3 +37,10 @@ code {
 #sidebar-left .sidebar-nav .nav-item:first-child .nav-link {
   padding-top: 0;
 }
+
+.example-title,
+.component-title {
+  @include media-breakpoint-down(md) {
+    line-height: 1.3;
+  }
+}

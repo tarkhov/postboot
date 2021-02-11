@@ -11,7 +11,7 @@ mixin example_meta_description(componentName, exampleName)
 mixin example_breadcrumb(componentName)
   - var component = contents[componentName]
   nav(role="navigation")
-    ol.breadcrumb.breadcrumb-light.breadcrumb-rsaquo.bg-transparent.p-0.mb-2(itemscope itemtype="http://schema.org/BreadcrumbList")
+    ol.breadcrumb.breadcrumb-light.breadcrumb-rsaquo.bg-transparent.p-0.mb-2.fs-2(itemscope itemtype="http://schema.org/BreadcrumbList")
       li.breadcrumb-item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.breadcrumb-link(href='/' + pkg.name + '/' itemprop="item") #[span(itemprop="name") Home]
         meta(itemprop="position" content="1")
@@ -22,7 +22,7 @@ mixin example_breadcrumb(componentName)
 mixin example_description(componentName, exampleName)
   - var component = contents[componentName]
   - var example = component.examples[exampleName]
-  h1.h2.fw-400= component.name + ' ' + example.name.toLowerCase() + ' based on Bootstrap 4'
+  h1.h2-lg.h3.fw-400.example-title= component.name + ' ' + example.name.toLowerCase() + ' based on Bootstrap 4'
   p.fs-4.mb-4= example.description
 
 mixin component_head_title(componentName)
@@ -35,7 +35,7 @@ mixin component_meta_description(componentName)
 
 mixin component_description(componentName)
   - var component = contents[componentName]
-  h1.h2.fw-400= component.name + ' features for Bootstrap 4'
+  h1.h2-lg.h3.fw-400.component-title= component.name + ' features for Bootstrap 4'
   p.fs-4.mb-4= component.description
 
 mixin new_component_description(componentName)
