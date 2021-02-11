@@ -75,6 +75,6 @@ mixin example_card(componentName, component, example)
 
 mixin component_examples(componentName)
   - var component = contents[componentName]
-  .row-md-3.row-1
+  .row-md-2.row-1
     each example in component.examples
       +example_card(componentName, component, example)

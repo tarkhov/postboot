@@ -70,12 +70,12 @@ html(lang="en")
                         span= category.name
                         if category.new
                           span.badge.badge-success.text-uppercase.ml-2 New
-          .col-12.col-md.col-lg-8
+          .col-12.col-md-9.col-lg-8
             block breadcrumb
             main(role="main")
               article(role="article")
                 block main
-          .col-lg-2
+          .col-lg-2.d-none.d-lg-block
             aside.contents-nav.sidebar.sidebar-light.sidebar-expand-lg.py-0.position-fixed(role="complementary")
               block sidebar_right
 
