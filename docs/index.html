@@ -16,7 +16,7 @@
   <body class="pt-navbar pb-navbar-2 pb-md-0" data-spy="scroll" data-target=".contents-nav">
     <header class="pb-gutter" role="banner">
       <nav class="navbar navbar-expand-xs navbar-light px-sm-0 fixed-top" id="navbar-top" role="navigation">
-        <div class="container-fluid container-xl"><a class="navbar-brand mr-2 mr-sm-3" href="/postboot/" rel="home"><span class="logo rounded py-1 text-white fw-500 bg-purple">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.1</sup></a>
+        <div class="container-fluid container-xl"><a class="navbar-brand mr-2 mr-sm-3" href="/postboot/" rel="home"><span class="logo rounded py-1 text-white fw-500 bg-purple">P</span><span class="d-none d-sm-inline">&nbsp;&nbsp;PostBoot</span><sup class="d-none d-sm-inline text-success">&nbsp;&nbsp;1.0.2</sup></a>
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item dropdown dropdown-hover"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" data-hover="dropdown">Version</a>
@@ -28,7 +28,7 @@
               <li class="nav-item"><a class="nav-link" href="https://medium.com/@postboot" target="_blank" rel="nofollow"><i class="fab fa-medium"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Medium</span></a></li>
               <li class="nav-item"><a class="nav-link" href="https://t.me/postboot" target="_blank" rel="nofollow"><i class="fab fa-telegram-plane"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;Telegram</span></a></li>
               <li class="nav-item"><a class="nav-link" href="https://github.com/tarkhov/postboot" target="_blank" rel="nofollow"><i class="fab fa-github-alt"></i><span class="d-none d-lg-inline">&nbsp;&nbsp;GitHub</span></a></li>
-            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.1/postboot-1.0.1.zip" rel="nofollow">Download</a>
+            </ul><a class="btn btn-primary btn-sm ml-2" href="https://github.com/tarkhov/postboot/releases/download/v1.0.2/postboot.zip" rel="nofollow">Download</a>
           </div>
         </div>
       </nav>
@@ -95,7 +95,7 @@
               <div class="d-inline-block">
                 <div class="card card-body mb-gutter border-hover-primary text-hover-primary" style="width: 250px;">
                   <div class="flex-y-center justify-content-between">
-                    <div><a class="mb-1 fs-4 fw-500 d-block text-body text-decoration-none stretched-link text-hover-primary" href="https://github.com/tarkhov/postboot/releases/download/v1.0.1/postboot-1.0.1.zip">Download</a>
+                    <div><a class="mb-1 fs-4 fw-500 d-block text-body text-decoration-none stretched-link text-hover-primary" href="https://github.com/tarkhov/postboot/releases/download/v1.0.2/postboot.zip">Download</a>
                       <div class="text-muted fs-2">140 Kb</div>
                     </div>
                     <svg class="bi bi-file-arrow-down d-none" width="2rem" height="2rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +111,7 @@
                   </div>
                 </div>
               </div>
-              <div class="alert alert-primary" role="alert">Compatibility and dependency on Bootstrap <b>v4.5.0</b>.</div>
+              <div class="alert alert-primary" role="alert">Compatibility and dependency on Bootstrap <b>>= 4.5.0 and < 5.0</b>.</div>
               <div class="alert alert-success mb-4" role="alert">PostBoot does <b>not overwrite</b> any components of Bootstrap, but only extends most of them. You can use it completely <b>safe</b>.</div>
               <div id="install">
                 <h3 class="fw-400 mb-3">Installation</h3>
@@ -119,17 +119,17 @@
                   <h4 class="fw-400">NodeJS</h4>
                   <div class="card bg-light mb-3">
                     <div class="card-body">
-                      <pre><code class="language-bash">npm install postboot@1.0.1</code></pre>
+                      <pre><code class="language-bash">npm install postboot</code></pre>
                     </div>
                   </div>
                 </div>
                 <div id="install-manually">
                   <h4 class="fw-400">Manually</h4>
-                  <p><a href="https://github.com/tarkhov/postboot/releases/download/v1.0.1/postboot-1.0.1.zip">Download</a> package and unpack it or use following commands:</p>
+                  <p><a href="https://github.com/tarkhov/postboot/releases/download/v1.0.2/postboot.zip">Download</a> package and unpack it or use following commands:</p>
                   <div class="card bg-light mb-3">
                     <div class="card-body">
-                      <pre><code class="language-bash">wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.1/postboot-1.0.1.zip
-unzip postboot-1.0.1.zip</code></pre>
+                      <pre><code class="language-bash">wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.2/postboot.zip
+unzip postboot.zip</code></pre>
                     </div>
                   </div>
                 </div>
@@ -156,14 +156,14 @@ unzip postboot-1.0.1.zip</code></pre>
                   <div class="card bg-light mb-3">
                     <div class="card-body">
                       <pre><code class="language-markup">&#x3C;!-- CSS --&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css&#x22;/&#x3E;
-&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.1/dist/css/postboot.min.css&#x22;/&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css&#x22;/&#x3E;
+&#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.2/dist/css/postboot.min.css&#x22;/&#x3E;
 
 &#x3C;!-- JS --&#x3E;
 &#x3C;script src=&#x22;https://code.jquery.com/jquery-3.5.1.slim.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
-&#x3C;script src=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.1/dist/js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js&#x22;&#x3E;&#x3C;/script&#x3E;
+&#x3C;script src=&#x22;https://cdn.rawgit.com/tarkhov/postboot/v1.0.2/dist/js/postboot.min.js&#x22;&#x3E;&#x3C;/script&#x3E;</code></pre>
                     </div>
                   </div>
                 </div>
