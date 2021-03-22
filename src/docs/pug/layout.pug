@@ -24,7 +24,7 @@ html(lang="en")
       header.pb-gutter(role="banner")
         nav#navbar-top.navbar.navbar-expand-xs.navbar-light.px-sm-0.fixed-top(role="navigation")
           .container-fluid.container-xl
-            a.navbar-brand.mr-2.mr-sm-3(href="/" + pkg.name + '/' rel="home") #[span.rounded.py-1.text-white.fw-500.bg-purple(style="padding-left: .6rem;padding-right: .6rem;") P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
+            a.navbar-brand.mr-2.mr-sm-3(href="/" + pkg.name + '/' rel="home") #[span.logo.rounded.py-1.text-white.fw-500.bg-purple P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
 
             .collapse.navbar-collapse
               ul.navbar-nav.mr-auto
@@ -54,19 +54,28 @@ html(lang="en")
     block content
       .container-fluid.container-xl
         .row
-          .col-md-2
-            aside.sidebar.sidebar-light.py-0.d-none.d-md-block(role="complementary")
+          .col-md.col-md-auto.col-lg-2
+            aside#sidebar-left.sidebar.sidebar-light.py-0.d-none.d-md-block(role="complementary")
               block sidebar_left
                 ul.sidebar-nav.nav-x-0.nav-y-2
                   each category in contents
                     li.nav-item
-                      a.nav-link(href='/' + pkg.name + '/' + category.url + '/' class=url=="/" + category.url + "/" ? "active": "")= category.name
-          .col-md-10.col-lg-8
+                      a.nav-link(
+                        href='/' + pkg.name + '/' + category.url + '/'
+                        class=[
+                          url=="/" + category.url + "/" ? "active": "",
+                          category.new ? 'flex-y-center' : ''
+                        ]
+                      )
+                        span= category.name
+                        if category.new
+                          span.badge.badge-success.text-uppercase.ml-2 New
+          .col-12.col-md-9.col-lg-8
             block breadcrumb
             main(role="main")
               article(role="article")
                 block main
-          .col-md-2
+          .col-lg-2.d-none.d-lg-block
             aside.contents-nav.sidebar.sidebar-light.sidebar-expand-lg.py-0.position-fixed(role="complementary")
               block sidebar_right
 

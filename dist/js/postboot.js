@@ -1,6 +1,6 @@
 /*!
- * PostBoot v1.0.1 (https://tarkhov.github.io/postboot/)
- * Copyright 2016-2020 Alexander Tarkhov
+ * PostBoot v1.0.2 (https://tarkhov.github.io/postboot/)
+ * Copyright 2016-2021 Alexander Tarkhov
  * Licensed under MIT
  */
 if (!('ontouchstart' in document.documentElement)) {

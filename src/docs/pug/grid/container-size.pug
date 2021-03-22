@@ -1,5 +1,14 @@
 extends ../example-responsive.pug
 
+block head_title
+  +example_head_title('grid', 'container_size')
+
+block meta_description
+  +example_meta_description('grid', 'container_size')
+
+block breadcrumb
+  +example_breadcrumb('grid')
+
 block example_description
   +example_description('grid', 'container_size')
 

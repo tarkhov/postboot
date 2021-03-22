@@ -1,5 +1,14 @@
 extends ../example-responsive.pug
 
+block head_title
+  +example_head_title('position', 'spacing')
+
+block meta_description
+  +example_meta_description('position', 'spacing')
+
+block breadcrumb
+  +example_breadcrumb('position')
+
 block example_description
   +example_description('position', 'spacing')
 

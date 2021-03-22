@@ -21,3 +21,15 @@ code {
   .example-card-img-responsive {
     width: 150px;
     height: 100px; } }
+
+.logo {
+  padding-left: .6rem;
+  padding-right: .6rem; }
+
+#sidebar-left .sidebar-nav .nav-item:first-child .nav-link {
+  padding-top: 0; }
+
+@media (max-width: 991.98px) {
+  .example-title,
+  .component-title {
+    line-height: 1.3; } }

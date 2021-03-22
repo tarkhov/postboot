@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('dropdown', 'arrow')
+
+block meta_description
+  +example_meta_description('dropdown', 'arrow')
+
+block breadcrumb
+  +example_breadcrumb('dropdown')
+
 block example_description
   +example_description('dropdown', 'arrow')
   p  Now you can add #[strong arrows] for all directions of the menu using a special class #[code.fs-2 .dropdown-arrow].

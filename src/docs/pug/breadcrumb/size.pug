@@ -1,5 +1,14 @@
 extends ../example-responsive.pug
 
+block head_title
+  +example_head_title('breadcrumb', 'size')
+
+block meta_description
+  +example_meta_description('breadcrumb', 'size')
+
+block breadcrumb
+  +example_breadcrumb('breadcrumb')
+
 block example_description
   +example_description('breadcrumb', 'size')
 

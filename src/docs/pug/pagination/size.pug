@@ -1,5 +1,14 @@
 extends ../example-responsive.pug
 
+block head_title
+  +example_head_title('pagination', 'size')
+
+block meta_description
+  +example_meta_description('pagination', 'size')
+
+block breadcrumb
+  +example_breadcrumb('pagination')
+
 block example_description
   +example_description('pagination', 'size')
 

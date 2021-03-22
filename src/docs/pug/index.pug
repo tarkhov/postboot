@@ -13,7 +13,7 @@ block main
     .col-md-4.mb-gutter
       svg.bi.bi-grid-1x2-fill.mb-4.text-secondary(width="4rem" height="4rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg")
         path(d="M0 1a1 1 0 011-1h5a1 1 0 011 1v14a1 1 0 01-1 1H1a1 1 0 01-1-1V1zm9 0a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1h-5a1 1 0 01-1-1V1zm0 9a1 1 0 011-1h5a1 1 0 011 1v5a1 1 0 01-1 1h-5a1 1 0 01-1-1v-5z")
-      p.mb-0 Reworked adaptive sizes of many Bootstrap components
+      p.mb-0 Flexible adaptive sizes of many Bootstrap components
     .col-md-4.mb-gutter
       svg.bi.bi-circle-half.mb-4.text-success(width="4rem" height="4rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg")
         path(fill-rule="evenodd" d="M8 15V1a7 7 0 000 14zm0 1A8 8 0 108 0a8 8 0 000 16z" clip-rule="evenodd")
@@ -39,7 +39,7 @@ block main
           path(fill-rule="evenodd" d="M5 7.5a.5.5 0 01.707 0L8 9.793 10.293 7.5a.5.5 0 11.707.707l-2.646 2.647a.5.5 0 01-.708 0L5 8.207A.5.5 0 015 7.5z" clip-rule="evenodd")
           path(fill-rule="evenodd" d="M8 1a.5.5 0 01.5.5v8a.5.5 0 01-1 0v-8A.5.5 0 018 1z" clip-rule="evenodd")
   .alert.alert-primary(role="alert")
-    | Compatibility and dependency on Bootstrap #[b v4.5.0].
+    | Compatibility and dependency on Bootstrap #[b >= 4.5.0 and < 5.0].
   .alert.alert-success.mb-4(role="alert")
     | PostBoot does #[b not overwrite] any components of Bootstrap, but only extends most of them. You can use it completely #[b safe].
   #install
@@ -50,7 +50,7 @@ block main
         .card-body
           pre
             code.language-bash
-              ="npm install " + pkg.name + "@" + pkg.version
+              ="npm install " + pkg.name
     #install-manually
       h4.fw-400 Manually
       p #[a(href=downloadUrl) Download] package and unpack it or use following commands:
@@ -59,7 +59,7 @@ block main
           pre
             code.language-bash
               ="wget -O " + downloadUrl + "\n"
-              ="unzip " + pkg.name + "-" + pkg.version + ".zip"
+              ="unzip " + pkg.name + ".zip"
   #usage
     h3.fw-400 Usage
     #usage-local
@@ -85,17 +85,16 @@ block main
             code.language-markup
               :encode-pug
                 | <!-- CSS -->
-                link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css")
+                link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css")
                 link(rel="stylesheet" href="https://cdn.rawgit.com/" + username + "/" + pkg.name + "/v" + pkg.version + "/dist/css/" + pkg.name + ".min.css")
                 ="\n\n"
                 | <!-- JS -->
                 script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js")
-                script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js")
-                script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js")
+                script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js")
+                script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js")
                 script(src="https://cdn.rawgit.com/" + username + "/" + pkg.name + "/v" + pkg.version + "/dist/js/" + pkg.name + ".min.js")
   #requirements
     h3.fw-400.mb-3 Requirements
-    span.badge.badge-success.text-uppercase.mb-3 New
     #requirements-css
       h4.fw-400 CSS
       .card.mb-3

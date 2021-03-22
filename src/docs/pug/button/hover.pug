@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('button', 'hover')
+
+block meta_description
+  +example_meta_description('button', 'hover')
+
+block breadcrumb
+  +example_breadcrumb('button')
+
 block example_description
   +example_description('button', 'hover')
 

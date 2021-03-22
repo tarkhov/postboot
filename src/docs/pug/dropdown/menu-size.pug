@@ -1,5 +1,14 @@
 extends ../example-responsive.pug
 
+block head_title
+  +example_head_title('dropdown', 'menu_size')
+
+block meta_description
+  +example_meta_description('dropdown', 'menu_size')
+
+block breadcrumb
+  +example_breadcrumb('dropdown')
+
 block example_description
   +example_description('dropdown', 'menu_size')
 

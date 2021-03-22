@@ -1,0 +1,42 @@
+extends ../example.pug
+
+block head_title
+  +example_head_title('card', 'table')
+
+block meta_description
+  +example_meta_description('card', 'table')
+
+block breadcrumb
+  +example_breadcrumb('card')
+
+block example_description
+  +example_description('card', 'table')
+
+block example_body
+  .table-responsive
+    table.table.table-bordered.card-table.mb-0
+      thead
+        tr
+          - for(var i = 1; i <= 3; i++)
+            th= 'Head ' + i
+      tbody
+        - for(var r = 1; r <= 4; r++)
+          tr
+            - for(var i = 1; i <= 3; i++)
+              td= 'Column ' + i
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .card
+      .table-responsive
+        table.table.table-bordered.card-table.mb-0
+          thead
+            tr
+              - for(var i = 1; i <= 3; i++)
+                th= 'Head ' + i
+          tbody
+            - for(var r = 1; r <= 4; r++)
+              tr
+                - for(var i = 1; i <= 3; i++)
+                  td= 'Column ' + i

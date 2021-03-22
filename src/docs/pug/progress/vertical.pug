@@ -1,0 +1,27 @@
+extends ../example.pug
+
+block head_title
+  +example_head_title('progress', 'vertical')
+
+block meta_description
+  +example_meta_description('progress', 'vertical')
+
+block breadcrumb
+  +example_breadcrumb('progress')
+
+block example_description
+  +example_description('progress', 'vertical')
+
+block example_result
+  .d-flex
+    - for(var size = 1; size <= 4; size++)
+      .progress.progress-vertical.mr-gutter(style={ height: '300px' })
+        .progress-bar(style={ height: (size * 25) + '%' })
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    .d-flex
+      - for(var size = 1; size <= 4; size++)
+        .progress.progress-vertical.mr-gutter(style={ height: '300px' })
+          .progress-bar(style={ height: (size * 25) + '%' })

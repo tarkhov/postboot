@@ -1,0 +1,39 @@
+extends ../example-responsive.pug
+
+block head_title
+  +example_head_title('card', 'body_size')
+
+block meta_description
+  +example_meta_description('card', 'body_size')
+
+block breadcrumb
+  +example_breadcrumb('card')
+
+block example_description
+  +example_description('card', 'body_size')
+
+block example_result
+  .row
+    - for(var i = 1; i <= 5; i++)
+      .col-12.col-md-6
+        .card.mb-gutter
+          .card-body(class="card-body-" + i)
+            h4.card-title Example title
+            p.card-text Example text
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    - for(var i = 1; i <= 5; i++)
+      .card-body(class="card-body-" + i)
+
+block responsive_description
+  h2.h3.fw-400 Responsive card body sizes
+
+block responsive_code
+  :encode-pug
+    | <!-- Source -->
+    each breakpoint in ['sm', 'md', 'lg', 'xl']
+      - for(var size = 1; size <= 5; size++)
+        .card-body(class="card-body-" + breakpoint + '-' + size)
+      ="\n"

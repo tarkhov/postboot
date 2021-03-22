@@ -42,6 +42,19 @@
   }
 }
 
+// Body sizes
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint);
+
+    @each $size, $card in $card-sizes {
+      .card-body#{$infix}-#{$size} {
+        @include card-body-size(map-get($card, 'padding-x'));
+      }
+    }
+  }
+}
+
 // Pill
 .card-pill {
   @include border-radius($border-radius-pill);
@@ -81,9 +94,11 @@
 
 // Card table
 .card-table {
-  tr:first-child {
-    td, th {
-      border-top: 0;
+  &:first-child {
+    tr:first-child {
+      td, th {
+        border-top: 0;
+      }
     }
   }
 
@@ -100,8 +115,10 @@
       }
     }
 
-    tr:last-child td {
-      border-bottom: 0;
+    &:last-child {
+      tr:last-child td {
+        border-bottom: 0;
+      }
     }
   }
 }

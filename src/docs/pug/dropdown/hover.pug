@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('dropdown', 'hover')
+
+block meta_description
+  +example_meta_description('dropdown', 'hover')
+
+block breadcrumb
+  +example_breadcrumb('dropdown')
+
 block example_description
   +example_description('dropdown', 'hover')
   .alert.alert-primary This component requires #[b bootstrap.js] and #[b= pkg.name + '.js'] or just #[b dropdown.js] and #[b dropdown-hover.js].

@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('navbar', 'scroller')
+
+block meta_description
+  +example_meta_description('navbar', 'scroller')
+
+block breadcrumb
+  +example_breadcrumb('navbar')
+
 block example_description
   +example_description('navbar', 'scroller')
   .alert.alert-primary(role="alert") Works only on touch devices like #[b tablet] and #[b phone].

@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('background', 'striped')
+
+block meta_description
+  +example_meta_description('background', 'striped')
+
+block breadcrumb
+  +example_breadcrumb('background')
+
 block example_description
   +example_description('background', 'striped')
   p Can be activated by adding #[code.fs-2 .bg-striped] class to any background.

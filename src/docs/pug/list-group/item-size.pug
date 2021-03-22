@@ -1,5 +1,14 @@
 extends ../example-responsive.pug
 
+block head_title
+  +example_head_title('list-group', 'item_size')
+
+block meta_description
+  +example_meta_description('list-group', 'item_size')
+
+block breadcrumb
+  +example_breadcrumb('list-group')
+
 block example_description
   +example_description('list-group', 'item_size')
 

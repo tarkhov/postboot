@@ -330,6 +330,22 @@
         "description": "Responsive card and card components size is possible to change now.",
         "title": "Card sizes",
         "name": "Sizes"
+      },
+      "body_size": {
+        "url": "body-sizes",
+        "template": "body-size",
+        "image": "body-size.png",
+        "description": "Responsive card body sizes.",
+        "title": "Card body sizes",
+        "name": "Body sizes"
+      },
+      "table": {
+        "url": "table",
+        "template": "table",
+        "image": "table.png",
+        "description": "Tables formatted for the card.",
+        "title": "Card table",
+        "name": "Table"
       }
     }
   },
@@ -405,6 +421,7 @@
     "template": "flex",
     "name": "Flex",
     "description": "More complex flex utilities and simpler class names.",
+    "new": true,
     "examples": {
       "align": {
         "url": "align",
@@ -770,6 +787,13 @@
         "image": "size.png",
         "description": "Responsive progress bar height, padding and font size.",
         "name": "Sizes"
+      },
+      "vertical": {
+        "url": "vertical",
+        "template": "vertical",
+        "image": "vertical.png",
+        "description": "Vertical progress bar.",
+        "name": "Vertical"
       }
     }
   },
@@ -793,6 +817,7 @@
     "template": "sidebar",
     "name": "Sidebar",
     "description": "A completely new component in the best traditions of Bootstrap taking inspiration from the navbar component.",
+    "new": true,
     "examples": {
       "color": {
         "url": "colors",
@@ -894,6 +919,7 @@
     "template": "tribar",
     "name": "Triple bar",
     "description": "Modern hamburger menu with a variety of color choices and the ability to change the icon depending on the status of the menu.",
+    "new": true,
     "examples": {
       "tribar": {
         "url": "icon-without-image",

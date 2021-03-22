@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('scrollspy', 'tree')
+
+block meta_description
+  +example_meta_description('scrollspy', 'tree')
+
+block breadcrumb
+  +example_breadcrumb('scrollspy')
+
 block example_description
   +example_description('scrollspy', 'tree')
   .alert.alert-primary.mb-gutter

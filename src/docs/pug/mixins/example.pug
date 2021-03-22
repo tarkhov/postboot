@@ -1,49 +1,80 @@
-mixin example_breadcrumb(category)
+mixin example_head_title(componentName, exampleName)
+  - var component = contents[componentName]
+  - var example = component.examples[exampleName]
+  title= component.name + ' ' + example.name.toLowerCase() + ' based on Bootstrap 4'
+
+mixin example_meta_description(componentName, exampleName)
+  - var component = contents[componentName]
+  - var example = component.examples[exampleName]
+  meta(name="description" content= example.description)
+
+mixin example_breadcrumb(componentName)
+  - var component = contents[componentName]
   nav(role="navigation")
-    ol.breadcrumb.breadcrumb-light.breadcrumb-rsaquo.bg-transparent.p-0.mb-2(itemscope itemtype="http://schema.org/BreadcrumbList")
+    ol.breadcrumb.breadcrumb-light.breadcrumb-rsaquo.bg-transparent.p-0.mb-2.fs-2(itemscope itemtype="http://schema.org/BreadcrumbList")
       li.breadcrumb-item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.breadcrumb-link(href='/' + pkg.name + '/' itemprop="item") #[span(itemprop="name") Home]
         meta(itemprop="position" content="1")
       li.breadcrumb-item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
-        a.breadcrumb-link(href='/' + pkg.name + '/' + category.url + '/' itemprop="item") #[span(itemprop="name")= category.name]
+        a.breadcrumb-link(href='/' + pkg.name + '/' + component.url + '/' itemprop="item") #[span(itemprop="name")= component.name]
         meta(itemprop="position" content="2")
 
 mixin example_description(componentName, exampleName)
   - var component = contents[componentName]
   - var example = component.examples[exampleName]
-  h1.h2.fw-400= component.name + ' ' + example.name.toLowerCase()
+  h1.h2-lg.h3.fw-400.example-title= component.name + ' ' + example.name.toLowerCase() + ' based on Bootstrap 4'
   p.fs-4.mb-4= example.description
+
+mixin component_head_title(componentName)
+  - var component = contents[componentName]
+  title= component.name + ' features for Bootstrap 4'
+
+mixin component_meta_description(componentName)
+  - var component = contents[componentName]
+  meta(name="description" content= component.description)
 
 mixin component_description(componentName)
   - var component = contents[componentName]
-  h1.h2.fw-400= component.name
+  h1.h2-lg.h3.fw-400.component-title= component.name + ' features for Bootstrap 4'
   p.fs-4.mb-4= component.description
 
 mixin new_component_description(componentName)
   - var component = contents[componentName]
   .flex-y-center.mb-2
-    h1.h2.fw-400.mb-0.mr-2= component.name
+    h1.h2.fw-400.mb-0.mr-2= component.name + ' features for Bootstrap 4'
     span.badge.badge-success.text-uppercase New
   p.fs-4.mb-4= component.description
 
 mixin example_card(componentName, component, example)
   - var url = '/' + pkg.name + '/' + component.url + '/' + example.url + '/'
-  .col-12.col-sm-6.d-sm-flex.mb-gutter
-    .card.w-100
-      .card-body.d-sm-flex.flex-sm-column
-        a.d-block(href=url)
-          img.img-fluid.extension-image(
-            src="/" + pkg.name + "/assets/img/component/" + componentName + "/" + example.image
-            width="303px"
-            alt=component.name + " " + example.name.toLowerCase()
-          )
-        a.extension-name.card-title.d-block.fs-4.fw-500.text-body.text-hover-primary.text-decoration-none(
+  .col-6.d-flex.mb-gutter-md-3.mb-gutter-2
+    .card.card-md-3.card-sm-2.card-1.w-100.border-hover-primary
+      .card-body.d-flex.flex-column
+        img.img-fluid.extension-image(
+          src="/" + pkg.name + "/assets/img/component/" + componentName + "/" + example.image
+          width="303px"
+          alt=component.name + " " + example.name.toLowerCase()
+        )
+        a(
+          class=[
+            'extension-name',
+            'card-title',
+            'd-block',
+            'fs-md-4',
+            'fs-sm-3',
+            'fs-2',
+            'fw-500',
+            'text-body',
+            'text-hover-primary',
+            'text-decoration-none',
+            'stretched-link'
+          ]
           href=url
         )= example.name
         p.card-text= example.description
 
 mixin component_examples(componentName)
   - var component = contents[componentName]
-  .row
+  .row-md-2.row-1
     each example in component.examples
       +example_card(componentName, component, example)

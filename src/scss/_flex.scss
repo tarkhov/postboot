@@ -3,6 +3,10 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint);
 
+    .flex#{$infix}-none {
+      display: none;
+    }
+
     .flex#{$infix}-center {
       display: flex;
       justify-content: center;

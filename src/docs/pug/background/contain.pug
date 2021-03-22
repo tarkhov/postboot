@@ -1,5 +1,14 @@
 extends ../example.pug
 
+block head_title
+  +example_head_title('background', 'contain')
+
+block meta_description
+  +example_meta_description('background', 'contain')
+
+block breadcrumb
+  +example_breadcrumb('background')
+
 block example_description
   +example_description('background', 'contain')
   p Just add #[code.fs-2 .bg-contain] class to any element which uses #[strong background-image] property.
