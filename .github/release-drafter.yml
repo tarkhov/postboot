@@ -1,0 +1,15 @@
+name-template: 'v$NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
+categories:
+  - title: ':rocket: Features'
+    label: 'feature'
+  - title: ':beetle: Bug fixes'
+    label: 'bug'
+  - title: ':notebook: Docs'
+    label: 'docs'
+change-template: '- #$NUMBER - $TITLE'
+prerelease: true
+template: |
+  ## Changes
+
+  $CHANGES
