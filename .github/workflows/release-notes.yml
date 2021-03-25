@@ -22,22 +22,6 @@ jobs:
       # Drafts your next Release notes as Pull Requests are merged into "master"
       - uses: release-drafter/release-drafter@v5
         # (Optional) specify config name to use, relative to .github/. Default: release-drafter.yml
-        with:
-          name-template: 'v$NEXT_PATCH_VERSION'
-          tag-template: 'v$NEXT_PATCH_VERSION'
-          categories:
-            - title: ':rocket: Features'
-              label: 'feature'
-            - title: ':beetle: Bug fixes'
-              label: 'bug'
-            - title: ':notebook: Docs'
-              label: 'docs'
-          change-template: '- #$NUMBER - $TITLE'
-          prerelease: true
-          template: |
-            ## Changes
-
-            $CHANGES
         # with:
         #   config-name: my-config.yml
         #   disable-autolabeler: true
