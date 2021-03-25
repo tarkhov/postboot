@@ -1,7 +1,7 @@
 mixin example_head_title(componentName, exampleName)
   - var component = contents[componentName]
   - var example = component.examples[exampleName]
-  title= component.name + ' ' + example.name.toLowerCase() + ' based on Bootstrap 4'
+  title= component.name + ' ' + example.name.toLowerCase()
 
 mixin example_meta_description(componentName, exampleName)
   - var component = contents[componentName]
@@ -22,12 +22,12 @@ mixin example_breadcrumb(componentName)
 mixin example_description(componentName, exampleName)
   - var component = contents[componentName]
   - var example = component.examples[exampleName]
-  h1.h2-lg.h3.fw-400.example-title= component.name + ' ' + example.name.toLowerCase() + ' based on Bootstrap 4'
-  p.fs-4.mb-4= example.description
+  h1.h3.fw-400.example-title= component.name + ' ' + example.name.toLowerCase()
+  p= example.description
 
 mixin component_head_title(componentName)
   - var component = contents[componentName]
-  title= component.name + ' features for Bootstrap 4'
+  title= component.name
 
 mixin component_meta_description(componentName)
   - var component = contents[componentName]
@@ -35,15 +35,15 @@ mixin component_meta_description(componentName)
 
 mixin component_description(componentName)
   - var component = contents[componentName]
-  h1.h2-lg.h3.fw-400.component-title= component.name + ' features for Bootstrap 4'
-  p.fs-4.mb-4= component.description
+  h1.h3.fw-400.component-title= component.name
+  p= component.description
 
 mixin new_component_description(componentName)
   - var component = contents[componentName]
   .flex-y-center.mb-2
-    h1.h2.fw-400.mb-0.mr-2= component.name + ' features for Bootstrap 4'
+    h1.h3.fw-400.mb-0.mr-2= component.name
     span.badge.badge-success.text-uppercase New
-  p.fs-4.mb-4= component.description
+  p= component.description
 
 mixin example_card(componentName, component, example)
   - var url = '/' + pkg.name + '/' + component.url + '/' + example.url + '/'
