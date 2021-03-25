@@ -1,15 +1,20 @@
 name-template: 'v$NEXT_PATCH_VERSION'
 tag-template: 'v$NEXT_PATCH_VERSION'
 categories:
-  - title: ':rocket: Features'
+  - title: '🚀 Features'
+    label: 'feature'
+  - title: '🐛 Bug Fixes'
     labels:
-      - 'feature'
-  - title: ':beetle: Bug fixes'
-    labels:
+      - 'fix'
+      - 'bugfix'
       - 'bug'
-  - title: ':notebook: Docs'
-    labels:
-      - 'docs'
+# categories:
+#   - title: ':rocket: Features'
+#     label: 'feature'
+#   - title: ':beetle: Bug fixes'
+#     label: 'bug'
+#   - title: ':notebook: Docs'
+#     label: 'docs'
 change-template: '- #$NUMBER - $TITLE'
 prerelease: true
 template: |
