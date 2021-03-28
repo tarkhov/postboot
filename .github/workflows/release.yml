@@ -1,14 +1,7 @@
 name: Release Drafter
 
-on:
-  push:
-    # branches to consider in the event; optional, defaults to all
-    branches:
-      - master
-  # pull_request event is required only for autolabeler
-  pull_request:
-    # Only following types are handled by the action, but one can default to all as well
-    types: [opened, reopened, synchronize]
+# Triggers the workflow on push or pull request events
+on: [push, pull_request]
 
 jobs:
   update_release_draft:
