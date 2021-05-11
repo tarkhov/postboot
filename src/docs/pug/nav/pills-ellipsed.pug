@@ -1,0 +1,21 @@
+extends ../example.pug
+
+block head_title
+  +example_head_title('nav', 'pills_ellipsed')
+
+block meta_description
+  +example_meta_description('nav', 'pills_ellipsed')
+
+block breadcrumb
+  +example_breadcrumb('nav')
+
+block example_description
+  +example_description('nav', 'pills_ellipsed')
+
+block example_result
+  +nav(['nav-pills', 'nav-pills-ellipsed'])
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    ul.nav.nav-pills.nav-pills-ellipsed

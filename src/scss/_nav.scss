@@ -195,6 +195,13 @@
   }
 }
 
+// Pills ellipsed
+.nav-pills-ellipsed {
+  .nav-link {
+    @include border-radius($rounded-pill);
+  }
+}
+
 // Sizes
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {

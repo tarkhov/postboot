@@ -623,6 +623,13 @@
         "description": "Change nav size by adding class.",
         "name": "Sizes"
       },
+      "pills_ellipsed": {
+        "url": "pills-ellipsed",
+        "template": "pills-ellipsed",
+        "image": "pills-ellipsed.png",
+        "description": "Ellipsed nav pills.",
+        "name": "Ellipsed pills"
+      },
       "tabs_left": {
         "url": "tabs-left",
         "template": "tabs-left",

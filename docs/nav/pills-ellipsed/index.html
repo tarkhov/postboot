@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Nav</title>
-    <meta name="description" content="Responsive nav sizes, tabs directions, material design like nav and nav tree."/>
+    <title>Nav ellipsed pills</title>
+    <meta name="description" content="Ellipsed nav pills."/>
     <meta name="author" content="Alexander Tarkhov">
     <link rel="apple-touch-icon" href="/postboot/assets/img/apple-touch-icon.png">
     <link rel="icon" href="/postboot/assets/img/favicon.ico">
@@ -51,7 +51,7 @@
               <li class="nav-item"><a class="nav-link" href="/postboot/form/"><span>Form</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/grid/"><span>Grid</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/list-group/"><span>List group</span></a></li>
-              <li class="nav-item"><a class="nav-link active" href="/postboot/nav/"><span>Nav</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/nav/"><span>Nav</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/navbar/"><span>Navbar</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/pagination/"><span>Pagination</span></a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/position/"><span>Position</span></a></li>
@@ -66,72 +66,41 @@
           </aside>
         </div>
         <div class="col-12 col-md-9 col-lg-8">
+          <nav role="navigation">
+            <ol class="breadcrumb breadcrumb-light breadcrumb-rsaquo bg-transparent p-0 mb-2 fs-2" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-link" href="/postboot/" itemprop="item"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1"/>
+              </li>
+              <li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a class="breadcrumb-link" href="/postboot/nav/" itemprop="item"><span itemprop="name">Nav</span></a>
+                <meta itemprop="position" content="2"/>
+              </li>
+            </ol>
+          </nav>
           <main role="main">
             <article role="article">
               <div id="description">
-                <h1 class="h3 fw-400 component-title">Nav</h1>
-                <p>Responsive nav sizes, tabs directions, material design like nav and nav tree.</p>
+                <h1 class="h3 fw-400 example-title">Nav ellipsed pills</h1>
+                <p>Ellipsed nav pills.</p>
               </div>
-              <div id="examples">
-                <div class="row-md-2 row-1">
-                  <div class="col-6 d-flex mb-gutter-md-3 mb-gutter-2">
-                    <div class="card card-md-3 card-sm-2 card-1 w-100 border-hover-primary">
-                      <div class="card-body d-flex flex-column"><img class="img-fluid extension-image" src="/postboot/assets/img/component/nav/active.png" width="303px" alt="Nav active link"/><a class="extension-name card-title d-block fs-md-4 fs-sm-3 fs-2 fw-500 text-body text-hover-primary text-decoration-none stretched-link" href="/postboot/nav/active-link/">Active link</a>
-                        <p class="card-text">Add active nav link color.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 d-flex mb-gutter-md-3 mb-gutter-2">
-                    <div class="card card-md-3 card-sm-2 card-1 w-100 border-hover-primary">
-                      <div class="card-body d-flex flex-column"><img class="img-fluid extension-image" src="/postboot/assets/img/component/nav/size.png" width="303px" alt="Nav sizes"/><a class="extension-name card-title d-block fs-md-4 fs-sm-3 fs-2 fw-500 text-body text-hover-primary text-decoration-none stretched-link" href="/postboot/nav/sizes/">Sizes</a>
-                        <p class="card-text">Change nav size by adding class.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 d-flex mb-gutter-md-3 mb-gutter-2">
-                    <div class="card card-md-3 card-sm-2 card-1 w-100 border-hover-primary">
-                      <div class="card-body d-flex flex-column"><img class="img-fluid extension-image" src="/postboot/assets/img/component/nav/pills-ellipsed.png" width="303px" alt="Nav ellipsed pills"/><a class="extension-name card-title d-block fs-md-4 fs-sm-3 fs-2 fw-500 text-body text-hover-primary text-decoration-none stretched-link" href="/postboot/nav/pills-ellipsed/">Ellipsed pills</a>
-                        <p class="card-text">Ellipsed nav pills.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 d-flex mb-gutter-md-3 mb-gutter-2">
-                    <div class="card card-md-3 card-sm-2 card-1 w-100 border-hover-primary">
-                      <div class="card-body d-flex flex-column"><img class="img-fluid extension-image" src="/postboot/assets/img/component/nav/tabs-left.png" width="303px" alt="Nav tabs left"/><a class="extension-name card-title d-block fs-md-4 fs-sm-3 fs-2 fw-500 text-body text-hover-primary text-decoration-none stretched-link" href="/postboot/nav/tabs-left/">Tabs left</a>
-                        <p class="card-text">Responsive left nav tabs.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 d-flex mb-gutter-md-3 mb-gutter-2">
-                    <div class="card card-md-3 card-sm-2 card-1 w-100 border-hover-primary">
-                      <div class="card-body d-flex flex-column"><img class="img-fluid extension-image" src="/postboot/assets/img/component/nav/tabs-right.png" width="303px" alt="Nav tabs right"/><a class="extension-name card-title d-block fs-md-4 fs-sm-3 fs-2 fw-500 text-body text-hover-primary text-decoration-none stretched-link" href="/postboot/nav/tabs-right/">Tabs right</a>
-                        <p class="card-text">Responsive right nav tabs.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 d-flex mb-gutter-md-3 mb-gutter-2">
-                    <div class="card card-md-3 card-sm-2 card-1 w-100 border-hover-primary">
-                      <div class="card-body d-flex flex-column"><img class="img-fluid extension-image" src="/postboot/assets/img/component/nav/tabs-bottom.png" width="303px" alt="Nav tabs bottom"/><a class="extension-name card-title d-block fs-md-4 fs-sm-3 fs-2 fw-500 text-body text-hover-primary text-decoration-none stretched-link" href="/postboot/nav/tabs-bottom/">Tabs bottom</a>
-                        <p class="card-text">Responsive bottom nav tabs.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 d-flex mb-gutter-md-3 mb-gutter-2">
-                    <div class="card card-md-3 card-sm-2 card-1 w-100 border-hover-primary">
-                      <div class="card-body d-flex flex-column"><img class="img-fluid extension-image" src="/postboot/assets/img/component/nav/tabs-material.png" width="303px" alt="Nav tabs material"/><a class="extension-name card-title d-block fs-md-4 fs-sm-3 fs-2 fw-500 text-body text-hover-primary text-decoration-none stretched-link" href="/postboot/nav/tabs-material/">Tabs material</a>
-                        <p class="card-text">Material design navs.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-6 d-flex mb-gutter-md-3 mb-gutter-2">
-                    <div class="card card-md-3 card-sm-2 card-1 w-100 border-hover-primary">
-                      <div class="card-body d-flex flex-column"><img class="img-fluid extension-image" src="/postboot/assets/img/component/nav/tree.png" width="303px" alt="Nav tree"/><a class="extension-name card-title d-block fs-md-4 fs-sm-3 fs-2 fw-500 text-body text-hover-primary text-decoration-none stretched-link" href="/postboot/nav/tree/">Tree</a>
-                        <p class="card-text">Nav with tree structure.</p>
-                      </div>
-                    </div>
-                  </div>
+              <div class="card mb-3" id="example">
+                <div class="card-header">
+                  <ul class="nav nav-tabs card-header-tabs">
+                    <li class="nav-item"><a class="nav-link active" href="#">Example</a></li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <ul class="nav nav-pills nav-pills-ellipsed">
+                    <li class="nav-item"><a class="nav-link active" href="#">Item 1</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Item 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Item 3</a></li>
+                  </ul>
+                </div>
+                <div class="card-footer">
+                  <pre class="pre-scrollable"><code class="language-markup">&#x3C;!-- Source --&#x3E;
+&#x3C;ul class=&#x22;nav nav-pills nav-pills-ellipsed&#x22;&#x3E;&#x3C;/ul&#x3E;</code></pre>
                 </div>
               </div>
+              <div class="clearfix"></div>
             </article>
           </main>
         </div>
@@ -139,7 +108,7 @@
           <aside class="contents-nav sidebar sidebar-light sidebar-expand-lg py-0 position-fixed" role="complementary">
             <ul class="sidebar-nav nav-tree nav-tabs nav-tabs-material nav-tabs-right nav-y-2 fs-2">
               <li class="nav-item"><a class="nav-link" href="#description">Description</a></li>
-              <li class="nav-item"><a class="nav-link" href="#examples">Examples</a></li>
+              <li class="nav-item"><a class="nav-link" href="#example">Example</a></li>
             </ul>
           </aside>
         </div>
@@ -163,7 +132,7 @@
               <li class="nav-item"><a class="nav-link" href="/postboot/form/">Form</a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/grid/">Grid</a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/list-group/">List group</a></li>
-              <li class="nav-item"><a class="nav-link active" href="/postboot/nav/">Nav</a></li>
+              <li class="nav-item"><a class="nav-link" href="/postboot/nav/">Nav</a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/navbar/">Navbar</a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/pagination/">Pagination</a></li>
               <li class="nav-item"><a class="nav-link" href="/postboot/position/">Position</a></li>

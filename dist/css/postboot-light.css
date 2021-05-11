@@ -4157,6 +4157,9 @@
 .nav-tabs-material.nav-tabs-bottom .nav-item.show .nav-link {
   border-top-color: #495057; }
 
+.nav-pills-ellipsed .nav-link {
+  border-radius: 50rem; }
+
 .nav-y-0 > .nav-text,
 .nav-y-0 > .nav-link,
 .nav-y-0 > .nav-item > .nav-link {
