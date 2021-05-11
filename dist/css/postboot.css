@@ -15816,6 +15816,8 @@
       align-items: flex-end; }
   .progress-vertical .progress-bar {
     width: 100%; }
+  .progress-vertical .progress-value {
+    transform: rotate(-90deg); }
 
 .progress-1 {
   font-size: 0.6rem;

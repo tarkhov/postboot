@@ -6,6 +6,10 @@
   .progress-bar {
     width: 100%;
   }
+
+  .progress-value {
+    transform: rotate(-90deg);
+  }
 }
 
 // Sizes

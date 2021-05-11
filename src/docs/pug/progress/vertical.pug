@@ -16,7 +16,9 @@ block example_result
   .d-flex
     - for(var size = 1; size <= 4; size++)
       .progress.progress-vertical.mr-gutter(style={ height: '300px' })
-        .progress-bar(style={ height: (size * 25) + '%' })
+        - var percent = size * 25
+        .progress-bar(style={ height: percent + '%' })
+          .progress-value!= percent + '%'
 
 block example_code
   :encode-pug
@@ -24,4 +26,6 @@ block example_code
     .d-flex
       - for(var size = 1; size <= 4; size++)
         .progress.progress-vertical.mr-gutter(style={ height: '300px' })
-          .progress-bar(style={ height: (size * 25) + '%' })
+          - var percent = size * 25
+          .progress-bar(style={ height: percent + '%' })
+            .progress-value!= percent + '%'
