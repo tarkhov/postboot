@@ -1,4 +1,4 @@
-extends ../example-responsive.pug
+extends ../example.pug
 
 block head_title
   +example_head_title('card', 'image_right')
@@ -28,12 +28,14 @@ block example_code
         p.card-text Example text
       img.card-img-sm-right.example-card-img-responsive(src="/" + pkg.name + "/assets/img/thumbnail.jpg")
 
-block responsive_description
-  h2.h3.fw-400 Responsive card image right
+block example_footer_after
+  +example_footer#responsive
+    :encode-pug
+      | <!-- Responsive -->
+      each breakpoint in ['sm', 'md', 'lg', 'xl']
+        ="\n"
+        img(class="card-img-" + breakpoint + "-right" src="/" + pkg.name + "/assets/img/thumbnail.jpg")
 
-block responsive_code
-  :encode-pug
-    | <!-- Source -->
-    each breakpoint in ['sm', 'md', 'lg', 'xl']
-      ="\n"
-      img(class="card-img-" + breakpoint + "-right" src="/" + pkg.name + "/assets/img/thumbnail.jpg")
+block sidebar_right_items_after
+  li.nav-item
+    a.nav-link(href="#responsive") Responsive

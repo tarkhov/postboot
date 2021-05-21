@@ -14,10 +14,9 @@ block main
       .card-body
         block example_result
     block example_footer
-      .card-footer
-        pre.pre-scrollable
-          code.language-markup
-            block example_code
+      +example_footer
+        block example_code
+    block example_footer_after
   .clearfix
   block example_after
 
@@ -27,3 +26,4 @@ block sidebar_right
       a.nav-link(href="#description") Description
     li.nav-item
       a.nav-link(href="#example") Example
+    block sidebar_right_items_after

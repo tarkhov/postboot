@@ -1,4 +1,4 @@
-extends ../example-responsive.pug
+extends ../example.pug
 
 block head_title
   +example_head_title('border', 'width')
@@ -25,16 +25,17 @@ block example_code
         p(class='border-' + position + '-' + width)= width + 'px'
       ="\n"
 
-block responsive_description
-  h2.h3.fw-400 Responsive border widths
-  p Make your border width responsive by adding class #[code.fs-2 .border-breakpoint-width].
+block example_footer_after
+  +example_footer#responsive
+    :encode-pug
+      | <!-- Responsive -->
+      each breakpoint in ['sm', 'md', 'lg', 'xl']
+        - for(var width = 0; width <= 5; width++)
+          p(class='border-' + breakpoint + '-' + width)= width + 'px'
+          each position in ['top', 'right', 'bottom', 'left']
+            p(class='border-' + position + '-' + breakpoint + '-' + width)= width + 'px'
+          ="\n"
 
-block responsive_code
-  :encode-pug
-    | <!-- Source -->
-    each breakpoint in ['sm', 'md', 'lg', 'xl']
-      - for(var width = 0; width <= 5; width++)
-        p(class='border-' + breakpoint + '-' + width)= width + 'px'
-        each position in ['top', 'right', 'bottom', 'left']
-          p(class='border-' + position + '-' + breakpoint + '-' + width)= width + 'px'
-        ="\n"
+block sidebar_right_items_after
+  li.nav-item
+    a.nav-link(href="#responsive") Responsive

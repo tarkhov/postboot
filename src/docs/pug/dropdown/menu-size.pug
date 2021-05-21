@@ -1,4 +1,4 @@
-extends ../example-responsive.pug
+extends ../example.pug
 
 block head_title
   +example_head_title('dropdown', 'menu_size')
@@ -23,13 +23,15 @@ block example_code
     - for(var size = 1; size <= 5; size++)
       .dropdown-menu(class='dropdown-menu-' + size)
 
-block responsive_description
-  h2.h3.fw-400 Responsive dropdown menu sizes
+block example_footer_after
+  +example_footer#responsive
+    :encode-pug
+      | <!-- Responsive -->
+      each breakpoint in ['sm', 'md', 'lg', 'xl']
+        - for(var size = 1; size <= 5; size++)
+          .dropdown-menu(class='dropdown-menu-' + breakpoint + '-' + size)
+        ="\n"
 
-block responsive_code
-  :encode-pug
-    | <!-- Source -->
-    each breakpoint in ['sm', 'md', 'lg', 'xl']
-      - for(var size = 1; size <= 5; size++)
-        .dropdown-menu(class='dropdown-menu-' + breakpoint + '-' + size)
-      ="\n"
+block sidebar_right_items_after
+  li.nav-item
+    a.nav-link(href="#responsive") Responsive

@@ -928,6 +928,30 @@ $sidebar-sizes: map-merge((
   )
 ), $sidebar-sizes);
 
+// Table
+$table-cell-padding-xs:  .15rem !default;
+$table-cell-padding-lg:  1.5rem !default;
+$table-cell-padding-xl:  3rem !default;
+
+$table-sizes: () !default;
+$table-sizes: map-merge((
+  1: (
+    'cell-padding': $table-cell-padding-xs
+  ),
+  2: (
+    'cell-padding': $table-cell-padding-sm
+  ),
+  3: (
+    'cell-padding': $table-cell-padding
+  ),
+  4: (
+    'cell-padding': $table-cell-padding-lg
+  ),
+  5: (
+    'cell-padding': $table-cell-padding-xl
+  )
+), $table-sizes);
+
 // Text
 $text-state-level: 6 !default;
 
