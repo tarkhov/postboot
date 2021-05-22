@@ -25,21 +25,21 @@
 @if $enable-grid-classes {
   @each $size, $max-widths in $container-sizes {
     .container-#{$size} {
-      @include make-container-max-widths($max-widths);
+      @include make-container-widths($max-widths);
     }
   }
 
   .container-md-2 {
-    @include make-container-max-widths(map-remove(map-get($container-sizes, 2), sm));
+    @include make-container-widths(map-remove(map-get($container-sizes, 2), sm));
   }
   .container-lg-3 {
-    @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md));
+    @include make-container-widths(map-remove(map-get($container-sizes, 3), sm, md));
   }
   .container-xl-4 {
-    @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md, lg));
+    @include make-container-widths(map-remove(map-get($container-sizes, 3), sm, md, lg));
   }
   .container-xxl-5 {
-    @include make-container-max-widths(map-remove(map-get($container-sizes, 3), sm, md, lg, xl));
+    @include make-container-widths(map-remove(map-get($container-sizes, 3), sm, md, lg, xl));
   }
 }
 

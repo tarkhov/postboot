@@ -134,7 +134,6 @@
   }
 }
 
-
 // Circle
 .btn-circle {
   border-radius: $border-radius-circle;
@@ -170,6 +169,36 @@
     .btn#{$infix}-block {
       display: block;
       width: 100%;
+    }
+  }
+}
+
+// Progress
+.btn-progress {
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+}
+.btn-progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  white-space: nowrap;
+  @include transition($progress-bar-transition);
+  padding: $btn-padding-y $btn-padding-x;
+}
+.btn-progress {
+  @each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+      $infix: breakpoint-infix($breakpoint);
+
+      @each $size, $button in $button-sizes {
+        &.btn#{$infix}-#{$size} {
+          .btn-progress-bar {
+            padding: map-get($button, 'padding-y') map-get($button, 'padding-x');
+          }
+        }
+      }
     }
   }
 }
