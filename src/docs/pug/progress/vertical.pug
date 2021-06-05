@@ -23,9 +23,31 @@ block example_result
 block example_code
   :encode-pug
     | <!-- Source -->
-    .d-flex
-      - for(var size = 1; size <= 4; size++)
-        .progress.progress-vertical.mr-gutter(style={ height: '300px' })
-          - var percent = size * 25
-          .progress-bar(style={ height: percent + '%' })
-            .progress-value!= percent + '%'
+    - for(var size = 1; size <= 4; size++)
+      .progress.progress-vertical.mr-gutter(style={ height: '300px' })
+        - var percent = size * 25
+        .progress-bar(style={ height: percent + '%' })
+          .progress-value!= percent + '%'
+
+block example_after
+  #sizes.pt-3
+    h2.h4.fw-400.mb-3 Sizes
+  .card
+    .card-body
+      .d-flex
+        - for(var size = 1; size <= 5; size++)
+          .progress.progress-vertical.mr-gutter(class='progress-' + size style={ height: '300px' })
+            .progress-bar.h-50
+              .progress-value 50%
+    +example_footer
+      :encode-pug
+        | <!-- Source -->
+        - for(var size = 1; size <= 5; size++)
+          .progress.progress-vertical.mr-gutter(class='progress-' + size style={ height: '300px' })
+            .progress-bar.h-50
+              .progress-value 50%
+  .clearfix
+
+block sidebar_right_items_after
+  li.nav-item
+    a.nav-link(href="#responsive") Responsive
