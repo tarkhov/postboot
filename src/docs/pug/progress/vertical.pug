@@ -32,22 +32,36 @@ block example_code
 block example_after
   #sizes.pt-3
     h2.h4.fw-400.mb-3 Sizes
-  .card
-    .card-body
-      .d-flex
-        - for(var size = 1; size <= 5; size++)
-          .progress.progress-vertical.mr-gutter(class='progress-' + size style={ height: '300px' })
-            .progress-bar.h-50
-              .progress-value 50%
-    +example_footer
-      :encode-pug
-        | <!-- Source -->
-        - for(var size = 1; size <= 5; size++)
-          .progress.progress-vertical.mr-gutter(class='progress-' + size style={ height: '300px' })
-            .progress-bar.h-50
-              .progress-value 50%
+    .card.mb-3
+      .card-body
+        .d-flex
+          - for(var size = 1; size <= 5; size++)
+            .progress.progress-vertical.mr-gutter(class='progress-' + size style={ height: '300px' })
+              .progress-bar.h-50
+                .progress-value 50%
+      +example_footer
+        :encode-pug
+          | <!-- Source -->
+          - for(var size = 1; size <= 5; size++)
+            .progress.progress-vertical.mr-gutter(class='progress-' + size style={ height: '300px' })
+              .progress-bar.h-50
+                .progress-value 50%
+  .clearfix
+
+  #responsive.pt-3
+    h2.h4.fw-400.mb-3 Responsive
+    .card.card-body.bg-card-cap
+      +example_code
+        :encode-pug
+          | <!-- Source -->
+          each breakpoint in ['sm', 'md', 'lg', 'xl']
+            - for(var size = 1; size <= 5; size++)
+              .progress.progress-vertical(class='progress-' + breakpoint + '-' + size)
+            ="\n"
   .clearfix
 
 block sidebar_right_items_after
   li.nav-item
-    a.nav-link(href="#responsive") Responsive
+    a.nav-link(href="#sizes") Sizes
+  li.nav-item
+    a.nav-link(href="#responsize") Responsive

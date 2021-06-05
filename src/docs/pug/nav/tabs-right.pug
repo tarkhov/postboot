@@ -25,12 +25,12 @@ block example_code
 block example_after
   #responsive.pt-3
     h2.h4.fw-400.mb-3 Responsive
-  .card.card-body.bg-card-cap
-    +example_code
-      :encode-pug
-        | <!-- Source -->
-        each breakpoint in ['sm', 'md', 'lg', 'xl']
-          ul.nav.nav-tabs(class='nav-tabs-' + breakpoint + '-right')
+    .card.card-body.bg-card-cap
+      +example_code
+        :encode-pug
+          | <!-- Source -->
+          each breakpoint in ['sm', 'md', 'lg', 'xl']
+            ul.nav.nav-tabs(class='nav-tabs-' + breakpoint + '-right')
   .clearfix
 
 block sidebar_right_items_after

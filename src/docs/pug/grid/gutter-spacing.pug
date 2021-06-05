@@ -78,44 +78,44 @@ block example_code
 block example_after
   #responsive.pt-3
     h2.h4.fw-400.mb-3 Responsive
-  .card.card-body.bg-card-cap
-    +example_code
-      :encode-pug
-        | <!-- Source -->
-        each breakpoint in ['sm', 'md', 'lg', 'xl']
-          div(class='m-gutter-' + breakpoint)
-          div(class='mx-gutter-' + breakpoint)
-          div(class='my-gutter-' + breakpoint)
-          div(class='mt-gutter-' + breakpoint)
-          div(class='mr-gutter-' + breakpoint)
-          div(class='mb-gutter-' + breakpoint)
-          div(class='ml-gutter-' + breakpoint)
-          ="\n"
-          div(class='p-' + breakpoint + '-gutter-' + breakpoint)
-          div(class='px-' + breakpoint + '-gutter-' + breakpoint)
-          div(class='py-' + breakpoint + '-gutter-' + breakpoint)
-          div(class='pt-' + breakpoint + '-gutter-' + breakpoint)
-          div(class='pr-' + breakpoint + '-gutter-' + breakpoint)
-          div(class='pb-' + breakpoint + '-gutter-' + breakpoint)
-          div(class='pl-gutter-' + breakpoint)
-          ="\n"
-          - for(var size = 0; size <= 4; size++)
-            div(class='m-gutter-' + breakpoint + '-' + size)
-            div(class='mx-gutter-' + breakpoint + '-' + size)
-            div(class='my-gutter-' + breakpoint + '-' + size)
-            div(class='mt-gutter-' + breakpoint + '-' + size)
-            div(class='mr-gutter-' + breakpoint + '-' + size)
-            div(class='mb-gutter-' + breakpoint + '-' + size)
-            div(class='ml-gutter-' + breakpoint + '-' + size)
+    .card.card-body.bg-card-cap
+      +example_code
+        :encode-pug
+          | <!-- Source -->
+          each breakpoint in ['sm', 'md', 'lg', 'xl']
+            div(class='m-gutter-' + breakpoint)
+            div(class='mx-gutter-' + breakpoint)
+            div(class='my-gutter-' + breakpoint)
+            div(class='mt-gutter-' + breakpoint)
+            div(class='mr-gutter-' + breakpoint)
+            div(class='mb-gutter-' + breakpoint)
+            div(class='ml-gutter-' + breakpoint)
             ="\n"
-            div(class='p-gutter-' + breakpoint + '-' + size)
-            div(class='px-gutter-' + breakpoint + '-' + size)
-            div(class='py-gutter-' + breakpoint + '-' + size)
-            div(class='pt-gutter-' + breakpoint + '-' + size)
-            div(class='pr-gutter-' + breakpoint + '-' + size)
-            div(class='pb-gutter-' + breakpoint + '-' + size)
-            div(class='pl-gutter-' + breakpoint + '-' + size)
+            div(class='p-' + breakpoint + '-gutter-' + breakpoint)
+            div(class='px-' + breakpoint + '-gutter-' + breakpoint)
+            div(class='py-' + breakpoint + '-gutter-' + breakpoint)
+            div(class='pt-' + breakpoint + '-gutter-' + breakpoint)
+            div(class='pr-' + breakpoint + '-gutter-' + breakpoint)
+            div(class='pb-' + breakpoint + '-gutter-' + breakpoint)
+            div(class='pl-gutter-' + breakpoint)
             ="\n"
+            - for(var size = 0; size <= 4; size++)
+              div(class='m-gutter-' + breakpoint + '-' + size)
+              div(class='mx-gutter-' + breakpoint + '-' + size)
+              div(class='my-gutter-' + breakpoint + '-' + size)
+              div(class='mt-gutter-' + breakpoint + '-' + size)
+              div(class='mr-gutter-' + breakpoint + '-' + size)
+              div(class='mb-gutter-' + breakpoint + '-' + size)
+              div(class='ml-gutter-' + breakpoint + '-' + size)
+              ="\n"
+              div(class='p-gutter-' + breakpoint + '-' + size)
+              div(class='px-gutter-' + breakpoint + '-' + size)
+              div(class='py-gutter-' + breakpoint + '-' + size)
+              div(class='pt-gutter-' + breakpoint + '-' + size)
+              div(class='pr-gutter-' + breakpoint + '-' + size)
+              div(class='pb-gutter-' + breakpoint + '-' + size)
+              div(class='pl-gutter-' + breakpoint + '-' + size)
+              ="\n"
   .clearfix
 
 block sidebar_right_items_after

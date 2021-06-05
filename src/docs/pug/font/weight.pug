@@ -25,14 +25,14 @@ block example_code
 block example_after
   #responsive.pt-3
     h2.h4.fw-400.mb-3 Responsive
-  .card.card-body.bg-card-cap
-    +example_code
-      :encode-pug
-        | <!-- Responsive -->
-        each breakpoint in ['sm', 'md', 'lg', 'xl']
-          each text, weight in {'100': 'Thin', '200': 'Extra light', '300': 'Light', '400': 'Normal', '500': 'Medium', '600': 'Semi bold', '700': 'Bold', '800': 'Extra bold', '900': 'Black'}
-            p(class='fw-' + breakpoint + '-' + weight)
-          ="\n"
+    .card.card-body.bg-card-cap
+      +example_code
+        :encode-pug
+          | <!-- Responsive -->
+          each breakpoint in ['sm', 'md', 'lg', 'xl']
+            each text, weight in {'100': 'Thin', '200': 'Extra light', '300': 'Light', '400': 'Normal', '500': 'Medium', '600': 'Semi bold', '700': 'Bold', '800': 'Extra bold', '900': 'Black'}
+              p(class='fw-' + breakpoint + '-' + weight)
+            ="\n"
   .clearfix
 
 block sidebar_right_items_after

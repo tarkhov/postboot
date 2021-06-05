@@ -26,14 +26,14 @@ block example_code
 block example_after
   #responsive.pt-3
     h2.h4.fw-400.mb-3 Responsive
-  .card.card-body.bg-card-cap
-    +example_code
-      :encode-pug
-        | <!-- Responsive -->
-        each breakpoint in ['sm', 'md', 'lg', 'xl']
-          - for(var size = 1; size <= 5; size++)
-            .dropdown-menu(class='dropdown-menu-' + breakpoint + '-' + size)
-          ="\n"
+    .card.card-body.bg-card-cap
+      +example_code
+        :encode-pug
+          | <!-- Responsive -->
+          each breakpoint in ['sm', 'md', 'lg', 'xl']
+            - for(var size = 1; size <= 5; size++)
+              .dropdown-menu(class='dropdown-menu-' + breakpoint + '-' + size)
+            ="\n"
   .clearfix
 
 block sidebar_right_items_after
