@@ -1,4 +1,4 @@
-extends ../example-responsive.pug
+extends ../example.pug
 
 block head_title
   +example_head_title('position', 'spacing')
@@ -47,16 +47,22 @@ block example_code
       div(class='left-' + size)
       ="\n"
 
-block responsive_description
-  h2.h3.fw-400 Responsive position sizes
+block example_after
+  #responsive.pt-3
+    h2.h4.fw-400.mb-3 Responsive
+  .card.card-body.bg-card-cap
+    +example_code
+      :encode-pug
+        | <!-- Source -->
+        each size in ['0', '50', 'auto']
+          each breakpoint in ['sm', 'md', 'lg', 'xl']
+            div(class='top-' + breakpoint + '-' + size)
+            div(class='right-' + breakpoint + '-' + size)
+            div(class='bottom-' + breakpoint + '-' + size)
+            div(class='left-' + breakpoint + '-' + size)
+            ="\n"
+  .clearfix
 
-block responsive_code
-  :encode-pug
-    | <!-- Source -->
-    each size in ['0', '50', 'auto']
-      each breakpoint in ['sm', 'md', 'lg', 'xl']
-        div(class='top-' + breakpoint + '-' + size)
-        div(class='right-' + breakpoint + '-' + size)
-        div(class='bottom-' + breakpoint + '-' + size)
-        div(class='left-' + breakpoint + '-' + size)
-        ="\n"
+block sidebar_right_items_after
+  li.nav-item
+    a.nav-link(href="#responsive") Responsive

@@ -23,14 +23,18 @@ block example_code
     - for(var size = 1; size <= 5; size++)
       input.form-control(type='text', placeholder=size class='input-' + size)
 
-block example_footer_after
-  +example_footer#responsive
-    :encode-pug
-      | <!-- Responsive -->
-      each breakpoint in ['sm', 'md', 'lg', 'xl']
-        - for(var size = 1; size <= 5; size++)
-          input.form-control(type='text', placeholder=size class='input-' + breakpoint + '-' + size)
-        ="\n"
+block example_after
+  #responsive.pt-3
+    h2.h4.fw-400.mb-3 Responsive
+  .card.card-body.bg-card-cap
+    +example_code
+      :encode-pug
+        | <!-- Responsive -->
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          - for(var size = 1; size <= 5; size++)
+            input.form-control(type='text', placeholder=size class='input-' + breakpoint + '-' + size)
+          ="\n"
+  .clearfix
 
 block sidebar_right_items_after
   li.nav-item

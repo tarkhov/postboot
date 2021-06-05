@@ -25,11 +25,15 @@ mixin example_description(componentName, exampleName)
   h1.h3.fw-400.example-title= component.name + ' ' + example.name.toLowerCase()
   p= example.description
 
+mixin example_code
+  pre.pre-scrollable&attributes(attributes)
+    code.language-markup
+      block
+
 mixin example_footer
   .card-footer&attributes(attributes)
-    pre.pre-scrollable
-      code.language-markup
-        block
+    +example_code
+      block
 
 mixin component_head_title(componentName)
   - var component = contents[componentName]

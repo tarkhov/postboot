@@ -1,4 +1,4 @@
-extends ../example-responsive.pug
+extends ../example.pug
 
 block head_title
   +example_head_title('size', 'full')
@@ -27,29 +27,35 @@ block example_code
     .min-vs-100
     .vs-100
 
-block responsive_description
-  h2.h3.fw-400 Responsive full width and height
-
-block responsive_code
-  :encode-pug
-    | <!-- Source -->
-    .s-100
-    .ms-100
-    .min-s-100
-    .min-vs-100
-    .vs-100
-    ="\n"
-    each breakpoint in ['sm', 'md', 'lg', 'xl']
-      div(class="s-" + breakpoint + "-100")
-      div(class="ms-" + breakpoint + "-100")
-      div(class="min-s-" + breakpoint + "-100")
-      div(class="min-vs-" + breakpoint + "-100")
-      div(class="vs-" + breakpoint + "-100")
-      ="\n"
-      each length in ['w', 'h']
-        div(class=length + "-" + breakpoint + "-100")
-        div(class="m" + length + "-" + breakpoint + "-100")
-        div(class="min-v" + length + "-" + breakpoint + "-100")
-        div(class="v" + length + "-" + breakpoint + "-100")
+block example_after
+  #responsive.pt-3
+    h2.h4.fw-400.mb-3 Responsive
+  .card.card-body.bg-card-cap
+    +example_code
+      :encode-pug
+        | <!-- Source -->
+        .s-100
+        .ms-100
+        .min-s-100
+        .min-vs-100
+        .vs-100
         ="\n"
-      ="\n"
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          div(class="s-" + breakpoint + "-100")
+          div(class="ms-" + breakpoint + "-100")
+          div(class="min-s-" + breakpoint + "-100")
+          div(class="min-vs-" + breakpoint + "-100")
+          div(class="vs-" + breakpoint + "-100")
+          ="\n"
+          each length in ['w', 'h']
+            div(class=length + "-" + breakpoint + "-100")
+            div(class="m" + length + "-" + breakpoint + "-100")
+            div(class="min-v" + length + "-" + breakpoint + "-100")
+            div(class="v" + length + "-" + breakpoint + "-100")
+            ="\n"
+          ="\n"
+  .clearfix
+
+block sidebar_right_items_after
+  li.nav-item
+    a.nav-link(href="#responsive") Responsive

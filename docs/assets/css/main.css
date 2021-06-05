@@ -33,3 +33,6 @@ code {
   .example-title,
   .component-title {
     line-height: 1.3; } }
+
+.bg-card-cap {
+  background-color: rgba(0, 0, 0, 0.03) !important; }

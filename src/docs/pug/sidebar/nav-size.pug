@@ -1,4 +1,4 @@
-extends ../example-responsive.pug
+extends ../example.pug
 
 block head_title
   +example_head_title('sidebar', 'nav_size')
@@ -32,17 +32,23 @@ block example_code
       ul.sidebar-nav(class='sidebar-nav-y-' + size)
       ="\n"
 
-block responsive_description
-  h2.h3.fw-400 Responsive sidebar nav sizes
+block example_after
+  #responsive.pt-3
+    h2.h4.fw-400.mb-3 Responsive
+  .card.card-body.bg-card-cap
+    +example_code
+      :encode-pug
+        | <!-- Source -->
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          - for(var size = 0; size <= 5; size++)
+            if size != 0
+              ul.sidebar-nav(class='sidebar-nav-' + breakpoint + '-' + size)
+            ul.sidebar-nav(class='sidebar-nav-x-' + breakpoint + '-' + size)
+            ul.sidebar-nav(class='sidebar-nav-y-' + breakpoint + '-' + size)
+            ="\n"
+          ="\n"
+  .clearfix
 
-block responsive_code
-  :encode-pug
-    | <!-- Source -->
-    each breakpoint in ['sm', 'md', 'lg', 'xl']
-      - for(var size = 0; size <= 5; size++)
-        if size != 0
-          ul.sidebar-nav(class='sidebar-nav-' + breakpoint + '-' + size)
-        ul.sidebar-nav(class='sidebar-nav-x-' + breakpoint + '-' + size)
-        ul.sidebar-nav(class='sidebar-nav-y-' + breakpoint + '-' + size)
-        ="\n"
-      ="\n"
+block sidebar_right_items_after
+  li.nav-item
+    a.nav-link(href="#responsive") Responsive

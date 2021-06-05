@@ -42,24 +42,28 @@ block example_code
     .flex-baseline
     .flex-stretch
 
-block example_footer_after
-  +example_footer#responsive
-    :encode-pug
-      | <!-- Responsive -->
-      each breakpoint in ['sm', 'md', 'lg', 'xl']
-        div(class='flex-' + breakpoint + '-none')
-        div(class='flex-' + breakpoint + '-center')
-        div(class='flex-y-' + breakpoint + '-center')
-        div(class='flex-x-' + breakpoint + '-center')
-        div(class='flex-' + breakpoint + '-left')
-        div(class='flex-' + breakpoint + '-right')
-        div(class='flex-' + breakpoint + '-between')
-        div(class='flex-' + breakpoint + '-around')
-        div(class='flex-' + breakpoint + '-top')
-        div(class='flex-' + breakpoint + '-bottom')
-        div(class='flex-' + breakpoint + '-baseline')
-        div(class='flex-' + breakpoint + '-stretch')
-        ="\n"
+block example_after
+  #responsive.pt-3
+    h2.h4.fw-400.mb-3 Responsive
+  .card.card-body.bg-card-cap
+    +example_code
+      :encode-pug
+        | <!-- Responsive -->
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          div(class='flex-' + breakpoint + '-none')
+          div(class='flex-' + breakpoint + '-center')
+          div(class='flex-y-' + breakpoint + '-center')
+          div(class='flex-x-' + breakpoint + '-center')
+          div(class='flex-' + breakpoint + '-left')
+          div(class='flex-' + breakpoint + '-right')
+          div(class='flex-' + breakpoint + '-between')
+          div(class='flex-' + breakpoint + '-around')
+          div(class='flex-' + breakpoint + '-top')
+          div(class='flex-' + breakpoint + '-bottom')
+          div(class='flex-' + breakpoint + '-baseline')
+          div(class='flex-' + breakpoint + '-stretch')
+          ="\n"
+  .clearfix
 
 block sidebar_right_items_after
   li.nav-item

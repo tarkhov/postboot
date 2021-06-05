@@ -1,4 +1,4 @@
-extends ../example-responsive.pug
+extends ../example.pug
 
 block head_title
   +example_head_title('list-group', 'item_size')
@@ -31,15 +31,21 @@ block example_code
       div(class='list-group-item-y-' + size)
       ="\n"
 
-block responsive_description
-  h2.h3.fw-400 Responsive list group item sizes
+block example_after
+  #responsive.pt-3
+    h2.h4.fw-400.mb-3 Responsive
+  .card.card-body.bg-card-cap
+    +example_code
+      :encode-pug
+        | <!-- Source -->
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          - for(var size = 1; size <= 5; size++)
+            div(class='list-group-item-' + breakpoint + '-' + size)
+            each coordinate in ['x', 'y']
+              div(class='list-group-item-' + coordinate + '-' + breakpoint + '-' + size)
+            ="\n"
+  .clearfix
 
-block responsive_code
-  :encode-pug
-    | <!-- Source -->
-    each breakpoint in ['sm', 'md', 'lg', 'xl']
-      - for(var size = 1; size <= 5; size++)
-        div(class='list-group-item-' + breakpoint + '-' + size)
-        each coordinate in ['x', 'y']
-          div(class='list-group-item-' + coordinate + '-' + breakpoint + '-' + size)
-        ="\n"
+block sidebar_right_items_after
+  li.nav-item
+    a.nav-link(href="#responsive") Responsive

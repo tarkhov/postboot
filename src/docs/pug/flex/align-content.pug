@@ -31,18 +31,22 @@ block example_code
     .flex-align-center
     .flex-align-stretch
 
-block example_footer_after
-  +example_footer#responsive
-    :encode-pug
-      | <!-- Responsive -->
-      each breakpoint in ['sm', 'md', 'lg', 'xl']
-        div(class='flex-align-' + breakpoint + '-between')
-        div(class='flex-align-' + breakpoint + '-around')
-        div(class='flex-align-' + breakpoint + '-start')
-        div(class='flex-align-' + breakpoint + '-end')
-        div(class='flex-align-' + breakpoint + '-center')
-        div(class='flex-align-' + breakpoint + '-stretch')
-        ="\n"
+block example_after
+  #responsive.pt-3
+    h2.h4.fw-400.mb-3 Responsive
+  .card.card-body.bg-card-cap
+    +example_code
+      :encode-pug
+        | <!-- Responsive -->
+        each breakpoint in ['sm', 'md', 'lg', 'xl']
+          div(class='flex-align-' + breakpoint + '-between')
+          div(class='flex-align-' + breakpoint + '-around')
+          div(class='flex-align-' + breakpoint + '-start')
+          div(class='flex-align-' + breakpoint + '-end')
+          div(class='flex-align-' + breakpoint + '-center')
+          div(class='flex-align-' + breakpoint + '-stretch')
+          ="\n"
+  .clearfix
 
 block sidebar_right_items_after
   li.nav-item
