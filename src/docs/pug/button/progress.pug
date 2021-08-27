@@ -1,0 +1,23 @@
+extends ../example.pug
+
+block head_title
+  +example_head_title('button', 'progress')
+
+block meta_description
+  +example_meta_description('button', 'progress')
+
+block breadcrumb
+  +example_breadcrumb('button')
+
+block example_description
+  +example_description('button', 'progress')
+
+block example_result
+  button.btn.btn-primary.btn-progress(type='button')
+    .btn-progress-bar.bg-black-20.w-50 50%
+
+block example_code
+  :encode-pug
+    | <!-- Source -->
+    button.btn.btn-primary.btn-progress(type='button')
+      .btn-progress-bar.bg-black-20.w-50 50%

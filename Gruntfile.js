@@ -35,7 +35,8 @@ module.exports = function (grunt) {
   var pkg = grunt.file.readJSON('package.json');
 
   var templates = {
-    'docs/index.html': 'src/docs/pug/index.pug'
+    'docs/index.html': 'src/docs/pug/index.pug',
+    'docs/templates/menu-bar/index.html': 'src/docs/pug/templates/menu-bar.pug'
   };
   var contents = grunt.file.readJSON('./src/docs/json/contents.json');
   for (var c in contents) {

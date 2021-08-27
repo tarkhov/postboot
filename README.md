@@ -1,6 +1,14 @@
 # PostBoot
 
-Web app prototyping library based on Bootstrap framework.
+A library for quickly creating web applications using Bootstrap with a minimum amount of CSS code, maximum productivity and a huge number of components.
+
+## Who uses it
+
+Designed for beginners and professional web developers for projects of any level of complexity using in combination with the Bootstrap framework.
+
+## Why use it
+
+If you want to quickly prototype a web application using the Bootstrap framework and Postboot library, as well as support projects with long-term support.
 
 ### Contents
 
@@ -39,10 +47,10 @@ npm install postboot
 
 ### Manually
 
-[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.2/postboot.zip) package and unpack it or use following commands:
+[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.3/postboot.zip) package and unpack it or use following commands:
 
 ```bash
-wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.2/postboot.zip
+wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.3/postboot.zip
 unzip postboot.zip
 ```
 
@@ -66,13 +74,13 @@ unzip postboot.zip
 ```html
 <!-- CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.2/dist/css/postboot.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.3/dist/css/postboot.min.css">
 
 <!-- JS -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.2/dist/js/postboot.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.3/dist/js/postboot.min.js"></script>
 ```
 
 ## Author

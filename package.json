@@ -1,7 +1,7 @@
 {
   "name": "postboot",
-  "description": "Web app prototyping library based on Bootstrap framework.",
-  "version": "1.0.2",
+  "description": "A library for quickly creating web applications using Bootstrap with a minimum amount of CSS code, maximum productivity and a huge number of components.",
+  "version": "1.0.3",
   "keywords": [
     "bootstrap",
     "css",

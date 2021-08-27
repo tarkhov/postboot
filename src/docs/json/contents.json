@@ -277,6 +277,13 @@
         "image": "responsive-block.png",
         "description": "Control block buttons on different devices.",
         "name": "Responsive block"
+      },
+      "progress": {
+        "url": "progress",
+        "template": "progress",
+        "image": "progress.png",
+        "description": "Button with progress indicator.",
+        "name": "Progress"
       }
     }
   },
