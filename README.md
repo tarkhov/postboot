@@ -27,7 +27,7 @@ If you want to quickly prototype a web application using the Bootstrap framework
 
 Library | Version
 ------- | -------
-Bootstrap | >= 4.5.0 and < 5.0
+Bootstrap | >= 5.0
 
 PostBoot does **not overwrite** any components of Bootstrap, but only extends most of them. You can use it completely **safe**.
 
@@ -35,6 +35,7 @@ PostBoot does **not overwrite** any components of Bootstrap, but only extends mo
 
 Bootstrap | Repo
 ------- | -------
+5.x | [2.x](https://github.com/tarkhov/postboot/tree/2.x)
 4.x | [1.x](https://github.com/tarkhov/postboot/tree/1.x)
 
 ## Installation
@@ -47,10 +48,10 @@ npm install postboot
 
 ### Manually
 
-[Download](https://github.com/tarkhov/postboot/releases/download/v1.0.3/postboot.zip) package and unpack it or use following commands:
+[Download](https://github.com/tarkhov/postboot/releases/download/v2.0.0/postboot.zip) package and unpack it or use following commands:
 
 ```bash
-wget -O https://github.com/tarkhov/postboot/releases/download/v1.0.3/postboot.zip
+wget -O https://github.com/tarkhov/postboot/releases/download/v2.0.0/postboot.zip
 unzip postboot.zip
 ```
 
@@ -73,14 +74,12 @@ unzip postboot.zip
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v1.0.3/dist/css/postboot.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/tarkhov/postboot/v2.0.0/dist/css/postboot.min.css">
 
 <!-- JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-<script src="https://cdn.rawgit.com/tarkhov/postboot/v1.0.3/dist/js/postboot.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.rawgit.com/tarkhov/postboot/v2.0.0/dist/js/postboot.min.js"></script>
 ```
 
 ## Author
