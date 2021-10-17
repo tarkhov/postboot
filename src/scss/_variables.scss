@@ -1,3 +1,6 @@
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8% !default;
+
 // Custom colors
 $custom-colors: () !default;
 $custom-colors: map-merge((
@@ -9,6 +12,9 @@ $custom-colors: map-merge((
   "teal":   $teal,
   "white":  $white
 ), $custom-colors);
+
+// Custom colors rgb
+$custom-colors-rgb: map-loop($custom-colors, to-rgb, "$value") !default;
 
 // Opacity
 $enable-opacity: true !default;
@@ -39,8 +45,8 @@ $font-size-6xl: 4.5rem !default;
 $font-size-7xl: 5.5rem !default;
 $font-size-8xl: 6rem !default;
 
-$font-sizes: () !default;
-$font-sizes: map-merge((
+$custom-font-sizes: () !default;
+$custom-font-sizes: map-merge((
   1: $font-size-xs,
   2: $font-size-sm,
   3: $font-size-base,
@@ -53,7 +59,7 @@ $font-sizes: map-merge((
   10: $font-size-6xl,
   11: $font-size-7xl,
   12: $font-size-8xl
-), $font-sizes);
+), $custom-font-sizes);
 
 $font-weights: () !default;
 $font-weights: map-merge((
@@ -82,8 +88,6 @@ $border-styles: map-merge((
   double: double,
   solid: solid
 ), $border-styles);
-
-$border-widths: 5 !default;
 
 // Grid containers
 $wide-container-max-widths: (
@@ -175,12 +179,10 @@ $btn-border-radius-xl: $border-radius-xl !default;
 $btn-padding-y-xs: $input-btn-padding-y-xs !default;
 $btn-padding-x-xs: $input-btn-padding-x-xs !default;
 $btn-font-size-xs: $input-btn-font-size-xs !default;
-$btn-line-height-xs: $input-btn-line-height-xs !default;
 
 $btn-padding-y-xl: $input-btn-padding-y-xl !default;
 $btn-padding-x-xl: $input-btn-padding-x-xl !default;
 $btn-font-size-xl: $input-btn-font-size-xl !default;
-$btn-line-height-xl: $input-btn-line-height-xl !default;
 
 $btn-state-bg-level: -9 !default;
 $btn-state-color-level: 6 !default;
@@ -192,53 +194,46 @@ $button-sizes: map-merge((
     'padding-y': $btn-padding-y-xs,
     'padding-x': $btn-padding-x-xs,
     'font-size': $btn-font-size-xs,
-    'line-height': $btn-line-height-xs,
     'border-radius': $btn-border-radius-xs
   ),
   2: (
     'padding-y': $btn-padding-y-sm,
     'padding-x': $btn-padding-x-sm,
     'font-size': $btn-font-size-sm,
-    'line-height': $btn-line-height-sm,
     'border-radius': $btn-border-radius-sm
   ),
   3: (
     'padding-y': $btn-padding-y,
     'padding-x': $btn-padding-x,
     'font-size': $btn-font-size,
-    'line-height': $btn-line-height,
     'border-radius': $btn-border-radius
   ),
   4: (
     'padding-y': $btn-padding-y-lg,
     'padding-x': $btn-padding-x-lg,
     'font-size': $btn-font-size-lg,
-    'line-height': $btn-line-height-lg,
     'border-radius': $btn-border-radius-lg
   ),
   5: (
     'padding-y': $btn-padding-y-xl,
     'padding-x': $btn-padding-x-xl,
     'font-size': $btn-font-size-xl,
-    'line-height': $btn-line-height-xl,
     'border-radius': $btn-border-radius-xl
   )
 ), $button-sizes);
 
 // Form
-$input-line-height-xs:   $input-btn-line-height-xs !default;
 $input-padding-y-xs:     $input-btn-padding-y-xs !default;
 $input-padding-x-xs:     $input-btn-padding-x-xs !default;
 $input-font-size-xs:     $input-btn-font-size-xs !default;
 $input-border-radius-xs: $border-radius-xs !default;
-$input-height-xs:        add($input-line-height-xs * 1em, add($input-padding-y-xs * 2, $input-height-border, false)) !default;
+$input-height-xs:        add($input-line-height * 1em, add($input-padding-y-xs * 2, $input-height-border, false)) !default;
 
-$input-line-height-xl:   $input-btn-line-height-xl !default;
 $input-padding-y-xl:     $input-btn-padding-y-xl !default;
 $input-padding-x-xl:     $input-btn-padding-x-xl !default;
 $input-font-size-xl:     $input-btn-font-size-xl !default;
 $input-border-radius-xl: $border-radius-xl !default;
-$input-height-xl:        add($input-line-height-xl * 1em, add($input-padding-y-xl * 2, $input-height-border, false)) !default;
+$input-height-xl:        add($input-line-height * 1em, add($input-padding-y-xl * 2, $input-height-border, false)) !default;
 
 $input-dark-color: $white !default;
 $input-dark-bg: $dark !default;
@@ -250,7 +245,6 @@ $input-sizes: map-merge((
     'padding-y': $input-padding-y-xs,
     'padding-x': $input-padding-x-xs,
     'font-size': $input-font-size-xs,
-    'line-height': $input-line-height-xs,
     'border-radius': $input-border-radius-xs
   ),
   2: (
@@ -258,7 +252,6 @@ $input-sizes: map-merge((
     'padding-y': $input-padding-y-sm,
     'padding-x': $input-padding-x-sm,
     'font-size': $input-font-size-sm,
-    'line-height': $input-line-height-sm,
     'border-radius': $input-border-radius-sm
   ),
   3: (
@@ -266,7 +259,6 @@ $input-sizes: map-merge((
     'padding-y': $input-padding-y,
     'padding-x': $input-padding-x,
     'font-size': $input-font-size,
-    'line-height': $input-line-height,
     'border-radius': $input-border-radius
   ),
   4: (
@@ -274,7 +266,6 @@ $input-sizes: map-merge((
     'padding-y': $input-padding-y-lg,
     'padding-x': $input-padding-x-lg,
     'font-size': $input-font-size-lg,
-    'line-height': $input-line-height-lg,
     'border-radius': $input-border-radius-lg
   ),
   5: (
@@ -282,7 +273,6 @@ $input-sizes: map-merge((
     'padding-y': $input-padding-y-xl,
     'padding-x': $input-padding-x-xl,
     'font-size': $input-font-size-xl,
-    'line-height': $input-line-height-xl,
     'border-radius': $input-border-radius-xl
   )
 ), $input-sizes);
@@ -613,25 +603,25 @@ $list-group-sizes: map-merge((
 // Breadcrumb
 $breadcrumb-padding-y-xs: .25rem !default;
 $breadcrumb-padding-x-xs: .5rem !default;
-$breadcrumb-item-padding-xs: .25rem !default;
+$breadcrumb-item-padding-x-xs: .25rem !default;
 $breadcrumb-font-size-xs: $font-size-xs !default;
 $breadcrumb-border-radius-xs: $border-radius-xs !default;
 
 $breadcrumb-padding-y-sm: .5rem !default;
 $breadcrumb-padding-x-sm: .75rem !default;
-$breadcrumb-item-padding-sm: .375rem !default;
+$breadcrumb-item-padding-x-sm: .375rem !default;
 $breadcrumb-font-size-sm: $font-size-sm !default;
 $breadcrumb-border-radius-sm: $border-radius-sm !default;
 
 $breadcrumb-padding-y-lg: 1rem !default;
 $breadcrumb-padding-x-lg: 1.25rem !default;
-$breadcrumb-item-padding-lg: .625rem !default;
+$breadcrumb-item-padding-x-lg: .625rem !default;
 $breadcrumb-font-size-lg: $font-size-lg !default;
 $breadcrumb-border-radius-lg: $border-radius-lg !default;
 
 $breadcrumb-padding-y-xl: 1.25rem !default;
 $breadcrumb-padding-x-xl: 1.5rem !default;
-$breadcrumb-item-padding-xl: .75rem !default;
+$breadcrumb-item-padding-x-xl: .75rem !default;
 $breadcrumb-font-size-xl: $font-size-xl !default;
 $breadcrumb-border-radius-xl: $border-radius-xl !default;
 
@@ -662,35 +652,35 @@ $breadcrumb-sizes: map-merge((
     'padding-x': $breadcrumb-padding-x-xs,
     'font-size': $breadcrumb-font-size-xs,
     'border-radius': $breadcrumb-border-radius-xs,
-    'item-padding': $breadcrumb-item-padding-xs
+    'item-padding': $breadcrumb-item-padding-x-xs
   ),
   2: (
     'padding-y': $breadcrumb-padding-y-sm,
     'padding-x': $breadcrumb-padding-x-sm,
     'font-size': $breadcrumb-font-size-sm,
     'border-radius': $breadcrumb-border-radius-sm,
-    'item-padding': $breadcrumb-item-padding-sm
+    'item-padding': $breadcrumb-item-padding-x-sm
   ),
   3: (
     'padding-y': $breadcrumb-padding-y,
     'padding-x': $breadcrumb-padding-x,
     'font-size': $font-size-base,
     'border-radius': $breadcrumb-border-radius,
-    'item-padding': $breadcrumb-item-padding
+    'item-padding': $breadcrumb-item-padding-x
   ),
   4: (
     'padding-y': $breadcrumb-padding-y-lg,
     'padding-x': $breadcrumb-padding-x-lg,
     'font-size': $breadcrumb-font-size-lg,
     'border-radius': $breadcrumb-border-radius-lg,
-    'item-padding': $breadcrumb-item-padding-lg
+    'item-padding': $breadcrumb-item-padding-x-lg
   ),
   5: (
     'padding-y': $breadcrumb-padding-y-xl,
     'padding-x': $breadcrumb-padding-x-xl,
     'font-size': $breadcrumb-font-size-xl,
     'border-radius': $breadcrumb-border-radius-xl,
-    'item-padding': $breadcrumb-item-padding-xl
+    'item-padding': $breadcrumb-item-padding-x-xl
   )
 ), $breadcrumb-sizes);
 
@@ -772,35 +762,30 @@ $pagination-sizes: map-merge((
     'padding-y': $pagination-padding-y-xs,
     'padding-x': $pagination-padding-x-xs,
     'font-size': $font-size-xs,
-    'line-height': $line-height-xs,
     'border-radius': $border-radius-xs
   ),
   2: (
     'padding-y': $pagination-padding-y-sm,
     'padding-x': $pagination-padding-x-sm,
     'font-size': $font-size-sm,
-    'line-height': $line-height-sm,
     'border-radius': $border-radius-sm
   ),
   3: (
     'padding-y': $pagination-padding-y,
     'padding-x': $pagination-padding-x,
     'font-size': $font-size-base,
-    'line-height': $line-height-base,
     'border-radius': $border-radius
   ),
   4: (
     'padding-y': $pagination-padding-y-lg,
     'padding-x': $pagination-padding-x-lg,
     'font-size': $font-size-lg,
-    'line-height': $line-height-lg,
     'border-radius': $border-radius-lg
   ),
   5: (
     'padding-y': $pagination-padding-y-xl,
     'padding-x': $pagination-padding-x-xl,
     'font-size': $font-size-xl,
-    'line-height': $line-height-xl,
     'border-radius': $border-radius-xl
   )
 ), $pagination-sizes);
@@ -929,26 +914,34 @@ $sidebar-sizes: map-merge((
 ), $sidebar-sizes);
 
 // Table
-$table-cell-padding-xs:  .15rem !default;
-$table-cell-padding-lg:  1.5rem !default;
-$table-cell-padding-xl:  3rem !default;
+$table-cell-padding-y-xs:  .15rem !default;
+$table-cell-padding-x-xs:  .15rem !default;
+$table-cell-padding-y-lg:  1.5rem !default;
+$table-cell-padding-x-lg:  1.5rem !default;
+$table-cell-padding-y-xl:  3rem !default;
+$table-cell-padding-x-xl:  3rem !default;
 
 $table-sizes: () !default;
 $table-sizes: map-merge((
   1: (
-    'cell-padding': $table-cell-padding-xs
+    'cell-padding-y': $table-cell-padding-y-xs,
+    'cell-padding-x': $table-cell-padding-y-xs
   ),
   2: (
-    'cell-padding': $table-cell-padding-sm
+    'cell-padding-y': $table-cell-padding-y-sm,
+    'cell-padding-x': $table-cell-padding-x-sm
   ),
   3: (
-    'cell-padding': $table-cell-padding
+    'cell-padding-y': $table-cell-padding-y,
+    'cell-padding-x': $table-cell-padding-x
   ),
   4: (
-    'cell-padding': $table-cell-padding-lg
+    'cell-padding-y': $table-cell-padding-y-lg,
+    'cell-padding-x': $table-cell-padding-x-lg
   ),
   5: (
-    'cell-padding': $table-cell-padding-xl
+    'cell-padding-y': $table-cell-padding-y-xl,
+    'cell-padding-x': $table-cell-padding-x-xl
   )
 ), $table-sizes);
 

@@ -1,0 +1,6 @@
+:root {
+  // Custom rgb colors
+  @each $color, $value in $custom-colors-rgb {
+    --#{$variable-prefix}#{$color}-rgb: #{$value};
+  }
+}

@@ -69,20 +69,6 @@
     "name": "Badge",
     "description": "More colors and shape of the badges.",
     "examples": {
-      "custom": {
-        "url": "custom-colors",
-        "template": "custom",
-        "image": "custom.png",
-        "description": "Additional badge colors that exist but not used.",
-        "name": "Custom colors"
-      },
-      "opacity": {
-        "url": "opacity-colors",
-        "template": "opacity",
-        "image": "opacity.png",
-        "description": "Badge opacity colors in the range from 0.1 to 0.9.",
-        "name": "Opacity colors"
-      }
     }
   },
   "border": {
@@ -271,13 +257,6 @@
         "description": "Pill buttons better than rounded-pill utility, because they can work with button groups.",
         "name": "Pill"
       },
-      "block_responsive": {
-        "url": "responsive-block",
-        "template": "block-responsive",
-        "image": "responsive-block.png",
-        "description": "Control block buttons on different devices.",
-        "name": "Responsive block"
-      },
       "progress": {
         "url": "progress",
         "template": "progress",
@@ -353,21 +332,6 @@
         "description": "Tables formatted for the card.",
         "title": "Card table",
         "name": "Table"
-      }
-    }
-  },
-  "collapse": {
-    "url": "collapse",
-    "template": "collapse",
-    "name": "Collapse",
-    "description": "Look at hidden possibilities of collapse component.",
-    "examples": {
-      "horizontal": {
-        "url": "horizontal",
-        "template": "horizontal",
-        "image": "horizontal.png",
-        "description": "Standard collapse component can hide and show elements not only vertical, but horizontal.",
-        "name": "Horizontal"
       }
     }
   },
@@ -687,26 +651,12 @@
         "description": "Use breadcrumbs with navbars.",
         "name": "Breadcrumbs"
       },
-      "container": {
-        "url": "container",
-        "template": "container",
-        "image": "container.png",
-        "description": "Fix navbar horizontal padding.",
-        "name": "Container"
-      },
       "dropdown_menu": {
         "url": "dropdown-menu",
         "template": "dropdown-menu",
         "image": "dropdown-menu.png",
         "description": "Fix navbar dropdown menu margin.",
         "name": "Dropdown menu"
-      },
-      "expand_xs": {
-        "url": "expand-on-mobile",
-        "template": "expand-xs",
-        "image": "expand-xs.png",
-        "description": "This nav expands on all devices, even smartphones.",
-        "name": "Expand on mobile"
       },
       "nav_align_left": {
         "url": "nav-align-left",
@@ -846,13 +796,6 @@
         "image": "responsive-visibility.png",
         "description": "Control sidebar text visibility on multiple devices.",
         "name": "Responsive visibility"
-      },
-      "modal": {
-        "url": "modal",
-        "template": "modal",
-        "image": "modal.png",
-        "description": "Show sidebar on dark background.",
-        "name": "Modal"
       },
       "size": {
         "url": "sizes",

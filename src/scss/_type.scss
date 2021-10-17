@@ -9,25 +9,12 @@
       .h5-#{$breakpoint} { font-size: $h5-font-size; }
       .h6-#{$breakpoint} { font-size: $h6-font-size; }
 
-      .display-#{$breakpoint}-1 {
-        font-size: $display1-size;
-        font-weight: $display1-weight;
-        line-height: $display-line-height;
-      }
-      .display-#{$breakpoint}-2 {
-        font-size: $display2-size;
-        font-weight: $display2-weight;
-        line-height: $display-line-height;
-      }
-      .display-#{$breakpoint}-3 {
-        font-size: $display3-size;
-        font-weight: $display3-weight;
-        line-height: $display-line-height;
-      }
-      .display-#{$breakpoint}-4 {
-        font-size: $display4-size;
-        font-weight: $display4-weight;
-        line-height: $display-line-height;
+      @each $display, $font-size in $display-font-sizes {
+        .display-#{$breakpoint}-#{$display} {
+          @include font-size($font-size);
+          font-weight: $display-font-weight;
+          line-height: $display-line-height;
+        }
       }
     }
   }

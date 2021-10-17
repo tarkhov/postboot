@@ -14,8 +14,8 @@ block example_description
   .alert.alert-primary(role="alert") Works only on touch devices like #[b tablet] and #[b phone].
 
 block example_result
-  .navbar.navbar-expand-xs.navbar-dark.bg-dark.px-0
-    .container-fluid.navbar-container
+  .navbar.navbar-expand.navbar-dark.bg-dark.px-0
+    .container-fluid
       .navbar-scroller
         ul.navbar-nav.navbar-scroller-nav
           - for(var i = 1; i <= 12; i++)
@@ -24,8 +24,8 @@ block example_result
 block example_code
   :encode-pug
     | <!-- Source -->
-    .navbar.navbar-expand-xs.navbar-dark.bg-dark.px-0
-      .container-fluid.navbar-container
+    .navbar.navbar-expand.navbar-dark.bg-dark.px-0
+      .container-fluid
         .navbar-scroller
           ul.navbar-nav.navbar-scroller-nav
             - for(var i = 1; i <= 12; i++)

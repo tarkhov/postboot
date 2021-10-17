@@ -22,7 +22,7 @@ block example_body
     tbody
       each column in [{'size': 'xxl', 'width': '≥1600px', 'standard': ''}, {'size': '3xl', 'width': '≥1920px', 'standard': '2K'}, {'size': '4xl', 'width': '≥3840px', 'standard': '4K'}, {'size': '5xl', 'width': '≥5120px', 'standard': '5K'}, {'size': '6xl', 'width': '≥7680px', 'standard': '8K'}]
         tr
-          td #[code.fs-2= '.col-' + column.size + '-']
+          td #[code.font-2= '.col-' + column.size + '-']
           td= column.width
           td= column.standard
 

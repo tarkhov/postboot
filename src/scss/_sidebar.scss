@@ -12,7 +12,8 @@
   line-height: inherit;
   white-space: nowrap;
 
-  @include hover-focus {
+  &:focus,
+  &:hover {
     text-decoration: none;
   }
 }
@@ -37,7 +38,8 @@
   border: $border-width solid transparent;
   @include border-radius($sidebar-toggler-border-radius);
 
-  @include hover-focus {
+  &:focus,
+  &:hover {
     text-decoration: none;
   }
 }
@@ -57,68 +59,12 @@
   }
 }
 
-.sidebar-modal {
-  @each $breakpoint in map-keys($grid-breakpoints) {
-    $next: breakpoint-next($breakpoint);
-    $infix: breakpoint-infix($next);
-
-    &#{$infix} {
-      @include media-breakpoint-down($breakpoint) {
-        &.fade {
-          opacity: 1;
-        }
-      }
-
-      @include media-breakpoint-up($next) {
-        @include sidebar-modal;
-      }
-
-      &-down {
-        @include media-breakpoint-up($next) {
-          &.fade {
-            opacity: 1;
-          }
-        }
-
-        @include media-breakpoint-down($breakpoint) {
-          @include sidebar-modal;
-        }
-      }
-    }
-  }
-}
-
-.sidebar-dialog {
-  margin: 0 !important;
-  max-width: none;
-}
-
-.modal-open {
-  .sidebar-modal {
-    @each $breakpoint in map-keys($grid-breakpoints) {
-      $next: breakpoint-next($breakpoint);
-      $infix: breakpoint-infix($next);
-
-      &#{$infix} {
-        @include media-breakpoint-up($next) {
-          @include sidebar-modal-open;
-        }
-
-        &-down {
-          @include media-breakpoint-down($next) {
-            @include sidebar-modal-open;
-          }
-        }
-      }
-    }
-  }
-}
-
 .sidebar-light {
   .sidebar-brand {
     color: $sidebar-light-active-color;
 
-    @include hover-focus {
+    &:focus,
+    &:hover {
       color: $sidebar-light-active-color;
     }
   }
@@ -127,7 +73,8 @@
     .nav-link {
       color: $sidebar-light-color;
 
-      @include hover-focus {
+      &:focus,
+      &:hover {
         color: $sidebar-light-hover-color;
       }
 
@@ -160,7 +107,8 @@
   .sidebar-brand {
     color: $sidebar-dark-active-color;
 
-    @include hover-focus {
+    &:focus,
+    &:hover {
       color: $sidebar-dark-active-color;
     }
   }
@@ -169,7 +117,8 @@
     .nav-link {
       color: $sidebar-dark-color;
 
-      @include hover-focus {
+      &:focus,
+      &:hover {
         color: $sidebar-dark-hover-color;
       }
 

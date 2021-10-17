@@ -15,50 +15,6 @@
   }
 }
 
-// Expand
-.navbar-expand-xs {
-  @include media-breakpoint-down(xs) {
-    > .container,
-    > .container-fluid {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-
-  .navbar-nav {
-    flex-direction: row;
-
-    .dropdown-menu {
-      position: absolute !important;
-      top: 100% !important;
-    }
-
-    .nav-link {
-      padding-right: $navbar-nav-link-padding-x;
-      padding-left: $navbar-nav-link-padding-x;
-    }
-  }
-
-  > .container,
-  > .container-fluid {
-    flex-wrap: nowrap;
-  }
-
-  .navbar-collapse {
-    display: flex !important;
-  }
-}
-
-// Container
-.navbar-container {
-  padding-right: $grid-gutter-width / 2 !important;
-  padding-left: $grid-gutter-width / 2 !important;
-}
-
 // Nav
 .navbar-nav-left .nav-item:first-child .nav-link {
   padding-left: 0 !important;

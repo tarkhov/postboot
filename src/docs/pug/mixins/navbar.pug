@@ -17,23 +17,23 @@ mixin responsive_navbar_nav(size, classes)
 
 mixin navbar(classes)
   nav.navbar.px-0(class=classes)
-    .container-fluid.navbar-container
+    .container-fluid
       = "\n\t"
       a.navbar-brand(href="#") Brand
       .collapse.navbar-collapse
         +navbar_nav()
 
 mixin navbar_nav_size(size)
-  nav.navbar.navbar-expand-xs.navbar-dark.bg-dark.mb-3.px-0
-    .container-fluid.navbar-container
+  nav.navbar.navbar-expand.navbar-dark.bg-dark.mb-3.px-0
+    .container-fluid
       = "\n\t"
       a.navbar-brand(href="#") Brand
       .collapse.navbar-collapse
         +responsive_navbar_nav(size, 'navbar-nav-' + size)
 
 mixin navbar_size(size)
-  nav.navbar.navbar-expand-xs.navbar-dark.bg-dark.mb-3.px-0(class='navbar-' + size)
-    .container-fluid.navbar-container
+  nav.navbar.navbar-expand.navbar-dark.bg-dark.mb-3.px-0(class='navbar-' + size)
+    .container-fluid
       = "\n\t"
       a.navbar-brand(href="#") Brand
       .collapse.navbar-collapse

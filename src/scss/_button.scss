@@ -128,7 +128,7 @@
 
     @each $size, $button in $button-sizes {
       .btn#{$infix}-#{$size} {
-        @include button-size(map-get($button, 'padding-y'), map-get($button, 'padding-x'), map-get($button, 'font-size'), map-get($button, 'line-height'), map-get($button, 'border-radius'));
+        @include button-size(map-get($button, 'padding-y'), map-get($button, 'padding-x'), map-get($button, 'font-size'), map-get($button, 'border-radius'));
       }
     }
   }
@@ -158,19 +158,7 @@
 
 // Pill
 .btn-pill {
-  border-radius: $rounded-pill;
-}
-
-// Responsive block
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    $infix: breakpoint-infix($breakpoint);
-
-    .btn#{$infix}-block {
-      display: block;
-      width: 100%;
-    }
-  }
+  border-radius: $border-radius-pill;
 }
 
 // Progress

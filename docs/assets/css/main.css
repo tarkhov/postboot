@@ -1,5 +1,9 @@
+body {
+  font-family: Roboto, var(--bs-font-sans-serif); }
+
 a {
-  outline: none !important; }
+  outline: none !important;
+  text-decoration: none; }
 
 pre,
 code {
@@ -12,15 +16,14 @@ code {
   background-color: #f4f5f9; }
 
 .extension-image {
-  margin-bottom: 1.25rem; }
+  margin-bottom: 1rem; }
 
 .extension-name {
   line-height: 1.3; }
 
-@media (max-width: 575.98px) {
-  .example-card-img-responsive {
-    width: 150px;
-    height: 100px; } }
+.example-card-img-responsive {
+  width: 150px;
+  height: 100px; }
 
 .logo {
   padding-left: .6rem;
@@ -29,7 +32,7 @@ code {
 #sidebar-left .sidebar-nav .nav-item:first-child .nav-link {
   padding-top: 0; }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .example-title,
   .component-title {
     line-height: 1.3; } }

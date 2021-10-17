@@ -1,5 +1,10 @@
+body {
+  font-family: Roboto, $font-family-base;
+}
+
 a {
   outline: none !important;
+  text-decoration: none;
 }
 
 pre,

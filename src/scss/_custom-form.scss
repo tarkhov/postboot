@@ -1,14 +1,10 @@
 // Switch reverse
-.custom-switch-reverse {
-  .custom-control-label {
-    &::after {
-      left: calc(#{-($custom-control-gutter + $custom-control-indicator-size)} + #{$custom-control-indicator-border-width * 2});
-    }
-  }
+.form-switch-reverse {
+  .form-check-input {
+    background-position: right center;
 
-  .custom-control-input:checked ~ .custom-control-label {
-    &::after {
-      transform: translateX(-($custom-switch-width - $custom-control-indicator-size));
+    &:checked {
+      background-position: left center !important;
     }
   }
 }

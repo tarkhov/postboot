@@ -3,8 +3,8 @@
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint);
 
-    @each $size, $value in $font-sizes {
-      .fs#{$infix}-#{$size} { font-size: $value !important; }
+    @each $size, $value in $custom-font-sizes {
+      .font#{$infix}-#{$size} { font-size: $value !important; }
     }
   }
 }
@@ -15,7 +15,7 @@
     $infix: breakpoint-infix($breakpoint);
 
     @each $weight, $value in $font-weights {
-      .fw#{$infix}-#{$weight} { font-weight: $value !important; }
+      .font#{$infix}-#{$weight} { font-weight: $value !important; }
     }
   }
 }

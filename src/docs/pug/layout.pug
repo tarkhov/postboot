@@ -20,17 +20,17 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet")
     block css
       link(rel="stylesheet" href="/" + pkg.name + "/assets/css/app.min.css")
-  body.pt-navbar.pb-navbar-2.pb-md-0(data-spy="scroll" data-target=".contents-nav")
+  body.pt-navbar.pb-navbar-2.pb-md-0(data-bs-spy="scroll" data-bs-target=".contents-nav")
     block header
       header.pb-gutter(role="banner")
-        nav#navbar-top.navbar.navbar-expand-xs.navbar-light.px-sm-0.fixed-top(role="navigation")
-          .container-fluid.container-xl
-            a.navbar-brand.mr-2.mr-sm-3(href="/" + pkg.name + '/' rel="home") #[span.logo.rounded.py-1.text-white.fw-500.bg-purple P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
+        nav#navbar-top.navbar.navbar-expand.navbar-light.fixed-top(role="navigation")
+          .container-xl
+            a.navbar-brand.me-2.me-sm-3(href="/" + pkg.name + '/' rel="home") #[span.logo.rounded.py-1.text-white.font-500.bg-purple P]#[span.d-none.d-sm-inline!= "&nbsp;&nbsp;" + title]#[sup.d-none.d-sm-inline.text-success!= "&nbsp;&nbsp;" + pkg.version]
 
             .collapse.navbar-collapse
-              ul.navbar-nav.mr-auto
+              ul.navbar-nav.me-auto
                 li.nav-item.dropdown.dropdown-hover
-                  a.nav-link.dropdown-toggle(href="#" data-toggle="dropdown" data-hover="dropdown") Version
+                  a.nav-link.dropdown-toggle(href="#" data-bs-toggle="dropdown" data-hover="dropdown") Version
                   .dropdown-menu
                     a.dropdown-item(href="/" + pkg.name + "/" class=url=="/" ? "active": "") v1
               ul.navbar-nav.navbar-nav-x-lg-4
@@ -46,10 +46,10 @@ html(lang="en")
                   a.nav-link(href=githubUrl + "/" + username + "/" + pkg.name target="_blank" rel="nofollow")
                     i.fab.fa-github-alt
                     span.d-none.d-lg-inline!= "&nbsp;&nbsp;GitHub"
-              a.btn.btn-primary.btn-sm.ml-2(href=downloadUrl rel="nofollow") Download
+              a.btn.btn-primary.btn-sm.ms-2(href=downloadUrl rel="nofollow") Download
 
     block content
-      .container-fluid.container-xl
+      .container-xl
         .row
           .col-md.col-md-auto.col-lg-2
             aside#sidebar-left.sidebar.sidebar-light.py-0.d-none.d-md-block(role="complementary")
@@ -66,7 +66,7 @@ html(lang="en")
                       )
                         span= category.name
                         if category.new
-                          span.badge.badge-success.text-uppercase.ml-2 New
+                          span.badge.badge-success.text-uppercase.ms-2 New
           .col-12.col-md-9.col-lg-8
             block breadcrumb
             main(role="main")
@@ -78,7 +78,7 @@ html(lang="en")
 
     block footer
       footer.pt-gutter.d-block.d-md-none(role="contentinfo")
-        nav.contents-nav.navbar.navbar-2.navbar-expand-xs.navbar-light.px-sm-0.fixed-bottom.border-top.bg-white(role="navigation")
+        nav.contents-nav.navbar.navbar-expand.navbar-2.navbar-light.fixed-bottom.border-top.bg-white(role="navigation")
           .container-fluid
             .navbar-scroller
               ul.navbar-nav.navbar-nav-left.navbar-scroller-nav
@@ -87,4 +87,5 @@ html(lang="en")
                     a.nav-link(href='/' + pkg.name + '/' + category.url + '/' class=url=="/" + category.url + "/" ? "active": "")= category.name
 
     block js
+      script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js")
       script(src="/" + pkg.name + "/assets/js/app.min.js")

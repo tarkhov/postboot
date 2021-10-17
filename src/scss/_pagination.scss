@@ -5,7 +5,7 @@
 
     @each $size, $pagination in $pagination-sizes {
       .pagination#{$infix}-#{$size} {
-        @include pagination-size(map-get($pagination, 'padding-y'), map-get($pagination, 'padding-x'), map-get($pagination, 'font-size'), map-get($pagination, 'line-height'), map-get($pagination, 'border-radius'));
+        @include pagination-size(map-get($pagination, 'padding-y'), map-get($pagination, 'padding-x'), map-get($pagination, 'font-size'), map-get($pagination, 'border-radius'));
       }
     }
   }

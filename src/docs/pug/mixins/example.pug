@@ -11,7 +11,7 @@ mixin example_meta_description(componentName, exampleName)
 mixin example_breadcrumb(componentName)
   - var component = contents[componentName]
   nav(role="navigation")
-    ol.breadcrumb.breadcrumb-light.breadcrumb-rsaquo.bg-transparent.p-0.mb-2.fs-2(itemscope itemtype="http://schema.org/BreadcrumbList")
+    ol.breadcrumb.breadcrumb-light.breadcrumb-rsaquo.bg-transparent.p-0.mb-2.font-2(itemscope itemtype="http://schema.org/BreadcrumbList")
       li.breadcrumb-item(itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem")
         a.breadcrumb-link(href='/' + pkg.name + '/' itemprop="item") #[span(itemprop="name") Home]
         meta(itemprop="position" content="1")
@@ -22,7 +22,7 @@ mixin example_breadcrumb(componentName)
 mixin example_description(componentName, exampleName)
   - var component = contents[componentName]
   - var example = component.examples[exampleName]
-  h1.h3.fw-400.example-title= component.name + ' ' + example.name.toLowerCase()
+  h1.h3.font-400.example-title= component.name + ' ' + example.name.toLowerCase()
   p= example.description
 
 mixin example_code
@@ -45,13 +45,13 @@ mixin component_meta_description(componentName)
 
 mixin component_description(componentName)
   - var component = contents[componentName]
-  h1.h3.fw-400.component-title= component.name
+  h1.h3.font-400.component-title= component.name
   p= component.description
 
 mixin new_component_description(componentName)
   - var component = contents[componentName]
   .flex-y-center.mb-2
-    h1.h3.fw-400.mb-0.mr-2= component.name
+    h1.h3.font-400.mb-0.mr-2= component.name
     span.badge.badge-success.text-uppercase New
   p= component.description
 
@@ -70,10 +70,10 @@ mixin example_card(componentName, component, example)
             'extension-name',
             'card-title',
             'd-block',
-            'fs-md-4',
-            'fs-sm-3',
-            'fs-2',
-            'fw-500',
+            'font-md-4',
+            'font-sm-3',
+            'font-2',
+            'font-500',
             'text-body',
             'text-hover-primary',
             'text-decoration-none',

@@ -18,7 +18,7 @@ block example_result
       .sidebar.sidebar-dark.bg-dark.sidebar-expand
         a.sidebar-brand(href="#") Brand
         - for(var size = 5; size > 0; size--)
-          ul.sidebar-nav.sidebar-nav-x-3.sidebar-nav-y-5(class='fs-' + size)
+          ul.sidebar-nav.sidebar-nav-x-3.sidebar-nav-y-5(class='font-' + size)
             li.nav-item
               a.nav-link(href="#")= 'Nav item ' + size
 
@@ -34,7 +34,7 @@ block example_code
 
 block example_after
   #responsive.pt-3
-    h2.h4.fw-400.mb-3 Responsive
+    h2.h4.font-400.mb-3 Responsive
     .card.card-body.bg-card-cap
       +example_code
         :encode-pug

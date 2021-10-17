@@ -23,7 +23,7 @@ block example_result
               li.nav-item: a.nav-link(href="#") Link
               li.nav-item: a.nav-link.disabled.d-sm-block.d-none(href="#") Disabled
           .card-body
-            h4.card-title(class="fs-" + (i + 2)) Example title
+            h4.card-title(class="font-" + (i + 2)) Example title
             p.card-text Example text
           .card-footer
             ul.nav.nav-pills.card-footer-pills
@@ -39,7 +39,7 @@ block example_code
 
 block example_after
   #responsive.pt-3
-    h2.h4.fw-400.mb-3 Responsive
+    h2.h4.font-400.mb-3 Responsive
     .card.card-body.bg-card-cap
       +example_code
         :encode-pug

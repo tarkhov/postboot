@@ -20,18 +20,18 @@ block example_code
   :encode-pug
     | <!-- Source -->
     - for(var size = 1; size <= 12; size++)
-      p(class='fs-' + size)= 'Font size ' + size
+      p(class='font-' + size)= 'Font size ' + size
 
 block example_after
   #responsive.pt-3
-    h2.h4.fw-400.mb-3 Responsive
+    h2.h4.font-400.mb-3 Responsive
     .card.card-body.bg-card-cap
       +example_code
         :encode-pug
           | <!-- Responsive -->
           each breakpoint in ['sm', 'md', 'lg', 'xl']
             - for(var size = 1; size <= 12; size++)
-              p(class='fs-' + breakpoint + '-' + size)
+              p(class='font-' + breakpoint + '-' + size)
             ="\n"
   .clearfix
 

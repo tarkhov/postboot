@@ -10,9 +10,8 @@
     $infix: breakpoint-infix($breakpoint);
     @each $size, $table in $table-sizes {
       .table#{$infix}-#{$size} {
-        th,
-        td {
-          padding: map-get($table, 'cell-padding');
+        > :not(caption) > * > * {
+          padding: map-get($table, 'cell-padding-y') map-get($table, 'cell-padding-x');
         }
       }
     }

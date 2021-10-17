@@ -198,7 +198,7 @@
 // Pills ellipsed
 .nav-pills-ellipsed {
   .nav-link {
-    @include border-radius($rounded-pill);
+    @include border-radius($border-radius-pill);
   }
 }
 

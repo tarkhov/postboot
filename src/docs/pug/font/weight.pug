@@ -20,18 +20,18 @@ block example_code
   :encode-pug
     | <!-- Source -->
     each text, weight in {'100': 'Thin', '200': 'Extra light', '300': 'Light', '400': 'Normal', '500': 'Medium', '600': 'Semi bold', '700': 'Bold', '800': 'Extra bold', '900': 'Black'}
-      p(class='fw-' + weight)= text
+      p(class='font-' + weight)= text
 
 block example_after
   #responsive.pt-3
-    h2.h4.fw-400.mb-3 Responsive
+    h2.h4.font-400.mb-3 Responsive
     .card.card-body.bg-card-cap
       +example_code
         :encode-pug
           | <!-- Responsive -->
           each breakpoint in ['sm', 'md', 'lg', 'xl']
             each text, weight in {'100': 'Thin', '200': 'Extra light', '300': 'Light', '400': 'Normal', '500': 'Medium', '600': 'Semi bold', '700': 'Bold', '800': 'Extra bold', '900': 'Black'}
-              p(class='fw-' + breakpoint + '-' + weight)
+              p(class='font-' + breakpoint + '-' + weight)
             ="\n"
   .clearfix
 

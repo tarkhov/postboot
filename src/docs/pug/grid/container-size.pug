@@ -22,7 +22,7 @@ block example_body
     tbody
       each container, width in [{'size': '540px', 'breakpoint': '≥576px'}, {'size': '720px', 'breakpoint': '≥768px'}, {'size': '960px', 'breakpoint': '≥992px'}, {'size': '1140px', 'breakpoint': '≥1200px'}, {'size': '1570px', 'breakpoint': '≥1600px'}]
         tr
-          td #[code.fs-2= '.container-' + (width + 1)]
+          td #[code.font-2= '.container-' + (width + 1)]
           td= container.size
           td= container.breakpoint
 
@@ -34,7 +34,7 @@ block example_code
 
 block example_after
   #responsive.pt-3
-    h2.h4.fw-400.mb-3 Responsive
+    h2.h4.font-400.mb-3 Responsive
     .card.card-body.bg-card-cap
       +example_code
         :encode-pug

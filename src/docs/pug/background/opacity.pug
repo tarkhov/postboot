@@ -15,12 +15,12 @@ block example_description
 block example_body
   .card-body.bg-dark.bg-striped.text-white
     each text, variant in colors
-      +background_variant(text, variant + '-50')
+      +background(text, ['bg-' + variant, 'bg-opacity-50'])
 
 block example_code
   :encode-pug
     | <!-- Source -->
     each text, variant in colors
       - for(var i = 1; i <= 9; i++)
-        div(class='bg-' + variant + '-' + i * 10)
+        div(class=['bg-' + variant, 'bg-opacity-' + i * 10])
       = "\n"
