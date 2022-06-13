@@ -1,4 +1,4 @@
-# PostBoot
+# PostBoot :spider_web:
 
 Web app prototyping library based on Bootstrap framework.
 
